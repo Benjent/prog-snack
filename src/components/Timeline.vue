@@ -1,0 +1,79 @@
+<template>
+    <div class="l-timeline">
+        <div class="l-timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
+
+            <div class="l-timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
+
+            <img class="l-timeline__cover" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="" @click="selectAlbum(album)">
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapActions, mapState } from 'vuex'
+
+export default {
+    name: 'Timeline',
+    computed: {
+        ...mapState(['albumsSortedByYear']),
+    },
+    methods: {
+        ...mapActions(['selectAlbum']),
+    },
+}
+</script>
+
+<style lang="scss">
+@import '../style/gatherer';
+@import '../style/mixins/shadow';
+
+.l-timeline {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100vw;
+
+    position: fixed;
+    bottom: 0;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    & &__album {
+        display: contents;
+    }
+
+    & &__year {
+        $albumYearWidth: 75px;
+
+        display: table;
+        
+        width: $albumYearWidth;
+        z-index: 1;
+
+        background: $secondary;
+        color: $primary;
+        
+        margin-right: -$albumYearWidth;
+        box-sizing: border-box;
+        
+        border: solid 2px $primary;
+        border-radius: $borderRadius;
+        border-bottom-left-radius: 0;
+        padding: 2px 15px;
+
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &__cover {
+        cursor: pointer;
+        display: block;
+        width: 160px;
+        height: 160px;
+        background: $primary;
+        margin-top: 20px;
+        border-top: solid 2px $primary;
+    }
+}
+</style>

@@ -1,27 +1,29 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import About from '../views/About.vue'
+import Album from '../views/Album.vue'
+import Attic from '../views/Attic.vue'
+import Designers from '../views/Designers.vue'
+import Discographies from '../views/Discographies.vue'
+import Gems from '../views/Gems.vue'
+import Stats from '../views/Stats.vue'
+import Subgenres from '../views/Subgenres.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
-];
+    { path: '/', component: Album },
+    { path: '/about', component: About },
+    { path: '/attic', component: Attic },
+    { path: '/designers', component: Designers },
+    { path: '/discographies', component: Discographies },
+    { path: '/gems', component: Gems },
+    { path: '/subgenres', component: Subgenres },
+    { path: '/stats', component: Stats },
+]
 
 const router = new VueRouter({
-  routes,
-});
+    routes,
+})
 
-export default router;
+export default router
