@@ -25,5 +25,8 @@ npm run test
 npm run lint
 ```
 
+### Deployment
+Automated thanks to [this guy](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg)
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
