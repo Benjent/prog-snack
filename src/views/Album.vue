@@ -8,7 +8,7 @@
                 <div class="l-album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
-            <img class="l-album__cover" :src="require(`../assets/img/covers/${selectedAlbum.id}${selectedAlbum.cover}`)" alt="">
+            <img class="l-album__cover" :src="require(`../assets/img/covers/${selectedAlbum.id}${selectedAlbum.cover}`)" alt="" @click="goToDiscographies">
 
             <div class="l-album__criteria">
                 <div class="album-gem" v-if="selectedAlbum.isAGem"> This album is a must-hear </div>
@@ -51,7 +51,10 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['randomizeAlbum'])
+        ...mapActions(['randomizeAlbum']),
+        goToDiscographies() {
+            this.$router.push('/discographies')
+        },
     },
 }
 </script>
