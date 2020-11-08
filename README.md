@@ -1,4 +1,5 @@
 # prog-snack
+Tiny web project with big music ambition: dusting old prog albums, some known as prog gems, to make them shine beside classic albums.
 
 ## Project setup
 ```
