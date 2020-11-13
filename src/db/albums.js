@@ -2926,6 +2926,9 @@ const albums = [
         similarAlbums: ['return_to_forever_romantic_warrior'],
         isAGem: false,
     },
+    // TODO 1976 - My SPanih Heart
+    // Jazz based, c_electro, SOFT_SEVENTIES, jam, instrumental, jazzy_groovy, fanfare, uncommon, female, latin
+    // selected track: Wind Danse (àdéfaut de trouver mieux)
     {
         id: 'chick_corea_the_mad_hatter',
         title: 'The Mad Hatter',
@@ -2958,16 +2961,38 @@ const albums = [
         similarAlbums: ['return_to_forever_musicmagic', 'weather_report_black_market'],
         isAGem: false,
     },
-    // TODO christophe paradis oerdus 1973
-    // art pop, c_folk, baroque, french
-    // d: Bernard Beaugendre
-    // deezer: 15228429
-    // spotify 59byfr8Hs4M0l30OzOQdyK
-    // TODO mots bleus 1974
-    // art pop, baroque, french, piano
-    // d: Bernard Beaugendre
-    // spotify 5lDOYOhBNt7NHvDMtjcIOf
-    // deezer 15228389
+    {
+        id: 'christophe_les_paradis_perdus',
+        title: 'Les Paradis Perdus',
+        artist: 'Christophe',
+        year: 1973,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.FRENCH, criteria.BAROQUE, criteria.C_FOLK],
+        selectedTrackTitle: 'Ferber Endormi',
+        selectedTrackYtId: 'Y5PpIdMKM9M',
+        spotifyId: '59byfr8Hs4M0l30OzOQdyK',
+        deezerId: '15228429',
+        designers: ['Bernard Beaugendre'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'christophe_les_mots_bleus',
+        title: 'Les Mots Bleus',
+        artist: 'Christophe',
+        year: 1974,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.FRENCH, criteria.BAROQUE, criteria.PIANO],
+        selectedTrackTitle: 'Le Dernier Des Bevilacqua',
+        selectedTrackYtId: 'cj2o4EHdXlU',
+        spotifyId: '5lDOYOhBNt7NHvDMtjcIOf',
+        deezerId: '15228389',
+        designers: ['Bernard Beaugendre'],
+        similarAlbums: ['daniel_balavoine_de_vous_a_elle_en_passant_par_moi'],
+        isAGem: false,
+    },
     {
         id: 'christophe_samourai',
         title: 'Samouraï',
@@ -2976,8 +3001,8 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.ART_POP, criteria.FRENCH, criteria.ORCHESTRAL_PARTS, criteria.PIANO],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Pour Que Demain Ta Vie Soit Moins Moche...',
+        selectedTrackYtId: 'U3Sau3D3NZc',
         spotifyId: '5zAaKNAdm88Kf3YYaYnQ3d',
         deezerId: '15228369',
         designers: ['Bernard Beaugendre'],
@@ -5520,6 +5545,13 @@ const albums = [
     // ************************************************************************************ //
     // **************************************** G **************************************** //
     // ********************************************************************************** //
+    // TODO Gábor Szabó not really prog
+    // Mizrab
+    // 1972
+    // Jazz, Soft, Jam, Instrumental
+    // HUNGARY
+    // selected track: Mizrab
+    // similar albums: miles_davis_miles_in_the_sky
     {
         id: 'gash_a_young_mans_gash',
         title: `A Young Man's Gash`,
@@ -5842,6 +5874,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO gil scott heron
+    // premier album pas tro prog
+    // Free Will Jazzbased, experimental, uncommon, afro
     {
         id: 'gnidrolog_in_spite_of_harrys_toenail',
         title: `In Spite Of Harry's Toenail`,
