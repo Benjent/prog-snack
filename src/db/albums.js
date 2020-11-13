@@ -608,8 +608,8 @@ const albums = [
         country: regions.USA,
         cover: '.jpg',
         criteria: [],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Elaborations',
+        selectedTrackYtId: 'n6BS61QgDRY',
         spotifyId: null,
         deezerId: '11474530',
         designers: ['Michael Kanarek'],
