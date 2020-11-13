@@ -9625,8 +9625,8 @@ const albums = [
         country: regions.GERMANY,
         cover: '.jpg',
         criteria: [criteria.SPACY, criteria.EXPERIMENTAL, criteria.C_PSYCHEDELIC, criteria.AMBIENT],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Für Immer',
+        selectedTrackYtId: 'Oy5A7fOY0MA',
         spotifyId: '1XYD1JqLsSRqL1YQ9bIP2N',
         deezerId: '53024802',
         designers: ['Neu!'],
@@ -9640,9 +9640,9 @@ const albums = [
         year: 1975,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [], // TODO
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.SPACY, criteria.AMBIENT, criteria.INSTRUMENTAL, criteria.C_PSYCHEDELIC, criteria.SOFT, criteria.SOUND_COLLAGES],
+        selectedTrackTitle: `Leb' Wohl`,
+        selectedTrackYtId: 't1psvprDgS0',
         spotifyId: '2wJYAUIQItl0QXIDqyahQZ',
         deezerId: '53024592',
         designers: ['Neu!'],
