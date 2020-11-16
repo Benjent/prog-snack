@@ -93,7 +93,7 @@ const albums = [
         year: 1982,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.ELECTRO, criteria.INSTRUMENTAL],
+        criteria: [criteria.ELECTRO, criteria.INSTRUMENTAL, criteria.SOUND_COLLAGES, criteria.NEO_EIGHTIES],
         selectedTrackTitle: 'Impuls',
         selectedTrackYtId: null,
         spotifyId: null,
@@ -2968,7 +2968,7 @@ const albums = [
         year: 1973,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.ART_POP, criteria.FRENCH, criteria.BAROQUE, criteria.C_FOLK],
+        criteria: [criteria.ART_POP, criteria.FRENCH_SUNG, criteria.BAROQUE, criteria.C_FOLK],
         selectedTrackTitle: 'Ferber Endormi',
         selectedTrackYtId: 'Y5PpIdMKM9M',
         spotifyId: '59byfr8Hs4M0l30OzOQdyK',
@@ -2984,7 +2984,7 @@ const albums = [
         year: 1974,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.ART_POP, criteria.FRENCH, criteria.BAROQUE, criteria.PIANO],
+        criteria: [criteria.ART_POP, criteria.FRENCH_SUNG, criteria.BAROQUE, criteria.PIANO],
         selectedTrackTitle: 'Le Dernier Des Bevilacqua',
         selectedTrackYtId: 'cj2o4EHdXlU',
         spotifyId: '5lDOYOhBNt7NHvDMtjcIOf',
@@ -3000,7 +3000,7 @@ const albums = [
         year: 1976,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.ART_POP, criteria.FRENCH, criteria.ORCHESTRAL_PARTS, criteria.PIANO],
+        criteria: [criteria.ART_POP, criteria.FRENCH_SUNG, criteria.ORCHESTRAL_PARTS, criteria.PIANO],
         selectedTrackTitle: 'Pour Que Demain Ta Vie Soit Moins Moche...',
         selectedTrackYtId: 'U3Sau3D3NZc',
         spotifyId: '5zAaKNAdm88Kf3YYaYnQ3d',
@@ -3932,9 +3932,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Dog Soldier
-    // rock based, soft, jam
-    // track: long and lovely night
+    {
+        id: 'dog_soldier_dog_soldier',
+        title: `Dog Soldier`,
+        artist: 'Dog Soldier',
+        year: 1975,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.JAM, criteria.SOFT],
+        selectedTrackTitle: 'Long & Lonely Night',
+        selectedTrackYtId: 'lTuaE8BrqdM',
+        spotifyId: '3eucO0Chn6Rc3HyNtrICCy',
+        deezerId: null,
+        designers: ['Rick Breach', 'Keef Hartley'],
+        similarAlbums: ['paice_ashton_and_lord_malice_in_wonderland'],
+        isAGem: false,
+    },
     {
         id: 'dominique_guiot_lunivers_de_la_mer',
         title: `L'univers De La Mer`,
@@ -5699,6 +5712,64 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'genesis_and_then_there_were_three',
+        title: 'And Thene There Were Three',
+        artist: 'Genesis',
+        year: 1978,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.TOUCHING_VOCALS, criteria.ODD_RHYTHM, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Down And Out', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '0lTuVJuCbD3FHEjIeQqyXg',
+        deezerId: '300489',
+        designers: ['Hipgnosis'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'genesis_duke',
+        title: 'Duke',
+        artist: 'Genesis',
+        year: 1980,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.TOUCHING_VOCALS, criteria.TRANSITION, criteria.C_ELECTRO, criteria.SPECTACULAR, criteria.ARENA],
+        selectedTrackTitle: `Duke's Travels`,
+        selectedTrackYtId: 'B4YJRM7kFzE',
+        spotifyId: '7ryVZ5ca6GM3FAkmlrymgv',
+        deezerId: '300486',
+        designers: ['Lionel Koechlin'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'genesis_abacab',
+        title: 'Abacab',
+        artist: 'Genesis',
+        year: 1981,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.SPECTACULAR, criteria.ARENA, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: `Dodo / Lurker`,
+        selectedTrackYtId: 'LXgSIJjW-DI',
+        spotifyId: '3ISa2uikrj9EiTRrWdgs5b',
+        deezerId: '300487',
+        designers: ['Bill Smith'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO genesis
+    // 1983
+    // C_lelectro, neo_eighties, art_pop, touching
+    // track:
+    // deezer: 303936
+    // TODO invisible touch
+    // 1986
+    // criteria.ART_POP, criteria.C_ELECTRO, criteria.ARENA, criteria.NEO_EIGHTIES
+    // track: Domino - hPYaEplq7KQ
+    // deezr; 302792
+    {
         id: 'gentle_giant_gentle_giant',
         title: 'Gentle Giant',
         artist: 'Gentle Giant',
@@ -6870,6 +6941,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'janus_it_al_maestrale',
+        title: 'Al Maestrale',
+        artist: 'Janus (IT)',
+        year: 1978,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.ITALIAN_SUNG, criteria.CELTIC],
+        selectedTrackTitle: 'An Dro',
+        selectedTrackYtId: 'w31DVZZ1wUU',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Jack Marchal'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'jean_michel_jarre_oxygene',
         title: 'Oxygène',
         artist: 'Jean Michel Jarre',
@@ -7546,6 +7633,22 @@ const albums = [
         deezerId: '59113702',
         designers: ['Håkan Uppgren'],
         similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'kak_kak',
+        title: 'Kak',
+        artist: 'Kak',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_PSYCHEDELIC, criteria.ROCK],
+        selectedTrackTitle: 'Trieulogy: Golgotha / Mirage / Rain',
+        selectedTrackYtId: '7gzW6MJijp8',
+        spotifyId: 'todo',
+        deezerId: 'todo',
+        designers: ['Edward Kasper'],
+        similarAlbums: ['jefferson_airplane_volunteers'],
         isAGem: false,
     },
     {
@@ -9145,6 +9248,38 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'miles_davis_in_a_silent_way',
+        title: 'In A Silent Way',
+        artist: 'Miles Davis',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.JAM, criteria.SOFT],
+        selectedTrackTitle: `Shhh / Peaceful`,
+        selectedTrackYtId: null,
+        spotifyId: '0Hs3BomCdwIWRhgT57x22T',
+        deezerId: '1210678',
+        designers: ['Lee Friedlander'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_bitches_brew',
+        title: 'Bitches Brew',
+        artist: 'Miles Davis',
+        year: 1970,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM, criteria.SOPHISTICATED],
+        selectedTrackTitle: `Pharaoh's Dance`,
+        selectedTrackYtId: 'd8QzACfFGlw',
+        spotifyId: '3Q0zkOZEOC855ErOOJ1AdO',
+        deezerId: '645702',
+        designers: ['Mati Klarwein'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'the_moody_blues_days_of_future_passed',
         title: 'Days Of Future Passed',
         artist: 'The Moody Blues',
@@ -9344,8 +9479,24 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'nautilus_20_000_miles_under_the_sea',
+        title: '20 000 Miles Under The Sea',
+        artist: 'Nautilus',
+        year: 1978,
+        country: regions.SWITZERLAND,
+        cover: '.jpg',
+        criteria: [criteria.SYMPHONIC, criteria.HEAVY, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Sleeping In The Wind',
+        selectedTrackYtId: 'SHZEczUbxdM',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Ralph Stucki'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'nautilus_space_storm',
-        title: 'Space Storm',
+        title: 'Space-Storm',
         artist: 'Nautilus',
         year: 1980,
         country: regions.SWITZERLAND,
@@ -9355,7 +9506,7 @@ const albums = [
         selectedTrackYtId: 'aDK_D0S87_k',
         spotifyId: null,
         deezerId: null,
-        designers: [],
+        designers: ['Ralph Stucki'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -10392,9 +10543,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO patrick campbells-lyons
-    // folk-based, baroque, soft
-    // track is jesus christ junior
+    {
+        id: 'patrick_campbell_lyons_me_and_my_friend',
+        title: 'Me And My Friend',
+        artist: 'Patrick Campbell-Lyons',
+        year: 1973,
+        country: regions.IRELAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.BAROQUE, criteria.SOFT],
+        selectedTrackTitle: 'Jesus Christ Junior',
+        selectedTrackYtId: null,
+        spotifyId: '3NmVQAwNGt3sQPGqGOrPvC',
+        deezerId: '49395822',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'people_ceremony',
         title: 'Ceremony - Buddha Meets Rock',
@@ -10894,11 +11058,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Home
-    // criteria: ROCK, baroque, symphonic
-    // selected: Whaling Stories
-    // designer: Dickinson
-    // dezzer : 77251872
+    {
+        id: 'procol_harum_home',
+        title: 'Home',
+        artist: 'Procol Harum',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.BAROQUE, criteria.ROCK, criteria.SYMPHONIC],
+        selectedTrackTitle: `Whaling Stories`,
+        selectedTrackYtId: 'nRvA4W4vSqU',
+        spotifyId: '2ksXuf8dKe61LDYSxeNYBs',
+        deezerId: '77251872',
+        designers: ['Dickinson'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO broken barricades
     // criteria: ROCK
     // selected: song for a dreamer
@@ -11110,10 +11285,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO queensryche
-    // operation: mindcrime
-    // criteria.NEO_EIGHTIES, criteria.ARENA, criteria.HEAVY, criteria.CONCEPT, criteria.TRANSITION, criteria.SOUNDCOLLAGES, criteria.SCI_FI
-    // setected: spreading the disease
+    {
+        id: 'queensryche_operation_mindcrime',
+        title: 'Operation: Mindcrime',
+        artist: 'Queensrÿche',
+        year: 1988,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ARENA, criteria.NEO_EIGHTIES, criteria.HEAVY, criteria.CONCEPT, criteria.TRANSITION, criteria.SOUND_COLLAGES, criteria.SCI_FI],
+        selectedTrackTitle: 'Spreading The Disease',
+        selectedTrackYtId: 'QkkARshZ2t8',
+        spotifyId: '4eEQ3aNA8mptFIfbFdX79p',
+        deezerId: '300907',
+        designers: ['Reiner Design Consultants, Inc.'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'quicksilver_messenger_service_happy_trails',
         title: 'Happy Trails',
@@ -11519,10 +11706,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO the romling stones satanic ùajeties
-    // cpsyché, uncommon, c folk
-    // rainbow layd
-    // similar sgt pepper
+    {
+        id: 'the_rolling_stones_their_satanic_majesties_request',
+        title: 'Their Satanic Majesties Request',
+        artist: 'The Rolling Stones',
+        year: 1967,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `She's A Rainbow`,
+        selectedTrackYtId: '6c1BThu95d8',
+        spotifyId: '2SE7fs002NlNc3cw3SQLRC',
+        deezerId: '912338',
+        designers: ['Michael Cooper', 'Artchie', 'The Rolling Stones'],
+        similarAlbums: ['the_beatles_sgt_peppers_lonely_hearts_club_band'],
+        isAGem: false,
+    },
     {
         id: 'roy_wood_boulders',
         title: 'Boulders',
@@ -12081,6 +12280,22 @@ const albums = [
         spotifyId: '6r7XlOEXPFtVrJy4mTi0eP',
         deezerId: '897881',
         designers: ['Hildebrandt'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'steve_howe_beginnings',
+        title: 'Beginnings',
+        artist: 'Steve Howe',
+        year: 1975,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.SOPHISTICATED, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.CLASSICAL, criteria.BAROQUE, criteria.BLENDS, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: 'The Nature Of The Sea',
+        selectedTrackYtId: 'ZSb9s8E5rtU',
+        spotifyId: '5iBOpddHTKZlap604IMKGY',
+        deezerId: '1315730',
+        designers: ['Roger Dean'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -13159,7 +13374,7 @@ const albums = [
         year: 1970,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY, criteria.ODD_RHYTHM, criteria.CRISPY_SIXTIES],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.CRISPY_SIXTIES],
         selectedTrackTitle: 'Rags And Old Iron / Blind Man / Roadside',
         selectedTrackYtId: null,
         spotifyId: null,
@@ -14149,6 +14364,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     }
+    {
+        id: 'nine_half_fly_nine_half_fly',
+        title: '9.30 Fly',
+        artist: '9.30 Fly',
+        year: 1972,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.CRISPY_SIXTIES, criteria.C_FOLK],
+        selectedTrackTitle: 'Summerdays',
+        selectedTrackYtId: 'niRW7U7Z4yw',
+        spotifyId: '4EkEYseGvJJGJ0otBQAV12',
+        deezerId: '12554818',
+        designers: ['Gerald Fifer'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO description`,
+    }
 ]
 
 // Below is the list of prog artists that I listened and should be part of this project
@@ -14168,7 +14400,7 @@ const albums = [
     Malicorne
     Man
     Mike Oldfield
-    Miles Davis avec in a silent way + bitches brew
+    Miles Davis
     Premiata Forneria Marconi
     Ralph Lundsten
     Soft Machine
@@ -14194,6 +14426,7 @@ const albums = [
 
 // TODO below is list of things to do:
 /*
+    parse tout le Prog introuvable et renseigner ici
     split criteria, add property album type which is an enum between STUDIO, LIVE, LIVE & STUDIO, COMPILATION
     DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
     Mobile version
@@ -14206,18 +14439,6 @@ const albums = [
     lister instruments
     linker discogs
     album comparison: sur une scale de 1 à 10, how much soubd alike ? et du coup ça rapproche énormément les albums entre eux, agnostic des artisres
-*/
-
-// TODO parse tout le Prog introuvable et renseigner ici:
-/* Missing albums:
-    Kamijo - Second Album 1973
-    Mona Lisa - Grimances 1975
-    Mona Lisa - Le Violon Grégoire 1979
-    Mona Lisa - Avant trop tard 1977
-    Mona Lisa - Vers demain 1979
-    Paga Group - Gnosis 1993
-    Ross - The Pit & The Pendulum 1974
-    Serge Bulot - Les Légendes De Brocéliande 1980
 */
 
 export default albums

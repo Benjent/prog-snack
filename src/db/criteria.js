@@ -58,6 +58,7 @@ const criteria = {
     AMBIENT: 'AMBIENT',
     ARENA: 'ARENA',
     LATINO: 'LATINO',
+    CELTIC: 'CELTIC',
 
     // Album structure
     LENGTHY_TRACKS: 'LENGTHY_TRACKS',
@@ -145,6 +146,7 @@ const criteriaOrder = [
     criteria.GLITTER,
     criteria.ORIENTAL,
     criteria.LATINO,
+    criteria.CELTIC,
     criteria.AMBIENT,
     criteria.BAROQUE,
     criteria.RENAISSANCE,
