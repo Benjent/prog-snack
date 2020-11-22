@@ -71,5 +71,9 @@ export default {
     &.right {
         transform: rotate(90deg);
     }
+
+    &.left {
+        transform: rotate(-90deg);
+    }
 }
 </style>

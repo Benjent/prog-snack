@@ -10,8 +10,7 @@
         </section>
         <section class="l-discographies__selected-album">
             <div class="l-discographies__selected-album__main">
-                <img class="l-discographies__selected-album__cover" :class="{'l-discographies__selected-album__cover--border-left': discography.length < 3}"
-                    :src="require(`../assets/img/covers/${selectedAlbum.id}${selectedAlbum.cover}`)" alt="">
+                <Cover class="l-discographies__selected-album__cover" :class="{'l-discographies__selected-album__cover--border-left': discography.length < 3}" :album="selectedAlbum"></Cover>
                 <div class="l-discographies__selected-album__infos">
                     <header class="l-discographies__selected-album__header">
                         <div class="l-discographies__selected-album__title">{{ selectedAlbum.title }}</div>
@@ -26,20 +25,22 @@
                         </div>
                     </header>
                     <footer class="l-discographies__selected-album__footer">
-                        <div class="l-discographies__selected-album__criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                        <div class="l-discographies__selected-album__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
+                            <span>{{ criterium | criterium }}</span>
+                            <span class="l-discographies__selected-album__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
+                        </div>
                     </footer>
                 </div>
             </div>
             <div class="l-discographies__selected-track">
-                <div class="album-data__label">Selected track</div>
-                <div class="album-data__selected-track">{{ selectedAlbum.selectedTrackTitle }}</div>
-                <a v-if="selectedAlbum.selectedTrackYtId" :href="youtubePath" target="_blank">
+                <div class="l-discographies__selected-track__label">Selected track</div>
+                <div class="l-discographies__selected-track__title">{{ selectedAlbum.selectedTrackTitle }}</div>
+                <a v-if="selectedAlbum.selectedTrackYtId" :href="youtubePath" target="_blank" class="l-discographies__selected-track__logo">
                     <img class="l-discographies__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt="">
                 </a>
             </div>
             <section class="l-discographies__discography" :class="{'l-discographies__discography--borderless': discography.length < 3}">
-                <img class="l-discographies__album"
-                    v-for="album in discography" :key="album.id" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="" @click="selectAlbum(album)">
+                <Cover class="l-discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
             </section>
         </section>
     </section>
@@ -47,10 +48,12 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
+import Cover from '../components/Cover.vue'
 import Arrow from '../components/Arrow.vue'
 
 export default {
     components: {
+        Cover,
         Arrow,
     },
     data() {
@@ -95,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-discographies {
@@ -162,7 +165,6 @@ export default {
         &__main {
             display: flex;
             width: 100%;
-            height: 300px;
         }
 
         &__cover {
@@ -181,18 +183,14 @@ export default {
             width: 100%;
             box-sizing: border-box;
             padding: 20px;
-            // height: max-content;
-            height: $cover-width;
             background: $secondary-dark;
             border-bottom: solid 1px $primary;
         }
 
         &__footer {
             display: flex;
-            flex-direction: column;
             flex-wrap: wrap;
             width: 100%;
-            height: 50%;
             box-sizing: border-box;
             padding: 20px;
             font-size: $fs-10;
@@ -204,12 +202,27 @@ export default {
         }
 
         &__criterium {
-            padding-right: 10px;
+            // padding-right: 10px;
+        }
+
+        &__criterium-separator {
+            display: inline-block;
+            padding: 0 10px;
         }
     }
 
     & &__selected-track {
+        display: flex;
         padding: 20px;
+
+        &__title {
+            font-style: italic;
+            margin-left: 10px;
+        }
+
+        &__logo {
+            margin-left: 10px;
+        }
     }
 
     & &__logo {
@@ -221,42 +234,43 @@ export default {
     .l-discographies {
         $cover-width: 100px;
 
-        & &__discography {
-            display: flex;
-            flex-direction: column;
-            overflow-y: scroll;
-            scrollbar-width: none;
-            width: $cover-width;
-            height: max-content;
-            max-height: calc(100vh - #{$header-height});
-            box-sizing: border-box;
-            border-right: solid 2px $primary;
-
-            &--borderless {
-                border: 0;
-            }
-        }
-
         & &__album {
-            width: $cover-width;
-            height: $cover-width;
+            height: max-content;
+            width: calc(100% / 8);
+            margin-bottom: -5px; // TODO height is not square-friendly
         }
 
         & &__selected-album {
-            height: max-content;
             margin: 0;
-            box-shadow: none;
             max-width: none;
 
             &__cover {
-                height: 300px;
-                border-right: solid 2px $primary;
-                border-bottom: solid 2px $primary;
-
-                &--border-left {
-                    border-left: solid 2px $primary;
-                }
+                height: 220px;
             }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .l-discographies {
+        & &__album {
+            width: calc(100% / 6);
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .l-discographies {
+        & &__album {
+            width: calc(100% / 5);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .l-discographies {
+        & &__album {
+            width: calc(100% / 3);
         }
     }
 }

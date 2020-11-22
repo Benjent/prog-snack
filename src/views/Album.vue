@@ -8,10 +8,10 @@
                 <div class="l-album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
-            <img class="l-album__cover" :src="require(`../assets/img/covers/${selectedAlbum.id}${selectedAlbum.cover}`)" alt="" @click="goToDiscographies">
+            <Cover class="l-album__cover" :album="selectedAlbum" @click.native="goToDiscographies"></Cover>
 
             <div class="l-album__criteria">
-                <div class="album-gem" v-if="selectedAlbum.isAGem"> This album is a must-hear </div>
+                <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                 <div class="album-criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
             </div>
         </section>
@@ -34,11 +34,13 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
+import Cover from '../components/Cover.vue'
 import Timeline from '../components/Timeline.vue'
 
 export default {
     name: 'Album',
     components: {
+        Cover,
         Timeline,
     },
     computed: {
@@ -59,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/modules/button';
 

@@ -1,15 +1,13 @@
 <template>
     <section class="l-gems">
         <div class="l-gems__item" v-for="album in gems" :key="album.id">
-            
-            <img class="l-gems__cover" @click="selectAlbumAndView(album)" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="">
+            <Cover class="l-gems__cover" :album="album" @click.native="selectAlbumAndView(album)"></Cover>
             
             <div class="l-gems__album">
                 <span class="l-gems__title" @click="selectAlbumAndView(album)">
                     {{album.artist}} - {{album.title}} ({{album.year}})
                 </span>
                 <blockquote class="l-gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
-                
             </div>
         </div>
     </section>
@@ -17,8 +15,12 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import Cover from '../components/Cover.vue'
 
 export default {
+    components: {
+        Cover,
+    },
     computed: {
         ...mapState(['albumsSortedByYear']),
         gems() {
@@ -37,20 +39,21 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-gems {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 260px 60px 260px;
+    padding: 0 60px 60px 60px;
 
     & &__item {
         display: flex;
         border-bottom: solid 1px;
         padding: 100px 0;
         width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
 
         &:last-of-type {

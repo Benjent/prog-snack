@@ -1,19 +1,21 @@
 <template>
     <section class="l-stats">
         <section class="l-stats__numbers">
-            <span>{{ artists.length }} artists</span>
-            <span>{{ albums.length }} albums</span>
-            <span>{{ gemsNb }} must-hear albums</span>
-            <span>{{ subgenres.length }} subgenres</span>
+            <span class="l-stats__number">{{ artists.length }} artists</span>
+            <span class="l-stats__number">{{ albums.length }} albums</span>
+            <span class="l-stats__number">{{ gemsNb }} gems</span>
+            <span class="l-stats__number">{{ subgenres.length }} subgenres</span>
         </section>
-        <hr>
-        <histogram-vertical class="l-stats__chart" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></histogram-vertical>
-        <hr>
-        <histogram-horizontal class="l-stats__chart" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></histogram-horizontal>
-        <hr>
-        <histogram-horizontal class="l-stats__chart" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></histogram-horizontal>
-        <hr>
-        <histogram-horizontal class="l-stats__chart" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></histogram-horizontal>
+        <!-- <hr> -->
+        <histogram-vertical class="l-stats__item" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></histogram-vertical>
+        <!-- <hr> -->
+        <histogram-horizontal class="l-stats__item" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></histogram-horizontal>
+        <!-- <hr> -->
+        <histogram-horizontal class="l-stats__item" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></histogram-horizontal>
+        <!-- <hr> -->
+        <histogram-horizontal class="l-stats__item" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></histogram-horizontal>
+        <!-- <hr> -->
+        <histogram-horizontal class="l-stats__item" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></histogram-horizontal>
     </section>
 </template>
 
@@ -30,7 +32,7 @@ export default {
     },
     computed: {
         ...mapState(['albums', 'artists', 'regions', 'albumsPerYear', 'albumsPerCountry', 'criteriaOccurences', 'mostUsedCriteriaPerYear', 'subgenres']),
-        ...mapGetters(['gemsNb', 'artistsWithMostGems']),
+        ...mapGetters(['gemsNb', 'artistsWithMostGems', 'artistsWithMostAlbums']),
         albumsPerYearWithRatio() {
             const obj = this.albumsPerYear
             const arr = Object.keys(obj).map((key) => obj[key])
@@ -40,7 +42,7 @@ export default {
             const albumsPerYearWithRatio = {}
             for(const year in this.albumsPerYear) {
                 const nbOfAlbums = this.albumsPerYear[year]
-                const ratio = (nbOfAlbums - min) / (max - min) // TODO utils
+                const ratio = (nbOfAlbums - min) / (max - min) // TODO utils + so many things to centralize in this page
                 albumsPerYearWithRatio[year] = {
                     data: nbOfAlbums, 
                     ratio: ratio,
@@ -147,11 +149,32 @@ export default {
 
 			return artistsWithGemsWithRatio
 		},
+		artistsWithAlbumsWithRatio() {
+			const min = 8
+			const artistsWithSeveralAlbums = Object.entries(this.artistsWithMostAlbums).filter(item => item[1] >= min)
+			artistsWithSeveralAlbums.sort((a, b) => b[1] - a[1])
+			const max = artistsWithSeveralAlbums[0][1] // Since it is sorted DESC
+
+			const artistsWithAlbumsWithRatio = []
+			artistsWithSeveralAlbums.forEach(artist => {
+				const nbOfAlbums = artist[1];
+                const ratio = (nbOfAlbums - min) / (max - min);
+
+                artistsWithAlbumsWithRatio.push({
+                    label: artist[0],
+                    data: nbOfAlbums, 
+                    ratio: ratio,
+                    ratioPercent: (ratio * 100).toString() + '%',
+                })
+			})
+
+			return artistsWithAlbumsWithRatio
+		},
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-stats {
@@ -163,7 +186,8 @@ export default {
         margin: 20px 0 50px 0;
     }
 
-    & &__chart {
+    & &__item {
+        margin-top: 60px;
     }
 }
 </style>

@@ -2,12 +2,11 @@
     <section class="l-subgenres">
         <div class="l-subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
             <div class="l-subgenres__albums">
-                <img class="l-subgenres__cover" v-for="id in subgenre.albums" :key="id" @click="selectAlbumAndView(id)"
-                    :src="getPathToCover(id)" alt="" loading="lazy">
+                <Cover class="l-subgenres__cover" v-for="id in subgenre.albums" :key="id" :album="albumById(id)" @click.native="selectAlbumAndView(id)"></Cover>
             </div>
 
-            <img class="l-subgenres__cover l-subgenres__most-representative" @click="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"
-                :src="getPathToCover(subgenre.mostRepresentativeAlbum)" alt="" loading="lazy">
+            <Cover class="l-subgenres__cover l-subgenres__most-representative" :album="albumById(subgenre.mostRepresentativeAlbum)"
+                @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
 
             <div class="l-subgenres__infos">
                 <span class="l-subgenres__name">{{ subgenre.name }}</span>
@@ -26,8 +25,12 @@
 
 <script>
 import { mapActions, mapState, mapGetters } from 'vuex'
+import Cover from '../components/Cover.vue'
 
 export default {
+    components: {
+        Cover,
+    },
     computed: {
         ...mapState(['subgenres']),
         ...mapGetters(['albumById']),
@@ -47,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-subgenres {
@@ -77,7 +80,6 @@ export default {
         height: 300px;
         border: solid 5px $primary;
         margin: 0 20px;
-        display: block;
     }
 
     & &__albums {

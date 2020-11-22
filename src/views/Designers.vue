@@ -5,7 +5,7 @@
             <div class="l-designers__name">{{ designer.name }}</div>
             
             <div class="l-designers__border-wrapper">
-                <Arrow size="medium" class="l-designers__arrow" orientation="bottom"></Arrow>
+                <Arrow size="medium" class="l-designers__arrow" orientation="bottom" color="dark"></Arrow>
 
                 <div class="l-designers__albums">
                     <div class="l-designers__albums-item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
@@ -45,16 +45,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-designers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 160px;
+    padding: 60px 20px;
 
     & &__item {
+        max-width: 1200px;
         text-align: center;
         padding: 40px;
 

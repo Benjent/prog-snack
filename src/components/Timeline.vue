@@ -1,19 +1,21 @@
 <template>
     <div class="l-timeline">
         <div class="l-timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
-
             <div class="l-timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
-
-            <img class="l-timeline__cover" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="" @click="selectAlbum(album)">
+            <Cover class="l-timeline__cover" :album="album"  @click.native="selectAlbum(album)"></Cover>
         </div>
     </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import Cover from './Cover.vue'
 
 export default {
     name: 'Timeline',
+    components: {
+        Cover,
+    },
     computed: {
         ...mapState(['albumsSortedByYear']),
     },
@@ -68,7 +70,6 @@ export default {
 
     &__cover {
         cursor: pointer;
-        display: block;
         width: 160px;
         height: 160px;
         background: $primary;
