@@ -5759,16 +5759,54 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO genesis
-    // 1983
-    // C_lelectro, neo_eighties, art_pop, touching
-    // track:
-    // deezer: 303936
-    // TODO invisible touch
-    // 1986
-    // criteria.ART_POP, criteria.C_ELECTRO, criteria.ARENA, criteria.NEO_EIGHTIES
-    // track: Domino - hPYaEplq7KQ
-    // deezr; 302792
+    {
+        id: 'genesis_genesis',
+        title: 'Genesis',
+        artist: 'Genesis',
+        year: 1983,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.TOUCHING_VOCALS, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: `todo`, // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '2u0T1xzCoI7ANxWDEj9yl6',
+        deezerId: '303936',
+        designers: ['Bill Smith'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'genesis_invisible_touch',
+        title: 'Invisible Touch',
+        artist: 'Genesis',
+        year: 1986,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.ARENA, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: `Domino`,
+        selectedTrackYtId: 'hPYaEplq7KQ',
+        spotifyId: '5BDGtXKMQ6k267KX4PoGhP',
+        deezerId: '302792',
+        designers: ['Baker Dave'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'genesis_we_cant_dance',
+        title: `We Can't Dance`,
+        artist: 'Genesis',
+        year: 1991,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.ARENA, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: `TODO`, // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '2WFkJi4USarY1qe3yjifjG',
+        deezerId: 'todo', // TODO
+        designers: ['David Scheinmann', 'Felicity Roma Bowers'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'gentle_giant_gentle_giant',
         title: 'Gentle Giant',
@@ -9280,6 +9318,54 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'miles_davis_jack_johnson',
+        title: 'Jack Johnson',
+        artist: 'Miles Davis',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.SOUNDTRACK, criteria.JAM, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: `Yesternow`,
+        selectedTrackYtId: '5c-iU0kQBro',
+        spotifyId: '0xr31or2qYglJpiX6pODjY',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_live_evil',
+        title: 'Jack Johnson',
+        artist: 'Live-Evil',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `Nem Um Talvez`,
+        selectedTrackYtId: 'TWs7cY-fEn0',
+        spotifyId: '4eK5DQxLCshZCUk6D5a8Q1',
+        deezerId: '1213267',
+        designers: ['Mati Klarwein'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_on_the_corner',
+        title: 'Jack Johnson',
+        artist: 'On The Corner',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.TRANSITION], // TODO ajouter criteria Afro à ça + cymande + osibisa
+        selectedTrackTitle: `Helen Butte`,
+        selectedTrackYtId: null,
+        spotifyId: '3lDkLLzW8arbO2OXCK1QTJ',
+        deezerId: '1211445',
+        designers: ['Corky McCoy'],
+        similarAlbums: [], // TODO similar: hzrbie hancock sextant?
+        isAGem: false,
+    },
+    {
         id: 'the_moody_blues_days_of_future_passed',
         title: 'Days Of Future Passed',
         artist: 'The Moody Blues',
@@ -9892,6 +9978,87 @@ const albums = [
         selectedTrackYtId: 'EmtT_l7MYsE',
         spotifyId: null,
         deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'nino_ferrer_metronomie',
+        title: 'Métronomie',
+        artist: 'Nino Ferrer',
+        year: 1972,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH_SUNG, criteria.C_PSYCHEDELIC, criteria.SOUND_COLLAGES, criteria.UNCOMMON_INSTRUMENTS, criteria.CONCEPT],
+        selectedTrackTitle: 'Métronomie',
+        selectedTrackYtId: 'ydWdoHvXWaA',
+        spotifyId: '3ULRYqolMNV9YINhmsNqjp',
+        deezerId: '65253092',
+        designers: ['Claude Verlinde'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO description`
+    },
+    {
+        id: 'nino_ferrer_nino_ferrer_and_leggs',
+        title: 'Nino Ferrer & Leggs',
+        artist: 'Nino Ferrer',
+        year: 1973,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH_SUNG, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS], // TODO
+        selectedTrackTitle: 'todo', // TODO Angleterre ou Moby Dick
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '3dTxwjyyKuDP4qlH44lRrR',
+        deezerId: '6940916',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'nino_ferrer_nino_and_radiah',
+        title: 'Nino And Radiah',
+        artist: 'Nino Ferrer',
+        year: 1974,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.ROCK, criteria.C_FOLK, criteria.SOFT],
+        selectedTrackTitle: 'Looking For You',
+        selectedTrackYtId: '1s0-tbR-nzs',
+        spotifyId: '3pXXyHO0Cenk1PvNbXokYy',
+        deezerId: '6937516',
+        designers: ['Richard Bennett'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'nino_ferrer_suite_en_oeuf',
+        title: 'Suite En Œuf',
+        artist: 'Nino Ferrer',
+        year: 1976,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC], // TODO
+        selectedTrackTitle: 'Les Morceaux De Fer',
+        selectedTrackYtId: 'G8myvW7Ri-4',
+        spotifyId: '1crxdGNkb707IlKkknuyx5',
+        deezerId: '6940917',
+        designers: ['Gabriel Pasqualini'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'nino_ferrer_blanat',
+        title: 'Blanat',
+        artist: 'Nino Ferrer',
+        year: 1979,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC, criteria.ROCK],
+        selectedTrackTitle: 'TODO', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '20HonPilsF78HT0cvXOHtR',
+        deezerId: '6937514',
         designers: [],
         similarAlbums: [],
         isAGem: false,
@@ -10559,6 +10726,10 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Paul & Linda McCartney
+    // Ram - 1971
+    // ArtPop, c_folk,  TODO should be female vocals ?
+    // selectedtrack: Uncle Albert / Admiral Halsey (XI6C7L66zq8)
     {
         id: 'people_ceremony',
         title: 'Ceremony - Buddha Meets Rock',
@@ -11917,7 +12088,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO powr windows
+    // TODO power windows
     // odd, arena, celectro, neo_eigitheis
     // track: marathon
     // TODO hold your fire
@@ -12290,7 +12461,7 @@ const albums = [
         year: 1975,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.SOPHISTICATED, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.CLASSICAL, criteria.BAROQUE, criteria.BLENDS, criteria.ORCHESTRAL_PARTS],
+        criteria: [criteria.SOPHISTICATED, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE, criteria.BLENDS, criteria.ORCHESTRAL_PARTS],
         selectedTrackTitle: 'The Nature Of The Sea',
         selectedTrackYtId: 'ZSb9s8E5rtU',
         spotifyId: '5iBOpddHTKZlap604IMKGY',
@@ -14363,7 +14534,7 @@ const albums = [
         designers: ['Richard Wallis'],
         similarAlbums: [],
         isAGem: false,
-    }
+    },
     {
         id: 'nine_half_fly_nine_half_fly',
         title: '9.30 Fly',
@@ -14400,7 +14571,6 @@ const albums = [
     Malicorne
     Man
     Mike Oldfield
-    Miles Davis
     Premiata Forneria Marconi
     Ralph Lundsten
     Soft Machine
