@@ -41,8 +41,10 @@ export default {
         display: flex;
         align-items: flex-end;
         height: 400px;
-        margin-bottom: 50px; // Transformed (rotated) labels does not weigh in the CSS flow
-        // overflow-x: auto; // TODO...
+        padding-bottom: 50px; // Transformed (rotated) labels does not weigh in the CSS flow
+        overflow-x: auto; // TODO...
+        // overflow-y: visible;
+        max-width: 100%; // Center datavis if space is enough
 
     }
     & &__entry {

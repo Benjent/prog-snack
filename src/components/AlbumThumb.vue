@@ -6,13 +6,18 @@
             <div class="l-album-thumb__year">{{ album.year }}</div>
             <div class="l-album-thumb__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
-        <img class="l-album-thumb__cover" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="" loading="lazy">
+        <Cover :album="album"></Cover>
     </div>
 </template>
 
 <script>
+import Cover from './Cover.vue'
+
 export default {
     name: 'AlbumThumb',
+    components: {
+        Cover,
+    },
     props: {
         album: {
             type: Object,
@@ -22,7 +27,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 .l-album-thumb {

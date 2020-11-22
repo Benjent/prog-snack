@@ -12,7 +12,7 @@
                 <Arrow class="l-search-bar__arrow" color="dark" orientation="bottom"></Arrow>
 
                 <div class="l-search-bar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <img class="l-search-bar__album__cover" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" alt="" />
+                    <Cover :album="album"></Cover>
                     <div class="l-search-bar__album__title"> {{ album.title }} </div>
                 </div>
             </div>
@@ -21,11 +21,13 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import Cover from './Cover.vue'
 import Arrow from './Arrow.vue'
 
 export default {
     name: 'SearchBar',
     components: {
+        Cover,
         Arrow,
     },
     data() {
@@ -69,7 +71,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../style/gatherer';
 
 $search-bar-width: 300px;
