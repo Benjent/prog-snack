@@ -1,10 +1,12 @@
 .select {
+    cursor: pointer; // TODO use own component
     display: flex;
     position: relative;
 
     select {
         width: 100%;
-        padding: 5px 10px;
+        padding: 6px 10px;
+        padding-right: 40px;
         border: solid 2px $primary;
         background: $secondary;
     }
