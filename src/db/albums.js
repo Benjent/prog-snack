@@ -892,6 +892,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Asterix - Asterix - 1970 - Germany
+    // rock, greasey, seventies
+    // similar to babe ruth Amadrillo
     {
         id: 'atlantide_atlantide',
         title: 'Atlantide',
@@ -1782,6 +1785,8 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // Berits Halsband très bon !
+    // cjazz, instru, lengthy tracks, autr epays
     // Big brother cheap thrills
     // crispy sixties, rock, female
     // selected track sweet mary oh
@@ -2080,6 +2085,10 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Brian Davison
+    // Every Which Way
+    // cfolk, soft, jam
+    // selected track castle sand
     {
         id: 'bruce_springsteen_the_wild_the_innocent_the_e_street_shuffle',
         title: 'The Wild, The Innocent & The E Street Shuffle',
@@ -4740,12 +4749,60 @@ const albums = [
         year: 1971,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.C_PSYCHEDELIC, criteria.C_ELECTRO],
-        selectedTrackTitle: 'Miss Fortune',
-        selectedTrackYtId: 'Yu9MehUlLgo',
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.C_PSYCHEDELIC, criteria.C_ELECTRO, criteria.GERMAN_SUNG],
+        selectedTrackTitle: 'Meadow Meal',
+        selectedTrackYtId: 'jaYu7GgYbhM',
         spotifyId: '1ZFS7XZYHmyhTTs5QoZ1xA',
         deezerId: null,
         designers: ['Andy Hertel', 'Uwe Nettelbeck'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'faust_so_far',
+        title: 'So Far',
+        artist: 'Faust',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.PATCHWORK, criteria.EXPERIMENTAL, criteria.C_PSYCHEDELIC, criteria.FANFARE, criteria.SPACY, criteria.TRANSITION, criteria.C_ELECTRO, criteria.INSTRUMENTAL, criteria.FEMALE],
+        selectedTrackTitle: 'No Harm',
+        selectedTrackYtId: 'ceXr8K6jLjw',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Uwe Nettelbeck'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'faust_the_faust_tapes',
+        title: 'The Faust Tapes',
+        artist: 'Faust',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_PSYCHEDELIC, criteria.FRENCH_SUNG, criteria.C_FOLK],
+        selectedTrackTitle: 'The Faust Tapes I',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Uwe Nettelbeck'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'faust_faust_vi',
+        title: 'Faust VI',
+        artist: 'Faust',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.SPACY, criteria.C_ELECTRO, criteria.C_PSYCHEDELIC, criteria.INSTRUMENTAL, criteria.GERMAN_SUNG, criteria.FRENCH_SUNG, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Jennifer',
+        selectedTrackYtId: 'hh0yEHedLP0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Uwe Nettelbeck', 'Gunter Wüsthoff'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -5558,6 +5615,8 @@ const albums = [
     // ************************************************************************************ //
     // **************************************** G **************************************** //
     // ********************************************************************************** //
+    // TODO Gäa - 1973 -  Auf Der Bahn Zum Uranus
+    // germansung
     // TODO Gábor Szabó not really prog
     // Mizrab
     // 1972
@@ -5579,6 +5638,22 @@ const albums = [
         deezerId: null,
         designers: ['Patrick Von Spreckelsen'],
         similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'gaulois_asterix_inochi',
+        title: `Inochi`,
+        artist: 'Gaulois Asterix',
+        year: 1970,
+        country: regions.JAPAN,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.FRENCH_SUNG, criteria.FEMALE, criteria.JAM],
+        selectedTrackTitle: `Acid Agitation`,
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [], // TODO cromagnon
         isAGem: false,
     },
     {
@@ -5719,7 +5794,7 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.TOUCHING_VOCALS, criteria.ODD_RHYTHM, criteria.C_ELECTRO],
-        selectedTrackTitle: 'Down And Out', // TODO
+        selectedTrackTitle: 'Down And Out', // TODO Undertow
         selectedTrackYtId: 'todo', // TODO
         spotifyId: '0lTuVJuCbD3FHEjIeQqyXg',
         deezerId: '300489',
@@ -5767,8 +5842,8 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.TOUCHING_VOCALS, criteria.NEO_EIGHTIES],
-        selectedTrackTitle: `todo`, // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: `Second Home By The Sea`,
+        selectedTrackYtId: 'UKlIGh1-spk',
         spotifyId: '2u0T1xzCoI7ANxWDEj9yl6',
         deezerId: '303936',
         designers: ['Bill Smith'],
@@ -5799,10 +5874,10 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.ART_POP, criteria.C_ELECTRO, criteria.ARENA, criteria.NEO_EIGHTIES],
-        selectedTrackTitle: `TODO`, // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: `Driving The Last Spike`,
+        selectedTrackYtId: 'vHGqGmzzQaY',
         spotifyId: '2WFkJi4USarY1qe3yjifjG',
-        deezerId: 'todo', // TODO
+        deezerId: '302794',
         designers: ['David Scheinmann', 'Felicity Roma Bowers'],
         similarAlbums: [],
         isAGem: false,
@@ -7689,6 +7764,9 @@ const albums = [
         similarAlbums: ['jefferson_airplane_volunteers'],
         isAGem: false,
     },
+    // TODO kaleidoscope
+    // c_psyche, 
+    // track dive into yesterday
     {
         id: 'kanguru_dreaming',
         title: 'Dreaming',
@@ -9030,6 +9108,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'mcluhan_anomaly',
+        title: 'Anomaly',
+        artist: 'McLuhan',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.FUNNY, criteria.FANFARE, criteria.LENGTHY_TRACKS, criteria.ODD_RHYTHM, criteria.C_PSYCHEDELIC, criteria.SYMPHONIC, criteria.C_JAZZ, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: 'The Monster Bride',
+        selectedTrackYtId: 'OKy6SGSGQbw',
+        spotifyId: null,
+        deezerId: null,
+        designers: [`Al D'Agostino`],
+        similarAlbums: ['frank_zappa_big_swifty'],
+        isAGem: true,
+        description: `TODO description`
+    },
+    {
         id: 'merlin_merlin',
         title: 'Merlin',
         artist: 'Merlin',
@@ -9181,10 +9276,10 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.ROCK_OPERA, criteria.FEMALE, criteria.SOFT_SEVENTIES, criteria.TRANSITION, criteria.STORYLINE],
-        selectedTrackTitle: '',
-        selectedTrackYtId: '',
-        spotifyId: null,
-        deezerId: null,
+        selectedTrackTitle: 'todo', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: null, // TODO
+        deezerId: null, // TODO
         designers: [],
         similarAlbums: ['andrew_lloyd_webber_and_tim_rice_jesus_christ_superstar', 'johnny_hallyday_hamlet'],
         isAGem: false,
@@ -11261,6 +11356,23 @@ const albums = [
     // designer:
     // deezer: 123402452
     {
+        id: 'prosper_broken_door',
+        title: 'Pollen',
+        artist: 'Pulsar',
+        year: 1975,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.SOPHISTICATED, criteria.C_PSYCHEDELIC, criteria.INSTRUMENTAL, criteria.JAM, criteria.SOFT],
+        selectedTrackTitle: 'todo', // TODO beginning OU where the sun touches the water
+        selectedTrackYtId: 'todo',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Ernst Müller'],
+        similarAlbums: [], // todo similar to yes early
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
         id: 'pulsar_pollen',
         title: 'Pollen',
         artist: 'Pulsar',
@@ -12088,13 +12200,86 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO power windows
-    // odd, arena, celectro, neo_eigitheis
-    // track: marathon
-    // TODO hold your fire
-    // arena, neo-eighties, female
-    // track: force ten OU open secrets
-    // similar to yes neo eighties?
+    {
+        id: 'rush_power_windows',
+        title: 'Power Windows',
+        artist: 'Rush',
+        year: 1985,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.ARENA],
+        selectedTrackTitle: 'Marathon',
+        selectedTrackYtId: 'cxxgEzVkEjI',
+        spotifyId: '4g5nPCL3oFaJB0402Kedm8',
+        deezerId: '1958541',
+        designers: ['Hugh Syme'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'rush_hold_your_fire',
+        title: 'Hold Your Fire',
+        artist: 'Rush',
+        year: 1987,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.ARENA],
+        selectedTrackTitle: 'Open Secrets', // TODO force ten OU open secrets
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '3OSQvwW2BElGZfjhsHJEru',
+        deezerId: '117782',
+        designers: ['Hugh Syme'],
+        similarAlbums: [], // TODO similar to yes neo eighties?
+        isAGem: false,
+    },
+    {
+        id: 'rush_presto',
+        title: 'Presto',
+        artist: 'Rush',
+        year: 1989,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.ARENA, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Superconductor',
+        selectedTrackYtId: 'g0tpASDwr_0',
+        spotifyId: '2DhyqYUQtUBdeT1YOe9o3R',
+        deezerId: '340048',
+        designers: ['Hugh Syme'],
+        similarAlbums: [], // TODO similar to genesis
+        isAGem: false,
+    },
+    {
+        id: 'rush_roll_the_bones',
+        title: 'Roll The Bones',
+        artist: 'Rush',
+        year: 1991,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.NEO_EIGHTIES, criteria.ARENA, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Where's My Thing?`,
+        selectedTrackYtId: 'hOj0eO3zCbc',
+        spotifyId: '2DhyqYUQtUBdeT1YOe9o3R',
+        deezerId: '340048',
+        designers: ['Hugh Syme'],
+        similarAlbums: [], // TODO similar to genesis
+        isAGem: false,
+    },
+    {
+        id: 'rush_counterparts',
+        title: 'Counterparts',
+        artist: 'Rush',
+        year: 1993,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.HEAVY, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Double Agent`,
+        selectedTrackYtId: 'vFN-9KjV4F4',
+        spotifyId: '0BknttIOsexUKtdMdLrxQo',
+        deezerId: '1698709',
+        designers: ['Hugh Syme'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // ************************************************************************************ //
     // **************************************** S **************************************** //
     // ********************************************************************************** //
@@ -14562,15 +14747,12 @@ const albums = [
     Curved Air
     ELO  
     ESKATON
-    Faust
     Gabor Szabo folk psyché
     Hawkwind
     Iron Claw
     Isotope
     Kraftwerk
     Malicorne
-    Man
-    Mike Oldfield
     Premiata Forneria Marconi
     Ralph Lundsten
     Soft Machine
@@ -14600,7 +14782,6 @@ const albums = [
     split criteria, add property album type which is an enum between STUDIO, LIVE, LIVE & STUDIO, COMPILATION
     DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
     Mobile version
-    Lexique page (page that explains : symphonic = song with movement !== glitter)
     deezer/spotify/discogs should be API + search with title + artist instead of manual ids
     iframes deezer/spotify should be displayed just like in-fb messenger conv, and should be toggleable (so you can listen throughout the app while browsing)
     subgenres should be specified in the album db not manually
@@ -14608,7 +14789,6 @@ const albums = [
     filter by year (range avec input min + max)
     lister instruments
     linker discogs
-    album comparison: sur une scale de 1 à 10, how much soubd alike ? et du coup ça rapproche énormément les albums entre eux, agnostic des artisres
 */
 
 export default albums
