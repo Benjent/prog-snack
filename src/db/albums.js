@@ -5623,7 +5623,6 @@ const albums = [
     // Jazz, Soft, Jam, Instrumental
     // HUNGARY
     // selected track: Mizrab
-    // similar albums: miles_davis_miles_in_the_sky
     {
         id: 'gash_a_young_mans_gash',
         title: `A Young Man's Gash`,
@@ -9460,6 +9459,7 @@ const albums = [
         similarAlbums: [], // TODO similar: hzrbie hancock sextant?
         isAGem: false,
     },
+    // TODO techniquement you're under arrest rentre là dedans, track is Katia, c_jazz, c_electro, neoeighties, instrumental, 
     {
         id: 'the_moody_blues_days_of_future_passed',
         title: 'Days Of Future Passed',
@@ -10133,7 +10133,7 @@ const albums = [
         year: 1976,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC], // TODO
+        criteria: [criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC, criteria.BAROQUE, criteria.FUNNY],
         selectedTrackTitle: 'Les Morceaux De Fer',
         selectedTrackYtId: 'G8myvW7Ri-4',
         spotifyId: '1crxdGNkb707IlKkknuyx5',
@@ -10149,9 +10149,9 @@ const albums = [
         year: 1979,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC, criteria.ROCK],
-        selectedTrackTitle: 'TODO', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.ITALIAN_SUNG, criteria.FRENCH_SUNG, criteria.SOUND_COLLAGES, criteria.C_PSYCHEDELIC, criteria.ROCK],
+        selectedTrackTitle: `L'arbre Noir`,
+        selectedTrackYtId: 'znp0eaGWTOA',
         spotifyId: '20HonPilsF78HT0cvXOHtR',
         deezerId: '6937514',
         designers: [],
@@ -12176,8 +12176,8 @@ const albums = [
         country: regions.CANADA,
         cover: '.jpg',
         criteria: [criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.ARENA, criteria.ODD_RHYTHM],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Digital Man',
+        selectedTrackYtId: '0fOjsIxinDk',
         spotifyId: '0gAhBCBqahVbuOgROHwISD',
         deezerId: '245685',
         designers: ['Hugh Syme'],
