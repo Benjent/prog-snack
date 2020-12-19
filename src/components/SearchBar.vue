@@ -12,7 +12,7 @@
                 <Arrow class="l-search-bar__arrow" color="dark" orientation="bottom"></Arrow>
 
                 <div class="l-search-bar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <Cover :album="album"></Cover>
+                    <Cover :album="album" size="30"></Cover>
                     <div class="l-search-bar__album__title"> {{ album.title }} </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ $search-bar-width: 300px;
             color: $black;
         }
 
-        &__cover {
+        .l-cover {
             width: 36px;
             height: 36px;
             margin-right: 5px;

@@ -1,5 +1,5 @@
 <template>
-    <div class="l-cover" v-if="album">
+    <div class="l-cover" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px' }">
         <img class="l-cover__image" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" :alt="album.title">
     </div>
 </template>
@@ -11,6 +11,9 @@ export default {
         album: {
             type: Object,
         },
+        size: {
+            type: Number,
+        }
     },
 }
 </script>
@@ -21,6 +24,7 @@ export default {
 
 .l-cover {
     display: ruby; // Fix squeeze due to parent's flex display. Why? You tell me
+
     & &__image {
         height: 100%;
         width: 100%;
