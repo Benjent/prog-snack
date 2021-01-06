@@ -183,6 +183,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'alain_markusfeld_le_desert_noir',
+        title: 'Le Désert Noir',
+        artist: 'Alain Markusfeld',
+        year: 1977,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.ORIENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Bulgaro-Feld',
+        selectedTrackYtId: 'kUTJ1QHCcY0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Patrice Larue'],
+        similarAlbums: [],
+        isAGem: false, // TODO almost a gem
+    },
+    {
         id: 'alain_renaud_renaud',
         title: 'Renaud',
         artist: 'Alain Renaud',
@@ -190,11 +206,27 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.SOFT, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.C_PSYCHEDELIC, criteria.C_FOLK],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Back And In',
+        selectedTrackYtId: null,
         spotifyId: null,
         deezerId: null,
         designers: ['Annie Louis Guérin'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alain_renaud_back_and_in_again',
+        title: 'Back And In Again',
+        artist: 'Alain Renaud',
+        year: 1978,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.JAM, criteria.C_ELECTRO, criteria.INSTRUMENTAL, criteria.TRANSITION],
+        selectedTrackTitle: 'Back And In Again',
+        selectedTrackYtId: 'gldsfN2iHbM',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
         similarAlbums: [],
         isAGem: false,
     },
@@ -409,21 +441,92 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'amon_duul_psychedelic_underground',
+        title: 'Psychedelic Underground',
+        artist: 'Amon Düül',
+        year: 1969,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.CRISPY_SIXTIES, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Der Garten Sandosa Im Morgentau',
+        selectedTrackYtId: 'GXoholzhCfU',
+        spotifyId: '0gVn9iRoMJ5xr8Sjj7M6qU',
+        deezerId: '89334322',
+        designers: ['J.H. Löffler'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'amon_duul_collapsing',
+        title: 'Collapsing',
+        artist: 'Amon Düül',
+        year: 1970,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Natur',
+        selectedTrackYtId: 'liSDvBw44Vo',
+        spotifyId: '3UECGoFpoLXVzun0mE0h78',
+        deezerId: '89344672',
+        designers: ['J.H. Löffler'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'amon_duul_paradieswarts_duul',
         title: 'Paradieswärts Düül',
         artist: 'Amon Düül',
         year: 1970,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.INSTRUMENTAL, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.C_PSYCHEDELIC, criteria.FOLK],
+        criteria: [criteria.INSTRUMENTAL, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.C_PSYCHEDELIC, criteria.FOLK, criteria.ORIENTAL],
         selectedTrackTitle: 'Love Is Peace',
         selectedTrackYtId: 'oUNxXhzF0fw',
-        spotifyId: null,
-        deezerId: null,
+        spotifyId: '0hKzYRUxPYGRkbt583dyvi',
+        deezerId: '88550372',
         designers: ['Gil Funccius'],
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'amon_duul_disaster',
+        title: 'Disaster',
+        artist: 'Amon Düül',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.JAM, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Broken',
+        selectedTrackYtId: 'zW-i878YRcc',
+        spotifyId: '7en15OeJ4ItNFnnxV9IAg5',
+        deezerId: '88691642',
+        designers: ['J.H. Löffler'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'amon_duul_ii_phallus_dei',
+        title: 'Phallus Dei',
+        artist: 'Amon Düül II',
+        year: 1969,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.GERMAN_SUNG, criteria.FEMALE],
+        selectedTrackTitle: 'Luzifers Ghilom',
+        selectedTrackYtId: 'SfEsNrM2z3s',
+        spotifyId: '2uC3l2Y0rJIRHdAgotyCuM',
+        deezerId: '83600082',
+        designers: ['Amon Düül II'],
+        similarAlbums: [],
+        isAGem: false, // TODO almost a gem, ery trippy mais assez cinsistant au finl
+    },
+    // TODO - Yeti
+    // 83530392
+    // TODO - Tanz Der Lemminge
+    // 83602972
+    // TODO - Carnival In Babylon
+    // 83603352
+    // Ceedence clearwater - pendulum almost prog ! Born to move selecte track
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
@@ -1785,17 +1888,61 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // Berits Halsband très bon !
-    // cjazz, instru, lengthy tracks, autr epays
-    // Big brother cheap thrills
+    {
+        id: 'berits_halsband_berits_halsband',
+        title: `Berits Halsband`,
+        artist: 'Berits Halsband',
+        year: 1975,
+        country: regions.SWEDEN,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `Myror I Köket`,
+        selectedTrackYtId: 'gkRIekK4peA',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Mats Victorson'],
+        similarAlbums: ['frank_zappa_big_swifty'],
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
+        id: 'bernard_lubat_and_his_mad_ducks_bernard_lubat_and_his_mad_ducks',
+        title: `Bernard Lubat & His Mad Ducks`,
+        artist: 'Bernard Lubat & His Mad Ducks',
+        year: 1971,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.JAZZY_GROOVY, criteria.ROCK, criteria.JAM, criteria.INSTRUMENTAL],
+        selectedTrackTitle: `To Yasmina`,
+        selectedTrackYtId: 'Vz8R12Ie0do',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Emmanuel Sciot'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Big brother cheap thrills
     // crispy sixties, rock, female
     // selected track sweet mary oh
     // similar jefferson airplane
-    // Big brother - Be a brother rock based, jam, uncommon, crispy
+    // TODO Big brother - Be a brother rock based, jam, uncommon, crispy
     // selected track sunshine baby
-    // Bir brother - how hard it is
-    // rock based - you've been talk bout me baby
-    // selected track maui
+    {
+        id: 'big_brother_and_the_holding_company_how_hard_it_is',
+        title: `Big Brother & The Holding Company`,
+        artist: 'How Hard It Is',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.FEMALE],
+        selectedTrackTitle: `Maui`,
+        selectedTrackYtId: 'KUF22iOuEAA',
+        spotifyId: '275i8yzDvfKH3NQqX3dc7j',
+        deezerId: '109388352',
+        designers: ['Dennis Nolan'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'bijelo_dugme_kad_bi_bio_bijelo_dugme',
         title: `Kad Bi' Bio Bijelo Dugme`,
@@ -2583,7 +2730,7 @@ const albums = [
         id: 'captain_beefheart_and_his_magic_band_mirror_man',
         title: 'Mirror Man',
         artist: 'Captain Beefhear & His Magic Band',
-        year: 1970,
+        year: 1971,
         country: regions.USA,
         cover: '.jpg',
         criteria: [criteria.EXPERIMENTAL, criteria.CRISPY_SIXTIES, criteria.C_PSYCHEDELIC, criteria.LENGTHY_TRACKS, criteria.JAM],
@@ -2595,6 +2742,31 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO the spotlight kid WAIT: Maybe we want to stop here (rock only afterwards)
+    // 1972
+    // Rock based, c_psyche, uncommon, jam
+    // track is Alice In Blunderland
+    // TODO Clear Spot (vraiment pas prog)
+    // 1972
+    // ROck based,c _psyche
+    // track is Big Eyed Beans From Venus
+    // TODO Bluejeans & Moonbeans
+    // 1974
+    // Rock based, soft, jam
+    // Track is pampadour swamp
+    // TODO Shiny Beast (Bat Chain Puller) -> retour du prog sûr
+    // 1978
+    // ART_POP, uncommon, cjazz, odd rhythm, c_psyche
+    // Similar zappa jazzy période roxy un peu, genre Over-Nite Sensation ?
+    // track is Ice Rose
+    // TODO Doc At The Radar Station
+    // 1980
+    // cpsyche, oddrythm, experim
+    // track is Brickbats
+    // TODO Ice Cream For Crow
+    // 1982
+    // c_psyche, expe
+    // track is The Thousandth And Tenth Day Of The Human Totem Pole OU The Host The Ghost The Most Holy-O
     {
         id: 'captain_beyond_captain_beyond',
         title: 'Captain Beyond',
@@ -2886,6 +3058,14 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Buddha + chocolate
+    // track is Ghost town
+    // oddrhythm, folkbased, touchy
+    // TODO Numbers
+    // track is Jzero
+    // concept, folkbased, uncommon instru
+    // TODO Izitso
+    // track is Life
     {
         id: 'cathedral_stained_glass_stories',
         title: 'Stained Glass Stories',
@@ -2935,9 +3115,22 @@ const albums = [
         similarAlbums: ['return_to_forever_romantic_warrior'],
         isAGem: false,
     },
-    // TODO 1976 - My SPanih Heart
-    // Jazz based, c_electro, SOFT_SEVENTIES, jam, instrumental, jazzy_groovy, fanfare, uncommon, female, latin
-    // selected track: Wind Danse (àdéfaut de trouver mieux)
+    {
+        id: 'chick_corea_my_spanish_heart',
+        title: 'My Spanish Heart',
+        artist: 'Chich Corea',
+        year: 1976,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAZZ, criteria.C_ELECTRO, criteria.SOFT_SEVENTIES, criteria.FEMALE, criteria.JAZZY_GROOVY, criteria.JAM, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.FANFARE, criteria.LATIN],
+        selectedTrackTitle: `Wind Danse`,
+        selectedTrackYtId: '5XpqMiUTPsw',
+        spotifyId: '5V1WcC2ldcMBdFwQg0LltV',
+        deezerId: '297326',
+        designers: ['Hal Fiedler', 'Mike Doud'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'chick_corea_the_mad_hatter',
         title: 'The Mad Hatter',
@@ -3139,13 +3332,79 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.SPECTACULAR, criteria.C_JAZZ, criteria.SYMPHONIC, criteria.ODD_RHYTHM],
-        selectedTrackTitle: 'Three Score And Ten, Amen ',
+        selectedTrackTitle: 'Three Score And Ten, Amen',
         selectedTrackYtId: 'rMq-I9zaxB4',
         spotifyId: '4zguhIv5sv0xVNjMJx5HT0',
         deezerId: '13944630',
         designers: ['Robin Nicol'],
         similarAlbums: [],
         isAGem: false,
+    },
+    {
+        id: 'colosseum_live',
+        title: 'Live',
+        artist: 'Colosseum',
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: '.png',
+        criteria: [criteria.LIVE, criteria.JAM, criteria.ROCK, criteria.JAZZY_GROOVY, criteria.FUNNY],
+        selectedTrackTitle: 'Skellington',
+        selectedTrackYtId: 'Qt7u0HaNBOw',
+        spotifyId: '2ksKMAqpQpDkjxTGrxcQ0I',
+        deezerId: '13944772',
+        designers: ['Marcus Keef'],
+        similarAlbums: [], // similar 801
+        isAGem: false,
+    },
+    {
+        id: 'colosseum_ii_strange_new_flesh',
+        title: 'Strange New Flesh',
+        artist: 'Colosseum II',
+        year: 1976,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.JAM, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Dark Side Of The Moog',
+        selectedTrackYtId: 'vzde2l2Wp28',
+        spotifyId: '1KvBaMqF72tDvEGvG9CUb3',
+        deezerId: '13944940',
+        designers: ['Ian Emes'],
+        similarAlbums: [], // TODO Romantic warrior
+        isAGem: false,
+    },
+    {
+        id: 'colosseum_ii_electric_savage',
+        title: 'Electric Savage',
+        artist: 'Colosseum II',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.JAM, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'todo', // TODO Put It This Way OU the scorch
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: null,
+        deezerId: null,
+        designers: ['John Pasche'],
+        similarAlbums: [], // TODO Windchase symphiniyty un peu
+        isAGem: true,
+        description: `TODO Description`
+    },
+    {
+        id: 'colosseum_ii_war_dance',
+        title: 'War Dance',
+        artist: 'Colosseum II',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.C_ELECTRO, criteria.JAM, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'todo', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Geoff Halpin'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`
     },
     {
         id: 'coma_financial_tycoon',
@@ -4102,10 +4361,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // todo dream theater
-    // heavy, odd_rhythm, technical, neo_eighties
-    // similar queensryche
-    // track : the ytse jam
+    {
+        id: 'dream_theater_when_dream_and_day_unite',
+        title: 'When Dream And Day Unite',
+        artist: 'Dream Theater',
+        year: 1988,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.HEAVY, criteria.ODD_RHYTHM, criteria.TECHNICAL, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: 'The Ytse Jam',
+        selectedTrackYtId: 'T5OmzUEm504',
+        spotifyId: null,
+        deezerId: '126238',
+        designers: [],
+        similarAlbums: ['queensryche_operation_mindcrime'],
+        isAGem: false,
+    },
     {
         id: 'dun_eros',
         title: 'Eros',
@@ -4656,9 +4927,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO eno moebius zz
-    // Electro based, ambient, soft, instru
-    // track : the shade
+    {
+        id: 'eno_moebius_roedelius_after_the_heat',
+        title: 'After The Heat',
+        artist: 'Eno Moebius Roedelius',
+        year: 1978,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'The Shade',
+        selectedTrackYtId: '8CudLTfb0Qk',
+        spotifyId: '4yq2tSTIBBHE8S0zvanABi',
+        deezerId: '62479142',
+        designers: ['Michael Weisse'],
+        similarAlbums: [], // TODO something tangerine dream
+        isAGem: false,
+    },
     {
         id: 'eskaton_4_visions',
         title: '4 Visions',
@@ -4835,6 +5119,22 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['Paul Redway'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'a_fleeting_glance_a_fleeting_glance',
+        title: 'A Fleeting Glance',
+        artist: 'A Fleeting Glance',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.SOUND_COLLAGES, criteria.CRISPY_SIXTIES, criteria.C_PSYCHEDELIC, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.BLENDS, criteria.FEMALE],
+        selectedTrackTitle: 'Symphony Of Love / Finale',
+        selectedTrackYtId: 'p0B4KsALP10',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Ernest Painter'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -5617,12 +5917,6 @@ const albums = [
     // ********************************************************************************** //
     // TODO Gäa - 1973 -  Auf Der Bahn Zum Uranus
     // germansung
-    // TODO Gábor Szabó not really prog
-    // Mizrab
-    // 1972
-    // Jazz, Soft, Jam, Instrumental
-    // HUNGARY
-    // selected track: Mizrab
     {
         id: 'gash_a_young_mans_gash',
         title: `A Young Man's Gash`,
@@ -6422,12 +6716,28 @@ const albums = [
         year: 1975,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.SOUND_COLLAGES, criteria.C_FOLK, criteria.MEDIEVAL], // transition 1 track
-        selectedTrackTitle: 'todo', // TODO Fontinental Version
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.SOUND_COLLAGES, criteria.C_FOLK, criteria.MEDIEVAL, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Heldenleben',
+        selectedTrackYtId: 'HVqtexuIbho',
         spotifyId: '7LBbQhDXxruCKSnLLJlyEn',
         deezerId: '64643772',
         designers: ['Tony Wright'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'gryphon_treason',
+        title: 'Treason',
+        artist: 'Gryphon',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Spring Song',
+        selectedTrackYtId: 'z5Q5NJrhbT8',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Pat Elliott Shircore'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -7125,8 +7435,8 @@ const albums = [
         country: regions.GERMANY,
         cover: '.jpg',
         criteria: [criteria.JAM, criteria.C_PSYCHEDELIC, criteria.SPACY, criteria.HEAVY],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: `Comin' Again`,
+        selectedTrackYtId: 'BByF2f1lkVs',
         spotifyId: null,
         deezerId: null,
         designers: ['Dierk Pape'],
@@ -7205,8 +7515,8 @@ const albums = [
         country: regions.GERMANY,
         cover: '.jpg',
         criteria: [criteria.ROCK],
-        selectedTrackTitle: 'todo', // TODO un des 3 premiers morceaux
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Henry Goes Married',
+        selectedTrackYtId: 'rnnVdUzAoqI',
         spotifyId: null,
         deezerId: null,
         designers: [],
@@ -7622,9 +7932,9 @@ const albums = [
         year: 1977,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.HEAVY], // TODO
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.HEAVY],
+        selectedTrackTitle: 'Let Us Prey / Call For The Priest',
+        selectedTrackYtId: '8VmRM5zslHE',
         spotifyId: '2GXeHOkRouW0LnKBMUnVtv',
         deezerId: '98260',
         designers: ['Bob Carlos Clarke'],
@@ -8363,6 +8673,22 @@ const albums = [
     // ************************************************************************************ //
     // **************************************** L **************************************** //
     // ********************************************************************************** //
+    {
+        id: 'laurence_vanay_galaxies',
+        title: 'Galaxies',
+        artist: 'Laurence Vanay',
+        year: 1974,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.FRENCH_SUNG, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Galaxies',
+        selectedTrackYtId: 'dhH4pGZtkrk',
+        spotifyId: '2ftJTzGjqoSRgm0Sn496R3',
+        deezerId: '8477365',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'laurent_thibault_mais_on_ne_peut_pas_rever_tout_le_temps',
         title: 'Mais On Ne Peut Pas Rêver Tout Le Temps',
@@ -9242,14 +9568,15 @@ const albums = [
         year: 1978,
         country: regions.ARGENTINA,
         cover: '.jpg',
-        criteria: [criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.FEMALE, criteria.C_PSYCHEDELIC],
+        criteria: [criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.FEMALE, criteria.C_PSYCHEDELIC, criteria.ODD_RHYTHM, criteria.C_FOLK],
         selectedTrackTitle: 'Cornonstipicum',
         selectedTrackYtId: 'W07m0jWv1oc',
         spotifyId: null,
         deezerId: null,
         designers: [],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: true,
+        description: `TODO description`,
     },
     {
         id: 'mia_conciertos',
@@ -9259,8 +9586,8 @@ const albums = [
         country: regions.ARGENTINA,
         cover: '.jpg',
         criteria: [criteria.LIVE, criteria.LENGTHY_TRACKS, criteria.FEMALE, criteria.BLENDS, criteria.SPANISH_SUNG, criteria.RENAISSANCE],
-        selectedTrackTitle: 'todo', // TODO El Joven Almendro déjà pris premier album
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Iridio Puro',
+        selectedTrackYtId: 'ohVayEHmCj8',
         spotifyId: null,
         deezerId: null,
         designers: [],
@@ -9275,10 +9602,10 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.ROCK_OPERA, criteria.FEMALE, criteria.SOFT_SEVENTIES, criteria.TRANSITION, criteria.STORYLINE],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
-        spotifyId: null, // TODO
-        deezerId: null, // TODO
+        selectedTrackTitle: `S.O.S. D'un Terrien En Détresse`,
+        selectedTrackYtId: 'slCipWPDdHw',
+        spotifyId: null,
+        deezerId: null,
         designers: [],
         similarAlbums: ['andrew_lloyd_webber_and_tim_rice_jesus_christ_superstar', 'johnny_hallyday_hamlet'],
         isAGem: false,
@@ -9482,14 +9809,14 @@ const albums = [
         year: 1976,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.LIVE, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.C_JAZZ, criteria.C_PSYCHEDELIC, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY],
+        criteria: [criteria.LIVE, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.C_JAZZ, criteria.C_PSYCHEDELIC, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.SOFT],
         selectedTrackTitle: `Gondwana`,
         selectedTrackYtId: null,
         spotifyId: '0lYz13Pd1IYa7kZVoTUlN4',
         deezerId: '115608',
         designers: ['Teruhisa Tajima'],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: false, // TODO almost a gem
     },
     {
         id: 'miles_davis_dark_magus',
@@ -9507,9 +9834,73 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO techniquement you're under arrest rentre là dedans, c_jazz, c_electro, neoeighties, instrumental,
-    // track is Katia
-    // deezer: 121293
+    {
+        id: 'miles_davis_the_man_with_the_horn',
+        title: 'The Man With The Horn',
+        artist: 'Miles Davis',
+        year: 1981,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.JAM, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: `Back Seat Betty`,
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '1fRSDRiFk922cV3bgFCdtz',
+        deezerId: '6919003',
+        designers: ['Cindy Brown', 'John Berg'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_star_people',
+        title: 'Star People',
+        artist: 'Miles Davis',
+        year: 1983,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: `Speak`,
+        selectedTrackYtId: 'acrzwF266L0',
+        spotifyId: '2j4kRyY7kLm9NuciAHyzg5',
+        deezerId: '7496447',
+        designers: ['Janet Perr'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_decoy',
+        title: 'Decoy',
+        artist: 'Miles Davis',
+        year: 1983,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.JAM],
+        selectedTrackTitle: `Code M.D.`,
+        selectedTrackYtId: 'hH60cY1xoCk',
+        spotifyId: '6TnYoLaDsyGqf987l4bLb1',
+        deezerId: '1459749',
+        designers: ['Gilles Larrain'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'miles_davis_youre_under_arrest',
+        title: `You're Under Arrest`,
+        artist: 'Miles Davis',
+        year: 1985,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.C_ELECTRO, criteria.NEO_EIGHTIES,criteria.INSTRUMENTAL],
+        selectedTrackTitle: `Katia`,
+        selectedTrackYtId: '5piPBgYZffw',
+        spotifyId: '5ITQ0X0gnSOo89AASdHV2o',
+        deezerId: '121293',
+        designers: ['Gilles Larrain'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Aura: Jazzbased, c_psyche, neoeighties, instru, uncommon instru
+    // track is White par défaut
+    // deezer 1408167 - 3FxWza4JZVZHVjZ4jTQAav
     {
         id: 'the_moody_blues_days_of_future_passed',
         title: 'Days Of Future Passed',
@@ -10134,7 +10525,7 @@ const albums = [
         year: 1972,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH_SUNG, criteria.C_PSYCHEDELIC, criteria.SOUND_COLLAGES, criteria.UNCOMMON_INSTRUMENTS, criteria.CONCEPT],
+        criteria: [criteria.FRENCH_SUNG, criteria.C_PSYCHEDELIC, criteria.SOUND_COLLAGES, criteria.UNCOMMON_INSTRUMENTS, criteria.CONCEPT, criteria.TRANSITION],
         selectedTrackTitle: 'Métronomie',
         selectedTrackYtId: 'ydWdoHvXWaA',
         spotifyId: '3ULRYqolMNV9YINhmsNqjp',
@@ -10151,9 +10542,9 @@ const albums = [
         year: 1973,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH_SUNG, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS], // TODO
-        selectedTrackTitle: 'todo', // TODO Angleterre ou Moby Dick
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.FRENCH_SUNG, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Moby Dick',
+        selectedTrackYtId: '6P_Vc1tsgEA',
         spotifyId: '3dTxwjyyKuDP4qlH44lRrR',
         deezerId: '6940916',
         designers: [],
@@ -10871,10 +11262,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Paul & Linda McCartney
-    // Ram - 1971
-    // ArtPop, c_folk,  TODO should be female vocals ?
-    // selectedtrack: Uncle Albert / Admiral Halsey (XI6C7L66zq8)
+    {
+        id: 'paul_and_linda_mcCartney_ram',
+        title: 'Ram',
+        artist: 'Paul & Linda McCartney',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_FOLK],
+        selectedTrackTitle: 'Uncle Albert / Admiral Halsey',
+        selectedTrackYtId: 'XI6C7L66zq8',
+        spotifyId: '0B4A9VnKXkK9HcDegigo5S',
+        deezerId: '2408871',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'people_ceremony',
         title: 'Ceremony - Buddha Meets Rock',
@@ -11413,14 +11816,30 @@ const albums = [
         country: regions.GERMANY,
         cover: '.jpg',
         criteria: [criteria.C_JAZZ, criteria.SOPHISTICATED, criteria.C_PSYCHEDELIC, criteria.INSTRUMENTAL, criteria.JAM, criteria.SOFT],
-        selectedTrackTitle: 'todo', // TODO beginning OU where the sun touches the water
-        selectedTrackYtId: 'todo',
+        selectedTrackTitle: 'Beginning',
+        selectedTrackYtId: '0zXQJRMRydk',
         spotifyId: null,
         deezerId: null,
         designers: ['Ernst Müller'],
         similarAlbums: [], // todo similar to yes early
         isAGem: true,
         description: `TODO description`,
+    },
+    {
+        id: 'prudence_tomorrow_may_be_vanished',
+        title: 'Tomorrow May Be Vanished',
+        artist: 'Prudence',
+        year: 1972,
+        country: regions.NORWAY,
+        cover: '.jpg',
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM], // TODO
+        selectedTrackTitle: 'todo', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '575ox0MaU9ogzw1ZyZhTO3',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [], // TODO similar jethro tull early
+        isAGem: false,
     },
     {
         id: 'pulsar_pollen',
@@ -11861,6 +12280,11 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Recreation 1972 - Music Or Not Music
+    // greasy seventies, c_psyche, jam, funny, patchwork, transition, soundcollage, instrumental
+    // country BELGIUM + track is nothing's holy?
+    // isagem onnetement
+    // similar aporhidte child 666 + début de beggar's opera
     {
         id: 'return_to_forever_return_to_forever',
         title: 'Return To Forever',
@@ -12194,8 +12618,8 @@ const albums = [
         country: regions.CANADA,
         cover: '.png',
         criteria: [criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.ODD_RHYTHM],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: `Jacob's Ladder`,
+        selectedTrackYtId: 'iuKEp-ropCc',
         spotifyId: '3nUNxSh2szhmN7iifAKv5i',
         deezerId: '124360',
         designers: ['Hugh Syme', 'Neil Peart'],
@@ -12274,8 +12698,8 @@ const albums = [
         country: regions.CANADA,
         cover: '.jpg',
         criteria: [criteria.FEMALE, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.ARENA],
-        selectedTrackTitle: 'Open Secrets', // TODO force ten OU open secrets
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Open Secrets',
+        selectedTrackYtId: 'ypwtq1ShnHI',
         spotifyId: '3OSQvwW2BElGZfjhsHJEru',
         deezerId: '117782',
         designers: ['Hugh Syme'],
@@ -12578,6 +13002,71 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'spirit_spirit',
+        title: 'Spirit',
+        artist: 'Spirit',
+        year: 1968,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.C_FOLK, criteria.SOFT, criteria.C_JAZZ, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE],
+        selectedTrackTitle: 'Taurus',
+        selectedTrackYtId: 'xd8AVbwB_6E',
+        spotifyId: '3TX6HT0emzfmlwsiMpE9CX',
+        deezerId: '113484',
+        designers: ['Corporate Head', 'Guy Webster'],
+        similarAlbums: ['the_beatles_revolver'],
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
+        id: 'spirit_the_family_that_plays_together',
+        title: 'The Family That Plays Together',
+        artist: 'Spirit',
+        year: 1968,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.C_FOLK, criteria.SOFT, criteria.TRANSITION, criteria.BAROQUE],
+        selectedTrackTitle: 'It SHall Be',
+        selectedTrackYtId: 'PlHnu3_Kgkc',
+        spotifyId: '5zwKg5QUnSfQwkJqfl5cWs',
+        deezerId: '112893',
+        designers: ['Guy Webster'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'spirit_clear',
+        title: 'Clear',
+        artist: 'Spirit',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.ROCK],
+        selectedTrackTitle: 'Clear',
+        selectedTrackYtId: 'qpN8xfRFc6k',
+        spotifyId: '6u7hh9AVnf4X0HLaZVKo38',
+        deezerId: '112732',
+        designers: ['Guy Webster'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'spirit_twelves_dreams_of_dr_sardonicus',
+        title: 'Twelves Dream Of Dr. Sardonicus',
+        artist: 'Spirit',
+        year: 1970,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC, criteria.ART_POP],
+        selectedTrackTitle: 'Space Child',
+        selectedTrackYtId: 'jpAx5VqzzUo',
+        spotifyId: '0NWXyLhHhaeAmu4eovC8Ks',
+        deezerId: '112731',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'spirogyra_st_radigunds',
         title: 'St. Radigunds',
         artist: 'Spirogyra',
@@ -12701,6 +13190,22 @@ const albums = [
         selectedTrackYtId: 'ZSb9s8E5rtU',
         spotifyId: '5iBOpddHTKZlap604IMKGY',
         deezerId: '1315730',
+        designers: ['Roger Dean'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'steve_howe_the_steve_howe_album',
+        title: 'The Steve Howe Album',
+        artist: 'Steve Howe',
+        year: 1979,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.SOPHISTICATED, criteria.UNCOMMON_INSTRUMENTS, criteria.BLENDS, criteria.FEMALE],
+        selectedTrackTitle: 'todo', // TODO
+        selectedTrackYtId: 'todo',
+        spotifyId: '6TI6gnnePvPEYRUMW6z6d5',
+        deezerId: null,
         designers: ['Roger Dean'],
         similarAlbums: [],
         isAGem: false,
@@ -13104,6 +13609,9 @@ const albums = [
     // ************************************************************************************ //
     // **************************************** T **************************************** //
     // ********************************************************************************** //
+    // TODO placer bon endroit: Tim Berne & Bill Frisell - ...Theoricaolly
+    // trac is M. OU Ground Floor
+    // psyché, experimental, c_jazz
     {
         id: 'tai_phong_tai_phong',
         title: 'Taï Phong',
@@ -13217,15 +13725,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // Spirit TODO
-    // selected track tauris OU elijah
-    // c_psyche, soft, c_jazz, jam, c_folk
-    // Family TODO
-    // selected
-    // soft, c_folk
-    // Clear TODO
-    // selected track: Ice
-    // TODO free band PUT IT RIGHT PLACE (one song has flute -> mourning sad morning)
     {
         id: 'tea_and_symphony_an_asylum_for_the_musically_insane',
         title: 'An Asylum For The Musically Insane',
@@ -13290,15 +13789,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO thin lizzy
-    // criteria: folk
-    // selected track eirie
-    // TODO shades of blue orphanage
-    // critera: folk, odd_rhythm, soft
-    // selected track buffalo gal || shades of blue orphanage
-    // vagabonds western wordl
-    // rockbased
-    // welected track slow blues
+    {
+        id: 'thin_lizzy_thin_lizzy',
+        title: 'Thin Lizzy',
+        artist: 'Thin Lizzy',
+        year: 1971,
+        country: regions.IRELAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK],
+        selectedTrackTitle: 'Eire',
+        selectedTrackYtId: 'DBLFJo5j0F4',
+        spotifyId: '7w9rDEQYLJRWcRUctOFbPy',
+        deezerId: '262661',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'thin_lizzy_shades_of_blue_orphanage',
+        title: 'Shades Of Blue Orphanage',
+        artist: 'Thin Lizzy',
+        year: 1972,
+        country: regions.IRELAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.ODD_RHYTHM, criteria.SOFT],
+        selectedTrackTitle: 'Shades Of Blue Orphanage',
+        selectedTrackYtId: 'RLOjJZO6Nro',
+        spotifyId: '6jXNB46aXlL2oWY03GtFHy',
+        deezerId: '245501',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'titus_groan_titus_groan',
         title: 'Titus Groan',
@@ -13443,6 +13965,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'the_turtles_the_turtles_present_the_battle_of_the_band',
+        title: 'The Turtles Present The Battle Of The Bands',
+        artist: 'The Turtles',
+        year: 1968,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.FUNNY, criteria.ROCK, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Food',
+        selectedTrackYtId: '2UEE0cjQ8EY',
+        spotifyId: '155OAoTAYR4Uu0LpSMvy5W',
+        deezerId: '148674',
+        designers: [],
+        similarAlbums: [], // TODO similar to procol harum mid carrier genre Grand Hotel ?? + similar electric light orchestra
+        isAGem: false,
+    },
+    {
+        id: 'the_turtles_turtle_soup',
+        title: 'Turtle Soup',
+        artist: 'The Turtles',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHEDELIC],
+        selectedTrackTitle: 'Somewhere Friday Night',
+        selectedTrackYtId: '-UawZQJdGe4',
+        spotifyId: '0kcb49VdiGSb7Qii0v0jIc',
+        deezerId: '204993',
+        designers: [],
+        similarAlbums: [], // TODO close to early jefferson airplane
+        isAGem: false,
+    },
     // ************************************************************************************ //
     // **************************************** U **************************************** //
     // ********************************************************************************** //
@@ -13507,6 +14061,70 @@ const albums = [
         spotifyId: '5RR8HGBBHCqFwElMrkrKrB',
         deezerId: '8661343',
         designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {    
+        id: 'univers_zero_heresie',
+        title: 'Hérésie',
+        artist: 'Univers Zéro',
+        year: 1979,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.OCCULT],
+        selectedTrackTitle: 'Jack The Ripper',
+        selectedTrackYtId: 'pyb3it1j24U',
+        spotifyId: '68fWbPDzZMjOoLGabHVHmn',
+        deezerId: '8676753',
+        designers: ['A.R.C. Dael'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {    
+        id: 'univers_zero_ceux_du_dehors',
+        title: 'Ceux Du Dehors',
+        artist: 'Univers Zéro',
+        year: 1981,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.ODD_RHYTHM, criteria.TECHNICAL, criteria.SOPHISTICATED],
+        selectedTrackTitle: 'Dense',
+        selectedTrackYtId: 'N2z01xngKKU',
+        spotifyId: '1J0tUfb0y6YHoKF4uGCOzA',
+        deezerId: '8676769',
+        designers: ['Annie De Bruecker'],
+        similarAlbums: [],
+        isAGem: false, // TODO Maybe true
+    },
+    {    
+        id: 'univers_zero_uzed',
+        title: 'Uzed',
+        artist: 'Univers Zéro',
+        year: 1984,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.ODD_RHYTHM, criteria.TECHNICAL, criteria.SOPHISTICATED],
+        selectedTrackTitle: 'Présage',
+        selectedTrackYtId: 'qjK72xY8BWs',
+        spotifyId: '333eNumS6ajTH4iY4RJH3V',
+        deezerId: '8706189',
+        designers: ['Guy Denis'],
+        similarAlbums: [],
+        isAGem: false, // TODO Maybe true as well!
+    },
+    {    
+        id: 'univers_zero_heatwave',
+        title: 'Heatwave',
+        artist: 'Univers Zéro',
+        year: 1987,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_ELECTRO, criteria.C_PSYCHEDELIC, criteria.ODD_RHYTHM, criteria.SOPHISTICATED],
+        selectedTrackTitle: 'Heatwave',
+        selectedTrackYtId: 'O5b0pJTezoE',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Marie-Noêlle Dufromont'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -14129,6 +14747,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'wlud_second',
+        title: 'Second',
+        artist: 'WLUD',
+        year: 1979,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.C_ELECTRO, criteria.GLITTER, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.SYMPHONIC],
+        selectedTrackTitle: 'Rocky',
+        selectedTrackYtId: null,
+        spotifyId: '6IDs4GRykuwp801O60BWdW',
+        deezerId: '432180',
+        designers: ['Graphic Saloon'],
+        similarAlbums: [],
+        isAGem: false, // TODO maybe true
+    },
     // ************************************************************************************ //
     // **************************************** X **************************************** //
     // ********************************************************************************** //
@@ -14698,8 +15332,8 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.ART_POP],
-        selectedTrackTitle: `todo`, // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: `From Rochdale To Ocho Rios`,
+        selectedTrackYtId: 'fpx-0OdVtpM',
         spotifyId: '3MecVG0PeBObAhjwEAczFG',
         deezerId: '2251931',
         designers: ['Hipgnosis'],
@@ -14771,6 +15405,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'eighteen_karat_gold',
+        title: 'All-Bumm',
+        artist: '18 Karat Gold',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHEDELIC],
+        selectedTrackTitle: 'Flying',
+        selectedTrackYtId: 'YodNgXXyBUk',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'nine_half_fly_nine_half_fly',
         title: '9.30 Fly',
         artist: '9.30 Fly',
@@ -14793,25 +15443,14 @@ const albums = [
 // TODO fill some discographies of artists that are already here:
 /*  
     Can
-    Cat Stevens a pas mal de prog vibes dans son jeu folk
-    Curved Air
-    ELO  
-    ESKATON
-    Gabor Szabo folk psyché
-    Hawkwind
-    Iron Claw
-    Isotope
-    Kraftwerk
     Malicorne
     Premiata Forneria Marconi
     Ralph Lundsten
     Soft Machine
     Triumvirat
-    UFO
-    The Who
-    // TODO loggins et messina pas mal de jam en mode prog + uncommon instrum
-    // TODO some jefferson starship ?
-    // TODO the hollies - butterfly un poil prog : écouter try it pour s'en rendre compte. Le précédent album semble psyché (pochette) mais musicaleent bof
+    Loggins & Messina pas mal de jam en mode prog + uncommon instrum?
+    Jefferson Starship
+    The Hollies - butterfly un poil prog : écouter try it pour s'en rendre compte. Le précédent album semble psyché (pochette) mais musicaleent bof
 */
 
 // TODO consider adding criteria:
