@@ -1059,9 +1059,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Asterix - Asterix - 1970 - Germany
-    // rock, greasey, seventies
-    // similar to babe ruth Amadrillo
+    {
+        id: 'asterix_asterix',
+        title: 'Asterix',
+        artist: 'Asterix',
+        year: 1970,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: 'todo', // TODO
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: '6S7GZvpRA9FOIs8KbI6IkQ',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [], // similar to babe ruth Amadrillo
+        isAGem: false,
+    },
     {
         id: 'atlantide_atlantide',
         title: 'Atlantide',
@@ -1985,12 +1998,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Big brother cheap thrills
-    // crispy sixties, rock, female
-    // selected track sweet mary oh
-    // similar jefferson airplane
-    // TODO Big brother - Be a brother rock based, jam, uncommon, crispy
-    // selected track sunshine baby
+    {
+        id: 'big_brother_and_the_holding_company_cheap_thrills',
+        title: `Big Brother & The Holding Company`,
+        artist: 'CHeap Thrills',
+        year: 1968,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.FEMALE, criteria.CRISPY_SIXTIES],
+        selectedTrackTitle: `Oh, Sweet Mary`,
+        selectedTrackYtId: '_lDfHs5FP0Y',
+        spotifyId: '2rogKfOpmCFuqNhtGKf2dX',
+        deezerId: '97533',
+        designers: ['Robert Crumb'],
+        similarAlbums: ['jefferson_airplane_after_bathing_at_baxters'],
+        isAGem: false,
+    },
+    {
+        id: 'big_brother_and_the_holding_company_be_a_brother',
+        title: `Big Brother & The Holding Company`,
+        artist: 'Be A Brother',
+        year: 1970,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.FEMALE, criteria.C_PSYCHEDELIC],
+        selectedTrackTitle: `Sunshine Baby`,
+        selectedTrackYtId: 'finPwJAdr2o',
+        spotifyId: '6S4gljlqDD1DkKtxHy3wJu',
+        deezerId: '109322982',
+        designers: ['Bob Seidemann'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'big_brother_and_the_holding_company_how_hard_it_is',
         title: `Big Brother & The Holding Company`,
@@ -2296,10 +2335,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Brian Davison
-    // Every Which Way
-    // cfolk, soft, jam
-    // selected track castle sand
+    {
+        id: 'brian_davison_every_which_way',
+        title: 'Every Which Way',
+        artist: 'Brian Davison',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.SOFT, criteria.JAM],
+        selectedTrackTitle: 'Castle Sand',
+        selectedTrackYtId: 'tlFfKv1xtF4',
+        spotifyId: '38t7PKD84dphZNNSLKxg34',
+        deezerId: '128976862',
+        designers: ['Nan Cuz'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'bruce_springsteen_the_wild_the_innocent_the_e_street_shuffle',
         title: 'The Wild, The Innocent & The E Street Shuffle',
@@ -7715,6 +7766,12 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Jefferson Airplane is Bark Prog
+    // TODO Jefferson Airplane is Long John Silver Prog
+    // TODO Jefferson Starship is Drago Fly Prog
+    // TODO Jefferson Starship maybe Red Octopus
+    // TODO Jefferson Starship maybe Spitfire
+    // TODO Jefferson Starship is Earth Prog
     {
         id: 'jethro_tull_stand_up',
         title: 'Stand Up',
@@ -8012,9 +8069,9 @@ const albums = [
         year: 1976,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.ODD_RHYTHM, criteria.HEAVY, criteria.TRANSITION],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.ODD_RHYTHM, criteria.HEAVY, criteria.TRANSITION, criteria.ROCK],
+        selectedTrackTitle: 'Victim Of Changes',
+        selectedTrackYtId: 'EKSU1W0ZUmQ',
         spotifyId: '5k3WFIHmmuHrUWSj5McaAe',
         deezerId: '8230928',
         designers: ['John Pasche', 'Patrick Woodroffe', 'Neil French'],
@@ -9019,8 +9076,8 @@ const albums = [
         country: regions.USA,
         cover: '.png',
         criteria: [criteria.FOLK, criteria.C_PSYCHEDELIC, criteria.SOFT, criteria.SOUND_COLLAGES],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        selectedTrackTitle: 'Amazing Air',
+        selectedTrackYtId: 'I39393i1U_A',
         spotifyId: '52X7afMLQEUPhkrIkdJzJH',
         deezerId: '503192',
         designers: ['Acy R. Lehman'],
@@ -9873,7 +9930,7 @@ const albums = [
         year: 1972,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.TRANSITION], // TODO ajouter criteria Afro à ça + cymande + osibisa
+        criteria: [criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.C_PSYCHEDELIC, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHEDELIC, criteria.TRANSITION],
         selectedTrackTitle: `Helen Butte`,
         selectedTrackYtId: null,
         spotifyId: '3lDkLLzW8arbO2OXCK1QTJ',
@@ -14826,7 +14883,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Smoke without fire -> ROCK based, selected track way of the world part 1
+    {
+        id: 'wishbone_ash_no_smoke_without_fire',
+        title: `No Smoke Without Fire`,
+        artist: 'Wishbone Ash',
+        year: 1978,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'The Way Of The World (Part I)',
+        selectedTrackYtId: 'wz2G1L2s3nU',
+        spotifyId: '5NKfcsbI3nBy8e8dthzTxH',
+        deezerId: '253398',
+        designers: ['Colin Elgie'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'wizzard_wizzard_brew',
         title: 'Wizzard Brew',
@@ -15577,7 +15649,6 @@ const albums = [
     Soft Machine
     Triumvirat
     Loggins & Messina pas mal de jam en mode prog + uncommon instrum?
-    Jefferson Starship
     The Hollies - butterfly un poil prog : écouter try it pour s'en rendre compte. Le précédent album semble psyché (pochette) mais musicaleent bof
 */
 
@@ -15585,12 +15656,8 @@ const albums = [
 /*
     prog-core <-- This could be a special attribute actually || in Main genre otherwise
     bluesy
-    cheesy
-    influencial
-	poetic
-    history-related
-    ahead-of-its-time
     large asset of instruments
+    Afrobeat à miles davis + cymande + osibisa
 */
 
 // TODO below is list of things to do:
