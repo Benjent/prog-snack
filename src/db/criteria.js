@@ -36,7 +36,7 @@ const criteria = {
     C_JAZZ: 'C_JAZZ',
     C_FOLK: 'C_FOLK',
     C_ELECTRO: 'C_ELECTRO',
-    C_PSYCHEDELIC: 'C_PSYCHEDELIC',
+    C_PSYCHE: 'C_PSYCHE',
 
     // Musically
     ODD_RHYTHM: 'ODD_RHYTHM',
@@ -129,7 +129,7 @@ const criteriaOrder = [
     criteria.C_JAZZ,
     criteria.C_FOLK,
     criteria.C_ELECTRO,
-    criteria.C_PSYCHEDELIC,
+    criteria.C_PSYCHE,
 
     // Musically
     criteria.ODD_RHYTHM,

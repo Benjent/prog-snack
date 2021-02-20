@@ -117,7 +117,7 @@ export default {
                         { criterium: criteria.C_JAZZ, checked: false },
                         { criterium: criteria.C_FOLK, checked: false },
                         { criterium: criteria.C_ELECTRO, checked: false },
-                        { criterium: criteria.C_PSYCHEDELIC, checked: false },
+                        { criterium: criteria.C_PSYCHE, checked: false },
                         { criterium: criteria.BLENDS, name: 'blend' },
                     ],
                 },
