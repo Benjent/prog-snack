@@ -6,14 +6,14 @@ const criteria = {
     LIVE: 'LIVE',
     
     // Language
-    CROATIAN_SUNG: 'CROATIAN_SUNG',
-    FRENCH_SUNG: 'FRENCH_SUNG',
-    GERMAN_SUNG: 'GERMAN_SUNG',
-    GREEK_SUNG: 'GREEK_SUNG',
-    IGBO_SUNG: 'IGBO_SUNG',
-    ITALIAN_SUNG: 'ITALIAN_SUNG',
-    SPANISH_SUNG: 'SPANISH_SUNG',
-    SWEDISH_SUNG: 'SWEDISH_SUNG',
+    CROATIAN: 'CROATIAN',
+    FRENCH: 'FRENCH',
+    GERMAN: 'GERMAN',
+    GREEK: 'GREEK',
+    IGBO: 'IGBO',
+    ITALIAN: 'ITALIAN',
+    SPANISH: 'SPANISH',
+    SWEDISH: 'SWEDISH',
     ZEUHL: 'ZEUHL',
     
     // Theme
@@ -99,14 +99,14 @@ const criteriaOrder = [
     criteria.LIVE,
     
     // Language
-    criteria.CROATIAN_SUNG,
-    criteria.FRENCH_SUNG,
-    criteria.GERMAN_SUNG,
-    criteria.GREEK_SUNG,
-    criteria.ITALIAN_SUNG,
-    criteria.IGBO_SUNG,
-    criteria.SPANISH_SUNG,
-    criteria.SWEDISH_SUNG,
+    criteria.CROATIAN,
+    criteria.FRENCH,
+    criteria.GERMAN,
+    criteria.GREEK,
+    criteria.ITALIAN,
+    criteria.IGBO,
+    criteria.SPANISH,
+    criteria.SWEDISH,
     criteria.ZEUHL,
     
     // Theme
