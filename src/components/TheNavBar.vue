@@ -1,21 +1,13 @@
 <template>
-    <header class="l-the-nav-bar">
-        <router-link class="l-the-nav-bar__snack link" to="/">Would you like a snack</router-link>
-        <nav class="l-the-nav-bar__nav">
-            <router-link class="l-the-nav-bar__nav-item link" v-for="item in nav" :key="item.path" :to="item.path">
-                <div class="l-the-nav-bar__nav-text">{{ item.title }}</div>
-                <!-- <Arrow class="l-the-nav-bar__arrow" orientation="bottom" v-if="$route.path === item.path" color="dark"></Arrow> -->
+    <header class="theNavBar">
+        <router-link v-if="!footer" class="theNavBar__logo link" to="/">Would you like a snack</router-link>
+        <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
+            <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
+                <div class="theNavBar__navText">{{ item.title }}</div>
+                <!-- <Arrow class="theNavBar__arrow" orientation="bottom" v-if="$route.path === item.path" color="dark"></Arrow> -->
             </router-link>
         </nav>
-        <!-- <div v-else class="l-the-nav-bar__nav">
-            <div class="l-the-nav-bar__burger" @click="isDisplayedNav = !isDisplayedNav">
-                <div class="l-the-nav-bar__burger-row" v-for="n in 3" :key="n"></div>
-            </div>
-            <nav class="l-the-nav-bar__burger-nav" v-if="isDisplayedNav">
-                <router-link class="l-the-nav-bar__nav-item link" v-for="item in nav" :key="item.path" :to="item.path" @click.native="isDisplayedNav = false">{{ item.title }}</router-link>
-            </nav>
-        </div> -->
-        <SearchBar class="l-the-nav-bar__search-bar"></SearchBar>
+        <SearchBar v-if="!footer"></SearchBar>
     </header>
 </template>
 
@@ -28,6 +20,9 @@ export default {
     components: {
         Arrow,
         SearchBar,
+    },
+    props: {
+        footer: Boolean,
     },
     data() {
         return {
@@ -52,23 +47,21 @@ export default {
 @import '../style/mixins/shadow';
 @import '../style/modules/link';
 
-.l-the-nav-bar {
+.theNavBar {
     @include shadow;
-    position: sticky;
-    z-index: 10;
-    top: 0;
     display: flex;
     align-items: center;
-    height: $header-height;
+    height: var(--header-height);
     box-sizing: border-box;
     background: $secondary-dark;
-    // border-bottom: solid 2px $primary;
+    position: relative;
+    z-index: 10;
 
     .router-link-exact-active {
         pointer-events: none;
     }
 
-    & &__snack {
+    & &__logo {
         cursor: pointer;
         font-size: 30px;
         padding: 10px;
@@ -81,7 +74,7 @@ export default {
         flex: 1;
     }
 
-    & &__nav-item {
+    & &__navItem {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -95,62 +88,15 @@ export default {
             border-bottom: solid 2px $primary;
         }
 
-        &__nav-text {
+        &__navText {
             padding: 15px 0; // Align arrow on the bottom header line
         }
     }
-
-    & &__arrow {
-        position: absolute;
-        bottom: -22px; // TODO use var
-    }
 }
 
-@media (max-width: 1280px) {
-    .l-the-nav-bar {
-        & &__nav-item {
-            padding: 10px;
-        }
-
-        & &__burger {
-            cursor: pointer;
-            padding: 10px;
-            height: 40px;
-            width: 34px;
-        }
-
-        & &__burger-row {
-            height: 3px;
-            border-radius: 10px;
-            background: $primary;
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        & &__burger-nav {
-            position: absolute;
-            top: 66px;
-            background: $secondary;
-            border: solid 2px $primary;
-            border-bottom-left-radius: $borderRadius;
-            border-bottom-right-radius: $borderRadius;
-        }
-
-        // & &__nav-item {
-        //     padding: 20px 20px;
-        //     white-space: nowrap;
-
-        //     &:hover {
-        //         background: $primary;
-        //         color: $black;
-        //     }
-
-        //     &.router-link-active {
-        //         background: $primary;
-        //         color: $black;
-        //         pointer-events: none;
-        //     }
-        // }
+@media (max-width: $mobile) {
+    .theNavBar {
+        justify-content: space-between;
     }
 }
 </style>

@@ -190,4 +190,19 @@ export default {
         margin-top: 60px;
     }
 }
+
+@media (max-width: $mobile) {
+    .l-stats {
+        padding: 20px;
+
+        & &__numbers {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & &__number {
+            padding: 10px;
+        }
+    }
+}
 </style>

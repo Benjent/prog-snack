@@ -1,14 +1,14 @@
 <template>
-    <section class="l-designers">
-        <div class="l-designers__item" v-for="designer in designersWithEnoughWorks" :key="designer.name">
+    <section class="designers">
+        <div class="designers__item" v-for="designer in designersWithEnoughWorks" :key="designer.name">
 
-            <div class="l-designers__name">{{ designer.name }}</div>
+            <div class="designers__name">{{ designer.name }}</div>
             
-            <div class="l-designers__border-wrapper">
-                <Arrow size="medium" class="l-designers__arrow" orientation="bottom" color="dark"></Arrow>
+            <div class="designers__border-wrapper">
+                <Arrow size="medium" class="designers__arrow" orientation="bottom" color="dark"></Arrow>
 
-                <div class="l-designers__albums">
-                    <div class="l-designers__albums-item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
+                <div class="designers__albums">
+                    <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
                         <AlbumThumb :album="album"></AlbumThumb>
                     </div>
                 </div>
@@ -47,8 +47,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/page';
 
-.l-designers {
+.designers {
+    @include page;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +78,7 @@ export default {
         justify-content: center;
     }
 
-    & &__albums-item {
+    & &__albums__item {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -97,6 +100,26 @@ export default {
         margin: 0 auto;
         margin-bottom: -20px;
         z-index: 1;
+    }
+}
+
+@media (max-width: $mobile) {
+    .designers {
+        padding: 20px 0;
+
+        & &__item {
+            padding: 0;
+            padding-top: 20px;
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+
+        & &__albums__item {
+            height: 120px;
+            width: 120px;
+        }
     }
 }
 </style>

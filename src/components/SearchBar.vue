@@ -170,7 +170,7 @@ $search-bar-width: 300px;
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: $mobile) {
     .l-search-bar {
         $search-bar-width: 220px;
 
