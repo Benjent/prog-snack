@@ -1,7 +1,8 @@
 <template>
-    <div id="app" class="l-app">
+    <div id="app" class="app">
         <TheNavBar></TheNavBar>
-        <router-view/>
+        <router-view  class="app__page"/>
+        <TheNavBar v-if="$mq === 'M'" footer></TheNavBar>
     </div>
 </template>
 
@@ -17,9 +18,12 @@ export default {
 
 <style lang="scss">
 @import './style/gatherer';
+@import './style/mixins/page';
 @import './style/modules/link';
 
-.l-app {
-    
+.app {
+    &__page {
+        @include page;
+    }
 }
 </style>

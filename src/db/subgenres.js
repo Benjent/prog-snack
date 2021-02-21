@@ -32,7 +32,7 @@ const subgenres = [
             'baba_yaga_collage',
             'soft_machine_third',
         ],
-        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.C_PSYCHEDELIC, criteria.LENGTHY_TRACKS, criteria.SOUND_COLLAGES]
+        criteria: [criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.C_PSYCHE, criteria.LENGTHY_TRACKS, criteria.SOUND_COLLAGES]
     },
     {
         name: 'Canterbury School / Folk Rock',
@@ -103,7 +103,7 @@ const subgenres = [
             'love_forever_changes',
 
         ],
-        criteria: [,criteria.FOLK, criteria.FANTASY, criteria.SOFT, criteria.HUMBLE, criteria.C_PSYCHEDELIC, criteria.BAROQUE]
+        criteria: [,criteria.FOLK, criteria.FANTASY, criteria.SOFT, criteria.HUMBLE, criteria.C_PSYCHE, criteria.BAROQUE]
     },
     {
         name: 'Glitter',
@@ -180,7 +180,7 @@ const subgenres = [
             'jade_warrior_at_peace',
             'pythagoras_journey_to_the_vast_unknown',
         ],
-        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.SOFT, criteria.C_PSYCHEDELIC, criteria.SCI_FI, criteria.SOUND_COLLAGES]
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.SOFT, criteria.C_PSYCHE, criteria.SCI_FI, criteria.SOUND_COLLAGES]
     },
     {
         name: 'Neo-Prog',
@@ -206,7 +206,7 @@ const subgenres = [
             'warhorse_warhorse',
             'aphrodites_child_666',
         ],
-        criteria: [criteria.OCCULT, criteria.HEAVY, criteria.C_PSYCHEDELIC, criteria.ROCK, criteria.C_FOLK, criteria.JAM]
+        criteria: [criteria.OCCULT, criteria.HEAVY, criteria.C_PSYCHE, criteria.ROCK, criteria.C_FOLK, criteria.JAM]
     },
     {
         name: 'Opera Rock / Fanfare',
@@ -258,7 +258,7 @@ const subgenres = [
             'ultimate_spinach_ultimate_spinach',
             'may_blitz_may_blitz',
         ],
-        criteria: [criteria.C_PSYCHEDELIC, criteria.AMBIENT, criteria.PATCHWORK, criteria.C_FOLK, criteria.CRISPY_SIXTIES, criteria.SOFT]
+        criteria: [criteria.C_PSYCHE, criteria.AMBIENT, criteria.PATCHWORK, criteria.C_FOLK, criteria.CRISPY_SIXTIES, criteria.SOFT]
     },
     {
         name: 'Renaissance',
@@ -296,7 +296,7 @@ const subgenres = [
             'nektar_a_tab_in_the_ocean',
             'ozric_tentacles_strangeitude',
         ],
-        criteria: [criteria.SPACY, criteria.SCI_FI, criteria.ROCK, criteria.C_ELECTRO, criteria.C_PSYCHEDELIC, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.HEAVY, criteria.AMBIENT]
+        criteria: [criteria.SPACY, criteria.SCI_FI, criteria.ROCK, criteria.C_ELECTRO, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS, criteria.HEAVY, criteria.AMBIENT]
     },
     {
         name: 'Symphonic',
@@ -319,7 +319,7 @@ const subgenres = [
             'weidorje_weidorje',
             'laurent_thibault_mais_on_ne_peut_pas_rever_tout_le_temps',
         ],
-        criteria: [criteria.ZEUHL, criteria.SPECTACULAR, criteria.ROCK_OPERA, criteria.SCI_FI, criteria.LENGTHY_TRACKS, criteria.CONCEPT, criteria.C_PSYCHEDELIC, criteria.EXPERIMENTAL, criteria.FANFARE, criteria.C_JAZZ, criteria.SYMPHONIC]
+        criteria: [criteria.ZEUHL, criteria.SPECTACULAR, criteria.ROCK_OPERA, criteria.SCI_FI, criteria.LENGTHY_TRACKS, criteria.CONCEPT, criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.FANFARE, criteria.C_JAZZ, criteria.SYMPHONIC]
     },
 ]
 

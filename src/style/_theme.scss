@@ -2,5 +2,5 @@ body {
     font-family: 'Oswald', sans-serif;
     background: $secondary-dark;
     color: $primary;
-    font-size: $fs-10;
+    font-size: var(--default-font-size);
 }

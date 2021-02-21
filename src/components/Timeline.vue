@@ -1,8 +1,8 @@
 <template>
-    <div class="l-timeline">
-        <div class="l-timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
-            <div class="l-timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
-            <Cover class="l-timeline__cover" :album="album"  @click.native="selectAlbum(album)"></Cover>
+    <div class="timeline">
+        <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
+            <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
+            <Cover class="timeline__cover" :album="album"  @click.native="selectAlbum(album)"></Cover>
         </div>
     </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/shadow';
 
-.l-timeline {
+.timeline {
     display: flex;
     align-items: flex-start;
 
@@ -75,6 +75,12 @@ export default {
         background: $primary;
         margin-top: 20px;
         border-top: solid 2px $primary;
+    }
+}
+
+@media (max-width: $mobile) {
+    .timeline {
+        bottom: var(--header-height);
     }
 }
 </style>

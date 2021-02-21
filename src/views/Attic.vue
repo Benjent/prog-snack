@@ -1,21 +1,21 @@
 <template>
-     <section class="l-attic">
-        <section class="l-attic__sidebar">
-            <div class="l-attic__title l-attic__title--reset">
-                <button class="l-attic__reset button" @click="resetFilter()">Reset filter</button>
+     <section class="attic">
+        <section class="attic__sidebar">
+            <div class="attic__title attic__title--reset">
+                <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
             </div>
-            <div class="l-attic__title" @click="isDisplayedRegionYear = !isDisplayedRegionYear">
+            <div class="attic__title" @click="isDisplayedRegionYear = !isDisplayedRegionYear">
                 Region & Year
                 <Arrow color=dark size="small" :orientation="isDisplayedRegionYear ? 'top' : 'bottom'"></Arrow>
             </div>
-            <div class="l-attic__panel" v-if="isDisplayedRegionYear">
-                <div class="select l-attic__filter">
+            <div class="attic__panel" v-if="isDisplayedRegionYear">
+                <div class="select attic__filter">
                     <select v-model="selectedRegion" @change="filterAttic">
                         <option :value="null" selected>All</option>
                         <option v-for="region in regions" :key="region" :value="region">{{ region }}</option>
                     </select>
                 </div>
-                <div class="select l-attic__filter">
+                <div class="select attic__filter">
                     <select v-model="selectedYear" @change="filterAttic">
                         <option :value="null" selected>All</option>
                         <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
@@ -23,18 +23,18 @@
                 </div>
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
-                <div class="l-attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
+                <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
                     {{ panel.panel }}
                     <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
                 </div>
-                <div class="l-attic__panel" v-if="panel.isDisplayed">
+                <div class="attic__panel" v-if="panel.isDisplayed">
                     <template v-for="(item, indexCriteria) in panel.criteria">
                         <Radio v-if="item.name" v-model="radioGroups[item.name]"
-                            class="l-attic__filter"
+                            class="attic__filter"
                             :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
                             @click.native="filterAttic(item.criterium)"></Radio>
                         <Check v-else
-                            class="l-attic__filter"
+                            class="attic__filter"
                             v-model="filterModel[index].criteria[indexCriteria].checked"
                             :label="item.criterium | criterium" :key="item.criterium" 
                             @click.native="filterAttic(item.criterium)"></Check>
@@ -42,8 +42,8 @@
                 </div>
             </div>
         </section>
-        <section id="albumList" class="l-attic__mosaic">
-            <AlbumThumb class="l-attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" @click.native="selectAlbumAndView(album)"></AlbumThumb>
+        <section id="albumList" class="attic__mosaic">
+            <AlbumThumb class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" @click.native="selectAlbumAndView(album)"></AlbumThumb>
         </section>
     </section>
 </template>
@@ -81,10 +81,10 @@ export default {
                     panel: 'Language',
                     isDisplayed: false,
                     criteria: [
-                        { criterium: criteria.FRENCH_SUNG, name: 'language' },
-                        { criterium: criteria.ITALIAN_SUNG, name: 'language' },
-                        { criterium: criteria.SPANISH_SUNG, name: 'language' },
-                        { criterium: criteria.SWEDISH_SUNG, name: 'language' },
+                        { criterium: criteria.FRENCH, name: 'language' },
+                        { criterium: criteria.ITALIAN, name: 'language' },
+                        { criterium: criteria.SPANISH, name: 'language' },
+                        { criterium: criteria.SWEDISH, name: 'language' },
                         { criterium: criteria.ZEUHL, name: 'language' },
                     ],
                 },
@@ -117,7 +117,7 @@ export default {
                         { criterium: criteria.C_JAZZ, checked: false },
                         { criterium: criteria.C_FOLK, checked: false },
                         { criterium: criteria.C_ELECTRO, checked: false },
-                        { criterium: criteria.C_PSYCHEDELIC, checked: false },
+                        { criterium: criteria.C_PSYCHE, checked: false },
                         { criterium: criteria.BLENDS, name: 'blend' },
                     ],
                 },
@@ -293,6 +293,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/page';
 @import '../style/mixins/shadow';
 @import '../style/modules/button';
 @import '../style/modules/select';
@@ -304,17 +305,18 @@ export default {
     user-select: none;
 }
 
-.l-attic {
+.attic {
+    @include page;
     display: flex;
 
     & &__sidebar {
         $width: 250px;
         @include shadow;
+        @include page;
         position: sticky;
         z-index: 1;
         width: $width;
         min-width: $width;
-        height: calc(100vh - #{$header-height});
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
@@ -348,11 +350,11 @@ export default {
     }
 
     & &__mosaic {
+        @include page;
         display: flex;
         flex-wrap: wrap;
         align-content: baseline;
         width: 100%;
-        height: calc(100vh - #{$header-height});
         overflow-y: scroll;
     }
 
@@ -371,32 +373,32 @@ export default {
     }
 }
 
-@media (max-width: 1460px) {
-    .l-attic {
+@media (max-width: $mobile) {
+    .attic {
+        & &__title {
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .attic {
         & &__cover {
             width: calc(100% / 6);
         }
     }
 }
 
-@media (max-width: 1080px) {
-    .l-attic {
+@media (max-width: 860px) {
+    .attic {
         & &__cover {
             width: calc(100% / 5);
         }
     }
 }
 
-@media (max-width: 860px) {
-    .l-attic {
-        & &__cover {
-            width: calc(100% / 4);
-        }
-    }
-}
-
 @media (max-width: 640px) {
-    .l-attic {
+    .attic {
         & &__cover {
             width: calc(100% / 3);
         }

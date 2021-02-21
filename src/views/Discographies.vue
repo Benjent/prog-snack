@@ -110,7 +110,7 @@ export default {
         position: sticky;
         width: $width;
         min-width: $width;
-        height: calc(100vh - #{$header-height});
+        height: calc(100vh - var(--header-height));
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
@@ -193,7 +193,7 @@ export default {
             width: 100%;
             box-sizing: border-box;
             padding: 20px;
-            font-size: $fs-10;
+            font-size: var(--default-font-size);
         }
 
         &__title {
@@ -230,7 +230,7 @@ export default {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: $mobile) {
     .l-discographies {
         $cover-width: 100px;
 

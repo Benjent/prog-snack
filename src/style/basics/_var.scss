@@ -2,6 +2,11 @@
 $borderRadiusSmall: 3px;
 $borderRadius: 15px;
 $borderThin: 3px;
-// $borderMedium: 5px;
 $borderThick: $borderThin * 2;
-$header-height: 68px;
+
+$mobile: 1280px;
+
+:root {
+    --default-font-size: 14px;
+    --header-height: 68px;
+}

@@ -73,4 +73,10 @@ export default {
         width: 100%;
     }
 }
+
+@media (max-width: $mobile) {
+    .l-album-thumb {
+        font-size: 0.8em;
+    }
+}
 </style>

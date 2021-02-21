@@ -1,13 +1,13 @@
 <template>
-    <section class="l-gems">
-        <div class="l-gems__item" v-for="album in gems" :key="album.id">
-            <Cover class="l-gems__cover" :album="album" @click.native="selectAlbumAndView(album)"></Cover>
+    <section class="gems">
+        <div class="gems__item" v-for="album in gems" :key="album.id">
+            <Cover class="gems__cover" :album="album" @click.native="selectAlbumAndView(album)"></Cover>
             
-            <div class="l-gems__album">
-                <span class="l-gems__title" @click="selectAlbumAndView(album)">
+            <div class="gems__album">
+                <span class="gems__title" @click="selectAlbumAndView(album)">
                     {{album.artist}} - {{album.title}} ({{album.year}})
                 </span>
-                <blockquote class="l-gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
+                <blockquote class="gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
             </div>
         </div>
     </section>
@@ -41,8 +41,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/page';
 
-.l-gems {
+.gems {
+    @include page;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,6 +85,38 @@ export default {
         font-style: italic;
         font-size: $fs-14;
         margin-top: 50px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .gems {
+        padding: 20px;
+
+        & &__item, & &__item:nth-child(even) {
+            padding: 20px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & &__album {
+            text-align: center;
+        }
+
+        & &__cover {
+            height: 120px;
+            width: 120px;
+            border-width: 3px;
+        }
+
+        & &__title {
+            cursor: pointer;
+            font-size: $fs-12;
+        }
+
+        & &__description {
+            margin-top: 20px;
+            font-size: 1em;
+        }
     }
 }
 </style>
