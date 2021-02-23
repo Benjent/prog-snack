@@ -12,6 +12,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.C_FOLK]: 'Contains Folk elements',
 		[criteria.C_JAZZ]: 'Contains Jazz elements',
 		[criteria.C_PSYCHE]: 'Contains psychedelic elements',
+		[criteria.CELTIC]: 'Celtic',
 		[criteria.CONCEPT]: 'Concept album',
 		[criteria.CRISPY_SIXTIES]: 'Crispy 60s sound',
 		[criteria.CROATIAN]: 'Croatian sung',
@@ -26,6 +27,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.GERMAN]: 'German sung',
 		[criteria.GLITTER]: 'Glittering',
 		[criteria.GREASY_SEVENTIES]: 'Greasy early 70s sound',
+		[criteria.GREEK]: 'Greek sung',
 		[criteria.HEAVY]: 'Rather heavy',
 		[criteria.HUMBLE]: 'Humble',
 		[criteria.IGBO]: 'Igbo sung',
@@ -67,6 +69,9 @@ Vue.filter('criterium', (value) => {
 		[criteria.TRANSITION]: 'Tracks have transitions',
 		[criteria.UNCOMMON_INSTRUMENTS]: 'Uncommon instruments',
 		[criteria.ZEUHL]: 'Zeuhl',
+    }
+    if (!mapper[value]) {
+        console.error(`Unable to find criteria with value: ${value}`)
     }
     return mapper[value]
 })

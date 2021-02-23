@@ -12,7 +12,7 @@
                 <Arrow class="l-search-bar__arrow" color="dark" orientation="bottom"></Arrow>
 
                 <div class="l-search-bar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <Cover :album="album" size="30"></Cover>
+                    <Cover :album="album" :size="30"></Cover>
                     <div class="l-search-bar__album__title"> {{ album.title }} </div>
                 </div>
             </div>
