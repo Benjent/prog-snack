@@ -1,7 +1,9 @@
 <template>
     <div id="app" class="app">
         <TheNavBar></TheNavBar>
-        <router-view  class="app__page"/>
+        <section class="app__body">
+            <router-view class="app__page"/>
+        </section>
         <TheNavBar v-if="$mq === 'M'" footer></TheNavBar>
     </div>
 </template>
@@ -22,8 +24,12 @@ export default {
 @import './style/modules/link';
 
 .app {
+    &__body {
+        padding: var(--header-height) 0;
+    }
     &__page {
-        @include page;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
     }
 }
 </style>

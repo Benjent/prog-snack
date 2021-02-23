@@ -1,6 +1,6 @@
 <template>
      <section class="attic">
-        <section class="attic__sidebar">
+        <aside class="attic__sidebar">
             <div class="attic__title attic__title--reset">
                 <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
             </div>
@@ -41,7 +41,7 @@
                     </template>
                 </div>
             </div>
-        </section>
+        </aside>
         <section id="albumList" class="attic__mosaic">
             <AlbumThumb class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" @click.native="selectAlbumAndView(album)"></AlbumThumb>
         </section>
@@ -306,13 +306,12 @@ export default {
 }
 
 .attic {
-    @include page;
     display: flex;
 
     & &__sidebar {
         $width: 250px;
-        @include shadow;
         @include page;
+        @include shadow;
         position: sticky;
         z-index: 1;
         width: $width;

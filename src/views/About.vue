@@ -101,8 +101,6 @@ export default {
 @import '../style/mixins/page';
 
 .about {
-    @include page;
-
     &__section {
         display: flex;
         flex-direction: column;

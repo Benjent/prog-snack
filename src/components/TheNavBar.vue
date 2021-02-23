@@ -1,5 +1,5 @@
 <template>
-    <header class="theNavBar">
+    <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
         <router-link v-if="!footer" class="theNavBar__logo link" to="/">Would you like a snack</router-link>
         <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
             <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
@@ -54,8 +54,13 @@ export default {
     height: var(--header-height);
     box-sizing: border-box;
     background: $secondary-dark;
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 10;
+
+    &--footer {
+        bottom: 0;
+    }
 
     .router-link-exact-active {
         pointer-events: none;
