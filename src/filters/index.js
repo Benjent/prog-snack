@@ -68,5 +68,8 @@ Vue.filter('criterium', (value) => {
 		[criteria.UNCOMMON_INSTRUMENTS]: 'Uncommon instruments',
 		[criteria.ZEUHL]: 'Zeuhl',
     }
+    if (!mapper[value]) {
+        console.error('Unable to find criteria with value: ', value)
+    }
     return mapper[value]
 })
