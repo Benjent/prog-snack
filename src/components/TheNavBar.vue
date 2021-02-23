@@ -28,7 +28,7 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: '/attic', title: `The attic` },
+                { path: '/albums', title: `Albums` },
                 { path: '/discographies', title: `Discographies` },
                 { path: '/gems', title: `Gems` },
                 { path: '/subgenres', title: `Subgenres` },

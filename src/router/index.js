@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Album },
     { path: '/about', component: About },
-    { path: '/attic', component: Attic },
+    { path: '/albums', component: Attic },
     { path: '/designers', component: Designers },
     { path: '/discographies', component: Discographies },
     { path: '/gems', component: Gems },
