@@ -26,7 +26,7 @@ export default new Vuex.Store({
             return (id) => {
                 const album = state.albums.find((a) => a.id === id)
                 if (!album) {
-                    console.error('Unable to find album with id: ', id)
+                    console.error(`Unable to find album with id: ${id}`)
                 }
                 return album
             }
