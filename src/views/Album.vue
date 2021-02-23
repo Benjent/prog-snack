@@ -1,32 +1,32 @@
 <template>
-    <section class="l-album">
-        <button class="l-album__button button" @click="randomizeAlbum">Surprise me</button>
-        <section class="l-album__body">
-            <div class="l-album__info">
-                <div class="l-album__artist">{{ selectedAlbum.artist }}</div>
-                <div class="l-album__title">{{ selectedAlbum.title }}</div>
-                <div class="l-album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
+    <section class="album">
+        <button class="album__button button" @click="randomizeAlbum">Surprise me</button>
+        <section class="album__body">
+            <div class="album__info">
+                <div class="album__artist">{{ selectedAlbum.artist }}</div>
+                <div class="album__title">{{ selectedAlbum.title }}</div>
+                <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
-            <Cover class="l-album__cover" :album="selectedAlbum" @click.native="goToDiscographies"></Cover>
+            <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" @click.native="goToDiscographies"></Cover>
 
-            <div class="l-album__criteria">
+            <div class="album__criteria">
                 <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                 <div class="album-criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
             </div>
         </section>
 
-        <div class="l-album__start">
+        <div class="album__start">
             Start with the song
             <span class="album-selected-track">{{ selectedAlbum.selectedTrackTitle }}</span>
             <span v-if="selectedAlbum.selectedTrackYtId">
                 on
                 <a :href="youtubePath" target="_blank">
-                    <img class="l-album__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt="">
+                    <img class="album__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt="">
                 </a>
             </span>
         </div>
-        <router-link class="l-album__button button" to="discographies">More infos</router-link>
+        <router-link class="album__button button" to="discographies">More infos</router-link>
 
         <Timeline></Timeline>
     </section>
@@ -65,7 +65,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/modules/button';
 
-.l-album {
+.album {
     & &__button {
         margin: 0 auto;
         margin-top: 50px;
@@ -109,6 +109,22 @@ export default {
     & &__logo {
         width: 100px;
         margin-top: 10px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .album {
+        & &__body {
+            flex-direction: column;
+        }
+
+        & &__info, & &__criteria {
+            text-align: center;
+        }
+
+        & &__cover {
+            border: solid 3px $primary;
+        }
     }
 }
 </style>
