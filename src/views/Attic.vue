@@ -309,13 +309,12 @@ export default {
     display: flex;
 
     & &__sidebar {
-        $width: 250px;
         @include page;
         @include shadow;
         position: sticky;
         z-index: 1;
-        width: $width;
-        min-width: $width;
+        width: var(--aside-width);
+        min-width: var(--aside-width);
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
