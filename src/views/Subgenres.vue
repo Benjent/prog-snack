@@ -57,8 +57,6 @@ export default {
 @import '../style/mixins/page';
 
 .subgenres {
-    @include page;
-
     & &__subgenre {
         display: flex;
         border-top: solid 1px;

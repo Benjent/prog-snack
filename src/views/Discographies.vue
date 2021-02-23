@@ -100,17 +100,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/page';
 
 .l-discographies {
     $cover-width: 150px;
     display: flex;
 
     & &__artists {
+        @include page;
         $width: 250px;
         position: sticky;
         width: $width;
         min-width: $width;
-        height: calc(100vh - var(--header-height));
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;

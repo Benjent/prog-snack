@@ -44,7 +44,6 @@ export default {
 @import '../style/mixins/page';
 
 .gems {
-    @include page;
     display: flex;
     flex-direction: column;
     align-items: center;

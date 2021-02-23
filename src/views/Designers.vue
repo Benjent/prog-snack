@@ -50,8 +50,6 @@ export default {
 @import '../style/mixins/page';
 
 .designers {
-    @include page;
-
     display: flex;
     flex-direction: column;
     align-items: center;
