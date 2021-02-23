@@ -20,6 +20,7 @@ const routes = [
     { path: '/gems', component: Gems },
     { path: '/subgenres', component: Subgenres },
     { path: '/stats', component: Stats },
+    { path: '*', component: Album },
 ]
 
 const router = new VueRouter({
