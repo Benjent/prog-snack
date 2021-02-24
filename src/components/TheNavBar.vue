@@ -101,7 +101,13 @@ export default {
 
 @media (max-width: $mobile) {
     .theNavBar {
+        $nbLinks: 7;
         justify-content: space-between;
+
+        & &__navItem {
+            width: 100% / $nbLinks;
+            padding: 20px 6px;
+        }
     }
 }
 </style>

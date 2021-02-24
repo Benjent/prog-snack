@@ -9,4 +9,11 @@ $mobile: 1280px;
 :root {
     --default-font-size: 14px;
     --header-height: 68px;
+    --aside-width: 250px;
+}
+
+@media (max-width: $mobile) {
+    :root {
+        --aside-width: 25%;
+    }
 }

@@ -108,10 +108,10 @@ export default {
 
     & &__artists {
         @include page;
-        $width: 250px;
+
         position: sticky;
-        width: $width;
-        min-width: $width;
+        width: var(--aside-width);
+        min-width: var(--aside-width);
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;

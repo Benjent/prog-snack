@@ -28,7 +28,7 @@
         </div>
         <router-link class="album__button button" to="discographies">More infos</router-link>
 
-        <Timeline></Timeline>
+        <Timeline v-if="$mq !== 'M'"></Timeline>
     </section>
 </template>
 
