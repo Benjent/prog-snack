@@ -1584,14 +1584,24 @@ const albums = [
         country: regions.ITALY,
         cover: '.jpg',
         criteria: [criteria.ITALIAN, criteria.SYMPHONIC, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE, criteria.RENAISSANCE],
-        selectedTrackTitle: 'La Notte È Piena',
-        selectedTrackYtId: 'uScUQkx0jHs',
+        selectedTrackTitle: 'Fino Alla Mia Porta',
+        selectedTrackYtId: 'B3hn6Zt6Br8',
         spotifyId: '1WeTsUeoyJBDYiqdoCtO8I',
         deezerId: '4196221',
         designers: ['Cesare Monti', 'Mimmo Mellino', 'Wanda Monti'],
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO ...Di Terra - 1978
+    // orchestral, uncommon, instrumental, c_psyche, symphonic, transition
+    // track is Ne Piu Di Un Albero Non Meno Di Una Stella (wLbevJTuV8s)
+    // TODO Canto Di Primavera - 1979
+    // italian, odd, renaissance, c_electro
+    // track is Sono La Bestia (O54guzM6kS0)
+    // TODO Urgentissimo
+    // neoeighties, italian, soft, c_electro
+    // TODO Bueno Notizie
+    // neoeighties, italian
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
@@ -4264,7 +4274,7 @@ const albums = [
         year: 1975,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.C_PSYCHE, criteria.ORIENTAL, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.FRENCH, criteria.JAZZY_GROOVY, criteria.SPACY],
+        criteria: [criteria.C_PSYCHE, criteria.ORIENTAL, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.FRENCH, criteria.JAZZY_GROOVY, criteria.SPACY, criteria.FEMALE],
         selectedTrackTitle: 'Le Bœuf',
         selectedTrackYtId: 'rogJ03cSDIk',
         spotifyId: '1gqEFwNPsA63LgXVh5xRxI',
@@ -4760,9 +4770,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Electric Light Orchestra
-    // TODO ELO 2
-    // 9210551 + 5SeRsknrRC8Ch082iwtB40
+    {
+        id: 'electric_light_orchestra_the_electric_light_orchestra',
+        title: 'The Electric Light Orchestra',
+        artist: 'Electric Light Orchestra',
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.BAROQUE, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: 'Nellie Takes Her Bow',
+        selectedTrackYtId: 'tsnNqlM0AvM',
+        spotifyId: '5XlyV8daz3tuhEYW9VKxfe',
+        deezerId: '1557730',
+        designers: ['Hipgnosis'],
+        similarAlbums: [], // TODO similar roy wood mustard et compagnie là + Let It Be Beatles
+        isAGem: false,
+    },
+    {
+        id: 'electric_light_orchestra_elo_2',
+        title: 'ELO 2',
+        artist: 'Electric Light Orchestra',
+        year: 1972,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ODD, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: 'From The Sun To The World (Boogie No. 1)',
+        selectedTrackYtId: 'jFhii4bE9JA',
+        spotifyId: '5SeRsknrRC8Ch082iwtB40',
+        deezerId: '9210551',
+        designers: ['Hipgnosis'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'electric_light_orchestra_on_the_third_day',
         title: 'On The Third Day',
@@ -4876,9 +4915,22 @@ const albums = [
         isAGem: true,
         description: `Jeff Lynne takes us into a futuristic romantic story where a man enters the year 2095 and compares his new life with his old one with nostalgia, in the same place that has now drastically changed. Each track borrows a lot of different musical styles such as Disco, New Wave and Reggae, but the album remains heavily Synth-Pop oriented with strong Electro-Rock roots.`
     },
-    // TODO Secret Messages
-    // criteria.ART_POP, criteria.NEO_EIGHTIES transition, c_electro
-    // 78r6mzLPWq7Ke6Ld2vlypp + null
+    {
+        id: 'electric_light_orchestra_secret_messages',
+        title: 'Secret Messages',
+        artist: 'Electric Light Orchestra',
+        year: 1983,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.TRANSITION, criteria.NEO_EIGHTIES, criteria.ELECTRO],
+        selectedTrackTitle: 'Secret Messages',
+        selectedTrackYtId: 'eDAcbxz0fuQ',
+        spotifyId: '78r6mzLPWq7Ke6Ld2vlypp',
+        deezerId: null,
+        designers: ['David Costa', 'Kim Harris'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'eloy_eloy',
         title: 'Eloy',
@@ -9313,8 +9365,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Léo Ferré
-    // Amour Anarchie
     {
         id: 'leo_ferre_et_basta',
         title: 'Et... Basta !',
@@ -9784,6 +9834,92 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'maneige_maneige',
+        title: 'Maneige',
+        artist: 'Maneige',
+        year: 1974,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.FRENCH, criteria.PIANO],
+        selectedTrackTitle: `Le Rafiot`,
+        selectedTrackYtId: 'U6e2MX9lUls',
+        spotifyId: '3eaJIFOZ6tlVQ66OklSWoE',
+        deezerId: '47211732',
+        designers: ['Gilles Brault'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'maneige_les_porches',
+        title: 'Les Porches',
+        artist: 'Maneige',
+        year: 1975,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.FRENCH, criteria.SYMPHONIC, criteria.PIANO, criteria.BAROQUE],
+        selectedTrackTitle: `Les Porches De Notre-Dame`,
+        selectedTrackYtId: 'JuCq9n8jW8E',
+        spotifyId: '2yl7108VONO5PBcosjj4dH',
+        deezerId: '47209352',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'maneige_ni_vent_ni_nouvelle',
+        title: 'Ni Vent... Ni Nouvelle',
+        artist: 'Maneige',
+        year: 1977,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `Les Folleries`,
+        selectedTrackYtId: 'todo',
+        spotifyId: '3ZKTikxMbMgelmfLdghfEt',
+        deezerId: '47211692',
+        designers: ['Claude Lamarre', 'Fernand Leclerc', 'Richard Packwood'],
+        similarAlbums: ['focus_focus_3'],
+        isAGem: false,
+    },
+    {
+        id: 'maneige_libre_service',
+        title: 'Libre Service',
+        artist: 'Maneige',
+        year: 1978,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.SOFT_SEVENTIES, criteria.JAM, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.JAZZY_GROOVY, criteria.C_JAZZ],
+        selectedTrackTitle: `Les Pétoncles`,
+        selectedTrackYtId: 'todo',
+        spotifyId: '3WCM79MC3U27y5eeyD4vRi',
+        deezerId: '47206822',
+        designers: ['William Roberto Wilson', 'Serge Clément'],
+        similarAlbums: [],
+        isAGem: false, // TODO almost a gem!!
+    },
+    {
+        id: 'maneige_composite',
+        title: 'Composite',
+        artist: 'Maneige',
+        year: 1979,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.LIVE, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.JAM, criteria.JAZZY_GROOVY, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.C_JAZZ],
+        selectedTrackTitle: `L'éveil Et L'approche`, // defaut OU toujours trop tard
+        selectedTrackYtId: 'todo',
+        spotifyId: 'todo',
+        deezerId: 'todo',
+        designers: ['Christiane Valcourt', 'André Panneton'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Maneige - Montréal 6am - 1980 - null - null
+    // instru, soft_seventies
+    // TRACK Cerveau Lent
+    // TODO Maneige - Images - 1983 - null - null
+    // instru, odd, c_jazz, sof-seventies
+    // André Perry, André Panneton
     {
         id: 'marillion_script_for_a_jesters_tear',
         title: `Script For A Jester's Tear`,
@@ -12387,8 +12523,8 @@ const albums = [
     // deezer: 123402452
     {
         id: 'prosper_broken_door',
-        title: 'Pollen',
-        artist: 'Pulsar',
+        title: 'Broken Door',
+        artist: 'Prosper',
         year: 1975,
         country: regions.GERMANY,
         cover: '.jpg',
@@ -12646,6 +12782,8 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Queensrÿche - Empire - 1990 - criteria.ARENA, criteria.NEO_EIGHTIES, criteria.HEAVY, criterria.ODD_RHYTHM
+    // track is Della Brown
     {
         id: 'quicksilver_messenger_service_happy_trails',
         title: 'Happy Trails',
