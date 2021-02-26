@@ -16,11 +16,6 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
@@ -31,3 +26,11 @@ Automated thanks to [this guy](https://dev.to/rolanddoda/deploy-to-github-pages-
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Guidelines
+
+### JS
+Follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-config-airbnb)
+
+### SCSS
+Influenced by [SMACSS](http://smacss.com/) and [BEM](http://getbem.com/).
