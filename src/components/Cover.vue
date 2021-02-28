@@ -1,6 +1,16 @@
 <template>
-    <div class="l-cover" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px' }">
-        <img class="l-cover__image" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" :alt="album.title">
+    <div
+        v-if="album"
+        class="cover" :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
+        <div class="cover__thumbnail" v-if="thumbnail">
+            <div class="cover__artist">{{ album.artist }}</div>
+            <div class="cover__title">{{ album.title }}</div>
+            <div class="cover__year">{{ album.year }}</div>
+            <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
+        </div>
+        <div class="cover__album" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px', 'max-height': size && size + 'px', 'max-width': size && size + 'px' }">
+            <img class="cover__album__image" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" :alt="album.title">
+        </div>
     </div>
 </template>
 
@@ -13,6 +23,18 @@ export default {
         },
         size: {
             type: Number,
+        },
+        thumbnail: {
+            type: Boolean,
+            default: false,
+        },
+        clickable: {
+            type: Boolean,
+            default: false,
+        },
+        bordered: {
+            type: Boolean,
+            default: false,
         }
     },
 }
@@ -22,16 +44,78 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 
-.l-cover {
-    display: ruby; // Fix squeeze due to parent's flex display. Why? You tell me
+.cover {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
 
-    & &__image {
+    &:hover {
+        .cover__thumbnail {
+            opacity: 1;
+        }
+    }
+
+    &--clickable {
+        cursor: pointer;
+    }
+
+    &--bordered {
+        border: solid 5px $primary;
+    }
+
+    & &__thumbnail {
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: opacity 0.2s;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    & &__gem {
+        font-style: italic;
+        font-weight: bold;
+        border-top: solid 1px;
+        border-bottom: solid 1px;
+    }
+
+    & &__album {
+        // display: ruby;
         height: 100%;
         width: 100%;
-        min-width: 100%;
-        min-height: 100%;
-        max-width: 300px;
-        max-height: 300px;
+
+        &__image {
+            display: block;
+            height: 100%;
+            width: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .cover {
+        font-size: 0.8em;
+
+        &--bordered {
+            border-width: 3px;
+        }
     }
 }
 </style>

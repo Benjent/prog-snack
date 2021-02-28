@@ -174,13 +174,13 @@ $search-bar-width: 300px;
     .l-search-bar {
         $search-bar-width: 220px;
 
-        & &__input {
-            width: $search-bar-width;
-        }
+        // & &__input {
+        //     width: $search-bar-width;
+        // }
 
-        & &__result {
-            width: $search-bar-width;
-        }
+        // & &__result {
+        //     width: $search-bar-width;
+        // }
     }
 }
 

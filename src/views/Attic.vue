@@ -43,7 +43,7 @@
             </div>
         </aside>
         <section id="albumList" class="attic__mosaic">
-            <AlbumThumb class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" @click.native="selectAlbumAndView(album)"></AlbumThumb>
+            <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)"></Cover>
         </section>
     </section>
 </template>
@@ -51,16 +51,16 @@
 <script>
 import { mapActions, mapState } from 'vuex'
 import { criteria } from '../db/criteria.js';
-import AlbumThumb from '../components/AlbumThumb.vue'
+import Cover from '../components/Cover.vue'
 import Arrow from '../components/Arrow.vue'
 import Check from '../components/Check.vue'
 import Radio from '../components/Radio.vue'
 
 export default {
     components: {
-        AlbumThumb,
         Arrow,
         Check,
+        Cover,
         Radio,
     },
     data() {
@@ -359,7 +359,6 @@ export default {
     & &__cover {
         height: max-content;
         width: calc(100% / 8);
-        margin-bottom: -5px; // TODO height is not square-friendly
     }
 
     & &__filter {

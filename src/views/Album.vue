@@ -3,12 +3,12 @@
         <button class="album__button button" @click="randomizeAlbum">Surprise me</button>
         <section class="album__body">
             <div class="album__info">
-                <div class="album__artist">{{ selectedAlbum.artist }}</div>
-                <div class="album__title">{{ selectedAlbum.title }}</div>
+                <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
+                <h1 class="title title--1">{{ selectedAlbum.title }}</h1>
                 <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
-            <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" @click.native="goToDiscographies"></Cover>
+            <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered @click.native="goToDiscographies"></Cover>
 
             <div class="album__criteria">
                 <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
@@ -16,16 +16,7 @@
             </div>
         </section>
 
-        <div class="album__start">
-            Start with the song
-            <span class="album-selected-track">{{ selectedAlbum.selectedTrackTitle }}</span>
-            <span v-if="selectedAlbum.selectedTrackYtId">
-                on
-                <a :href="youtubePath" target="_blank">
-                    <img class="album__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt="">
-                </a>
-            </span>
-        </div>
+        <AlbumStarter class="album__track" :album="selectedAlbum"></AlbumStarter>
         <router-link class="album__button button" to="discographies">More infos</router-link>
 
         <Timeline v-if="$mq !== 'M'"></Timeline>
@@ -34,12 +25,14 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
+import AlbumStarter from '../components/AlbumStarter.vue'
 import Cover from '../components/Cover.vue'
 import Timeline from '../components/Timeline.vue'
 
 export default {
     name: 'Album',
     components: {
+        AlbumStarter,
         Cover,
         Timeline,
     },
@@ -64,6 +57,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/modules/button';
+@import '../style/modules/title';
 
 .album {
     & &__button {
@@ -89,10 +83,7 @@ export default {
 
     & &__cover {
         cursor: pointer;
-        height: 300px;
-        width: 300px;
         margin: 0 30px;
-        max-width: 300px;
         border: solid 5px $primary;
         margin: 45px;
         margin-bottom: 25px;
@@ -102,12 +93,8 @@ export default {
         width: 45%;
     }
 
-    & &__start {
+    & &__track {
         text-align: center;
-    }
-
-    & &__logo {
-        width: 100px;
         margin-top: 10px;
     }
 }
@@ -115,15 +102,17 @@ export default {
 @media (max-width: $mobile) {
     .album {
         & &__body {
+            padding: 0 16px;
             flex-direction: column;
         }
 
         & &__info, & &__criteria {
+            width: auto;
             text-align: center;
         }
 
         & &__cover {
-            border: solid 3px $primary;
+            border: solid 2px $primary;
         }
     }
 }

@@ -1,13 +1,15 @@
 <template>
     <section class="gems">
         <div class="gems__item" v-for="album in gems" :key="album.id">
-            <Cover class="gems__cover" :album="album" @click.native="selectAlbumAndView(album)"></Cover>
+            <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
             
             <div class="gems__album">
-                <span class="gems__title" @click="selectAlbumAndView(album)">
-                    {{album.artist}} - {{album.title}} ({{album.year}})
-                </span>
-                <blockquote class="gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
+                <div class="gems__title" @click="selectAlbumAndView(album)">
+                    <h3 class="title title--3">{{album.artist}}</h3>
+                    <h2 class="title title--2">{{album.title}}</h2>
+                    <span>({{album.year}})</span>
+                </div>
+                <blockquote class="text text--description gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
             </div>
         </div>
     </section>
@@ -42,6 +44,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/page';
+@import '../style/modules/text';
 
 .gems {
     display: flex;
@@ -51,7 +54,6 @@ export default {
 
     & &__item {
         display: flex;
-        border-bottom: solid 1px;
         padding: 100px 0;
         width: 100%;
         max-width: 1200px;
@@ -68,21 +70,14 @@ export default {
 
     & &__cover {
         cursor: pointer;
-        height: 300px;
         margin: 0 30px;
-        width: 300px;
-        max-width: 300px;
-        border: solid 5px $primary;
     }
 
     & &__title {
         cursor: pointer;
-        font-size: $fs-18;
     }
 
     & &__description {
-        font-style: italic;
-        font-size: $fs-14;
         margin-top: 50px;
     }
 }
@@ -99,17 +94,6 @@ export default {
 
         & &__album {
             text-align: center;
-        }
-
-        & &__cover {
-            height: 120px;
-            width: 120px;
-            border-width: 3px;
-        }
-
-        & &__title {
-            cursor: pointer;
-            font-size: $fs-12;
         }
 
         & &__description {

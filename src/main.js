@@ -1,20 +1,20 @@
-import Vue from 'vue';
+import Vue from 'vue'
 import VueMq from 'vue-mq'
-import App from './App.vue';
-import filters from './filters';
-import router from './router';
-import store from './store';
+import App from './App.vue'
+import filters from './filters'
+import router from './router'
+import store from './store'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 Vue.use(VueMq, {
     breakpoints: {
-        M: 1281,
+        M: 981, // $mobile + 1
         L: Infinity,
     },
 })
 
 new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount('#app');
+    router,
+    store,
+    render: (h) => h(App),
+}).$mount('#app')
