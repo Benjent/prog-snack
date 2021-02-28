@@ -1,10 +1,12 @@
 <template>
     <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
-        <router-link v-if="!footer" class="theNavBar__logo link" to="/">Would you like a snack</router-link>
+        <router-link v-if="!footer" class="theNavBar__logo link" to="/">
+            <img src="../assets/img/logos/snack_logo.png" alt="Prog Snack" :width=" $mq === 'M' ? 120 : 200">
+        </router-link>
         <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
             <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
-                <div class="theNavBar__navText">{{ item.title }}</div>
-                <!-- <Arrow class="theNavBar__arrow" orientation="bottom" v-if="$route.path === item.path" color="dark"></Arrow> -->
+                <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText"/>
+                <div v-else class="theNavBar__navText">{{ item.title }}</div>
             </router-link>
         </nav>
         <SearchBar v-if="!footer"></SearchBar>
@@ -12,13 +14,13 @@
 </template>
 
 <script>
-import Arrow from './Arrow.vue'
+import Icon from './Icon.vue'
 import SearchBar from './SearchBar.vue'
 
 export default {
     name: 'TheNavBar',
     components: {
-        Arrow,
+        Icon,
         SearchBar,
     },
     props: {
@@ -28,13 +30,13 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: '/albums', title: `Albums` },
-                { path: '/discographies', title: `Discographies` },
-                { path: '/gems', title: `Gems` },
-                { path: '/subgenres', title: `Subgenres` },
-                { path: '/designers', title: `Designers` },
-                { path: '/stats', title: `Stats` },
-                { path: '/about', title: `About` },
+                { path: '/albums', title: `Albums`, icon: 'mosaic' },
+                { path: '/discographies', title: `Discographies`, icon: 'list' },
+                { path: '/gems', title: `Gems`, icon: 'star' },
+                { path: '/subgenres', title: `Subgenres`, icon: 'subgenres' },
+                { path: '/designers', title: `Designers`, icon: 'palette' },
+                { path: '/stats', title: `Stats`, icon: 'equalizer' },
+                { path: '/about', title: `About`, icon: 'help' },
             ],
         }
     },
@@ -70,6 +72,8 @@ export default {
         cursor: pointer;
         font-size: 30px;
         padding: 10px;
+        position: relative;
+        top: 14px;
     }
 
     & &__nav {
@@ -94,7 +98,7 @@ export default {
         }
 
         &__navText {
-            padding: 15px 0; // Align arrow on the bottom header line
+            padding: 15px 0;
         }
     }
 }
@@ -103,6 +107,11 @@ export default {
     .theNavBar {
         $nbLinks: 7;
         justify-content: space-between;
+
+        & &__logo {
+            cursor: pointer;
+            top: 4px;
+        }
 
         & &__navItem {
             width: 100% / $nbLinks;

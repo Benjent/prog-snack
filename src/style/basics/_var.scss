@@ -4,10 +4,10 @@ $borderRadius: 15px;
 $borderThin: 3px;
 $borderThick: $borderThin * 2;
 
-$mobile: 1280px;
+$mobile: 980px; // Sync with VueMq
 
 :root {
-    --default-font-size: 14px;
+    --default-font-size: 16px;
     --header-height: 68px;
     --aside-width: 250px;
 }
@@ -15,5 +15,6 @@ $mobile: 1280px;
 @media (max-width: $mobile) {
     :root {
         --aside-width: 25%;
+        --default-font-size: 14px;
     }
 }

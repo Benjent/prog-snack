@@ -2,16 +2,26 @@
     <section class="subgenres">
         <div class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
             <div class="subgenres__albums">
-                <Cover class="subgenres__cover" v-for="id in subgenre.albums" :key="id" :album="albumById(id)" @click.native="selectAlbumAndView(id)"></Cover>
+                <Cover class="subgenres__cover" v-for="id in subgenre.albums" :key="id" :album="albumById(id)" bordered @click.native="selectAlbumAndView(id)"></Cover>
             </div>
 
-            <Cover v-if="$mq !== 'M'" class="subgenres__cover subgenres__most-representative" :album="albumById(subgenre.mostRepresentativeAlbum)"
+            <Cover
+                v-if="$mq !== 'M'"
+                class="subgenres__cover subgenres__most-representative"
+                :album="albumById(subgenre.mostRepresentativeAlbum)"
+                :size="300"
+                bordered
                 @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
 
             <div class="subgenres__infos">
-                <Cover v-if="$mq === 'M'" class="subgenres__cover subgenres__most-representative" :album="albumById(subgenre.mostRepresentativeAlbum)"
+                <Cover
+                    v-if="$mq === 'M'"
+                    class="subgenres__cover subgenres__most-representative"
+                    :album="albumById(subgenre.mostRepresentativeAlbum)"
+                    bordered
+                    :size="100"
                     @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
-                <span class="subgenres__name">{{ subgenre.name }}</span>
+                <h1 class="title title--1 subgenres__name">{{ subgenre.name }}</h1>
                 <p class="subgenres__criteria">
                     Characterized by the following: 
                     <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
@@ -19,7 +29,7 @@
                         <span v-if="index < subgenre.criteria.length - 1">-</span>
                     </span>
                 </p>
-                <blockquote class="subgenres__description">{{ subgenre.description }}</blockquote>
+                <blockquote class="text text--description subgenres__description">{{ subgenre.description }}</blockquote>
             </div>
         </div>
     </section>
@@ -55,11 +65,13 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/page';
+@import '../style/modules/text';
+@import '../style/modules/title';
 
 .subgenres {
     & &__subgenre {
         display: flex;
-        border-top: solid 1px;
+        border-top: solid 2px;
         padding: 100px;
 
         &:first-of-type {
@@ -80,8 +92,6 @@ export default {
     }
 
     & &__most-representative.subgenres__cover {
-        height: 300px;
-        border: solid 5px $primary;
         margin: 0 20px;
     }
 
@@ -95,7 +105,6 @@ export default {
     & &__cover {
         cursor: pointer;
         height: 130px;
-        border: solid 3px $primary;
         margin: 0 20px 37px 20px;
     }
 
@@ -105,13 +114,7 @@ export default {
         padding: 0 20px;
     }
 
-    & &__name {
-        font-size: $specialInfoFontSize;
-    }
-
     & &__description {
-        font-style: italic;
-        font-size: $mainFontSizeSmall;
         text-align: justify;
         margin: 0;
         max-width: 800px;
@@ -134,34 +137,35 @@ export default {
 
         & &__subgenre {
             padding: 0;
-            padding-top: 100px;
+            margin-bottom: 60px;
             display: flex;
             flex-direction: column;
             border: none;
 
             &:first-child {
-                padding-top: 0;
+                margin-top: 60px;
             }
 
             &:nth-child(even) {
-                flex-direction: column;
+                .subgenres__most-representative.subgenres__cover {
+                    margin-left: auto;
+                }
             }
         }
 
+        & &__cover {
+            height: inherit;
+        }
+
         & &__most-representative.subgenres__cover {
-            float: left;
             height: 100px;
             width: 100px;
-            border-width: 3px;
+            margin: 0;
             margin-bottom: 20px;
         }
 
         & &__albums {
             display: none;
-        }
-
-        & &__description {
-            font-size: 1em;
         }
     }
 }

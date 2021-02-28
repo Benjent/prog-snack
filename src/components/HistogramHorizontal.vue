@@ -1,6 +1,6 @@
 <template>
     <div class="l-histogram-horizontal">
-        <caption class="l-histogram-horizontal__caption">{{ caption }}</caption>
+        <caption class="title title--caption">{{ caption }}</caption>
         <div class="l-histogram-horizontal__datavis">
             <div class="l-histogram-horizontal__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="l-histogram-horizontal__label">{{ item.label }}</div>
@@ -32,11 +32,8 @@ export default {
     flex-direction: column;
     width: 100%;
 
-    & &__caption {
-        padding-bottom: 50px;
-    }
-
     & &__datavis {
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
 

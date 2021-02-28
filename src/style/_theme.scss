@@ -3,4 +3,8 @@ body {
     background: $secondary-dark;
     color: $primary;
     font-size: var(--default-font-size);
+    background: linear-gradient(141deg, #435f70 0%, #435f70 70%, #674e47 90%);
+    background-size: 250%;
+    background-position: 100%;
+    background-attachment: fixed;
 }

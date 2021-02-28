@@ -8,7 +8,7 @@ import store from './store'
 Vue.config.productionTip = false
 Vue.use(VueMq, {
     breakpoints: {
-        M: 1281,
+        M: 981, // $mobile + 1
         L: Infinity,
     },
 })

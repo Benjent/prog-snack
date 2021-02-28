@@ -1,31 +1,29 @@
 <template>
     <section class="designers">
-        <div class="designers__item" v-for="designer in designersWithEnoughWorks" :key="designer.name">
+        <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
 
-            <div class="designers__name">{{ designer.name }}</div>
+            <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
             
             <div class="designers__border-wrapper">
-                <Arrow size="medium" class="designers__arrow" orientation="bottom" color="dark"></Arrow>
-
                 <div class="designers__albums">
                     <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
-                        <AlbumThumb :album="album"></AlbumThumb>
+                        <Cover :album="album" thumbnail></Cover>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex'
 import Arrow from '../components/Arrow.vue'
-import AlbumThumb from '../components/AlbumThumb.vue'
+import Cover from '../components/Cover.vue'
 
 export default {
     components: {
         Arrow,
-        AlbumThumb,
+        Cover,
     },
     computed: {
         ...mapState(['designers']),
@@ -48,25 +46,24 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/page';
+@import '../style/modules/title';
 
 .designers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 20px;
 
-    & &__item {
+    & &__section {
         max-width: 1200px;
         text-align: center;
-        padding: 40px;
+        margin: 60px;
 
         &:first-child {
-            padding-top: 0;
+            margin-top: 60px;
         }
     }
 
     & &__name {
-        font-size: $fs-24;
         padding-bottom: 10px;
     }
 
@@ -103,17 +100,6 @@ export default {
 
 @media (max-width: $mobile) {
     .designers {
-        padding: 20px 0;
-
-        & &__item {
-            padding: 0;
-            padding-top: 20px;
-
-            &:first-child {
-                padding-top: 0;
-            }
-        }
-
         & &__albums__item {
             height: 120px;
             width: 120px;

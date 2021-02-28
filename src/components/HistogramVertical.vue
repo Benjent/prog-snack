@@ -1,6 +1,6 @@
 <template>
     <div class="l-histogram-vertical">
-        <caption class="l-histogram-vertical__caption">{{ caption }}</caption>
+        <caption class="title title--caption">{{ caption }}</caption>
         <div class="l-histogram-vertical__datavis">
             <div class="l-histogram-vertical__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="l-histogram-vertical__column">
@@ -26,6 +26,7 @@ export default {
 <style lang="scss">
 @import '../style/gatherer';
 @import '../style/modules/gauge';
+@import '../style/modules/title';
 
 .l-histogram-vertical {
     display: flex;
@@ -33,11 +34,8 @@ export default {
     justify-content: space-evenly;
     align-items: center;
 
-    & &__caption {
-        padding-bottom: 50px;
-    }
-
     & &__datavis {
+        margin-top: 50px; 
         display: flex;
         align-items: flex-end;
         height: 400px;

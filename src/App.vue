@@ -25,11 +25,20 @@ export default {
 
 .app {
     &__body {
-        padding: var(--header-height) 0;
+        padding-top: var(--header-height);
     }
+
     &__page {
         -webkit-overflow-scrolling: touch;
         overflow: auto;
+    }
+}
+
+@media (max-width: $mobile) {
+    .app {
+        &__body {
+            padding-bottom: var(--header-height);
+        }
     }
 }
 </style>
