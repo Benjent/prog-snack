@@ -4793,7 +4793,7 @@ const albums = [
         year: 1972,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.ODD, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS],
+        criteria: [criteria.ODD_RHYTHM, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS],
         selectedTrackTitle: 'From The Sun To The World (Boogie No. 1)',
         selectedTrackYtId: 'jFhii4bE9JA',
         spotifyId: '5SeRsknrRC8Ch082iwtB40',
