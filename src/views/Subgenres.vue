@@ -2,34 +2,34 @@
     <section class="subgenres">
         <div class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
             <div class="subgenres__albums">
-                <Cover class="subgenres__cover" v-for="id in subgenre.albums" :key="id" :album="albumById(id)" bordered @click.native="selectAlbumAndView(id)"></Cover>
+                <Cover
+                    class="subgenres__cover"
+                    v-for="id in subgenre.albums" :key="id"
+                    :album="albumById(id)"
+                    bordered
+                    :size="130"
+                    @click.native="selectAlbumAndView(id)"></Cover>
             </div>
 
-            <Cover
-                v-if="$mq !== 'M'"
-                class="subgenres__cover subgenres__most-representative"
-                :album="albumById(subgenre.mostRepresentativeAlbum)"
-                :size="300"
-                bordered
-                @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
-
-            <div class="subgenres__infos">
+            <div class="subgenres__infosWithMostRepresentative">
                 <Cover
-                    v-if="$mq === 'M'"
-                    class="subgenres__cover subgenres__most-representative"
+                    class="subgenres__cover subgenres__cover--mostRepresentative"
                     :album="albumById(subgenre.mostRepresentativeAlbum)"
                     bordered
-                    :size="100"
+                    :size="$mq === 'M' ? 100 : 180"
                     @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
-                <h1 class="title title--1 subgenres__name">{{ subgenre.name }}</h1>
-                <p class="subgenres__criteria">
-                    Characterized by the following: 
-                    <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
-                        {{ criterium | criterium }}
-                        <span v-if="index < subgenre.criteria.length - 1">-</span>
-                    </span>
-                </p>
-                <blockquote class="text text--description subgenres__description">{{ subgenre.description }}</blockquote>
+
+                <div class="subgenres__infos">
+                    <h2 class="title title--2 subgenres__name">{{ subgenre.name }}</h2>
+                    <p>
+                        <span>Characterized by the following: </span>
+                        <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
+                            {{ criterium | criterium }}
+                            <span v-if="index < subgenre.criteria.length - 1">-</span>
+                        </span>
+                    </p>
+                    <blockquote class="text text--description subgenres__description">{{ subgenre.description }}</blockquote>
+                </div>
             </div>
         </div>
     </section>
@@ -82,6 +82,10 @@ export default {
             flex-direction: row-reverse;
             text-align: right;
 
+            .subgenres__infosWithMostRepresentative {
+                flex-direction: row-reverse;
+            }
+
             .subgenre-infos {
                 align-items: end;
             }
@@ -89,10 +93,6 @@ export default {
                 justify-content: left;
             }
         }
-    }
-
-    & &__most-representative.subgenres__cover {
-        margin: 0 20px;
     }
 
     & &__albums {
@@ -104,13 +104,24 @@ export default {
 
     & &__cover {
         cursor: pointer;
-        height: 130px;
+        // height: 130px;
         margin: 0 20px 37px 20px;
+
+        &--mostRepresentative {
+            margin: 0 20px;
+            height: max-content;
+            width: max-content;
+        }
+    }
+
+    & &__infosWithMostRepresentative {
+        display: flex;
     }
 
     & &__infos {
         display: flex;
         flex-direction: column;
+        flex: 1;
         padding: 0 20px;
     }
 
@@ -118,12 +129,6 @@ export default {
         text-align: justify;
         margin: 0;
         max-width: 800px;
-    }
-
-    & &__criteria {
-        display: block;
-        font-size: $mainFontSizeSmall;
-
     }
 
     & &__criterium {
@@ -147,21 +152,29 @@ export default {
             }
 
             &:nth-child(even) {
-                .subgenres__most-representative.subgenres__cover {
-                    margin-left: auto;
+                .subgenres__cover--mostRepresentative {
+                    float: right;
+                    margin-left: 20px;
                 }
             }
         }
 
-        & &__cover {
-            height: inherit;
+        & &__infosWithMostRepresentative {
+            display: block;
         }
 
-        & &__most-representative.subgenres__cover {
-            height: 100px;
-            width: 100px;
-            margin: 0;
-            margin-bottom: 20px;
+        & &__infos {
+            display: block;
+            padding: 0;
+        }
+
+        & &__cover {
+            &--mostRepresentative {
+                float: left;
+                margin: 0;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
         }
 
         & &__albums {
