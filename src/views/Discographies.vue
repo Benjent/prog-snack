@@ -189,10 +189,6 @@ export default {
         max-width: $cover-width * $albums-per-row;
         overflow: hidden; // TODO material card effet on full // media query stuck to the left
 
-        &__cover {
-            border: solid 2px $primary;
-        }
-
         &__main {
             display: flex;
             width: 100%;
