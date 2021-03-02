@@ -8,7 +8,7 @@
                 <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
-            <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered @click.native="goToDiscographies"></Cover>
+            <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable @click.native="goToDiscographies"></Cover>
 
             <div class="album__criteria">
                 <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
@@ -56,10 +56,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/page';
 @import '../style/modules/button';
 @import '../style/modules/title';
 
 .album {
+    @include page;
+
     & &__button {
         margin: 0 auto;
         margin-top: 50px;
@@ -82,9 +85,7 @@ export default {
     }
 
     & &__cover {
-        cursor: pointer;
         margin: 0 30px;
-        border: solid 5px $primary;
         margin: 45px;
         margin-bottom: 25px;
     }
@@ -101,6 +102,18 @@ export default {
 
 @media (max-width: $mobile) {
     .album {
+        & &__button {
+            margin: 0 auto;
+
+            &:first-of-type {
+                margin-top: 20px;
+            }
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+
         & &__body {
             padding: 0 16px;
             flex-direction: column;
@@ -111,8 +124,16 @@ export default {
             text-align: center;
         }
 
+        & &__info {
+            margin-top: 20px;
+        }
+
+        & &__track {
+            margin-bottom: 20px;
+        }
+
         & &__cover {
-            border: solid 2px $primary;
+            margin: 20px;
         }
     }
 }

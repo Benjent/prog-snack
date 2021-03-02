@@ -314,7 +314,7 @@ export default {
         position: sticky;
         z-index: 1;
         width: var(--aside-width);
-        min-width: var(--aside-width);
+        min-width: var(--aside-min-width);
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;

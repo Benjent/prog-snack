@@ -16,7 +16,7 @@
                     class="subgenres__cover subgenres__cover--mostRepresentative"
                     :album="albumById(subgenre.mostRepresentativeAlbum)"
                     bordered
-                    :size="$mq === 'M' ? 100 : 180"
+                    :size="$mq === 'M' ? 100 : 200"
                     @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
 
                 <div class="subgenres__infos">
@@ -148,7 +148,7 @@ export default {
             border: none;
 
             &:first-child {
-                margin-top: 60px;
+                margin-top: 20px;
             }
 
             &:nth-child(even) {
