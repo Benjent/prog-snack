@@ -24,7 +24,7 @@
             <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
             
             <template v-if="discography.length > 1">
-                <h3 class="title title--3 discographies__discographyTitle">Prog albums form the same artist</h3>
+                <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                 <div class="discographies__borderWrapper">
                     <section class="discographies__discography">
                         <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
@@ -35,7 +35,7 @@
 
         <section class="discographies__selectedAlbum" v-else>
             <div class="discographies__selectedAlbum__main">
-                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum"></Cover>
+                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered></Cover>
                 <div class="discographies__selectedAlbum__infos">
                     <header class="discographies__selectedAlbum__header">
                         <div class="discographies__selectedAlbum__title">{{ selectedAlbum.title }}</div>
@@ -60,7 +60,7 @@
             <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
 
             <template v-if="discography.length > 1">
-                <h3 class="title title--3 discographies__discographyTitle">Prog albums form the same artist</h3>
+                <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                 <div class="discographies__borderWrapper">
                     <section class="discographies__discography">
                         <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
@@ -141,7 +141,7 @@ export default {
 
         position: sticky;
         width: var(--aside-width);
-        min-width: var(--aside-width);
+        min-width: var(--aside-min-width);
         overflow-y: scroll;
         scrollbar-width: none;
         padding: 20px 30px;
@@ -188,10 +188,6 @@ export default {
         margin-top: 40px;
         max-width: $cover-width * $albums-per-row;
         overflow: hidden; // TODO material card effet on full // media query stuck to the left
-
-        &__cover {
-            border: solid 2px $primary;
-        }
 
         &__main {
             display: flex;
@@ -277,7 +273,7 @@ export default {
             width: 100%;
             box-sizing: border-box;
             border-top: solid 2px;
-            padding: 0 50px;
+            padding: 0 20px;
         }
     }
 }
@@ -294,6 +290,14 @@ export default {
     .discographies {
         & &__album {
             width: calc(100% / 3);
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .discographies {
+        & &__album {
+            width: calc(100% / 2);
         }
     }
 }

@@ -152,4 +152,14 @@ export default {
         box-sizing: border-box;
     }
 }
+
+@media (max-width: $mobile) {
+    .about {
+        &__section {
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
 </style>

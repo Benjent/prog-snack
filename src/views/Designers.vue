@@ -100,6 +100,12 @@ export default {
 
 @media (max-width: $mobile) {
     .designers {
+        & &__section {
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
+
         & &__albums__item {
             height: 120px;
             width: 120px;

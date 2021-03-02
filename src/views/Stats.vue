@@ -221,6 +221,12 @@ export default {
         & &__number {
             padding: 10px;
         }
+
+        & &__section {
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
     }
 }
 </style>

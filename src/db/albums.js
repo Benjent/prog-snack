@@ -2929,18 +2929,54 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO the spotlight kid WAIT: Maybe we want to stop here (rock only afterwards)
-    // 1972
-    // Rock based, c_psyche, uncommon, jam
-    // track is Alice In Blunderland
-    // TODO Clear Spot (vraiment pas prog)
-    // 1972
-    // ROck based,c _psyche
-    // track is Big Eyed Beans From Venus
-    // TODO Bluejeans & Moonbeans (dernier album non prog)
-    // 1974
-    // Rock based, soft, jam
-    // Track is pampadour swamp
+    {
+        id: 'captain_beefheart_and_his_magic_band_the_spotlight_kid',
+        title: 'The Spotlight Kid',
+        artist: 'Captain Beefhear & His Magic Band',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
+        selectedTrackTitle: 'Alice In Blunderland',
+        selectedTrackYtId: '3i0wU9HsCE0',
+        spotifyId: '2yBGak7HYVxKmVwZBVcxbX',
+        deezerId: null,
+        designers: ['Ed Thrasher'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'captain_beefheart_and_his_magic_band_clear_spot',
+        title: 'Clear Spot',
+        artist: 'Captain Beefhear & His Magic Band',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Big Eyed Beans From Venus',
+        selectedTrackYtId: 'XF177Aj59C8',
+        spotifyId: '3m2ltFkbJ34zxghz9vlY6p',
+        deezerId: '753035',
+        designers: ['John And Barbara Casado'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'captain_beefheart_and_his_magic_band_bluejeans_and_moonbeams',
+        title: 'Bluejeans & Moonbeans',
+        artist: 'Captain Beefhear & His Magic Band',
+        year: 1974,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.SOFT, criteria.JAM],
+        selectedTrackTitle: 'Pompadour Swamp',
+        selectedTrackYtId: 'CEto--vHbh4',
+        spotifyId: '1xPEnp3CzIBIoEXAnX7tj4',
+        deezerId: null,
+        designers: ['Larry Vigon'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'captain_beefheart_and_his_magic_band_shiny_beast_bat_chain_puller',
         title: 'Shiny Beast (Bat Chain Puller)',
@@ -4793,7 +4829,7 @@ const albums = [
         year: 1972,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.ODD, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS],
+        criteria: [criteria.ODD_RHYTHM, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS],
         selectedTrackTitle: 'From The Sun To The World (Boogie No. 1)',
         selectedTrackYtId: 'jFhii4bE9JA',
         spotifyId: '5SeRsknrRC8Ch082iwtB40',
@@ -10269,6 +10305,22 @@ const albums = [
         criteria: [criteria.LIVE, criteria.LENGTHY_TRACKS, criteria.FEMALE, criteria.BLENDS, criteria.SPANISH, criteria.RENAISSANCE],
         selectedTrackTitle: 'Iridio Puro',
         selectedTrackYtId: 'ohVayEHmCj8',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'michel_berger_puzzle',
+        title: 'Puzzle',
+        artist: 'Michel Berger',
+        year: 1971,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.SYMPHONIC, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.PIANO],
+        selectedTrackTitle: `1er Mouvement`,
+        selectedTrackYtId: 'Wki01ktgthM',
         spotifyId: null,
         deezerId: null,
         designers: [],
