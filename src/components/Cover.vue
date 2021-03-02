@@ -45,7 +45,6 @@ export default {
 @import '../style/gatherer';
 
 .cover {
-    cursor: pointer;
     display: block;
     position: relative;
     max-width: 300px;
