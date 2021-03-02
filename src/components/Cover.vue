@@ -1,7 +1,9 @@
 <template>
     <div
         v-if="album"
-        class="cover" :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
+        class="cover"
+        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered }"
+        :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
             <div class="cover__title">{{ album.title }}</div>
@@ -37,6 +39,17 @@ export default {
             default: false,
         }
     },
+    computed: {
+        borderWidth() {
+            if (this.size > 200) {
+                return 5 + 'px'
+            }
+            if (this.size > 0) {
+                return 3 + 'px'
+            }
+            return 5 + 'px'
+        },
+    },
 }
 </script>
 
@@ -62,7 +75,8 @@ export default {
     }
 
     &--bordered {
-        border: solid 5px $primary;
+        border-style: solid;
+        border-color: $primary;
     }
 
     & &__thumbnail {
