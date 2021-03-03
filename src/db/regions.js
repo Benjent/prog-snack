@@ -17,6 +17,7 @@ const regions = {
     NETHERLANDS: "Netherlands",
     NORTHERN_IRELAND: "Northern Ireland",
     NORWAY: "Norway",
+    PORTUGAL: "Portugal",
     QUEBEC: "Québec",
     SCOTLAND: "Scotland",
     SOUTH_AFRICA: "South Africa",

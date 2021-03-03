@@ -47,6 +47,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.ORIENTAL]: 'Oriental',
 		[criteria.PATCHWORK]: 'Patchwork of tracks',
 		[criteria.PIANO]: 'Piano driven',
+		[criteria.PORTUGUESE]: 'Portuguese sung',
 		[criteria.RENAISSANCE]: 'Renaissance',
 		[criteria.ROCK]: 'Rock-based with a Prog touch',
 		[criteria.ROCK_OPERA]: 'Rock opera',
