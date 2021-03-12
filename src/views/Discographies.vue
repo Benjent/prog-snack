@@ -180,6 +180,9 @@ export default {
 
     & &__selectedAlbum {
         $albums-per-row: 5;
+
+        @include page;
+
         display: flex;
         flex-direction: column;
         flex: 1;
