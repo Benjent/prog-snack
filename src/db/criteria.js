@@ -10,8 +10,10 @@ const criteria = {
     FRENCH: 'FRENCH',
     GERMAN: 'GERMAN',
     GREEK: 'GREEK',
+    HINDI: 'HINDI',
     IGBO: 'IGBO',
     ITALIAN: 'ITALIAN',
+    PORTUGUESE: 'PORTUGUESE',
     SPANISH: 'SPANISH',
     SWEDISH: 'SWEDISH',
     ZEUHL: 'ZEUHL',
@@ -103,12 +105,14 @@ const criteriaOrder = [
     criteria.FRENCH,
     criteria.GERMAN,
     criteria.GREEK,
-    criteria.ITALIAN,
+    criteria.HINDI,
     criteria.IGBO,
+    criteria.ITALIAN,
+    criteria.PORTUGUESE,
     criteria.SPANISH,
     criteria.SWEDISH,
     criteria.ZEUHL,
-    
+
     // Theme
     criteria.SCI_FI,
     criteria.FANTASY,
