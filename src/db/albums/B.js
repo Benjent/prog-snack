@@ -1182,7 +1182,7 @@ const albums = [
         designers: [],
         similarAlbums: [],
         isAGem: true,
-        description: `TODO description`,
+        description: `Buckethead's second installment of his Bucketheadland's fictionnal park takes you for a ride on off-the-wall musical attractions in-between interludes supposedly cut from real amateur movies.`,
     },
     {
         id: 'budgie_budgie',
