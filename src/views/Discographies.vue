@@ -183,14 +183,12 @@ export default {
 
         @include page;
 
-        display: flex;
-        flex-direction: column;
-        flex: 1;
         height: max-content;
         margin: 0 auto;
         margin-top: 40px;
         max-width: $cover-width * $albums-per-row;
-        overflow: hidden; // TODO material card effet on full // media query stuck to the left
+        overflow-y: scroll;
+        scrollbar-width: none;
 
         &__main {
             display: flex;
