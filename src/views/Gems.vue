@@ -73,6 +73,10 @@ export default {
         margin: 0 30px;
     }
 
+    & &__album {
+        flex: 1;
+    }
+
     & &__title {
         cursor: pointer;
     }

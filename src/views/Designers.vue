@@ -110,6 +110,10 @@ export default {
             height: 120px;
             width: 120px;
         }
+
+        & &__border-wrapper {
+            padding: 0 20px;
+        }
     }
 }
 </style>
