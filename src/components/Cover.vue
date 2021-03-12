@@ -58,7 +58,7 @@ export default {
 @import '../style/gatherer';
 
 .cover {
-    display: block;
+    display: inline-block;
     position: relative;
     max-width: 300px;
     max-height: 300px;
