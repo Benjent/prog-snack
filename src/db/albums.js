@@ -1598,10 +1598,6 @@ const albums = [
     // TODO Canto Di Primavera - 1979
     // italian, odd, renaissance, c_electro
     // track is Sono La Bestia (O54guzM6kS0)
-    // TODO Urgentissimo
-    // neoeighties, italian, soft, c_electro
-    // TODO Bueno Notizie
-    // neoeighties, italian
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
@@ -4061,6 +4057,22 @@ const albums = [
 		description: `TODO description`, // Un peu queen en cheap, ça fait penser à Bowie, un peu fanfare, piano based
     },
     {
+        id: 'daniel_haas_and_yves_hasselmann_couleurs_du_temps',
+        title: 'Couleurs Du Temps',
+        artist: 'Daniel Haas & Yves Hasselmann',
+        year: 1978,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.SOFT_SEVENTIES, criteria.INSTRUMENTAL, criteria.JAM, criteria.C_ELECTRO, criteria.C_FOLK],
+        selectedTrackTitle: 'Quatre Heures',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Henri Ledermann'],
+        similarAlbums: ['fuhrs_and_frohling_ammerland'],
+        isAGem: false,
+    },
+    {
         id: 'david_bowie_space_oddity',
         title: 'Space Oddity',
         artist: 'David Bowie',
@@ -6169,6 +6181,10 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Froggie Beaver - From The Pond - 1973 - USA
+    // jam, rock
+    // similar titus groan
+    // track is lovely lady
     {
         id: 'fruupp_future_legends',
         title: 'Future Legends',
@@ -6670,6 +6686,38 @@ const albums = [
         spotifyId: '0q8Qt2dk9NL0F35BmrImUA',
         deezerId: '13797242',
         designers: ['Richard Evans'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'george_harrison_wonderwall_music',
+        title: 'Wonderwall Music',
+        artist: 'George Harrisson',
+        year: 1968,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.SOUNDTRACK, criteria.UNCOMMON_INSTRUMENTS, criteria.ORIENTAL, criteria.PATCHWORK, criteria.INSTRUMENTAL, criteria.HINDI, criteria.SOUND_COLLAGES, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Dream Scene',
+        selectedTrackYtId: '779ZlgO9low',
+        spotifyId: '5cH3fpk7okaczpozIjz5WN',
+        deezerId: '8549007',
+        designers: ['Bob Gill', 'John Kelly', 'Alan Aldridge'],
+        similarAlbums: ['yatha_sidhra_a_meditation_mass'],
+        isAGem: false,
+    },
+    {
+        id: 'george_harrison_electronic_sound',
+        title: 'Electronic Sound',
+        artist: 'George Harrisson',
+        year: 1969,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ELECTRO, criteria.LENGTHY_TRACKS, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Under The Mersey Wall',
+        selectedTrackYtId: 'tfeidh8PQU4',
+        spotifyId: '7IeUQakpsbd90SezOi5M5X',
+        deezerId: '8549029',
+        designers: ['George Harrisson'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -7591,7 +7639,7 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.C_ELECTRO, criteria.JAZZY_GROOVY, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
-        selectedTrackTitle: 'Clear Air Turbulence', // TODO a defaut
+        selectedTrackTitle: 'Clear Air Turbulence',
         selectedTrackYtId: 'sh9yY0-Vcgo',
         spotifyId: '7hOVBrnihRibV6139Oswc4',
         deezerId: '446934',
@@ -7607,7 +7655,7 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.ROCK, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES],
-        selectedTrackTitle: `Fool's Mate`, // TODO defaut
+        selectedTrackTitle: `Fool's Mate`,
         selectedTrackYtId: 'tYrx-IEe9RQ',
         spotifyId: '3pNyqEHh31xUCa2nbMxMG7',
         deezerId: '513946',
@@ -8520,6 +8568,8 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Júlio Pereira & Carlos Cavalheiro - Bota Fora - 1975
+    // transition, portuguese, uncommon
     {
         id: 'july_july',
         title: 'July',
@@ -10053,6 +10103,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'masayoshi_takanaka_the_rainbow_goblins',
+        title: 'The Rainbow Goblins',
+        artist: 'Masayoshi Takanaka',
+        year: 1981,
+        country: regions.Japan,
+        cover: '.jpg',
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.UNCOMMON_INSTRUMENTS, criteria.FANTASY, criteria.STORYLINE, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM],
+        selectedTrackTitle: 'Tiny Robin',
+        selectedTrackYtId: 'aUv9VMfMhzs',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Hipgnosis'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'matching_mole_matching_mole',
         title: 'Matching Mole',
         artist: 'Matching Mole',
@@ -10351,8 +10417,8 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.ROCK_OPERA, criteria.FEMALE, criteria.ORCHESTRAL_PARTS, criteria.FRENCH, criteria.FANFARE, criteria.SOUNDTRACK],
-        selectedTrackTitle: `todo`, // TODO track is regarde les rues de la grande ville OU Des fous des bêtes
-        selectedTrackYtId: 'todo',
+        selectedTrackTitle: `Des Fous, Des Bêtes`,
+        selectedTrackYtId: '7gWWAKrD40Q',
         spotifyId: '6AdAWfz0FBRfBa4aR3VwTN',
         deezerId: '244256',
         designers: [],
@@ -12027,6 +12093,10 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Paul McCartney - McCartney
+    // criteria Artpop
+    // TODO Paul McCartney - McCartney II
+    // criteria artpop, c_electro
     {
         id: 'paul_and_linda_mcCartney_ram',
         title: 'Ram',
@@ -14069,6 +14139,12 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Steve Howe - Turbulence
+    // neoeighties, instruental, c_electro, odd
+    // track is the inner battle
+    // TODO Steve Howe - The Grand Scheme Of Things <- on poourrait l'exclure car not prog
+    // neoeighties, c_folk, un peu de la merde...
+    // track is At The Gates Of The New World
     {
         id: 'steve_vai_flexable',
         title: 'Flex-Able',
@@ -16440,10 +16516,9 @@ const albums = [
     parse tout le Prog introuvable et renseigner ici
     split criteria, add property album type which is an enum between STUDIO, LIVE, LIVE & STUDIO, COMPILATION
     DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
-    Mobile version
     deezer/spotify/discogs should be API + search with title + artist instead of manual ids
     iframes deezer/spotify should be displayed just like in-fb messenger conv, and should be toggleable (so you can listen throughout the app while browsing)
-    subgenres should be specified in the album db not manually
+    subgenres should be specified in the album db not manually + a WHOLE NEW WAY to order albums by what I feel (titus groan, fuzzy duck, warhorse and froggie beaver will be in the same group)
     stats view with the number of subgenres
     filter by year (range avec input min + max)
     lister instruments
