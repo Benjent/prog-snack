@@ -57,10 +57,6 @@ export default {
         max-width: 1200px;
         text-align: center;
         margin: 60px;
-
-        &:first-child {
-            margin-top: 60px;
-        }
     }
 
     & &__name {
@@ -101,9 +97,7 @@ export default {
 @media (max-width: $mobile) {
     .designers {
         & &__section {
-            &:first-child {
-                margin-top: 20px;
-            }
+            margin: 20px;
         }
 
         & &__albums__item {
