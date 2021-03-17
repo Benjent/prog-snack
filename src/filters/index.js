@@ -3,6 +3,7 @@ import { criteria } from '../db/criteria.js';
 
 Vue.filter('criterium', (value) => {
     const mapper = {
+		[criteria.AFROBEAT]: 'Afrobeat',
 		[criteria.AMBIENT]: 'Ambient',
 		[criteria.ARENA]: 'Arena',
 		[criteria.ART_POP]: 'Art Pop',

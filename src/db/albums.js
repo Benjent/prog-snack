@@ -76,7 +76,6 @@ const albums = [].concat(
     prog-core <-- This could be a special attribute actually || in Main genre otherwise
     bluesy
     large asset of instruments
-    Afrobeat à miles davis + cymande + osibisa
 */
 
 // TODO below is list of things to do:

@@ -108,6 +108,7 @@ export default {
                         { criterium: criteria.FOLK, name: 'genre' },
                         { criterium: criteria.ELECTRO, name: 'genre' },
                         { criterium: criteria.ART_POP, name: 'genre' },
+                        { criterium: criteria.AFROBEAT, name: 'genre' },
                     ],
                 },
                 {
