@@ -61,7 +61,6 @@ const albums = [].concat(
 // Below is the list of prog artists that I listened and should be part of this project
 // TODO fill some discographies of artists that are already here:
 /*  
-    The Stooges premier album - we will fall
     Can
     Malicorne
     Premiata Forneria Marconi
@@ -81,12 +80,10 @@ const albums = [].concat(
 // TODO below is list of things to do:
 /*
     parse tout le Prog introuvable et renseigner ici
-    split criteria, add property album type which is an enum between STUDIO, LIVE, LIVE & STUDIO, COMPILATION
     DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
     deezer/spotify/discogs should be API + search with title + artist instead of manual ids
     iframes deezer/spotify should be displayed just like in-fb messenger conv, and should be toggleable (so you can listen throughout the app while browsing)
     subgenres should be specified in the album db not manually + a WHOLE NEW WAY to order albums by what I feel (titus groan, fuzzy duck, warhorse and froggie beaver will be in the same group)
-    stats view with the number of subgenres
     filter by year (range avec input min + max)
     lister instruments
     similar albums should be a standalone logic that generates arrays for both albums
