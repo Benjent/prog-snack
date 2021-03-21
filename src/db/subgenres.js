@@ -7,6 +7,7 @@ const subgenres = [
         mostRepresentativeAlbum: 'osibisa_osibisa',
         albums: [
             'cymande_promised_heights',
+            'carlos_garnett_journey_to_enlightment',
         ],
         criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.JAM, criteria.C_FOLK, criteria.ODD_RHYTHM, criteria.LATINO]
     },

@@ -32,6 +32,7 @@ const criteria = {
     FOLK: 'FOLK',
     ELECTRO: 'ELECTRO',
     ART_POP: 'ART_POP',
+    AFROBEAT: 'AFROBEAT',
 
     // Genre borrowing
     BLENDS: 'BLENDS', 
@@ -127,6 +128,7 @@ const criteriaOrder = [
     criteria.FOLK,
     criteria.ELECTRO,
     criteria.ART_POP,
+    criteria.AFROBEAT,
 
     // Genre borrowing
     criteria.BLENDS,
