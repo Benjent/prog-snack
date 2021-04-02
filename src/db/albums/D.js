@@ -183,6 +183,10 @@ const albums = [
     // TODO aladin sane
     // rock, c_psyche, greasy seventies
     // track is Lady Grinning Soul
+    // TODO diamond dogs
+    // transition, rock
+    // TODO station to station
+    //
     {
         id: 'david_cross_memos_from_purgatory',
         title: 'Memos From Purgatory ',
@@ -576,7 +580,7 @@ const albums = [
         year: 1975,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.ROCK, criteria.JAM, criteria.SOFT],
+        criteria: [criteria.ROCK, criteria.JAM, criteria.SOFT, criteria.BLUESY],
         selectedTrackTitle: 'Long & Lonely Night',
         selectedTrackYtId: 'lTuaE8BrqdM',
         spotifyId: '3eucO0Chn6Rc3HyNtrICCy',

@@ -50,6 +50,7 @@ const criteria = {
     SOPHISTICATED: 'SOPHISTICATED',
 
     // Style
+    BLUESY: 'BMUESY',
     JAZZY_GROOVY: 'JAZZY_GROOVY',
     PIANO: 'PIANO',
     ROCK_OPERA: 'ROCK_OPERA',
@@ -146,6 +147,7 @@ const criteriaOrder = [
     criteria.SOPHISTICATED,
 
     // Style
+    criteria.BLUESY,
     criteria.JAZZY_GROOVY,
     criteria.PIANO,
     criteria.ROCK_OPERA,

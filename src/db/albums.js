@@ -73,7 +73,6 @@ const albums = [].concat(
 // TODO consider adding criteria:
 /*
     prog-core <-- This could be a special attribute actually || in Main genre otherwise
-    bluesy
     large asset of instruments
 */
 

@@ -11,7 +11,7 @@ const albums = [
         year: 1972,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.SOFT, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS, criteria.C_PSYCHE, criteria.JAM, criteria.GREASY_SEVENTIES],
+        criteria: [criteria.SOFT, criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS, criteria.C_PSYCHE, criteria.JAM, criteria.GREASY_SEVENTIES, criteria.BLUESY],
         selectedTrackTitle: `A Young Man's Gash (Part I)`,
         selectedTrackYtId: 'NeJuSS-I9ao',
         spotifyId: null,
@@ -470,9 +470,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO gil scott heron
-    // premier album pas tro prog
-    // Free Will Jazzbased, experimental, uncommon, afro
+    // TODO Ginger Baker - Stratavarious - 
+    // afrobeat, c_jazz, igbo, jam, odd, femle
+    // track is Tiwa
     {
         id: 'gnidrolog_in_spite_of_harrys_toenail',
         title: `In Spite Of Harry's Toenail`,
@@ -873,7 +873,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['James Lienhart'],
-        similarAlbums: [],
+        similarAlbums: ['titus_groan_titus_groan'],
         isAGem: false,
     },
 ]
