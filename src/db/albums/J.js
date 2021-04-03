@@ -164,23 +164,6 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'jean_michel_jarre_oxygene',
-        title: 'Oxygène',
-        artist: 'Jean Michel Jarre',
-        year: 1976,
-        country: regions.FRANCE,
-        cover: '.jpg',
-        criteria: [criteria.CONCEPT, criteria.INSTRUMENTAL, criteria.SOFT, criteria.AMBIENT, criteria.ELECTRO],
-        selectedTrackTitle: 'Oxygène (Part IV)',
-        selectedTrackYtId: 'P_I2ch8_TXc',
-        spotifyId: '3e7TxckusgnC1AYnAqbl2z',
-        deezerId: '11101076',
-        designers: ['Michel Granger'],
-        similarAlbums: [],
-        isAGem: true,
-        description: `TODO description`,
-    },
-    {
         id: 'jane_together',
         title: 'Together',
         artist: 'Jane',
@@ -325,6 +308,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'jean_michel_jarre_oxygene',
+        title: 'Oxygène',
+        artist: 'Jean Michel Jarre',
+        year: 1976,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.INSTRUMENTAL, criteria.SOFT, criteria.AMBIENT, criteria.ELECTRO],
+        selectedTrackTitle: 'Oxygène (Part IV)',
+        selectedTrackYtId: 'P_I2ch8_TXc',
+        spotifyId: '3e7TxckusgnC1AYnAqbl2z',
+        deezerId: '11101076',
+        designers: ['Michel Granger'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
         id: 'jean_michel_jarre_equinoxe',
         title: 'Équinoxe',
         artist: 'Jean Michel Jarre',
@@ -436,6 +436,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO J.E.T - Fede SPeranza
+    // lengthy, odd, italian
+    // track Il Prete E Il Peccatore
     {
         id: 'jethro_tull_stand_up',
         title: 'Stand Up',
