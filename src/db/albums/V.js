@@ -178,7 +178,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Vauxdvihl like dream theater, odd rythm, rather heavy, neo eighties
+    {
+        id: 'vauxdvihl_to_dimension_logic',
+        title: 'To Dimension Logic',
+        artist: 'Vauxdvihl',
+        year: 1994,
+        country: regions.GREECE,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.HEAVY, criteria.NEO_EIGHTIES, criteria.TRANSITION],
+        selectedTrackTitle: 'To Dimension Logic',
+        selectedTrackYtId: 'iW_qGMRmJAw',
+        spotifyId: '1WIvCCikAQJifBsqWmnnTQ',
+        deezerId: null,
+        designers: [],
+        similarAlbums: ['dream_theater_when_dream_and_day_unite', 'queensryche_operation_mindcrime'],
+        isAGem: false,
+    },
     {
         id: 'visitor_2035_visitor_2035',
         title: 'Visitor 2035',
