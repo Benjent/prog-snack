@@ -114,10 +114,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Paul McCartney - McCartney
-    // criteria Artpop
-    // TODO Paul McCartney - McCartney II
-    // criteria artpop, c_electro
+    {
+        id: 'paul_mccartney_mccartney_ii',
+        title: 'McCartney II',
+        artist: 'Paul McCartney',
+        year: 1980,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Front Parlour',
+        selectedTrackYtId: 'yVE0qmOfO-A',
+        spotifyId: '17lbwRRrRoDWFY0QGkailA',
+        deezerId: '78320792',
+        designers: ['Linda McCartney'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'paul_and_linda_mcCartney_ram',
         title: 'Ram',

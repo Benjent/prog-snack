@@ -217,7 +217,7 @@ const albums = [
         year: 1969,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.INSTRUMENTAL, criteria.JAM, criteria.ROCK, criteria.BAROQUE],
+        criteria: [criteria.INSTRUMENTAL, criteria.JAM, criteria.ROCK, criteria.BAROQUE, criteria.BLUESY],
         selectedTrackTitle: `Drivin' Bachwards`,
         selectedTrackYtId: 'uWrdCYBMh0E',
         spotifyId: '0AkxR3pCNTuWPvNYcWTCf6',
@@ -1264,6 +1264,12 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Bull Angus - Bull Angus - 1971
+    // rockbased
+    // track is no love for the maid?
+    // TODO Bull Angus - Free For All - 1972
+    // rockbased
+    // track is Loving Till End
     {
         id: 'burning_candle_burning_candle',
         title: 'Burning Candle',

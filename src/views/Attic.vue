@@ -132,6 +132,7 @@ export default {
                         { criterium: criteria.EXPERIMENTAL, checked: false },
                         { criterium: criteria.JAM, checked: false },
                         { criterium: criteria.SOPHISTICATED, checked: false },
+                        { criterium: criteria.BLUESY, checked: false },
                         { criterium: criteria.JAZZY_GROOVY, checked: false },
                         { criterium: criteria.ROCK_OPERA, checked: false },
                         { criterium: criteria.FANFARE, checked: false },

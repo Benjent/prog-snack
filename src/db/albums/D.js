@@ -183,6 +183,10 @@ const albums = [
     // TODO aladin sane
     // rock, c_psyche, greasy seventies
     // track is Lady Grinning Soul
+    // TODO diamond dogs
+    // transition, rock
+    // TODO station to station
+    //
     {
         id: 'david_cross_memos_from_purgatory',
         title: 'Memos From Purgatory ',
@@ -576,7 +580,7 @@ const albums = [
         year: 1975,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.ROCK, criteria.JAM, criteria.SOFT],
+        criteria: [criteria.ROCK, criteria.JAM, criteria.SOFT, criteria.BLUESY],
         selectedTrackTitle: 'Long & Lonely Night',
         selectedTrackYtId: 'lTuaE8BrqdM',
         spotifyId: '3eucO0Chn6Rc3HyNtrICCy',
@@ -744,6 +748,38 @@ const albums = [
         deezerId: '126238',
         designers: [],
         similarAlbums: ['queensryche_operation_mindcrime'],
+        isAGem: false,
+    },
+    {
+        id: 'dschinn_dschinn',
+        title: 'Dschinn',
+        artist: 'Dschinn',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.GREASY_SEVENTIES, criteria.ROCK, criteria.HEAVY],
+        selectedTrackTitle: 'Are You Ready',
+        selectedTrackYtId: '8uhQXGuxnd0',
+        spotifyId: '3NTQm4JYHMZLXOpxZhfFp4',
+        deezerId: null,
+        designers: ['Klaus Holitzka'],
+        similarAlbums: ['jane_jane_iii'],
+        isAGem: false,
+    },
+    {
+        id: 'dull_knife_electric_indian',
+        title: 'Electric Indian',
+        artist: 'Dull Knife',
+        year: 1971,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.GREASY_SEVENTIES, criteria.ROCK, criteria.HEAVY, criteria.TOUCHING_VOCALS, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Plastic People',
+        selectedTrackYtId: 'CXPeqmakiEg',
+        spotifyId: '5tEiYqn9J5vcay5lZHjmAm',
+        deezerId: '7765425',
+        designers: [],
+        similarAlbums: ['dschinn_dschinn'],
         isAGem: false,
     },
     {

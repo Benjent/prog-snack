@@ -25,7 +25,7 @@ const albums = [
         year: 1971,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.JAM],
+        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.JAM, criteria.BLUESY],
         selectedTrackTitle: 'Jungle Song',
         selectedTrackYtId: 'pOL0sl-mVZk',
         spotifyId: '4bH0evmCfukCN7BqCZ2ck8',

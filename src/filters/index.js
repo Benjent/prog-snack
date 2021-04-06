@@ -9,6 +9,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.ART_POP]: 'Art Pop',
 		[criteria.BAROQUE]: 'Baroque vibes',
 		[criteria.BLENDS]: 'Blends many music genres',
+        [criteria.BLUESY]: 'Bluesy',
 		[criteria.C_ELECTRO]: 'Contains electronic elements',
 		[criteria.C_FOLK]: 'Contains Folk elements',
 		[criteria.C_JAZZ]: 'Contains Jazz elements',
