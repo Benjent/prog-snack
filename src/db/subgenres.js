@@ -168,6 +168,7 @@ const subgenres = [
         ],
         criteria: [criteria.JAZZ, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.SOFT]
     },
+    // TODO Add Krautrock because Heavy Prog/Kraut rock / stoner is really that (Jane, Dschinn, Dull Knife, ...)
     {
         name: 'New Age / Ambient Electronic',
         description: `TODO description`,
