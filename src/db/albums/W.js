@@ -358,22 +358,6 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'the_world_of_oz_the_world_of_oz',
-        title: 'The World Of Oz',
-        artist: 'The World Of Oz',
-        year: 1969,
-        country: regions.ENGLAND,
-        cover: '.jpg',
-        criteria: [criteria.SOUNDTRACK, criteria.CONCEPT, criteria.FANFARE, criteria.ORCHESTRAL_PARTS, criteria.BAROQUE, criteria.ROCK_OPERA],
-        selectedTrackTitle: null,
-        selectedTrackYtId: null,
-        spotifyId: null,
-        deezerId: '7243452',
-        designers: ['David Anstey'],
-        similarAlbums: [],
-        isAGem: false,
-    },
-    {
         id: 'wlud_second',
         title: 'Second',
         artist: 'WLUD',
@@ -389,6 +373,47 @@ const albums = [
         similarAlbums: [],
         isAGem: false, // TODO maybe true
     },
+    {
+        id: 'womega_a_quick_step',
+        title: 'A Quick Step',
+        artist: 'Womega',
+        year: 1975,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: `Nympho's Belly Button`,
+        selectedTrackYtId: 'rGIXIlhiP7w',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['GJos Vanlessen'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
+        id: 'the_world_of_oz_the_world_of_oz',
+        title: 'The World Of Oz',
+        artist: 'The World Of Oz',
+        year: 1969,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.SOUNDTRACK, criteria.CONCEPT, criteria.FANFARE, criteria.ORCHESTRAL_PARTS, criteria.BAROQUE, criteria.ROCK_OPERA, criteria.C_FOLK],
+        selectedTrackTitle: 'Bring The Ring',
+        selectedTrackYtId: 'K_u2b8Hl-Kk',
+        spotifyId: null,
+        deezerId: '7243452',
+        designers: ['David Anstey'],
+        similarAlbums: ['roger_glover_the_butterfly_ball_and_the_grasshoppers_feast'],
+        isAGem: false,
+    },
+    // TODO Woody Kern - The Awful Disclosures Of Maria Monk
+    // bluesy // TODO add bluesy everywhere needed!, rockbased
+    // TODO Writing On The Wall - The Power Of The Picts - SCOTLAND - 1969
+    // greasy sev
+    // track is Shadow Of Man OU Aries
+    // similar captain beyond
+    // TODO Wurtemberg - Rock Fantasia Opus 9 - Concerto Pour Un Minot - France
+    // piano driven, baroque, c_folk, uncommon, medieval, instru
 ]
 
 export default albums
