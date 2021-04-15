@@ -503,12 +503,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Steve Howe - Turbulence
-    // neoeighties, instruental, c_electro, odd
-    // track is the inner battle
-    // TODO Steve Howe - The Grand Scheme Of Things <- on poourrait l'exclure car not prog
-    // neoeighties, c_folk, un peu de la merde...
-    // track is At The Gates Of The New World
+    {
+        id: 'steve_howe_turbulence',
+        title: 'Turbulence',
+        artist: 'Steve Howe',
+        year: 1991,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.NEO_EIGHTIES, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `The Inner Battle`,
+        selectedTrackYtId: '7ZGpZkOQYl8',
+        spotifyId: '2C2eSBa3plc2Xm4AmdKowj',
+        deezerId: '93386522',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'steve_howe_the_grand_scheme_of_things',
+        title: 'The Grand Scheme Of Things',
+        artist: 'Steve Howe',
+        year: 1993,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.NEO_EIGHTIES, criteria.C_FOLK, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Wayward Course`,
+        selectedTrackYtId: '7Jm0P91dsME',
+        spotifyId: '3s9Mhhq6813cvaLztBm11E',
+        deezerId: '57912992',
+        designers: ['Roger Dean'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'steve_vai_flexable',
         title: 'Flex-Able',

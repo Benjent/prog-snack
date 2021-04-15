@@ -1281,6 +1281,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'aynslay_dunbar_blue_whale',
+        title: 'Blue Whale',
+        artist: 'Aynslay Dunbar',
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.JAM, criteria.LENGTHY_TRACKS, criteria.ROCK, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Going Home',
+        selectedTrackYtId: 'EA_EcWcAU1k',
+        spotifyId: '5b4bcHqwiBfXgVBPHBNEy9',
+        deezerId: '14606910',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums

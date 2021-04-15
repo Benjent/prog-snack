@@ -243,7 +243,7 @@ const albums = [
         spotifyId: '1TIAU6CbjQCF6LJ7uTj7O6',
         deezerId: '7530433',
         designers: ['Carol Hertzer'],
-        similarAlbums: [],
+        similarAlbums: ['jean_michel_jarre_oxygene'],
         isAGem: false,
     },
     {
@@ -259,7 +259,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['Joan Nielsen'],
-        similarAlbums: [],
+        similarAlbums: ['jean_michel_jarre_equinoxe'],
         isAGem: false,
     },
     {
