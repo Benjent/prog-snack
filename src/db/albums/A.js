@@ -597,11 +597,16 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO - Tanz Der Lemminge - lengthy, psyché, experimental, instru
+    // TODO - Tanz Der Lemminge - 1971
+    // lengthy, psyché, experimental, instru
     // 83602972
-    // TODO - Carnival In Babylon
+    // track Syntelman's March Of The Roaring Seventies
+    // TODO - Carnival In Babylon - 1972
+    // female, c_psyche, odd
     // 83603352
-    // Ceedence clearwater - pendulum almost prog ! Born to move selecte track
+    // track: Ballad Of The Shimmering Sand
+    // designers: F.U. Rogner
+    // TODO Ceedence clearwater - pendulum almost prog ! Born to move selecte track
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
@@ -785,13 +790,13 @@ const albums = [
         year: 1968,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [],
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_PSYCHE, criteria.SOFT, criteria.BLUESY],
         selectedTrackTitle: 'Elaborations',
         selectedTrackYtId: 'n6BS61QgDRY',
         spotifyId: null,
         deezerId: '11474530',
         designers: ['Michael Kanarek'],
-        similarAlbums: [],
+        similarAlbums: ['may_blitz_may_blitz', 'jefferson_airplane_surrealistic_pillow'],
         isAGem: false,
     },
     {
