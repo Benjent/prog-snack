@@ -833,7 +833,7 @@ const albums = [
         year: 1976,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH, criteria.LENGTHY, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.SPACY],
+        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.SPACY],
         selectedTrackTitle: 'Jeux Du Siècle',
         selectedTrackYtId: 'orkXlU1uvFc',
         spotifyId: '3gzvDKC8YeNYguIMHkSqCl',
