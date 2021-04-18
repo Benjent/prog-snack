@@ -1299,7 +1299,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['Geoff Halpin'],
-        similarAlbums: [],
+        similarAlbums: ['return_to_forever_romantic_warrior'],
         isAGem: true,
         description: `TODO Description`
     },
