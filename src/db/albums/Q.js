@@ -146,8 +146,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Queensrÿche - Empire - 1990 - criteria.ARENA, criteria.NEO_EIGHTIES, criteria.HEAVY, criterria.ODD_RHYTHM
-    // track is Della Brown
+    {
+        id: 'queensryche_empire',
+        title: 'Empire',
+        artist: 'Queensrÿche',
+        year: 1990,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ARENA, criteria.NEO_EIGHTIES, criteria.HEAVY, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Della Brown',
+        selectedTrackYtId: 'VnHPgtIzT0w',
+        spotifyId: '69cWXmeeUTcs8B9aqg65ed',
+        deezerId: '7459739',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'quicksilver_messenger_service_happy_trails',
         title: 'Happy Trails',
