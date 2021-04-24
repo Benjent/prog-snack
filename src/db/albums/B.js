@@ -307,12 +307,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO ...Di Terra - 1978
-    // orchestral, uncommon, instrumental, c_psyche, symphonic, transition
-    // track is Ne Piu Di Un Albero Non Meno Di Una Stella (wLbevJTuV8s)
-    // TODO Canto Di Primavera - 1979
-    // italian, odd, renaissance, c_electro
-    // track is Sono La Bestia (O54guzM6kS0)
+    {
+        id: 'banco_del_mutuo_soccorso_di_terra',
+        title: `...Di Terra`,
+        artist: 'Banco Del Mutuo Soccorso',
+        year: 1978,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.SYMPHONIC, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Ne Piu Di Un Albero Non Meno Di Una Stella',
+        selectedTrackYtId: 'wLbevJTuV8s',
+        spotifyId: '39nKzwNKQG1KuPNl1KwYM8',
+        deezerId: '4196241',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'banco_del_mutuo_soccorso_canto_di_primavera',
+        title: `Canto Di Primavera`,
+        artist: 'Banco Del Mutuo Soccorso',
+        year: 1979,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ODD_RHYTHM, criteria.RENAISSANCE, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Sono La Bestia',
+        selectedTrackYtId: 'O54guzM6kS0',
+        spotifyId: '4jmyk0z44ZfufjmPn7lCcw',
+        deezerId: '4196251',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
