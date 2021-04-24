@@ -130,6 +130,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Vanessa - City Lips - NORWAY - 1975
+    {
+        id: 'vanessa_black_and_white',
+        title: 'Black And White',
+        artist: 'Vanessa',
+        year: 1976,
+        country: regions.NORWAY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.C_ELECTRO, criteria.JAM, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Fragmomentum',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Willy Haugen'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'vangelis_albedo_039',
         title: 'Albedo 0.39',

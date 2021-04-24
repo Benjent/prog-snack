@@ -9,7 +9,7 @@
                     <h2 class="title title--2">{{album.title}}</h2>
                     <span>({{album.year}})</span>
                 </div>
-                <blockquote class="text text--description gems__description" v-if="album.description && album.description !== 'TODO description'">{{album.description}}</blockquote>
+                <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
             </div>
         </div>
     </section>

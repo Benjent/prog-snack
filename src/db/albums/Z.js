@@ -89,7 +89,7 @@ const albums = [
         year: 1972,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.JAM, criteria.HEAVY], // TODO
+        criteria: [criteria.JAM, criteria.HEAVY],
         selectedTrackTitle: 'Nightmare',
         selectedTrackYtId: 'Fw1Z79T4q2Y',
         spotifyId: null,

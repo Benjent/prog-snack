@@ -800,10 +800,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Froggie Beaver - From The Pond - 1973 - USA
-    // jam, rock
-    // similar titus groan
-    // track is lovely lady
+    {
+        id: 'froggie_beaver_from_the_pond',
+        title: 'From The Pond',
+        artist: 'Froggie Beaver',
+        year: 1973,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAM, criteria.ROCK],
+        selectedTrackTitle: 'Lovely Lady',
+        selectedTrackYtId: '9eqdLtWU258',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: ['titus_groan_titus_groan'],
+        isAGem: false,
+    },
     {
         id: 'fruupp_future_legends',
         title: 'Future Legends',

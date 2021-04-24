@@ -597,11 +597,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO - Tanz Der Lemminge - lengthy, psyché, experimental, instru
-    // 83602972
-    // TODO - Carnival In Babylon
-    // 83603352
-    // Ceedence clearwater - pendulum almost prog ! Born to move selecte track
+    {
+        id: 'amon_duul_ii_tanz_der_leminger',
+        title: 'Tanz Der Lemminge',
+        artist: 'Amon Düül II',
+        year: 1971,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: `Syntelman's March Of The Roaring Seventies`,
+        selectedTrackYtId: 'DiDGkrIQtdU',
+        spotifyId: '0agZiIy00xpP0KT7JpRUKt',
+        deezerId: '83602972',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'amon_duul_ii_carnival_in_babylon',
+        title: 'Carnival In Babylon',
+        artist: 'Amon Düül II',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Ballad Of The Shimmering Sand`,
+        selectedTrackYtId: 'snury2m4VPw',
+        spotifyId: '5AVgbLcTVR4g7ukF44FSe2',
+        deezerId: '83603352',
+        designers: ['F.U. Rogner'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
@@ -785,13 +812,13 @@ const albums = [
         year: 1968,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [],
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_PSYCHE, criteria.SOFT, criteria.BLUESY],
         selectedTrackTitle: 'Elaborations',
         selectedTrackYtId: 'n6BS61QgDRY',
         spotifyId: null,
         deezerId: '11474530',
         designers: ['Michael Kanarek'],
-        similarAlbums: [],
+        similarAlbums: ['may_blitz_may_blitz', 'jefferson_airplane_surrealistic_pillow'],
         isAGem: false,
     },
     {
@@ -1083,7 +1110,7 @@ const albums = [
         spotifyId: '6S7GZvpRA9FOIs8KbI6IkQ',
         deezerId: null,
         designers: [],
-        similarAlbums: [], // similar to babe ruth Amadrillo
+        similarAlbums: ['babe_ruth_amar_caballero'],
         isAGem: false,
     },
     {

@@ -376,7 +376,7 @@ const albums = [
         spotifyId: '1gqEFwNPsA63LgXVh5xRxI',
         deezerId: '1359284',
         designers: ['Jean-Claude Michel'],
-        similarAlbums: [],
+        similarAlbums: ['clearlight_forever_blowing_bubbles'],
         isAGem: false,
     },
     {
@@ -428,6 +428,10 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Demon Fuzz
+    // Afreaka! - 1970 - England
+    // lengthy, afrobeat, jam, instru
+    // null + 6rNiuCF4E6bzK79jtIXZLM
     {
         id: 'didier_bonin_larbre_verre',
         title: `L'arbre Verre`,

@@ -809,9 +809,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Júlio Pereira & Carlos Cavalheiro - Bota Fora - 1975
-    // transition, portuguese, uncommon, renaissance, sociopolitical
-    // track is Capitão Ambrósio
+    {
+        id: 'julio_pereira_and_carlos_cavalheiro_bota_fora',
+        title: 'Bota Fora',
+        artist: 'Júlio Pereira & Carlos Cavalheiro',
+        year: 1975,
+        country: regions.PORTUGAL,
+        cover: '.jpg',
+        criteria: [criteria.TRANSITION, criteria.PORTUGUESE, criteria.UNCOMMON_INSTRUMENTS, criteria.RENAISSANCE, criteria.SOCIOPOLITICAL],
+        selectedTrackTitle: 'Capitão Ambrósio',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'july_july',
         title: 'July',

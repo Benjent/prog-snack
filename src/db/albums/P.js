@@ -620,13 +620,13 @@ const albums = [
         year: 1968,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.BAROQUE],
+        criteria: [criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.BAROQUE, criteria.FEMALE],
         selectedTrackTitle: `In Held 'Twas In I`,
         selectedTrackYtId: null,
         spotifyId: '2jdvkNAo0dG5QwoMHwB42C',
         deezerId: '77251812',
         designers: ['George Underwood'],
-        similarAlbums: [], // TODO at least one album from Mark I Deep Purple
+        similarAlbums: ['deep_purple_the_book_of_taliesyn'],
         isAGem: false,
     },
     {
@@ -652,7 +652,7 @@ const albums = [
         year: 1970,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.BAROQUE, criteria.ROCK, criteria.SYMPHONIC],
+        criteria: [criteria.BAROQUE, criteria.ROCK],
         selectedTrackTitle: `Whaling Stories`,
         selectedTrackYtId: 'nRvA4W4vSqU',
         spotifyId: '2ksXuf8dKe61LDYSxeNYBs',
@@ -661,21 +661,86 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO broken barricades
-    // criteria: ROCK
-    // selected: song for a dreamer
-    // designer: CCS
-    // deezer 123402462
-    // TODO grand hotel
-    // criteria: baroque, piano, orchestral, odd
-    // selected: Grand hotel, bring omh bacon, 
-    // designer: Spencer Zahn
-    // deezer 129099512
-    // TODO exotic
-    // criteria: piano
-    // selected:
-    // designer:
-    // deezer: 123402452
+    {
+        id: 'procol_harum_broken_barricades',
+        title: 'Broken Barricades',
+        artist: 'Procol Harum',
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: `Song For A Dreamer`,
+        selectedTrackYtId: 'u-vOp7hr1c0',
+        spotifyId: '35vRWznRW5OPcb2NASm6ub',
+        deezerId: '123402462',
+        designers: ['CCS'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'procol_harum_grand_hotel',
+        title: 'Grand Hotel',
+        artist: 'Procol Harum',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.BAROQUE, criteria.PIANO, criteria.ORCHESTRAL_PARTS, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Grand Hotel`,
+        selectedTrackYtId: 'cPkkqJmoyVA',
+        spotifyId: '5IVVAF53kGojw4SCY6Dgu2',
+        deezerId: '129099512',
+        designers: ['Spencer Zahn'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'procol_harum_exotic_birds_and_fruit',
+        title: 'Exotic Birds And Fruit',
+        artist: 'Procol Harum',
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.PIANO],
+        selectedTrackTitle: `The Thin End Of The Wedge`,
+        selectedTrackYtId: 'Ae8tGuc57-U',
+        spotifyId: null,
+        deezerId: '123402452',
+        designers: ['Jakob Bogdani'],
+        similarAlbums: ['supertramp_crisis_what_crisis'],
+        isAGem: false,
+    },
+    {
+        id: 'procol_harum_procols_ninth',
+        title: `Procol's Ninth`,
+        artist: 'Procol Harum',
+        year: 19754,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.PIANO],
+        selectedTrackTitle: `Without A Doubt`,
+        selectedTrackYtId: 'Boxb8ZKulqA',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['James Cotier'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'procol_harum_something_magic',
+        title: 'Something Magic',
+        artist: 'Procol Harum',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.PIANO, criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.BAROQUE, criteria.STORYLINE],
+        selectedTrackTitle: `The Worm & The Tree`,
+        selectedTrackYtId: 'iQZk8L0f4hk',
+        spotifyId: '0gQRFovuwdan4HfovGf67w',
+        deezerId: null,
+        designers: ['Bruce Meek'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'prosper_broken_door',
         title: 'Broken Door',

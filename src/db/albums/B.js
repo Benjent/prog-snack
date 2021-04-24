@@ -307,12 +307,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO ...Di Terra - 1978
-    // orchestral, uncommon, instrumental, c_psyche, symphonic, transition
-    // track is Ne Piu Di Un Albero Non Meno Di Una Stella (wLbevJTuV8s)
-    // TODO Canto Di Primavera - 1979
-    // italian, odd, renaissance, c_electro
-    // track is Sono La Bestia (O54guzM6kS0)
+    {
+        id: 'banco_del_mutuo_soccorso_di_terra',
+        title: `...Di Terra`,
+        artist: 'Banco Del Mutuo Soccorso',
+        year: 1978,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.SYMPHONIC, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Ne Piu Di Un Albero Non Meno Di Una Stella',
+        selectedTrackYtId: 'wLbevJTuV8s',
+        spotifyId: '39nKzwNKQG1KuPNl1KwYM8',
+        deezerId: '4196241',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'banco_del_mutuo_soccorso_canto_di_primavera',
+        title: `Canto Di Primavera`,
+        artist: 'Banco Del Mutuo Soccorso',
+        year: 1979,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ODD_RHYTHM, criteria.RENAISSANCE, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Sono La Bestia',
+        selectedTrackYtId: 'O54guzM6kS0',
+        spotifyId: '4jmyk0z44ZfufjmPn7lCcw',
+        deezerId: '4196251',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
@@ -1264,12 +1290,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Bull Angus - Bull Angus - 1971
-    // rockbased
-    // track is no love for the maid?
-    // TODO Bull Angus - Free For All - 1972
-    // rockbased
-    // track is Loving Till End
+    {
+        id: 'bull_angus_bull_angus',
+        title: 'Bull Angus',
+        artist: 'Bull Angus',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'No Cream For The Maid',
+        selectedTrackYtId: 'u7SDkg6SbtY',
+        spotifyId: '63nSBdFBwR9c8kvEIFvOGg',
+        deezerId: null,
+        designers: ['Dan Clyne'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'bull_angus_free_for_all',
+        title: 'Free For All',
+        artist: 'Bull Angus',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'Loving Till End',
+        selectedTrackYtId: 'qkZvR7R6DoE',
+        spotifyId: '51cMbuij0tmZgIbN3uBoBh',
+        deezerId: null,
+        designers: ['Madeline Buchholz', 'Filippino Lippi'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'burning_candle_burning_candle',
         title: 'Burning Candle',

@@ -365,7 +365,7 @@ const albums = [
         cover: '.jpg',
         criteria: [criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: `Les Folleries`,
-        selectedTrackYtId: 'todo',
+        selectedTrackYtId: 'mNdc8GYYDZc',
         spotifyId: '3ZKTikxMbMgelmfLdghfEt',
         deezerId: '47211692',
         designers: ['Claude Lamarre', 'Fernand Leclerc', 'Richard Packwood'],
@@ -381,7 +381,7 @@ const albums = [
         cover: '.jpg',
         criteria: [criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.SOFT_SEVENTIES, criteria.JAM, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.JAZZY_GROOVY, criteria.C_JAZZ],
         selectedTrackTitle: `Les Pétoncles`,
-        selectedTrackYtId: 'todo',
+        selectedTrackYtId: 'uo2dazo2sbs',
         spotifyId: '3WCM79MC3U27y5eeyD4vRi',
         deezerId: '47206822',
         designers: ['William Roberto Wilson', 'Serge Clément'],
@@ -398,16 +398,18 @@ const albums = [
         criteria: [criteria.LIVE, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.JAM, criteria.JAZZY_GROOVY, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.C_JAZZ],
         selectedTrackTitle: `L'éveil Et L'approche`, // defaut OU toujours trop tard
         selectedTrackYtId: 'todo',
-        spotifyId: 'todo',
-        deezerId: 'todo',
+        spotifyId: null,
+        deezerId: null,
         designers: ['Christiane Valcourt', 'André Panneton'],
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Maneige - Montréal 6am - 1980 - null - null
+    // TODO Maneige - Montréal 6am - 1980
     // instru, soft_seventies
     // TRACK Cerveau Lent
-    // TODO Maneige - Images - 1983 - null - null
+    // null + null
+    // TODO Maneige - Images - 1983
+    // null + null
     // instru, odd, c_jazz, sof-seventies
     // André Perry, André Panneton
     {
@@ -628,8 +630,8 @@ const albums = [
         country: regions.FRANCE,
         cover: '.jpg',
         criteria: [criteria.FRENCH, criteria.PATCHWORK, criteria.C_ELECTRO, criteria.STORYLINE, criteria.ODD_RHYTHM, criteria.ROCK_OPERA, criteria.TRANSITION],
-        selectedTrackTitle: 'Une Femme Si Bête', // TODO
-        selectedTrackYtId: 'DaEQUMnx0x0', // TODO
+        selectedTrackTitle: 'Une Femme Si Bête',
+        selectedTrackYtId: 'DaEQUMnx0x0',
         spotifyId: null,
         deezerId: null,
         designers: ['Hubert Pathieu'],
