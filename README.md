@@ -1,6 +1,8 @@
 # prog-snack
 Tiny web project with big music ambition: dusting old prog albums, some known as prog gems, to make them shine beside classic albums.
 
+Browse albums, filter them by music criteria, discover similar albums and find out who designed that cover.
+
 ## Project setup
 ```
 npm install
