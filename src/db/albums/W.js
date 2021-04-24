@@ -2,6 +2,12 @@ import regions from '../regions'
 import { criteria } from '../criteria'
 
 const albums = [
+    // TODO Laughing Cavalier
+    // rock, baroque, c_psyche
+    // similar beatles get back? ou white album
+    // rack is Peru?
+    // TODO Wallace Collection
+    // rock, c_folk, baroque, c_psyché, female
     {
         id: 'walrus_walrus',
         title: 'Walrus',
@@ -407,13 +413,27 @@ const albums = [
         isAGem: false,
     },
     // TODO Woody Kern - The Awful Disclosures Of Maria Monk
-    // bluesy // TODO add bluesy everywhere needed!, rockbased
+    // bluesy, rockbased
     // TODO Writing On The Wall - The Power Of The Picts - SCOTLAND - 1969
     // greasy sev
     // track is Shadow Of Man OU Aries
     // similar captain beyond
-    // TODO Wurtemberg - Rock Fantasia Opus 9 - Concerto Pour Un Minot - France
-    // piano driven, baroque, c_folk, uncommon, medieval, instru
+    {
+        id: 'wurtemberg_rock_fantasia_opus_9',
+        title: 'Rock Fantasia Opus 9',
+        artist: 'Wurtemberg',
+        year: 1980,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.PIANO, criteria.BAROQUE, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.MEDIEVAL, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Concerto Pour Un Minot',
+        selectedTrackYtId: null,
+        spotifyId: '09kYZLYnmtlm2H2lyUPDUL',
+        deezerId: '440475',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
