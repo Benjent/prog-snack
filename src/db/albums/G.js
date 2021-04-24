@@ -470,9 +470,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Ginger Baker - Stratavarious - 
-    // afrobeat, c_jazz, igbo, jam, odd, femle
-    // track is Tiwa
+    {
+        id: 'ginger_baker_stratavarious',
+        title: `Stratavarious`,
+        artist: 'Ginger Baker',
+        year: 1972,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.AFROBEAT, criteria.C_JAZZ, criteria.IGBO, criteria.ODD_RHYTHM, criteria.FEMALE],
+        selectedTrackTitle: 'Tiwa',
+        selectedTrackYtId: 'k7RpRbJIcn8',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'gnidrolog_in_spite_of_harrys_toenail',
         title: `In Spite Of Harry's Toenail`,
