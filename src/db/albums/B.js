@@ -1290,12 +1290,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Bull Angus - Bull Angus - 1971
-    // rockbased
-    // track is no love for the maid?
-    // TODO Bull Angus - Free For All - 1972
-    // rockbased
-    // track is Loving Till End
+    {
+        id: 'bull_angus_bull_angus',
+        title: 'Bull Angus',
+        artist: 'Bull Angus',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'No Cream For The Maid',
+        selectedTrackYtId: 'u7SDkg6SbtY',
+        spotifyId: '63nSBdFBwR9c8kvEIFvOGg',
+        deezerId: null,
+        designers: ['Dan Clyne'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'bull_angus_free_for_all',
+        title: 'Free For All',
+        artist: 'Bull Angus',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'Loving Till End',
+        selectedTrackYtId: 'qkZvR7R6DoE',
+        spotifyId: '51cMbuij0tmZgIbN3uBoBh',
+        deezerId: null,
+        designers: ['Madeline Buchholz', 'Filippino Lippi'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'burning_candle_burning_candle',
         title: 'Burning Candle',
