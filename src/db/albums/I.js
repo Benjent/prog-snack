@@ -95,7 +95,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: [],
-        similarAlbums: [], // TODO // similar camel rain dances
+        similarAlbums: ['camel_rain_dances'],
         isAGem: false,
     },
     {

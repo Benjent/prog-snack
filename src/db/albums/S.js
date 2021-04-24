@@ -226,7 +226,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['H.R. Giger'],
-        similarAlbums: [], // TODO probably procol harum early work
+        similarAlbums: ['procol_harum_procol_harum'],
         isAGem: false,
     },
     {
@@ -564,7 +564,7 @@ const albums = [
         spotifyId: null,
         deezerId: '52939772',
         designers: [],
-        similarAlbums: [], // TODO Similar à atomic rooster ?
+        similarAlbums: ['deep_purple_who_do_we_think_we_are', 'atomic_rooster_in_hearing_of_atomic_rooster'],
         isAGem: false,
     },
     {
@@ -837,6 +837,22 @@ const albums = [
         similarAlbums: [],
         isAGem: true,
         description: `TODO description`,
+    },
+    {
+        id: 'the_surprise_package_free_up',
+        title: 'Free Up',
+        artist: 'The Surprise Package',
+        year: 1968,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.JAM, criteria.CRISPY_SIXTIES],
+        selectedTrackTitle: 'Free Up',
+        selectedTrackYtId: 'ydSDjQlG5PI',
+        spotifyId: '3s5YeRdnLltlcRAFuAe6rH',
+        deezerId: '63044312',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
     },
     {
         id: 'sway_human_carnage',
