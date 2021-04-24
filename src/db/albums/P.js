@@ -706,7 +706,7 @@ const albums = [
         spotifyId: null,
         deezerId: '123402452',
         designers: ['Jakob Bogdani'],
-        similarAlbums: [], // TODO similar supertramp breakfast ou ces eaux-là
+        similarAlbums: ['supertramp_crisis_what_crisis'],
         isAGem: false,
     },
     {

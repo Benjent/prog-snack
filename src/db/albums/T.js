@@ -403,7 +403,7 @@ const albums = [
         spotifyId: '155OAoTAYR4Uu0LpSMvy5W',
         deezerId: '148674',
         designers: [],
-        similarAlbums: [], // TODO similar to procol harum mid carrier genre Grand Hotel ?? + similar electric light orchestra
+        similarAlbums: ['procol_harum_grand_hotel'], // TODO similar electric light orchestra
         isAGem: false,
     },
     {
