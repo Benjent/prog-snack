@@ -713,7 +713,7 @@ const albums = [
         id: 'procol_harum_procols_ninth',
         title: `Procol's Ninth`,
         artist: 'Procol Harum',
-        year: 19754,
+        year: 1975,
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.ROCK, criteria.PIANO],
