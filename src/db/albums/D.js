@@ -180,12 +180,25 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO aladin sane
-    // rock, c_psyche, greasy seventies
-    // track is Lady Grinning Soul
-    // TODO diamond dogs
+    {
+        id: 'david_bowie_aladin_sane',
+        title: 'Aladin Sane',
+        artist: 'David Bowie',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: 'Lady Grinning Soul',
+        selectedTrackYtId: '6fHoMw8tCzo',
+        spotifyId: '10gbq3XvTrtUSplDoTtsOb',
+        deezerId: '11205662',
+        designers: ['Brian Duffy', 'Pierre Laroche'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO diamond dogs 1974 - designers Guy Peellaert
     // transition, rock
-    // TODO station to station
+    // TODO station to station 1976 - 
     //
     {
         id: 'david_cross_memos_from_purgatory',
