@@ -632,18 +632,23 @@ const albums = [
         isAGem: false,
     },
     // TODO
-    // grave new world : folk, cpsyché, spectacular, uncommon instr
+    // grave new world 1972 : folk, cpsyché, spectacular, uncommon instr
     // selected track : new world
     // designers William Blake, Paper Tiger
     // TODO
-    // bursting at the seams : cfolk, uncommon
+    // bursting at the seams 1973 : cfolk, uncommon
     // selected track : tears and pavan
     // designers : John McConnell
     // TODO
-    // hero and heroine : soft, oddryth, c_folk, c_electro
+    // hero and heroine 1974 : soft, oddryth, c_folk, c_electro
     // selected track Autumn
     // designers
     // similar acqua fragile
+    // ghosts 1975
+    // nomadness 1975
+    // deep cuts 1976
+    // burning for you 1977
+    // deadlines 1978
     {
         id: 'stud_stud',
         title: 'Stud',

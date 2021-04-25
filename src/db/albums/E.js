@@ -111,7 +111,7 @@ const albums = [
         spotifyId: '5XlyV8daz3tuhEYW9VKxfe',
         deezerId: '1557730',
         designers: ['Hipgnosis'],
-        similarAlbums: [], // TODO similar roy wood mustard et compagnie là + Let It Be Beatles
+        similarAlbums: ['roy_wood_boulders', 'the_beatles_let_it_be'],
         isAGem: false,
     },
     {
@@ -625,7 +625,7 @@ const albums = [
         spotifyId: '4yq2tSTIBBHE8S0zvanABi',
         deezerId: '62479142',
         designers: ['Michael Weisse'],
-        similarAlbums: [], // TODO something tangerine dream
+        similarAlbums: [], // TODO something tangerine dream après Stratosfear?
         isAGem: false,
     },
     {

@@ -178,6 +178,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'quiet_sun_mainstream',
+        title: 'Mainstream',
+        artist: 'Quiet Sun',
+        year: 1975,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT_SEVENTIES, criteria.ODD_RHYTHM, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.TRANSITION, criteria.SYMPHONIC],
+        selectedTrackTitle: 'Sol Caliente',
+        selectedTrackYtId: 'o6s-XymqUCk',
+        spotifyId: null,
+        deezerId: '1252022',
+        designers: [],
+        similarAlbums: [], // TODO similar one of soft machine
+        isAGem: false,
+    },
 ]
 
 export default albums
