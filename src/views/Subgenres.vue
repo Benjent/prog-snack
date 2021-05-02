@@ -54,10 +54,6 @@ export default {
             this.selectAlbum(album)
             this.$router.push('/discographies')
         },
-        getPathToCover(id) {
-            const album = this.albumById(id)
-            return require(`../assets/img/covers/${album.id}${album.cover}`)
-        },
     },
 }
 </script>

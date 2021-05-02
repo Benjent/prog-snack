@@ -50,7 +50,7 @@ function generateDao() {
                 criteriaOccurences[criterium]++
             } else {
                 if (criterium === undefined) {
-                    console.error('Wrong criterium used in album with id: ', album.id)
+                    console.error(`Wrong criterium used in album with id: ${album.id}`)
                 }
                 criteriaOccurences[criterium] = 1
             }
