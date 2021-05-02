@@ -11,7 +11,7 @@
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
         <div class="cover__album" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px', 'max-height': size && size + 'px', 'max-width': size && size + 'px' }">
-            <img class="cover__album__image" :src="require(`../assets/img/covers/${album.id}${album.cover}`)" :alt="album.title">
+            <img class="cover__album__image" :src="getCover(album)" :alt="album.title">
         </div>
     </div>
 </template>
@@ -48,6 +48,17 @@ export default {
                 return 3 + 'px'
             }
             return 5 + 'px'
+        },
+    },
+    methods: {
+        getCover(album) {
+            try {
+                return require(`../assets/img/covers/${album.id}${album.cover}`)
+            }
+            catch (error) {
+                // Most probably an error with a file extension (image format) not handled by webpack.
+                console.error(`Unable to load cover of album with id: ${album.id}`)
+            }
         },
     },
 }
