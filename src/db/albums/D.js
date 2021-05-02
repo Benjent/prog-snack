@@ -441,10 +441,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Demon Fuzz
-    // Afreaka! - 1970 - England
-    // lengthy, afrobeat, jam, instru
-    // null + 6rNiuCF4E6bzK79jtIXZLM
+    {
+        id: 'demon_fuzz_afreaka',
+        title: 'Afreaka!',
+        artist: 'Demon Fuzz',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.AFROBEAT, criteria.JAM, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Another Country',
+        selectedTrackYtId: '7JTa9bxSk8U',
+        spotifyId: '6rNiuCF4E6bzK79jtIXZLM',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'didier_bonin_larbre_verre',
         title: `L'arbre Verre`,
