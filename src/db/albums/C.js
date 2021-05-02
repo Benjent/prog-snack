@@ -850,7 +850,7 @@ const albums = [
         year: 1977,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH, criteria.LENGTHY, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.SYMPHONIC],
+        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.SYMPHONIC],
         selectedTrackTitle: 'Couleurs',
         selectedTrackYtId: 'nubnad3DEtc',
         spotifyId: '7dBLEFIbQeb7bAes69Xj2u',
