@@ -153,14 +153,15 @@ const albums = [
         year: 1976,
         country: regions.NORWAY,
         cover: '.jpg',
-        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.C_ELECTRO, criteria.JAM, criteria.INSTRUMENTAL],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.JAZZY_GROOVY, criteria.C_JAZZ, criteria.C_ELECTRO, criteria.JAM, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.TECHNICAL],
         selectedTrackTitle: 'Fragmomentum',
         selectedTrackYtId: 'LJtOzi8axUs',
         spotifyId: null,
         deezerId: null,
         designers: ['Willy Haugen'],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: true,
+        description: `TODO Description`, // Jame en folies, du jazz, du psyché, ça part en mini-section où ça en fout partout rythmiquement mais en étant syncho
     },
     {
         id: 'vangelis_albedo_039',
