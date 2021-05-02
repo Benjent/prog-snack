@@ -404,14 +404,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Maneige - Montréal 6am - 1980
-    // instru, soft_seventies
-    // TRACK Cerveau Lent
-    // null + null
-    // TODO Maneige - Images - 1983
-    // null + null
-    // instru, odd, c_jazz, sof-seventies
-    // André Perry, André Panneton
+    {
+        id: 'maneige_images',
+        title: 'Images',
+        artist: 'Maneige',
+        year: 1983,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.SOFT_SEVENTIES, criteria.SOFT, criteria.C_ELECTRO],
+        selectedTrackTitle: `Transport`,
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['André Perry', 'André Panneton'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'marillion_script_for_a_jesters_tear',
         title: `Script For A Jester's Tear`,
