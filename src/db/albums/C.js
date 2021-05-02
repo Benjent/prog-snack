@@ -860,7 +860,6 @@ const albums = [
         isAGem: true,
         description: `TODO Description`,
     },
-    // TODO The Carpenters - Now & Then
     {
         id: 'cat_stevens_foreigner',
         title: 'Foreigner',
