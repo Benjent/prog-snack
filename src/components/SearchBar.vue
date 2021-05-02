@@ -159,13 +159,13 @@ $search-bar-width: 300px;
         .l-cover {
             width: 36px;
             height: 36px;
-            margin-right: 5px;
         }
 
         &__title {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow-x: hidden;
+            margin-left: 5px;
         }
     }
 }
