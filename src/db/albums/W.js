@@ -445,7 +445,7 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'wurtemberg_rock_fantasia_opus_9',
+        id: 'wurtemberg_rock_fantasia_opus_nine',
         title: 'Rock Fantasia Opus 9',
         artist: 'Wurtemberg',
         year: 1980,
