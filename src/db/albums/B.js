@@ -809,8 +809,8 @@ const albums = [
     },
     {
         id: 'big_brother_and_the_holding_company_cheap_thrills',
-        title: `Big Brother & The Holding Company`,
-        artist: 'CHeap Thrills',
+        title: `Cheap Thrills`,
+        artist: 'Big Brother & The Holding Company',
         year: 1968,
         country: regions.USA,
         cover: '.jpg',
@@ -825,8 +825,8 @@ const albums = [
     },
     {
         id: 'big_brother_and_the_holding_company_be_a_brother',
-        title: `Big Brother & The Holding Company`,
-        artist: 'Be A Brother',
+        title: `Be A Brother`,
+        artist: 'Big Brother & The Holding Company',
         year: 1970,
         country: regions.USA,
         cover: '.jpg',
@@ -841,8 +841,8 @@ const albums = [
     },
     {
         id: 'big_brother_and_the_holding_company_how_hard_it_is',
-        title: `Big Brother & The Holding Company`,
-        artist: 'How Hard It Is',
+        title: `How Hard It Is`,
+        artist: 'Big Brother & The Holding Company',
         year: 1971,
         country: regions.USA,
         cover: '.jpg',
