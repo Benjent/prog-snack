@@ -68,7 +68,7 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'talk_talk_lauhing_stock',
+        id: 'talk_talk_laughing_stock',
         title: 'Laughing Stock',
         artist: 'Talk Talk',
         year: 1991,

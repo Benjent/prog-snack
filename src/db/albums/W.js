@@ -412,14 +412,40 @@ const albums = [
         similarAlbums: ['roger_glover_the_butterfly_ball_and_the_grasshoppers_feast'],
         isAGem: false,
     },
-    // TODO Woody Kern - The Awful Disclosures Of Maria Monk
-    // bluesy, rockbased
-    // TODO Writing On The Wall - The Power Of The Picts - SCOTLAND - 1969
-    // greasy sev
-    // track is Shadow Of Man OU Aries
-    // similar captain beyond
     {
-        id: 'wurtemberg_rock_fantasia_opus_9',
+        id: 'woody_kern_the_awful_disclosures_of_maria_monk',
+        title: 'The Awful Disclosures Of Maria Monk',
+        artist: 'Woody Kern',
+        year: 1969,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.BLUESY, criteria.ROCK, criteria.C_PSYCHE, criteria.JAM],
+        selectedTrackTitle: `Tell Ya I'm Gone`,
+        selectedTrackYtId: '2TzzPRtRaEI',
+        spotifyId: '0eeedjZiTVPTuuqm8i8W5t',
+        deezerId: '13937378',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'writing_on_the_wall_the_power_of_the_picts',
+        title: 'The Power Of The Picts',
+        artist: 'Writing On The Wall',
+        year: 1969,
+        country: regions.SCOTLAND,
+        cover: '.jpg',
+        criteria: [criteria.GREASY_SEVENTIES, criteria.C_PSYCHE, criteria.HEAVY, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Aries',
+        selectedTrackYtId: 'fCg4BuJsIIA',
+        spotifyId: '3u5tEJ638nYlBmmc6jIUZg',
+        deezerId: null,
+        designers: [],
+        similarAlbums: ['warhorse_vultures', 'the_crazy_world_of_arthur_brown_the_crazy_world_of_arthur_brown'],
+        isAGem: false,
+    },
+    {
+        id: 'wurtemberg_rock_fantasia_opus_nine',
         title: 'Rock Fantasia Opus 9',
         artist: 'Wurtemberg',
         year: 1980,

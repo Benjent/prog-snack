@@ -42,8 +42,9 @@ export default {
         display: block;
         top: 0;
         left: 0;
-        height: 25px;
-        width: 25px;
+        height: var(--tick-size);
+        width: var(--tick-size);
+        min-width: var(--tick-size);
         background: $black;
         border: solid 2px $primary;
         margin-right: 10px;

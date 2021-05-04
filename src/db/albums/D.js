@@ -180,12 +180,25 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO aladin sane
-    // rock, c_psyche, greasy seventies
-    // track is Lady Grinning Soul
-    // TODO diamond dogs
+    {
+        id: 'david_bowie_aladin_sane',
+        title: 'Aladin Sane',
+        artist: 'David Bowie',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: 'Lady Grinning Soul',
+        selectedTrackYtId: '6fHoMw8tCzo',
+        spotifyId: '10gbq3XvTrtUSplDoTtsOb',
+        deezerId: '11205662',
+        designers: ['Brian Duffy', 'Pierre Laroche'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO diamond dogs 1974 - designers Guy Peellaert
     // transition, rock
-    // TODO station to station
+    // TODO station to station 1976 - 
     //
     {
         id: 'david_cross_memos_from_purgatory',
@@ -428,10 +441,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Demon Fuzz
-    // Afreaka! - 1970 - England
-    // lengthy, afrobeat, jam, instru
-    // null + 6rNiuCF4E6bzK79jtIXZLM
+    {
+        id: 'demon_fuzz_afreaka',
+        title: 'Afreaka!',
+        artist: 'Demon Fuzz',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.AFROBEAT, criteria.JAM, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Another Country',
+        selectedTrackYtId: '7JTa9bxSk8U',
+        spotifyId: '6rNiuCF4E6bzK79jtIXZLM',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'didier_bonin_larbre_verre',
         title: `L'arbre Verre`,
