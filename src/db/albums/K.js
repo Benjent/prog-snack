@@ -632,7 +632,7 @@ const albums = [
         spotifyId: '58UcN7f8fECrlCmmLgbDAT',
         deezerId: '13727100',
         designers: ['Ted Jones'],
-        similarAlbums: [],
+        similarAlbums: ['the_beatles_sgt_peppers_lonely_hearts_club_band'],
         isAGem: false,
     },
     {
@@ -642,13 +642,13 @@ const albums = [
         year: 1977,
         country: regions.CANADA,
         cover: '.jpg',
-        criteria: [criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS, criteria.ART_POP, criteria.ROCK_OPERA, criteria.BAROQUE],
+        criteria: [criteria.SYMPHONIC, criteria.ORCHESTRAL_PARTS, criteria.ART_POP, criteria.ROCK_OPERA, criteria.BAROQUE, criteria.TRANSITION],
         selectedTrackTitle: 'Around The Universe In Eighty Days',
         selectedTrackYtId: '3-_PQZfRL_o',
         spotifyId: '6LEiIksxaQiQ6uHLKtOKQK',
         deezerId: '13777006',
         designers: ['Ted Jones'],
-        similarAlbums: [],
+        similarAlbums: ['electric_light_orchestra_out_of_the_blue'],
         isAGem: false,
     },
     {
@@ -664,7 +664,7 @@ const albums = [
         spotifyId: '3ion6KUuAZ8j6Hi53fphDY',
         deezerId: '13727148',
         designers: ['Hugh Syme'],
-        similarAlbums: [],
+        similarAlbums: [], // TODO 10cc end carrieer
         isAGem: false,
     },
     {
