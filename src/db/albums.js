@@ -67,7 +67,6 @@ const albums = [].concat(
     Ralph Lundsten
     Soft Machine
     Triumvirat
-    Loggins & Messina pas mal de jam en mode prog + uncommon instrum?
 */
 
 // TODO consider adding criteria:
