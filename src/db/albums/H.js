@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'hannibal_hannibal',
+        title: 'Hannibal',
+        artist: 'Hannibal',
+        year: 1970,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.JAM, criteria.BLUESY, criteria.ROCK, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Winds Of Change',
+        selectedTrackYtId: 'qFZutJHyWLU',
+        spotifyId: '3hK5N9aRKGWZs13Q77SjvU',
+        deezerId: '7673821',
+        designers: ['Marcus Keef'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'happy_the_man_happy_the_man',
         title: 'Happy The Man',
         artist: 'Happy The Man',
