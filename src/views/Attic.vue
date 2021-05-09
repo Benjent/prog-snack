@@ -9,18 +9,8 @@
                 <Arrow color=dark size="small" :orientation="isDisplayedRegionYear ? 'top' : 'bottom'"></Arrow>
             </div>
             <div class="attic__panel" v-if="isDisplayedRegionYear">
-                <div class="select attic__filter">
-                    <select v-model="selectedRegion" @change="filterAttic">
-                        <option :value="null" selected>All</option>
-                        <option v-for="region in regions" :key="region" :value="region">{{ region }}</option>
-                    </select>
-                </div>
-                <div class="select attic__filter">
-                    <select v-model="selectedYear" @change="filterAttic">
-                        <option :value="null" selected>All</option>
-                        <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-                    </select>
-                </div>
+                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @change="filterAttic"></Select>
+                <Select class="attic__filter" v-model="selectedYear" :options="years" @change="filterAttic"></Select>
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
                 <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
@@ -55,6 +45,7 @@ import Cover from '../components/Cover.vue'
 import Arrow from '../components/Arrow.vue'
 import Check from '../components/Check.vue'
 import Radio from '../components/Radio.vue'
+import Select from '../components/Select.vue'
 
 export default {
     components: {
@@ -62,6 +53,7 @@ export default {
         Check,
         Cover,
         Radio,
+        Select,
     },
     data() {
         return {
@@ -242,7 +234,7 @@ export default {
         filterAttic(criteriumClicked) {
             const filterModelContains = this.filterModel[4].criteria // TODO computed
             const containsCriteria = filterModelContains.map((i) => i.criterium)
-            if (criteriumClicked === criteria.BLENDS) { // TODO blends does not work + provoke error
+            if (criteriumClicked === criteria.BLENDS) {
                 filterModelContains.forEach((c) => {
                     if (c.checked) {
                         c.checked = false
