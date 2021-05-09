@@ -11,6 +11,7 @@ const regions = {
     GERMANY: "Germany",
     GREECE: "Greece",
     INDIA: "India",
+    ICELAND: "Iceland",
     IRELAND: "Ireland",
     ITALY: "Italy",
     JAPAN: "Japan",

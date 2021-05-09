@@ -1,19 +1,17 @@
 <template>
-    <div class="l-search-bar">
-        <input class="l-search-bar__input"
-            :class="{ 'l-search-bar__input--empty': currentSearch }"
+    <div class="searchBar">
+        <input class="searchBar__input"
+            :class="{ 'searchBar__input--empty': currentSearch }"
             placeholder="Search by album, artist, designer or year..."
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="l-search-bar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
+            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
 
-            <div class="l-search-bar__result" v-if="matchingAlbums.length > 0">
-                <Arrow class="l-search-bar__arrow" color="dark" orientation="bottom"></Arrow>
-
-                <div class="l-search-bar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
+            <div class="searchBar__result" v-if="matchingAlbums.length > 0">
+                <div class="searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
                     <Cover :album="album" :size="30"></Cover>
-                    <div class="l-search-bar__album__title"> {{ album.title }} </div>
+                    <div class="searchBar__album__title"> {{ album.title }} </div>
                 </div>
             </div>
     </div>
@@ -22,13 +20,11 @@
 <script>
 import { mapActions, mapState } from 'vuex'
 import Cover from './Cover.vue'
-import Arrow from './Arrow.vue'
 
 export default {
     name: 'SearchBar',
     components: {
         Cover,
-        Arrow,
     },
     data() {
         return {
@@ -76,18 +72,10 @@ export default {
 
 $search-bar-width: 300px;
 
-.l-search-bar {
+.searchBar {
     $reset-size: 20px;
     height: 40px;
     border-bottom: solid 1px $primary;
-
-    & &__arrow {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        margin: 0 auto;
-        margin-bottom: -20px;
-    }
 
     & &__input {
         width: $search-bar-width;
@@ -121,7 +109,7 @@ $search-bar-width: 300px;
 
     & &__result {
         position: absolute;
-        top: 68px; // TODO var
+        top: var(--header-height);
         max-height: 300px;               
         width: $search-bar-width;
         box-sizing: border-box;
@@ -167,20 +155,6 @@ $search-bar-width: 300px;
             overflow-x: hidden;
             margin-left: 5px;
         }
-    }
-}
-
-@media (max-width: $mobile) {
-    .l-search-bar {
-        $search-bar-width: 220px;
-
-        // & &__input {
-        //     width: $search-bar-width;
-        // }
-
-        // & &__result {
-        //     width: $search-bar-width;
-        // }
     }
 }
 

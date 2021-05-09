@@ -1,6 +1,6 @@
 <template>
-    <div class="l-arrow" :class="[size, orientation]">
-        <div class="l-arrow__inside" :class="{ 'l-arrow__inside--dark': color === 'dark' }"></div>
+    <div class="arrow" :class="[size, orientation]">
+        <div class="arrow__inside" :class="{ 'arrow__inside--dark': color === 'dark' }"></div>
     </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
 <style lang="scss">
 @import '../style/gatherer';
 
-.l-arrow {
+.arrow {
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
@@ -52,7 +52,7 @@ export default {
         border-right: 14px solid transparent;
         border-bottom: 14px solid $primary;
 
-        .l-arrow__inside {
+        .arrow__inside {
             border-left: 12px solid transparent;
             border-right: 12px solid transparent;
             border-bottom: 12px solid $secondary;

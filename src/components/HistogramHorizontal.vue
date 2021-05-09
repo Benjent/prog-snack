@@ -1,10 +1,10 @@
 <template>
-    <div class="l-histogram-horizontal">
+    <div class="histogramHorizontal">
         <caption class="title title--caption">{{ caption }}</caption>
-        <div class="l-histogram-horizontal__datavis">
-            <div class="l-histogram-horizontal__entry" v-for="(item, label) in datasource" :key="label">
-                <div class="l-histogram-horizontal__label">{{ item.label }}</div>
-                <div class="l-histogram-horizontal__row">
+        <div class="histogramHorizontal__datavis">
+            <div class="histogramHorizontal__entry" v-for="(item, label) in datasource" :key="label">
+                <div class="histogramHorizontal__label">{{ item.label }}</div>
+                <div class="histogramHorizontal__row">
                     <div class="gauge gauge--horizontal" :style="{ width: item.ratioPercent }">{{ item.data }}</div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/modules/gauge';
 
-.l-histogram-horizontal {
+.histogramHorizontal {
     display: flex;
     flex-direction: column;
     width: 100%;

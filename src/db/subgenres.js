@@ -7,7 +7,7 @@ const subgenres = [
         mostRepresentativeAlbum: 'osibisa_osibisa',
         albums: [
             'cymande_promised_heights',
-            'carlos_garnett_journey_to_enlightment',
+            'carlos_garnett_journey_to_enlightenment',
         ],
         criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.JAM, criteria.C_FOLK, criteria.ODD_RHYTHM, criteria.LATINO]
     },
@@ -104,7 +104,7 @@ const subgenres = [
             'love_forever_changes',
 
         ],
-        criteria: [,criteria.FOLK, criteria.FANTASY, criteria.SOFT, criteria.HUMBLE, criteria.C_PSYCHE, criteria.BAROQUE]
+        criteria: [criteria.FOLK, criteria.FANTASY, criteria.SOFT, criteria.HUMBLE, criteria.C_PSYCHE, criteria.BAROQUE]
     },
     {
         name: 'Glitter',
@@ -141,7 +141,7 @@ const subgenres = [
             'budgie_bandolier'
 
         ],
-        criteria: [,criteria.HEAVY, criteria.ROCK, criteria.JAM, criteria.FANTASY, criteria.ODD_RHYTHM]
+        criteria: [criteria.HEAVY, criteria.ROCK, criteria.JAM, criteria.FANTASY, criteria.ODD_RHYTHM]
     },
     {
         name: 'Impressionism / Ambient Rock',

@@ -63,7 +63,6 @@ const albums = [].concat(
 /*  
     Can
     Malicorne
-    Premiata Forneria Marconi
     Ralph Lundsten
     Soft Machine
     Triumvirat

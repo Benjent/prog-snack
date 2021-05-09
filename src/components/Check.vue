@@ -1,7 +1,7 @@
 <template>
-    <div class="l-check" @mousedown="notifyParent">
-        <input class="l-check__input" :class="{ 'l-check__input--checked': value }" type="checkbox" :checked="value">
-        <label class="l-check__label">{{ label }}</label>
+    <div class="check" @mousedown="notifyParent">
+        <input class="check__input" :class="{ 'check__input--checked': value }" type="checkbox" :checked="value">
+        <label class="check__label">{{ label }}</label>
     </div>
 </template>
 
@@ -24,14 +24,14 @@ export default {
 <style lang="scss">
 @import '../style/gatherer';
 
-.l-check {
+.check {
     cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
 
     &:hover {
-        .l-check__input:not(.l-check__input--checked) {
+        .check__input:not(.check__input--checked) {
             background: linear-gradient(141deg, $secondary 10%, $ternary 90%);
         }
     }

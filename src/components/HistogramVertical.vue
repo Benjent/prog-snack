@@ -1,12 +1,12 @@
 <template>
-    <div class="l-histogram-vertical">
+    <div class="histogramVertical">
         <caption class="title title--caption">{{ caption }}</caption>
-        <div class="l-histogram-vertical__datavis">
-            <div class="l-histogram-vertical__entry" v-for="(item, label) in datasource" :key="label">
-                <div class="l-histogram-vertical__column">
+        <div class="histogramVertical__datavis">
+            <div class="histogramVertical__entry" v-for="(item, label) in datasource" :key="label">
+                <div class="histogramVertical__column">
                     <div class="gauge gauge--vertical" :style="{ height: item.ratioPercent }">{{ item.data }}</div>
                 </div>
-                <div class="l-histogram-vertical__label">{{ label }}</div>
+                <div class="histogramVertical__label">{{ label }}</div>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@ export default {
 @import '../style/modules/gauge';
 @import '../style/modules/title';
 
-.l-histogram-vertical {
+.histogramVertical {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,9 +39,8 @@ export default {
         display: flex;
         align-items: flex-end;
         height: 400px;
-        padding-bottom: 50px; // Transformed (rotated) labels does not weigh in the CSS flow
-        overflow-x: auto; // TODO...
-        // overflow-y: visible;
+        padding: 0 6px 50px 6px; // Transformed (rotated) labels does not weigh in the CSS flow. Add padding to prevent truncated labels.
+        overflow-x: auto;
         max-width: 100%; // Center datavis if space is enough
 
     }
