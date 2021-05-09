@@ -1,17 +1,17 @@
 <template>
-    <div class="lSearchBar">
-        <input class="lSearchBar__input"
-            :class="{ 'lSearchBar__input--empty': currentSearch }"
+    <div class="searchBar">
+        <input class="searchBar__input"
+            :class="{ 'searchBar__input--empty': currentSearch }"
             placeholder="Search by album, artist, designer or year..."
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="lSearchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
+            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
 
-            <div class="lSearchBar__result" v-if="matchingAlbums.length > 0">
-                <div class="lSearchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
+            <div class="searchBar__result" v-if="matchingAlbums.length > 0">
+                <div class="searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
                     <Cover :album="album" :size="30"></Cover>
-                    <div class="lSearchBar__album__title"> {{ album.title }} </div>
+                    <div class="searchBar__album__title"> {{ album.title }} </div>
                 </div>
             </div>
     </div>
@@ -72,7 +72,7 @@ export default {
 
 $search-bar-width: 300px;
 
-.lSearchBar {
+.searchBar {
     $reset-size: 20px;
     height: 40px;
     border-bottom: solid 1px $primary;

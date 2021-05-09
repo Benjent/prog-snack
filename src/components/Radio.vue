@@ -1,7 +1,7 @@
 <template>
-    <div class="l-radio" @mousedown="notifyParent">
-        <input class="l-radio__input" :class="{ 'l-radio__input--checked': value === own }" type="radio" :value="own">
-        <label class="l-radio__label">{{ label }}</label>
+    <div class="radio" @mousedown="notifyParent">
+        <input class="radio__input" :class="{ 'radio__input--checked': value === own }" type="radio" :value="own">
+        <label class="radio__label">{{ label }}</label>
     </div>
 </template>
 
@@ -26,14 +26,14 @@ export default {
 <style lang="scss">
 @import '../style/gatherer';
 
-.l-radio {
+.radio {
     cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
 
     &:hover {
-        .l-radio__input:not(.l-radio__input--checked) {
+        .radio__input:not(.radio__input--checked) {
             background: linear-gradient(141deg, $secondary 10%, $ternary 90%);
         }
     }

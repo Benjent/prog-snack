@@ -1,12 +1,12 @@
 <template>
-    <div class="lHistogramVertical">
+    <div class="histogramVertical">
         <caption class="title title--caption">{{ caption }}</caption>
-        <div class="lHistogramVertical__datavis">
-            <div class="lHistogramVertical__entry" v-for="(item, label) in datasource" :key="label">
-                <div class="lHistogramVertical__column">
+        <div class="histogramVertical__datavis">
+            <div class="histogramVertical__entry" v-for="(item, label) in datasource" :key="label">
+                <div class="histogramVertical__column">
                     <div class="gauge gauge--vertical" :style="{ height: item.ratioPercent }">{{ item.data }}</div>
                 </div>
-                <div class="lHistogramVertical__label">{{ label }}</div>
+                <div class="histogramVertical__label">{{ label }}</div>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@ export default {
 @import '../style/modules/gauge';
 @import '../style/modules/title';
 
-.lHistogramVertical {
+.histogramVertical {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
