@@ -29,6 +29,7 @@
                             :label="item.criterium | criterium" :key="item.criterium" 
                             @click.native="filterAttic(item.criterium)"></Check>
                     </template>
+                    <Check v-if="panel.panel === 'Type'" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
                 </div>
             </div>
         </aside>
@@ -189,6 +190,7 @@ export default {
             isDisplayedRegionYear: false,
             selectedRegion: null,
             selectedYear: null,
+            onlyGems: false,
             radioGroups: {
                 type: null,
                 language: null,
@@ -255,13 +257,15 @@ export default {
 
             this.albums.forEach((a) => {
                 const albumDom = document.querySelector(`.${a.id}`)
-                // Region & Year
+                // Region & Year, Gem
                 const isAMatch = {
                     year: true,
                     region: true,
+                    gem: true,
                 }
                 isAMatch.year = this.selectedYear ? a.year == this.selectedYear : true
                 isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
+                isAMatch.gem = this.onlyGems ? a.isAGem : true
                 isAMatch.criteria = wantedCriteria.every((c) => a.criteria.includes(c))
                 
                 const isDisplayed = Object.values(isAMatch).every((v) => v)
