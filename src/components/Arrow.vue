@@ -1,7 +1,5 @@
 <template>
-    <div class="arrow" :class="[size, orientation]">
-        <div class="arrow__inside" :class="{ 'arrow__inside--dark': color === 'dark' }"></div>
-    </div>
+    <div class="arrow" :class="[size, orientation]"></div>
 </template>
 
 <script>
@@ -25,55 +23,26 @@ export default {
 @import '../style/gatherer';
 
 .arrow {
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid $primary;
-
-    & &__inside {
-        width: 0; 
-        height: 0; 
-        border-left: 18px solid transparent;
-        border-right: 18px solid transparent;
-        border-bottom: 18px solid $secondary;
-        
-        position: relative;
-        right: 18px;
-        top: 4px;
-
-        &--dark {
-            border-bottom: 18px solid $secondary-dark;
-        }
-    }
-    
-    &.small {
-        border-left: 14px solid transparent;
-        border-right: 14px solid transparent;
-        border-bottom: 14px solid $primary;
-
-        .arrow__inside {
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 12px solid $secondary;
-            right: 12px;
-
-            &--dark {
-                border-bottom: 12px solid $secondary-dark;
-            }
-        }
-    }
+    content: '';
+    display: block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border: solid 2px $primary;
+    border-left: none;
+    border-top: none;
+    transform: rotate(225deg);
 
     &.bottom {
-        transform: rotate(180deg);
+        transform: rotate(45deg);
     }
 
     &.right {
-        transform: rotate(90deg);
+        transform: rotate(-45deg);
     }
 
     &.left {
-        transform: rotate(-90deg);
+        transform: rotate(135deg);
     }
 }
 </style>

@@ -35,18 +35,22 @@ export default {
         width: 100%;
         padding: 6px 10px;
         padding-right: 40px;
-        border: solid 2px $primary;
         background: $secondary;
+        border: solid 0 $primary;
+        border-radius: 5px;
+        border-bottom-width: 1px;
     }
 
     &::after {
+        $size: 10px;
+
         content: '';
         display: block;
         position: relative;
-        top: 14px;
-        right: 30px;
-        width: 10px;
-        height: 10px;
+        top: calc($size + 2px);
+        right: calc($size + 12px);
+        width: $size;
+        height: $size;
         border: solid 2px $primary;
         border-left: none;
         border-top: none;
