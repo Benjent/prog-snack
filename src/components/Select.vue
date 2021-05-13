@@ -1,21 +1,37 @@
 <template>
     <div class="select">
-        <select class="select__input" :value="value" @change="notifyParent">
-            <option :value="null" selected>All</option>
-            <option v-for="option in options" :key="option" :value="option">{{ option }}</option>
-        </select>
+        <div class="select__input" @click="isDisplayedOptions = !isDisplayedOptions">
+            <div>{{ value || 'All' }}</div>
+            <div class="select__spacing"></div>
+            <Arrow :orientation="isDisplayedOptions ? 'top' : 'bottom'"></Arrow>
+        </div>
+        <div class="select__options" v-if="isDisplayedOptions">
+            <div class="select__option">All</div>
+            <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ option }}</div>
+        </div>
     </div>
 </template>
 
 <script>
+import Arrow from '../components/Arrow.vue'
+
 export default {
     name: 'Select',
+    components: {
+        Arrow,
+    },
     props: {
         value: String,
         options: [Array, Object],
     },
+    data() {
+        return {
+            isDisplayedOptions: false,
+        }
+    },
     methods: {
-        notifyParent() {
+        notifyParent(value) {
+            this.isDisplayedOptions = false
             this.$emit('input', value)
         },
     },
@@ -25,36 +41,54 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/sunset';
+
 
 .select {
     display: flex;
+    flex-direction: column;
     position: relative;
 
     & &__input {
         cursor: pointer;
+        display: flex;
         width: 100%;
+        box-sizing: border-box;
         padding: 6px 10px;
         padding-right: 40px;
         background: $secondary;
         border: solid 0 $primary;
         border-radius: 5px;
         border-bottom-width: 1px;
+
+        &:hover {
+            @include sunset;
+        }
     }
 
-    &::after {
-        $size: 10px;
+    & &__spacing {
+        flex: 1;
+    }
 
-        content: '';
-        display: block;
+    .arrow {
         position: relative;
-        top: calc($size + 2px);
-        right: calc($size + 12px);
-        width: $size;
-        height: $size;
-        border: solid 2px $primary;
-        border-left: none;
-        border-top: none;
-        transform: rotate(45deg);
+        right: -30px;
+        top: 3px;
+    }
+
+    & &__options {
+        height: 300px;
+        overflow: auto;
+        background: $secondary-dark;
+    }
+
+    & &__option {
+        padding: 6px 10px;
+
+        &:hover {
+            background: $primary;
+            color: $black;
+        }
     }
 }
 </style>

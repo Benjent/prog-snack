@@ -17,12 +17,10 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-import Arrow from '../components/Arrow.vue'
 import Cover from '../components/Cover.vue'
 
 export default {
     components: {
-        Arrow,
         Cover,
     },
     computed: {
@@ -84,13 +82,6 @@ export default {
         box-sizing: border-box;
         border-top: solid 2px;
         padding: 0 50px;
-    }
-
-    & &__arrow {
-        position: relative;
-        margin: 0 auto;
-        margin-bottom: -20px;
-        z-index: 1;
     }
 }
 
