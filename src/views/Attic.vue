@@ -5,7 +5,7 @@
                 <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
             </div>
             <div class="attic__title" @click="isDisplayedRegionYear = !isDisplayedRegionYear">
-                Region & Year
+                <div>Region &amp; Year</div>
                 <Arrow color=dark size="small" :orientation="isDisplayedRegionYear ? 'top' : 'bottom'"></Arrow>
             </div>
             <div class="attic__panel" v-if="isDisplayedRegionYear">
@@ -14,7 +14,7 @@
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
                 <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
-                    {{ panel.panel }}
+                    <div>{{ panel.panel }}</div>
                     <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
                 </div>
                 <div class="attic__panel" v-if="panel.isDisplayed">
@@ -218,6 +218,7 @@ export default {
             // Reset region & year
             this.selectedRegion = null
             this.selectedYear = null
+            this.onlyGems = false
             // Reset criteria
             this.filterModel.forEach((panel) => {
                 panel.isDisplayed = false

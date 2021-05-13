@@ -1249,10 +1249,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Color Humano - Color Humano - color_humano_color_humano - 1972
-    // c_folk, soft, spanish
-    // ARGENTINA
-    // track may be Larga Vida Al Sol
+    {
+        id: 'color_humano_color_humano',
+        title: 'Color Humano',
+        artist: 'Color Humano',
+        year: 1972,
+        country: regions.ARGENTINA,
+        cover: '.jpg',
+        criteria: [criteria.SPANISH, criteria.C_FOLK, criteria.SOFT, criteria.FEMALE, criteria.LENGTHY_TRACKS, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Larga Vida Al Sol',
+        selectedTrackYtId: 'p3x-K6Bq1QE',
+        spotifyId: '1sVQ6636kb8G1xxJuXLQy4',
+        deezerId: '1215730',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO Color Humano II très similaire en criteria
     {
         id: 'colosseum_those_who_are_about_to_die_salute_you',

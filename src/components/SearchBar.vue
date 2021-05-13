@@ -69,6 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/sunset';
 
 $search-bar-width: 300px;
 
@@ -84,6 +85,10 @@ $search-bar-width: 300px;
         padding: 5px 10px;
         padding-right: $reset-size * 2 + 8px;
         text-overflow: ellipsis;
+
+        &:hover {
+            @include sunset;
+        }
     }
 
     & &__reset {

@@ -4,7 +4,7 @@
         <section class="album__body">
             <div class="album__info">
                 <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
-                <h1 class="title title--1">{{ selectedAlbum.title }}</h1>
+                <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
                 <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
             </div>
 
