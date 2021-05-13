@@ -11,7 +11,7 @@
 
         <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered></Cover>
-            <h2 class="title title--2">{{selectedAlbum.title}}</h2>
+            <h2 class="title title--2 text--album-title">{{selectedAlbum.title}}</h2>
             <h3 class="title title--3">({{selectedAlbum.year}})</h3>
             <div v-if="selectedAlbum.designers.length > 0">
                 <Icon name="palette" />
@@ -38,7 +38,7 @@
                 <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered></Cover>
                 <div class="discographies__selectedAlbum__infos">
                     <header class="discographies__selectedAlbum__header">
-                        <div class="discographies__selectedAlbum__title">{{ selectedAlbum.title }}</div>
+                        <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
                         <div>
                             <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</span>
                         </div>
@@ -74,14 +74,12 @@
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
 import AlbumStarter from '../components/AlbumStarter.vue'
-import Arrow from '../components/Arrow.vue'
 import Cover from '../components/Cover.vue'
 import Icon from '../components/Icon.vue'
 
 export default {
     components: {
         AlbumStarter,
-        Arrow,
         Cover,
         Icon,
     },
