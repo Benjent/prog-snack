@@ -631,20 +631,48 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO
-    // grave new world 1972 : folk, cpsyché, spectacular, uncommon instr
-    // selected track : new world
-    // designers William Blake, Paper Tiger
-    // TODO
-    // bursting at the seams 1973 : cfolk, uncommon
-    // selected track : tears and pavan
-    // designers : John McConnell
+    {
+        id: 'strawbs_grave_new_world',
+        title: 'Grave New World',
+        artist: 'Strawbs',
+        year: 1972,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.SPECTACULAR, criteria.TOUCHING_VOCALS],
+        selectedTrackTitle: 'New World', // TODO
+        selectedTrackYtId: 'todo',
+        spotifyId: '1u024OvEmklRfbLGDxEWnf',
+        deezerId: '228407',
+        designers: ['William Blake', 'Paper Tiger'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'strawbs_bursting_at_the_seams',
+        title: 'Bursting At The Seams',
+        artist: 'Strawbs',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.SPECTACULAR, criteria.TOUCHING_VOCALS, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: 'Flying', // TODO ou tears and pavan
+        selectedTrackYtId: 'todo',
+        spotifyId: '1qEiYH6MnhGJRBidGcmpE0',
+        deezerId: '103822',
+        designers: ['John McConnell'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO
     // hero and heroine 1974 : soft, oddryth, c_folk, c_electro
     // selected track Autumn
     // designers
     // similar acqua fragile
+    // TODO
     // ghosts 1975
+    // c_folk, soft, c_electro
+    // track is starshine / angel wine
+    // designers
     // nomadness 1975
     // deep cuts 1976
     // burning for you 1977
