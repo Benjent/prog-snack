@@ -629,6 +629,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Wolf CIty
+    // track is Green buble raicnoated man
+    // cpsyche, female, c_electro
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
@@ -1104,9 +1107,9 @@ const albums = [
         year: 1970,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.ROCK, criteria.GREASY_SEVENTIES],
-        selectedTrackTitle: 'todo', // TODO
-        selectedTrackYtId: 'todo', // TODO
+        criteria: [criteria.ROCK, criteria.GREASY_SEVENTIES, criteria.HEAVY],
+        selectedTrackTitle: 'If I Could FLy',
+        selectedTrackYtId: 'BPNoTG8qQbo',
         spotifyId: '6S7GZvpRA9FOIs8KbI6IkQ',
         deezerId: null,
         designers: [],

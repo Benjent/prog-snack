@@ -515,7 +515,8 @@ const albums = [
         deezerId: '111977',
         designers: ['Cesar Monti', 'Marco Damiani', 'Wanda Spinello'],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: true,
+        description: `TODO description`,
     },
     {
         id: 'premiata_forneria_marconi_per_un_amico',
@@ -572,12 +573,12 @@ const albums = [
         year: 1977,
         country: regions.ITALY,
         cover: '.jpg',
-        criteria: [criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_FOLK, criteria.C_JAZZ],
+        criteria: [criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_FOLK, criteria.C_JAZZ, criteria.JAM],
         selectedTrackTitle: 'Jet Lag',
         selectedTrackYtId: 'URDMIQLVqu8',
         spotifyId: '1F8ppE674Bik93kRyqaEly',
         deezerId: '111251',
-        designers: [],
+        designers: ['Consorzio Comunicazione Sonora'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -597,6 +598,17 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Suonare Suonare
+    // italian
+    // Francesco Logoluso, Ambrogio Lo Giudice
+    // TODO Come Ti Va In Riva Alla Citta prog? <- bof prog
+    // italian
+    // TODO PFM? PFM!
+    // italian, c_electro, neoeighties
+    // track is Marlon Brando
+    // Miss Baker
+    // neoeighties
+    // italian, french
     {
         id: 'procol_harum_procol_harum',
         title: 'Procol Harum',

@@ -58,22 +58,6 @@ const albums = [].concat(
     albums0,
 )
 
-// Below is the list of prog artists that I listened and should be part of this project
-// TODO fill some discographies of artists that are already here:
-/*  
-    Can
-    Malicorne
-    Ralph Lundsten
-    Soft Machine
-    Triumvirat
-*/
-
-// TODO consider adding criteria:
-/*
-    prog-core <-- This could be a special attribute actually || in Main genre otherwise
-    large asset of instruments
-*/
-
 // TODO below is list of things to do:
 /*
     parse tout le Prog introuvable et renseigner ici
