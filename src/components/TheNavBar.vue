@@ -1,7 +1,7 @@
 <template>
     <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
         <router-link v-if="!footer" class="theNavBar__logo link" to="/">
-            <img src="../assets/img/logos/snack_logo.png" alt="Prog Snack" :width=" $mq === 'M' ? 120 : 160">
+            <img src="../assets/img/logos/snack_font.png" alt="Prog Snack">
         </router-link>
         <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
             <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
@@ -72,8 +72,12 @@ export default {
         cursor: pointer;
         font-size: 30px;
         margin: 10px;
-        position: relative;
-        top: 14px;
+        margin-left: 20px;
+        height: 60%;
+
+        img {
+            height: 100%;
+        }
     }
 
     & &__nav {
