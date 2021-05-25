@@ -2,8 +2,22 @@ import regions from '../regions'
 import { criteria } from '../criteria'
 
 const albums = [
-    // TODO Gäa - 1973 -  Auf Der Bahn Zum Uranus
-    // germansung
+    {
+        id: 'gaa_auf_der_bahn_zum_uranus',
+        title: `Auf Der Bahn Zum Uranus`,
+        artist: 'Gäa',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.GERMAN, criteria.C_PSYCHE, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: `Uranus`,
+        selectedTrackYtId: '8vp8elAaXFQ',
+        spotifyId: '6wgWp4aAtAAAflYfHA5B0U',
+        deezerId: '49298112',
+        designers: ['E. Bell'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'gash_a_young_mans_gash',
         title: `A Young Man's Gash`,
