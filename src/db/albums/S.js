@@ -655,8 +655,8 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.SPECTACULAR, criteria.TOUCHING_VOCALS, criteria.ORCHESTRAL_PARTS],
-        selectedTrackTitle: 'Flying', // TODO ou tears and pavan
-        selectedTrackYtId: 'todo',
+        selectedTrackTitle: 'Tears And Pavan',
+        selectedTrackYtId: 'tqhnoFu8urc',
         spotifyId: '1qEiYH6MnhGJRBidGcmpE0',
         deezerId: '103822',
         designers: ['John McConnell'],
