@@ -436,6 +436,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'hungry_wolf_hungry_wolf',
+        title: 'Hungry Wolf',
+        artist: 'Hungry Wolf',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.JAM, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: 'Melanie',
+        selectedTrackYtId: '_PUodu168xM',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Marcus Keef'],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
