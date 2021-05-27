@@ -484,9 +484,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO J.E.T - Fede SPeranza
-    // lengthy, odd, italian
-    // track Il Prete E Il Peccatore
+    {
+        id: 'jet_fede_speranza_carita',
+        title: 'Fede Speranza Carità',
+        artist: 'J.E.T.',
+        year: 1972,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.ODD_RHYTHM, criteria.ITALIAN, criteria.SYMPHONIC],
+        selectedTrackTitle: 'Il Prete E Il Peccatore',
+        selectedTrackYtId: 'fS-IdkUREPk',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Umberto Lega'],
+        similarAlbums: [],
+        isAGem: false, // TODO almost ?
+    },
     {
         id: 'jethro_tull_stand_up',
         title: 'Stand Up',

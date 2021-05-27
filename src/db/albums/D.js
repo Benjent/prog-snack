@@ -3,9 +3,25 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
-        id: 'dada_jyo',
-        title: 'Jyo',
+        id: 'dada_dada',
+        title: 'Dada',
         artist: 'Dada',
+        year: 1970,
+        country: regions.JAPAN,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_JAZZ, criteria.FANFARE, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Aspen, Colorado',
+        selectedTrackYtId: null,
+        spotifyId: '5B65WESu8QzGkO7DJpkRC3',
+        deezerId: null,
+        designers: ['Dave Williams'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'dada_jp_jyo',
+        title: 'Jyo',
+        artist: 'Dada (JP)',
         year: 1978,
         country: regions.JAPAN,
         cover: '.jpg',

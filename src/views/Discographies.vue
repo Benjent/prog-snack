@@ -59,6 +59,28 @@
             </div>
             <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
 
+            <section v-if="spotifyPath || deezerPath" class="discographies__logos">
+                <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_gold.png')">
+                <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_gold.png')">
+            </section>
+            <section v-if="spotifyPath || deezerPath" class="discographies__players">
+                <iframe
+                    v-if="spotifyPath"
+                    class="discographies__players__item"
+                    :class="{ 'discographies__players__item--one-missing': spotifyPath && !deezerPath }"
+                    :src="spotifyPath"
+                    frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+                <iframe
+                    v-if="deezerPath"
+                    class="discographies__players__item"
+                    :class="{ 'discographies__players__item--one-missing': deezerPath && !spotifyPath }"
+                    :src="`${deezerPath}?tracklist=${$mq === 'M' ? false : true}`"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media; clipboard-write"></iframe>
+            </section>
+
             <template v-if="discography.length > 1">
                 <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                 <div class="discographies__borderWrapper">
@@ -90,7 +112,7 @@ export default {
     },
     computed: {
         ...mapState(['artists', 'albums', 'selectedAlbum']),
-        ...mapGetters(['youtubePath']),
+        ...mapGetters(['youtubePath', 'deezerPath', 'spotifyPath']),
         discography() {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
         },
@@ -163,6 +185,33 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         box-sizing: border-box;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        &__item {
+            max-height: 30px;
+        }
+    }
+
+    & &__players {
+        display: flex;
+        border-radius: 10px;
+        border: solid 3px $primary;
+        overflow: hidden;
+        margin-bottom: 60px;
+
+        &__item {
+            width: 100%;
+            height: 320px;
+
+            &----one-missing {
+                width: 100%;
+            }
+        }
     }
 
     & &__borderWrapper {
