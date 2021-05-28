@@ -99,12 +99,38 @@ const albums = [
         similarAlbums: ['jefferson_airplane_volunteers'],
         isAGem: false,
     },
-    // TODO KAleidoscope both albums not really prog!
-    // TODO kaleidoscope - Tangerine Dream - England - 1967
-    // c_psyche, baroque
-    // track dive into yesterday
-    // similar the hollies
-    // Second album, track is Music
+    {
+        id: 'kaleidoscope_tangerine_dream',
+        title: 'Tangerine Dream',
+        artist: 'Kaleidoscope',
+        year: 1967,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_PSYCHE, criteria.BAROQUE],
+        selectedTrackTitle: 'Dive Into Yesterday',
+        selectedTrackYtId: '7gzW6MJijp8',
+        spotifyId: null,
+        deezerId: '53942002',
+        designers: [],
+        similarAlbums: [], // TODO similar the hollies
+        isAGem: false,
+    },
+    {
+        id: 'kaleidoscope_faintly_blowing',
+        title: 'Faintly Blowing',
+        artist: 'Kaleidoscope',
+        year: 1969,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_PSYCHE, criteria.BAROQUE, criteria.C_FOLK],
+        selectedTrackTitle: 'Music',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Robin Nicol', 'Johnny Clamp'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'kanguru_dreaming',
         title: 'Dreaming',
