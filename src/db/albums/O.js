@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'oniris_lhomme_voilier',
+        title: `L'homme-Voilier`,
+        artist: 'Oniris',
+        year: 1979,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.CONCEPT, criteria.ROCK_OPERA],
+        selectedTrackTitle: 'Schizologues',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Alain Ranou'],
+        similarAlbums: ['arachnoid_arachnoid'],
+        isAGem: false,
+    },
+    {
         id: 'orang_utan_orang_utan',
         title: 'Orang-Utan',
         artist: 'Orang-Utan',
