@@ -852,6 +852,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'pulsar_bienvenue_au_conseil_dadministration',
+        title: `Bienvenue Au Conseil D'administration`,
+        artist: 'Pulsar',
+        year: 1981,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.SOFT_SEVENTIES, criteria.FRENCH, criteria.C_ELECTRO, criteria.SPACY, criteria.UNCOMMON_INSTRUMENTS, criteria.STORYLINE, criteria.ROCK_OPERA, criteria.ODD_RHYTHM, criteria.TOUCHING_VOCALS], // transition
+        selectedTrackTitle: 'La Femme Au Bout Du Couloir / La Tempête, Encore / Accident-Vision / Cri',
+        selectedTrackYtId: 'zM2mUigP73U',
+        spotifyId: '5fsksUZIVtaEWQVDPVzTQz',
+        deezerId: '494960',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'pythagoras_journey_to_the_vast_unknown',
         title: 'Journey To The Vast Unknown',
         artist: 'Pythagoras',
