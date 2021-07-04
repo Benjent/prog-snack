@@ -645,9 +645,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Wolf CIty
-    // track is Green buble raicnoated man
-    // cpsyche, female, c_electro
+    {
+        id: 'amon_duul_ii_wolf_city',
+        title: 'Wolf City',
+        artist: 'Amon Düül II',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.SPACY, criteria.ORIENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.GERMAN],
+        selectedTrackTitle: `Green-Bubble-Raincoated Man`,
+        selectedTrackYtId: 'TRDhLFf_l3U',
+        spotifyId: '5YXgjjZUjopOWCU0qgv3ZF',
+        deezerId: '83533092',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Utopia - 1973
+    // female, c_jazz
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
