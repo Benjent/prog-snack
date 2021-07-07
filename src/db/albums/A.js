@@ -100,6 +100,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'adriano_monteduro_adriano_monteduro_e_reale_accademia_di_musica',
+        title: 'Adriano Monteduro E Reale Accademia Di Musica',
+        artist: 'Adriano Monteduro',
+        year: 1974,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.ITALIAN, criteria.SOFT, criteria.TRANSITION],
+        selectedTrackTitle: 'La Favola Del Guardiano Del Bosco',
+        selectedTrackYtId: null,
+        spotifyId: '3XVCtVyZ3ILluxxg1WpyuZ',
+        deezerId: null,
+        designers: ['Fausto De Landro'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'affinity_affinity',
         title: 'Affinity',
         artist: 'Affinity',
@@ -629,9 +645,52 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Wolf CIty
-    // track is Green buble raicnoated man
-    // cpsyche, female, c_electro
+    {
+        id: 'amon_duul_ii_wolf_city',
+        title: 'Wolf City',
+        artist: 'Amon Düül II',
+        year: 1972,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.SPACY, criteria.ORIENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.GERMAN],
+        selectedTrackTitle: `Green-Bubble-Raincoated Man`,
+        selectedTrackYtId: 'TRDhLFf_l3U',
+        spotifyId: '5YXgjjZUjopOWCU0qgv3ZF',
+        deezerId: '83533092',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'amon_duul_ii_utopia',
+        title: 'Utopia',
+        artist: 'Amon Düül II',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.JAM, criteria.INSTRUMENTAL, criteria.GERMAN],
+        selectedTrackTitle: `Jazz Kiste`,
+        selectedTrackYtId: 'w23rPsp7y2E',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['F.U. Rogner'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Vive La Trance - 1973
+    // c_psyche, female, spacy
+    // designer Jürgen Rogner
+    // 83529762 + 
+    // TODO Hijack - 1974
+    // designer Patrick Von Spreckelsen
+    // 8669711 + 
+    // TODO Made In Germany - 1975
+    // null +
+    // TODO Pyragony - 1976
+    // designer Amon Düül II, Olof Feindt, Stefan Zauner
+    // 83534682 +
+    // TODO Almost Alive... - 1977
+    // designer : Stefan Zauner, 
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
