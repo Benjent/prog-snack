@@ -661,8 +661,36 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Utopia - 1973
-    // female, c_jazz
+    {
+        id: 'amon_duul_ii_utopia',
+        title: 'Utopia',
+        artist: 'Amon Düül II',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.JAM, criteria.INSTRUMENTAL, criteria.GERMAN],
+        selectedTrackTitle: `Jazz Kiste`,
+        selectedTrackYtId: 'w23rPsp7y2E',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['F.U. Rogner'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Vive La Trance - 1973
+    // c_psyche, female, spacy
+    // designer Jürgen Rogner
+    // 83529762 + 
+    // TODO Hijack - 1974
+    // designer Patrick Von Spreckelsen
+    // 8669711 + 
+    // TODO Made In Germany - 1975
+    // null +
+    // TODO Pyragony - 1976
+    // designer Amon Düül II, Olof Feindt, Stefan Zauner
+    // 83534682 +
+    // TODO Almost Alive... - 1977
+    // designer : Stefan Zauner, 
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',
