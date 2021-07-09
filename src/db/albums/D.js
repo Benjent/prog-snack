@@ -212,10 +212,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO diamond dogs 1974 - designers Guy Peellaert
-    // transition, rock
+    {
+        id: 'david_bowie_diamond_dogs',
+        title: 'Diamond Dogs',
+        artist: 'David Bowie',
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_PSYCHE, criteria.TRANSITION],
+        selectedTrackTitle: 'Sweet Thing',
+        selectedTrackYtId: 'BQvmmRHPiYA',
+        spotifyId: '72mfhbEsMtXR6s7v9UhKe3',
+        deezerId: '15318317',
+        designers: ['Guy Peellaert'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO station to station 1976 - 
-    //
+    // encore partagé si prog ou non
     {
         id: 'david_cross_memos_from_purgatory',
         title: 'Memos From Purgatory ',
