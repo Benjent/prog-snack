@@ -677,20 +677,47 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Vive La Trance - 1973
-    // c_psyche, female, spacy
-    // designer Jürgen Rogner
-    // 83529762 + 
-    // TODO Hijack - 1974
-    // designer Patrick Von Spreckelsen
-    // 8669711 + 
+    {
+        id: 'amon_duul_ii_vive_la_trance',
+        title: 'Vive La Trance',
+        artist: 'Amon Düül II',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.C_PSYCHE, criteria.ODD_RHYTHM, criteria.SPACY],
+        selectedTrackTitle: `Im Krater Blühn Wieder Die Bäume`,
+        selectedTrackYtId: '03KkuJ7Frbw',
+        spotifyId: '032Jni4IyBRHmXtnmGcniZ',
+        deezerId: '83529762',
+        designers: ['Jürgen Rogner'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'amon_duul_ii_hijack',
+        title: 'Hijack',
+        artist: 'Amon Düül II',
+        year: 1974,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.FEMALE, criteria.C_PSYCHE, criteria.JAM, criteria.JAZZY_GROOVY, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `Explode Like A Star`,
+        selectedTrackYtId: 'fyAI60i00gU',
+        spotifyId: '50iS3PbUnsf7019KVig3Js',
+        deezerId: '8669711',
+        designers: ['Patrick Von Spreckelsen'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO Made In Germany - 1975
     // null +
     // TODO Pyragony - 1976
     // designer Amon Düül II, Olof Feindt, Stefan Zauner
     // 83534682 +
     // TODO Almost Alive... - 1977
-    // designer : Stefan Zauner, 
+    // designer : Stefan Zauner,
+    // TODO Only Human - 1978 - prog?
+    // TODO Vortex - 1981 - prog?
     {
         id: 'ambrosia_ambrosia',
         title: 'Ambrosia',

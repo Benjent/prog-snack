@@ -699,7 +699,7 @@ const albums = [
         artist: 'Roxy Music',
         year: 1973,
         country: regions.ENGLAND,
-        cover: '.jpg',
+        cover: '.png',
         criteria: [criteria.ART_POP, criteria.C_PSYCHE],
         selectedTrackTitle: 'In Every Dream Home A Heartache',
         selectedTrackYtId: 'LSniBxXjK_8',
