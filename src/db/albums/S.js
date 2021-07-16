@@ -679,20 +679,65 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'strawbs_hero_and_heroine',
+        title: 'Hero And Heroine',
+        artist: 'Strawbs',
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.TOUCHING_VOCALS, criteria.SOFT, criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.SOFT_SEVENTIES],
+        selectedTrackTitle: 'Autumn',
+        selectedTrackYtId: 'bJaGE4GSCfQ',
+        spotifyId: '1L0xniy2sSr8SfM8sD7rdJ',
+        deezerId: '162164',
+        designers: ['Mike Doud'],
+        similarAlbums: [], // TODO similar acqua fragile
+        isAGem: false,
+    },
+    {
+        id: 'strawbs_ghosts',
+        title: 'Ghosts',
+        artist: 'Strawbs',
+        year: 1975,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.SOFT, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Ghosts',
+        selectedTrackYtId: 'QDBDmLcMgwU',
+        spotifyId: '6ivHkiqHZ2HzIhKU6DsLbS',
+        deezerId: '162165',
+        designers: ['Bill Dare'],
+        similarAlbums: [], // TODO similar acqua fragile
+        isAGem: false,
+    },
+    {
+        id: 'strawbs_nomadness',
+        title: 'Nomadness',
+        artist: 'Strawbs',
+        year: 1975,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.PIANO, criteria.C_FOLK],
+        selectedTrackTitle: 'A Mind Of My Own',
+        selectedTrackYtId: 'UrLImQl6aAY',
+        spotifyId: '7Df8sasgLer1b3zbdtW2Wz',
+        deezerId: '160606',
+        designers: ['Nick Marshall'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO
-    // hero and heroine 1974 : soft, oddryth, c_folk, c_electro
-    // selected track Autumn
-    // designers
-    // similar acqua fragile
+    // Deep Cuts 1976 prog?
+    // Turn Me Around
+    // rockbased, c_folk
+    // 74115372 + 6jLSwipNKPUcMBcCqOlWn0
+    // Paul May, Mike Doud
     // TODO
-    // ghosts 1975
-    // c_folk, soft, c_electro
-    // track is starshine / angel wine
-    // designers
-    // nomadness 1975
-    // deep cuts 1976
-    // burning for you 1977
-    // deadlines 1978
+    // burning For you 1977 prog?
+    // TODO
+    // Deadlines 1978 prog?
+    // Hipgnosis
     {
         id: 'stud_stud',
         title: 'Stud',
