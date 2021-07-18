@@ -727,17 +727,54 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO
-    // Deep Cuts 1976 prog?
-    // Turn Me Around
-    // rockbased, c_folk
-    // 74115372 + 6jLSwipNKPUcMBcCqOlWn0
-    // Paul May, Mike Doud
-    // TODO
-    // burning For you 1977 prog?
-    // TODO
-    // Deadlines 1978 prog?
-    // Hipgnosis
+    {
+        id: 'strawbs_deep_cuts',
+        title: 'Deep Cuts',
+        artist: 'Strawbs',
+        year: 1976,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_FOLK],
+        selectedTrackTitle: 'Turn Me Around',
+        selectedTrackYtId: 'or1ZcLeehQw',
+        spotifyId: '6jLSwipNKPUcMBcCqOlWn0',
+        deezerId: '74115372',
+        designers: ['Paul May', 'Mike Doud'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'strawbs_burning_for_you',
+        title: 'Burning For You',
+        artist: 'Strawbs',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_FOLK, criteria.SOFT_SEVENTIES],
+        selectedTrackTitle: 'Alexander The Great',
+        selectedTrackYtId: 'Uf-syFYORIk',
+        spotifyId: '0OkQLOJbTEyumrfBWuJIkS',
+        deezerId: '74115512',
+        designers: ['Patrick Woodroffe'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'strawbs_deadlines',
+        title: 'Deadlines',
+        artist: 'Strawbs',
+        year: 1978,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Words Of Wisdom',
+        selectedTrackYtId: 'IiSdwjUdlLE',
+        spotifyId: '5kVG8NbTqSI1QvL7ArEQN0',
+        deezerId: '130617372',
+        designers: ['Hipgnosis'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'stud_stud',
         title: 'Stud',
