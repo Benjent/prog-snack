@@ -2,12 +2,38 @@ import regions from '../regions'
 import { criteria } from '../criteria'
 
 const albums = [
-    // TODO Laughing Cavalier
-    // rock, baroque, c_psyche
-    // similar beatles get back? ou white album
-    // rack is Peru?
-    // TODO Wallace Collection
-    // rock, c_folk, baroque, c_psyché, female
+    {
+        id: 'wallace_collection_laughing_cavalier',
+        title: 'Laughing Cavalier',
+        artist: 'Wallace Collection',
+        year: 1969,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.BAROQUE, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Peru',
+        selectedTrackYtId: 'GcFDbDRYTuY',
+        spotifyId: '4RF5HhZgleQlS1Sj7fSIZ6',
+        deezerId: '44805901',
+        designers: [],
+        similarAlbums: [], // similar beatles get back? ou white album
+        isAGem: false,
+    },
+    {
+        id: 'wallace_collection_wallace_collection',
+        title: 'Wallace Collection',
+        artist: 'Wallace Collection',
+        year: 1970,
+        country: regions.BELGIUM,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.BAROQUE, criteria.C_PSYCHE, criteria.C_FOLK, criteria.FEMALE],
+        selectedTrackTitle: 'Bruxelles (Part 1)',
+        selectedTrackYtId: 'RyeFeLbLdsg',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'walrus_walrus',
         title: 'Walrus',
