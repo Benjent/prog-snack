@@ -36,6 +36,22 @@ const albums = [
         description: `TODO description`,
     },
     {
+        id: 'leaf_hound_growers_of_mushroom',
+        title: 'Growers Of Mushroom',
+        artist: 'Leaf Hound',
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.HEAVY, criteria.BLUESY],
+        selectedTrackTitle: 'Stray',
+        selectedTrackYtId: 'mYv5QIJ__yQ',
+        spotifyId: '7cz9xHXXMpdoTKM8VlIJZU',
+        deezerId: '1198686',
+        designers: ['Decca Publicity Art Department'],
+        similarAlbums: ['warhorse_warhorse', 'led_zeppelin_led_zeppelin'], // todo atomic rooster
+        isAGem: false,
+    },
+    {
         id: 'led_zeppelin_led_zeppelin',
         title: 'Led Zeppelin',
         artist: 'Led Zeppelin',
