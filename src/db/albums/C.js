@@ -910,6 +910,44 @@ const albums = [
         description: `TODO description`
     },
     {
+        id: 'catherine_ribeiro_plus_alpes_catherine_ribeiro_plus_2_bis',
+        title: 'Catherine Ribeiro + 2 Bis',
+        artist: 'Catherine Ribeiro + Alpes',
+        year: 1969,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.C_FOLK, criteria.C_PSYCHE, criteria.FEMALE, criteria.UNCOMMON_INSTRUMENTS, criteria.EXPERIMENTAL],
+        selectedTrackTitle: 'Lumière Écarlate',
+        selectedTrackYtId: 'WZB42zO1bnE',
+        spotifyId: '5BoKdwi3pP9lTTAL3VnWJr',
+        deezerId: '11263872',
+        designers: ['Maurice Apelbaum'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'catherine_ribeiro_plus_alpes_n2',
+        title: 'N°2',
+        artist: 'Catherine Ribeiro + Alpes',
+        year: 1970,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.C_FOLK, criteria.C_PSYCHE, criteria.FEMALE, criteria.EXPERIMENTAL, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: 'Poème Non Épique',
+        selectedTrackYtId: 'nZ6PwJ7NMNs',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Francis Jalain'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Âme Debout - 1971
+    // track is Âme Debout
+    // Jacques Aubert
+    // TODO Paix - 1972
+    // lengthy track, french, c_psyche, female, 
+    // 2320071 + 6lxen0rYoFUX8lVuGIQQID
+    {
         id: 'chakra_chakra',
         title: 'Chakra',
         artist: 'Chakra',
