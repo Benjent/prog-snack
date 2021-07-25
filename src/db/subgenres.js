@@ -152,6 +152,7 @@ const subgenres = [
             'carlos_santana_and_alice_coltrane_illuminations',
             'brave_new_world_impressions_on_reading_aldous_huxley',
             'camel_the_snow_goose',
+            'miles_davis_aura',
         ],
         criteria: [criteria.CONCEPT, criteria.INSTRUMENTAL, criteria.AMBIENT, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS, criteria.SOFT]
     },
