@@ -19,6 +19,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'absolute_elsewhere_in_search_of_ancient_gods',
+        title: 'In Search Of Ancient Gods',
+        artist: 'Absolute Elsewhere',
+        year: 1976,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.C_ELECTRO, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Miracles Of The Gods',
+        selectedTrackYtId: 'IuVBdCr-ZYY',
+        spotifyId: '0LlkL3VvuEmf7VE6GgmNfY',
+        deezerId: '13579999',
+        designers: ['Ian Sugar'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO`,
+    },
+    {
         id: 'abstract_truth_silver_trees',
         title: 'Silver Trees',
         artist: 'Abstract Truth',
@@ -420,6 +437,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Alfredo Carrión - Los Andares Del Alquimista - 1976 - SPAIN
+    // spanish, folk, female
+    // designers: José Luis Tellez
     {
         id: 'alice_cooper_schools_out',
         title: `School's Out`,
