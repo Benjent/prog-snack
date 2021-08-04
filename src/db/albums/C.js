@@ -861,6 +861,25 @@ const albums = [
         description: `TODO Description`,
     },
     {
+        id: 'carsten_bohns_bandstand_humor_rumor',
+        title: 'Humor Rumor',
+        artist: `Carsten Bohn's Bandstand`,
+        year: 1977,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.SOFT_SEVENTIES, criteria.C_JAZZ, criteria.JAZZY_GROOVY, criteria.FEMALE],
+        selectedTrackTitle: `Pretty Formal Normal Instrumental`,
+        selectedTrackYtId: 'O3P3wHtHfFU',
+        spotifyId: '5UBrH1ypSUDTc8rmr4aa9p',
+        deezerId: '193719232',
+        designers: ['Caspar Klebusch', 'Gaby Moritz', 'Michael Fessel'],
+        similarAlbums: ['frank_zappa_over_nite_sensation'],
+        isAGem: false,
+    },
+    // TODO below Introuvable Carsten Bohn's Bandstand
+    // Mother Goose Shoes - 1979 - 193719152 + 2GT5kNX4qFa4GVgkprTt79
+    // C. B. Rædyo - 1980 - 193719562 + 1MVUCJum9NZvql9gVJphK9
+    {
         id: 'cat_stevens_foreigner',
         title: 'Foreigner',
         artist: 'Cat Stevens',
