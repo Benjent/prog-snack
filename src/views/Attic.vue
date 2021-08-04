@@ -79,6 +79,7 @@ export default {
                         { criterium: criteria.FRENCH, name: 'language' },
                         { criterium: criteria.GERMAN, name: 'language' },
                         { criterium: criteria.GREEK, name: 'language' },
+                        { criterium: criteria.HEBREW, name: 'language' },
                         { criterium: criteria.HINDI, name: 'language' },
                         { criterium: criteria.IGBO, name: 'language' },
                         { criterium: criteria.ITALIAN, name: 'language' },

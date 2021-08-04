@@ -32,6 +32,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.GREASY_SEVENTIES]: 'Greasy early 70s sound',
 		[criteria.GREEK]: 'Greek sung',
 		[criteria.HEAVY]: 'Rather heavy',
+		[criteria.Hebrew]: 'Hebrew sung',
 		[criteria.HINDI]: 'Hindi sung',
 		[criteria.HUMBLE]: 'Humble',
 		[criteria.IGBO]: 'Igbo sung',
