@@ -754,8 +754,8 @@ const albums = [
         country: regions.GERMANY,
         cover: '.jpg',
         criteria: [criteria.SPACY, criteria.C_ELECTRO],
-        selectedTrackTitle: `Flower Of The Orient`, // TODO à défaut
-        selectedTrackYtId: null, // TODO
+        selectedTrackTitle: `Flower Of The Orient`,
+        selectedTrackYtId: '-xGO4VkvK_o',
         spotifyId: '3FSANvE0hV1iIDevmsfEov',
         deezerId: '83534682',
         designers: ['Amon Düül II', 'Olof Feindt', 'Stefan Zauner'],
