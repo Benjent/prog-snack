@@ -83,6 +83,7 @@ export default {
                         { criterium: criteria.HINDI, name: 'language' },
                         { criterium: criteria.IGBO, name: 'language' },
                         { criterium: criteria.ITALIAN, name: 'language' },
+                        { criterium: criteria.JAPANESE, name: 'language' },
                         { criterium: criteria.PORTUGUESE, name: 'language' },
                         { criterium: criteria.SPANISH, name: 'language' },
                         { criterium: criteria.SWEDISH, name: 'language' },
