@@ -537,7 +537,7 @@ const albums = [
         title: 'The Rainbow Goblins',
         artist: 'Masayoshi Takanaka',
         year: 1981,
-        country: regions.Japan,
+        country: regions.JAPAN,
         cover: '.jpg',
         criteria: [criteria.ORCHESTRAL_PARTS, criteria.UNCOMMON_INSTRUMENTS, criteria.FANTASY, criteria.STORYLINE, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM],
         selectedTrackTitle: 'Tiny Robin',
