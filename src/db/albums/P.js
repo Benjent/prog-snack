@@ -598,17 +598,70 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Suonare Suonare
-    // italian
-    // Francesco Logoluso, Ambrogio Lo Giudice
-    // TODO Come Ti Va In Riva Alla Citta prog? <- bof prog
-    // italian
-    // TODO PFM? PFM!
-    // italian, c_electro, neoeighties
-    // track is Marlon Brando
-    // Miss Baker
-    // neoeighties
-    // italian, french
+    {
+        id: 'premiata_forneria_marconi_suonare_suonare',
+        title: 'Suonare Suonare',
+        artist: 'Premiata Forneria Marconi',
+        year: 1980,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ART_POP, criteria.SOFT_SEVENTIES],
+        selectedTrackTitle: 'Volo A Vela',
+        selectedTrackYtId: 'QrKt2JRlyFw',
+        spotifyId: '1Gre4E48EWeLgA4ffo5cve',
+        deezerId: '117059',
+        designers: ['Francesco Logoluso', 'Ambrogio Lo Giudice'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'premiata_forneria_marconi_come_ti_va_in_riva_alla_citta',
+        title: 'Come Ti Va In Riva Alla Città',
+        artist: 'Premiata Forneria Marconi',
+        year: 1981,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ART_POP, criteria.NEO_EIGHTIES, criteria.ARENA],
+        selectedTrackTitle: 'Come Ti Va',
+        selectedTrackYtId: 'TkRke9s_TkY',
+        spotifyId: '6oiL1Z5oSaXjTNyPv8sjNE',
+        deezerId: '243998',
+        designers: ['Mario Convertino'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'premiata_forneria_marconi_pfm_pfm',
+        title: 'PFM? PFM!',
+        artist: 'Premiata Forneria Marconi',
+        year: 1981,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ART_POP, criteria.NEO_EIGHTIES, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Sentimentalmente',
+        selectedTrackYtId: 'b_S9JQiRzvw',
+        spotifyId: 'todo',
+        deezerId: 'todo',
+        designers: ['Max Quinque', 'Alessandro Petrini'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'premiata_forneria_marconi_miss_baker',
+        title: 'Miss Baker',
+        artist: 'Premiata Forneria Marconi',
+        year: 1981,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.ITALIAN, criteria.ART_POP, criteria.NEO_EIGHTIES, criteria.C_ELECTRO, criteria.FRENCH, criteria.FEMALE],
+        selectedTrackTitle: 'Finta Lettera Di Addio Di Una Rock Star Per Farsi Propaganda',
+        selectedTrackYtId: '6JkgwzY8Dc4',
+        spotifyId: '74JWuMT8283wZ97AO6S9rf',
+        deezerId: '8240240',
+        designers: ['Mauro Pagani'],
+        similarAlbums: ['genesis_invisible_touch'],
+        isAGem: false,
+    },
     {
         id: 'procol_harum_procol_harum',
         title: 'Procol Harum',
