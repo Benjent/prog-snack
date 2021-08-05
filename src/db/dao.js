@@ -41,6 +41,9 @@ function generateDao() {
         
         // Albums per country
         const country = album.country
+        if (!country) {
+            console.error(`Wrong country used in album with id: ${album.id}`)
+        }
         albumsPerCountry[country] ? albumsPerCountry[country]++ : albumsPerCountry[country] = 1
 
         // Most used criteria

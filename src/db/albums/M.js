@@ -537,7 +537,7 @@ const albums = [
         title: 'The Rainbow Goblins',
         artist: 'Masayoshi Takanaka',
         year: 1981,
-        country: regions.Japan,
+        country: regions.JAPAN,
         cover: '.jpg',
         criteria: [criteria.ORCHESTRAL_PARTS, criteria.UNCOMMON_INSTRUMENTS, criteria.FANTASY, criteria.STORYLINE, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM],
         selectedTrackTitle: 'Tiny Robin',
@@ -887,6 +887,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Michel Polnareff
     {
         id: 'mike_oldfield_tubular_bells',
         title: 'Tubular Bells',
@@ -1247,7 +1248,7 @@ const albums = [
         year: 1985,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.C_JAZZ, criteria.C_ELECTRO, criteria.NEO_EIGHTIES,criteria.INSTRUMENTAL],
+        criteria: [criteria.C_JAZZ, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.INSTRUMENTAL],
         selectedTrackTitle: `Katia`,
         selectedTrackYtId: '5piPBgYZffw',
         spotifyId: '5ITQ0X0gnSOo89AASdHV2o',
@@ -1256,9 +1257,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Aura: Jazzbased, c_psyche, neoeighties, instru, uncommon instru
-    // track is White par défaut
-    // deezer 1408167 - 3FxWza4JZVZHVjZ4jTQAav
+    {
+        id: 'miles_davis_aura',
+        title: `Aura`,
+        artist: 'Miles Davis',
+        year: 1989,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAZZ, criteria.C_PSYCHE, criteria.NEO_EIGHTIES, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.AMBIENT],
+        selectedTrackTitle: `Violet`, 
+        selectedTrackYtId: 'QH9VYQufbfc',
+        spotifyId: '3FxWza4JZVZHVjZ4jTQAav',
+        deezerId: '1408167',
+        designers: ['Gilles Larrain'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'the_moody_blues_days_of_future_passed',
         title: 'Days Of Future Passed',
