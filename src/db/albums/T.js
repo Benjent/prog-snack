@@ -3,6 +3,53 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 't_rex_my_people_were_fair_and_had_sky_in_their_hair_but_now_theyre_content_to_wear_stars_on_their_brows',
+        title: `My People Were Fair And Had Sky In Their Hair... But Now They're Content To Wear Stars On Their Brows`,
+        artist: 'T. Rex',
+        year: 1968,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Chateau In Virginia Waters',
+        selectedTrackYtId: 'qhhbyR0zbyc',
+        spotifyId: '07VpaykqDhreXIMNzRNPDS',
+        deezerId: '1741501',
+        designers: ['George Underwood'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 't_rex_prophets_seers_and_sages_the_angels_of_the_ages',
+        title: `Prophets, Seers & Sages The Angel Of The Ages`,
+        artist: 'T. Rex',
+        year: 1968,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Wind Quartets',
+        selectedTrackYtId: 'Eu85mMrDeK4',
+        spotifyId: '5NoSeEx6IXNqLu6qhMJ0hF',
+        deezerId: '9465242',
+        designers: ['Peter Sanders'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // T. Rex - 1969 - Unicorn
+    // Folk, c_psyche
+    // track is The Throat Of Winter
+    // designers Peter Sanders
+    // T. Rex - 1970 - A Beard Of Stars <- NOT PROG ANYMORE
+    // Folk, c_psyche
+    // track is By The Light Of A Magical Moon
+    // designers Peter Sanders, June Child
+    // T. Rex - 1970 - T. Rex
+    // todo
+    // track is TODO
+    // designers null
+    // TODO Tanx - 1973 - Rockbased, cpsyche, fanfare
+    // track broken hearted blues
+    // TODO Zinc ALloy
+    {
         id: 'tai_phong_tai_phong',
         title: 'Taï Phong',
         artist: 'Taï Phong',
