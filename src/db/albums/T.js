@@ -34,21 +34,86 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // T. Rex - 1969 - Unicorn
-    // Folk, c_psyche
-    // track is The Throat Of Winter
-    // designers Peter Sanders
-    // T. Rex - 1970 - A Beard Of Stars <- NOT PROG ANYMORE
-    // Folk, c_psyche
-    // track is By The Light Of A Magical Moon
-    // designers Peter Sanders, June Child
-    // T. Rex - 1970 - T. Rex
-    // todo
-    // track is TODO
-    // designers null
-    // TODO Tanx - 1973 - Rockbased, cpsyche, fanfare
-    // track broken hearted blues
-    // TODO Zinc ALloy
+    {
+        id: 't_rex_unicorn',
+        title: `Unicorn`,
+        artist: 'T. Rex',
+        year: 1969,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.C_PSYCHE],
+        selectedTrackTitle: 'The Throat Of Winter',
+        selectedTrackYtId: '7X_NPxdyFZA',
+        spotifyId: '6SI4Lk6pFuIbHz2GVJTmqF',
+        deezerId: '1741241',
+        designers: ['Peter Sanders'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 't_rex_a_beard_of_stars',
+        title: `A Beard Of Stars`,
+        artist: 'T. Rex',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.C_PSYCHE],
+        selectedTrackTitle: 'By The Light Of A Magical Moon',
+        selectedTrackYtId: 'oat9RksVx7s',
+        spotifyId: '1EihIcnkkp9Gq0JpCFKtE7',
+        deezerId: '7434387',
+        designers: ['Peter Sanders', 'June Child'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 't_rex_t_rex',
+        title: `T. Rex`,
+        artist: 'T. Rex',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.C_PSYCHE, criteria.BAROQUE, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'The Wizard',
+        selectedTrackYtId: 'mfSSmy8B5GA',
+        spotifyId: '2ySTMVl1F6ZJleoK3wk78Z',
+        deezerId: '116083612',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 't_rex_tanx',
+        title: `Tanx`,
+        artist: 'T. Rex',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_PSYCHE, criteria.FANFARE, criteria.FEMALE],
+        selectedTrackTitle: 'Tenement Lady',
+        selectedTrackYtId: 'RRevLXPuWf0',
+        spotifyId: '0XHQyIMqjmsVRJPqFsFbjO',
+        deezerId: '1117516',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 't_rex_zinc_alloy_and_the_hidden_riders_of_tomorrow',
+        title: `Zinc Alloy And The Hidden Riders Of Tomorrow`,
+        artist: 'T. Rex',
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_PSYCHE, criteria.FANFARE, criteria.FEMALE],
+        selectedTrackTitle: 'Carsmile Smith & The Old Ones',
+        selectedTrackYtId: '0xsL8c6XLaI',
+        spotifyId: '4rglD4EKEc75OJp5VwTWIZ',
+        deezerId: '1117508',
+        designers: [],
+        similarAlbums: [], // similar david bowie
+        isAGem: false,
+    },
     {
         id: 'tai_phong_tai_phong',
         title: 'Taï Phong',
