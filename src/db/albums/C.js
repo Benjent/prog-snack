@@ -1064,7 +1064,7 @@ const albums = [
         year: 1980,
         country: regions.FRANCE,
         cover: '.jpg',
-        criteria: [criteria.FRENCH, criteria.FEMALE, criteria.LENGTHY_TRACKS, criteria.C_FOLK, criteria.SOFT_SEVENTIES, criteria.ODD_RHYTHM],
+        criteria: [criteria.FRENCH, criteria.FEMALE, criteria.LENGTHY_TRACKS, criteria.C_FOLK, criteria.SOFT_SEVENTIES, criteria.ODD_RHYTHM, criteria.TOUCHING_VOCALS],
         selectedTrackTitle: `La Parole Est À La Victime`,
         selectedTrackYtId: 'jovvoE8YWRI',
         spotifyId: '2teh7QkV02tjERVswtag70',

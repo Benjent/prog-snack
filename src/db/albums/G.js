@@ -798,7 +798,7 @@ const albums = [
         year: 1975,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.ODD_RHYTHM],
+        criteria: [criteria.ODD_RHYTHM, criteria.GLITTER, criteria.TRANSITION],
         selectedTrackTitle: 'Tide',
         selectedTrackYtId: 'mChW5w-_-cw',
         spotifyId: '1c1QR2iqANYMrQVwKvF1z7',

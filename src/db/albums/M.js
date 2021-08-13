@@ -1386,6 +1386,38 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'the_moody_blues_octave',
+        title: `Octave`,
+        artist: 'The Moody Blues',
+        year: 1978,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.BAROQUE, criteria.SOFT_SEVENTIES],
+        selectedTrackTitle: `Steppin' In A Slide Zone`,
+        selectedTrackYtId: 'RZXMeaZJJOY',
+        spotifyId: '58Lnkf8TmX0GyxK45vfN1K',
+        deezerId: '85822402',
+        designers: [],
+        similarAlbums: [], // TODO barclay james harvest
+        isAGem: false,
+    },
+    {
+        id: 'the_moody_blues_long_distance_voyager',
+        title: `Long Distance Voyager`,
+        artist: 'The Moody Blues',
+        year: 1981,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.C_ELECTRO, criteria.BAROQUE],
+        selectedTrackTitle: 'Veteran Cosmic Rocker',
+        selectedTrackYtId: 'a6zoGo_jRCU',
+        spotifyId: '4t5Za54Hk2E1vSxvtGoRSE',
+        deezerId: '85836712',
+        designers: ['Arts Union Glasgow', 'Cream'],
+        similarAlbums: ['electric_light_orchestra_time'],
+        isAGem: false,
+    },
+    {
         id: 'mor_stations',
         title: `Stations`,
         artist: 'Mor',
@@ -1401,8 +1433,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // c'est prog : rockbased, baroque, soft-sevent, selectedtrack slide zone, barclayj  mes harvest
-    // talking out of turn, rockbased, c_electro, baroque, similar ELO time, selected track: Veteran Cosmic Rocker
     {
         id: 'museo_rosenbach_zarathustra',
         title: 'Zarathustra',
