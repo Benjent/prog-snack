@@ -324,6 +324,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'thijs_van_leer_o_my_love',
+        title: 'O My Love',
+        artist: 'Thijs Van Leer',
+        year: 1975,
+        country: regions.NETHERLANDS,
+        cover: '.jpg',
+        criteria: [criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL, criteria.C_JAZZ, criteria.SOFT, criteria.SOFT_SEVENTIES, criteria.FEMALE, criteria.ART_POP, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Peacemaker',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'thin_lizzy_thin_lizzy',
         title: 'Thin Lizzy',
         artist: 'Thin Lizzy',
@@ -355,9 +371,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO  Tim Berne & Bill Frisell - ...Theorically
-    // trac is M. OU Ground Floor
-    // psyché, experimental, c_jazz
     {
         id: 'titus_groan_titus_groan',
         title: 'Titus Groan',
