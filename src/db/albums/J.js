@@ -3,6 +3,23 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'jackal_awake',
+        title: 'Awake',
+        artist: 'Jackal',
+        year: 1973,
+        country: regions.CANADA,
+        cover: '.jpg',
+        criteria: [criteria.GREASY_SEVENTIES, criteria.JAM],
+        selectedTrackTitle: 'Awake',
+        selectedTrackYtId: '0aNE4Uq1sfE',
+        spotifyId: '1umcdNFxWMRT3929YR3kdg',
+        deezerId: '10145370',
+        designers: ['Julius Ciss'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
         id: 'jade_warrior_jade_warrior',
         title: 'Jade Warrior',
         artist: 'Jade Warrior',
