@@ -1183,7 +1183,7 @@ const albums = [
         year: 1979,
         country: regions.QUEBEC,
         cover: '.jpg',
-        criteria: [criteria.FRENCH, criteria.UNCOMMON_INSTRUMENTS, riteria.FOLK, criteria.JAM, criteria.PIANO, criteria.MEDIEVAL],
+        criteria: [criteria.FRENCH, criteria.UNCOMMON_INSTRUMENTS, criteria.FOLK, criteria.JAM, criteria.PIANO, criteria.MEDIEVAL],
         selectedTrackTitle: 'La Légende De Jos Kébék',
         selectedTrackYtId: null,
         spotifyId: null,
