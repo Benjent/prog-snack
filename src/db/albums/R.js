@@ -613,6 +613,43 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'rick_wakeman_the_six_wives_of_henry_viii',
+        title: 'The Six Wives Of Henry VIII',
+        artist: 'Rick Wakeman',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.CONCEPT, criteria.C_ELECTRO, criteria.FEMALE, criteria.SYMPHONIC, criteria.PIANO, criteria.SPECTACULAR, criteria.ODD_RHYTHM, criteria.JAM, criteria.TECHNICAL],
+        selectedTrackTitle: 'Catherine Of Aragon',
+        selectedTrackYtId: 'aDuBhDzjYyI',
+        spotifyId: '7KqisP47OG3PCtbLknLJPT',
+        deezerId: '9640566',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false, // TODO almost
+    },
+    {
+        id: 'rick_wakeman_journey_to_the_centre_of_the_earth',
+        title: 'Journey To The Centre Of The Earth',
+        artist: 'Rick Wakeman',
+        year: 1973,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.LIVE, criteria.LENGTHY_TRACKS, criteria.CONCEPT, criteria.C_ELECTRO, criteria.FEMALE, criteria.SYMPHONIC, criteria.PIANO, criteria.SPECTACULAR, criteria.ORCHESTRAL_PARTS, criteria.TECHNICAL, criteria.UNCOMMON_INSTRUMENTS, criteria.STORYLINE, criteria.ROCK_OPERA, criteria.JAM],
+        selectedTrackTitle: 'The Battle',
+        selectedTrackYtId: 'D6afHlAJRhk',
+        spotifyId: '4GeRzDetT2K0322NomtKkj',
+        deezerId: '231934',
+        designers: [],
+        similarAlbums: ['Michael Wade', 'Mike Doud'],
+        isAGem: false,
+    },
+    // TODO Arthur - 9640570 + 0ALQd0pjofVj8QQecUnP6l - Mike Doud, Geoff Halpin, Chris Moore
+    // TODO No earthly - 14780667 + 7Kw6q6WZhz0BC7SJN99PLB
+    // TODO prog ? Criminal rec - 118876 + 049g2vTXTkorBp4ncKsn8C
+    // TODO 1984 - 6023702 + 4cC2z63HedG20N5332wvIZ - Hipgnosis
+    // TODO prog ? rock prophet
+    {
         id: 'robert_connolly_plateau',
         title: 'Plateau',
         artist: 'Robert Connolly',
