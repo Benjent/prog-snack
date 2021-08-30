@@ -660,10 +660,34 @@ const albums = [
         similarAlbums: ['Mike Doud', 'Geoff Halpin', 'Chris Moore'],
         isAGem: false,
     },
-    // TODO No earthly - 14780667 + 7Kw6q6WZhz0BC7SJN99PLB
+    {
+        id: 'rick_wakeman_no_earthly_connection',
+        title: 'No Earthly Connection',
+        artist: 'Rick Wakeman',
+        year: 1976,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.ODD_RHYTHM, criteria.SPECTACULAR, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: 'Music Reincarnate',
+        selectedTrackYtId: '7M74FijmFy8',
+        spotifyId: '7Kw6q6WZhz0BC7SJN99PLB',
+        deezerId: '14780667',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO prog ? Criminal rec - 118876 + 049g2vTXTkorBp4ncKsn8C
+    // ce_electro, piano, symphonic, spectacular, lengthy, odd, funny, instru
+    // track Statue Of Justice
+    // TODO Rhapsodies prog ? - 11603336 + 1BPJzSu8TBskqIFEuP8AsA
+    // c_electro, funny, oddrhthm, piano, instru
+    // track Pedra de gavea
     // TODO 1984 - 6023702 + 4cC2z63HedG20N5332wvIZ - Hipgnosis
-    // TODO prog ? rock prophet
+    // c_electro, concept, female, rockopera, fanfare
+    // track The Hymn
+    // TODO prog ? rock prophet (ce serait nice de s'arrêter là mais malheureusement il a encore fait du prog après)
+    // track is Return Of The Prophet
+    // instry, electro, piano, rockbased, funny <- de la vraie merde
     {
         id: 'robert_connolly_plateau',
         title: 'Plateau',
