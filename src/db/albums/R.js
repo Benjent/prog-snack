@@ -676,15 +676,54 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO prog ? Criminal rec - 118876 + 049g2vTXTkorBp4ncKsn8C
-    // ce_electro, piano, symphonic, spectacular, lengthy, odd, funny, instru
-    // track Statue Of Justice
-    // TODO Rhapsodies prog ? - 11603336 + 1BPJzSu8TBskqIFEuP8AsA
-    // c_electro, funny, oddrhthm, piano, instru
-    // track Pedra de gavea
-    // TODO 1984 - 6023702 + 4cC2z63HedG20N5332wvIZ - Hipgnosis
-    // c_electro, concept, female, rockopera, fanfare
-    // track The Hymn
+    {
+        id: 'rick_wakeman_rick_wakemans_criminal_record',
+        title: `Rick Wakeman's Criminal Record`,
+        artist: 'Rick Wakeman',
+        year: 1977,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.PIANO, criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.ODD_RHYTHM, criteria.SPECTACULAR, criteria.LENGTHY_TRACKS, criteria.FUNNY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Statue Of Justice',
+        selectedTrackYtId: 'Qs8ZCTawzuo',
+        spotifyId: '049g2vTXTkorBp4ncKsn8C',
+        deezerId: '118876',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'rick_wakeman_rhapsodies',
+        title: `Rhapsodies`,
+        artist: 'Rick Wakeman',
+        year: 1979,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.PIANO, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.FUNNY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Pedra Da Gavea',
+        selectedTrackYtId: '0Xh7a5psiwA',
+        spotifyId: '1BPJzSu8TBskqIFEuP8AsA',
+        deezerId: '11603336',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'rick_wakeman_1984',
+        title: `1984`,
+        artist: 'Rick Wakeman',
+        year: 1981,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.C_ELECTRO, criteria.FEMALE, criteria.ROCK_OPERA, criteria.FANFARE],
+        selectedTrackTitle: 'The Hymn',
+        selectedTrackYtId: 'aUXLWiBO5JM',
+        spotifyId: '4cC2z63HedG20N5332wvIZ',
+        deezerId: '6023702',
+        designers: ['Hipgnosis'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO prog ? rock prophet (ce serait nice de s'arrêter là mais malheureusement il a encore fait du prog après)
     // track is Return Of The Prophet
     // instry, electro, piano, rockbased, funny <- de la vraie merde
