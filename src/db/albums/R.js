@@ -724,9 +724,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO prog ? rock prophet (ce serait nice de s'arrêter là mais malheureusement il a encore fait du prog après)
-    // track is Return Of The Prophet
-    // instry, electro, piano, rockbased, funny <- de la vraie merde
     {
         id: 'robert_connolly_plateau',
         title: 'Plateau',
