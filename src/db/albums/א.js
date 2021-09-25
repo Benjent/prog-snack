@@ -18,6 +18,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'ktzat_acheret_nonames',
+        title: 'קצת אחרת',
+        artist: 'קצת אחרת',
+        year: 1974,
+        country: regions.ISRAEL,
+        cover: '.jpg',
+        criteria: [criteria.HEBREW, criteria.SOPHISTICATED, criteria.ODD_RHYTHM, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: '204',
+        selectedTrackYtId: 'OsfVoxjltfE',
+        spotifyId: '6xjSKLHpGoFeXPmQbKiF8e',
+        deezerId: null,
+        designers: ['Yossi Orbach'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
 ]
 
 export default albums

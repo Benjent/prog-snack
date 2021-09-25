@@ -454,6 +454,38 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'nick_mason_nick_mason_fictitious_sports',
+        title: `Nick Mason's Fictitious Sports`,
+        artist: 'Nick Mason',
+        year: 1981,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.C_PSYCHE, criteria.FEMALE, criteria.FUNNY, criteria.ART_POP],
+        selectedTrackTitle: 'Hot River',
+        selectedTrackYtId: 'todo',
+        spotifyId: '186h8hclIvxHoMR8q1x8Qq',
+        deezerId: '71718932',
+        designers: ['Hipgnosis', 'Geoff Halpin'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'nick_mason_and_rick_fenn_profiles',
+        title: `Profiles`,
+        artist: 'Nick Mason & Rick Fenn',
+        year: 1985,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.ELECTRO, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: 'Profiles',
+        selectedTrackYtId: 'uFW9GYm79Cw',
+        spotifyId: '4clkdWqlVchCZfIpWxGmaJ',
+        deezerId: '71719292',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'nightwinds_nightwinds',
         title: 'Nightwinds',
         artist: 'Nightwinds',
@@ -630,6 +662,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Nyl - french - c_psyche, spacy, jam, frenchsung
 ]
 
 export default albums
