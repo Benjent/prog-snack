@@ -544,7 +544,7 @@ const albums = [
         selectedTrackYtId: 'aUv9VMfMhzs',
         spotifyId: null,
         deezerId: null,
-        designers: ['Hipgnosis'],
+        designers: ['Tsunemi Morimoto'],
         similarAlbums: [],
         isAGem: false,
     },
