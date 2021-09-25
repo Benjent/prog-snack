@@ -484,6 +484,22 @@ const albums = [
         description: `TODO description` // Assez fou, enchainement de scaynettes musicales sans sens apparent, mais juste du délire par ci par là
     },
     {
+        id: 'red_noise_sarcelle_locheres',
+        title: 'Sarcelles-Lochères',
+        artist: 'Red Noise',
+        year: 1971,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.PATCHWORK, criteria.LENGTHY_TRACKS, criteria.SOUND_COLLAGES, criteria.C_PSYCHE, criteria.FUNNY, criteria.FRENCH, criteria.EXPERIMENTAL, criteria.TRANSITION],
+        selectedTrackTitle: 'Caka Slow / Vertebrate Twist',
+        selectedTrackYtId: 'Wh-itFLMyQA',
+        spotifyId: '2Zfkl2tAc8agaz7tuXJqua',
+        deezerId: '76148162',
+        designers: ['Patrick Vian', 'H. Van der Meer'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'return_to_forever_return_to_forever',
         title: 'Return To Forever',
         artist: 'Return To Forever',
