@@ -446,7 +446,7 @@ const albums = [
         year: 1972,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.C_PSYCHE, criteria.C_ELECTRO], // TODO
+        criteria: [criteria.C_PSYCHE, criteria.C_ELECTRO],
         selectedTrackTitle: 'Pan',
         selectedTrackYtId: 'mqwTKKwE7MQ',
         spotifyId: '0ydD7INyGyCIpCa6zLzkIY',
