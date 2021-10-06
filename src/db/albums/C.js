@@ -204,7 +204,7 @@ const albums = [
         year: 1972,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.C_PSYCHE, criteria.C_JAZZ],
+        criteria: [criteria.C_PSYCHE, criteria.C_JAZZ, criteria.ODD_RHYTHM, criteria.TRANSITION, criteria.EXPERIMENTAL],
         selectedTrackTitle: 'Vitamin C',
         selectedTrackYtId: 'YmN9oHa3ZIQ',
         spotifyId: '6Seo9dju2EMVYkUVUDlkXw',
