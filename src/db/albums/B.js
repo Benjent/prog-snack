@@ -1193,6 +1193,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'brian_auger_search_party',
+        title: 'Search Party',
+        artist: 'Brian Auger',
+        year: 1981,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.C_JAZZ, criteria.JAM, criteria.JAZZY_GROOVY, criteria.TECHNICAL, criteria.SOFT_SEVENTIES, criteria.C_ELECTRO],
+        selectedTrackTitle: 'Planet Earth Calling',
+        selectedTrackYtId: '2vSdNa2eNIs',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Anton Kelly'],
+        similarAlbums: [], // todo similar george duke
+        isAGem: false,
+    },
+    {
         id: 'brian_davison_every_which_way',
         title: 'Every Which Way',
         artist: 'Brian Davison',
