@@ -1258,6 +1258,22 @@ const albums = [
         description: `Each track, composed with layers of instruments and unusual chord progressions, builds tension, especially with brass and strings, to release at several culminations. The Jazz and Folk parts enrich the music, although already complex by its symphonic dimension and subtle by the diverse use of instruments, and the mellow vocals alongside the flutes add a warm caress.`
     },
     {
+        id: 'buckethead_bucketheadland',
+        title: 'Bucketheadland',
+        artist: 'Buckethead',
+        year: 1992,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.HEAVY, criteria.STORYLINE, criteria.EXPERIMENTAL, criteria.FUNNY, criteria.TECHNICAL, criteria.TRANSITION, criteria.PATCHWORK, criteria.NEO_EIGHTIES, criteria.BLENDS, criteria.SOUND_COLLAGES, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'I Love My Parents',
+        selectedTrackYtId: 'jSxPDAUbiQA',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Tanaka Tomoyo'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'buckethead_giant_robot',
         title: 'Giant Robot',
         artist: 'Buckethead',
