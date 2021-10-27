@@ -112,7 +112,8 @@ const albums = [
         deezerId: null,
         designers: [],
         similarAlbums: ['camel_rain_dances'],
-        isAGem: false,
+        isAGem: true,
+        description: `TODO Description`,
     },
     {
         id: 'the_incredible_string_band_the_incredible_string_band',
