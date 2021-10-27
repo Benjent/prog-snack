@@ -9,8 +9,8 @@
                 <Arrow color=dark size="small" :orientation="isDisplayedRegionYear ? 'top' : 'bottom'"></Arrow>
             </div>
             <div class="attic__panel" v-if="isDisplayedRegionYear">
-                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @change="filterAttic"></Select>
-                <Select class="attic__filter" v-model="selectedYear" :options="years" @change="filterAttic"></Select>
+                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
+                <Select class="attic__filter" v-model="selectedYear" :options="years" @input="filterAttic"></Select>
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
                 <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">

@@ -6,7 +6,7 @@
             <Arrow :orientation="isDisplayedOptions ? 'top' : 'bottom'"></Arrow>
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
-            <div class="select__option">All</div>
+            <div class="select__option" @click="notifyParent(null)">All</div>
             <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ option }}</div>
         </div>
     </div>
