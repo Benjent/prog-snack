@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'hideki_ishima_one_day',
+        title: 'One Day',
+        artist: '石間秀機',
+        year: 1973,
+        country: regions.JAPAN,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.ROCK, criteria.SOFT, criteria.JAM, criteria.JAPANESE],
+        selectedTrackTitle: `We're Just Tryin' My Way`,
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: ['wishbone_ash_pilgrimage'],
+        isAGem: false,
+    },
+    {
         id: 'sadistic_mika_band_sadistic_mika_band',
         title: 'サディスティック・ミカ・バンド',
         artist: 'サディスティック・ミカ・バンド',
