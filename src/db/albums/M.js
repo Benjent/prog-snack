@@ -951,7 +951,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Michel Polnareff
+    {
+        id: 'michel_polnareff_polnareffs',
+        title: `Polnareff's`,
+        artist: 'Michel Polnareff',
+        year: 1971,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.TRANSITION, criteria.FRENCH, criteria.ORCHESTRAL_PARTS, criteria.C_JAZZ, criteria.JAZZY_GROOVY, criteria.FANFARE],
+        selectedTrackTitle: `Computer's Dream`,
+        selectedTrackYtId: '9kZndPjJAKo',
+        spotifyId: '296OUPKaMjneCseFDKksHi',
+        deezerId: '124264',
+        designers: ['Georges Spitzer'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'mike_oldfield_tubular_bells',
         title: 'Tubular Bells',
