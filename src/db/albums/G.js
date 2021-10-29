@@ -485,6 +485,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'gianni_derrico_antico_teatro_da_camera',
+        title: 'Antico Teatro Da Camera',
+        artist: `Giannni D'Erico`,
+        year: 1976,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.ITALIAN, criteria.RENAISSANCE, criteria.C_FOLK, criteria.ORCHESTRAL_PARTS, criteria.FEMALE, criteria.SOFT],
+        selectedTrackTitle: 'Delvish',
+        selectedTrackYtId: 'U3d4eodWygQ',
+        spotifyId: '4GS94ec96cI2OmOJss3egO',
+        deezerId: '954319',
+        designers: ['Gruppo Virtual Art'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'ginger_baker_stratavarious',
         title: `Stratavarious`,
         artist: 'Ginger Baker',
@@ -903,6 +919,10 @@ const albums = [
         similarAlbums: ['titus_groan_titus_groan'],
         isAGem: false,
     },
+    // TODO Gypsy (USA) - Gypsy - 1970 - Alfons Mucha - null + null - track is The Vision
+    // TODO Gypsy - In The Garden - 1971 - Lester Bellin - null + null - lengthy, -  track is Around You? OU As Far As You Can See
+    // TODO Gypsy - Antithesis - 1972 - no - null + null - rockbased, track  Facing Time OU TRvlin minnesota
+    // TODO Gypsy - Unlock The Gates - 1973 - no - null + null - rockbased, orchestral, soft, religious PAS DU TOUT PROG track Precious One (ly2oInqM46k)
 ]
 
 export default albums
