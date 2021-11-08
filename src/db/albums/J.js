@@ -726,9 +726,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO John G. Perry - soft, uncommon, transition, instru
-    // As Clouds Gather
-    // gem true
+    {
+        id: 'john_g_perry_sunset_wading',
+        title: 'Sunset Wading',
+        artist: 'John G. Perry',
+        year: 1976,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.SOFT, criteria.UNCOMMON_INSTRUMENTS, criteria.TRANSITION, criteria.INSTRUMENTAL, criteria.BLENDS],
+        selectedTrackTitle: 'As Clouds Gather',
+        selectedTrackYtId: 'IfcTrwBywgA',
+        spotifyId: '3qDpIay3LaJhWhxiodv0Em',
+        deezerId: null,
+        designers: ['Rupert Hine'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
     {
         id: 'johnny_hallyday_hamlet',
         title: 'Hamlet',
