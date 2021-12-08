@@ -320,8 +320,8 @@ const albums = [
         criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS], // TODO reecouter et update?
         selectedTrackTitle: 'Marsbéli Krónikák IV.-VI.',
         selectedTrackYtId: 'L8W02LBnsaY',
-        spotifyId: '3TX6HT0emzfmlwsiMpE9CX',
-        deezerId: '113484',
+        spotifyId: '6ylnpBYu7UG9OyJqvv8sVX',
+        deezerId: null,
         designers: ['Herpai Zoltán'],
         similarAlbums: [],
         isAGem: true,
