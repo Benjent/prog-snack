@@ -557,7 +557,7 @@ const albums = [
         year: 1974,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.INSTRUMENTAL, criteria.C_JAZZ, criteria.JAM, criteria.GERMAN, criteria.JAZZY_GROOVY],
+        criteria: [criteria.INSTRUMENTAL, criteria.C_JAZZ, criteria.JAM, criteria.GERMAN, criteria.JAZZY_GROOVY, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: 'Rumpelstilzchen',
         selectedTrackYtId: '7FCB5Xqd-Y4',
         spotifyId: null,

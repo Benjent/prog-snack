@@ -153,6 +153,7 @@ const subgenres = [
             'brave_new_world_impressions_on_reading_aldous_huxley',
             'camel_the_snow_goose',
             'miles_davis_aura',
+            'john_g_perry_sunset_wading',
         ],
         criteria: [criteria.CONCEPT, criteria.INSTRUMENTAL, criteria.AMBIENT, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS, criteria.SOFT]
     },

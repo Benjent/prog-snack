@@ -311,6 +311,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'solaris_marsbeli_kronikak',
+        title: 'Marsbéli Krónikák',
+        artist: 'Solaris',
+        year: 1984,
+        country: regions.HUNGARY,
+        cover: '.jpg',
+        criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS], // TODO reecouter et update?
+        selectedTrackTitle: 'Marsbéli Krónikák IV.-VI.',
+        selectedTrackYtId: 'L8W02LBnsaY',
+        spotifyId: '6ylnpBYu7UG9OyJqvv8sVX',
+        deezerId: null,
+        designers: ['Herpai Zoltán'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
         id: 'spirit_spirit',
         title: 'Spirit',
         artist: 'Spirit',
