@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'omega_plus_how_to_kiss_the_sky',
+        title: `How To Kiss The Sky`,
+        artist: 'Omega Plus',
+        year: 1969,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_FOLK,  criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.SOUND_COLLAGES, criteria.FRENCH],
+        selectedTrackTitle: 'Voyelles',
+        selectedTrackYtId: 'sOeTHmEpy1Y',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Allen Weinberg'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'oniris_lhomme_voilier',
         title: `L'homme-Voilier`,
         artist: 'Oniris',
