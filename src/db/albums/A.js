@@ -473,6 +473,22 @@ const albums = [
     // spanish, folk, female
     // designers: José Luis Tellez
     {
+        id: 'algarnas_tradgard_framtiden_ar_ett_svavande_skepp_forankrat_i_forntiden',
+        title: `Framtiden Är Ett Svävande Skepp, Förankrat I Forntiden`,
+        artist: 'Älgarnas Trädgård',
+        year: 1972,
+        country: regions.SWEDEN,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.SOUND_COLLAGES, criteria.EXPERIMENTAL, criteria.FEMALE, criteria.SWEDISH, criteria.C_FOLK],
+        selectedTrackTitle: 'Två Timmar Över Två Blå Berg Med En Gök På Vardera Sidan, Om Timmarna... Alltså',
+        selectedTrackYtId: 'Dyo6sTiC_wQ',
+        spotifyId: '0wYjbGdHu5noCiQzpVOBZg',
+        deezerId: null,
+        designers: ['Jan Ternald'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'alice_cooper_schools_out',
         title: `School's Out`,
         artist: 'Alice Cooper',
