@@ -1,3 +1,4 @@
+// Remember to update Attic filter
 const criteria = {
     // Concept
     CONCEPT: 'CONCEPT',
