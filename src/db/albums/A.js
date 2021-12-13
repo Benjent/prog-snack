@@ -117,6 +117,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'acintya_la_cite_des_dieux_oublies',
+        title: 'La Cité Des Dieux Oubliés',
+        artist: 'Acintya',
+        year: 1978,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_ELECTRO, criteria.C_FOLK, criteria.SYMPHONIC, criteria.C_PSYCHE, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Espoir',
+        selectedTrackYtId: '_aMfsIfhrJ0',
+        spotifyId: '0MHiuaEwJcoufSKuDhRe6Y',
+        deezerId: '3737071',
+        designers: [],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
         id: 'adriano_monteduro_adriano_monteduro_e_reale_accademia_di_musica',
         title: 'Adriano Monteduro E Reale Accademia Di Musica',
         artist: 'Adriano Monteduro',
@@ -160,6 +177,22 @@ const albums = [
         selectedTrackYtId: '4lfO4BKIOuA',
         spotifyId: null,
         deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'agincourt_fly_away',
+        title: 'Fly Away',
+        artist: 'Agincourt',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.FEMALE, criteria.FOLK, criteria.CRISPY_SIXTIES, criteria.SOFT, criteria.C_PSYCHE],
+        selectedTrackTitle: `Through The Eyes Of A Lifetime`,
+        selectedTrackYtId: 'KRU2zEKWT1o',
+        spotifyId: '1ATfMsYFil3hxKH9GVSfEM',
+        deezerId: '8875691',
         designers: [],
         similarAlbums: [],
         isAGem: false,
@@ -209,6 +242,22 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ['Rik Lina'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'ainigma_diluvium',
+        title: 'Diluvium',
+        artist: 'Ainigma',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS, criteria.JAM, criteria.GREASY_SEVENTIES, criteria.HEAVY],
+        selectedTrackTitle: 'Prejudice',
+        selectedTrackYtId: 'vlL2qth6Pcc',
+        spotifyId: '0SrgwjN3DPQ4IPeMrNe4di',
+        deezerId: null,
+        designers: ['Bernhard Förth'],
         similarAlbums: [],
         isAGem: false,
     },
@@ -421,6 +470,28 @@ const albums = [
         similarAlbums: ['supertramp_brother_where_you_bound'], // TODO similar to late genesis
         isAGem: false,
     },
+    // TODO Alan Stivell - 1970 Reflets - folkbased, celtic, french, breizh, uncommon, female, medieval
+    // track is borceliande GROS GROS DOUTE SUR LE COTE PROG
+    // TODO Alan Stivell - 1971 Renaissance De La Harpe Celtique - symphonic, odd, c_folk, celtic, french, breizh, uncommon, lengthy, medieval
+    // track is todo
+    // IS A GEM
+    // TODO Alan Stivell - 1976 Trema'n Inis - folkbased, celtic, french, breizh, uncommon, lengthy
+    // track is Hommes Liges
+    // TODO Alan Stivell - 1977 'Raok Dilestra
+    // concept, transition, folkbased, celtic, breizh, uncommon, edieval, storyline, odd
+    // TODO Tir Na Nog - Folkbased, transition, celtic, breizh, uncommon arabix, spiritual ambient, female, langue hindou?, c_psyche, c_electro, symphonic
+    // track Divodan
+    // TODO Terre Des Vivants nul à chier ?
+    // breizh, soft seventies, uncommon, french, female
+    // track Androïdes OU L'ère du Verseau
+    // TODO Légende
+    // uncommon, c_psyche, breizh, celtic, c_folk, transition
+    // track is Sawen
+    // TODO Harpes du nouvel age prog ?
+    // folk based, uncommon instru
+    // TODO The Mist Of Avalon
+    // concept, folk, c_electro, neoeighties, uncommon, brezih, female, celtic, french
+    // track is Quest
     {
         id: 'albatross_albatross',
         title: 'Albatross',
@@ -440,6 +511,22 @@ const albums = [
     // TODO Alfredo Carrión - Los Andares Del Alquimista - 1976 - SPAIN
     // spanish, folk, female
     // designers: José Luis Tellez
+    {
+        id: 'algarnas_tradgard_framtiden_ar_ett_svavande_skepp_forankrat_i_forntiden',
+        title: `Framtiden Är Ett Svävande Skepp, Förankrat I Forntiden`,
+        artist: 'Älgarnas Trädgård',
+        year: 1972,
+        country: regions.SWEDEN,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.SOUND_COLLAGES, criteria.EXPERIMENTAL, criteria.FEMALE, criteria.SWEDISH, criteria.C_FOLK],
+        selectedTrackTitle: 'Två Timmar Över Två Blå Berg Med En Gök På Vardera Sidan, Om Timmarna... Alltså',
+        selectedTrackYtId: 'Dyo6sTiC_wQ',
+        spotifyId: '0wYjbGdHu5noCiQzpVOBZg',
+        deezerId: null,
+        designers: ['Jan Ternald'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'alice_cooper_schools_out',
         title: `School's Out`,

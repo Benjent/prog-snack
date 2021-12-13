@@ -339,6 +339,11 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Bangor Flying Circus - 1969 - USA
+    // jam, jazzygroovy
+    // track ode to sadness
+    // almost a gem
+    // Bob Schnepf, Bob Means
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
@@ -564,6 +569,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Is pet sounds prog?
+    // art_pop, baroque
+    // TODO The Beach Boys - Smiley SMile
+    // c_psyche, art_pop, soft, criteria.FUNNY
+    // track is she's going bald
+    // similar rolling stones psyche
+    // TODO Wild Honey prog?
+    // TODO Friends prog?
+    // track is Diamond Head
+    // TODO Surf's Up
+    // folkbased, c_psyche
+    // track is Looking At Tomorrow ?
+    // TODO rockbased celui avec titre chelou sur voiture rouge
+    // TODO Holland
+    // artpop
     {
         id: 'the_beatles_revolver',
         title: 'Revolver',
@@ -1208,6 +1228,9 @@ const albums = [
         similarAlbums: [], // todo similar george duke
         isAGem: false,
     },
+    // TODO Brian Auger's Oblivion Express - Brian Auger's Oblivion Express
+    // jam
+    // Brian Auger's Oblivion Express -
     {
         id: 'brian_davison_every_which_way',
         title: 'Every Which Way',
