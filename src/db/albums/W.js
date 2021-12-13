@@ -98,6 +98,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Weather Report - 1971
+    // jazzy, instru, jazz, jam, c_psyche
+    // track: Orange Lady
+    // 115810 + 6MBWaIBPJG7iAqJGIQvMkL
+    // jazzy, instru, jazz, jam, c_psyche
+    // TODO I sing
+    // instru, jazz, jam, c_psyche
+    // 242471 + 5W6Amj3WJHHjp8i1PBaakK
+    // TODO Sweetnigter -> STILL PROG
+    // jam, jazzygroovy, lengthy, instru, c_jazz, uncommon
+    // 113562 + 3i9ydF6tp0qsaIBw5VRjmV
+    // TODO mysterious traveler
+    // c_psyche, jazzbased, jazzygroovy instru, female, jam // NOT THAT PROG
+    // track scarlet woman
+    // 97705 + 2JARH6A2TX28OzcPwJnD1p
+    // TODO tale spinnin
+    // instru, jazzy-groovy, c_jazz
+    // 98399 + 12vjm3VGNfgIuXbaNWwUCm
     {
         id: 'weather_report_black_market',
         title: 'Black Market',

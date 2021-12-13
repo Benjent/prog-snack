@@ -788,6 +788,12 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Rockets : Electro, c_psyche, groovy, french, scifi theme
+    // track Apesanteur
+    // TODO On The Road Again : Electro, c_psyche, groovy, french, scifi theme
+    // track Astrolights
+    // TODO Plasteroid : pareil
+    // track Anastasis
     {
         id: 'roger_glover_the_butterfly_ball_and_the_grasshoppers_feast',
         title: `The Butterfly Ball And The Grasshopper's Feast`,

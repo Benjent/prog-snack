@@ -18,6 +18,25 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Evening Colours - laurence_vanays_evening_colours - 1975
+    // odd, c_psyche, instru
+    // track is Eyes Closed On The Way
+    {
+        id: 'laurence_vanay_magic_slows',
+        title: 'Magic Slows',
+        artist: 'Laurence Vanay',
+        year: 1975,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.SOFT, criteria.C_PSYCHE, criteria.FOLK, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Love Is A Special Way Of Feeling',
+        selectedTrackYtId: 'v3DwEctU6LU',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'laurent_thibault_mais_on_ne_peut_pas_rever_tout_le_temps',
         title: 'Mais On Ne Peut Pas Rêver Tout Le Temps',

@@ -644,6 +644,12 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO L'engoulevent, QUEBEC, c_folk, uncommon, french
+    // designer: Ronald Labelle
+    // null + null
+    // TODO dexuèieme alum
+    // null + null
+    // designer null
     {
         id: 'eno_moebius_roedelius_after_the_heat',
         title: 'After The Heat',

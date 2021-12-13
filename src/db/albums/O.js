@@ -34,6 +34,12 @@ const albums = [
         similarAlbums: ['arachnoid_arachnoid'],
         isAGem: false,
     },
+    // TODO Ophiucus - Ophiucus - FRANCE
+    // french, c_psyche, folkbased, soft
+    // track Univers
+    // TODO Ophiucus - Salade Chinoise - FRANCE
+    // french, c_psyche, folkbased, soft
+    // track
     {
         id: 'orang_utan_orang_utan',
         title: 'Orang-Utan',
