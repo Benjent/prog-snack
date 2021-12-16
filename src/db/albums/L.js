@@ -19,7 +19,7 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'laurence_vanays_evening_colours',
+        id: 'laurence_vanay_evening_colours',
         title: 'Evening Colours',
         artist: 'Laurence Vanay',
         year: 1975,
@@ -80,7 +80,7 @@ const albums = [
         spotifyId: '7cz9xHXXMpdoTKM8VlIJZU',
         deezerId: '1198686',
         designers: ['Decca Publicity Art Department'],
-        similarAlbums: ['warhorse_warhorse', 'led_zeppelin_led_zeppelin'], // todo atomic rooster
+        similarAlbums: ['warhorse_warhorse', 'led_zeppelin_led_zeppelin'], // TODO atomic rooster
         isAGem: false,
     },
     {
