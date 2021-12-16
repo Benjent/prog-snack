@@ -164,8 +164,6 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO From The Disc World <- is prog or just cheesy?
-    // 301933 +
     {
         id: 'david_bowie_space_oddity',
         title: 'Space Oddity',

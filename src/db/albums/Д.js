@@ -3,7 +3,7 @@ import { criteria } from '../criteria'
 
 const albums = [
     // TODO importer ce fichier et les autres langues étrangères dans le fichier index.js
-    { // TODO c'est un peu complique mais ça reste prog les deux derniers albms
+    // { // TODO c'est un peu complique mais ça reste prog les deux derniers albms
         // id: 'pesnyary_pesnyary',
         // title: 'Песняры',
         // artist: 'Песняры',
@@ -18,7 +18,7 @@ const albums = [
         // designers: [],
         // similarAlbums: [],
         // isAGem: false,
-    },
+    // },
     // TODO le deuxième : baroque, russian
     // TODO III : fanfare
     // track is Крик Птицы
