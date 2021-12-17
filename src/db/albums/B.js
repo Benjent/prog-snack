@@ -569,12 +569,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Is pet sounds prog?
+    // TODO Is Pet Sounds - 1966 prog?
     // art_pop, baroque
-    // TODO The Beach Boys - Smiley SMile
-    // c_psyche, art_pop, soft, criteria.FUNNY
-    // track is she's going bald
-    // similar rolling stones psyche
+    {
+        id: 'the_beach_boys_smiley_smile',
+        title: 'Smiley Smile',
+        artist: 'The Beach Boys',
+        year: 1967,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.ART_POP, criteria.SOFT, criteria.FUNNY],
+        selectedTrackTitle: `She's Goin' Bald`,
+        selectedTrackYtId: 'OUsXUinQf1o',
+        spotifyId: '6utUDLuTpieNsjn6A68nIL',
+        deezerId: '42337891',
+        designers: ['Hipgnosis', 'Storm Thorgerson'],
+        similarAlbums: [], // todo similar rolling stones psyche
+        isAGem: false,
+    },
     // TODO Surf's Up
     // folkbased, c_psyche
     // track is Looking At Tomorrow ? OU Feel Flows
