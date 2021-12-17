@@ -569,8 +569,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Is Pet Sounds - 1966 prog?
-    // art_pop, baroque
+    {
+        id: 'the_beach_boys_pet_sounds',
+        title: 'Pet Sounds',
+        artist: 'The Beach Boys',
+        year: 1966,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.BAROQUE],
+        selectedTrackTitle: `God Only Knows`,
+        selectedTrackYtId: 'AOMyS78o5YI',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'the_beach_boys_smiley_smile',
         title: 'Smiley Smile',
