@@ -20,8 +20,10 @@ const criteria = {
     JAPANESE: 'JAPANESE',
     PORTUGUESE: 'PORTUGUESE',
     RUSSIAN: 'RUSSIAN',
+    SANSKRIT: 'SANSKRIT',
     SPANISH: 'SPANISH',
     SWEDISH: 'SWEDISH',
+    TIBETAN: 'TIBETAN',
     ZEUHL: 'ZEUHL',
     
     // Theme
@@ -31,6 +33,7 @@ const criteria = {
     OCCULT: 'OCCULT',
     SPIRITUAL: 'SPIRITUAL',
     SOCIOPOLITICAL: 'SOCIOPOLITICAL',
+    HISTORICAL: 'HISTORICAL',
 
     // Genre-based
     ROCK: 'ROCK',
@@ -122,8 +125,10 @@ const criteriaOrder = [
     criteria.JAPANESE,
     criteria.PORTUGUESE,
     criteria.RUSSIAN,
+    criteria.SANSKRIT,
     criteria.SPANISH,
     criteria.SWEDISH,
+    criteria.TIBETAN,
     criteria.ZEUHL,
 
     // Theme
@@ -133,6 +138,7 @@ const criteriaOrder = [
     criteria.OCCULT,
     criteria.SPIRITUAL,
     criteria.SOCIOPOLITICAL,
+    criteria.HISTORICAL,
 
     // Genre-based
     criteria.ROCK,
