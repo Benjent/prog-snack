@@ -89,7 +89,7 @@ const subgenres = [
             'the_beatles_yellow_submarine',
             'pink_floyd_the_piper_at_the_gates_of_dawn',
             'fantasy_paint_a_picture',
-            // todo Procol Harum
+            // TODO Procol Harum
         ],
         criteria: [criteria.C_FOLK, criteria.C_ELECTRO, criteria.FANTASY, criteria.BAROQUE, criteria.ORCHESTRAL_PARTS, criteria.ART_POP, criteria.FANFARE]
     },
