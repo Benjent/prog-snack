@@ -575,15 +575,12 @@ const albums = [
     // c_psyche, art_pop, soft, criteria.FUNNY
     // track is she's going bald
     // similar rolling stones psyche
-    // TODO Wild Honey prog?
-    // TODO Friends prog?
-    // track is Diamond Head
     // TODO Surf's Up
     // folkbased, c_psyche
-    // track is Looking At Tomorrow ?
-    // TODO rockbased celui avec titre chelou sur voiture rouge
+    // track is Looking At Tomorrow ? OU Feel Flows
     // TODO Holland
     // artpop
+    // track California Saga III: California (attention au wording) OU Leaving This Town
     {
         id: 'the_beatles_revolver',
         title: 'Revolver',
@@ -1132,6 +1129,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'the_blackwood_apology_house_of_leather',
+        title: 'House Of Leather',
+        artist: 'The Blackwood Apology',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.CONCEPT, criteria.HISTORICAL, criteria.TRANSITION, criteria.C_PSYCHE],
+        selectedTrackTitle: `Graduates Of Mrs. Grim's Learning`,
+        selectedTrackYtId: 'tTVyuuUAGp0',
+        spotifyId: '1BJiosq17ZgLYZBXQKFRZE',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Blast Furnace - Blast Furnace - 1971 - DENMARK
+    // is a gem true
     {
         id: 'bloodrock_passage',
         title: 'Passage',
