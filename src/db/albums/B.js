@@ -581,16 +581,16 @@ const albums = [
         criteria: [criteria.C_PSYCHE, criteria.ART_POP, criteria.SOFT, criteria.FUNNY],
         selectedTrackTitle: `She's Goin' Bald`,
         selectedTrackYtId: 'OUsXUinQf1o',
-        spotifyId: '6utUDLuTpieNsjn6A68nIL',
-        deezerId: '42337891',
-        designers: ['Hipgnosis', 'Storm Thorgerson'],
+        spotifyId: '37rNuexqEXWeSIOiJtn3A9',
+        deezerId: '5909501',
+        designers: [],
         similarAlbums: [], // todo similar rolling stones psyche
         isAGem: false,
     },
-    // TODO Surf's Up
+    // TODO Surf's Up 5909111 + 
     // folkbased, c_psyche
     // track is Looking At Tomorrow ? OU Feel Flows
-    // TODO Holland
+    // TODO Holland 5909451 +
     // artpop
     // track California Saga III: California (attention au wording) OU Leaving This Town
     {
