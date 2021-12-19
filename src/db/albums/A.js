@@ -470,28 +470,135 @@ const albums = [
         similarAlbums: ['supertramp_brother_where_you_bound'], // TODO similar to late genesis
         isAGem: false,
     },
-    // TODO Alan Stivell - 1970 Reflets - folkbased, celtic, french, breizh, uncommon, female, medieval
-    // track is borceliande GROS GROS DOUTE SUR LE COTE PROG
-    // TODO Alan Stivell - 1971 Renaissance De La Harpe Celtique - symphonic, odd, c_folk, celtic, french, breizh, uncommon, lengthy, medieval
-    // track is todo
-    // IS A GEM
-    // TODO Alan Stivell - 1976 Trema'n Inis - folkbased, celtic, french, breizh, uncommon, lengthy
-    // track is Hommes Liges
-    // TODO Alan Stivell - 1977 'Raok Dilestra
-    // concept, transition, folkbased, celtic, breizh, uncommon, edieval, storyline, odd
-    // TODO Tir Na Nog - Folkbased, transition, celtic, breizh, uncommon arabix, spiritual ambient, female, langue hindou?, c_psyche, c_electro, symphonic
-    // track Divodan
-    // TODO Terre Des Vivants nul à chier ?
-    // breizh, soft seventies, uncommon, french, female
-    // track Androïdes OU L'ère du Verseau
-    // TODO Légende
-    // uncommon, c_psyche, breizh, celtic, c_folk, transition
-    // track is Sawen
-    // TODO Harpes du nouvel age prog ?
-    // folk based, uncommon instru
-    // TODO The Mist Of Avalon
-    // concept, folk, c_electro, neoeighties, uncommon, brezih, female, celtic, french
-    // track is Quest
+    {
+        id: 'alan_stivell_reflets',
+        title: 'Reflets',
+        artist: 'Alan Stivell',
+        year: 1970,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.CELTIC, criteria.FRENCH, criteria.BRETON, criteria.UNCOMMON_INSTRUMENTS, criteria.FEMALE, criteria.MEDIEVAL],
+        selectedTrackTitle: `Broceliande`,
+        selectedTrackYtId: 'ujIBs8KcFp0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Korentin Kéo'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_renaissance_de_la_harpe_celtique',
+        title: 'Renaissance De La Harpe Celtique',
+        artist: 'Alan Stivell',
+        year: 1971,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.SYMPHONIC, criteria.ODD_RHYTHM, criteria.C_FOLK, criteria.CELTIC, criteria.UNCOMMON_INSTRUMENTS, criteria.FRENCH, criteria.MEDIEVAL, criteria.BRETON, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: `Eliz Iza`,
+        selectedTrackYtId: 'zVmPO4ovbzQ',
+        spotifyId: '4a0eXy2Khk53Pt5GadbxEI',
+        deezerId: '241768',
+        designers: ['Korentin Kéo'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
+        id: 'alan_stivell_treman_inis',
+        title: `Trema'n Inis`,
+        artist: 'Alan Stivell',
+        year: 1976,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.CELTIC, criteria.FRENCH, criteria.BRETON, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: `Hommes Liges`,
+        selectedTrackYtId: '8A28JExg0HY',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_raok_dilestra',
+        title: `'Raok Dilestra`,
+        artist: 'Alan Stivell',
+        year: 1977,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.TRANSITION, criteria.FOLK, criteria.CELTIC, criteria.BRETON, criteria.UNCOMMON_INSTRUMENTS, criteria.MEDIEVAL, criteria.STORYLINE, criteria.ODD_RHYTHM, criteria.FEMALE, criteria.HISTORICAL],
+        selectedTrackTitle: `An Aloubidigezh Gant Bro-C'Hall`,
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_tir_na_nog',
+        title: `Tir Na Nog`,
+        artist: 'Alan Stivell',
+        year: 1979,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.TRANSITION, criteria.CELTIC, criteria.BRETON, criteria.UNCOMMON_INSTRUMENTS, criteria.SANSKRIT, criteria.TIBETAN, criteria.SPIRITUAL, criteria.AMBIENT, criteria.FEMALE, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.SYMPHONIC],
+        selectedTrackTitle: `Divodan`,
+        selectedTrackYtId: 'asG7XHpT99I',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Korentin Kéo'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_terre_des_vivants',
+        title: `Terre Des Vivants`,
+        artist: 'Alan Stivell',
+        year: 1981,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.BRETON, criteria.SOFT_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.FRENCH, criteria.FEMALE],
+        selectedTrackTitle: `Androïdes (1°, 2°, 3° Partie)`,
+        selectedTrackYtId: null,
+        spotifyId: '2ctbezGmjtL7DiycOC3RmS',
+        deezerId: '6273464',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_legende',
+        title: `Légende`,
+        artist: 'Alan Stivell',
+        year: 1983,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.BRETON, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.CELTIC, criteria.C_FOLK, criteria.TRANSITION],
+        selectedTrackTitle: `Sawen`,
+        selectedTrackYtId: 'h_T4uUuAO84',
+        spotifyId: '69YexHw4GexAhJ1uAzmqWM',
+        deezerId: '6273457',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'alan_stivell_the_mist_of_avalon',
+        title: `The Mist Of Avalon`,
+        artist: 'Alan Stivell',
+        year: 1991,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.CONCEPT, criteria.FOLK, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.BRETON, criteria.FEMALE, criteria.CELTIC, criteria.FRENCH],
+        selectedTrackTitle: `Quest`,
+        selectedTrackYtId: 'VEoIEkI9I3k',
+        spotifyId: '4N72u1ZiGMMXS6yudc0dwy',
+        deezerId: '6273457',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'albatross_albatross',
         title: 'Albatross',
