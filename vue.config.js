@@ -1,4 +1,4 @@
 module.exports = {
     lintOnSave: false,
-    publicPath: '/${{ repoName }}/'
+    publicPath: '/prog-snack/'
 };
