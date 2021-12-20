@@ -225,7 +225,7 @@ const albums = [
         spotifyId: '39RUdNdTSeoiU8k65FohRh',
         deezerId: '225053322',
         designers: ['Dave Dragon'],
-        similarAlbums: [], // todo similar early t. rex
+        similarAlbums: [], // TODO similar early t. rex
         isAGem: false,
     },
     {

@@ -569,21 +569,44 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Is pet sounds prog?
-    // art_pop, baroque
-    // TODO The Beach Boys - Smiley SMile
-    // c_psyche, art_pop, soft, criteria.FUNNY
-    // track is she's going bald
-    // similar rolling stones psyche
-    // TODO Wild Honey prog?
-    // TODO Friends prog?
-    // track is Diamond Head
-    // TODO Surf's Up
+    {
+        id: 'the_beach_boys_pet_sounds',
+        title: 'Pet Sounds',
+        artist: 'The Beach Boys',
+        year: 1966,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.BAROQUE],
+        selectedTrackTitle: `God Only Knows`,
+        selectedTrackYtId: 'AOMyS78o5YI',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'the_beach_boys_smiley_smile',
+        title: 'Smiley Smile',
+        artist: 'The Beach Boys',
+        year: 1967,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.ART_POP, criteria.SOFT, criteria.FUNNY],
+        selectedTrackTitle: `She's Goin' Bald`,
+        selectedTrackYtId: 'OUsXUinQf1o',
+        spotifyId: '37rNuexqEXWeSIOiJtn3A9',
+        deezerId: '5909501',
+        designers: [],
+        similarAlbums: [], // todo similar rolling stones psyche
+        isAGem: false,
+    },
+    // TODO Surf's Up 5909111 + 
     // folkbased, c_psyche
-    // track is Looking At Tomorrow ?
-    // TODO rockbased celui avec titre chelou sur voiture rouge
-    // TODO Holland
+    // track is Looking At Tomorrow ? OU Feel Flows
+    // TODO Holland 5909451 +
     // artpop
+    // track California Saga III: California (attention au wording) OU Leaving This Town
     {
         id: 'the_beatles_revolver',
         title: 'Revolver',
@@ -1132,6 +1155,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'the_blackwood_apology_house_of_leather',
+        title: 'House Of Leather',
+        artist: 'The Blackwood Apology',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.CONCEPT, criteria.HISTORICAL, criteria.TRANSITION, criteria.C_PSYCHE],
+        selectedTrackTitle: `Graduates Of Mrs. Grim's Learning`,
+        selectedTrackYtId: 'tTVyuuUAGp0',
+        spotifyId: '1BJiosq17ZgLYZBXQKFRZE',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Blast Furnace - Blast Furnace - 1971 - DENMARK
+    // is a gem true
     {
         id: 'bloodrock_passage',
         title: 'Passage',

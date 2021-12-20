@@ -18,9 +18,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Evening Colours - laurence_vanays_evening_colours - 1975
-    // odd, c_psyche, instru
-    // track is Eyes Closed On The Way
+    {
+        id: 'laurence_vanay_evening_colours',
+        title: 'Evening Colours',
+        artist: 'Laurence Vanay',
+        year: 1975,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ODD_RHYTHM, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.SOFT],
+        selectedTrackTitle: 'Eyes Closed On The Way',
+        selectedTrackYtId: '3rLUhgrDL30',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'laurence_vanay_magic_slows',
         title: 'Magic Slows',
@@ -67,7 +80,7 @@ const albums = [
         spotifyId: '7cz9xHXXMpdoTKM8VlIJZU',
         deezerId: '1198686',
         designers: ['Decca Publicity Art Department'],
-        similarAlbums: ['warhorse_warhorse', 'led_zeppelin_led_zeppelin'], // todo atomic rooster
+        similarAlbums: ['warhorse_warhorse', 'led_zeppelin_led_zeppelin'], // TODO atomic rooster
         isAGem: false,
     },
     {

@@ -678,7 +678,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Nyl - french - c_psyche, spacy, jam, frenchsung
+    {
+        id: 'nyl_nyl',
+        title: 'Nyl',
+        artist: 'Nyl',
+        year: 1976,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.SPACY, criteria.JAM, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Nyl',
+        selectedTrackYtId: 'gxVbq33795g',
+        spotifyId: '5jNdUJ73yrUZrJMVVGIuVQ',
+        deezerId: '1536242',
+        designers: ['Pierre Lacombe', 'Bertrand Dhomme'],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
