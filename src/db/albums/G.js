@@ -922,9 +922,54 @@ const albums = [
         similarAlbums: ['titus_groan_titus_groan'],
         isAGem: false,
     },
-    // TODO Gypsy (USA) - Gypsy - 1970 - Alfons Mucha - null + null - track is The Vision
-    // TODO Gypsy - In The Garden - 1971 - Lester Bellin - null + null - lengthy, -  track is Around You? OU As Far As You Can See
-    // TODO Gypsy - Antithesis - 1972 - no - null + null - rockbased, track  Facing Time OU TRvlin minnesota
+    {
+        id: 'gypsy_gypsy',
+        title: 'Gypsy',
+        artist: 'Gypsy',
+        year: 1970,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAM, criteria.SYMPHONIC, criteria.C_FOLK, criteria.GLITTER],
+        selectedTrackTitle: 'The Vision',
+        selectedTrackYtId: 'wwxGfrDduf0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Alfons Mucha'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'gypsy_in_the_garden',
+        title: 'In The Garden',
+        artist: 'Gypsy',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.LENGTHY_TRACKS], // TODO
+        selectedTrackTitle: 'As Far As You Can See',
+        selectedTrackYtId: 'todo', // TODO
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Lester Bellin'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'gypsy_antithesis',
+        title: 'Antithesis',
+        artist: 'Gypsy',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: 'Facing Time',
+        selectedTrackYtId: 'lG0VG3pKBW4',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO Gypsy - Unlock The Gates - 1973 - no - null + null - rockbased, orchestral, soft, religious PAS DU TOUT PROG track Precious One (ly2oInqM46k)
 ]
 
