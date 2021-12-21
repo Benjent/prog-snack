@@ -24,6 +24,7 @@ const regions = {
     QUEBEC: 'Québec',
     RUSSIA: 'Russia',
     SCOTLAND: 'Scotland',
+    SLOVAKIA: 'Slovakia',
     SOUTH_AFRICA: 'South Africa',
     SPAIN: 'Spain',
     SWEDEN: 'Sweden',
