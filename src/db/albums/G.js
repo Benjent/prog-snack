@@ -986,7 +986,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Gypsy - Unlock The Gates - 1973 - no - null + null - rockbased, orchestral, soft, religious PAS DU TOUT PROG track Precious One (ly2oInqM46k)
+    {
+        id: 'gypsy_unlock_the_gates',
+        title: 'Unlock The Gates',
+        artist: 'Gypsy',
+        year: 1973,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ROCK, criteria.ORCHESTRAL_PARTS, criteria.SOFT, criteria.SPIRITUAL],
+        selectedTrackTitle: 'Precious One',
+        selectedTrackYtId: 'ly2oInqM46k',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
