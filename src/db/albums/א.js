@@ -9,7 +9,7 @@ const albums = [
         year: 1979,
         country: regions.ISRAEL,
         cover: '.jpg',
-        criteria: [criteria.HEBREW, criteria.ODD_RHYTHM, criteria.C_ELECTRO],
+        criteria: [criteria.HEBREW, criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.SOFT_SEVENTIES],
         selectedTrackTitle: 'פרמיקס',
         selectedTrackYtId: 'He_RXiYpecc',
         spotifyId: '3rMv8mGgdowrKr5qwrxH9k',
