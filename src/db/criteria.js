@@ -8,6 +8,7 @@ const criteria = {
     
     // Language
     BRETON: 'BRETON',
+    BULGARIAN: 'BULGARIAN',
     CROATIAN: 'CROATIAN',
     FRENCH: 'FRENCH',
     GERMAN: 'GERMAN',
@@ -113,6 +114,7 @@ const criteriaOrder = [
     
     // Language
     criteria.BRETON,
+    criteria.BULGARIAN,
     criteria.CROATIAN,
     criteria.FRENCH,
     criteria.GERMAN,

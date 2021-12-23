@@ -11,6 +11,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.BLENDS]: 'Blends many music genres',
         [criteria.BLUESY]: 'Bluesy',
         [criteria.BRETON]: 'Breton sung',
+        [criteria.BULGARIAN]: 'Bulgarian sung',
 		[criteria.C_ELECTRO]: 'Contains electronic elements',
 		[criteria.C_FOLK]: 'Contains Folk elements',
 		[criteria.C_JAZZ]: 'Contains Jazz elements',
