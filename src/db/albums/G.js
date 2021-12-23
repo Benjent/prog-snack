@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'gf_fitzgerald_mouseproof',
+        title: `Mouseproof`,
+        artist: 'G.F. Fitz-Gerald',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.FEMALE, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Opal Pyramid Drifting Over Time`,
+        selectedTrackYtId: '01GA8JiWiLk',
+        spotifyId: '4haqXWamcfv6W5auorgakC',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'gaa_auf_der_bahn_zum_uranus',
         title: `Auf Der Bahn Zum Uranus`,
         artist: 'Gäa',
