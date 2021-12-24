@@ -704,8 +704,8 @@ const albums = [
         country: regions.ENGLAND,
         cover: '.jpg',
         criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.SPECTACULAR, criteria.TOUCHING_VOCALS],
-        selectedTrackTitle: 'New World', // TODO
-        selectedTrackYtId: 'todo',
+        selectedTrackTitle: 'New World',
+        selectedTrackYtId: 'MwMwMawCu0E',
         spotifyId: '1u024OvEmklRfbLGDxEWnf',
         deezerId: '228407',
         designers: ['William Blake', 'Paper Tiger'],
