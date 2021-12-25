@@ -1,7 +1,7 @@
 <template>
     <div class="select">
         <div class="select__input" @click="isDisplayedOptions = !isDisplayedOptions">
-            <div>{{ value || 'All' }}</div>
+            <div>{{ displayedValue }}</div>
             <div class="select__spacing"></div>
             <Arrow :orientation="isDisplayedOptions ? 'top' : 'bottom'"></Arrow>
         </div>
@@ -23,11 +23,20 @@ export default {
     props: {
         value: String,
         options: [Array, Object],
+        as: String,
     },
     data() {
         return {
             isDisplayedOptions: false,
         }
+    },
+    computed: {
+        displayedValue() {
+            if (this.value) {
+                return this.as ? this.value[this.as] : this.value
+            }
+            return 'All'
+        },
     },
     methods: {
         notifyParent(value) {
