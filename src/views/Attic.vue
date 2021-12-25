@@ -23,7 +23,7 @@
                 <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
             </div>
             <div class="attic__panel" v-if="isDisplayedLanguage">
-                <Select class="attic__filter" v-model="selectedLanguage" :options="languages" @input="filterAttic"></Select>
+                <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
                 <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">

@@ -7,7 +7,7 @@
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
             <div class="select__option" @click="notifyParent(null)">All</div>
-            <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ option }}</div>
+            <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</div>
         </div>
     </div>
 </template>
@@ -23,7 +23,7 @@ export default {
     props: {
         value: String,
         options: [Array, Object],
-        as: String,
+        filter: Function,
     },
     data() {
         return {
@@ -33,7 +33,7 @@ export default {
     computed: {
         displayedValue() {
             if (this.value) {
-                return this.as ? this.value[this.as] : this.value
+                return this.filter ? this.filter(this.value) : this.value
             }
             return 'All'
         },
