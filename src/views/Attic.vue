@@ -74,6 +74,7 @@ export default {
                     panel: 'Language',
                     isDisplayed: false,
                     criteria: [
+                        { criterium: criteria.BELARUSIAN, name: 'language' },
                         { criterium: criteria.BRETON, name: 'language' },
                         { criterium: criteria.CROATIAN, name: 'language' },
                         { criterium: criteria.FRENCH, name: 'language' },

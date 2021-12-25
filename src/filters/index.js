@@ -8,6 +8,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.ARENA]: 'Arena',
 		[criteria.ART_POP]: 'Art Pop',
 		[criteria.BAROQUE]: 'Baroque vibes',
+		[criteria.BELARUSIAN]: 'Belarusian sung',
 		[criteria.BLENDS]: 'Blends many music genres',
         [criteria.BLUESY]: 'Bluesy',
         [criteria.BRETON]: 'Breton sung',

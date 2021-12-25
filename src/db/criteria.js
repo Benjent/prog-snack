@@ -7,6 +7,7 @@ const criteria = {
     LIVE: 'LIVE',
     
     // Language
+    BELARUSIAN: 'BELARUSIAN',
     BRETON: 'BRETON',
     BULGARIAN: 'BULGARIAN',
     CROATIAN: 'CROATIAN',
@@ -113,6 +114,7 @@ const criteriaOrder = [
     criteria.LIVE,
     
     // Language
+    criteria.BELARUSIAN,
     criteria.BRETON,
     criteria.BULGARIAN,
     criteria.CROATIAN,
