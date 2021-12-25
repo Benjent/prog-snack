@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { criteria } from '../db/criteria.js';
+import { criteria, categories } from '../db/criteria.js';
 
 Vue.filter('criterium', (value) => {
     const mapper = {
@@ -8,9 +8,11 @@ Vue.filter('criterium', (value) => {
 		[criteria.ARENA]: 'Arena',
 		[criteria.ART_POP]: 'Art Pop',
 		[criteria.BAROQUE]: 'Baroque vibes',
+		[criteria.BELARUSIAN]: 'Belarusian sung',
 		[criteria.BLENDS]: 'Blends many music genres',
         [criteria.BLUESY]: 'Bluesy',
         [criteria.BRETON]: 'Breton sung',
+        [criteria.BULGARIAN]: 'Bulgarian sung',
 		[criteria.C_ELECTRO]: 'Contains electronic elements',
 		[criteria.C_FOLK]: 'Contains Folk elements',
 		[criteria.C_JAZZ]: 'Contains Jazz elements',
@@ -36,6 +38,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.HINDI]: 'Hindi sung',
 		[criteria.HISTORICAL]: 'Historical',
 		[criteria.HUMBLE]: 'Humble',
+		[criteria.HUNGARIAN]: 'Hungarian sung',
 		[criteria.IGBO]: 'Igbo sung',
 		[criteria.INSTRUMENTAL]: 'Mainly instrumental',
 		[criteria.ITALIAN]: 'Italian sung',
@@ -58,6 +61,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.RENAISSANCE]: 'Renaissance',
 		[criteria.ROCK]: 'Rock-based with a Prog touch',
 		[criteria.ROCK_OPERA]: 'Rock opera',
+		[criteria.RUSSIAN]: 'Russian sung',
 		[criteria.SANSKRIT]: 'Sanskrit sung',
 		[criteria.SCI_FI]: 'Sci-fi-influenced',
 		[criteria.SOCIOPOLITICAL]: 'Sociopolitical',
@@ -82,6 +86,26 @@ Vue.filter('criterium', (value) => {
     }
     if (!mapper[value]) {
         console.error(`Unable to find criteria with value: ${value}`)
+    }
+    return mapper[value]
+})
+
+Vue.filter('criteriumCategory', (value) => {
+    const mapper = {
+		[categories.ARRANGEMENT]: 'Arrangement',
+		[categories.CONTAINS]: 'Contains elements of',
+		[categories.ERA]: 'Era sound',
+		[categories.GENRE]: 'Main genre',
+		[categories.LANGUAGE]: 'Language',
+		[categories.LOUDNESS]: 'Loudness',
+		[categories.STRUCTURE]: 'Album structuration',
+		[categories.STYLE]: 'Style',
+		[categories.TEMPER]: 'Temper',
+		[categories.THEME]: 'Theme',
+		[categories.TYPE]: 'Type',
+    }
+    if (!mapper[value]) {
+        console.error(`Unable to find criteria category with value: ${value}`)
     }
     return mapper[value]
 })

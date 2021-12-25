@@ -1,13 +1,13 @@
 <template>
     <div class="select">
         <div class="select__input" @click="isDisplayedOptions = !isDisplayedOptions">
-            <div>{{ value || 'All' }}</div>
+            <div>{{ displayedValue }}</div>
             <div class="select__spacing"></div>
             <Arrow :orientation="isDisplayedOptions ? 'top' : 'bottom'"></Arrow>
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
             <div class="select__option" @click="notifyParent(null)">All</div>
-            <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ option }}</div>
+            <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</div>
         </div>
     </div>
 </template>
@@ -23,11 +23,20 @@ export default {
     props: {
         value: String,
         options: [Array, Object],
+        filter: Function,
     },
     data() {
         return {
             isDisplayedOptions: false,
         }
+    },
+    computed: {
+        displayedValue() {
+            if (this.value) {
+                return this.filter ? this.filter(this.value) : this.value
+            }
+            return 'All'
+        },
     },
     methods: {
         notifyParent(value) {

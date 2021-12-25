@@ -34,12 +34,38 @@ const albums = [
         similarAlbums: ['arachnoid_arachnoid'],
         isAGem: false,
     },
-    // TODO Ophiucus - Ophiucus - FRANCE
-    // french, c_psyche, folkbased, soft
-    // track Univers
-    // TODO Ophiucus - Salade Chinoise - FRANCE
-    // french, c_psyche, folkbased, soft
-    // track
+    {
+        id: 'ophiucus_ophiucus',
+        title: `Ophiucus`,
+        artist: 'Ophiucus',
+        year: 1972,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.FOLK, criteria.SOFT, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Univers',
+        selectedTrackYtId: 'ioWsZnkKdmI',
+        spotifyId: '50iLrfoZkt01mH1AVUawTC',
+        deezerId: '454810',
+        designers: ['Nicole Claveloux'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'ophiucus_salade_chinoise',
+        title: `Salade Chinoise`,
+        artist: 'Ophiucus',
+        year: 1973,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.C_FOLK, criteria.SOFT, criteria.ART_POP],
+        selectedTrackTitle: `L'instant D'une Nuit`,
+        selectedTrackYtId: 'W0No1LFhP8s',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Denis Le François'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'orang_utan_orang_utan',
         title: 'Orang-Utan',

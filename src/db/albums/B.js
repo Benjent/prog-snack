@@ -1441,7 +1441,7 @@ const albums = [
         year: 1971,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.ROCK],
+        criteria: [criteria.ROCK, criteria.JAM],
         selectedTrackTitle: 'No Cream For The Maid',
         selectedTrackYtId: 'u7SDkg6SbtY',
         spotifyId: '63nSBdFBwR9c8kvEIFvOGg',

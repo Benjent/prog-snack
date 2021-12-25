@@ -4,17 +4,30 @@
             <div class="attic__title attic__title--reset">
                 <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
             </div>
-            <div class="attic__title" @click="isDisplayedRegionYear = !isDisplayedRegionYear">
-                <div>Region &amp; Year</div>
-                <Arrow color=dark size="small" :orientation="isDisplayedRegionYear ? 'top' : 'bottom'"></Arrow>
+            <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
+                <div>Year</div>
+                <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
             </div>
-            <div class="attic__panel" v-if="isDisplayedRegionYear">
-                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
+            <div class="attic__panel" v-if="isDisplayedYear">
                 <Select class="attic__filter" v-model="selectedYear" :options="years" @input="filterAttic"></Select>
+            </div>
+            <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
+                <div>Region</div>
+                <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
+            </div>
+            <div class="attic__panel" v-if="isDisplayedRegion">
+                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
+            </div>
+            <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
+                <div>Language</div>
+                <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
+            </div>
+            <div class="attic__panel" v-if="isDisplayedLanguage">
+                <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
             </div>
             <div v-for="(panel, index) in filterModel" :key="panel.panel">
                 <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
-                    <div>{{ panel.panel }}</div>
+                    <div>{{ panel.panel | criteriumCategory }}</div>
                     <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
                 </div>
                 <div class="attic__panel" v-if="panel.isDisplayed">
@@ -29,7 +42,7 @@
                             :label="item.criterium | criterium" :key="item.criterium" 
                             @click.native="filterAttic(item.criterium)"></Check>
                     </template>
-                    <Check v-if="panel.panel === 'Type'" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
+                    <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
                 </div>
             </div>
         </aside>
@@ -41,7 +54,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
-import { criteria } from '../db/criteria.js';
+import { categories, categoriesOrder, criteria, criteriaCategory } from '../db/criteria.js';
 import Cover from '../components/Cover.vue'
 import Arrow from '../components/Arrow.vue'
 import Check from '../components/Check.vue'
@@ -58,175 +71,97 @@ export default {
     },
     data() {
         return {
+            categories,
             criteria,
-            filterModel: [
-                {
-                    panel: 'Type',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.CONCEPT, name: 'type' },
-                        { criterium: criteria.STORYLINE, name: 'type' },
-                        { criterium: criteria.SOUNDTRACK, name: 'type' },
-                        { criterium: criteria.LIVE, checked: false },
-                    ],
-                },
-                {
-                    panel: 'Language',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.BRETON, name: 'language' },
-                        { criterium: criteria.CROATIAN, name: 'language' },
-                        { criterium: criteria.FRENCH, name: 'language' },
-                        { criterium: criteria.GERMAN, name: 'language' },
-                        { criterium: criteria.GREEK, name: 'language' },
-                        { criterium: criteria.HEBREW, name: 'language' },
-                        { criterium: criteria.HINDI, name: 'language' },
-                        { criterium: criteria.HUNGARIAN, name: 'language' },
-                        { criterium: criteria.IGBO, name: 'language' },
-                        { criterium: criteria.ITALIAN, name: 'language' },
-                        { criterium: criteria.JAPANESE, name: 'language' },
-                        { criterium: criteria.PORTUGUESE, name: 'language' },
-                        { criterium: criteria.RUSSIAN, name: 'language' },
-                        { criterium: criteria.SPANISH, name: 'language' },
-                        { criterium: criteria.SWEDISH, name: 'language' },
-                        { criterium: criteria.ZEUHL, name: 'language' },
-                    ],
-                },
-                {
-                    panel: 'Theme',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.SCI_FI, name: 'theme' },
-                        { criterium: criteria.FANTASY, name: 'theme' },
-                        { criterium: criteria.MEDIEVAL, name: 'theme' },
-                        { criterium: criteria.OCCULT, name: 'theme' },
-                        { criterium: criteria.SPIRITUAL, name: 'theme' },
-                    ],
-                },
-                {
-                    panel: 'Main genre',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.ROCK, name: 'genre' },
-                        { criterium: criteria.JAZZ, name: 'genre' },
-                        { criterium: criteria.FOLK, name: 'genre' },
-                        { criterium: criteria.ELECTRO, name: 'genre' },
-                        { criterium: criteria.ART_POP, name: 'genre' },
-                        { criterium: criteria.AFROBEAT, name: 'genre' },
-                    ],
-                },
-                {
-                    panel: 'Contains elements of',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.C_JAZZ, checked: false },
-                        { criterium: criteria.C_FOLK, checked: false },
-                        { criterium: criteria.C_ELECTRO, checked: false },
-                        { criterium: criteria.C_PSYCHE, checked: false },
-                        { criterium: criteria.BLENDS, name: 'blend' },
-                    ],
-                },
-                {
-                    panel: 'Style',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.ODD_RHYTHM, checked: false },
-                        { criterium: criteria.TECHNICAL, checked: false },
-                        { criterium: criteria.INSTRUMENTAL, checked: false },
-                        { criterium: criteria.EXPERIMENTAL, checked: false },
-                        { criterium: criteria.JAM, checked: false },
-                        { criterium: criteria.SOPHISTICATED, checked: false },
-                        { criterium: criteria.BLUESY, checked: false },
-                        { criterium: criteria.JAZZY_GROOVY, checked: false },
-                        { criterium: criteria.ROCK_OPERA, checked: false },
-                        { criterium: criteria.FANFARE, checked: false },
-                        { criterium: criteria.SPACY, checked: false },
-                        { criterium: criteria.GLITTER, checked: false },
-                        { criterium: criteria.AMBIENT, checked: false },
-                        { criterium: criteria.ORIENTAL, checked: false },
-                        { criterium: criteria.RENAISSANCE, checked: false },
-                        { criterium: criteria.ARENA, checked: false },
-                    ],
-                },
-                {
-                    panel: 'Album structuration',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.LENGTHY_TRACKS, checked: false },
-                        { criterium: criteria.PATCHWORK, checked: false },
-                        { criterium: criteria.TRANSITION, checked: false },
-                        { criterium: criteria.SYMPHONIC, checked: false },
-                    ],
-                },
-                {
-                    panel: 'Era sound',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.CRISPY_SIXTIES, name: 'era' },
-                        { criterium: criteria.GREASY_SEVENTIES, name: 'era' },
-                        { criterium: criteria.SOFT_SEVENTIES, name: 'era' },
-                        { criterium: criteria.NEO_EIGHTIES, name: 'era' },
-                    ],
-                },
-                {
-                    panel: 'Loudness',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.SOFT, name: 'loudness' },
-                        { criterium: criteria.HEAVY, name: 'loudness' },
-                        { criterium: criteria.HUMBLE, name: 'loudness' },
-                        { criterium: criteria.SPECTACULAR, name: 'loudness' },
-                    ],
-                },
-                {
-                    panel: 'Arrangement',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.UNCOMMON_INSTRUMENTS, checked: false },
-                        { criterium: criteria.FEMALE, checked: false },
-                        { criterium: criteria.SOUND_COLLAGES, checked: false },
-                        { criterium: criteria.ORCHESTRAL_PARTS, checked: false },
-                        { criterium: criteria.BAROQUE, checked: false },
-                    ],
-                },
-                {
-                    panel: 'Temper',
-                    isDisplayed: false,
-                    criteria: [
-                        { criterium: criteria.FUNNY, checked: false },
-                        { criterium: criteria.TOUCHING_VOCALS, checked: false },
-                    ],
-                },
-            ],
-            isDisplayedRegionYear: false,
+            filterModel: [],
+            isDisplayedLanguage: false,
+            isDisplayedRegion: false,
+            isDisplayedYear: false,
+            selectedLanguage: null,
             selectedRegion: null,
             selectedYear: null,
             onlyGems: false,
             radioGroups: {
-                type: null,
-                language: null,
-                theme: null,
-                genre: null,
-                blend: null,
-                era: null,
-                loudness: null,
+                [categories.TYPE]: null,
+                [categories.THEME]: null,
+                [categories.GENRE]: null,
+                [categories.BLEND]: null,
+                [categories.ERA]: null,
+                [categories.LOUDNESS]: null,
             },
         }
     },
     computed: {
         ...mapState(['albums', 'regions', 'albumsPerYear']),
+        languages() {
+            return criteriaCategory[categories.LANGUAGE]
+        },
         years() {
             return Object.keys(this.albumsPerYear)
         },
     },
+    created() {
+        this.generateCriteriaFilterModel()
+    },
     methods: {
         ...mapActions(['selectAlbum']),
+        generateCriteriaFilterModel() {
+            const exclusiveCriteria = [
+                criteria.CONCEPT,
+                criteria.STORYLINE,
+                criteria.SOUNDTRACK,
+                criteria.SCI_FI,
+                criteria.FANTASY,
+                criteria.MEDIEVAL,
+                criteria.OCCULT,
+                criteria.SPIRITUAL,
+                criteria.SOCIOPOLITICAL,
+                criteria.HISTORICAL,
+                criteria.ROCK,
+                criteria.JAZZ,
+                criteria.FOLK,
+                criteria.ELECTRO,
+                criteria.ART_POP,
+                criteria.AFROBEAT,
+                criteria.BLENDS,
+                criteria.CRISPY_SIXTIES,
+                criteria.GREASY_SEVENTIES,
+                criteria.SOFT_SEVENTIES,
+                criteria.NEO_EIGHTIES,
+                criteria.SOFT,
+                criteria.HEAVY,
+                criteria.HUMBLE,
+                criteria.SPECTACULAR,
+            ]
+            Object.entries(criteriaCategory).forEach(([key, value]) => {
+                const filterPanel = {
+                    panel: key,
+                    isDisplayed: false,
+                    criteria: value.map((criterium) => {
+                        const c = {
+                            criterium,
+                        }
+                        if (exclusiveCriteria.includes(criterium)) {
+                            c.name = key
+                        } else {
+                            c.checked = false
+                        }
+                        return c
+                    }),
+                }
+                if (key !== 'LANGUAGE') {
+                    // We use a select for languages for a bit
+                    this.filterModel.push(filterPanel)
+                }
+            })
+            this.filterModel.sort((a, b) => categoriesOrder.indexOf(a) > categoriesOrder.indexOf(b))
+        },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
             this.$router.push('/discographies')
         },
         resetFilter() {
-            // Reset region & year
+            this.selectedLanguage = null
             this.selectedRegion = null
             this.selectedYear = null
             this.onlyGems = false
@@ -269,14 +204,15 @@ export default {
 
             this.albums.forEach((a) => {
                 const albumDom = document.querySelector(`.${a.id}`)
-                // Region & Year, Gem
                 const isAMatch = {
                     year: true,
                     region: true,
+                    language: true,
                     gem: true,
                 }
                 isAMatch.year = this.selectedYear ? a.year == this.selectedYear : true
                 isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
+                isAMatch.language = this.selectedLanguage ? a.criteria.includes(this.selectedLanguage) : true
                 isAMatch.gem = this.onlyGems ? a.isAGem : true
                 isAMatch.criteria = wantedCriteria.every((c) => a.criteria.includes(c))
                 

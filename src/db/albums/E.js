@@ -644,12 +644,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO L'engoulevent, QUEBEC, c_folk, uncommon, french
-    // designer: Ronald Labelle
-    // null + null
-    // TODO dexuèieme alum
-    // null + null
-    // designer null
+    {
+        id: 'lengoulevent_lile_ou_vivent_les_loups',
+        title: `L'île Où Vivent Les Loups`,
+        artist: `L'engoulevent`,
+        year: 1977,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.FRENCH, criteria.ODD_RHYTHM, criteria.FEMALE, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'Voix Et Violon',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Ronald Labelle'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'lengoulevent_etoifilan',
+        title: `Étoifilan`,
+        artist: `L'engoulevent`,
+        year: 1979,
+        country: regions.QUEBEC,
+        cover: '.jpg',
+        criteria: [criteria.SOUNDTRACK, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.FRENCH],
+        selectedTrackTitle: 'La Chanson Des Planètes',
+        selectedTrackYtId: 'TPkWAkWVB1s',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'eno_moebius_roedelius_after_the_heat',
         title: 'After The Heat',

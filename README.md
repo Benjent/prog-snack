@@ -23,11 +23,8 @@ npm run build
 npm run lint
 ```
 
-### Deployment
-Automated thanks to [this guy](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg)
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deploys to GitHub pages
+On /master merge, thanks to [this action](https://github.com/marketplace/actions/deploy-vue-apps-to-github-pages).
 
 ## Guidelines
 
