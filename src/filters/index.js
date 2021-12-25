@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { criteria, criteriaCategory } from '../db/criteria.js';
+import { criteria, categories } from '../db/criteria.js';
 
 Vue.filter('criterium', (value) => {
     const mapper = {
@@ -38,6 +38,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.HINDI]: 'Hindi sung',
 		[criteria.HISTORICAL]: 'Historical',
 		[criteria.HUMBLE]: 'Humble',
+		[criteria.HUNGARIAN]: 'Hungarian sung',
 		[criteria.IGBO]: 'Igbo sung',
 		[criteria.INSTRUMENTAL]: 'Mainly instrumental',
 		[criteria.ITALIAN]: 'Italian sung',
@@ -60,6 +61,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.RENAISSANCE]: 'Renaissance',
 		[criteria.ROCK]: 'Rock-based with a Prog touch',
 		[criteria.ROCK_OPERA]: 'Rock opera',
+		[criteria.RUSSIAN]: 'Russian sung',
 		[criteria.SANSKRIT]: 'Sanskrit sung',
 		[criteria.SCI_FI]: 'Sci-fi-influenced',
 		[criteria.SOCIOPOLITICAL]: 'Sociopolitical',
@@ -90,17 +92,17 @@ Vue.filter('criterium', (value) => {
 
 Vue.filter('criteriumCategory', (value) => {
     const mapper = {
-		[criteriaCategory.arrangement]: 'Arrangement',
-		[criteriaCategory.contains]: 'Contains elements of',
-		[criteriaCategory.era]: 'Era sound',
-		[criteriaCategory.genre]: 'Main genre',
-		[criteriaCategory.language]: 'Language',
-		[criteriaCategory.loudness]: 'Loudness',
-		[criteriaCategory.structure]: 'Album structuration',
-		[criteriaCategory.style]: 'Style',
-		[criteriaCategory.temper]: 'Temper',
-		[criteriaCategory.theme]: 'Theme',
-		[criteriaCategory.type]: 'Type',
+		[categories.ARRANGEMENT]: 'Arrangement',
+		[categories.CONTAINS]: 'Contains elements of',
+		[categories.ERA]: 'Era sound',
+		[categories.GENRE]: 'Main genre',
+		[categories.LANGUAGE]: 'Language',
+		[categories.LOUDNESS]: 'Loudness',
+		[categories.STRUCTURE]: 'Album structuration',
+		[categories.STYLE]: 'Style',
+		[categories.TEMPER]: 'Temper',
+		[categories.THEME]: 'Theme',
+		[categories.TYPE]: 'Type',
     }
     if (!mapper[value]) {
         console.error(`Unable to find criteria category with value: ${value}`)

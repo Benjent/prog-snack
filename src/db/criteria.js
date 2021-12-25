@@ -211,9 +211,42 @@ const criteriaOrder = [
     criteria.ORCHESTRAL_PARTS,
 ]
 
+const categories = {
+    TYPE: 'TYPE',
+    LANGUAGE: 'LANGUAGE',
+    THEME: 'THEME',
+    GENRE: 'GENRE',
+    CONTAINS: 'CONTAINS',
+    STYLE: 'STYLE',
+    STRUCTURE: 'STRUCTURE',
+    ERA: 'ERA',
+    LOUDNESS: 'LOUDNESS',
+    ARRANGEMENT: 'ARRANGEMENT',
+    TEMPER: 'TEMPER',
+}
+
+const categoriesOrder = [
+    categories.TYPE,
+    categories.LANGUAGE,
+    categories.THEME,
+    categories.GENRE,
+    categories.CONTAINS,
+    categories.STYLE,
+    categories.STRUCTURE,
+    categories.ERA,
+    categories.LOUDNESS,
+    criteria.ARRANGEMENT,
+    criteria.TEMPER,
+]
+
 const criteriaCategory = {
-    type: [criteria.CONCEPT, criteria.STORYLINE, criteria.SOUNDTRACK, criteria.LIVE],
-    language: [
+    [categories.TYPE]: [
+        criteria.CONCEPT,
+        criteria.STORYLINE,
+        criteria.SOUNDTRACK,
+        criteria.LIVE
+    ],
+    [categories.LANGUAGE]: [
         criteria.BELARUSIAN,
         criteria.BRETON,
         criteria.BULGARIAN,
@@ -235,7 +268,7 @@ const criteriaCategory = {
         criteria.TIBETAN,
         criteria.ZEUHL,
     ],
-    theme: [
+    [categories.THEME]: [
         criteria.SCI_FI,
         criteria.FANTASY,
         criteria.MEDIEVAL,
@@ -244,7 +277,7 @@ const criteriaCategory = {
         criteria.SOCIOPOLITICAL,
         criteria.HISTORICAL,
     ],
-    genre: [
+    [categories.GENRE]: [
         criteria.ROCK,
         criteria.JAZZ,
         criteria.FOLK,
@@ -252,14 +285,14 @@ const criteriaCategory = {
         criteria.ART_POP,
         criteria.AFROBEAT,
     ],
-    contains: [
+    [categories.CONTAINS]: [
         criteria.BLENDS,
         criteria.C_JAZZ,
         criteria.C_FOLK,
         criteria.C_ELECTRO,
         criteria.C_PSYCHE,
     ],
-    style: [
+    [categories.STYLE]: [
         criteria.ODD_RHYTHM,
         criteria.TECHNICAL,
         criteria.INSTRUMENTAL,
@@ -281,34 +314,34 @@ const criteriaCategory = {
         criteria.RENAISSANCE,
         criteria.ARENA,
     ],
-    structure: [
+    [categories.STRUCTURE]: [
         criteria.LENGTHY_TRACKS,
         criteria.PATCHWORK,
         criteria.TRANSITION,
         criteria.SYMPHONIC,
     ],
-    era: [
+    [categories.ERA]: [
         criteria.CRISPY_SIXTIES,
         criteria.GREASY_SEVENTIES,
         criteria.SOFT_SEVENTIES,
         criteria.NEO_EIGHTIES,
     ],
-    loudness: [
+    [categories.LOUDNESS]: [
         criteria.SOFT,
         criteria.HEAVY,
         criteria.HUMBLE,
         criteria.SPECTACULAR,
     ],
-    arrangement: [
+    [categories.ARRANGEMENT]: [
         criteria.UNCOMMON_INSTRUMENTS,
         criteria.FEMALE,
         criteria.SOUND_COLLAGES,
         criteria.ORCHESTRAL_PARTS,
     ],
-    temper: [
+    [categories.TEMPER]: [
         criteria.FUNNY,
         criteria.TOUCHING_VOCALS,
     ],
 }
 
-export { criteria, criteriaOrder, criteriaCategory }
+export { categories, categoriesOrder, criteria, criteriaOrder, criteriaCategory }
