@@ -1,4 +1,4 @@
-// Remember to update Attic filter
+// 3-occurence update : the criterium, its position in the criteria list and its categorization
 const criteria = {
     // Concept
     CONCEPT: 'CONCEPT',
@@ -105,7 +105,6 @@ const criteria = {
     ORCHESTRAL_PARTS: 'ORCHESTRAL_PARTS',
 }
 
-// ALWAYS sync above model with below model to sort the VM criteria
 const criteriaOrder = [
     // Concept
     criteria.CONCEPT,
@@ -212,4 +211,104 @@ const criteriaOrder = [
     criteria.ORCHESTRAL_PARTS,
 ]
 
-export { criteria, criteriaOrder }
+const criteriaCategory = {
+    type: [criteria.CONCEPT, criteria.STORYLINE, criteria.SOUNDTRACK, criteria.LIVE],
+    language: [
+        criteria.BELARUSIAN,
+        criteria.BRETON,
+        criteria.BULGARIAN,
+        criteria.CROATIAN,
+        criteria.FRENCH,
+        criteria.GERMAN,
+        criteria.GREEK,
+        criteria.HEBREW,
+        criteria.HINDI,
+        criteria.HUNGARIAN,
+        criteria.IGBO,
+        criteria.ITALIAN,
+        criteria.JAPANESE,
+        criteria.PORTUGUESE,
+        criteria.RUSSIAN,
+        criteria.SANSKRIT,
+        criteria.SPANISH,
+        criteria.SWEDISH,
+        criteria.TIBETAN,
+        criteria.ZEUHL,
+    ],
+    theme: [
+        criteria.SCI_FI,
+        criteria.FANTASY,
+        criteria.MEDIEVAL,
+        criteria.OCCULT,
+        criteria.SPIRITUAL,
+        criteria.SOCIOPOLITICAL,
+        criteria.HISTORICAL,
+    ],
+    genre: [
+        criteria.ROCK,
+        criteria.JAZZ,
+        criteria.FOLK,
+        criteria.ELECTRO,
+        criteria.ART_POP,
+        criteria.AFROBEAT,
+    ],
+    contains: [
+        criteria.BLENDS,
+        criteria.C_JAZZ,
+        criteria.C_FOLK,
+        criteria.C_ELECTRO,
+        criteria.C_PSYCHE,
+    ],
+    style: [
+        criteria.ODD_RHYTHM,
+        criteria.TECHNICAL,
+        criteria.INSTRUMENTAL,
+        criteria.EXPERIMENTAL,
+        criteria.JAM,
+        criteria.SOPHISTICATED,
+        criteria.BLUESY,
+        criteria.JAZZY_GROOVY,
+        criteria.PIANO,
+        criteria.ROCK_OPERA,
+        criteria.FANFARE,
+        criteria.SPACY,
+        criteria.GLITTER,
+        criteria.ORIENTAL,
+        criteria.LATINO,
+        criteria.CELTIC,
+        criteria.AMBIENT,
+        criteria.BAROQUE,
+        criteria.RENAISSANCE,
+        criteria.ARENA,
+    ],
+    structure: [
+        criteria.LENGTHY_TRACKS,
+        criteria.PATCHWORK,
+        criteria.TRANSITION,
+        criteria.SYMPHONIC,
+    ],
+    era: [
+        criteria.CRISPY_SIXTIES,
+        criteria.GREASY_SEVENTIES,
+        criteria.SOFT_SEVENTIES,
+        criteria.NEO_EIGHTIES,
+    ],
+    loudness: [
+        criteria.SOFT,
+        criteria.HEAVY,
+        criteria.HUMBLE,
+        criteria.SPECTACULAR,
+    ],
+    arrangement: [
+        criteria.UNCOMMON_INSTRUMENTS,
+        criteria.FEMALE,
+        criteria.SOUND_COLLAGES,
+        criteria.ORCHESTRAL_PARTS,
+    ],
+    temper: [
+        criteria.FUNNY,
+        criteria.TOUCHING_VOCALS,
+    ],
+}
+
+export { criteria, criteriaOrder, criteriaCategory }
