@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { criteria } from '../db/criteria.js';
+import { criteria, criteriaCategory } from '../db/criteria.js';
 
 Vue.filter('criterium', (value) => {
     const mapper = {
@@ -84,6 +84,26 @@ Vue.filter('criterium', (value) => {
     }
     if (!mapper[value]) {
         console.error(`Unable to find criteria with value: ${value}`)
+    }
+    return mapper[value]
+})
+
+Vue.filter('criteriumCategory', (value) => {
+    const mapper = {
+		[criteriaCategory.arrangement]: 'Arrangement',
+		[criteriaCategory.contains]: 'Contains elements of',
+		[criteriaCategory.era]: 'Era sound',
+		[criteriaCategory.genre]: 'Main genre',
+		[criteriaCategory.language]: 'Language',
+		[criteriaCategory.loudness]: 'Loudness',
+		[criteriaCategory.structure]: 'Album structuration',
+		[criteriaCategory.style]: 'Style',
+		[criteriaCategory.temper]: 'Temper',
+		[criteriaCategory.theme]: 'Theme',
+		[criteriaCategory.type]: 'Type',
+    }
+    if (!mapper[value]) {
+        console.error(`Unable to find criteria category with value: ${value}`)
     }
     return mapper[value]
 })
