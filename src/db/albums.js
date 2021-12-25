@@ -1,5 +1,3 @@
-import regions from './regions'
-import { criteria } from './criteria'
 import albumsA from './albums/A'
 import albumsB from './albums/B'
 import albumsC from './albums/C'
