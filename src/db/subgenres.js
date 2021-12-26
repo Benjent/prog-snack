@@ -59,7 +59,7 @@ const subgenres = [
     },
     {
         name: 'Eclectic',
-        description: `TODO description`,
+        description: `The music is sophisticated, diverse, delicate, in a way that it is hard to tell if the albums belongs to only one genre.`,
         mostRepresentativeAlbum: 'gentle_giant_acquiring_the_taste',
         albums: [
             'king_crimson_red',
@@ -70,7 +70,7 @@ const subgenres = [
     },
     {
         name: 'Electro Rock',
-        description: `TODO description`,
+        description: `The main instrument is a synthesizer and there may not even be guitars. This subgenre gained popularity at the very end of the 70's to be mostly around in the 80's.`,
         mostRepresentativeAlbum: 'electric_light_orchestra_time',
         albums: [
             'asia_asia',
@@ -95,7 +95,7 @@ const subgenres = [
     },
     {
         name: 'Folk',
-        description: `TODO description`,
+        description: `When Folk music incorporates psychedelic elements or tells a story throughout a whole album.`,
         mostRepresentativeAlbum: 'spirogyra_old_boot_wine',
         albums: [
             'comus_first_utterance',
@@ -108,7 +108,7 @@ const subgenres = [
     },
     {
         name: 'Glitter',
-        description: `TODO description`,
+        description: `This subgenre puts the emphasis on the vocal harmonies, often high-pitched, and is considered Progressive by way of electronic music layers that give a spectacular, wrongly tagged as "symphonic" music.`,
         mostRepresentativeAlbum: 'windchase_symphinity',
         albums: [
             'starcastle_starcastle',
@@ -120,7 +120,7 @@ const subgenres = [
     },
     {
         name: 'Groove / Jazz Fusion',
-        description: `TODO description`,
+        description: `Very similar to Jazz Rock / Jazz Fusion, this subgenre incorporates Jazz singing and less jams for the warm feeling of groove music.`,
         mostRepresentativeAlbum: 'foehn_faeria',
         albums: [
             'messengers_children_of_tomorrow',
@@ -159,7 +159,7 @@ const subgenres = [
     },
     {
         name: 'Jazz Rock / Jazz Fusion',
-        description: `TODO description`,
+        description: `This Jazz subgenre flirts with Progressive Rock music with synthesizers and guitars. It is almost always instrumental with technical jams.`,
         mostRepresentativeAlbum: 'frank_zappa_hot_rats',
         albums: [
             'return_to_forever_romantic_warrior',
