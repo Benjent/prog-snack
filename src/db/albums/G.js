@@ -863,7 +863,7 @@ const albums = [
         title: 'The Feed-Back',
         artist: 'Gruppo Di Improvvisazione Nuova Consonanza',
         year: 1970,
-        country: regions.ENGLAND,
+        country: regions.ITALY,
         cover: '.jpg',
         criteria: [criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS],
         selectedTrackTitle: 'The Feed-Back',
