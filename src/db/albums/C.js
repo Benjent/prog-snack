@@ -1130,7 +1130,7 @@ const albums = [
         cover: '.jpg',
         criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.FEMALE, criteria.LENGTHY_TRACKS, criteria.C_FOLK, criteria.C_ELECTRO, criteria.SYMPHONIC],
         selectedTrackTitle: 'Kel Epik Epok Opak!',
-        selectedTrackYtId: 'todo',
+        selectedTrackYtId: 'wK4cwlnKbsg',
         spotifyId: '6hbuM07EVLX088JhuUw21a',
         deezerId: '11263878',
         designers: ['Patrice Larue'],
