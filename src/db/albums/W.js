@@ -98,24 +98,86 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Weather Report - 1971
-    // jazzy, instru, jazz, jam, c_psyche
-    // track: Orange Lady
-    // 115810 + 6MBWaIBPJG7iAqJGIQvMkL
-    // jazzy, instru, jazz, jam, c_psyche
-    // TODO I sing
-    // instru, jazz, jam, c_psyche
-    // 242471 + 5W6Amj3WJHHjp8i1PBaakK
-    // TODO Sweetnigter -> STILL PROG
-    // jam, jazzygroovy, lengthy, instru, c_jazz, uncommon
-    // 113562 + 3i9ydF6tp0qsaIBw5VRjmV
-    // TODO mysterious traveler
-    // c_psyche, jazzbased, jazzygroovy instru, female, jam // NOT THAT PROG
-    // track scarlet woman
-    // 97705 + 2JARH6A2TX28OzcPwJnD1p
-    // TODO tale spinnin
-    // instru, jazzy-groovy, c_jazz
-    // 98399 + 12vjm3VGNfgIuXbaNWwUCm
+    {
+        id: 'weather_report_weather_report',
+        title: 'Weather Report',
+        artist: 'Weather Report',
+        year: 1971,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAZZ, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL, criteria.JAM, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Orange Lady',
+        selectedTrackYtId: 'HC3zNYlMlQc',
+        spotifyId: '6MBWaIBPJG7iAqJGIQvMkL',
+        deezerId: '115810',
+        designers: ['Ed Lee'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'weather_report_i_sing_the_body_electric',
+        title: 'I Sing The Body Electric',
+        artist: 'Weather Report',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAZZ, criteria.INSTRUMENTAL, criteria.JAM, criteria.C_PSYCHE],
+        selectedTrackTitle: 'The Moors',
+        selectedTrackYtId: 'S9nGrC8R8a4',
+        spotifyId: '5W6Amj3WJHHjp8i1PBaakK',
+        deezerId: '242471',
+        designers: ['Fred Swanson', 'Jack Trompetter', 'Ed Lee'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'weather_report_sweetnighter',
+        title: 'Sweetnighter',
+        artist: 'Weather Report',
+        year: 1973,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.JAM, criteria.JAZZY_GROOVY, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: 'Boogie Woogie Waltz',
+        selectedTrackYtId: 'FiN-myhPEdI',
+        spotifyId: '3i9ydF6tp0qsaIBw5VRjmV',
+        deezerId: '113562',
+        designers: ['Dick Hess', 'John Berg'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'weather_report_mysterious_traveler',
+        title: 'Mysterious Traveler',
+        artist: 'Weather Report',
+        year: 1974,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.JAM, criteria.JAZZY_GROOVY, criteria.C_PSYCHE, criteria.FEMALE, criteria.ODD_RHYTHM],
+        selectedTrackTitle: 'Scarlet Woman',
+        selectedTrackYtId: 'ScxBQ6DUGEI',
+        spotifyId: '2JARH6A2TX28OzcPwJnD1p',
+        deezerId: '97705',
+        designers: ['Helmut K. Wimmer', 'Teresa Alfieri'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'weather_report_tale_spinnin',
+        title: `Tale Spinnin'`,
+        artist: 'Weather Report',
+        year: 1975,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAZZ, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.SOFT],
+        selectedTrackTitle: 'Badia',
+        selectedTrackYtId: 'B6ebkAx6iHQ',
+        spotifyId: '12vjm3VGNfgIuXbaNWwUCm',
+        deezerId: '98399',
+        designers: ['Teresa Alfieri', 'John Berg'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'weather_report_black_market',
         title: 'Black Market',
