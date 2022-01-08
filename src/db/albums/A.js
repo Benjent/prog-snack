@@ -33,7 +33,7 @@ const albums = [
         designers: ['Ian Sugar'],
         similarAlbums: [],
         isAGem: true,
-        description: `TODO`,
+        description: `TODO Description`,
     },
     {
         id: 'abstract_truth_silver_trees',
