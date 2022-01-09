@@ -146,15 +146,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Fela Kuti & Africa '70
-    // TODO Fela's london scene
-    // lengthy, jazzygroovy, jam, cjazz
-    // track is egbe mi oh
-    // TODO Open & Close
-    // lengthy, jazzygroovy, jam, cjazz, instrumental
-    // track is Swegbe & Pako
-    // TODO everything scatter tjs Prog
-    // track is who no go know no
+    {
+        id: 'fernando_yvosky_dos_mundos',
+        title: 'Dos Mundos',
+        artist: 'Fernando Yvosky',
+        year: 1975,
+        country: regions.VENEZUELA,
+        cover: '.jpg',
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.SPANISH, criteria.SYMPHONIC, criteria.C_FOLK, criteria.LATINO, criteria.RENAISSANCE, criteria.C_ELECTRO, criteria.C_PSYCHE],
+        selectedTrackTitle: 'Es Difícil Expresarlo',
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Arístides Silva'],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`, // pas de riff qui restent en tête, mais la passion se ressent tellement dans l'oeuvre
+    },
     {
         id: 'fiori_seguin_deux_cents_nuits_a_lheure',
         title: `Deux Cents Nuits À L'heure`,
