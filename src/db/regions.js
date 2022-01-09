@@ -32,6 +32,7 @@ const regions = {
     SWEDEN: 'Sweden',
     SWITZERLAND: 'Switzerland',
     USA: 'USA', // TODO split by region
+    VENEZUELA: 'Venezuela',
     WALES: 'Wales',
 }
 
