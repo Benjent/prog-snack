@@ -807,6 +807,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'metabolisme_tempus_fugit',
+        title: 'Tempus Fugit',
+        artist: 'Métabolisme',
+        year: 1977,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC], // TODO
+        selectedTrackTitle: 'Apôtres Et Martyrs',
+        selectedTrackYtId: 'VX7hkYazq58',
+        spotifyId: '0xcbIKxMZRUy5MpMQhMyg2',
+        deezerId: '438874',
+        designers: ['Marie-France Peronne'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'metropolis_metropolis',
         title: 'Metropolis',
         artist: 'Metropolis',
