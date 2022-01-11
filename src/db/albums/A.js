@@ -615,9 +615,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Alfredo Carrión - Los Andares Del Alquimista - 1976 - SPAIN
-    // spanish, folk, female
-    // designers: José Luis Tellez
+    {
+        id: 'alfredo_carrion_los_andares_del_alquimista',
+        title: 'Los Andares Del Alquimista',
+        artist: 'Alfredo Carrión',
+        year: 1976,
+        country: regions.SPAIN,
+        cover: '.jpg',
+        criteria: [criteria.SPANISH, criteria.FOLK, criteria.FEMALE, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: 'Los Andares Del Alquimista',
+        selectedTrackYtId: 'w8TGWwNtwxg',
+        spotifyId: '6oslA2TdcVFVRPShHUpogK',
+        deezerId: null,
+        designers: ['José Luis Tellez'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'algarnas_tradgard_framtiden_ar_ett_svavande_skepp_forankrat_i_forntiden',
         title: `Framtiden Är Ett Svävande Skepp, Förankrat I Forntiden`,
