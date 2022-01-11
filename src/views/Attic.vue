@@ -85,7 +85,7 @@ export default {
                 [categories.TYPE]: null,
                 [categories.THEME]: null,
                 [categories.GENRE]: null,
-                [categories.BLEND]: null,
+                [categories.CONTAINS]: null,
                 [categories.ERA]: null,
                 [categories.LOUDNESS]: null,
             },
@@ -93,6 +93,9 @@ export default {
     },
     computed: {
         ...mapState(['albums', 'regions', 'albumsPerYear']),
+        containsElementsOfCriteria() {
+            return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
+        },
         languages() {
             return criteriaCategory[categories.LANGUAGE]
         },
@@ -181,16 +184,15 @@ export default {
             })
         },
         filterAttic(criteriumClicked) {
-            const filterModelContains = this.filterModel[4].criteria // TODO computed
-            const containsCriteria = filterModelContains.map((i) => i.criterium)
+            const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium)
             if (criteriumClicked === criteria.BLENDS) {
-                filterModelContains.forEach((c) => {
+                this.containsElementsOfCriteria.forEach((c) => {
                     if (c.checked) {
                         c.checked = false
                     }
                 })
             } else if (containsCriteria.includes(criteriumClicked)) {
-                this.radioGroups.blend = null
+                this.radioGroups[categories.CONTAINS] = null
             }
             // Filter model
             const wantedCriteria = []
