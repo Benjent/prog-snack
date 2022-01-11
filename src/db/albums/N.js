@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'nascita_della_sfera_per_una_scultura_di_ceschia',
+        title: 'Per Una Scultura Di Ceschia',
+        artist: 'Nascita Della Sfera',
+        year: 1978,
+        country: regions.ITALY,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.EXPERIMENTAL, criteria.INSTRUMENTAL, criteria.ELECTRO, criteria.SOUND_COLLAGES, criteria.ITALIAN, criteria.C_PSYCHE, criteria.CONCEPT, criteria.UNCOMMON_INSTRUMENTS, criteria.PATCHWORK],
+        selectedTrackTitle: 'Pianeta Terra',
+        selectedTrackYtId: 'ER8Ke6PKuwQ',
+        spotifyId: '01nUq7U9hzDvAP6hQho0jd',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'national_health_national_health',
         title: 'National Health',
         artist: 'National Health',
