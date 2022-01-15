@@ -246,6 +246,23 @@ const albums = [
         description: `TODO Description`,
     },
     {
+        id: 'jan_hammer_oh_yeah',
+        title: 'Oh, Yeah?',
+        artist: 'Jan Hammer',
+        year: 1976,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.C_ELECTRO, criteria.C_JAZZ, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.JAM, criteria.JAZZY_GROOVY, criteria.TECHNICAL],
+        selectedTrackTitle: 'Magical Dog',
+        selectedTrackYtId: 'VssoeZ5-OQA',
+        spotifyId: '01LMpmmWIm9FUnG0hBiQM3',
+        deezerId: '494847',
+        designers: [],
+        similarAlbums: [], // TODO similar mahavishnu orch
+        isAGem: false,
+    },
+    // TODO Jan Hammer - Melodies - 1977 introuvable
+    {
         id: 'janus_it_al_maestrale',
         title: 'Al Maestrale',
         artist: 'Janus (IT)',
