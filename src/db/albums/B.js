@@ -598,15 +598,25 @@ const albums = [
         spotifyId: '37rNuexqEXWeSIOiJtn3A9',
         deezerId: '5909501',
         designers: [],
-        similarAlbums: [], // todo similar rolling stones psyche
+        similarAlbums: [], // TODO similar rolling stones psyche
         isAGem: false,
     },
-    // TODO Surf's Up 5909111 + 
-    // folkbased, c_psyche
-    // track is Looking At Tomorrow ? OU Feel Flows
-    // TODO Holland 5909451 +
-    // artpop
-    // track California Saga III: California (attention au wording) OU Leaving This Town
+    {
+        id: 'the_beach_boys_holland',
+        title: 'Holland',
+        artist: 'The Beach Boys',
+        year: 1967,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.ART_POP, criteria.C_FOLK, criteria.GLITTER, criteria.PIANO],
+        selectedTrackTitle: `California Saga (California)`,
+        selectedTrackYtId: 'Niib3CNFQx8',
+        spotifyId: null,
+        deezerId: '5909451',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'the_beatles_revolver',
         title: 'Revolver',
