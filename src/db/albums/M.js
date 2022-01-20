@@ -507,7 +507,7 @@ const albums = [
         year: 1978,
         country: regions.ITALY,
         cover: '.jpg',
-        criteria: [criteria.FOLK, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS],
+        criteria: [criteria.FOLK, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
         selectedTrackTitle: 'Il Sole Sulla Palude',
         selectedTrackYtId: 'zXuj2BJ-dsQ',
         spotifyId: null,
