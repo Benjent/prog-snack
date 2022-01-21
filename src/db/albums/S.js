@@ -391,7 +391,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO introuvable Space - Deeper Zone - 1980 - null + 5mOp4lqK68kw3HJX0vzq4M - designers Bernard Monié
+    {
+        id: 'space_deeper_zone',
+        title: 'Deeper Zone',
+        artist: 'Space',
+        year: 1980,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.ELECTRO, criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.FEMALE, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: 'Deeper Zone',
+        selectedTrackYtId: '-7IME_3lsgc',
+        spotifyId: '5mOp4lqK68kw3HJX0vzq4M',
+        deezerId: null,
+        designers: ['Bernard Monié'],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: 'spirit_spirit',
         title: 'Spirit',
