@@ -51,6 +51,26 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'ralf_nowy_lucifers_dream',
+        title: `Lucifer's Dream`,
+        artist: 'Ralf Nowy',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.ORCHESTRAL_PARTS, criteria.JAZZY_GROOVY, criteria.ORIENTAL],
+        selectedTrackTitle: 'Breadhead',
+        selectedTrackYtId: 'M1NPLoAXlRY',
+        spotifyId: '5svUx39Ii3WDQ7JwGCeB0l',
+        deezerId: '392109',
+        designers: ['Albert Leuthenmayr'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Ralf Nowy - Escalation introuvable
+    // null + null
+    // TODO Ralf Nowy - Nowy 2 introuvable
+    // null + null
+    {
         id: 'ralph_lundsten_erik_xiv_och_ristningar',
         title: 'Erik XIV Och Ristningar',
         artist: 'Ralph Lundsten',
