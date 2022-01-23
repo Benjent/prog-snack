@@ -147,8 +147,8 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'weather_report_mysterious_traveler',
-        title: 'Mysterious Traveler',
+        id: 'weather_report_mysterious_traveller',
+        title: 'Mysterious Traveller',
         artist: 'Weather Report',
         year: 1974,
         country: regions.USA,
