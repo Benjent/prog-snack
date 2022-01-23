@@ -229,6 +229,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'lied_des_teufels_lied_des_teufels',
+        title: 'Lied Des Teufels',
+        artist: 'Lied Des Teufels',
+        year: 1973,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.GERMAN, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC],
+        selectedTrackTitle: 'Nichts',
+        selectedTrackYtId: 'KYGkQFHzwIE',
+        spotifyId: '5mtT0p4CZHivxaI5pKDcim',
+        deezerId: '1016956',
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO introuvable - Lied Des Teufels - Höllisch Heiße Rockmusik
+    {
         id: 'lightyears_away_astral_navigations',
         title: 'Astral Navigations',
         artist: 'Lightyears Away',

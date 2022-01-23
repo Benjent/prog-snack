@@ -972,9 +972,23 @@ const albums = [
         similarAlbums: ['frank_zappa_over_nite_sensation'],
         isAGem: false,
     },
-    // TODO below Introuvable Carsten Bohn's Bandstand
-    // Mother Goose Shoes - 1979 - 193719152 + 2GT5kNX4qFa4GVgkprTt79
-    // C. B. Rædyo - 1980 - 193719562 + 1MVUCJum9NZvql9gVJphK9
+    {
+        id: 'carsten_bohns_bandstand_mother_goose_shoes',
+        title: 'Mother Goose Shoes',
+        artist: `Carsten Bohn's Bandstand`,
+        year: 1979,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.SOFT_SEVENTIES, criteria.C_JAZZ, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM],
+        selectedTrackTitle: `Cycle Of The 5th`,
+        selectedTrackYtId: 'wqsCwh-3gqo',
+        spotifyId: '2GT5kNX4qFa4GVgkprTt79',
+        deezerId: '193719152',
+        designers: ['Gaby Moritz', 'Carsten Bohn'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Introuvable: Carsten Bohn's Bandstand - C. B. Rædyo - 1980 - 193719562 + 1MVUCJum9NZvql9gVJphK9
     {
         id: 'cat_stevens_foreigner',
         title: 'Foreigner',
@@ -1557,7 +1571,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Color Humano II très similaire en criteria
+    // TODO Color Humano II très similaire en criteria INTROUVABLE
     {
         id: 'colosseum_those_who_are_about_to_die_salute_you',
         title: 'Those Who Are About To Die Salute You',

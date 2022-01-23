@@ -3,6 +3,23 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'oho_okinawa',
+        title: `Okinawa`,
+        artist: 'Oho',
+        year: 1974,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.TRANSITION,  criteria.PATCHWORK, criteria.FUNNY, criteria.EXPERIMENTAL, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.FANFARE, criteria.SOPHISTICATED, criteria.C_FOLK],
+        selectedTrackTitle: 'Lemon Flowers',
+        selectedTrackYtId: 'vJK5wtD_ot8',
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: ['recreation_music_or_not_music'],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
         id: 'omega_plus_how_to_kiss_the_sky',
         title: `How To Kiss The Sky`,
         artist: 'Omega Plus',
