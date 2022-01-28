@@ -576,7 +576,7 @@ const albums = [
         year: 1966,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.ART_POP, criteria.BAROQUE],
+        criteria: [criteria.ART_POP, criteria.BAROQUE, criteria.GLITTER],
         selectedTrackTitle: `God Only Knows`,
         selectedTrackYtId: 'AOMyS78o5YI',
         spotifyId: null,
@@ -598,7 +598,7 @@ const albums = [
         spotifyId: '37rNuexqEXWeSIOiJtn3A9',
         deezerId: '5909501',
         designers: [],
-        similarAlbums: [], // TODO similar rolling stones psyche
+        similarAlbums: ['the_rolling_stones_their_satanic_majesties_request'],
         isAGem: false,
     },
     {
@@ -909,7 +909,7 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'biglietto_per_linferno',
+        id: 'biglietto_per_linferno_biglietto_per_linferno',
         title: `Biglietto Per L'inferno`,
         artist: `Biglietto Per L'inferno`,
         year: 1974,
