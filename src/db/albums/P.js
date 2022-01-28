@@ -3,6 +3,23 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'paga_group_haunted',
+        title: 'Haunted',
+        artist: 'Paga Group',
+        year: 1988,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.NEO_EIGHTIES, criteria.C_JAZZ, criteria.JAM],
+        selectedTrackTitle: 'In A Spiral',
+        selectedTrackYtId: 'AzVutYDCK3E',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Naoko Paganotti', 'Francois Anssens'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Introuvable 1993 - Gnosis designers: Klaus Blasquiz
+    {
         id: 'paice_ashton_and_lord_malice_in_wonderland',
         title: 'Malice In Wonderland',
         artist: 'Paice, Ashton & Lord',
