@@ -750,7 +750,7 @@ const albums = [
         year: 1970,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.ORIENTAL, criteria.C_FOLK],
+        criteria: [criteria.C_PSYCHE, criteria.FUNNY, criteria.ORIENTAL, criteria.C_FOLK],
         selectedTrackTitle: 'Tiptoe On The Highest Hill',
         selectedTrackYtId: 'DP0DO43Q59Y',
         spotifyId: '1VK3FcX004p6M3LdaQukU7',
