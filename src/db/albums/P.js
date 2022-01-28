@@ -3,6 +3,23 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'paga_group_haunted',
+        title: 'Haunted',
+        artist: 'Paga Group',
+        year: 1988,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.NEO_EIGHTIES, criteria.C_JAZZ, criteria.JAM],
+        selectedTrackTitle: 'In A Spiral',
+        selectedTrackYtId: 'AzVutYDCK3E',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Naoko Paganotti', 'Francois Anssens'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Introuvable 1993 - Gnosis designers: Klaus Blasquiz
+    {
         id: 'paice_ashton_and_lord_malice_in_wonderland',
         title: 'Malice In Wonderland',
         artist: 'Paice, Ashton & Lord',
@@ -855,6 +872,22 @@ const albums = [
         similarAlbums: [], // todo similar to yes early
         isAGem: true,
         description: `TODO description`,
+    },
+    {
+        id: 'providence_ever_sense_the_dawn',
+        title: 'Ever Sence The Dawn',
+        artist: 'Providence',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.GLITTER, criteria.SOFT, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE],
+        selectedTrackTitle: 'Mountain',
+        selectedTrackYtId: 'gNSXJD2RZBg',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Bob Barriatua'],
+        similarAlbums: [],
+        isAGem: false,
     },
     {
         id: 'prudence_tomorrow_may_be_vanished',

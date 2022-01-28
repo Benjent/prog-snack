@@ -1712,6 +1712,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUBABLE azabache_dias_de_luna - Azabache - Dias De Luna - SPAIN - 1979 - 365491 + 7FDuiKobQPuMdzATy1jfA4 - designers: J. Junquera
+    {
+        id: 'azabache_no_gracias',
+        title: 'No, Gracias',
+        artist: 'Azabache',
+        year: 1980,
+        country: regions.SPAIN,
+        cover: '.jpg',
+        criteria: [criteria.SPAIN, criteria.C_ELECTRO, criteria.ART_POP, criteria.GLITTER],
+        selectedTrackTitle: 'Humos Y Gases',
+        selectedTrackYtId: 'tNzXQg-CLW4',
+        spotifyId: '5qUpGu8t8aZYFI53vQNeEF',
+        deezerId: '735484',
+        designers: ['Gustavo Ros', 'Jorge Barral'],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
