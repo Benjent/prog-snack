@@ -1,13 +1,13 @@
 <template>
     <section class="discographies">
-        <section class="discographies__artists" v-if="selectedArtist">
+        <aside class="discographies__artists" v-if="selectedArtist">
             <div class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
                 v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
 
                 <Icon v-if="artist === selectedArtist" name="library"/>
                 <span> {{artist}}</span>
             </div>
-        </section>
+        </aside>
 
         <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered></Cover>
@@ -155,11 +155,13 @@ export default {
 .discographies {
     $cover-width: 150px;
     display: flex;
+    padding-left: var(--aside-width);
 
     & &__artists {
         @include page;
 
-        position: sticky;
+        position: fixed; // Fixed instead of sticky, so that scrolling the main section keeps the aside position
+        left: 0;
         width: var(--aside-width);
         min-width: var(--aside-min-width);
         overflow-y: scroll;
