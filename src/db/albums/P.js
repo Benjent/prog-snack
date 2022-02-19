@@ -3,6 +3,22 @@ import { criteria } from '../criteria'
 
 const albums = [
     {
+        id: 'pacific_drift_feelin_free',
+        title: `Feelin' Free`,
+        artist: 'Pacific Drift',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.JAM, criteria.ROCK, criteria.FANFARE],
+        selectedTrackTitle: 'Norman',
+        selectedTrackYtId: 'iw9g6nd4SUE',
+        spotifyId: '0ahWrdtFsy0M2SKVKbgo8J',
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'paga_group_haunted',
         title: 'Haunted',
         artist: 'Paga Group',

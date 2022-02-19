@@ -29,7 +29,7 @@ On /master merge, thanks to [this action](https://github.com/marketplace/actions
 ## Guidelines
 
 ### JS
-Follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-config-airbnb)
+Follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-config-airbnb).
 
 ### SCSS
 Influenced by [SMACSS](http://smacss.com/) and [BEM](http://getbem.com/).

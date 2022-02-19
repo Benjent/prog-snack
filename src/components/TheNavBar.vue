@@ -66,6 +66,7 @@ export default {
 
     .router-link-exact-active {
         pointer-events: none;
+        user-select: none;
     }
 
     & &__logo {
