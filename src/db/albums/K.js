@@ -725,6 +725,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: 'kvartetten_som_sprangde_kattvals',
+        title: 'Kattvals',
+        artist: 'Kvartetten Som Sprängde',
+        year: 1973,
+        country: regions.SWEDEN,
+        cover: '.jpg',
+        criteria: [criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.JAM, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: `Andesamba`,
+        selectedTrackYtId: 'MiBTCnUBuP0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Studio Sjuttio'],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
