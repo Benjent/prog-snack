@@ -808,6 +808,79 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Robert John Gallo - Free - 1971 - INTROUVABLE
+    {
+        id: 'robert_john_gallo_painted_poetry',
+        title: 'Painted Poetry',
+        artist: 'Robert John Gallo',
+        year: 1972,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.FOLK, criteria.SOFT, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: 'Tear Down The Circus',
+        selectedTrackYtId: '_tYcKRGeJEs',
+        spotifyId: '2DS9CCT4PpYTUek8RQvZCr',
+        deezerId: '553150',
+        designers: ['Nancy Wagner'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'robert_wyatt_the_end_of_an_ear',
+        title: 'The End Of An Ear',
+        artist: 'Robert Wyatt',
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.EXPERIMENTAL, criteria.C_PSYCHE, criteria.FUNNY, criteria.C_JAZZ, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL],
+        selectedTrackTitle: 'To Saintly Bridget',
+        selectedTrackYtId: '_tYcKRGeJEs',
+        spotifyId: '7evYgE9uJgR4EQbmgNnyo4',
+        deezerId: '1460849',
+        designers: ['Lipscombe Lubbock Ewart And Hollands'],
+        similarAlbums: [], // similar henry cow
+        isAGem: false,
+    },
+    {
+        id: 'robert_wyatt_rock_bottom',
+        title: 'Rock Bottom',
+        artist: 'Robert Wyatt',
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.PIANO, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.C_JAZZ, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.SPACY],
+        selectedTrackTitle: 'Little Red Riding Hood Hit The Road',
+        selectedTrackYtId: '8wZu6RapRyY',
+        spotifyId: '72t34rHQENHfAK5kDLZjuG',
+        deezerId: '427442',
+        designers: ['Alfreda Benge'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: 'robert_wyatt_ruth_is_stranger_than_richard',
+        title: 'Ruth Is Stranger Than Richard',
+        artist: 'Robert Wyatt',
+        year: 1975,
+        country: regions.ENGLAND,
+        cover: '.jpg',
+        criteria: [criteria.PIANO, criteria.C_PSYCHE, criteria.SPACY, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.ART_POP, criteria.C_JAZZ],
+        selectedTrackTitle: 'Solar Flares',
+        selectedTrackYtId: 'Q_ouozEomFU',
+        spotifyId: '3ODvvITG5B0hecCUFguHl0',
+        deezerId: '4502371',
+        designers: ['Alfreda Benge'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Old Rottenhat - robert_wyatt_old_rottenhat
+    // 427440 + 65SKiF0KDsjC0OD7HIL9mz
+    // designers: Alfreda Benge, Caryn Gough
+
+    // TODO Dondestan - robert_wyatt_dondestan
+    // 427438 + 
+    // designers Alfreda Benge
+
     // TODO Rockets : Electro, c_psyche, groovy, french, scifi theme
     // track Apesanteur
     // TODO On The Road Again : Electro, c_psyche, groovy, french, scifi theme
