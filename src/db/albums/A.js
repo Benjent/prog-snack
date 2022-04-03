@@ -9,7 +9,7 @@ const albums = [
         year: 1979,
         country: regions.SPAIN,
         cover: '.jpg',
-        criteria: [criteria.SPANISH, criteria.GLITTER, criteria.JAZZY_GROOVY, criteria.C_ELECTRO],
+        criteria: [criteria.SPANISH, criteria.GLITTER, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM],
         selectedTrackTitle: 'Impresión',
         selectedTrackYtId: '5nuQdTG_9VM',
         spotifyId: null,
