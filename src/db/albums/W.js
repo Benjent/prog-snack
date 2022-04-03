@@ -362,7 +362,7 @@ const albums = [
         year: 1976,
         country: regions.USA,
         cover: '.jpg',
-        criteria: [criteria.GLITTER, criteria.ROCK],
+        criteria: [criteria.GLITTER, criteria.ROCK, criteria.JAM],
         selectedTrackTitle: `Wait 'Til Tomorrow`,
         selectedTrackYtId: 'tl6ARn_xyWA',
         spotifyId: null,
