@@ -397,7 +397,7 @@ const albums = [
         year: 1975,
         country: regions.ENGLAND,
         cover: '.jpg',
-        criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.ART_POP],
+        criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.ART_POP, criteria.ORCHESTRAL_PARTS, criteriz.FEMALE],
         selectedTrackTitle: 'Stepping Stones',
         selectedTrackYtId: 'RDQCDViuubQ',
         spotifyId: null,
