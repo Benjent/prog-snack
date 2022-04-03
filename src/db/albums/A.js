@@ -1403,7 +1403,7 @@ const albums = [
         isAGem: false,
     },
     {
-        id: 'arti_supernatural_fairy_tales',
+        id: 'art_supernatural_fairy_tales',
         title: 'Supernatural Fairy Tales',
         artist: 'Art',
         year: 1967,
