@@ -339,11 +339,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Bangor Flying Circus - 1969 - USA
-    // jam, jazzygroovy
-    // track ode to sadness
-    // almost a gem
-    // Bob Schnepf, Bob Means
+    {
+        id: 'bangor_flying_circus_bangor_flying_circus',
+        title: `Bangor Flying Circus`,
+        artist: 'Bangor Flying Circus',
+        year: 1969,
+        country: regions.USA,
+        cover: '.jpg',
+        criteria: [criteria.JAM, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: 'Ode To Sadness',
+        selectedTrackYtId: 'O54guzM6kS0',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Bob Schnepf', 'Bob Means'],
+        similarAlbums: [],
+        isAGem: false, // todo almost a gem!
+    },
     {
         id: 'barclay_james_harvest_barclay_james_harvest',
         title: 'Barclay James Harvest',
