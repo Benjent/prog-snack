@@ -74,7 +74,7 @@ const albums = [
         year: 1971,
         country: regions.GERMANY,
         cover: '.jpg',
-        criteria: [criteria.C_PSYCHE, criteria.TRANSITION, criteria.JAM, criteria.SPACY, criteria.C_ELECTRO, criteria.INSTRUMENTAL],
+        criteria: [criteria.C_PSYCHE, criteria.TRANSITION, criteria.JAM, criteria.SPACY, criteria.C_ELECTRO, criteria.INSTRUMENTAL, criteria.FUNNY],
         selectedTrackTitle: `...Als Hätte Ich Das Alles Schon 'Mal Gesehen`,
         selectedTrackYtId: 'iKsJVj4li3E',
         spotifyId: '7BH3JnYUOwM7LZx0Vm5wk9',
