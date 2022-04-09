@@ -119,7 +119,7 @@ export default {
         }
 
         & &__navItem {
-            width: 100% / $nbLinks;
+            width: calc(100% / $nbLinks);
             padding: 20px 6px;
         }
     }
