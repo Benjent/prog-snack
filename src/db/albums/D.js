@@ -632,6 +632,22 @@ const albums = [
         description: `An instrumental album with two long tracks entirely made with acoustic guitars, clean electric guitars, percussions and mellow synthesizers. Didier Bonin alone plays with light acoustic melodies, tender sounds and slow tempos throughout most of the album, while some parts speed up the tempo with groovier - but still mellow - rhythms.`
     },
     {
+        id: 'didier_bonin_lair_lumiere',
+        title: `L'air Lumière`,
+        artist: 'Didier Bonin',
+        year: 1982,
+        country: regions.FRANCE,
+        cover: '.jpg',
+        criteria: [criteria.C_FOLK, criteria.C_ELECTRO, criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.AMBIENT, criteria.INSTRUMENTAL, criteria.C_PSYCHE],
+        selectedTrackTitle: `Parti Du Pli`,
+        selectedTrackYtId: 'q4DQK8VdrFs',
+        spotifyId: null,
+        deezerId: null,
+        designers: ['Didier Bonin'],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: 'dire_straits_love_over_gold',
         title: 'Love Over Gold',
         artist: 'Dire Straits',
