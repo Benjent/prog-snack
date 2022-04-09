@@ -883,6 +883,8 @@ const albums = [
 
     // TODO Rockets : Electro, c_psyche, groovy, french, scifi theme
     // track Apesanteur
+    // FRANCE
+
     // TODO On The Road Again : Electro, c_psyche, groovy, french, scifi theme
     // track Astrolights
     // TODO Plasteroid : pareil
