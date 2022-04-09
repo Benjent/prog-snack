@@ -19,6 +19,7 @@ Vue.filter('criterium', (value) => {
 		[criteria.C_PSYCHE]: 'Contains psychedelic elements',
 		[criteria.CELTIC]: 'Celtic',
 		[criteria.CONCEPT]: 'Concept album',
+		[criteria.CREOLE]: 'Creole sung',
 		[criteria.CRISPY_SIXTIES]: 'Crispy 60s sound',
 		[criteria.CROATIAN]: 'Croatian sung',
 		[criteria.ELECTRO]: 'Electro-based with a Prog touch',
