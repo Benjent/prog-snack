@@ -68,6 +68,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: 'achim_reichel_die_grune_reise',
+        title: 'Die Grüne Reise',
+        artist: 'Achim Reichel',
+        year: 1971,
+        country: regions.GERMANY,
+        cover: '.jpg',
+        criteria: [criteria.C_PSYCHE, criteria.TRANSITION, criteria.JAM, criteria.SPACY, criteria.C_ELECTRO, criteria.INSTRUMENTAL],
+        selectedTrackTitle: `...Als Hätte Ich Das Alles Schon 'Mal Gesehen`,
+        selectedTrackYtId: 'iKsJVj4li3E',
+        spotifyId: '7BH3JnYUOwM7LZx0Vm5wk9',
+        deezerId: null,
+        designers: ['R. Pfingsten'],
+        similarAlbums: ['hawkwind_in_search_of_space'],
+        isAGem: false,
+    },
+    // TODO Achim Reichel tous les autres albums null + null
+    {
         id: 'acqua_fragile_acqua_fragile',
         title: 'Acqua Fragile',
         artist: 'Acqua Fragile',
