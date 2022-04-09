@@ -110,3 +110,5 @@ Vue.filter('criteriumCategory', (value) => {
     }
     return mapper[value]
 })
+
+export default {}
