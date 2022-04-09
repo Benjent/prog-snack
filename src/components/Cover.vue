@@ -53,8 +53,7 @@ export default {
     methods: {
         getCover(album) {
             try {
-                const path = `../assets/img/covers/${album.id}${album.cover}`
-                return new URL(path, import.meta.url).href
+                return require(`../assets/img/covers/${album.id}${album.cover}`)
             }
             catch (error) {
                 // Most probably an error with a file extension (image format) not handled by webpack.
