@@ -28,7 +28,7 @@
                             <span v-if="index < subgenre.criteria.length - 1">-</span>
                         </span>
                     </p>
-                    <blockquote class="text text--description subgenres__description">{{ subgenre.description }}</blockquote>
+                    <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
                 </div>
             </div>
         </div>
