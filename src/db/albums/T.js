@@ -323,10 +323,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Encore - 1977
-    // LIVE, lengthy
-    // 99692152 + 76ofcWONgm5BNXpKFy9Wxz
     {
+        id: "tangerine_dream_encore",
+        title: "Encore",
+        artist: "Tangerine Dream",
+        year: 1977,
+        country: regions.GERMANY,
+        cover: ".jpg",
+        criteria: [criteria.LIVE, criteria.LENGTHY_TRACKS, criteria.ELECTRO, criteria.AMBIENT, criteria.C_PSYCHE],
+        selectedTrackTitle: "Cherokee Lane",
+        selectedTrackYtId: "3z_7qA2yac0",
+        spotifyId: "76ofcWONgm5BNXpKFy9Wxz",
+        deezerId: "99692152",
+        designers: ["Monique Froese"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "tangerine_dream_cyclone",
         title: "Cyclone",
