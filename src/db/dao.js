@@ -80,7 +80,7 @@ function generateDao() {
     })
 
     albumsSortedByYear = [...albums]
-    sort(albumsSortedByYear, "year", "DESC")
+    sort(albumsSortedByYear, "year")
 
     Object.values(mostUsedCriteriaPerYear).forEach((criteria) => {
         sort(criteria, "occurences", "DESC")
