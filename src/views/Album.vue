@@ -24,21 +24,21 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex'
-import AlbumStarter from '../components/AlbumStarter.vue'
-import Cover from '../components/Cover.vue'
-import Timeline from '../components/Timeline.vue'
+import { mapActions, mapGetters, mapState } from "vuex"
+import AlbumStarter from "../components/AlbumStarter.vue"
+import Cover from "../components/Cover.vue"
+import Timeline from "../components/Timeline.vue"
 
 export default {
-    name: 'Album',
+    name: "Album",
     components: {
         AlbumStarter,
         Cover,
         Timeline,
     },
     computed: {
-        ...mapState(['selectedAlbum']),
-        ...mapGetters(['youtubePath']),
+        ...mapState(["selectedAlbum"]),
+        ...mapGetters(["youtubePath"]),
     },
     created() {
         if (!this.selectedAlbum) {
@@ -46,9 +46,9 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['randomizeAlbum']),
+        ...mapActions(["randomizeAlbum"]),
         goToDiscographies() {
-            this.$router.push('/discographies')
+            this.$router.push("/discographies")
         },
     },
 }

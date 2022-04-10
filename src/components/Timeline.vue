@@ -8,19 +8,19 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import Cover from './Cover.vue'
+import { mapActions, mapState } from "vuex"
+import Cover from "./Cover.vue"
 
 export default {
-    name: 'Timeline',
+    name: "Timeline",
     components: {
         Cover,
     },
     computed: {
-        ...mapState(['albumsSortedByYear']),
+        ...mapState(["albumsSortedByYear"]),
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
     },
 }
 </script>
@@ -49,16 +49,16 @@ export default {
         $albumYearWidth: 75px;
 
         display: table;
-        
+
         width: $albumYearWidth;
         z-index: 1;
 
         background: $secondary;
         color: $primary;
-        
+
         margin-right: -$albumYearWidth;
         box-sizing: border-box;
-        
+
         border: solid 2px $primary;
         border-radius: $borderRadius;
         border-bottom-left-radius: 0;

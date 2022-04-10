@@ -5,23 +5,23 @@
 </template>
 
 <script>
-import icons from '../assets/scripts/icons.js';
+import icons from "../assets/scripts/icons"
 
 export default {
     props: {
         name: {
             type: String,
-            default: 'about',
+            default: "about",
         },
         orientation: {
             type: String,
-            default: 'top',
+            default: "top",
         },
     },
     computed: {
         path() {
             return icons[this.name]
-        }
+        },
     },
 }
 </script>

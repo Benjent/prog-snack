@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    name: 'AlbumStarter',
+    name: "AlbumStarter",
     props: {
         number: Number,
         unit: String,

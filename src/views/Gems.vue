@@ -2,7 +2,7 @@
     <section class="gems">
         <div class="gems__item" v-for="album in gems" :key="album.id">
             <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
-            
+
             <div class="gems__album">
                 <div class="gems__title" @click="selectAlbumAndView(album)">
                     <h3 class="title title--3">{{album.artist}}</h3>
@@ -16,28 +16,26 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import Cover from '../components/Cover.vue'
+import { mapActions, mapState } from "vuex"
+import Cover from "../components/Cover.vue"
 
 export default {
     components: {
         Cover,
     },
     computed: {
-        ...mapState(['albumsSortedByYear']),
+        ...mapState(["albumsSortedByYear"]),
         gems() {
-            return this.albumsSortedByYear.filter((a) => {
-                return a.isAGem
-            })
-        }
+            return this.albumsSortedByYear.filter((a) => a.isAGem)
+        },
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
         selectAlbumAndView(album) {
             this.selectAlbum(album)
-            this.$router.push('/discographies')
-        }
-    }
+            this.$router.push("/discographies")
+        },
+    },
 }
 </script>
 

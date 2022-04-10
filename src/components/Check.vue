@@ -7,19 +7,18 @@
 
 <script>
 export default {
-    name: 'Check',
+    name: "Check",
     props: {
         label: String,
         value: Boolean,
     },
     methods: {
         notifyParent() {
-            this.$emit('input', !this.value)
+            this.$emit("input", !this.value)
         },
-    }
+    },
 }
 </script>
-
 
 <style lang="scss">
 @import '../style/gatherer';

@@ -9,7 +9,7 @@
                 <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
             </div>
             <div class="attic__panel" v-if="isDisplayedYear">
-                <Select class="attic__filter" v-model="selectedYear" :options="years" @input="filterAttic"></Select>
+                <Select class="attic__filter" v-model.number="selectedYear" :options="years" @input="filterAttic"></Select>
             </div>
             <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
                 <div>Region</div>
@@ -39,7 +39,7 @@
                         <Check v-else
                             class="attic__filter"
                             v-model="filterModel[index].criteria[indexCriteria].checked"
-                            :label="item.criterium | criterium" :key="item.criterium" 
+                            :label="item.criterium | criterium" :key="item.criterium"
                             @click.native="filterAttic(item.criterium)"></Check>
                     </template>
                     <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
@@ -53,13 +53,15 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import { categories, categoriesOrder, criteria, criteriaCategory } from '../db/criteria.js';
-import Cover from '../components/Cover.vue'
-import Arrow from '../components/Arrow.vue'
-import Check from '../components/Check.vue'
-import Radio from '../components/Radio.vue'
-import Select from '../components/Select.vue'
+import { mapActions, mapState } from "vuex"
+import {
+    categories, categoriesOrder, criteria, criteriaCategory,
+} from "../db/criteria"
+import Cover from "../components/Cover.vue"
+import Arrow from "../components/Arrow.vue"
+import Check from "../components/Check.vue"
+import Radio from "../components/Radio.vue"
+import Select from "../components/Select.vue"
 
 export default {
     components: {
@@ -92,7 +94,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(['albums', 'regions', 'albumsPerYear']),
+        ...mapState(["albums", "regions", "albumsPerYear"]),
         containsElementsOfCriteria() {
             return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
         },
@@ -107,7 +109,7 @@ export default {
         this.generateCriteriaFilterModel()
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
         generateCriteriaFilterModel() {
             const exclusiveCriteria = [
                 criteria.CONCEPT,
@@ -152,7 +154,7 @@ export default {
                         return c
                     }),
                 }
-                if (key !== 'LANGUAGE') {
+                if (key !== "LANGUAGE") {
                     // We use a select for languages for a bit
                     this.filterModel.push(filterPanel)
                 }
@@ -161,7 +163,7 @@ export default {
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
-            this.$router.push('/discographies')
+            this.$router.push("/discographies")
         },
         resetFilter() {
             this.selectedLanguage = null
@@ -212,12 +214,12 @@ export default {
                     language: true,
                     gem: true,
                 }
-                isAMatch.year = this.selectedYear ? a.year == this.selectedYear : true
+                isAMatch.year = this.selectedYear ? a.year === this.selectedYear : true
                 isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
                 isAMatch.language = this.selectedLanguage ? a.criteria.includes(this.selectedLanguage) : true
                 isAMatch.gem = this.onlyGems ? a.isAGem : true
                 isAMatch.criteria = wantedCriteria.every((c) => a.criteria.includes(c))
-                
+
                 const isDisplayed = Object.values(isAMatch).every((v) => v)
                 if (isDisplayed) {
                     this.showAlbum(albumDom)
@@ -227,17 +229,16 @@ export default {
             })
         },
         hideAlbum(album) {
-            if (!album.classList.contains('hidden')) {
-                album.classList.add('hidden')
+            if (!album.classList.contains("hidden")) {
+                album.classList.add("hidden")
             }
         },
         showAlbum(album) {
-            album.classList.remove('hidden')
-        }
+            album.classList.remove("hidden")
+        },
     },
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import '../style/gatherer';

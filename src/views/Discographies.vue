@@ -22,7 +22,7 @@
             </div>
             <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
             <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
-            
+
             <template v-if="discography.length > 1">
                 <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                 <div class="discographies__borderWrapper">
@@ -94,10 +94,10 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex'
-import AlbumStarter from '../components/AlbumStarter.vue'
-import Cover from '../components/Cover.vue'
-import Icon from '../components/Icon.vue'
+import { mapActions, mapGetters, mapState } from "vuex"
+import AlbumStarter from "../components/AlbumStarter.vue"
+import Cover from "../components/Cover.vue"
+import Icon from "../components/Icon.vue"
 
 export default {
     components: {
@@ -111,8 +111,8 @@ export default {
         }
     },
     computed: {
-        ...mapState(['artists', 'albums', 'selectedAlbum']),
-        ...mapGetters(['youtubePath', 'deezerPath', 'spotifyPath']),
+        ...mapState(["artists", "albums", "selectedAlbum"]),
+        ...mapGetters(["youtubePath", "deezerPath", "spotifyPath"]),
         discography() {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
         },
@@ -124,7 +124,7 @@ export default {
         this.selectedArtist = this.selectedAlbum.artist
     },
     methods: {
-        ...mapActions(['selectAlbum', 'randomizeAlbum']),
+        ...mapActions(["selectAlbum", "randomizeAlbum"]),
         setSelectedArtist(artist) {
             this.selectedArtist = artist
             // By default, select the debut album of the artist
@@ -143,7 +143,7 @@ export default {
             //     this.setSelectedPlayer('spotify');
             // }
         },
-    }
+    },
 }
 </script>
 

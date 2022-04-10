@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from 'vuex'
-import { criteria } from '../db/criteria.js';
-import HistogramHorizontal from '../components/HistogramHorizontal.vue'
-import HistogramVertical from '../components/HistogramVertical.vue'
-import NumberUnit from '../components/NumberUnit.vue'
+import { mapState, mapGetters } from "vuex"
+import { sort } from "../utils/array-utils"
+import HistogramHorizontal from "../components/HistogramHorizontal.vue"
+import HistogramVertical from "../components/HistogramVertical.vue"
+import NumberUnit from "../components/NumberUnit.vue"
 
 export default {
     components: {
@@ -34,151 +34,77 @@ export default {
         NumberUnit,
     },
     computed: {
-        ...mapState(['albums', 'artists', 'regions', 'albumsPerYear', 'albumsPerCountry', 'criteriaOccurences', 'mostUsedCriteriaPerYear', 'subgenres']),
-        ...mapGetters(['gemsNb', 'artistsWithMostGems', 'artistsWithMostAlbums', 'isMobile']),
+        ...mapState(["albums", "artists", "regions", "albumsPerYear", "albumsPerCountry", "criteriaOccurences", "mostUsedCriteriaPerYear", "subgenres"]),
+        ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums", "isMobile"]),
         albumsPerYearWithRatio() {
-            const obj = this.albumsPerYear
-            const arr = Object.keys(obj).map((key) => obj[key])
-            const min = 0
-            const max = Math.max.apply(null, arr)
-        
-            const albumsPerYearWithRatio = {}
-            for(const year in this.albumsPerYear) {
-                const nbOfAlbums = this.albumsPerYear[year]
-                const ratio = (nbOfAlbums - min) / (max - min) // TODO utils + so many things to centralize in this page
-                albumsPerYearWithRatio[year] = {
-                    label: year,
-                    data: nbOfAlbums, 
-                    ratio: ratio,
-                    ratioPercent: (ratio * 100).toString() + '%',
-                }
-            }
-            return albumsPerYearWithRatio
+            return this.buildBarChartDataObject(this.albumsPerYear)
         },
         albumsPerYearWithRatioMobile() {
-            const arr = Object.keys(this.albumsPerYearWithRatio).map((key) => this.albumsPerYearWithRatio[key])
-            return arr
+            return Object.keys(this.albumsPerYearWithRatio).map((key) => this.albumsPerYearWithRatio[key])
         },
         albumsPerCountryWithRatio() {
-    
-            const obj = this.albumsPerCountry
-            const arr = Object.keys(obj).map((key) => obj[key])
-            const max = Math.max.apply(null, arr)
-            const min = 0
-        
-            const albumsPerCountryWithRatio = []
-        
-            for(const country in this.albumsPerCountry) {
-        
-                const nbOfAlbums = this.albumsPerCountry[country]
-                const ratio = (nbOfAlbums - min) / (max - min)
-        
-                albumsPerCountryWithRatio.push({
-                    label: country,
-                    data: nbOfAlbums, 
-                    ratio: ratio,
-                    ratioPercent: (ratio * 100).toString() + '%',
-                })
-            }
-    
-            // Sort in DESC
-            albumsPerCountryWithRatio.sort((a, b) => {
-                const countryA = a.data
-                const countryB = b.data
-        
-                if (countryA > countryB) {
-                    return -1
-                }
-                if (countryA < countryB) {
-                    return 1
-                }
-                return 0 // Default return value (no sorting)
-            })
-    
-          return albumsPerCountryWithRatio
+            const data = this.buildBarChartDataObject(this.albumsPerCountry)
+            const albumsPerCountryWithRatio = Object.values(data).map((d) => d)
+
+            sort(albumsPerCountryWithRatio, "data", "DESC")
+            return albumsPerCountryWithRatio
         },
         criteriaOccurencesWithRatio() {
-    
-            const obj = this.criteriaOccurences;
-            const arr = Object.keys(obj).map((key) => obj[key])
-            const max = Math.max.apply(null, arr)
-            const min = 0
-        
-            const criteriaOccurencesWithRatio = []
-
-            for (const criterium in this.criteriaOccurences) {
-
-                const nbOfOccurences = this.criteriaOccurences[criterium]
-                const ratio = (nbOfOccurences - min) / (max - min)
-        
-                criteriaOccurencesWithRatio.push({
-                    label: this.$options.filters.criterium(criterium),
-                    data: nbOfOccurences, 
-                    ratio: ratio,
-                    ratioPercent: (ratio * 100).toString() + '%',
-                })
-            }
-
-            // Sort in DESC
-            criteriaOccurencesWithRatio.sort((a, b) => {
-                const criteriumA = a.data
-                const criteriumB = b.data
-        
-                if (criteriumA > criteriumB) {
-                    return -1
-                }
-                if (criteriumA < criteriumB) {
-                    return 1
-                }
-                return 0 // Default return value (no sorting)
+            const data = this.buildBarChartDataObject(this.criteriaOccurences)
+            const criteriaOccurencesWithRatio = Object.values(data).map((d) => {
+                d.label = this.$options.filters.criterium(d.label)
+                return d
             })
-    
-          return criteriaOccurencesWithRatio
+
+            sort(criteriaOccurencesWithRatio, "data", "DESC")
+            return criteriaOccurencesWithRatio
         },
-		artistsWithGemsWithRatio() {
-			const min = 2
-			const artistsWithSeveralGems = Object.entries(this.artistsWithMostGems).filter((item) => item[1] >= min)
-			artistsWithSeveralGems.sort((a, b) => b[1] - a[1])
-			const max = artistsWithSeveralGems[0][1] // Since it is sorted DESC
-			
+        artistsWithGemsWithRatio() {
+            const min = 2
+            const artistsWithEnoughGems = Object.entries(this.artistsWithMostGems).filter((item) => item[1] >= min)
+            return this.buildBarChartDataArray(artistsWithEnoughGems, min)
+        },
+        artistsWithAlbumsWithRatio() {
+            const min = 10
+            const artistsWithSeveralAlbums = Object.entries(this.artistsWithMostAlbums).filter((item) => item[1] >= min)
+            return this.buildBarChartDataArray(artistsWithSeveralAlbums, min)
+        },
+    },
+    methods: {
+        buildBarChartDataArray(array, min = 0) {
+            array.sort((a, b) => b[1] - a[1]) // Sort by DESC
+            const max = array[0][1] // Since it is sorted DESC
 
-			const artistsWithGemsWithRatio = []
-			artistsWithSeveralGems.forEach((artist) => {
-				const nbOfGems = artist[1]
-                const ratio = (nbOfGems - min) / (max - min)
-
-                artistsWithGemsWithRatio.push({
-                    label: artist[0],
-                    data: nbOfGems, 
-                    ratio: ratio,
-                    ratioPercent: (ratio * 100).toString() + '%',
+            const data = []
+            array.forEach((value) => {
+                const ratio = (value[1] - min) / (max - min)
+                data.push({
+                    label: value[0],
+                    data: value[1],
+                    ratio,
+                    ratioPercent: `${(ratio * 100).toString()}%`,
                 })
-			})
+            })
 
-			return artistsWithGemsWithRatio
-		},
-		artistsWithAlbumsWithRatio() {
-			const min = 8
-			const artistsWithSeveralAlbums = Object.entries(this.artistsWithMostAlbums).filter((item) => item[1] >= min)
-			artistsWithSeveralAlbums.sort((a, b) => b[1] - a[1])
-			const max = artistsWithSeveralAlbums[0][1] // Since it is sorted DESC
+            return data
+        },
+        buildBarChartDataObject(object, min = 0) {
+            const max = Math.max(...Object.values(object))
 
-			const artistsWithAlbumsWithRatio = []
-			artistsWithSeveralAlbums.forEach(artist => {
-				const nbOfAlbums = artist[1]
-                const ratio = (nbOfAlbums - min) / (max - min)
+            const data = {}
+            Object.entries(object).forEach(([key, value]) => {
+                const ratio = (value - min) / (max - min)
+                data[key] = {
+                    label: key,
+                    data: value,
+                    ratio,
+                    ratioPercent: `${(ratio * 100).toString()}%`,
+                }
+            })
 
-                artistsWithAlbumsWithRatio.push({
-                    label: artist[0],
-                    data: nbOfAlbums, 
-                    ratio: ratio,
-                    ratioPercent: (ratio * 100).toString() + '%',
-                })
-			})
-
-			return artistsWithAlbumsWithRatio
-		},
-    }
+            return data
+        },
+    },
 }
 </script>
 
