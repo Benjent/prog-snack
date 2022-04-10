@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: 'Cover',
+    name: "Cover",
     props: {
         album: {
             type: Object,
@@ -37,33 +37,32 @@ export default {
         bordered: {
             type: Boolean,
             default: false,
-        }
+        },
     },
     computed: {
         borderWidth() {
             if (this.size > 200) {
-                return 5 + 'px'
+                return `${5}px`
             }
             if (this.size > 0) {
-                return 3 + 'px'
+                return `${3}px`
             }
-            return 5 + 'px'
+            return `${5}px`
         },
     },
     methods: {
         getCover(album) {
             try {
-                return require(`../assets/img/covers/${album.id}${album.cover}`)
-            }
-            catch (error) {
+                return require(`../assets/img/covers/${album.id}${album.cover}`) // eslint-disable-line global-require
+            } catch (error) {
                 // Most probably an error with a file extension (image format) not handled by webpack.
                 console.error(`Unable to load cover of album with id: ${album.id}`)
+                return null
             }
         },
     },
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import '../style/gatherer';

@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import Arrow from '../components/Arrow.vue'
+import Arrow from "./Arrow.vue"
 
 export default {
-    name: 'Select',
+    name: "Select",
     components: {
         Arrow,
     },
     props: {
-        value: String,
+        value: [String, Number],
         options: [Array, Object],
         filter: Function,
     },
@@ -35,23 +35,21 @@ export default {
             if (this.value) {
                 return this.filter ? this.filter(this.value) : this.value
             }
-            return 'All'
+            return "All"
         },
     },
     methods: {
         notifyParent(value) {
             this.isDisplayedOptions = false
-            this.$emit('input', value)
+            this.$emit("input", value)
         },
     },
 }
 </script>
 
-
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/sunset';
-
 
 .select {
     display: flex;

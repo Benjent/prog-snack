@@ -14,14 +14,13 @@
 
 <script>
 export default {
-    name: 'HistogramHorizontal',
+    name: "HistogramHorizontal",
     props: {
         caption: String,
         datasource: [Array, Object],
     },
 }
 </script>
-
 
 <style lang="scss">
 @import '../style/gatherer';

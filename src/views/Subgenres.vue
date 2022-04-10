@@ -36,23 +36,23 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from 'vuex'
-import Cover from '../components/Cover.vue'
+import { mapActions, mapState, mapGetters } from "vuex"
+import Cover from "../components/Cover.vue"
 
 export default {
     components: {
         Cover,
     },
     computed: {
-        ...mapState(['subgenres']),
-        ...mapGetters(['albumById']),
+        ...mapState(["subgenres"]),
+        ...mapGetters(["albumById"]),
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
         selectAlbumAndView(id) {
             const album = this.albumById(id)
             this.selectAlbum(album)
-            this.$router.push('/discographies')
+            this.$router.push("/discographies")
         },
     },
 }

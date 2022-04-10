@@ -13,9 +13,9 @@ export default {
         },
         orientation: {
             type: String,
-            default: 'top',
+            default: "top",
         },
-    }
+    },
 }
 </script>
 

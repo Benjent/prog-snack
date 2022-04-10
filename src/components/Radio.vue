@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    name: 'Radio',
+    name: "Radio",
     props: {
         label: String,
         value: String,
@@ -16,12 +16,11 @@ export default {
     methods: {
         notifyParent() {
             const value = this.own !== this.value ? this.own : null
-            this.$emit('input', value)
+            this.$emit("input", value)
         },
-    }
+    },
 }
 </script>
-
 
 <style lang="scss">
 @import '../style/gatherer';

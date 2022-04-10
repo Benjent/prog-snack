@@ -14,14 +14,13 @@
 
 <script>
 export default {
-    name: 'HistogramVertical',
+    name: "HistogramVertical",
     props: {
         caption: String,
         datasource: [Array, Object],
     },
 }
 </script>
-
 
 <style lang="scss">
 @import '../style/gatherer';
@@ -35,7 +34,7 @@ export default {
     align-items: center;
 
     & &__datavis {
-        margin-top: 50px; 
+        margin-top: 50px;
         display: flex;
         align-items: flex-end;
         height: 400px;

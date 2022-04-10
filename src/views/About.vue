@@ -2,7 +2,7 @@
     <section class="about">
         <div class="about__section">
             <h1 class="title title--1">Hi!</h1>
-        
+
             <h3 class="title title--3">
                 Prog Snack is a tiny web project with big music ambitions: dusting old prog albums, known as prog gems, to make them shine beside classic albums.
             </h3>
@@ -10,7 +10,8 @@
                 Prog albums are anything related to progressive music, from late 60's psychedelic vibes to early 80's electronic wave ; still focusing on the progressive bloom of the 70's and not going further than 1965-1995.
             </p>
             <p class="text text--paragraph">
-                Only studio albums are featured. No extended plays, compilations, maxis, cover albums, other promotional releases. Live albums are only featured if they mainly consist of new material from the artist, if they are a work in their own right in the discography and not a collection of live interpretations of previously recorded songs in studio.
+                Only studio albums are featured. No extended plays, compilations, maxis, cover albums, other promotional releases.
+                Live albums are only featured if they mainly consist of new material from the artist, if they are a work in their own right in the discography and not a collection of live interpretations of previously recorded songs in studio.
             </p>
             <p class="text text--paragraph">
                 This project is designed as a tool to discover albums, the way we would pick up vinyls in music stores, as well as centralizer of what can be found scrapping the web.
@@ -88,7 +89,7 @@
 </template>
 
 <script>
-import { criteria } from '../db/criteria.js';
+import { criteria } from "../db/criteria"
 
 export default {
     data() {

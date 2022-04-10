@@ -1,9 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import { getRandomNumber } from '../utils/utils'
-import regions from '../db/regions'
-import subgenres from '../db/subgenres'
-import { albums, artists, designers, albumsPerYear, albumsPerCountry, albumsSortedByYear, criteriaOccurences, mostUsedCriteriaPerYear } from '../db/dao'
+import Vue from "vue"
+import Vuex from "vuex"
+import { getRandomNumber } from "../utils/math-utils"
+import regions from "../db/regions"
+import subgenres from "../db/subgenres"
+import {
+    albums, artists, designers, albumsPerYear, albumsPerCountry, albumsSortedByYear, criteriaOccurences, mostUsedCriteriaPerYear,
+} from "../db/dao"
 
 Vue.use(Vuex)
 
@@ -45,16 +47,16 @@ export default new Vuex.Store({
             state.albums.forEach((a) => {
                 artistsWithMostAlbums[a.artist] ? artistsWithMostAlbums[a.artist]++ : artistsWithMostAlbums[a.artist] = 1
             })
-            return artistsWithMostAlbums       
+            return artistsWithMostAlbums
         },
         artistsWithMostGems(state) {
             const artistsWithMostGems = {}
             state.albums.forEach((a) => {
                 if (a.isAGem) {
                     artistsWithMostGems[a.artist] ? artistsWithMostGems[a.artist]++ : artistsWithMostGems[a.artist] = 1
-                } 
+                }
             })
-            return artistsWithMostGems       
+            return artistsWithMostGems
         },
         youtubePath(state) {
             return `https://www.youtube.com/watch?v=${state.selectedAlbum.selectedTrackYtId}`
@@ -75,12 +77,12 @@ export default new Vuex.Store({
         randomizeAlbum(context) {
             const index = getRandomNumber(albums.length)
             const album = albums[index]
-            context.commit('selectAlbum', album)
+            context.commit("selectAlbum", album)
         },
         selectAlbum(context, payload) {
-            context.commit('selectAlbum', payload)
+            context.commit("selectAlbum", payload)
         },
     },
     modules: {
     },
-});
+})

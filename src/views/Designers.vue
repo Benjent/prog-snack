@@ -3,7 +3,7 @@
         <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
 
             <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
-            
+
             <div class="designers__border-wrapper">
                 <div class="designers__albums" :class="getClassDesigner(designer.name)">
                     <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
@@ -16,39 +16,36 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import Cover from '../components/Cover.vue'
+import { mapActions, mapState } from "vuex"
+import Cover from "../components/Cover.vue"
 
 export default {
     components: {
         Cover,
     },
     computed: {
-        ...mapState(['designers']),
+        ...mapState(["designers"]),
         designersWithEnoughWorks() {
-            return Object.values(this.designers).filter((d) => {
-                return d.works.length > 1
-            })
-        }
+            return Object.values(this.designers).filter((d) => d.works.length > 1)
+        },
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
         getClassDesigner(name) {
-            if (this.$mq === 'M') {
-                return
+            if (this.$mq === "M") {
+                return null
             }
-
             return {
-                'designers__albums--hipgnosis': name === 'Hipgnosis',
-                'designers__albums--rogerDean': name === 'Roger Dean',
-                'designers__albums--calSchenkel': name === 'Cal Schenkel',
-                'designers__albums--marcusKeef': name === 'Marcus Keef',
-                'designers__albums--hughSyme': name === 'Hugh Syme',
+                "designers__albums--hipgnosis": name === "Hipgnosis",
+                "designers__albums--rogerDean": name === "Roger Dean",
+                "designers__albums--calSchenkel": name === "Cal Schenkel",
+                "designers__albums--marcusKeef": name === "Marcus Keef",
+                "designers__albums--hughSyme": name === "Hugh Syme",
             }
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
-            this.$router.push('/discographies')
+            this.$router.push("/discographies")
         },
     },
 }
@@ -317,7 +314,6 @@ export default {
             }
         }
     }
-
 
     & &__border-wrapper {
         width: 100%;

@@ -18,29 +18,29 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
-import Cover from './Cover.vue'
+import { mapActions, mapState } from "vuex"
+import Cover from "./Cover.vue"
 
 export default {
-    name: 'SearchBar',
+    name: "SearchBar",
     components: {
         Cover,
     },
     data() {
         return {
             currentSearch: null,
-            matchingAlbums: []
+            matchingAlbums: [],
         }
     },
     computed: {
-        ...mapState(['albums']),
+        ...mapState(["albums"]),
     },
     methods: {
-        ...mapActions(['selectAlbum']),
+        ...mapActions(["selectAlbum"]),
         search(search) {
             this.currentSearch = search
             if (search) {
-                let keyWords = search.split(' ')
+                let keyWords = search.split(" ")
                 keyWords = keyWords.map((word) => word.toLowerCase())
 
                 this.matchingAlbums = this.albums.filter((a) => {
@@ -60,7 +60,7 @@ export default {
         },
         selectSearchResult(album) {
             this.selectAlbum(album)
-            this.$router.push('/discographies')
+            this.$router.push("/discographies")
             this.resetSearch()
         },
     },
@@ -115,7 +115,7 @@ $search-bar-width: 300px;
     & &__result {
         position: absolute;
         top: var(--header-height);
-        max-height: 300px;               
+        max-height: 300px;
         width: $search-bar-width;
         box-sizing: border-box;
         border: solid 2px $primary;

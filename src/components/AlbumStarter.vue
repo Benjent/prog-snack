@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Icon from '../components/Icon.vue'
+import { mapGetters } from "vuex"
+import Icon from "./Icon.vue"
 
 export default {
-    name: 'AlbumStarter',
+    name: "AlbumStarter",
     components: {
         Icon,
     },
@@ -26,7 +26,7 @@ export default {
         album: Object,
     },
     computed: {
-        ...mapGetters(['youtubePath']),
+        ...mapGetters(["youtubePath"]),
     },
 }
 </script>

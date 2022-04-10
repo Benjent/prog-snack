@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import Icon from './Icon.vue'
-import SearchBar from './SearchBar.vue'
+import Icon from "./Icon.vue"
+import SearchBar from "./SearchBar.vue"
 
 export default {
-    name: 'TheNavBar',
+    name: "TheNavBar",
     components: {
         Icon,
         SearchBar,
@@ -30,19 +30,18 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: '/albums', title: `Albums`, icon: 'mosaic' },
-                { path: '/discographies', title: `Discographies`, icon: 'list' },
-                { path: '/gems', title: `Gems`, icon: 'star' },
-                { path: '/subgenres', title: `Subgenres`, icon: 'subgenres' },
-                { path: '/designers', title: `Designers`, icon: 'palette' },
-                { path: '/stats', title: `Stats`, icon: 'equalizer' },
-                { path: '/about', title: `About`, icon: 'help' },
+                { path: "/albums", title: `Albums`, icon: "mosaic" },
+                { path: "/discographies", title: `Discographies`, icon: "list" },
+                { path: "/gems", title: `Gems`, icon: "star" },
+                { path: "/subgenres", title: `Subgenres`, icon: "subgenres" },
+                { path: "/designers", title: `Designers`, icon: "palette" },
+                { path: "/stats", title: `Stats`, icon: "equalizer" },
+                { path: "/about", title: `About`, icon: "help" },
             ],
         }
     },
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
