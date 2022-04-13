@@ -960,7 +960,7 @@ const albums = [
         year: 1981,
         country: regions.SWITZERLAND,
         cover: ".jpg",
-        criteria: [criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.GLITTER],
+        criteria: [criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.NEO_EIGHTIES, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.GLITTER, criteria.PIANO, criteria.SOPHISTICATED],
         selectedTrackTitle: "Dragonfly",
         selectedTrackYtId: "4iOTX-g3khQ",
         spotifyId: null,
