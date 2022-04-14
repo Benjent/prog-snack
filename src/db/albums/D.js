@@ -114,7 +114,7 @@ const albums = [
         designers: ["Patrice Larue"],
         similarAlbums: ["queen_sheer_heart_attack"],
         isAGem: true,
-		description: `TODO description`, // Un peu queen en cheap, ça fait penser à Bowie, un peu fanfare, piano based
+        description: `TODO description`, // Un peu queen en cheap, ça fait penser à Bowie, un peu fanfare, piano based
     },
     {
         id: "daniel_haas_and_yves_hasselmann_couleurs_du_temps",
@@ -648,11 +648,27 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "differences_the_voyage",
+        title: "The Voyage",
+        artist: "Differences",
+        year: 1985,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.NEO_EIGHTIES, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.C_PSYCHE],
+        selectedTrackTitle: "Melody",
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Cock van Velden", "Arjen Westdijk"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "differences_a_world_of_difference",
-        title: " A World Of Differences",
+        title: "A World Of Differences",
         artist: "Differences",
         year: 1992,
-        country: regions.NETHERLAND,
+        country: regions.NETHERLANDS,
         cover: ".jpg",
         criteria: [criteria.NEO_EIGHTIES, criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.PIANO, criteria.SYMPHONIC, criteria.C_ELECTRO],
         selectedTrackTitle: "A Different Day",
