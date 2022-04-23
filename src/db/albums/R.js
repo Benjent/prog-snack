@@ -873,14 +873,38 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Old Rottenhat - robert_wyatt_old_rottenhat
-    // 427440 + 65SKiF0KDsjC0OD7HIL9mz
-    // designers: Alfreda Benge, Caryn Gough
-
-    // TODO Dondestan - robert_wyatt_dondestan
-    // 427438 + 
-    // designers Alfreda Benge
-
+    {
+        id: "robert_wyatt_old_rottenhat",
+        title: "Old Rottenhat",
+        artist: "Robert Wyatt",
+        year: 1985,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.SOFT, criteria.ART_POP, criteria.C_ELECTRO],
+        selectedTrackTitle: "Vandalusia",
+        selectedTrackYtId: "WjGzHSU2KHU",
+        spotifyId: "65SKiF0KDsjC0OD7HIL9mz",
+        deezerId: "427440",
+        designers: ["Alfreda Benge", "Caryn Gough"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: "robert_wyatt_dondestan",
+        title: "Dondestan",
+        artist: "Robert Wyatt",
+        year: 1991,
+        country: regions.ENGLAND,
+        cover: ".jpeg",
+        criteria: [criteria.C_ELECTRO, criteria.SOFT, criteria.ART_POP, criteria.TRANSITION],
+        selectedTrackTitle: "Costa",
+        selectedTrackYtId: "75yX2kfz9XQ",
+        spotifyId: "6djYV9B6p1weDkZDno6ecQ",
+        deezerId: "427438",
+        designers: ["Alfreda Benge"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO Rockets : Electro, c_psyche, groovy, french, scifi theme
     // track Apesanteur
     // FRANCE
