@@ -568,20 +568,21 @@ const albums = [
         isAGem: false,
     },
     {
-        id: "renaissance_prologue", // TODO réécouter TOUT RENAISSANCE et ajouter spectacular là où àa l'est
+        id: "renaissance_prologue",
         title: "Prologue",
         artist: "Renaissance",
         year: 1972,
         country: regions.ENGLAND,
         cover: ".jpg",
-        criteria: [criteria.PIANO, criteria.FEMALE, criteria.SYMPHONIC, criteria.BAROQUE],
-        selectedTrackTitle: "todo", // track Kiev OU Rajah Khan
-        selectedTrackYtId: "todo",
+        criteria: [criteria.PIANO, criteria.FEMALE, criteria.SYMPHONIC, criteria.BAROQUE, criteria.SOUND_COLLAGES],
+        selectedTrackTitle: "Kiev",
+        selectedTrackYtId: "9_aFVlIcyFg",
         spotifyId: "4sIXQwVVGsvXcRDhrlHP0X",
         deezerId: "425198",
         designers: ["Hipgnosis", "Ronchetti & Day"],
         similarAlbums: [],
-        isAGem: false, // TODO?
+        isAGem: true,
+        description: `TODO Description`,
     },
     {
         id: "renaissance_ashes_are_burning",
@@ -591,8 +592,8 @@ const albums = [
         country: regions.ENGLAND,
         cover: ".jpg",
         criteria: [criteria.PIANO, criteria.FEMALE, criteria.SYMPHONIC, criteria.BAROQUE, criteria.ORCHESTRAL_PARTS, criteria.C_FOLK, criteria.GLITTER],
-        selectedTrackTitle: "todo", // can u understand OU ashes ar eburning
-        selectedTrackYtId: "todo",
+        selectedTrackTitle: "Ashes Are Burning",
+        selectedTrackYtId: "hZecf4CVCgw",
         spotifyId: "1C2fgiQmiTF9Dr8NdbPSou",
         deezerId: "425197",
         designers: ["Hipgnosis"],
