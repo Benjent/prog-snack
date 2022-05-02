@@ -1245,6 +1245,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "ross_ross",
+        title: "Ross",
+        artist: "Ross",
+        year: 1974,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.JAM, criteria.ROCK],
+        selectedTrackTitle: "Changes",
+        selectedTrackYtId: "Lsk9IwsC_zg",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Patrick Woodroffe"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Ross - The Pit & The Pendulum - 1974 - Ken Marcus, Tom Wilkes - null + null
+    {
         id: "roxy_music_roxy_music",
         title: "Roxy Music",
         artist: "Roxy Music",
