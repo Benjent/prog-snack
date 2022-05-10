@@ -722,7 +722,7 @@ const albums = [
         selectedTrackYtId: "4N2KQJhbjk4",
         spotifyId: null,
         deezerId: null,
-        designers: ["Pierre Lacombe", "Bertrand Dhomme"],
+        designers: ["Jack Kipp"],
         similarAlbums: ["titus_groan_titus_groan"],
         isAGem: true,
         description: `TODO Description`,
