@@ -72,6 +72,7 @@ const albums = [].concat(
     filter by year (range avec input min + max)
     lister instruments
     similar albums should be a standalone logic that generates arrays for both albums
+    notable musiciens (pour lier les artistes entre eux)
 */
 
 export default albums
