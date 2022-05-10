@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "sand_golem",
+        title: "Golem",
+        artist: "Sand",
+        year: 1974,
+        country: regions.GERMANY,
+        cover: ".jpg",
+        criteria: [criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.LENGTHY_TRACKS],
+        selectedTrackTitle: "Sarah",
+        selectedTrackYtId: "DsWIGD0-Jis",
+        spotifyId: "2BtEy3VFyDyVoOzh9l1aM8",
+        deezerId: null,
+        designers: ["Silvia Christoph"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "santana_abraxas",
         title: "Abraxas",
         artist: "Santana",
@@ -115,6 +131,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO https://www.discogs.com/fr/master/254221-SFF-Ticket-To-Everywhere
     {
         id: "scorpions_lonesome_crow",
         title: "Lonesome Crow",
