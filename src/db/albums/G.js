@@ -742,9 +742,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Grand Funk Railroad - On Time
-    // rock
-    // track Heartbreaker? OU Can't Be Too Long
+    {
+        id: "grand_funk_railroad_e_pluribus_funk",
+        title: "E Pluribus Funk",
+        artist: "Grand Funk Railroad",
+        year: 1971,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.ROCK, criteria.BLUESY, criteria.JAM, criteria.HEAVY, criteria.ORCHESTRAL_PARTS],
+        selectedTrackTitle: "Loneliness",
+        selectedTrackYtId: "RuRd9F1tXaM",
+        spotifyId: "0rNLVLFSEcUAMbmVjUzXFL",
+        deezerId: "329627",
+        designers: ["Craig Braun", "Terry Knight"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "grateful_dead_anthem_of_the_sun",
         title: "Anthem Of The Sun",
