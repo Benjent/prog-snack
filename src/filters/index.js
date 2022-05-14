@@ -41,6 +41,7 @@ Vue.filter("criterium", (value) => {
         [criteria.HUMBLE]: "Humble",
         [criteria.HUNGARIAN]: "Hungarian sung",
         [criteria.IGBO]: "Igbo sung",
+        [criteria.INDONESIAN]: "Indonesian sung",
         [criteria.INSTRUMENTAL]: "Mainly instrumental",
         [criteria.ITALIAN]: "Italian sung",
         [criteria.JAM]: "Jam-oriented",
