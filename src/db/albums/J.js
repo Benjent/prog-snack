@@ -519,6 +519,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "jean_claude_vannier_lenfant_assassin_des_mouches",
+        title: "L'enfant Assassin Des Mouches",
+        artist: "Jean-Claude Vannier",
+        year: 1972,
+        country: regions.FRANCE,
+        cover: ".jpg",
+        criteria: [criteria.EXPERIMENTAL, criteria.SOUND_COLLAGES, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS, criteria.TRANSITION, criteria.ORCHESTRAL_PARTS, criteria.INSTRUMENTAL, criteria.FRENCH],
+        selectedTrackTitle: "Danse Des Mouches Noires Gardes Du Roi",
+        selectedTrackYtId: "z5RKMvIZvaQ",
+        spotifyId: "4M4sYtHHOkT4PaN6dt72W9",
+        deezerId: "66208862",
+        designers: ["Tony Frank"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO Jeff St. John's Copperwine - Joint Effort
     // touching vocals, odd, uncommon
     // track I Remember
