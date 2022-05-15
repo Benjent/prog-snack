@@ -535,9 +535,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Jeff St. John's Copperwine - Joint Effort
-    // touching vocals, odd, uncommon
-    // track I Remember
+    {
+        id: "jeff_st_johns_copperwine",
+        title: "Joint Effort",
+        artist: "Jeff St. John's Copperwine",
+        year: 1971,
+        country: regions.AUSTRALIA,
+        cover: ".jpg",
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.TOUCHING_VOCALS],
+        selectedTrackTitle: "I Remember",
+        selectedTrackYtId: "COeiO-d1sDs",
+        spotifyId: "2khDoFrceY2dZZKEAqaPvv",
+        deezerId: "12241988",
+        designers: ["Hugh McLeod"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "jefferson_airplane_surrealistic_pillow",
         title: "Surrealistic Pillow",
