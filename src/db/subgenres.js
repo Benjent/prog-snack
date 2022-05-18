@@ -126,6 +126,7 @@ const subgenres = [
             "messengers_children_of_tomorrow",
             "return_to_forever_musicmagic",
             "george_duke_feel",
+            "chicago_chicago_vii",
         ],
         criteria: [criteria.JAZZ, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.JAZZY_GROOVY, criteria.SOFT_SEVENTIES, criteria.FEMALE],
     },
