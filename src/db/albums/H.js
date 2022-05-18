@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "hampton_grease_band_music_to_eat",
+        title: "Music To Eat",
+        artist: "Hampton Grease Band",
+        year: 1971,
+        country: regions.USA,
+        cover: ".jpg",
+        criteria: [criteria.SOFT, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.JAM, criteria.SYMPHONIC, criteria.FUNNY, criteria.ODD_RHYTHM], 
+        selectedTrackTitle: "Hendon",
+        selectedTrackYtId: "bxFF1xJZqv0",
+        spotifyId: "1ehhbLSKFnX2w1FFO3oFz6",
+        deezerId: "11428658",
+        designers: ["Espy Geissler", "Sam Whiteside", "Mike Holbrook", "Harold Kelling", "Bruce Hampton"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "hannibal_hannibal",
         title: "Hannibal",
         artist: "Hannibal",
