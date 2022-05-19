@@ -389,6 +389,26 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUVABLE New Inspiration - Vol. 1 - 1968
+    // TODO INTROUVABLE New Inspiration - Vol. 2 - 1968
+    // TODO INTROUVABLE New Inspiration - Vol. 3 - 1969
+    // TODO INTROUVABLE New Inspiration - Rainbow - 1971
+    {
+        id: "new_inspiration_new_inspiration",
+        title: "New Inspiration",
+        artist: "New Inspiration",
+        year: 1972,
+        country: regions.BELGIUM,
+        cover: ".jpg",
+        criteria: [criteria.C_FOLK, criteria.C_PSYCHE, criteria.HUMBLE, criteria.FEMALE, criteria.ORCHESTRAL_PARTS, criteria.ART_POP],
+        selectedTrackTitle: "Ode To Linda",
+        selectedTrackYtId: "todo",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Geert Verbeke"],
+        similarAlbums: ["wallace_collection_wallace_collection"],
+        isAGem: false,
+    },
     {
         id: "the_nice_the_thoughts_of_emerlist_davjack",
         title: "The Thoughts Of Emerlist Davjack",

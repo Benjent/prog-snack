@@ -2,6 +2,23 @@ import regions from "../regions"
 import { criteria } from "../criteria"
 
 const albums = [
+    // TODO INTROUVABLE Quasar - Fire In The Sky - 1982
+    {
+        id: "quasar_the_loreli",
+        title: "The Loreli",
+        artist: "Quasar",
+        year: 1989,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.NEO_EIGHTIES, criteria.FEMALE, criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.GLITTER, criteria.ODD_RHYTHM, criteria.SPECTACULAR],
+        selectedTrackTitle: "Seeing Stars Part 2 (The Dark Star)",
+        selectedTrackYtId: null,
+        spotifyId: "2pXJLOVlLdCDFmHKdTMpHp",
+        deezerId: null,
+        designers: ["Marina Anthony", "Quasar"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "quatermass_quatermass",
         title: "Quatermass",
