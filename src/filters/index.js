@@ -22,6 +22,7 @@ Vue.filter("criterium", (value) => {
         [criteria.CREOLE]: "Creole sung",
         [criteria.CRISPY_SIXTIES]: "Crispy 60s sound",
         [criteria.CROATIAN]: "Croatian sung",
+        [criteria.CZECH]: "Czech sung",
         [criteria.ELECTRO]: "Electro-based with a Prog touch",
         [criteria.EXPERIMENTAL]: "Experimental",
         [criteria.FANFARE]: "Fanfare",
