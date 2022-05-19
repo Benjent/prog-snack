@@ -35,6 +35,23 @@ const albums = [
         isAGem: true,
         description: `TODO Description`,
     },
+    {
+        id: "sheshet_sheshet",
+        title: "ששת",
+        artist: "ששת",
+        year: 1977,
+        country: regions.ISRAEL,
+        cover: ".jpg",
+        criteria: [criteria.HEBREW, criteria.SOPHISTICATED, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.FEMALE, criteria.SOFT, criteria.JAM, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: "דבקה",
+        selectedTrackYtId: "mOGQc2Wqm-c",
+        spotifyId: "2lZrr5RAXLg0rf7JiaupJA",
+        deezerId: "85144542",
+        designers: ["David Tartakover"],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
 ]
 
 export default albums
