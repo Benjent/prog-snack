@@ -4,7 +4,9 @@
         <div class="histogramVertical__datavis">
             <div class="histogramVertical__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="histogramVertical__column">
-                    <div class="gauge gauge--vertical" :style="{ height: item.ratioPercent }">{{ item.data }}</div>
+                    <slide-y-down-transition appear :duration="500">
+                        <div class="gauge gauge--vertical" :style="{ height: item.ratioPercent }">{{ item.data }}</div>
+                    </slide-y-down-transition>
                 </div>
                 <div class="histogramVertical__label">{{ label }}</div>
             </div>

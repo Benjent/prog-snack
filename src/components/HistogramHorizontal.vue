@@ -5,7 +5,9 @@
             <div class="histogramHorizontal__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="histogramHorizontal__label">{{ item.label }}</div>
                 <div class="histogramHorizontal__row">
-                    <div class="gauge gauge--horizontal" :style="{ width: item.ratioPercent }">{{ item.data }}</div>
+                    <slide-x-left-transition appear :duration="500">
+                        <div class="gauge gauge--horizontal" :style="{ width: item.ratioPercent }">{{ item.data }}</div>
+                    </slide-x-left-transition>
                 </div>
             </div>
         </div>

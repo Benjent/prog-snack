@@ -46,5 +46,12 @@
             "ignoreHTMLAttributeValues": true,
             "ignoreHTMLTextContents": true
         }]
-    }
+    },
+    "overrides": [{
+        "files": ["src/**/db/albums/*.js"],
+        "rules": {
+            "max-len": "off",
+            "vue/max-len": "off"
+        }
+    }]
 }

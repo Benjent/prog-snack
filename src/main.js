@@ -1,5 +1,7 @@
 import Vue from "vue"
 import VueMq from "vue-mq"
+import Transitions from "vue2-transitions"
+
 import App from "./App.vue"
 import filters from "./filters" // eslint-disable-line no-unused-vars
 import router from "./router"
@@ -12,6 +14,7 @@ Vue.use(VueMq, {
         L: Infinity,
     },
 })
+Vue.use(Transitions)
 
 new Vue({
     router,

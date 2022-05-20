@@ -1,18 +1,20 @@
 <template>
-    <section class="designers">
-        <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
+    <fade-transition appear>
+        <section class="designers">
+            <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
 
-            <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
+                <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
 
-            <div class="designers__border-wrapper">
-                <div class="designers__albums" :class="getClassDesigner(designer.name)">
-                    <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
-                        <Cover :album="album" thumbnail></Cover>
+                <div class="designers__border-wrapper">
+                    <div class="designers__albums" :class="getClassDesigner(designer.name)">
+                        <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
+                            <Cover :album="album" thumbnail></Cover>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
-    </section>
+    </fade-transition>
 </template>
 
 <script>
@@ -332,10 +334,6 @@ export default {
         & &__albums__item {
             height: 120px;
             width: 120px;
-        }
-
-        & &__border-wrapper {
-            // padding: 0 20px;
         }
     }
 }

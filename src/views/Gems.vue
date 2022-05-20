@@ -1,18 +1,20 @@
 <template>
-    <section class="gems">
-        <div class="gems__item" v-for="album in gems" :key="album.id">
-            <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
+    <fade-transition appear>
+        <section class="gems">
+            <div class="gems__item" v-for="album in gems" :key="album.id">
+                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
 
-            <div class="gems__album">
-                <div class="gems__title" @click="selectAlbumAndView(album)">
-                    <h3 class="title title--3">{{album.artist}}</h3>
-                    <h2 class="title title--2 text--album-title">{{album.title}}</h2>
-                    <span>({{album.year}})</span>
+                <div class="gems__album">
+                    <div class="gems__title" @click="selectAlbumAndView(album)">
+                        <h3 class="title title--3">{{album.artist}}</h3>
+                        <h2 class="title title--2 text--album-title">{{album.title}}</h2>
+                        <span>({{album.year}})</span>
+                    </div>
+                    <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
                 </div>
-                <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
             </div>
-        </div>
-    </section>
+        </section>
+    </fade-transition>
 </template>
 
 <script>

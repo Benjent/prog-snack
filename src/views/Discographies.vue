@@ -1,96 +1,100 @@
 <template>
-    <section class="discographies">
-        <aside class="discographies__artists" v-if="selectedArtist">
-            <div class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
-                v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
+    <fade-transition appear>
+        <section class="discographies">
+            <slide-y-up-transition appear :duration="500">
+                <aside class="discographies__artists" v-if="selectedArtist">
+                    <div class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
+                        v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
 
-                <Icon v-if="artist === selectedArtist" name="library"/>
-                <span> {{artist}}</span>
-            </div>
-        </aside>
+                        <Icon v-if="artist === selectedArtist" name="library"/>
+                        <span> {{artist}}</span>
+                    </div>
+                </aside>
+            </slide-y-up-transition>
 
-        <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
-            <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered></Cover>
-            <h2 class="title title--2 text--album-title">{{selectedAlbum.title}}</h2>
-            <h3 class="title title--3">({{selectedAlbum.year}})</h3>
-            <div v-if="selectedAlbum.designers.length > 0">
-                <Icon name="palette" />
-                <span> Cover by</span>
-                <template v-for="(designer, index) in selectedAlbum.designers">
-                    {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
+            <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
+                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered></Cover>
+                <h2 class="title title--2 text--album-title">{{selectedAlbum.title}}</h2>
+                <h3 class="title title--3">({{selectedAlbum.year}})</h3>
+                <div v-if="selectedAlbum.designers.length > 0">
+                    <Icon name="palette" />
+                    <span> Cover by</span>
+                    <template v-for="(designer, index) in selectedAlbum.designers">
+                        {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
+                    </template>
+                </div>
+                <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
+
+                <template v-if="discography.length > 1">
+                    <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
+                    <div class="discographies__borderWrapper">
+                        <section class="discographies__discography">
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
+                        </section>
+                    </div>
                 </template>
-            </div>
-            <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
-            <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
-
-            <template v-if="discography.length > 1">
-                <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
-                <div class="discographies__borderWrapper">
-                    <section class="discographies__discography">
-                        <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
-                    </section>
-                </div>
-            </template>
-        </section>
-
-        <section class="discographies__selectedAlbum" v-else>
-            <div class="discographies__selectedAlbum__main">
-                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered></Cover>
-                <div class="discographies__selectedAlbum__infos">
-                    <header class="discographies__selectedAlbum__header">
-                        <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
-                        <div>
-                            <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</span>
-                        </div>
-                        <div v-if="selectedAlbum.designers.length > 0">
-                            Cover by
-                            <template v-for="(designer, index) in selectedAlbum.designers">
-                                {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
-                            </template>
-                        </div>
-                    </header>
-                    <footer class="discographies__selectedAlbum__footer">
-                        <div class="discographies__selectedAlbum__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
-                            <span>{{ criterium | criterium }}</span>
-                            <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
-                        </div>
-                    </footer>
-                </div>
-            </div>
-            <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
-
-            <section v-if="spotifyPath || deezerPath" class="discographies__logos">
-                <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_gold.png')">
-                <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_gold.png')">
-            </section>
-            <section v-if="spotifyPath || deezerPath" class="discographies__players">
-                <iframe
-                    v-if="spotifyPath"
-                    class="discographies__players__item"
-                    :class="{ 'discographies__players__item--one-missing': spotifyPath && !deezerPath }"
-                    :src="spotifyPath"
-                    frameborder="0" allowtransparency="true"
-                    allow="encrypted-media"></iframe>
-                <iframe
-                    v-if="deezerPath"
-                    class="discographies__players__item"
-                    :class="{ 'discographies__players__item--one-missing': deezerPath && !spotifyPath }"
-                    :src="`${deezerPath}?tracklist=${$mq === 'M' ? false : true}`"
-                    frameborder="0"
-                    allowtransparency="true"
-                    allow="encrypted-media; clipboard-write"></iframe>
             </section>
 
-            <template v-if="discography.length > 1">
-                <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
-                <div class="discographies__borderWrapper">
-                    <section class="discographies__discography">
-                        <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
-                    </section>
+            <section class="discographies__selectedAlbum" v-else>
+                <div class="discographies__selectedAlbum__main">
+                    <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered></Cover>
+                    <div class="discographies__selectedAlbum__infos">
+                        <header class="discographies__selectedAlbum__header">
+                            <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
+                            <div>
+                                <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</span>
+                            </div>
+                            <div v-if="selectedAlbum.designers.length > 0">
+                                Cover by
+                                <template v-for="(designer, index) in selectedAlbum.designers">
+                                    {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
+                                </template>
+                            </div>
+                        </header>
+                        <footer class="discographies__selectedAlbum__footer">
+                            <div class="discographies__selectedAlbum__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
+                                <span>{{ criterium | criterium }}</span>
+                                <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
+                            </div>
+                        </footer>
+                    </div>
                 </div>
-            </template>
+                <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
+
+                <section v-if="spotifyPath || deezerPath" class="discographies__logos">
+                    <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_gold.png')">
+                    <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_gold.png')">
+                </section>
+                <section v-if="spotifyPath || deezerPath" class="discographies__players">
+                    <iframe
+                        v-if="spotifyPath"
+                        class="discographies__players__item"
+                        :class="{ 'discographies__players__item--one-missing': spotifyPath && !deezerPath }"
+                        :src="spotifyPath"
+                        frameborder="0" allowtransparency="true"
+                        allow="encrypted-media"></iframe>
+                    <iframe
+                        v-if="deezerPath"
+                        class="discographies__players__item"
+                        :class="{ 'discographies__players__item--one-missing': deezerPath && !spotifyPath }"
+                        :src="`${deezerPath}?tracklist=${$mq === 'M' ? false : true}`"
+                        frameborder="0"
+                        allowtransparency="true"
+                        allow="encrypted-media; clipboard-write"></iframe>
+                </section>
+
+                <template v-if="discography.length > 1">
+                    <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
+                    <div class="discographies__borderWrapper">
+                        <section class="discographies__discography">
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
+                        </section>
+                    </div>
+                </template>
+            </section>
         </section>
-    </section>
+    </fade-transition>
 </template>
 
 <script>
@@ -135,13 +139,6 @@ export default {
                     break
                 }
             }
-
-            // // Handle iframe
-            // if (!this.selectedAlbum.spotifyId && this.selectedAlbum.deezerId) {
-            //     this.setSelectedPlayer('deezer');
-            // } else if (!this.selectedAlbum.deezerId && this.selectedAlbum.spotifyId) {
-            //     this.setSelectedPlayer('spotify');
-            // }
         },
     },
 }
@@ -271,9 +268,9 @@ export default {
             line-height: 1.3;
         }
 
-        &__criterium {
-            // padding-right: 10px;
-        }
+        // &__criterium {
+        //     padding-right: 10px;
+        // }
 
         &__criterium-separator {
             display: inline-block;

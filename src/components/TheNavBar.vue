@@ -1,16 +1,18 @@
 <template>
-    <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
-        <router-link v-if="!footer" class="theNavBar__logo link" to="/">
-            <img src="../assets/img/logos/snack_font.png" alt="Prog Snack">
-        </router-link>
-        <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
-            <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
-                <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText"/>
-                <div v-else class="theNavBar__navText">{{ item.title }}</div>
+    <slide-y-up-transition appear :duration="500">
+        <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
+            <router-link v-if="!footer" class="theNavBar__logo link" to="/">
+                <img src="../assets/img/logos/snack_font.png" alt="Prog Snack">
             </router-link>
-        </nav>
-        <SearchBar v-if="!footer"></SearchBar>
-    </header>
+            <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
+                <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
+                    <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText"/>
+                    <div v-else class="theNavBar__navText">{{ item.title }}</div>
+                </router-link>
+            </nav>
+            <SearchBar v-if="!footer"></SearchBar>
+        </header>
+    </slide-y-up-transition>
 </template>
 
 <script>

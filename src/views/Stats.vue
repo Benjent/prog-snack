@@ -1,23 +1,27 @@
 <template>
-    <section class="stats">
-        <section class="stats__section stats__numbers">
-            <NumberUnit :number="artists.length" unit="artists"/>
-            <NumberUnit :number="albums.length" unit="albums"/>
-            <NumberUnit :number="gemsNb" unit="gems"/>
-            <NumberUnit :number="subgenres.length" unit="subgenres"/>
+    <fade-transition appear>
+        <section class="stats">
+            <zoom-center-transition appear>
+                <section class="stats__section stats__numbers">
+                    <NumberUnit :number="artists.length" unit="artists"/>
+                    <NumberUnit :number="albums.length" unit="albums"/>
+                    <NumberUnit :number="gemsNb" unit="gems"/>
+                    <NumberUnit :number="subgenres.length" unit="subgenres"/>
+                </section>
+            </zoom-center-transition>
+
+            <histogram-horizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile"></histogram-horizontal>
+            <histogram-vertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></histogram-vertical>
+
+            <histogram-horizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></histogram-horizontal>
+
+            <histogram-horizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></histogram-horizontal>
+
+            <histogram-horizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></histogram-horizontal>
+
+            <histogram-horizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></histogram-horizontal>
         </section>
-
-        <histogram-horizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile"></histogram-horizontal>
-        <histogram-vertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></histogram-vertical>
-
-        <histogram-horizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></histogram-horizontal>
-
-        <histogram-horizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></histogram-horizontal>
-
-        <histogram-horizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></histogram-horizontal>
-
-        <histogram-horizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></histogram-horizontal>
-    </section>
+    </fade-transition>
 </template>
 
 <script>
