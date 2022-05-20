@@ -138,7 +138,7 @@ const albums = [
         artist: "Achim Reichel",
         year: 1974,
         country: regions.GERMANY,
-        cover: ".jpg",
+        cover: ".png",
         criteria: [criteria.INSTRUMENTAL, criteria.JAM, criteria.SPACY, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.C_PSYCHE],
         selectedTrackTitle: "Tanz Der Vögel In Den Winden",
         selectedTrackYtId: "_hymy2rRkHk",
