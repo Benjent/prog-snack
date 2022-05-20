@@ -1,55 +1,65 @@
 <template>
-     <section class="attic">
-        <aside class="attic__sidebar">
-            <div class="attic__title attic__title--reset">
-                <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
-            </div>
-            <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
-                <div>Year</div>
-                <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
-            </div>
-            <div class="attic__panel" v-if="isDisplayedYear">
-                <Select class="attic__filter" v-model.number="selectedYear" :options="years" @input="filterAttic"></Select>
-            </div>
-            <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
-                <div>Region</div>
-                <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
-            </div>
-            <div class="attic__panel" v-if="isDisplayedRegion">
-                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
-            </div>
-            <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
-                <div>Language</div>
-                <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
-            </div>
-            <div class="attic__panel" v-if="isDisplayedLanguage">
-                <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
-            </div>
-            <div v-for="(panel, index) in filterModel" :key="panel.panel">
-                <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
-                    <div>{{ panel.panel | criteriumCategory }}</div>
-                    <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
-                </div>
-                <div class="attic__panel" v-if="panel.isDisplayed">
-                    <template v-for="(item, indexCriteria) in panel.criteria">
-                        <Radio v-if="item.name" v-model="radioGroups[item.name]"
-                            class="attic__filter"
-                            :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
-                            @click.native="filterAttic(item.criterium)"></Radio>
-                        <Check v-else
-                            class="attic__filter"
-                            v-model="filterModel[index].criteria[indexCriteria].checked"
-                            :label="item.criterium | criterium" :key="item.criterium"
-                            @click.native="filterAttic(item.criterium)"></Check>
-                    </template>
-                    <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
-                </div>
-            </div>
-        </aside>
-        <section id="albumList" class="attic__mosaic">
-            <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)"></Cover>
+    <fade-transition appear>
+        <section class="attic">
+            <slide-y-up-transition appear :duration="500">
+                <aside class="attic__sidebar">
+                    <div class="attic__title attic__title--reset">
+                        <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
+                    </div>
+                        <div>
+                            <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
+                                <div>Year</div>
+                                <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
+                            </div>
+                            <div class="attic__panel" v-if="isDisplayedYear">
+                                <Select class="attic__filter" v-model.number="selectedYear" :options="years" @input="filterAttic"></Select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
+                                <div>Region</div>
+                                <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
+                            </div>
+                            <div class="attic__panel" v-if="isDisplayedRegion">
+                                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
+                                <div>Language</div>
+                                <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
+                            </div>
+                            <div class="attic__panel" v-if="isDisplayedLanguage">
+                                <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
+                            </div>
+                        </div>
+                        <div v-for="(panel, index) in filterModel" :key="panel.panel">
+                            <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
+                                <div>{{ panel.panel | criteriumCategory }}</div>
+                                <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
+                            </div>
+                            <div class="attic__panel" v-if="panel.isDisplayed">
+                                <template v-for="(item, indexCriteria) in panel.criteria">
+                                    <Radio v-if="item.name" v-model="radioGroups[item.name]"
+                                        class="attic__filter"
+                                        :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
+                                        @click.native="filterAttic(item.criterium)"></Radio>
+                                    <Check v-else
+                                        class="attic__filter"
+                                        v-model="filterModel[index].criteria[indexCriteria].checked"
+                                        :label="item.criterium | criterium" :key="item.criterium"
+                                        @click.native="filterAttic(item.criterium)"></Check>
+                                </template>
+                                <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
+                            </div>
+                        </div>
+                </aside>
+            </slide-y-up-transition>
+            <section id="albumList" class="attic__mosaic">
+                <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)"></Cover>
+            </section>
         </section>
-    </section>
+    </fade-transition>
 </template>
 
 <script>

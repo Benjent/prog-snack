@@ -1,38 +1,40 @@
 <template>
-    <section class="subgenres">
-        <div class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
-            <div class="subgenres__albums">
-                <Cover
-                    class="subgenres__cover"
-                    v-for="id in subgenre.albums" :key="id"
-                    :album="albumById(id)"
-                    bordered
-                    :size="130"
-                    @click.native="selectAlbumAndView(id)"></Cover>
-            </div>
+    <fade-transition appear>
+        <section class="subgenres">
+            <div class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
+                <div class="subgenres__albums">
+                    <Cover
+                        class="subgenres__cover"
+                        v-for="id in subgenre.albums" :key="id"
+                        :album="albumById(id)"
+                        bordered
+                        :size="130"
+                        @click.native="selectAlbumAndView(id)"></Cover>
+                </div>
 
-            <div class="subgenres__infosWithMostRepresentative">
-                <Cover
-                    class="subgenres__cover subgenres__cover--mostRepresentative"
-                    :album="albumById(subgenre.mostRepresentativeAlbum)"
-                    bordered
-                    :size="$mq === 'M' ? 100 : 200"
-                    @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
+                <div class="subgenres__infosWithMostRepresentative">
+                    <Cover
+                        class="subgenres__cover subgenres__cover--mostRepresentative"
+                        :album="albumById(subgenre.mostRepresentativeAlbum)"
+                        bordered
+                        :size="$mq === 'M' ? 100 : 200"
+                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
 
-                <div class="subgenres__infos">
-                    <h2 class="title title--2 subgenres__name">{{ subgenre.name }}</h2>
-                    <p>
-                        <span>Characterized by the following: </span>
-                        <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
-                            {{ criterium | criterium }}
-                            <span v-if="index < subgenre.criteria.length - 1">-</span>
-                        </span>
-                    </p>
-                    <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
+                    <div class="subgenres__infos">
+                        <h2 class="title title--2 subgenres__name">{{ subgenre.name }}</h2>
+                        <p>
+                            <span>Characterized by the following: </span>
+                            <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
+                                {{ criterium | criterium }}
+                                <span v-if="index < subgenre.criteria.length - 1">-</span>
+                            </span>
+                        </p>
+                        <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </fade-transition>
 </template>
 
 <script>
