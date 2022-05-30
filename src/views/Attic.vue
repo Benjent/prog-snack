@@ -67,6 +67,7 @@ import { mapActions, mapState } from "vuex"
 import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
+import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
 import Cover from "../components/Cover.vue"
 import Arrow from "../components/Arrow.vue"
 import Check from "../components/Check.vue"
@@ -117,6 +118,9 @@ export default {
     },
     created() {
         this.generateCriteriaFilterModel()
+    },
+    mounted() {
+        applyChainedFadeInEarlyOnly(this.$el, ".attic__cover", 3000, 30)
     },
     methods: {
         ...mapActions(["selectAlbum"]),
@@ -252,6 +256,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/fade-in';
 @import '../style/mixins/page';
 @import '../style/mixins/shadow';
 @import '../style/modules/button';
@@ -316,6 +321,7 @@ export default {
     }
 
     & &__cover {
+        @include fadeIn;
         height: max-content;
         width: calc(100% / 8);
     }

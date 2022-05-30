@@ -9,6 +9,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
+import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
 import Cover from "./Cover.vue"
 
 export default {
@@ -19,6 +20,9 @@ export default {
     computed: {
         ...mapState(["albumsSortedByYear"]),
     },
+    mounted() {
+        applyChainedFadeInEarlyOnly(this.$el, ".timeline__album", 2000, 50)
+    },
     methods: {
         ...mapActions(["selectAlbum"]),
     },
@@ -27,6 +31,7 @@ export default {
 
 <style lang="scss">
 @import '../style/gatherer';
+@import '../style/mixins/fade-in';
 @import '../style/mixins/shadow';
 
 .timeline {
@@ -42,6 +47,7 @@ export default {
     overflow-y: hidden;
 
     & &__album {
+        @include fadeIn;
         display: flex;
     }
 

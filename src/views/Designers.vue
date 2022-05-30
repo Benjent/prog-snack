@@ -2,7 +2,6 @@
     <fade-transition appear>
         <section class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
-
                 <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
 
                 <div class="designers__border-wrapper">
@@ -20,6 +19,7 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import { shuffle } from "../utils/array-utils"
+import { applyChainedFadeIn } from "../utils/transition-utils"
 import Cover from "../components/Cover.vue"
 
 export default {
@@ -31,6 +31,11 @@ export default {
         designersWithEnoughWorks() {
             return Object.values(this.designers).filter((d) => d.works.length > 1)
         },
+    },
+    mounted() {
+        this.$el.querySelectorAll(".designers__section").forEach((s) => {
+            applyChainedFadeIn(s, ".designers__albums__item", 30)
+        })
     },
     methods: {
         ...mapActions(["selectAlbum"]),
@@ -59,6 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/fade-in';
 @import '../style/mixins/page';
 @import '../style/modules/title';
 
@@ -84,6 +90,7 @@ export default {
     }
 
     & &__albums__item {
+        @include fadeIn;
         display: flex;
         flex-direction: column;
         position: relative;

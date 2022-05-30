@@ -3,7 +3,7 @@
         v-if="album"
         :id="coverId"
         class="cover"
-        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered }"
+        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--fade': fade }"
         :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
@@ -39,6 +39,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        fade: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         borderWidth() {
@@ -55,10 +59,12 @@ export default {
         },
     },
     mounted() {
-        // Without timeout browser cannot trigger CSS transition
-        window.setTimeout(() => {
-            this.$el.style.opacity = 1
-        }, 0)
+        if (this.fade) {
+            // Without timeout browser cannot trigger CSS transition
+            window.setTimeout(() => {
+                this.$el.style.opacity = 1
+            }, 0)
+        }
     },
     methods: {
         getCover(album) {
@@ -76,6 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/fade-in';
 
 .cover {
     display: inline-block;
@@ -83,8 +90,6 @@ export default {
     max-width: 300px;
     max-height: 300px;
     overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.5s;
 
     &:hover {
         .cover__thumbnail {
@@ -99,6 +104,10 @@ export default {
     &--bordered {
         border-style: solid;
         border-color: $primary;
+    }
+
+    &--fade {
+        @include fadeIn;
     }
 
     & &__thumbnail {

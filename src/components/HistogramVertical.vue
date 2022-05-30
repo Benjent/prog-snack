@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { applyBarTransition } from "../utils/histogram-utils"
+import { applyBarTransition } from "../utils/transition-utils"
 
 export default {
     name: "HistogramVertical",

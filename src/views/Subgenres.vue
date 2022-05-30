@@ -39,6 +39,7 @@
 
 <script>
 import { mapActions, mapState, mapGetters } from "vuex"
+import { applyChainedFadeIn } from "../utils/transition-utils"
 import Cover from "../components/Cover.vue"
 
 export default {
@@ -48,6 +49,11 @@ export default {
     computed: {
         ...mapState(["subgenres"]),
         ...mapGetters(["albumById"]),
+    },
+    mounted() {
+        this.$el.querySelectorAll(".subgenres__subgenre").forEach((s) => {
+            applyChainedFadeIn(s, ".subgenres__cover")
+        })
     },
     methods: {
         ...mapActions(["selectAlbum"]),
@@ -62,6 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/fade-in';
 @import '../style/mixins/page';
 @import '../style/modules/text';
 @import '../style/modules/title';
@@ -101,6 +108,7 @@ export default {
     }
 
     & &__cover {
+        @include fadeIn;
         cursor: pointer;
         // height: 130px;
         margin: 0 20px 37px 20px;
