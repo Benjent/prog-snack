@@ -7,7 +7,7 @@
 
                 <div class="designers__border-wrapper">
                     <div class="designers__albums" :class="getClassDesigner(designer.name)">
-                        <div class="designers__albums__item" v-for="album in designer.works" :key="album.id" @click="selectAlbumAndView(album)">
+                        <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
                             <Cover :album="album" thumbnail></Cover>
                         </div>
                     </div>
@@ -19,6 +19,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
+import { shuffle } from "../utils/array-utils"
 import Cover from "../components/Cover.vue"
 
 export default {
@@ -44,6 +45,9 @@ export default {
                 "designers__albums--marcusKeef": name === "Marcus Keef",
                 "designers__albums--hughSyme": name === "Hugh Syme",
             }
+        },
+        getShuffledDesignerWorks(array) {
+            return shuffle(array)
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
