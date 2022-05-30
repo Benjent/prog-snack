@@ -27,6 +27,7 @@
 <script>
 import { mapState, mapGetters } from "vuex"
 import { categories, criteriaCategory } from "../db/criteria"
+import { flags } from "../db/regions"
 import { sort } from "../utils/array-utils"
 import HistogramHorizontal from "../components/HistogramHorizontal.vue"
 import HistogramVertical from "../components/HistogramVertical.vue"
@@ -50,7 +51,7 @@ export default {
         albumsPerCountryWithRatio() {
             const data = this.buildBarChartDataObject(this.albumsPerCountry)
             const albumsPerCountryWithRatio = Object.values(data).map((d) => {
-                d.label = this.$options.filters.region(d.label)
+                d.label = `${flags[d.label]} ${this.$options.filters.region(d.label)}`
                 return d
             })
 

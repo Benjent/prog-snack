@@ -1,6 +1,6 @@
 import Vue from "vue"
 import { criteria, categories } from "../db/criteria"
-import regions from "../db/regions"
+import { regions } from "../db/regions"
 
 Vue.filter("criterium", (value) => {
     const mapper = {
