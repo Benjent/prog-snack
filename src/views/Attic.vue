@@ -191,7 +191,7 @@ export default {
                 })
             })
             this.albums.forEach((a) => {
-                const albumDom = document.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.id}`)
                 this.showAlbum(albumDom)
             })
         },
@@ -217,7 +217,7 @@ export default {
             })
 
             this.albums.forEach((a) => {
-                const albumDom = document.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.id}`)
                 const isAMatch = {
                     year: true,
                     region: true,
