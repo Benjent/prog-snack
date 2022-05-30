@@ -49,7 +49,10 @@ export default {
         },
         albumsPerCountryWithRatio() {
             const data = this.buildBarChartDataObject(this.albumsPerCountry)
-            const albumsPerCountryWithRatio = Object.values(data).map((d) => d)
+            const albumsPerCountryWithRatio = Object.values(data).map((d) => {
+                d.label = this.$options.filters.region(d.label)
+                return d
+            })
 
             sort(albumsPerCountryWithRatio, "data", "DESC")
             return albumsPerCountryWithRatio

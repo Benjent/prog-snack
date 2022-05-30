@@ -43,7 +43,7 @@
                         <header class="discographies__selectedAlbum__header">
                             <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
                             <div>
-                                <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</span>
+                                <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
                             </div>
                             <div v-if="selectedAlbum.designers.length > 0">
                                 Cover by
