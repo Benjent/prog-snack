@@ -24,7 +24,7 @@ export default {
         datasource: [Array, Object],
     },
     mounted() {
-        applyBarTransition("width")
+        applyBarTransition("width", this.$el)
     },
 }
 </script>

@@ -1,5 +1,5 @@
-function applyBarTransition(cssProperty) {
-    const gauges = document.querySelectorAll(".gauge")
+function applyBarTransition(cssProperty, self) {
+    const gauges = self.querySelectorAll(".gauge")
 
     // Without timeout browser cannot trigger CSS transition
     window.setTimeout(() => {
