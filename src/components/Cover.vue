@@ -1,6 +1,7 @@
 <template>
     <div
         v-if="album"
+        :id="coverId"
         class="cover"
         :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered }"
         :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
@@ -49,6 +50,15 @@ export default {
             }
             return `${5}px`
         },
+        coverId() {
+            return `cover_${this.album.id}`
+        },
+    },
+    mounted() {
+        // Without timeout browser cannot trigger CSS transition
+        window.setTimeout(() => {
+            this.$el.style.opacity = 1
+        }, 0)
     },
     methods: {
         getCover(album) {
@@ -73,6 +83,8 @@ export default {
     max-width: 300px;
     max-height: 300px;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
 
     &:hover {
         .cover__thumbnail {
