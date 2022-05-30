@@ -2,19 +2,23 @@
     <fade-transition appear>
         <section class="album">
             <button class="album__button button" @click="randomizeAlbum">Surprise me</button>
-            <section class="album__body">
-                <div class="album__info">
-                    <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
-                    <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
-                    <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
-                </div>
+            <section class="album__body" :key="selectedAlbum.id">
+                <slide-x-left-transition appear>
+                    <div class="album__info">
+                        <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
+                        <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
+                        <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
+                    </div>
+                </slide-x-left-transition>
 
-                <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable @click.native="goToDiscographies"></Cover>
+                <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable fade @click.native="goToDiscographies"></Cover>
 
-                <div class="album__criteria">
-                    <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                    <div class="album-criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
-                </div>
+                <slide-x-right-transition appear>
+                    <div class="album__criteria">
+                        <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                        <div class="album-criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                    </div>
+                </slide-x-right-transition>
             </section>
 
             <AlbumStarter class="album__track" :album="selectedAlbum"></AlbumStarter>

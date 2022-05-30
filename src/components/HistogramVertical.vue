@@ -5,7 +5,7 @@
             <div class="histogramVertical__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="histogramVertical__column">
                     <slide-y-down-transition appear :duration="500">
-                        <div class="gauge gauge--vertical" :style="{ height: item.ratioPercent }">{{ item.data }}</div>
+                        <div class="gauge gauge--vertical" :data-height="item.ratioPercent">{{ item.data }}</div>
                     </slide-y-down-transition>
                 </div>
                 <div class="histogramVertical__label">{{ label }}</div>
@@ -15,11 +15,16 @@
 </template>
 
 <script>
+import { applyBarTransition } from "../utils/transition-utils"
+
 export default {
     name: "HistogramVertical",
     props: {
         caption: String,
         datasource: [Array, Object],
+    },
+    mounted() {
+        applyBarTransition("height", this.$el)
     },
 }
 </script>

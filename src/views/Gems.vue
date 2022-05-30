@@ -62,6 +62,7 @@ export default {
         &:last-of-type {
             border: none;
         }
+
         &:nth-child(even) {
             flex-direction: row-reverse;
             text-align: right;

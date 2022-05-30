@@ -2,6 +2,8 @@
     $padding: 6px;
     $size: 12px;
     $opposite-size-min: 30px;
+    $transition-duration: 0.5s;
+
     display: flex;
     background: $primary;
     color: $secondary-dark;
@@ -12,6 +14,9 @@
         padding: 0px $padding;
         min-height: $opposite-size-min;
         width: $size;
+        height: $opposite-size-min;
+
+        transition: height $transition-duration ease-out;
     }
 
     &--horizontal {
@@ -19,5 +24,8 @@
         padding: $padding;
         min-width: $opposite-size-min;
         height: $size;
+        width: $opposite-size-min;
+
+        transition: width $transition-duration ease-out;
     }
 }

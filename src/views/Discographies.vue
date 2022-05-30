@@ -13,7 +13,7 @@
             </slide-y-up-transition>
 
             <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
-                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered></Cover>
+                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered fade></Cover>
                 <h2 class="title title--2 text--album-title">{{selectedAlbum.title}}</h2>
                 <h3 class="title title--3">({{selectedAlbum.year}})</h3>
                 <div v-if="selectedAlbum.designers.length > 0">
@@ -30,7 +30,7 @@
                     <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                     <div class="discographies__borderWrapper">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)"></Cover>
                         </section>
                     </div>
                 </template>
@@ -38,7 +38,7 @@
 
             <section class="discographies__selectedAlbum" v-else>
                 <div class="discographies__selectedAlbum__main">
-                    <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered></Cover>
+                    <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade></Cover>
                     <div class="discographies__selectedAlbum__infos">
                         <header class="discographies__selectedAlbum__header">
                             <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
@@ -88,7 +88,7 @@
                     <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                     <div class="discographies__borderWrapper">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" @click.native="selectAlbum(album)"></Cover>
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)"></Cover>
                         </section>
                     </div>
                 </template>
@@ -217,6 +217,7 @@ export default {
         width: 100%;
         box-sizing: border-box;
         border-top: solid 2px;
+        mask-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 93%, transparent 100%);
     }
 
     & &__album {
@@ -241,10 +242,14 @@ export default {
             width: 100%;
         }
 
+        &__cover {
+            width: calc(100% / 3);
+        }
+
         &__infos {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: calc(100% / 3) * 2;
         }
 
         &__header {
@@ -308,6 +313,7 @@ export default {
             text-align: center;
 
             &__cover {
+                width: auto;
                 margin: auto;
             }
         }

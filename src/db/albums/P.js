@@ -34,7 +34,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Introuvable 1993 - Gnosis designers: Klaus Blasquiz
+    // TODO Introuvable 1993 - Gnosis (designers: Klaus Blasquiz)
     {
         id: "paice_ashton_and_lord_malice_in_wonderland",
         title: "Malice In Wonderland",
@@ -145,6 +145,22 @@ const albums = [
         deezerId: "49395822",
         designers: [],
         similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: "patrick_vian_bruits_et_temps_analogues",
+        title: "Bruits Et Temps Analogues",
+        artist: "Patrick Vian",
+        year: 1977,
+        country: regions.FRANCE,
+        cover: ".jpg",
+        criteria: [criteria.SOFT_SEVENTIES, criteria.SPACY, criteria.ELECTRO, criteria.INSTRUMENTAL, criteria.JAM, criteria.SOUND_COLLAGES, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE],
+        selectedTrackTitle: "Sphère",
+        selectedTrackYtId: "UpRakuQKRQU",
+        spotifyId: "4vts8MmwBXhSJwSBBUXcJH",
+        deezerId: "61053432",
+        designers: ["Georges Lacroix"],
+        similarAlbums: [], // TODO similar Achim Reichel late 70's
         isAGem: false,
     },
     {

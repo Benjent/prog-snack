@@ -10,22 +10,23 @@
                 </section>
             </zoom-center-transition>
 
-            <histogram-horizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile"></histogram-horizontal>
-            <histogram-vertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></histogram-vertical>
+            <HistogramHorizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile"></HistogramHorizontal>
+            <HistogramVertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></HistogramVertical>
 
-            <histogram-horizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></histogram-horizontal>
+            <HistogramHorizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></HistogramHorizontal>
 
-            <histogram-horizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></histogram-horizontal>
+            <HistogramHorizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></HistogramHorizontal>
 
-            <histogram-horizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></histogram-horizontal>
+            <HistogramHorizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></HistogramHorizontal>
 
-            <histogram-horizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></histogram-horizontal>
+            <HistogramHorizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></HistogramHorizontal>
         </section>
     </fade-transition>
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex"
+import { categories, criteriaCategory } from "../db/criteria"
 import { sort } from "../utils/array-utils"
 import HistogramHorizontal from "../components/HistogramHorizontal.vue"
 import HistogramVertical from "../components/HistogramVertical.vue"
@@ -54,8 +55,11 @@ export default {
             return albumsPerCountryWithRatio
         },
         criteriaOccurencesWithRatio() {
+            const min = 100
             const data = this.buildBarChartDataObject(this.criteriaOccurences)
-            const criteriaOccurencesWithRatio = Object.values(data).map((d) => {
+            const criteriaOccurencesWithRatio = Object.values(data).filter((item) => {
+                return item.data >= min && !criteriaCategory[categories.LANGUAGE].includes(item.label)
+            }).map((d) => {
                 d.label = this.$options.filters.criterium(d.label)
                 return d
             })

@@ -6,7 +6,7 @@
                 <div class="histogramHorizontal__label">{{ item.label }}</div>
                 <div class="histogramHorizontal__row">
                     <slide-x-left-transition appear :duration="500">
-                        <div class="gauge gauge--horizontal" :style="{ width: item.ratioPercent }">{{ item.data }}</div>
+                        <div class="gauge gauge--horizontal" :data-width="item.ratioPercent">{{ item.data }}</div>
                     </slide-x-left-transition>
                 </div>
             </div>
@@ -15,11 +15,16 @@
 </template>
 
 <script>
+import { applyBarTransition } from "../utils/transition-utils"
+
 export default {
     name: "HistogramHorizontal",
     props: {
         caption: String,
         datasource: [Array, Object],
+    },
+    mounted() {
+        applyBarTransition("width", this.$el)
     },
 }
 </script>
