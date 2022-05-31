@@ -279,6 +279,7 @@ export default {
             @include golden;
             font-style: italic;
             font-weight: bold;
+            width: 100%;
         }
 
         &__title {
