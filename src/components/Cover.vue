@@ -83,6 +83,7 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/fade-in';
+@import '../style/mixins/golden';
 
 .cover {
     display: inline-block;
@@ -134,10 +135,10 @@ export default {
     }
 
     & &__gem {
+        @include golden;
         font-style: italic;
         font-weight: bold;
-        border-top: solid 1px;
-        border-bottom: solid 1px;
+        font-size: 0.8rem;
     }
 
     & &__album {

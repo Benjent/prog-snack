@@ -61,9 +61,7 @@ export default {
         criteriaOccurencesWithRatio() {
             const min = 100
             const data = this.buildBarChartDataObject(this.criteriaOccurences)
-            const criteriaOccurencesWithRatio = Object.values(data).filter((item) => {
-                return item.data >= min && !criteriaCategory[categories.LANGUAGE].includes(item.label)
-            }).map((d) => {
+            const criteriaOccurencesWithRatio = Object.values(data).filter((item) => item.data >= min && !criteriaCategory[categories.LANGUAGE].includes(item.label)).map((d) => {
                 d.label = this.$options.filters.criterium(d.label)
                 return d
             })
