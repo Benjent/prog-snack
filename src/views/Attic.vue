@@ -21,7 +21,7 @@
                                 <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
                             </div>
                             <div class="attic__panel" v-if="isDisplayedRegion">
-                                <Select class="attic__filter" v-model="selectedRegion" :options="regions" @input="filterAttic"></Select>
+                                <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic"></Select>
                             </div>
                         </div>
                         <div>

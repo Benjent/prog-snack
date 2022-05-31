@@ -1,0 +1,20 @@
+@import '../animations/background-gradient-wave';
+
+@mixin golden {
+    background-image: linear-gradient(
+        141deg,
+        $primary 0,
+        $primary 20%,
+        $white 21%,
+        $primary 31%,
+        $primary 55%,
+        $white 56%,
+        $primary 60%,
+        $primary 100%,
+    );
+    background-size: 250%;
+    background-position: 100%;
+    background-clip: text;
+    color: transparent;
+    animation: GradientWave 2s ease infinite;
+}

@@ -7,7 +7,7 @@
                     <div class="album__info">
                         <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
                         <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
-                        <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</div>
+                        <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</div>
                     </div>
                 </slide-x-left-transition>
 
@@ -15,8 +15,8 @@
 
                 <slide-x-right-transition appear>
                     <div class="album__criteria">
-                        <div class="album-gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                        <div class="album-criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                        <div class="album__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                        <div class="album__criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
                     </div>
                 </slide-x-right-transition>
             </section>
@@ -62,6 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/golden';
 @import '../style/mixins/page';
 @import '../style/modules/button';
 @import '../style/modules/title';
@@ -98,6 +99,13 @@ export default {
 
     & &__criteria {
         width: 45%;
+    }
+
+    & &__gem {
+        @include golden;
+        font-weight: bold;
+        font-style: italic;
+        display: inline-block;
     }
 
     & &__track {

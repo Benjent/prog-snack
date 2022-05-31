@@ -24,6 +24,7 @@
                     </template>
                 </div>
                 <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                 <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
 
                 <template v-if="discography.length > 1">
@@ -43,7 +44,7 @@
                         <header class="discographies__selectedAlbum__header">
                             <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
                             <div>
-                                <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country }}</span>
+                                <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
                             </div>
                             <div v-if="selectedAlbum.designers.length > 0">
                                 Cover by
@@ -57,6 +58,7 @@
                                 <span>{{ criterium | criterium }}</span>
                                 <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
                             </div>
+                            <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                         </footer>
                     </div>
                 </div>
@@ -146,6 +148,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/gatherer';
+@import '../style/mixins/golden';
 @import '../style/mixins/page';
 @import '../style/modules/title';
 
@@ -217,7 +220,11 @@ export default {
         width: 100%;
         box-sizing: border-box;
         border-top: solid 2px;
-        mask-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 93%, transparent 100%);
+        mask-image: linear-gradient(
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 93%,
+            transparent 100%
+        );
     }
 
     & &__album {
@@ -266,6 +273,12 @@ export default {
             box-sizing: border-box;
             padding: 20px 0 0 20px;
             font-size: var(--default-font-size);
+        }
+
+        &__gem {
+            @include golden;
+            font-style: italic;
+            font-weight: bold;
         }
 
         &__title {

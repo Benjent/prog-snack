@@ -1,7 +1,7 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import { getRandomNumber } from "../utils/math-utils"
-import regions from "../db/regions"
+import { regions } from "../db/regions"
 import subgenres from "../db/subgenres"
 import {
     albums, artists, designers, albumsPerYear, albumsPerCountry, albumsSortedByYear, criteriaOccurences, mostUsedCriteriaPerYear,

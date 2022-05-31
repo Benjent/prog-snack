@@ -1,5 +1,6 @@
 import Vue from "vue"
 import { criteria, categories } from "../db/criteria"
+import { regions } from "../db/regions"
 
 Vue.filter("criterium", (value) => {
     const mapper = {
@@ -109,6 +110,54 @@ Vue.filter("criteriumCategory", (value) => {
     }
     if (!mapper[value]) {
         console.error(`Unable to find criteria category with value: ${value}`)
+    }
+    return mapper[value]
+})
+
+Vue.filter("region", (value) => {
+    const mapper = {
+        [regions.ARGENTINA]: "Argentina",
+        [regions.AUSTRALIA]: "Australia",
+        [regions.AUSTRIA]: "Austria",
+        [regions.BELARUS]: "Belarus",
+        [regions.BELGIUM]: "Belgium",
+        [regions.BOLIVIA]: "Bolivia",
+        [regions.BOSNIA_AND_HERZEGOVINA]: "Bosnia and Herzegovina",
+        [regions.BULGARIA]: "Bulgaria",
+        [regions.CANADA]: "Canada",
+        [regions.CZECHIA]: "Czechia",
+        [regions.DENMARK]: "Denmark",
+        [regions.ENGLAND]: "England",
+        [regions.FRANCE]: "France",
+        [regions.GERMANY]: "Germany",
+        [regions.GREECE]: "Greece",
+        [regions.HUNGARY]: "Hungary",
+        [regions.INDIA]: "India",
+        [regions.INDONESIA]: "Indonesia",
+        [regions.ICELAND]: "Iceland",
+        [regions.IRELAND]: "Ireland",
+        [regions.ISRAEL]: "Israel",
+        [regions.ITALY]: "Italy",
+        [regions.JAPAN]: "Japan",
+        [regions.NETHERLANDS]: "Netherlands",
+        [regions.NEW_ZEALAND]: "New Zealand",
+        [regions.NORTHERN_IRELAND]: "Northern Ireland",
+        [regions.NORWAY]: "Norway",
+        [regions.PORTUGAL]: "Portugal",
+        [regions.QUEBEC]: "Québec",
+        [regions.RUSSIA]: "Russia",
+        [regions.SCOTLAND]: "Scotland",
+        [regions.SLOVAKIA]: "Slovakia",
+        [regions.SOUTH_AFRICA]: "South Africa",
+        [regions.SPAIN]: "Spain",
+        [regions.SWEDEN]: "Sweden",
+        [regions.SWITZERLAND]: "Switzerland",
+        [regions.USA]: "USA", // TODO split by region
+        [regions.VENEZUELA]: "Venezuela",
+        [regions.WALES]: "Wales",
+    }
+    if (!mapper[value]) {
+        console.error(`Unable to find region with value: ${value}`)
     }
     return mapper[value]
 })
