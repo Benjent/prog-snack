@@ -968,9 +968,9 @@ const albums = [
         isAGem: false,
     },
     {
-        id: "michel_berger_and_luc_plamodon_starmania",
+        id: "michel_berger_and_luc_plamondon_starmania",
         title: "Starmania",
-        artist: "Michel Berger & Luc Plamodon",
+        artist: "Michel Berger & Luc Plamondon",
         year: 1978,
         country: regions.FRANCE,
         cover: ".jpg",
