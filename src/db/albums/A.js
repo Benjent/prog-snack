@@ -2003,6 +2003,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "alpha_omega_a_life",
+        title: "A Life",
+        artist: "A-Ω",
+        year: 1977,
+        country: regions.SWITZERLAND,
+        cover: ".jpg",
+        criteria: [criteria.CONCEPT, criteria.SYMPHONIC, criteria.TRANSITION, criteria.FEMALE],
+        selectedTrackTitle: "Alpha",
+        selectedTrackYtId: null,
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Fredy Baumann"],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
