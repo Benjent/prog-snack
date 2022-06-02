@@ -1325,7 +1325,7 @@ const albums = [
         similarAlbums: [], // TODO similar tencc
         isAGem: false,
     },
-        {
+    {
         id: "roxy_music_stranded",
         title: "Stranded",
         artist: "Roxy Music",
