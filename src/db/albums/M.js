@@ -822,6 +822,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUVABLE Messengers - First Message - PROG?
     {
         id: "messengers_children_of_tomorrow",
         title: "Children Of Tomorrow",
@@ -829,13 +830,13 @@ const albums = [
         year: 1977,
         country: regions.GERMANY,
         cover: ".jpg",
-        criteria: [criteria.FEMALE, criteria.C_JAZZ, criteria.JAZZY_GROOVY, criteria.ORCHESTRAL_PARTS, criteria.UNCOMMON_INSTRUMENTS],
+        criteria: [criteria.FEMALE, criteria.C_JAZZ, criteria.JAZZY_GROOVY, criteria.ORCHESTRAL_PARTS, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
         selectedTrackTitle: "Sacrewinsky",
         selectedTrackYtId: "SYVR1DcK8Eg",
         spotifyId: null,
         deezerId: null,
         designers: [],
-        similarAlbums: [],
+        similarAlbums: ["chicago_chicago_vii"],
         isAGem: false,
     },
     {
