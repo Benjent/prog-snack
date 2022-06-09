@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "faces_first_step",
+        title: "First Step",
+        artist: "Faces",
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.ROCK, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: `Looking Out The Window`,
+        selectedTrackYtId: "44-S2S5E680",
+        spotifyId: "0iCkdYQdowYqWyVmVaHReZ",
+        deezerId: "381984",
+        designers: [],
+        similarAlbums: [], // Similar grand funk railroad?
+        isAGem: false,
+    },
+    {
         id: "fairfield_parlour_from_home_to_home",
         title: "From Home To Home",
         artist: "Fairfield Parlour",
