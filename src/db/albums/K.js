@@ -3,6 +3,23 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "kaamos_deeds_and_talks",
+        title: "Deeds And Talks",
+        artist: "Kaamos",
+        year: 1977,
+        country: regions.FINLAND,
+        cover: ".jpg",
+        criteria: [criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.JAM, criteria.SYMPHONIC],
+        selectedTrackTitle: "Delightful",
+        selectedTrackYtId: "4_n3NWczjnw",
+        spotifyId: "6ntmwISsCYSL58kP7m8vxL",
+        deezerId: "6629876",
+        designers: ["Tapio Kinnunen"],
+        similarAlbums: [], // TODO similar kansas
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
         id: "kaipa_kaipa",
         title: "Kaipa",
         artist: "Kaipa",
