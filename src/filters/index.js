@@ -128,6 +128,7 @@ Vue.filter("region", (value) => {
         [regions.CZECHIA]: "Czechia",
         [regions.DENMARK]: "Denmark",
         [regions.ENGLAND]: "England",
+        [regions.FINLAND]: "Finland",
         [regions.FRANCE]: "France",
         [regions.GERMANY]: "Germany",
         [regions.GREECE]: "Greece",
