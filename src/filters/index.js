@@ -7,6 +7,7 @@ Vue.filter("criterium", (value) => {
         [criteria.AFROBEAT]: "Afrobeat",
         [criteria.AMBIENT]: "Ambient",
         [criteria.ARENA]: "Arena",
+        [criteria.ARMENIAN]: "Armenian sung",
         [criteria.ART_POP]: "Art Pop",
         [criteria.BAROQUE]: "Baroque vibes",
         [criteria.BELARUSIAN]: "Belarusian sung",
