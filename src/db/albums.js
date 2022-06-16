@@ -25,6 +25,7 @@ import albumsX from "./albums/X"
 import albumsY from "./albums/Y"
 import albumsZ from "./albums/Z"
 import albums0 from "./albums/0"
+import albumsΛ from "./albums/Λ"
 import albumsД from "./albums/Д"
 import albumsא from "./albums/א"
 import albumsあ from "./albums/あ"
@@ -57,6 +58,7 @@ const albums = [].concat(
     albumsY,
     albumsZ,
     albums0,
+    albumsΛ,
     albumsД,
     albumsא,
     albumsあ,
