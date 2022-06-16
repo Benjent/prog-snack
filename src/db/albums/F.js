@@ -1193,6 +1193,22 @@ const albums = [
         similarAlbums: ["titus_groan_titus_groan"],
         isAGem: false,
     },
+    {
+        id: "fynn_mccool_fynn_mccool",
+        title: "Fynn McCool",
+        artist: "Fynn McCool",
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.ROCK],
+        selectedTrackTitle: "Shattered (Part 2)",
+        selectedTrackYtId: "-FwZjmpCKTQ",
+        spotifyId: "0QbpvyFf58MlhivcLlqhLB",
+        deezerId: null,
+        designers: ["John Gleave"],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
