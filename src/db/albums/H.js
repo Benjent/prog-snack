@@ -9,7 +9,7 @@ const albums = [
         year: 1971,
         country: regions.USA,
         cover: ".jpg",
-        criteria: [criteria.SOFT, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.JAM, criteria.SYMPHONIC, criteria.FUNNY, criteria.ODD_RHYTHM], 
+        criteria: [criteria.SOFT, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.JAM, criteria.SYMPHONIC, criteria.FUNNY, criteria.ODD_RHYTHM],
         selectedTrackTitle: "Hendon",
         selectedTrackYtId: "bxFF1xJZqv0",
         spotifyId: "1ehhbLSKFnX2w1FFO3oFz6",
