@@ -1486,6 +1486,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "synkopy_61_formule_1",
+        title: "Formule 1",
+        artist: "Synkopy 61",
+        year: 1975,
+        country: regions.CZECHIA,
+        cover: ".jpg",
+        criteria: [criteria.CZECH, criteria.SOUND_COLLAGES, criteria.ORCHESTRAL_PARTS, criteria.SYMPHONIC],
+        selectedTrackTitle: "Touhy",
+        selectedTrackYtId: "MqxeWfcPshU",
+        spotifyId: "03ihxr7oX4nbvC1diYucRq",
+        deezerId: "64006352",
+        designers: ["Svatopluk Žampa"],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
 ]
 
 export default albums
