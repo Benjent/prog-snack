@@ -485,6 +485,22 @@ const albums = [
         isAGem: false, // TODO gem?
     },
     {
+        id: "kayak_starlight_dancer",
+        title: "Starlight Dancer",
+        artist: "Kayak",
+        year: 1977,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.ORCHESTRAL_PARTS, criteria.ART_POP, criteria.C_ELECTRO, criteria.SOFT_SEVENTIES, criteria.PIANO],
+        selectedTrackTitle: "Irene",
+        selectedTrackYtId: "nA_FQDSmsCw",
+        spotifyId: "6Ypj9krwR3bIIgnpV31kUX",
+        deezerId: "629341",
+        designers: ["Ronnie Hertz", "Marius van Boordt"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "keef_hartley_band_the_time_is_near",
         title: "The Time Is Near...",
         artist: "Keef Hartley Band",
