@@ -453,6 +453,38 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "kayak_royal_bed_bouncer",
+        title: "Royal Bed Bouncer",
+        artist: "Kayak",
+        year: 1975,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.SYMPHONIC, criteria.BAROQUE, criteria.GLITTER, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM, criteria.FANFARE, criteria.TRANSITION],
+        selectedTrackTitle: "Bury The World",
+        selectedTrackYtId: "vMMgh7BdRU0",
+        spotifyId: "69f5x8uyjxILpotUprBTnp",
+        deezerId: "48214132",
+        designers: ["Cream"],
+        similarAlbums: [], // TODO similar elo + lamb lies down?
+        isAGem: false, // TODO gem?
+    },
+    {
+        id: "kayak_the_last_encore",
+        title: "The Last Encore",
+        artist: "Kayak",
+        year: 1976,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.SYMPHONIC, criteria.BAROQUE, criteria.GLITTER, criteria.ODD_RHYTHM, criteria.FANFARE, criteria.ART_POP],
+        selectedTrackTitle: "Back To The Front",
+        selectedTrackYtId: "qhmPPsmK_Vw",
+        spotifyId: "4EVRbR1lJ6gXJqLL1kXaC4",
+        deezerId: "6297057",
+        designers: ["Fred Hansen"],
+        similarAlbums: [], // TODO similar elo + lamb lies down?
+        isAGem: false, // TODO gem?
+    },
+    {
         id: "keef_hartley_band_the_time_is_near",
         title: "The Time Is Near...",
         artist: "Keef Hartley Band",
