@@ -292,6 +292,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "violinski_no_cause_for_alarm",
+        title: "No Cause For Alarm",
+        artist: "Violinski",
+        year: 1979,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.ART_POP, criteria.NEO_EIGHTIES],
+        selectedTrackTitle: "No Cause For Alarm",
+        selectedTrackYtId: "JLf8NGawsrQ",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Introuvable - Violinski - Stop Cloning About - 1980
+    {
         id: "visitor_2035_visitor_2035",
         title: "Visitor 2035",
         artist: "Visitor 2035",
