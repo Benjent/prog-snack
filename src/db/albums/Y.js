@@ -31,7 +31,7 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: [],
-        similarAlbums: [], // TODO circus ?
+        similarAlbums: [], // TODO circus ?, similar coma_financial_tycoon
         isAGem: true,
         description: `TODO description`,
     },
@@ -290,7 +290,7 @@ const albums = [
         spotifyId: "4HRPz0VvEfPEhuitH73oSs",
         deezerId: "9027821",
         designers: ["Ron Pieniak"],
-        similarAlbums: [],
+        similarAlbums: [], // TODO similar to yes relayer
         isAGem: true,
         description: `Originally recorded in 1976, this album did not draw enough attention to sign the band with a label. One can wonder why though, as the music is as complex as interesting: technical parts, original harmonies, rhythm breaks, a large assets of instruments ; anything that can be used to change the mood of the music is used efficiently. Sacred Baboon may be one of the earliest examples of self-produced Math Rock music blent with pure symphonic style of the early 70's.`,
     },
