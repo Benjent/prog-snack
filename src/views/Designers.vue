@@ -150,6 +150,26 @@ export default {
                     grid-column: auto / span 20;
                 }
                 &:nth-child(43) {
+                    grid-row: auto / span 30;
+                    grid-column: auto / span 30;
+                }
+                &:nth-child(49) {
+                    grid-row: auto / span 15;
+                    grid-column: auto / span 15;
+                }
+                &:nth-child(50) {
+                    grid-row: auto / span 15;
+                    grid-column: auto / span 15;
+                }
+                &:nth-child(51) {
+                    grid-row: auto / span 30;
+                    grid-column: auto / span 30;
+                }
+                &:nth-child(54) {
+                    grid-row: auto / span 20;
+                    grid-column: auto / span 20;
+                }
+                &:nth-child(61) {
                     grid-row: auto / span 20;
                     grid-column: auto / span 20;
                 }
@@ -189,6 +209,10 @@ export default {
                     grid-column: auto / span 3;
                 }
                 &:nth-child(23) {
+                    grid-row: auto / span 2;
+                    grid-column: auto / span 2;
+                }
+                &:nth-child(27) {
                     grid-row: auto / span 2;
                     grid-column: auto / span 2;
                 }

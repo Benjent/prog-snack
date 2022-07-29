@@ -51,6 +51,7 @@ Vue.filter("criterium", (value) => {
         [criteria.JAPANESE]: "Japanese sung",
         [criteria.JAZZ]: "Jazz-based with a Prog touch",
         [criteria.JAZZY_GROOVY]: "Jazzy groovy",
+        [criteria.LATIN]: "Latin sung",
         [criteria.LATINO]: "Latino",
         [criteria.LENGTHY_TRACKS]: "Lengthy tracks",
         [criteria.LIVE]: "Live",
