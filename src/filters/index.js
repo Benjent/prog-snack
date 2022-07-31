@@ -125,6 +125,7 @@ Vue.filter("region", (value) => {
         [regions.BELGIUM]: "Belgium",
         [regions.BOLIVIA]: "Bolivia",
         [regions.BOSNIA_AND_HERZEGOVINA]: "Bosnia and Herzegovina",
+        [regions.BRAZIL]: "Brazil",
         [regions.BULGARIA]: "Bulgaria",
         [regions.CANADA]: "Canada",
         [regions.CZECHIA]: "Czechia",
