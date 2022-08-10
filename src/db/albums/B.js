@@ -1321,6 +1321,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "bonfire_bonfire_goes_bananas",
+        title: "Bonfire Goes Bananas",
+        artist: "Bonfire",
+        year: 1975,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.ODD_RHYTHM, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.INSTRUMENTAL, criteria.SOFT_SEVENTIES, criteria.C_ELECTRO],
+        selectedTrackTitle: "Contrast",
+        selectedTrackYtId: "ejqkUzsadck",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [], // TODO similar Focus
+        isAGem: false,
+    },
+    {
         id: "boston_boston",
         title: "Boston",
         artist: "Boston",
