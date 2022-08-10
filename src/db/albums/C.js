@@ -1362,7 +1362,7 @@ const albums = [
     {
         id: "chick_corea_the_leprechaun",
         title: "The Leprechaun",
-        artist: "Chich Corea",
+        artist: "Chick Corea",
         year: 1976,
         country: regions.USA,
         cover: ".jpg",
@@ -1378,7 +1378,7 @@ const albums = [
     {
         id: "chick_corea_my_spanish_heart",
         title: "My Spanish Heart",
-        artist: "Chich Corea",
+        artist: "Chick Corea",
         year: 1976,
         country: regions.USA,
         cover: ".jpg",
@@ -1394,7 +1394,7 @@ const albums = [
     {
         id: "chick_corea_the_mad_hatter",
         title: "The Mad Hatter",
-        artist: "Chich Corea",
+        artist: "Chick Corea",
         year: 1978,
         country: regions.USA,
         cover: ".jpg",
@@ -1410,7 +1410,7 @@ const albums = [
     {
         id: "chick_corea_secret_agent",
         title: "Secret Agent",
-        artist: "Chich Corea",
+        artist: "Chick Corea",
         year: 1978,
         country: regions.USA,
         cover: ".jpg",
