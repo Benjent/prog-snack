@@ -1617,6 +1617,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Introuvable - Claude Léveillée - Escale 80 - 1979
+    {
+        id: "claude_peloquin_and_jean_sauvageau_laissez_nous_vous_embrasser_ou_vous_avez_mal",
+        title: "Laissez-Nous Vous Embrasser Où Vous Avez Mal",
+        artist: "Claude Péloquin & Jean Sauvageau",
+        year: 1972,
+        country: regions.QUEBEC,
+        cover: ".jpg",
+        criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.SOUND_COLLAGES, criteria.FUNNY, criteria.C_ELECTRO, criteria.EXPERIMENTAL, criteria.C_FOLK, criteria.UNCOMMON_INSTRUMENTS, criteria.FEMALE],
+        selectedTrackTitle: "Monsieur L'Indien",
+        selectedTrackYtId: "TODO",
+        spotifyId: "3HyCvm58GYZmNCY3E1bZnj",
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "clear_blue_sky_clear_blue_sky",
         title: "Clear Blue Sky",
