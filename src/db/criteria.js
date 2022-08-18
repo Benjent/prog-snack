@@ -66,7 +66,7 @@ const criteria = {
     SOPHISTICATED: "SOPHISTICATED",
 
     // Style
-    BLUESY: "BMUESY",
+    BLUESY: "BLUESY",
     JAZZY_GROOVY: "JAZZY_GROOVY",
     PIANO: "PIANO",
     ROCK_OPERA: "ROCK_OPERA",
