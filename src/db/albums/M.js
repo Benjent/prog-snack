@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "madura_madura_ii",
+        title: "Madura II",
+        artist: "Madura",
+        year: 1973,
+        country: regions.USA,
+        cover: ".jpg",
+        criteria: [criteria.FANFARE, criteria.C_JAZZ, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.ORCHESTRAL_PARTS, criteria.FEMALE, criteria.ART_POP],
+        selectedTrackTitle: "Doctor Honoris Causa",
+        selectedTrackYtId: "6Ga7Azzgn0s",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["John Berg"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "magic_spell_is_there_anywhere_a_gas_station",
         title: "Is There Anywhere A Gas Station?",
         artist: "Magic Spell",
