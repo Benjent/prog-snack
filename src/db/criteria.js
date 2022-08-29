@@ -31,6 +31,7 @@ const criteria = {
     SPANISH: "SPANISH",
     SWEDISH: "SWEDISH",
     TIBETAN: "TIBETAN",
+    TURKISH: "TURKISH",
     ZEUHL: "ZEUHL",
 
     // Theme
@@ -142,6 +143,7 @@ const criteriaOrder = [
     criteria.SPANISH,
     criteria.SWEDISH,
     criteria.TIBETAN,
+    criteria.TURKISH,
     criteria.ZEUHL,
 
     // Theme

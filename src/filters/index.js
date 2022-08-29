@@ -87,6 +87,7 @@ Vue.filter("criterium", (value) => {
         [criteria.TIBETAN]: "Tibetan sung",
         [criteria.TOUCHING_VOCALS]: "Touching vocals",
         [criteria.TRANSITION]: "Tracks have transitions",
+        [criteria.TURKISH]: "Turkish sung",
         [criteria.UNCOMMON_INSTRUMENTS]: "Uncommon instruments",
         [criteria.ZEUHL]: "Zeuhl",
     }
