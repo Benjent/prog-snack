@@ -747,6 +747,24 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "steve_hackett_highly_strung",
+        title: "Highly Strung",
+        artist: "Steve Hackett",
+        year: 1983,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.NEO_EIGHTIES, criteria.C_ELECTRO, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Camino Royale",
+        selectedTrackYtId: "H8s9x1BbM_E",
+        spotifyId: "7myTu4A3SH8HTGhIuuZFDW",
+        deezerId: "311229",
+        designers: ["Kim Poor"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Steve Hackett - Till We Have Faces PROG? - 1984 - uncommon, neoeighties, instru, c_elecotr, artpop - track What's My Name
+    // TODO Steve Hackett - Guitar Noir PROG?
+    {
         id: "steve_howe_beginnings",
         title: "Beginnings",
         artist: "Steve Howe",
