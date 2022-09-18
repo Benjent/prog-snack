@@ -87,6 +87,7 @@ Vue.filter("criterium", (value) => {
         [criteria.TIBETAN]: "Tibetan sung",
         [criteria.TOUCHING_VOCALS]: "Touching vocals",
         [criteria.TRANSITION]: "Tracks have transitions",
+        [criteria.TURKISH]: "Turkish sung",
         [criteria.UNCOMMON_INSTRUMENTS]: "Uncommon instruments",
         [criteria.ZEUHL]: "Zeuhl",
     }
@@ -125,6 +126,7 @@ Vue.filter("region", (value) => {
         [regions.BELGIUM]: "Belgium",
         [regions.BOLIVIA]: "Bolivia",
         [regions.BOSNIA_AND_HERZEGOVINA]: "Bosnia and Herzegovina",
+        [regions.BRAZIL]: "Brazil",
         [regions.BULGARIA]: "Bulgaria",
         [regions.CANADA]: "Canada",
         [regions.CZECHIA]: "Czechia",
