@@ -454,6 +454,23 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Arden House - 1977 - INTROUVABLE
+    {
+        id: "jasper_wrath_zoldar_and_clark",
+        title: "Zoldar & Clark",
+        artist: "Jasper Wrath",
+        year: 1977,
+        country: regions.USA,
+        cover: ".jpg",
+        criteria: [criteria.C_ELECTRO, criteria.C_PSYCHE, criteria.GLITTER, criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "The Ghost Of Way",
+        selectedTrackYtId: "DIJqlAu_Dnc",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "jean_michel_jarre_oxygene",
         title: "Oxygène",
