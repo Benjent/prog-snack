@@ -439,6 +439,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "jasper_vant_hof_eyeball",
+        title: "Eyeball",
+        artist: "Jasper Van't Hof",
+        year: 1974,
+        country: regions.NETHERLANDS,
+        cover: ".jpg",
+        criteria: [criteria.JAZZ, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.C_PSYCHE],
+        selectedTrackTitle: "Bax",
+        selectedTrackYtId: "je1xVekecGg",
+        spotifyId: "3OZnw2lmfSNihPVj7lrdey",
+        deezerId: "133361362",
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "jasper_wrath_jasper_wrath",
         title: "Jasper Wrath",
         artist: "Jasper Wrath",
@@ -454,7 +470,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO Arden House - 1977 - INTROUVABLE
+    // TODO Jasper Wrath - Arden House - 1977 - INTROUVABLE
     {
         id: "jasper_wrath_zoldar_and_clark",
         title: "Zoldar & Clark",
