@@ -376,6 +376,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "airlord_clockwork_revenge",
+        title: "Clockwork Revenge",
+        artist: "Airlord",
+        year: 1977,
+        country: regions.NEW_ZEALAND,
+        cover: ".jpg",
+        criteria: [criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.ROCK_OPERA, criteria.JAM],
+        selectedTrackTitle: "Out Of The Woods",
+        selectedTrackYtId: "NWofhaia0oc",
+        spotifyId: "7D3LKsawCpMrRzRJXWwNWU",
+        deezerId: "134921062",
+        designers: ["Steve MacKenzie"],
+        similarAlbums: [], // similar genesis selling england by the pound ?
+        isAGem: false,
+    },
+    {
         id: "alain_markusfeld_le_desert_noir",
         title: "Le Désert Noir",
         artist: "Alain Markusfeld",
