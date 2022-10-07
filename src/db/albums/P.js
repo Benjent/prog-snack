@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "paciana_story_paciana_story",
+        title: `Paciana Story`,
+        artist: "Paciana Story",
+        year: 1975,
+        country: regions.ITALY,
+        cover: ".jpg",
+        criteria: [criteria.ITALIAN, criteria.CONCEPT, criteria.C_FOLK, criteria.C_ELECTRO, criteria.FEMALE],
+        selectedTrackTitle: "Salto Dal Ponte",
+        selectedTrackYtId: "dLR6s1uIGX4",
+        spotifyId: "0ahWrdtFsy0M2SKVKbgo8J",
+        deezerId: null,
+        designers: ["Studio Russo"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "pacific_drift_feelin_free",
         title: `Feelin' Free`,
         artist: "Pacific Drift",
