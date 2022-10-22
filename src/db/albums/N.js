@@ -284,7 +284,7 @@ const albums = [
         year: 1973,
         country: regions.ENGLAND,
         cover: ".jpg",
-        criteria: [criteria.LENGTHY_TRACKS, criteria.JAM, criteria.SYMPHONIC, criteria.SPACY, criteria.SCI_FI, criteria.CONCEPT, criteria.JAZZY_GROOVY],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.JAM, criteria.SYMPHONIC, criteria.SPACY, criteria.SCI_FI, criteria.CONCEPT, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM],
         selectedTrackTitle: "Remember The Future (Part I)",
         selectedTrackYtId: "v27E8PjIqLM",
         spotifyId: "1BQYS7PTIxgYFY4mv5P8M0",
