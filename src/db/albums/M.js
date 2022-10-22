@@ -41,7 +41,7 @@ const albums = [
         year: 1980,
         country: regions.SWITZERLAND,
         cover: ".jpg",
-        criteria: [criteria.JAM, criteria.C_PSYCHE, criteria.C_ELECTRO],
+        criteria: [criteria.JAM, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.SYMPHONIC],
         selectedTrackTitle: "Turkish Invasion",
         selectedTrackYtId: "3RHzfQQn1Zs",
         spotifyId: null,
