@@ -1728,7 +1728,7 @@ const albums = [
         selectedTrackYtId: "k4gyPqM4to8",
         spotifyId: "4FqEYeQKKIKwA6wJGVNd9Z",
         deezerId: "59636832",
-        designers: [],
+        designers: ["Maurits Cornelis Escher"],
         similarAlbums: [],
         isAGem: false,
     },
