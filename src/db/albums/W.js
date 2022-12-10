@@ -581,6 +581,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "wind_morning",
+        title: "Morning",
+        artist: "Wind",
+        year: 1972,
+        country: regions.GERMANY,
+        cover: ".jpg",
+        criteria: [criteria.C_FOLK, criteria.SOUND_COLLAGES, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `Dragon's Maid`,
+        selectedTrackYtId: "pfeoDxKCpNY",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Designgruppe 5D"],
+        similarAlbums: ["genesis_trespass", "acqua_fragile_acqua_fragile"], // similar premier king crimson un peu!
+        isAGem: false,
+    },
+    {
         id: "windchase_symphinity",
         title: "Simphinity",
         artist: "Windchase",
