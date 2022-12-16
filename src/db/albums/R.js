@@ -487,6 +487,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "rayuela_rayuela",
+        title: "Rayuela",
+        artist: "Rayuela",
+        year: 1977,
+        country: regions.ARGENTINA,
+        cover: ".jpg",
+        criteria: [criteria.SPANISH, criteria.C_FOLK, criteria.ODD_RHYTHM, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC],
+        selectedTrackTitle: "Acaso Tú Crees",
+        selectedTrackYtId: "xvFAdSlMJlA",
+        spotifyId: "6Mf2B18iryfL3SSSRnQyZX",
+        deezerId: "12994476",
+        designers: ["Mauricio Tarrab", "Leopoldo Loustou"],
+        similarAlbums: ["busqueda_busqueda"],
+        isAGem: false,
+    },
+    {
         id: "recreation_dont_open",
         title: `Don't Open`,
         artist: "Recreation",
@@ -1245,6 +1261,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "room_preflight",
+        title: "Pre-Flight",
+        artist: "Room",
+        year: 1970,
+        country: regions.ENGLAND,
+        cover: ".jpg",
+        criteria: [criteria.SYMPHONIC, criteria.FANFARE, criteria.ORCHESTRAL_PARTS, criteria.FEMALE, criteria.BLUESY],
+        selectedTrackTitle: "Pre-Flight - Parts I & II",
+        selectedTrackYtId: "seNGN86WqiQ",
+        spotifyId: "1Kq0qKw3jFjIQfuCEJs7PA",
+        deezerId: "668580",
+        designers: ["Roy Putt"],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
         id: "rose_a_taste_of_neptune",
         title: "A Taste Of Neptune",
         artist: "Rose",
@@ -1293,6 +1326,9 @@ const albums = [
         isAGem: false,
     },
     // TODO INTROUVABLE Ross - The Pit & The Pendulum - 1974 - Ken Marcus, Tom Wilkes - null + null
+    // TODO Il Rovescio Della Medaglia - ITALY - La Bibbia - 1971 - cpsyche, italian, heavy, greasy, transition, concept, jam, jazzygroovy, symphonic - La Creazione
+    // TODO Il Rovescio Della Medaglia - ITALY - Io Come Io - 1972 - italian, symphonic, c_folk, jazzygroovy - Fenomeno
+    // TODO Il Rovescio Della Medaglia - ITALY - Contaminazione - 1973 - italian, c_electro, baroque, orchetsral (Impiglia E Mancini)
     {
         id: "roxy_music_roxy_music",
         title: "Roxy Music",

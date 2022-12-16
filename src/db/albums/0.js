@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "zero_point_seven_hundred_and_twenty_aleacion_zero_point_seven_hundred_and_twenty_aleacion",
+        title: "0.720 Aleación",
+        artist: "0.720 Aleación",
+        year: 1986,
+        country: regions.MEXICO,
+        cover: ".jpg",
+        criteria: [criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.SPANISH],
+        selectedTrackTitle: "Tarahumara",
+        selectedTrackYtId: "todo",
+        spotifyId: "2BIA7hOEzPqMCzSLgLyqvl",
+        deezerId: "3611421",
+        designers: [],
+        similarAlbums: [],
+        isAGem: true,
+    },
+    {
         id: "three_to_the_power_of_three",
         title: "...To The Power Of Three",
         artist: "3",

@@ -144,6 +144,7 @@ Vue.filter("region", (value) => {
         [regions.ISRAEL]: "Israel",
         [regions.ITALY]: "Italy",
         [regions.JAPAN]: "Japan",
+        [regions.MEXICO]: "Mexico",
         [regions.NETHERLANDS]: "Netherlands",
         [regions.NEW_ZEALAND]: "New Zealand",
         [regions.NORTHERN_IRELAND]: "Northern Ireland",

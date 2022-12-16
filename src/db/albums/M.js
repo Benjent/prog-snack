@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "madura_madura",
+        title: "Madura",
+        artist: "Madura",
+        year: 1971,
+        country: regions.USA,
+        cover: ".jpg",
+        criteria: [criteria.C_PSYCHE, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.C_JAZZ, criteria.JAM, criteria.BLUESY, criteria.TRANSITION],
+        selectedTrackTitle: "Drinking No Wine",
+        selectedTrackYtId: "EeeFV_iMsTI",
+        spotifyId: "4156YoZJTUAXJOXsoIXHkM",
+        deezerId: "276308802",
+        designers: [],
+        similarAlbums: ["sky_king_secret_sauce", "frank_zappa_apostrophe"],
+        isAGem: false,
+    },
+    {
         id: "madura_madura_ii",
         title: "Madura II",
         artist: "Madura",
@@ -25,7 +41,7 @@ const albums = [
         year: 1980,
         country: regions.SWITZERLAND,
         cover: ".jpg",
-        criteria: [criteria.JAM, criteria.C_PSYCHE, criteria.C_ELECTRO],
+        criteria: [criteria.JAM, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.SYMPHONIC],
         selectedTrackTitle: "Turkish Invasion",
         selectedTrackYtId: "3RHzfQQn1Zs",
         spotifyId: null,

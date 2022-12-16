@@ -666,6 +666,24 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "totem_totem",
+        title: "Totem",
+        artist: "Totem",
+        year: 1971,
+        country: regions.ARGENTINA,
+        cover: ".jpg",
+        criteria: [criteria.SPANISH, criteria.LATINO, criteria.JAZZY_GROOVY, criteria.JAM, criteria.ROCK],
+        selectedTrackTitle: `Dedos`,
+        selectedTrackYtId: "zqekc2zaw9A",
+        spotifyId: "34ywELgakejCKU2p37wJJ8",
+        deezerId: "13169398",
+        designers: ["Juan Bernardo Arruabarrena"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Totem - Descarga - 1972 - 13169422 + 2VuAqlqUuiTA4oCQ1Yn00y
+    // TODO INTROUVABLE Totem - Corrupción - 1973 - 13328521 + 04I3FnfN1OPHoFCSOxGMNG
+    {
         id: "trapeze_trapeze",
         title: "Trapeze",
         artist: "Trapeze",
