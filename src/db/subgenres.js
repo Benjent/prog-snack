@@ -219,6 +219,7 @@ const subgenres = [
             "sir_lord_baltimore_kingdom_come",
             "warhorse_warhorse",
             "aphrodites_child_666",
+            "night_sun_mournin",
         ],
         criteria: [criteria.OCCULT, criteria.HEAVY, criteria.C_PSYCHE, criteria.ROCK, criteria.C_FOLK, criteria.JAM],
     },
