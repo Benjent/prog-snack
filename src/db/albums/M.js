@@ -580,22 +580,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    {
-        id: "manuel_gottsching_inventions_for_electric_guitars",
-        title: `Inventions For Electric Guitars`,
-        artist: "Manuel Göttsching",
-        year: 1975,
-        country: regions.GERMANY,
-        cover: ".jpg",
-        criteria: [criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SPACY, criteria.AMBIENT, criteria.SOFT],
-        selectedTrackTitle: "Pluralis",
-        selectedTrackYtId: "4Sc_EvlrGkY",
-        spotifyId: null,
-        deezerId: null,
-        designers: ["Peter Geitner", "George Bockemühl"],
-        similarAlbums: [],
-        isAGem: false,
-    },
+    // TODO
     {
         id: "marcello_capra_aria_mediterranea",
         title: `Aria Mediterranea`,
