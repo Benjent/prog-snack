@@ -3,6 +3,8 @@ Tiny web project with big music ambition: dusting old prog albums, some known as
 
 Browse albums, filter them by music criteria, discover similar albums and find out who designed that cover.
 
+[See it live](https://benjent.github.io/prog-snack/).
+
 ## Project setup
 ```
 npm install
