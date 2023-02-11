@@ -490,7 +490,7 @@ const albums = [
         artist: "Maneige",
         year: 1980,
         country: regions.QUEBEC,
-        cover: ".webp",
+        cover: ".jpg",
         criteria: [criteria.INSTRUMENTAL, criteria.SOFT_SEVENTIES, criteria.ODD_RHYTHM, criteria.C_JAZZ],
         selectedTrackTitle: `Popozof`,
         selectedTrackYtId: "uXgLdj5_GN4",
