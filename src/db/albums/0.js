@@ -11,7 +11,7 @@ const albums = [
         cover: ".jpg",
         criteria: [criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.SPANISH],
         selectedTrackTitle: "Tarahumara",
-        selectedTrackYtId: "todo",
+        selectedTrackYtId: "j64PAIWYwYg",
         spotifyId: "2BIA7hOEzPqMCzSLgLyqvl",
         deezerId: "3611421",
         designers: [],

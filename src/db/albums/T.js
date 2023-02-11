@@ -570,6 +570,22 @@ const albums = [
     // TODO introuvable Thirsty Moon - A Real Good Time - 1976
     // TODO introuvable Thirsty Moon - Star Chaser - 1981
     {
+        id: "timothy_leary_and_ash_ra_tempel_seven_up",
+        title: "Seven Up",
+        artist: "Timothy Leary & Ash Ra Tempel",
+        year: 1973,
+        country: regions.GERMANY,
+        cover: ".jpg",
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_PSYCHE, criteria.C_ELECTRO],
+        selectedTrackTitle: `Time`,
+        selectedTrackYtId: "i_OhHHDOfyI",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Walter Wegmüller"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "titus_groan_titus_groan",
         title: "Titus Groan",
         artist: "Titus Groan",
