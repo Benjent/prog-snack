@@ -7,6 +7,7 @@
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
             <div class="select__option" @click="notifyParent(null)">All</div>
+            <div class="select__option" v-if="custom" @click="notifyParent('Custom')">Custom</div>
             <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</div>
         </div>
     </div>
@@ -26,6 +27,10 @@ export default {
         },
         options: {
             type: [Array, Object],
+        },
+        custom: {
+            type: Boolean,
+            default: false,
         },
         filter: {
             type: Function,
