@@ -9,9 +9,15 @@
 export default {
     name: "Radio",
     props: {
-        label: String,
-        value: String,
-        own: String,
+        label: {
+            type: String,
+        },
+        value: {
+            type: String,
+        },
+        own: {
+            type: String,
+        },
     },
     methods: {
         notifyParent() {

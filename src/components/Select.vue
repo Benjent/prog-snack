@@ -21,9 +21,15 @@ export default {
         Arrow,
     },
     props: {
-        value: [String, Number],
-        options: [Array, Object],
-        filter: Function,
+        value: {
+            type: [String, Number],
+        },
+        options: {
+            type: [Array, Object],
+        },
+        filter: {
+            type: Function,
+        },
     },
     data() {
         return {

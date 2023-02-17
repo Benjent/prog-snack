@@ -20,8 +20,12 @@ import { applyBarTransition } from "../utils/transition-utils"
 export default {
     name: "HistogramHorizontal",
     props: {
-        caption: String,
-        datasource: [Array, Object],
+        caption: {
+            type: String,
+        },
+        datasource: {
+            type: [Array, Object],
+        },
     },
     mounted() {
         applyBarTransition("width", this.$el)

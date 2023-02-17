@@ -23,7 +23,9 @@ export default {
         Icon,
     },
     props: {
-        album: Object,
+        album: {
+            type: Object,
+        },
     },
     computed: {
         ...mapGetters(["youtubePath"]),

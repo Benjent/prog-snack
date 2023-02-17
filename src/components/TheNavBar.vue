@@ -26,7 +26,9 @@ export default {
         SearchBar,
     },
     props: {
-        footer: Boolean,
+        footer: {
+            type: Boolean,
+        },
     },
     data() {
         return {

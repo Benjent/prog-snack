@@ -9,8 +9,12 @@
 export default {
     name: "Check",
     props: {
-        label: String,
-        value: Boolean,
+        label: {
+            type: String,
+        },
+        value: {
+            type: Boolean,
+        },
     },
     methods: {
         notifyParent() {
