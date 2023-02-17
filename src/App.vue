@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TheNavBar from "./components/TheNavBar.vue"
+import { TheNavBar } from "./components"
 
 export default {
     components: {

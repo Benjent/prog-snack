@@ -29,9 +29,7 @@ import { mapState, mapGetters } from "vuex"
 import { categories, criteriaCategory } from "../db/criteria"
 import { flags } from "../db/regions"
 import { sort } from "../utils/array-utils"
-import HistogramHorizontal from "../components/HistogramHorizontal.vue"
-import HistogramVertical from "../components/HistogramVertical.vue"
-import NumberUnit from "../components/NumberUnit.vue"
+import { HistogramHorizontal, HistogramVertical, NumberUnit } from "../components"
 
 export default {
     components: {

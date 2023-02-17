@@ -71,12 +71,7 @@ import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
-import Cover from "../components/Cover.vue"
-import Arrow from "../components/Arrow.vue"
-import Check from "../components/Check.vue"
-import Radio from "../components/Radio.vue"
-import Range from "../components/Range.vue"
-import Select from "../components/Select.vue"
+import { Cover, Arrow, Check, Radio, Range, Select } from "../components"
 
 export default {
     components: {

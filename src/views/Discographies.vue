@@ -101,9 +101,7 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex"
-import AlbumStarter from "../components/AlbumStarter.vue"
-import Cover from "../components/Cover.vue"
-import Icon from "../components/Icon.vue"
+import { AlbumStarter, Cover, Icon } from "../components"
 
 export default {
     components: {
