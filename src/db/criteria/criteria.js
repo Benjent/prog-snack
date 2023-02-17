@@ -1,4 +1,4 @@
-// 3-occurence update : the criterium, its position in the criteria list and its categorization
+// 4-occurence update : the criterium, its position in the criteria list, its categorization and its vue-filter translation
 const criteria = {
     // Concept
     CONCEPT: "CONCEPT",

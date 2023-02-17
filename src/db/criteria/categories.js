@@ -1,5 +1,6 @@
 import { criteria } from "./criteria"
 
+// 2-occurence update : the category, its position in the category list and its vue-filter translation
 const categories = {
     TYPE: "TYPE",
     LANGUAGE: "LANGUAGE",

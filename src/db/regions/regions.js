@@ -1,4 +1,4 @@
-// 2-occurence update : the region and its flag
+// 3-occurence update : the region, its flag and its vue-filter translation
 const regions = {
     ARGENTINA: "ARGENTINA",
     AUSTRALIA: "AUSTRALIA",
