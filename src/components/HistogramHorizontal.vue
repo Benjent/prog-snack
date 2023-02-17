@@ -15,18 +15,12 @@
 </template>
 
 <script>
+import { histogram } from "../mixins"
 import { applyBarTransition } from "../utils/transition-utils"
 
 export default {
     name: "HistogramHorizontal",
-    props: {
-        caption: {
-            type: String,
-        },
-        datasource: {
-            type: [Array, Object],
-        },
-    },
+    mixins: [histogram],
     mounted() {
         applyBarTransition("width", this.$el)
     },
