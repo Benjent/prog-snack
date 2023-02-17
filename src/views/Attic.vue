@@ -4,7 +4,7 @@
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
                     <div class="attic__title attic__title--reset">
-                        <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
+                        <button class="attic__reset button" @click="resetFilter()">Reset filters</button>
                     </div>
                     <div>
                         <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
