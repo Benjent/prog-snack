@@ -1,4 +1,4 @@
-import regions from "./regions"
+import { regions } from "./regions"
 
 const flags = {
     [regions.ARGENTINA]: "🇦🇷",

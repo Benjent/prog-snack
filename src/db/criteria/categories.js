@@ -136,6 +136,23 @@ const criteriaCategory = {
     ],
 }
 
+const categoryLabels = {
+    [categories.ARRANGEMENT]: "Arrangement",
+    [categories.CONTAINS]: "Contains elements of",
+    [categories.ERA]: "Era sound",
+    [categories.GENRE]: "Main genre",
+    [categories.LANGUAGE]: "Language",
+    [categories.LOUDNESS]: "Loudness",
+    [categories.STRUCTURE]: "Album structuration",
+    [categories.STYLE]: "Style",
+    [categories.TEMPER]: "Temper",
+    [categories.THEME]: "Theme",
+    [categories.TYPE]: "Type",
+}
+
 export {
-    categories, categoriesOrder, criteriaCategory,
+    categories,
+    categoriesOrder,
+    criteriaCategory,
+    categoryLabels,
 }

@@ -1,4 +1,8 @@
 import flags from "./flags"
-import regions from "./regions"
+import { regions, regionLabels } from "./regions"
 
-export { flags, regions }
+export {
+    flags,
+    regions,
+    regionLabels,
+}
