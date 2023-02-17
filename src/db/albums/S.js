@@ -2,6 +2,24 @@ import { regions } from "../regions"
 import { criteria } from "../criteria"
 
 const albums = [
+    // TODO INTROUVABLE - Salis - Sa Vida Ita Est - 1971
+    // TODO INTROUVABLE - Salis - Seduto Sull'Alba A Guardare - 1974
+    {
+        id: "salis_dopo_il_buio_la_luce",
+        title: "Dopo Il Buio La Luce",
+        artist: "Salis",
+        year: 1979,
+        country: regions.ITALY,
+        cover: ".jpg",
+        criteria: [criteria.C_ELECTRO, criteria.INSTRUMENTAL, criteria.JAM, criteria.SYMPHONIC, criteria.ODD_RHYTHM, criteria.ITALIAN, criteria.SOPHISTICATED],
+        selectedTrackTitle: "Dopo Il Buio... La Luce",
+        selectedTrackYtId: "FLK3fh2gkgU",
+        spotifyId: "5ab6IXSfBUiwxnCnc0TplP",
+        deezerId: "12333054",
+        designers: [],
+        similarAlbums: [],
+        isAGem: false, // TODO gem true???
+    },
     {
         id: "sand_golem",
         title: "Golem",
