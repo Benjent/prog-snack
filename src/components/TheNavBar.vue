@@ -105,6 +105,10 @@ export default {
             border-bottom: solid 2px $primary;
         }
 
+        &:hover {
+            border-bottom: solid 2px $primary;
+        }
+
         &__navText {
             padding: 15px 0;
         }
