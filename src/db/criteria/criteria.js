@@ -252,6 +252,7 @@ const criteriumLabels = {
     [criteria.FANFARE]: "Fanfare",
     [criteria.FANTASY]: "Fantasy-influenced",
     [criteria.FEMALE]: "Female vocals or backing vocals",
+    [criteria.FINNISH]: "Finnish sung",
     [criteria.FOLK]: "Folk-based with a Prog touch",
     [criteria.FRENCH]: "French sung",
     [criteria.FUNNY]: "Funny",
