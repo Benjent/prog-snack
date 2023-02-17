@@ -71,7 +71,7 @@ const albums = [].concat(
     deezer/spotify/discogs should be API + search with title + artist instead of manual ids
     iframes deezer/spotify should be displayed just like in-fb messenger conv, and should be toggleable (so you can listen throughout the app while browsing)
     subgenres should be specified in the album db not manually + a WHOLE NEW WAY to order albums by what I feel (titus groan, fuzzy duck, warhorse and froggie beaver will be in the same group)
-    lister instruments
+    lister instruments + genre synth-based for krautrock/humble albums vith almost no criteria
     similar albums should be a standalone logic that generates arrays for both albums
     notable musiciens (pour lier les artistes entre eux)
 */

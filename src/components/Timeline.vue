@@ -44,7 +44,6 @@ export default {
     bottom: 0;
 
     overflow-x: scroll;
-    overflow-y: hidden;
 
     & &__album {
         @include fadeIn;
@@ -52,17 +51,13 @@ export default {
     }
 
     & &__year {
-        $albumYearWidth: 75px;
+        position: absolute;
 
-        display: table;
-
-        width: $albumYearWidth;
+        width: 75px;
         z-index: 1;
 
         background: $secondary;
         color: $primary;
-
-        margin-right: -$albumYearWidth;
 
         border: solid 2px $primary;
         border-radius: $borderRadius;
