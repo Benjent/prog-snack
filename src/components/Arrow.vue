@@ -31,7 +31,7 @@ export default {
     position: relative;
     width: 10px;
     height: 10px;
-    border: solid 2px $primary;
+    border: solid var(--input-border-width) $primary;
     border-left: none;
     border-top: none;
     transform: rotate(225deg);

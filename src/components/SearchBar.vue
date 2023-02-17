@@ -118,7 +118,7 @@ $search-bar-width: 300px;
         max-height: 300px;
         width: $search-bar-width;
         box-sizing: border-box;
-        border: solid 2px $primary;
+        border: solid var(--input-border-width) $primary;
         border-top: none;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;

@@ -6,7 +6,7 @@
     width: max-content;
     background: $secondary;
     background-size: 400%;
-    border: solid 2px $primary;
+    border: solid var(--input-border-width) $primary;
     padding: 5px 20px;
     border-radius: 30px;
 

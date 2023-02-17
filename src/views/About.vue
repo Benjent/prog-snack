@@ -143,7 +143,7 @@ export default {
     &__criterium {
         width: 30%;
         text-align: right;
-        padding-right: 10px;
+        padding-right: var(--label-gap);
         overflow: hidden;
         word-break: break-all;
         text-overflow: ellipsis;

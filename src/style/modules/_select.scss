@@ -7,7 +7,7 @@
         width: 100%;
         padding: 6px 10px;
         padding-right: 40px;
-        border: solid 2px $primary;
+        border: solid var(--input-border-width) $primary;
         background: $secondary;
     }
 
@@ -19,7 +19,7 @@
         right: 30px;
         width: 10px;
         height: 10px;
-        border: solid 2px $primary;
+        border: solid var(--input-border-width) $primary;
         border-left: none;
         border-top: none;
         transform: rotate(45deg);
