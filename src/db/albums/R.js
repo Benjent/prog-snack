@@ -500,7 +500,7 @@ const albums = [
         deezerId: "12994476",
         designers: ["Mauricio Tarrab", "Leopoldo Loustou"],
         similarAlbums: ["busqueda_busqueda"],
-        isAGem: false,
+        isAGem: false, // TODO almost
     },
     {
         id: "recreation_dont_open",
