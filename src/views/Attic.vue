@@ -288,7 +288,6 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
-        box-sizing: border-box;
         background: $secondary-dark;
     }
 

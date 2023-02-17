@@ -57,7 +57,6 @@ export default {
         height: 100%;
         display: flex;
         align-items: flex-end;
-        box-sizing: border-box;
     }
 
     &__label {

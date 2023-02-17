@@ -354,7 +354,6 @@ export default {
 
     & &__border-wrapper {
         width: 100%;
-        box-sizing: border-box;
         border-top: solid 2px;
         // padding: 0 50px;
     }

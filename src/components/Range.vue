@@ -108,7 +108,6 @@ export default {
             background: $black;
             border: solid var(--input-border-width) $primary;
             border-radius: 50%;
-            box-sizing: border-box;
             position: relative;
         }
 

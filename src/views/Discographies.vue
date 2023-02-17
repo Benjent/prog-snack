@@ -165,7 +165,6 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         padding: 20px 30px;
-        box-sizing: border-box;
         font-size: $fs-09;
     }
 
@@ -184,7 +183,6 @@ export default {
         max-height: $cover-width * $album-per-column + 20px;
         overflow-y: scroll;
         scrollbar-width: none;
-        box-sizing: border-box;
     }
 
     &__logos {
@@ -216,7 +214,6 @@ export default {
 
     & &__borderWrapper {
         width: 100%;
-        box-sizing: border-box;
         border-top: solid 2px;
         mask-image: linear-gradient(
             rgba(0, 0, 0, 1) 0%,
@@ -259,7 +256,6 @@ export default {
 
         &__header {
             width: 100%;
-            box-sizing: border-box;
             padding: 0 0 20px 20px;
             border-bottom: solid 2px $primary;
         }
@@ -268,7 +264,6 @@ export default {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
-            box-sizing: border-box;
             padding: 20px 0 0 20px;
             font-size: var(--default-font-size);
         }
@@ -336,7 +331,6 @@ export default {
 
         & &__borderWrapper {
             width: 100%;
-            box-sizing: border-box;
             border-top: solid 2px;
             padding: 0 20px;
         }

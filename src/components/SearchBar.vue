@@ -81,7 +81,6 @@ $search-bar-width: 300px;
     & &__input {
         width: $search-bar-width;
         height: 100%;
-        box-sizing: border-box;
         padding: 5px 10px;
         padding-right: $reset-size * 2 + 8px;
         text-overflow: ellipsis;
@@ -117,7 +116,6 @@ $search-bar-width: 300px;
         top: var(--header-height);
         max-height: 300px;
         width: $search-bar-width;
-        box-sizing: border-box;
         border: solid var(--input-border-width) $primary;
         border-top: none;
         border-bottom-left-radius: $borderRadius;

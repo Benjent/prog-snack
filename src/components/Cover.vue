@@ -127,7 +127,6 @@ export default {
         opacity: 0;
         transition: opacity 0.2s;
         padding: 5px;
-        box-sizing: border-box;
     }
 
     & &__year {

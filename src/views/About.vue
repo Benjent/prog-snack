@@ -117,7 +117,6 @@ export default {
         max-width: 860px;
         margin-right: auto;
         margin-left: auto;
-        box-sizing: border-box;
         padding: 0 20px;
 
         &:first-child {
@@ -155,7 +154,6 @@ export default {
         width: 70%;
         display: flex;
         align-items: center;
-        box-sizing: border-box;
     }
 }
 

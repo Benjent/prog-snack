@@ -57,7 +57,6 @@ export default {
     display: flex;
     align-items: center;
     height: var(--header-height);
-    box-sizing: border-box;
     background: $secondary-dark;
     position: fixed;
     width: 100%;
@@ -99,7 +98,6 @@ export default {
         padding: 20px;
         height: 100%;
         white-space: nowrap;
-        box-sizing: border-box;
 
         &.router-link-exact-active {
             border-bottom: solid 2px $primary;

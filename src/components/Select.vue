@@ -71,7 +71,6 @@ export default {
         cursor: pointer;
         display: flex;
         width: 100%;
-        box-sizing: border-box;
         padding: 6px 10px;
         padding-right: 40px;
         background: $secondary;

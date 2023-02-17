@@ -63,7 +63,6 @@ export default {
         width: 70%;
         display: flex;
         align-items: center;
-        box-sizing: border-box;
     }
 }
 </style>
