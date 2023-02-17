@@ -1,47 +1,4 @@
-const regions = {
-    ARGENTINA: "ARGENTINA",
-    AUSTRALIA: "AUSTRALIA",
-    AUSTRIA: "AUSTRIA",
-    BELARUS: "BELARUS",
-    BELGIUM: "BELGIUM",
-    BOLIVIA: "BOLIVIA",
-    BOSNIA_AND_HERZEGOVINA: "BOSNIA_AND_HERZEGOVINA",
-    BRAZIL: "BRAZIL",
-    BULGARIA: "BULGARIA",
-    CANADA: "CANADA",
-    CZECHIA: "CZECHIA",
-    DENMARK: "DENMARK",
-    ENGLAND: "ENGLAND",
-    FINLAND: "FINLAND",
-    FRANCE: "FRANCE",
-    GERMANY: "GERMANY",
-    GREECE: "GREECE",
-    HUNGARY: "HUNGARY",
-    INDIA: "INDIA",
-    INDONESIA: "INDONESIA",
-    ICELAND: "ICELAND",
-    IRELAND: "IRELAND",
-    ISRAEL: "ISRAEL",
-    ITALY: "ITALY",
-    JAPAN: "JAPAN",
-    MEXICO: "MEXICO",
-    NETHERLANDS: "NETHERLANDS",
-    NEW_ZEALAND: "NEW_ZEALAND",
-    NORTHERN_IRELAND: "NORTHERN_IRELAND",
-    NORWAY: "NORWAY",
-    PORTUGAL: "PORTUGAL",
-    QUEBEC: "QUEBEC",
-    RUSSIA: "RUSSIA",
-    SCOTLAND: "SCOTLAND",
-    SLOVAKIA: "SLOVAKIA",
-    SOUTH_AFRICA: "SOUTH_AFRICA",
-    SPAIN: "SPAIN",
-    SWEDEN: "SWEDEN",
-    SWITZERLAND: "SWITZERLAND",
-    USA: "USA", // TODO split by region
-    VENEZUELA: "VENEZUELA",
-    WALES: "WALES",
-}
+import regions from "./regions"
 
 const flags = {
     [regions.ARGENTINA]: "🇦🇷",
@@ -88,4 +45,4 @@ const flags = {
     [regions.WALES]: "🇬🇧",
 }
 
-export { flags, regions }
+export default flags
