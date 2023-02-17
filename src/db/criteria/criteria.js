@@ -1,4 +1,4 @@
-// 3-occurence update : the criterium, its position in the criteria list and its categorization TODO use script for that
+// 3-occurence update : the criterium, its position in the criteria list and its categorization
 const criteria = {
     // Concept
     CONCEPT: "CONCEPT",
