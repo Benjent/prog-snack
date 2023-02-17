@@ -1,4 +1,4 @@
-function shuffle(array) {
+const shuffle = (array) => {
     // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
     let currentIndex = array.length
     let randomIndex
@@ -15,7 +15,7 @@ function shuffle(array) {
     return array
 }
 
-function sort(array, property, orderBy = "ASC") {
+const sort = (array, property, orderBy = "ASC") => {
     if (orderBy === "DESC") {
         array.sort((a, b) => {
             if (a[property] > b[property]) { return -1 }

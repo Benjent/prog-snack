@@ -1,4 +1,4 @@
-function applyBarTransition(cssProperty, self) {
+const applyBarTransition = (cssProperty, self) => {
     const gauges = self.querySelectorAll(".gauge")
 
     // Without timeout browser cannot trigger CSS transition
@@ -9,7 +9,7 @@ function applyBarTransition(cssProperty, self) {
     }, 0)
 }
 
-function applyChainedFadeIn(self, selector, duration = 100) {
+const applyChainedFadeIn = (self, selector, duration = 100) => {
     // Use alongside with fadeIn SCSS mixin
     const elementsToFade = self.querySelectorAll(selector)
     elementsToFade.forEach((e, index) => {
@@ -20,7 +20,7 @@ function applyChainedFadeIn(self, selector, duration = 100) {
     })
 }
 
-function applyChainedFadeInEarlyOnly(self, selector, durationBeforeAllReveal, duration = 100) {
+const applyChainedFadeInEarlyOnly = (self, selector, durationBeforeAllReveal, duration = 100) => {
     applyChainedFadeIn(self, selector, duration)
 
     // Only apply transition on visible covers, let instantly fade of the other, non-visible covers
