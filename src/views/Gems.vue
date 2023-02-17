@@ -19,7 +19,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import Cover from "../components/Cover.vue"
+import { Cover } from "../components"
 
 export default {
     components: {

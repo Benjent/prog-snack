@@ -15,14 +15,12 @@
 </template>
 
 <script>
+import { histogram } from "../mixins"
 import { applyBarTransition } from "../utils/transition-utils"
 
 export default {
     name: "HistogramHorizontal",
-    props: {
-        caption: String,
-        datasource: [Array, Object],
-    },
+    mixins: [histogram],
     mounted() {
         applyBarTransition("width", this.$el)
     },
@@ -53,7 +51,7 @@ export default {
     &__label {
         width: 30%;
         text-align: right;
-        padding-right: 10px;
+        padding-right: var(--label-gap);
         overflow: hidden;
         word-break: break-all;
         text-overflow: ellipsis;
@@ -65,7 +63,6 @@ export default {
         width: 70%;
         display: flex;
         align-items: center;
-        box-sizing: border-box;
     }
 }
 </style>

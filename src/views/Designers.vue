@@ -20,7 +20,7 @@
 import { mapActions, mapState } from "vuex"
 import { shuffle } from "../utils/array-utils"
 import { applyChainedFadeIn } from "../utils/transition-utils"
-import Cover from "../components/Cover.vue"
+import { Cover } from "../components"
 
 export default {
     components: {
@@ -354,7 +354,6 @@ export default {
 
     & &__border-wrapper {
         width: 100%;
-        box-sizing: border-box;
         border-top: solid 2px;
         // padding: 0 50px;
     }

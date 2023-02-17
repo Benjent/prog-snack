@@ -40,7 +40,7 @@
 <script>
 import { mapActions, mapState, mapGetters } from "vuex"
 import { applyChainedFadeIn } from "../utils/transition-utils"
-import Cover from "../components/Cover.vue"
+import { Cover } from "../components"
 
 export default {
     components: {

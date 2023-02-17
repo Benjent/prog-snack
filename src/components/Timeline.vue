@@ -63,7 +63,6 @@ export default {
         color: $primary;
 
         margin-right: -$albumYearWidth;
-        box-sizing: border-box;
 
         border: solid 2px $primary;
         border-radius: $borderRadius;

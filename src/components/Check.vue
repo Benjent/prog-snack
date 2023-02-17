@@ -9,8 +9,13 @@
 export default {
     name: "Check",
     props: {
-        label: String,
-        value: Boolean,
+        label: {
+            type: String,
+        },
+        value: {
+            type: Boolean,
+            default: false,
+        },
     },
     methods: {
         notifyParent() {
@@ -45,8 +50,8 @@ export default {
         width: var(--tick-size);
         min-width: var(--tick-size);
         background: $black;
-        border: solid 2px $primary;
-        margin-right: 10px;
+        border: solid var(--input-border-width) $primary;
+        margin-right: var(--label-gap);
 
         &--round {
             border-radius: 50%;

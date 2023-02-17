@@ -9,9 +9,15 @@
 export default {
     name: "Radio",
     props: {
-        label: String,
-        value: String,
-        own: String,
+        label: {
+            type: String,
+        },
+        value: {
+            type: String,
+        },
+        own: {
+            type: String,
+        },
     },
     methods: {
         notifyParent() {
@@ -47,8 +53,8 @@ export default {
         width: var(--tick-size);
         min-width: var(--tick-size);
         background: $black;
-        border: solid 2px $primary;
-        margin-right: 10px;
+        border: solid var(--input-border-width) $primary;
+        margin-right: var(--label-gap);
         border-radius: 50%;
 
         &--checked {

@@ -11,7 +11,7 @@ const albumsPerCountry = {}
 const criteriaOccurences = {}
 const mostUsedCriteriaPerYear = {}
 
-function generateDao() {
+const generateDao = () => {
     albums.forEach((album) => {
         album.criteria.sort((a, b) => criteriaOrder.indexOf(a) > criteriaOrder.indexOf(b))
 

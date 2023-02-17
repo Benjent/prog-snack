@@ -7,6 +7,7 @@
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
             <div class="select__option" @click="notifyParent(null)">All</div>
+            <div class="select__option" v-if="custom" @click="notifyParent('Custom')">Custom</div>
             <div class="select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</div>
         </div>
     </div>
@@ -21,9 +22,19 @@ export default {
         Arrow,
     },
     props: {
-        value: [String, Number],
-        options: [Array, Object],
-        filter: Function,
+        value: {
+            type: [String, Number],
+        },
+        options: {
+            type: [Array, Object],
+        },
+        custom: {
+            type: Boolean,
+            default: false,
+        },
+        filter: {
+            type: Function,
+        },
     },
     data() {
         return {
@@ -60,7 +71,6 @@ export default {
         cursor: pointer;
         display: flex;
         width: 100%;
-        box-sizing: border-box;
         padding: 6px 10px;
         padding-right: 40px;
         background: $secondary;

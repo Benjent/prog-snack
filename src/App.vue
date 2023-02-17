@@ -1,17 +1,17 @@
 <template>
     <fade-transition appear>
         <div id="app" class="app">
-                <TheNavBar></TheNavBar>
-                <section class="app__body">
-                    <router-view class="app__page"/>
-                </section>
-                <TheNavBar v-if="$mq === 'M'" footer></TheNavBar>
+            <TheNavBar></TheNavBar>
+            <section class="app__body">
+                <router-view class="app__page"/>
+            </section>
+            <TheNavBar v-if="$mq === 'M'" footer></TheNavBar>
         </div>
     </fade-transition>
 </template>
 
 <script>
-import TheNavBar from "./components/TheNavBar.vue"
+import { TheNavBar } from "./components"
 
 export default {
     components: {

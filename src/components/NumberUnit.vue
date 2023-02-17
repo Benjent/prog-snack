@@ -7,10 +7,14 @@
 
 <script>
 export default {
-    name: "AlbumStarter",
+    name: "NumberUnit",
     props: {
-        number: Number,
-        unit: String,
+        number: {
+            type: Number,
+        },
+        unit: {
+            type: String,
+        },
     },
 }
 </script>
