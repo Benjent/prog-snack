@@ -16,6 +16,9 @@ export default {
         orientation: {
             type: String,
             default: "top",
+            validator(value) {
+                return ["top", "right", "bottom", "left"].includes(value)
+            },
         },
     },
     computed: {
