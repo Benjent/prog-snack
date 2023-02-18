@@ -23,9 +23,6 @@ npm run build
 npm run lint
 ```
 
-### Deploys to GitHub pages
-On /master merge, thanks to [this action](https://github.com/marketplace/actions/deploy-vue-apps-to-github-pages).
-
 ## Guidelines
 
 ### JS
