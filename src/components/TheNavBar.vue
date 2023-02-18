@@ -92,8 +92,8 @@ export default {
     }
 
     & &__nav {
-        font-family: 'Corben', sans-serif;
-        font-weight: bold;
+        // font-family: 'Corben', sans-serif;
+        // font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -135,7 +135,7 @@ export default {
 
         & &__navItem {
             padding: 12px;
-            font-size: 12px;
+            // font-size: 12px;
         }
     }
 }

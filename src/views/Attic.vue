@@ -299,7 +299,7 @@ export default {
             top: 0;
             position: sticky;
             z-index: 1;
-            background: $tertiary;
+            background: $secondary;
         }
 
         &:not(.attic__title--reset):hover {
