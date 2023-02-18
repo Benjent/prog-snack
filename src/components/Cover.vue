@@ -4,7 +4,7 @@
         :id="coverId"
         class="cover"
         :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--rounded': rounded, 'cover--fade': fade }"
-        :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
+        :style="{ 'border-width': borderWidth }">
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
             <div class="cover__title text--name">{{ album.title }}</div>
@@ -72,13 +72,23 @@ export default {
     },
     methods: {
         getCover(album) {
+            /* eslint-disable global-require */
             try {
-                return require(`../assets/img/covers/${album.id}${album.cover}`) // eslint-disable-line global-require
-            } catch (error) {
-                // Most probably an error with a file extension (image format) not handled by webpack.
-                console.error(`Unable to load cover of album with id: ${album.id}`)
-                return null
+                return require(`../assets/img/covers/${album.id}.jpg`)
+            } catch {
+                try {
+                    return require(`../assets/img/covers/${album.id}.jpeg`)
+                } catch {
+                    try {
+                        return require(`../assets/img/covers/${album.id}.png`)
+                    } catch {
+                        // Most probably an error with a file extension (image format) not handled by webpack.
+                        console.error(`Unable to load cover of album with id: ${album.id}`)
+                        return null
+                    }
+                }
             }
+            /* eslint-enable global-require */
         },
     },
 }
