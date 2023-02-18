@@ -18,14 +18,11 @@ export default {
 @import '../style/gatherer';
 
 .icon {
-    // Make sure icon is not bigger than text beside
-    display: inline-flex;
-    vertical-align: top; // Make icon take the whole line-height
     // vertical-align: middle;
     // height: 1em;
     // width: 1em;
     // min-height: 1em;
     // min-width: 1em;
-    // font-size: inherit;
+    font-size: inherit;
 }
 </style>

@@ -9,7 +9,7 @@
                     <div>
                         <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
                             <div>Year</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedYear ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedYear">
                             <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic"></Select>
@@ -21,7 +21,7 @@
                     <div>
                         <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
                             <div>Region</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedRegion ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedRegion">
                             <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic"></Select>
@@ -30,7 +30,7 @@
                     <div>
                         <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
                             <div>Language</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedLanguage ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedLanguage">
                             <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
@@ -39,7 +39,7 @@
                     <div v-for="(panel, index) in filterModel" :key="panel.panel">
                         <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
                             <div>{{ panel.panel | criteriumCategory }}</div>
-                            <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="panel.isDisplayed ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="panel.isDisplayed">
                             <template v-for="(item, indexCriteria) in panel.criteria">
@@ -71,13 +71,13 @@ import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
-import { Cover, Arrow, Check, Radio, Range, Select } from "../components"
+import { Cover, Check, Icon, Radio, Range, Select } from "../components"
 
 export default {
     components: {
-        Arrow,
         Check,
         Cover,
+        Icon,
         Radio,
         Range,
         Select,
@@ -307,6 +307,10 @@ export default {
             top: 0;
             position: sticky;
             z-index: 1;
+        }
+
+        .icon {
+            font-size: x-large;
         }
     }
 

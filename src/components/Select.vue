@@ -87,6 +87,10 @@ export default {
         }
     }
 
+    .icon {
+        font-size: x-large;
+    }
+
     & &__option {
         padding: 6px 10px;
     }

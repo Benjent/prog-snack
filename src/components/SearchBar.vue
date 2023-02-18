@@ -109,7 +109,7 @@ $search-bar-height: 40px;
         pointer-events: none;
         position: absolute;
         right: 10px;
-        top: ($search-bar-height / 2) - 24px / 2; // Rouhly icon height
+        top: ($search-bar-height / 2) - 20px / 2; // Roughly icon height
 
         &--available {
             pointer-events: all;
