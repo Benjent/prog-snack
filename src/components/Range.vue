@@ -71,11 +71,13 @@ export default {
     position: relative;
     height: var(--tick-size);
     display: flex;
+    pointer-events: none;
 
     & &__slider {
         position: relative;
         margin: 0 var(--label-gap);
         width: 100%;
+        pointer-events: none;
     }
 
     & &__input {
