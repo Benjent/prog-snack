@@ -14,7 +14,7 @@
 
             <main class="discographies__main">
                 <section class="discographies__selectedAlbum">
-                    <template v-if="$mq === 'M'">
+                    <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
                         <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                         <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
                         <h3 class="title title--3">({{selectedAlbum.year}})</h3>
@@ -28,34 +28,32 @@
                         <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
                         <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                         <AlbumStarter class="discographies__track" :album="selectedAlbum" />
-                    </template>
-                    <template v-else>
-                        <div class="card card--marginless discographies__selectedAlbum__main">
-                            <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
-                            <div class="discographies__selectedAlbum__infos">
-                                <header class="discographies__selectedAlbum__header">
-                                    <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
-                                    <div>
-                                        <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
-                                    </div>
-                                    <div v-if="selectedAlbum.designers.length > 0">
-                                        Cover by
-                                        <template v-for="(designer, index) in selectedAlbum.designers">
-                                            {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
-                                        </template>
-                                    </div>
-                                </header>
-                                <footer class="discographies__selectedAlbum__footer">
-                                    <div class="discographies__selectedAlbum__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
-                                        <span>{{ criterium | criterium }}</span>
-                                        <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
-                                    </div>
-                                    <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                                </footer>
-                                <AlbumStarter class="discographies__track" :album="selectedAlbum" />
-                            </div>
+                    </div>
+                    <div v-else class="card card--marginless discographies__selectedAlbum__main">
+                        <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
+                        <div class="discographies__selectedAlbum__infos">
+                            <header class="discographies__selectedAlbum__header">
+                                <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
+                                <div>
+                                    <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
+                                </div>
+                                <div v-if="selectedAlbum.designers.length > 0">
+                                    Cover by
+                                    <template v-for="(designer, index) in selectedAlbum.designers">
+                                        {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
+                                    </template>
+                                </div>
+                            </header>
+                            <footer class="discographies__selectedAlbum__footer">
+                                <div class="discographies__selectedAlbum__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
+                                    <span>{{ criterium | criterium }}</span>
+                                    <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
+                                </div>
+                                <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                            </footer>
+                            <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                         </div>
-                    </template>
+                    </div>
 
                     <div v-if="$mq !== 'M' && (spotifyPath || deezerPath)">
                         <section class="discographies__logos">
@@ -267,7 +265,7 @@ export default {
 
     & &__track {
         text-align: center;
-        padding: 20px 0 60px 0;
+        padding: 20px 0;
     }
 
     & &__logo {
@@ -308,6 +306,12 @@ export default {
             max-width: none;
             box-shadow: none;
             text-align: center;
+            gap: 40px;
+
+            &__main {
+                display: flex;
+                flex-direction: column;
+            }
 
             &__cover {
                 width: 100%;
