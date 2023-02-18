@@ -10,7 +10,7 @@
                     <div v-else class="theNavBar__navText">{{ item.title }}</div>
                 </router-link>
             </nav>
-            <SearchBar v-if="!footer"></SearchBar>
+            <SearchBar v-if="!footer" />
         </header>
     </slide-y-up-transition>
 </template>
@@ -34,10 +34,10 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: "/albums", title: `Albums`, icon: "mosaic" },
-                { path: "/discographies", title: `Discographies`, icon: "list" },
-                { path: "/gems", title: `Gems`, icon: "star" },
-                { path: "/subgenres", title: `Subgenres`, icon: "subgenres" },
+                { path: "/albums", title: `Albums`, icon: "gallery_thumbnail" },
+                { path: "/discographies", title: `Discographies`, icon: "queue_music" },
+                { path: "/gems", title: `Gems`, icon: "stars" },
+                { path: "/subgenres", title: `Subgenres`, icon: "category" },
                 { path: "/designers", title: `Designers`, icon: "palette" },
                 { path: "/stats", title: `Stats`, icon: "equalizer" },
                 { path: "/about", title: `About`, icon: "help" },
@@ -62,6 +62,15 @@ export default {
     width: 100%;
     z-index: 10;
 
+    // Image background
+    // background-color: #ffffff; // cars.png background color
+    // background-image: url('~@/assets/img/backgrounds/plane.png');
+    // background-repeat: no-repeat;
+    // background-size: 18%;
+    // background-position-x: right;
+    // background-position-y: 0%;
+    // background-attachment: fixed;
+
     &--footer {
         bottom: 0;
     }
@@ -73,10 +82,9 @@ export default {
 
     & &__logo {
         cursor: pointer;
-        font-size: 30px;
-        margin: 10px;
+        height: 100%;
+        padding: 16px 10px;
         margin-left: 20px;
-        height: 60%;
 
         img {
             height: 100%;
@@ -84,17 +92,22 @@ export default {
     }
 
     & &__nav {
+        // font-family: 'Corben', sans-serif;
+        // font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 1;
+        height: 100%;
+        padding: 0 40px;
     }
 
     & &__navItem {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
         padding: 20px;
         height: 100%;
         white-space: nowrap;
@@ -113,14 +126,38 @@ export default {
     }
 }
 
+@media (max-width: 1260px) {
+    .theNavBar {
+        & &__logo {
+            margin-left: 10px;
+            height: 90%;
+        }
+
+        & &__navItem {
+            padding: 12px;
+            // font-size: 12px;
+        }
+    }
+}
+
 @media (max-width: $mobile) {
     .theNavBar {
         $nbLinks: 7;
         justify-content: space-between;
 
+        &--footer {
+            .theNavBar__navItem {
+                font-size: 14px;
+            }
+        }
+
         & &__logo {
-            cursor: pointer;
-            top: 4px;
+            margin: 0;
+            height: 100%;
+        }
+
+        & &__nav {
+            padding: 0;
         }
 
         & &__navItem {

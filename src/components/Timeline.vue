@@ -2,7 +2,7 @@
     <div class="timeline">
         <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
             <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
-            <Cover class="timeline__cover" :album="album" :size="$mq === 'M' ? 60 : null" clickable @click.native="selectAlbum(album)"></Cover>
+            <Cover class="timeline__cover" :album="album" :size="$mq === 'M' ? 60 : null" clickable @click.native="selectAlbum(album)" />
         </div>
     </div>
 </template>
@@ -44,7 +44,6 @@ export default {
     bottom: 0;
 
     overflow-x: scroll;
-    overflow-y: hidden;
 
     & &__album {
         @include fadeIn;
@@ -52,20 +51,15 @@ export default {
     }
 
     & &__year {
-        $albumYearWidth: 75px;
+        position: absolute;
 
-        display: table;
-
-        width: $albumYearWidth;
+        width: 75px;
         z-index: 1;
 
         background: $secondary;
-        color: $primary;
-
-        margin-right: -$albumYearWidth;
 
         border: solid 2px $primary;
-        border-radius: $borderRadius;
+        border-radius: var(--button-radius);
         border-bottom-left-radius: 0;
         padding: 2px 15px;
 

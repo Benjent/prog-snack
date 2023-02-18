@@ -2,7 +2,7 @@
 
 @mixin sunset {
     // background: linear-gradient(141deg, $secondary 10%, $black 90%);
-    background: linear-gradient(141deg, $secondary 0%, $secondary 70%, $ternary 90%);
+    background: linear-gradient(141deg, $secondary 0%, $secondary 70%, $tertiary 90%);
     background-size: 250%;
     background-position: 100%;
     animation: GradientWave 0.2s ease;

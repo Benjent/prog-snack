@@ -1,0 +1,15 @@
+@import '../mixins/shadow';
+
+.card {
+    padding: 20px;
+    border-radius: var(--panel-radius);
+    border-top: solid 2px $primary;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 20px; // Title gap
+
+    @include shadow($palette-secondary-dark);
+
+    &--marginless {
+        margin-top: 0;
+    }
+}

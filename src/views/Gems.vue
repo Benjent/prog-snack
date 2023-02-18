@@ -2,12 +2,12 @@
     <fade-transition appear>
         <section class="gems">
             <div class="gems__item" v-for="album in gems" :key="album.id">
-                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
+                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)" />
 
                 <div class="gems__album">
                     <div class="gems__title" @click="selectAlbumAndView(album)">
                         <h3 class="title title--3">{{album.artist}}</h3>
-                        <h2 class="title title--2 text--album-title">{{album.title}}</h2>
+                        <h2 class="title title--2 text--name">{{album.title}}</h2>
                         <span>({{album.year}})</span>
                     </div>
                     <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
@@ -54,10 +54,14 @@ export default {
 
     & &__item {
         display: flex;
-        padding: 100px 0;
+        padding: 20px 0;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+
+        &:first-of-type {
+            padding-top: 60px;
+        }
 
         &:last-of-type {
             border: none;

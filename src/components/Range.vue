@@ -71,11 +71,13 @@ export default {
     position: relative;
     height: var(--tick-size);
     display: flex;
+    pointer-events: none;
 
     & &__slider {
         position: relative;
         margin: 0 var(--label-gap);
         width: 100%;
+        pointer-events: none;
     }
 
     & &__input {
@@ -109,10 +111,11 @@ export default {
             border: solid var(--input-border-width) $primary;
             border-radius: 50%;
             position: relative;
+            box-sizing: border-box;
         }
 
         &::-moz-range-thumb:hover, &::-moz-range-thumb:hover {
-            background: linear-gradient(141deg, $secondary 10%, $ternary 90%);
+            background: linear-gradient(141deg, $secondary 10%, $tertiary 90%);
         }
     }
 

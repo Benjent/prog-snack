@@ -5,7 +5,7 @@
         <template v-if="album.selectedTrackYtId">
             <span> on </span>
             <a :href="youtubePath" target="_blank">
-                <Icon name="play" />
+                <Icon name="play_circle" />
                 YouTube
                 <!-- <img class="albumStarter__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt=""> -->
             </a>

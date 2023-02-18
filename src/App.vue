@@ -1,11 +1,11 @@
 <template>
     <fade-transition appear>
         <div id="app" class="app">
-            <TheNavBar></TheNavBar>
+            <TheNavBar />
             <section class="app__body">
                 <router-view class="app__page"/>
             </section>
-            <TheNavBar v-if="$mq === 'M'" footer></TheNavBar>
+            <TheNavBar v-if="$mq === 'M'" footer />
         </div>
     </fade-transition>
 </template>

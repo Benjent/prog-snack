@@ -2,16 +2,18 @@
     <div class="searchBar">
         <input class="searchBar__input"
             :class="{ 'searchBar__input--empty': currentSearch }"
-            placeholder="Search by album, artist, designer or year..."
+            placeholder="Album, artist, designer, year..."
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
+            <div class="searchBar__reset" :class="{ 'searchBar__reset--available': currentSearch || currentSearch === '' }" @click="resetSearch">
+                <Icon :name="currentSearch || currentSearch === '' ? 'close' : 'search'" />
+            </div>
 
-            <div class="searchBar__result" v-if="matchingAlbums.length > 0">
-                <div class="searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <Cover :album="album" :size="30"></Cover>
-                    <div class="searchBar__album__title"> {{ album.title }} </div>
+            <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
+                <div class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
+                    <Cover :album="album" :size="30" />
+                    <div class="searchBar__album__title">{{ album.title }}</div>
                 </div>
             </div>
     </div>
@@ -20,11 +22,13 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import Cover from "./Cover.vue"
+import Icon from "./Icon.vue"
 
 export default {
     name: "SearchBar",
     components: {
         Cover,
+        Icon,
     },
     data() {
         return {
@@ -70,19 +74,30 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/sunset';
+@import '../style/modules/options';
 
 $search-bar-width: 300px;
+$search-bar-height: 40px;
 
 .searchBar {
     $reset-size: 20px;
-    height: 40px;
-    border-bottom: solid 1px $primary;
+    height: $search-bar-height;
+    max-width: $search-bar-width;
+    width: 100%;
+    color: $primary;
+    position: relative;
 
     & &__input {
-        width: $search-bar-width;
         height: 100%;
-        padding: 5px 10px;
-        padding-right: $reset-size * 2 + 8px;
+        width: 100%;
+        padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+        padding-right: $reset-size * 2;
+        background: $secondary;
+        border: solid var(--input-border-width) $primary;
+        border-right: 0;
+        border-radius: var(--select-radius);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         text-overflow: ellipsis;
 
         &:hover {
@@ -92,49 +107,23 @@ $search-bar-width: 300px;
 
     & &__reset {
         cursor: pointer;
+        pointer-events: none;
         position: absolute;
-        right: 30px;
-        top: 20px;
-        width: $reset-size;
-        height: $reset-size;
+        right: 10px;
+        top: ($search-bar-height / 2) - 20px / 2; // Roughly icon height
 
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            left: 12px;
-            height: 22px;
-            width: 2px;
-            background-color: $primary;
+        &--available {
+            pointer-events: all;
         }
-
-        &:before { transform: rotate(45deg); }
-        &:after { transform: rotate(-45deg); }
     }
 
     & &__result {
         position: absolute;
-        top: var(--header-height);
-        max-height: 300px;
-        width: $search-bar-width;
-        border: solid var(--input-border-width) $primary;
-        border-top: none;
-        border-bottom-left-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
-        background: $secondary-dark;
-
+        top: calc(var(--header-height) / 2 + $search-bar-height / 2); // Position the result below the header, not the input
+        width: 100%;
         overflow-x: hidden;
-        overflow-y: auto;
-
-        &__item {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-
-            &:hover {
-                background: $primary;
-                color: $black;
-            }
-        }
+        border-right: 0;
+        border-bottom-right-radius: 0;
     }
 
     & &__album {
@@ -144,7 +133,7 @@ $search-bar-width: 300px;
 
         &:hover {
             background: $primary;
-            color: $black;
+            color: $text-dark;
         }
 
         .l-cover {

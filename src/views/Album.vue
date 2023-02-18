@@ -6,12 +6,12 @@
                 <slide-x-left-transition appear>
                     <div class="album__info">
                         <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
-                        <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
+                        <h1 class="title title--1 text--name">{{ selectedAlbum.title }}</h1>
                         <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</div>
                     </div>
                 </slide-x-left-transition>
 
-                <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable fade @click.native="goToDiscographies"></Cover>
+                <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable fade @click.native="goToDiscographies" />
 
                 <slide-x-right-transition appear>
                     <div class="album__criteria">
@@ -21,10 +21,10 @@
                 </slide-x-right-transition>
             </section>
 
-            <AlbumStarter class="album__track" :album="selectedAlbum"></AlbumStarter>
+            <AlbumStarter class="album__track" :album="selectedAlbum" />
             <router-link class="album__button button" to="discographies">More infos</router-link>
 
-            <Timeline v-if="$mq !== 'M'"></Timeline>
+            <Timeline v-if="$mq !== 'M'" />
         </section>
     </fade-transition>
 </template>

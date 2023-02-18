@@ -8,7 +8,6 @@ const albums = [
         artist: "Ακρίτας",
         year: 1973,
         country: regions.GREECE,
-        cover: ".jpg",
         criteria: [criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.GREEK, criteria.SYMPHONIC],
         selectedTrackTitle: "Εισβολείς",
         selectedTrackYtId: "H_BLWgoEmJg",

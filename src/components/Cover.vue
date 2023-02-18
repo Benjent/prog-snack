@@ -3,11 +3,11 @@
         v-if="album"
         :id="coverId"
         class="cover"
-        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--fade': fade }"
-        :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
+        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--rounded': rounded, 'cover--fade': fade }"
+        :style="{ 'border-width': borderWidth }">
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
-            <div class="cover__title text--album-title">{{ album.title }}</div>
+            <div class="cover__title text--name">{{ album.title }}</div>
             <div class="cover__year">{{ album.year }}</div>
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
@@ -36,6 +36,10 @@ export default {
             default: false,
         },
         bordered: {
+            type: Boolean,
+            default: false,
+        },
+        rounded: {
             type: Boolean,
             default: false,
         },
@@ -68,13 +72,23 @@ export default {
     },
     methods: {
         getCover(album) {
+            /* eslint-disable global-require */
             try {
-                return require(`../assets/img/covers/${album.id}${album.cover}`) // eslint-disable-line global-require
-            } catch (error) {
-                // Most probably an error with a file extension (image format) not handled by webpack.
-                console.error(`Unable to load cover of album with id: ${album.id}`)
-                return null
+                return require(`../assets/img/covers/${album.id}.jpg`)
+            } catch {
+                try {
+                    return require(`../assets/img/covers/${album.id}.jpeg`)
+                } catch {
+                    try {
+                        return require(`../assets/img/covers/${album.id}.png`)
+                    } catch {
+                        // Most probably an error with a file extension (image format) not handled by webpack.
+                        console.error(`Unable to load cover of album with id: ${album.id}`)
+                        return null
+                    }
+                }
             }
+            /* eslint-enable global-require */
         },
     },
 }
@@ -105,6 +119,11 @@ export default {
     &--bordered {
         border-style: solid;
         border-color: $primary;
+        border-radius: var(--panel-radius);
+    }
+
+    &--rounded {
+        border-radius: var(--panel-radius);
     }
 
     &--fade {

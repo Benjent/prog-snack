@@ -4,62 +4,62 @@
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
                     <div class="attic__title attic__title--reset">
-                        <button class="attic__reset button" @click="resetFilter()">Reset filter</button>
+                        <button class="attic__reset button" @click="resetFilter()">Reset filters</button>
                     </div>
                     <div>
                         <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
                             <div>Year</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedYear ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedYear ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedYear">
-                            <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic"></Select>
-                            <div v-if="selectedYear === 'Custom'">
+                            <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic" />
+                            <template v-if="selectedYear === 'Custom'">
                                 <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
-                            </div>
+                            </template>
                         </div>
                     </div>
                     <div>
                         <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
                             <div>Region</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedRegion ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedRegion ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedRegion">
-                            <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic"></Select>
+                            <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
                         </div>
                     </div>
                     <div>
                         <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
                             <div>Language</div>
-                            <Arrow color=dark size="small" :orientation="isDisplayedLanguage ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="isDisplayedLanguage ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="isDisplayedLanguage">
-                            <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic"></Select>
+                            <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
                         </div>
                     </div>
                     <div v-for="(panel, index) in filterModel" :key="panel.panel">
                         <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
                             <div>{{ panel.panel | criteriumCategory }}</div>
-                            <Arrow color=dark size="small" :orientation="panel.isDisplayed ? 'top' : 'bottom'"></Arrow>
+                            <Icon :name="panel.isDisplayed ? 'expand_less' : 'expand_more'" />
                         </div>
                         <div class="attic__panel" v-if="panel.isDisplayed">
                             <template v-for="(item, indexCriteria) in panel.criteria">
                                 <Radio v-if="item.name" v-model="radioGroups[item.name]"
                                     class="attic__filter"
                                     :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
-                                    @click.native="filterAttic(item.criterium)"></Radio>
+                                    @click.native="filterAttic(item.criterium)" />
                                 <Check v-else
                                     class="attic__filter"
                                     v-model="filterModel[index].criteria[indexCriteria].checked"
                                     :label="item.criterium | criterium" :key="item.criterium"
-                                    @click.native="filterAttic(item.criterium)"></Check>
+                                    @click.native="filterAttic(item.criterium)" />
                             </template>
-                            <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')"></Check>
+                            <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
                         </div>
                     </div>
                 </aside>
             </slide-y-up-transition>
             <section id="albumList" class="attic__mosaic">
-                <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)"></Cover>
+                <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)" />
             </section>
         </section>
     </fade-transition>
@@ -71,13 +71,13 @@ import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
-import { Cover, Arrow, Check, Radio, Range, Select } from "../components"
+import { Cover, Check, Icon, Radio, Range, Select } from "../components"
 
 export default {
     components: {
-        Arrow,
         Check,
         Cover,
+        Icon,
         Radio,
         Range,
         Select,
@@ -265,15 +265,8 @@ export default {
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
 @import '../style/mixins/shadow';
+@import '../style/mixins/sunset';
 @import '../style/modules/button';
-@import '../style/modules/select';
-
-.hidden {
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    user-select: none;
-}
 
 .attic {
     display: flex;
@@ -288,7 +281,6 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
-        background: $secondary-dark;
     }
 
     & &__reset {
@@ -301,18 +293,26 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-        border-bottom: solid 1px $primary;
-        background: $secondary-dark;
+        border-bottom: solid 2px $primary;
 
         &--reset {
             top: 0;
             position: sticky;
             z-index: 1;
+            background: $secondary;
+        }
+
+        &:not(.attic__title--reset):hover {
+            @include sunset;
+        }
+
+        .icon {
+            font-size: x-large;
         }
     }
 
     & &__panel {
-        background: $secondary;
+        background: $secondary-dark;
         padding: 15px;
     }
 
