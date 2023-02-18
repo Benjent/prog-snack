@@ -27,6 +27,7 @@
                         </div>
                         <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
                         <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                        <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                     </template>
                     <template v-else>
                         <div class="card card--marginless discographies__selectedAlbum__main">
@@ -51,12 +52,11 @@
                                     </div>
                                     <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                                 </footer>
+                                <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                             </div>
                         </div>
                     </template>
-    
-                    <AlbumStarter class="discographies__track" :album="selectedAlbum" />
-    
+
                     <div v-if="$mq !== 'M' && (spotifyPath || deezerPath)">
                         <section class="discographies__logos">
                             <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_white.png')">
@@ -81,14 +81,14 @@
                         </section>
                     </div>
     
-                    <template v-if="discography.length > 1">
+                    <div v-if="discography.length > 1">
                         <h3 class="title title--3">From the same artist</h3>
                         <div class="card">
                             <section class="discographies__discography">
                                 <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" rounded fade @click.native="selectAlbum(album)" />
                             </section>
                         </div>
-                    </template>
+                    </div>
                 </section>
             </main>
         </section>
@@ -183,6 +183,7 @@ export default {
     & &__selectedAlbum {
         display: flex;
         flex-direction: column;
+        gap: 80px;
         margin: auto;
         padding: $page-padding;
         max-width: (($cover-width + $cover-gap) * $albums-per-row) + ($card-padding * 2) + ($page-padding * 2);
@@ -253,7 +254,6 @@ export default {
         border-radius: var(--panel-radius);
         // border: solid 3px $primary;
         overflow: hidden;
-        margin-bottom: 60px;
         min-height: 180px;
 
         &__item {
