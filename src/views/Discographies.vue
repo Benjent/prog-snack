@@ -201,10 +201,10 @@ export default {
         border: solid 3px $primary;
         overflow: hidden;
         margin-bottom: 60px;
+        min-height: 180px;
 
         &__item {
             width: 100%;
-            height: 320px;
 
             &----one-missing {
                 width: 100%;
