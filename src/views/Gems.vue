@@ -7,7 +7,7 @@
                 <div class="gems__album">
                     <div class="gems__title" @click="selectAlbumAndView(album)">
                         <h3 class="title title--3">{{album.artist}}</h3>
-                        <h2 class="title title--2 text--album-title">{{album.title}}</h2>
+                        <h2 class="title title--2 text--name">{{album.title}}</h2>
                         <span>({{album.year}})</span>
                     </div>
                     <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>

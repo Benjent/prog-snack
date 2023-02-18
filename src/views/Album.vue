@@ -6,7 +6,7 @@
                 <slide-x-left-transition appear>
                     <div class="album__info">
                         <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
-                        <h1 class="title title--1 text--album-title">{{ selectedAlbum.title }}</h1>
+                        <h1 class="title title--1 text--name">{{ selectedAlbum.title }}</h1>
                         <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</div>
                     </div>
                 </slide-x-left-transition>

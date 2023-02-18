@@ -14,11 +14,11 @@
 
             <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
                 <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered fade></Cover>
-                <h2 class="title title--2 text--album-title">{{selectedAlbum.title}}</h2>
+                <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
                 <h3 class="title title--3">({{selectedAlbum.year}})</h3>
                 <div v-if="selectedAlbum.designers.length > 0">
                     <Icon name="palette" />
-                    <span> Cover by</span>
+                    <span>Cover by</span>
                     <template v-for="(designer, index) in selectedAlbum.designers">
                         {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
                     </template>
@@ -42,7 +42,7 @@
                     <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade></Cover>
                     <div class="discographies__selectedAlbum__infos">
                         <header class="discographies__selectedAlbum__header">
-                            <div class="discographies__selectedAlbum__title text--album-title">{{ selectedAlbum.title }}</div>
+                            <div class="discographies__selectedAlbum__title text--name">{{ selectedAlbum.title }}</div>
                             <div>
                                 <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
                             </div>

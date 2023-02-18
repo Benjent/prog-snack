@@ -2,7 +2,7 @@
     <fade-transition appear>
         <section class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
-                <h2 class="title title--2 designers__name">{{ designer.name }}</h2>
+                <h2 class="title title--2 designers__name text--name">{{ designer.name }}</h2>
 
                 <div class="designers__border-wrapper">
                     <div class="designers__albums" :class="getClassDesigner(designer.name)">
@@ -66,6 +66,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
+@import '../style/modules/text';
 @import '../style/modules/title';
 
 .designers {

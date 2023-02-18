@@ -7,7 +7,7 @@
         :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
-            <div class="cover__title text--album-title">{{ album.title }}</div>
+            <div class="cover__title text--name">{{ album.title }}</div>
             <div class="cover__year">{{ album.year }}</div>
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
