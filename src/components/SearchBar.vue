@@ -92,6 +92,7 @@ $search-bar-height: 40px;
         width: 100%;
         padding: var(--button-vertical-padding) var(--button-horizontal-padding);
         padding-right: $reset-size * 2;
+        background: $secondary;
         border: solid var(--input-border-width) $primary;
         border-right: 0;
         border-radius: var(--select-radius);
