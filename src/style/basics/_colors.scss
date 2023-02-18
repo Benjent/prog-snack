@@ -1,7 +1,13 @@
-$primary: #fcd098;
-$secondary: #435f70;
-$secondary-dark: #344e5a;
-$secondary-light: #8499a5;
-$ternary: #674e47;
-$black: #172229;
-$white: #fff8f8;
+@import './palettes/boring-blue';
+// @import './palettes/deep-blue';
+// @import './palettes/promised-heights';
+
+$primary: $palette-primary;
+$secondary: $palette-secondary;
+$secondary-dark: $palette-secondary-dark;
+$secondary-light: $palette-secondary-light;
+$ternary: $palette-ternary;
+$black: $palette-black;
+$white: $palette-white;
+$text-dark: $palette-text-dark;
+$text-light: $palette-text-light;

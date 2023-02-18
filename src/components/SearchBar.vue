@@ -124,17 +124,6 @@ $search-bar-width: 300px;
 
         overflow-x: hidden;
         overflow-y: auto;
-
-        &__item {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-
-            &:hover {
-                background: $primary;
-                color: $black;
-            }
-        }
     }
 
     & &__album {
@@ -144,7 +133,7 @@ $search-bar-width: 300px;
 
         &:hover {
             background: $primary;
-            color: $black;
+            color: $text-dark;
         }
 
         .l-cover {

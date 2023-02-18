@@ -104,7 +104,7 @@ export default {
 
         &:hover {
             background: $primary;
-            color: $black;
+            color: $text-dark;
         }
     }
 }
