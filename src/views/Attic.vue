@@ -267,13 +267,6 @@ export default {
 @import '../style/mixins/shadow';
 @import '../style/modules/button';
 
-.hidden {
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    user-select: none;
-}
-
 .attic {
     display: flex;
 

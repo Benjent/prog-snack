@@ -56,3 +56,10 @@ table {
 th {
     font-weight: normal;
 }
+
+.hidden {
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    user-select: none;
+}
