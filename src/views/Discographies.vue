@@ -28,8 +28,8 @@
                 <AlbumStarter class="discographies__track" :album="selectedAlbum" />
 
                 <template v-if="discography.length > 1">
-                    <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
-                    <div class="discographies__borderWrapper">
+                    <h3 class="title title--3">From the same artist</h3>
+                    <div class="card">
                         <section class="discographies__discography">
                             <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)" />
                         </section>
@@ -42,7 +42,7 @@
                     <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                     <div class="discographies__selectedAlbum__infos">
                         <header class="discographies__selectedAlbum__header">
-                            <div class="discographies__selectedAlbum__title text--name">{{ selectedAlbum.title }}</div>
+                            <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
                             <div>
                                 <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
                             </div>
