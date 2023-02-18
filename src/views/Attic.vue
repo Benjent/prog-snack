@@ -266,7 +266,6 @@ export default {
 @import '../style/mixins/page';
 @import '../style/mixins/shadow';
 @import '../style/modules/button';
-@import '../style/modules/select';
 
 .hidden {
     opacity: 0 !important;
