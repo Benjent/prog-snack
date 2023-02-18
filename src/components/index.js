@@ -1,5 +1,4 @@
 import AlbumStarter from "./AlbumStarter.vue"
-import Arrow from "./Arrow.vue"
 import Check from "./Check.vue"
 import Cover from "./Cover.vue"
 import HistogramHorizontal from "./HistogramHorizontal.vue"
@@ -15,7 +14,6 @@ import Timeline from "./Timeline.vue"
 
 export {
     AlbumStarter,
-    Arrow,
     Check,
     Cover,
     HistogramHorizontal,
