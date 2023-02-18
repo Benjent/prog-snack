@@ -10,7 +10,7 @@
                     <div v-else class="theNavBar__navText">{{ item.title }}</div>
                 </router-link>
             </nav>
-            <SearchBar v-if="!footer"></SearchBar>
+            <SearchBar v-if="!footer" />
         </header>
     </slide-y-up-transition>
 </template>

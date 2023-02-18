@@ -9,7 +9,7 @@
                         :album="albumById(id)"
                         bordered
                         :size="130"
-                        @click.native="selectAlbumAndView(id)"></Cover>
+                        @click.native="selectAlbumAndView(id)" />
                 </div>
 
                 <div class="subgenres__infosWithMostRepresentative">
@@ -18,7 +18,7 @@
                         :album="albumById(subgenre.mostRepresentativeAlbum)"
                         bordered
                         :size="$mq === 'M' ? 100 : 200"
-                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
+                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)" />
 
                     <div class="subgenres__infos">
                         <h2 class="title title--2 subgenres__name text--name">{{ subgenre.name }}</h2>

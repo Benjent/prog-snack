@@ -13,7 +13,7 @@
             </slide-y-up-transition>
 
             <section class="discographies__selectedAlbum" v-if="$mq === 'M'">
-                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered fade></Cover>
+                <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" :size="120" bordered fade />
                 <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
                 <h3 class="title title--3">({{selectedAlbum.year}})</h3>
                 <div v-if="selectedAlbum.designers.length > 0">
@@ -25,13 +25,13 @@
                 </div>
                 <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
                 <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
+                <AlbumStarter class="discographies__track" :album="selectedAlbum" />
 
                 <template v-if="discography.length > 1">
                     <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
                     <div class="discographies__borderWrapper">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)"></Cover>
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)" />
                         </section>
                     </div>
                 </template>
@@ -39,7 +39,7 @@
 
             <section class="discographies__selectedAlbum" v-else>
                 <div class="card card--marginless discographies__selectedAlbum__main">
-                    <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade></Cover>
+                    <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                     <div class="discographies__selectedAlbum__infos">
                         <header class="discographies__selectedAlbum__header">
                             <div class="discographies__selectedAlbum__title text--name">{{ selectedAlbum.title }}</div>
@@ -62,7 +62,7 @@
                         </footer>
                     </div>
                 </div>
-                <AlbumStarter class="discographies__track" :album="selectedAlbum"></AlbumStarter>
+                <AlbumStarter class="discographies__track" :album="selectedAlbum" />
 
                 <section v-if="spotifyPath || deezerPath" class="discographies__logos">
                     <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_gold.png')">
@@ -90,7 +90,7 @@
                     <h3 class="title title--3">From the same artist</h3>
                     <div class="card">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)"></Cover>
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)" />
                         </section>
                     </div>
                 </template>

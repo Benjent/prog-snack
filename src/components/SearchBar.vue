@@ -12,7 +12,7 @@
 
             <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
                 <div class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <Cover :album="album" :size="30"></Cover>
+                    <Cover :album="album" :size="30" />
                     <div class="searchBar__album__title">{{ album.title }}</div>
                 </div>
             </div>

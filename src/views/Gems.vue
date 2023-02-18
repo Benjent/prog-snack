@@ -2,7 +2,7 @@
     <fade-transition appear>
         <section class="gems">
             <div class="gems__item" v-for="album in gems" :key="album.id">
-                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)"></Cover>
+                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)" />
 
                 <div class="gems__album">
                     <div class="gems__title" @click="selectAlbumAndView(album)">

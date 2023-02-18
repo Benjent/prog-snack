@@ -10,16 +10,16 @@
                 </section>
             </zoom-center-transition>
 
-            <HistogramHorizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile"></HistogramHorizontal>
-            <HistogramVertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio"></HistogramVertical>
+            <HistogramHorizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile" />
+            <HistogramVertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio"></HistogramHorizontal>
+            <HistogramHorizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio"></HistogramHorizontal>
+            <HistogramHorizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio"></HistogramHorizontal>
+            <HistogramHorizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio"></HistogramHorizontal>
+            <HistogramHorizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio" />
         </section>
     </fade-transition>
 </template>

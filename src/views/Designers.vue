@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="designers__albums" :class="getClassDesigner(designer.name)">
                         <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
-                            <Cover :album="album" thumbnail></Cover>
+                            <Cover :album="album" thumbnail />
                         </div>
                     </div>
                 </div>
