@@ -111,6 +111,7 @@ export default {
             border: solid var(--input-border-width) $primary;
             border-radius: 50%;
             position: relative;
+            box-sizing: border-box;
         }
 
         &::-moz-range-thumb:hover, &::-moz-range-thumb:hover {

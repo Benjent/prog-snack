@@ -13,9 +13,9 @@
                         </div>
                         <div class="attic__panel" v-if="isDisplayedYear">
                             <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic"></Select>
-                            <div v-if="selectedYear === 'Custom'">
+                            <template v-if="selectedYear === 'Custom'">
                                 <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
-                            </div>
+                            </template>
                         </div>
                     </div>
                     <div>
