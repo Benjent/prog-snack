@@ -2,8 +2,7 @@
     <div class="select">
         <div class="select__input" @click="isDisplayedOptions = !isDisplayedOptions">
             <div>{{ displayedValue }}</div>
-            <div class="select__spacing"></div>
-            <Arrow :orientation="isDisplayedOptions ? 'top' : 'bottom'"></Arrow>
+            <Icon :name="isDisplayedOptions ? 'expand_less' : 'expand_more'" />
         </div>
         <div class="select__options" v-if="isDisplayedOptions">
             <div class="select__option" @click="notifyParent(null)">All</div>
@@ -14,12 +13,12 @@
 </template>
 
 <script>
-import Arrow from "./Arrow.vue"
+import Icon from "./Icon.vue"
 
 export default {
     name: "Select",
     components: {
-        Arrow,
+        Icon,
     },
     props: {
         value: {

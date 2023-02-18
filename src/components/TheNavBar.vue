@@ -34,10 +34,10 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: "/albums", title: `Albums`, icon: "mosaic" },
-                { path: "/discographies", title: `Discographies`, icon: "list" },
-                { path: "/gems", title: `Gems`, icon: "star" },
-                { path: "/subgenres", title: `Subgenres`, icon: "subgenres" },
+                { path: "/albums", title: `Albums`, icon: "gallery_thumbnail" },
+                { path: "/discographies", title: `Discographies`, icon: "queue_music" },
+                { path: "/gems", title: `Gems`, icon: "stars" },
+                { path: "/subgenres", title: `Subgenres`, icon: "category" },
                 { path: "/designers", title: `Designers`, icon: "palette" },
                 { path: "/stats", title: `Stats`, icon: "equalizer" },
                 { path: "/about", title: `About`, icon: "help" },

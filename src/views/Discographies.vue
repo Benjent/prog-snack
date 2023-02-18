@@ -6,8 +6,8 @@
                     <div class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
                         v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
 
-                        <Icon v-if="artist === selectedArtist" name="library"/>
-                        <span> {{artist}}</span>
+                        <Icon v-if="artist === selectedArtist" name="library_music"/>
+                        <span>{{artist}}</span>
                     </div>
                 </aside>
             </slide-y-up-transition>

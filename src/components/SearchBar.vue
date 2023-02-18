@@ -6,7 +6,9 @@
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch"></div>
+            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch">
+                <Icon name="close" />
+            </div>
 
             <div class="searchBar__result" v-if="matchingAlbums.length > 0">
                 <div class="searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
@@ -20,11 +22,13 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import Cover from "./Cover.vue"
+import Icon from "./Icon.vue"
 
 export default {
     name: "SearchBar",
     components: {
         Cover,
+        Icon,
     },
     data() {
         return {
@@ -72,6 +76,7 @@ export default {
 @import '../style/mixins/sunset';
 
 $search-bar-width: 300px;
+$search-bar-height: 40px;
 
 .searchBar {
     $reset-size: 20px;
@@ -93,22 +98,8 @@ $search-bar-width: 300px;
     & &__reset {
         cursor: pointer;
         position: absolute;
-        right: 30px;
-        top: 20px;
-        width: $reset-size;
-        height: $reset-size;
-
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            left: 12px;
-            height: 22px;
-            width: 2px;
-            background-color: $primary;
-        }
-
-        &:before { transform: rotate(45deg); }
-        &:after { transform: rotate(-45deg); }
+        right: 10px;
+        top: ($search-bar-height / 2) - 24px / 2; // Rouhly icon height
     }
 
     & &__result {
