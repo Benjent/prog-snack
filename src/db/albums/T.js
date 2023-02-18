@@ -657,6 +657,21 @@ const albums = [
     // TODO INTROUVABLE Totem - Descarga - 1972 - 13169422 + 2VuAqlqUuiTA4oCQ1Yn00y
     // TODO INTROUVABLE Totem - Corrupción - 1973 - 13328521 + 04I3FnfN1OPHoFCSOxGMNG
     {
+        id: "touch_touch",
+        title: "Touch",
+        artist: "Touch",
+        year: 1970,
+        country: regions.USA,
+        criteria: [criteria.SPECTACULAR, criteria.C_PSYCHE, criteria.PIANO, criteria.SYMPHONIC],
+        selectedTrackTitle: `The Spiritual Death Of Howard Greer`,
+        selectedTrackYtId: "DtUgAC2jq3c",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "trapeze_trapeze",
         title: "Trapeze",
         artist: "Trapeze",
