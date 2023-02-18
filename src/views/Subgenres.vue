@@ -21,7 +21,7 @@
                         @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"></Cover>
 
                     <div class="subgenres__infos">
-                        <h2 class="title title--2 subgenres__name">{{ subgenre.name }}</h2>
+                        <h2 class="title title--2 subgenres__name text--name">{{ subgenre.name }}</h2>
                         <p>
                             <span>Characterized by the following: </span>
                             <span class="subgenres__criterium" v-for="(criterium, index) in subgenre.criteria" :key="criterium">
@@ -70,6 +70,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
+@import '../style/modules/text';
 @import '../style/modules/text';
 @import '../style/modules/title';
 
