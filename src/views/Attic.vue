@@ -265,6 +265,7 @@ export default {
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
 @import '../style/mixins/shadow';
+@import '../style/mixins/sunset';
 @import '../style/modules/button';
 
 .attic {
@@ -298,6 +299,11 @@ export default {
             top: 0;
             position: sticky;
             z-index: 1;
+            background: $tertiary;
+        }
+
+        &:not(.attic__title--reset):hover {
+            @include sunset;
         }
 
         .icon {
