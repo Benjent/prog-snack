@@ -2,9 +2,9 @@
     <fade-transition appear>
         <section class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
-                <h2 class="title title--2 designers__name text--name">{{ designer.name }}</h2>
+                <h2 class="title title--2 text--name">{{ designer.name }}</h2>
 
-                <div class="designers__border-wrapper">
+                <div class="card">
                     <div class="designers__albums" :class="getClassDesigner(designer.name)">
                         <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
                             <Cover :album="album" thumbnail></Cover>
@@ -66,6 +66,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
+@import '../style/modules/card';
 @import '../style/modules/text';
 @import '../style/modules/title';
 
@@ -78,10 +79,6 @@ export default {
         max-width: 1200px;
         text-align: center;
         margin: 60px;
-    }
-
-    & &__name {
-        padding-bottom: 10px;
     }
 
     & &__albums {
@@ -351,12 +348,6 @@ export default {
                 }
             }
         }
-    }
-
-    & &__border-wrapper {
-        width: 100%;
-        border-top: solid 2px;
-        // padding: 0 50px;
     }
 }
 

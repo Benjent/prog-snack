@@ -38,7 +38,7 @@
             </section>
 
             <section class="discographies__selectedAlbum" v-else>
-                <div class="discographies__selectedAlbum__main">
+                <div class="card card--marginless discographies__selectedAlbum__main">
                     <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade></Cover>
                     <div class="discographies__selectedAlbum__infos">
                         <header class="discographies__selectedAlbum__header">
@@ -68,7 +68,7 @@
                     <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_gold.png')">
                     <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_gold.png')">
                 </section>
-                <section v-if="spotifyPath || deezerPath" class="discographies__players">
+                <section v-if="spotifyPath || deezerPath" class="card discographies__players">
                     <iframe
                         v-if="spotifyPath"
                         class="discographies__players__item"
@@ -87,8 +87,8 @@
                 </section>
 
                 <template v-if="discography.length > 1">
-                    <h3 class="title title--3 discographies__discographyTitle">From the same artist</h3>
-                    <div class="discographies__borderWrapper">
+                    <h3 class="title title--3">From the same artist</h3>
+                    <div class="card">
                         <section class="discographies__discography">
                             <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)"></Cover>
                         </section>
@@ -148,6 +148,7 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/golden';
 @import '../style/mixins/page';
+@import '../style/modules/card';
 @import '../style/modules/title';
 
 .discographies {
@@ -183,12 +184,16 @@ export default {
         max-height: $cover-width * $album-per-column + 20px;
         overflow-y: scroll;
         scrollbar-width: none;
+        mask-image: linear-gradient(
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 93%,
+            transparent 100%
+        );
     }
 
     &__logos {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
 
         &__item {
             max-height: 30px;
@@ -213,16 +218,6 @@ export default {
         }
     }
 
-    & &__borderWrapper {
-        width: 100%;
-        border-top: solid 2px;
-        mask-image: linear-gradient(
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 1) 93%,
-            transparent 100%
-        );
-    }
-
     & &__album {
         cursor: pointer;
         width: calc(100% / 5);
@@ -234,8 +229,7 @@ export default {
         @include page;
 
         height: max-content;
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 40px auto;
         max-width: $cover-width * $albums-per-row;
         overflow-y: scroll;
         scrollbar-width: none;
@@ -292,6 +286,7 @@ export default {
     }
 
     & &__track {
+        text-align: center;
         padding: 20px 0 60px 0;
     }
 

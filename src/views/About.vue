@@ -26,8 +26,8 @@
             </div>
 
             <div class="about__section">
-                <caption class="title title--caption about__caption">Some criteria clarifications</caption>
-                <div class="about__glossary">
+                <caption class="title title--2">Some criteria clarifications</caption>
+                <div class="card about__glossary">
                     <div class="about__glossary__entry">
                         <div class="about__criterium">{{ criteria.ARENA | criterium }}</div>
                         <div class="text text--description about__definition">Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.</div>
@@ -105,6 +105,7 @@ export default {
 <style lang="scss">
 @import '../style/gatherer';
 @import '../style/mixins/page';
+@import '../style/modules/card';
 @import '../style/modules/text';
 @import '../style/modules/title';
 
@@ -133,10 +134,6 @@ export default {
             align-items: baseline;
             width: 100%;
         }
-    }
-
-    &__caption {
-        padding-bottom: 50px;
     }
 
     &__criterium {
