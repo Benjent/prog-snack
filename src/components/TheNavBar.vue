@@ -82,10 +82,9 @@ export default {
 
     & &__logo {
         cursor: pointer;
-        font-size: 30px;
-        margin: 10px;
+        height: 100%;
+        padding: 16px 10px;
         margin-left: 20px;
-        height: 60%;
 
         img {
             height: 100%;
@@ -93,17 +92,22 @@ export default {
     }
 
     & &__nav {
+        font-family: 'Corben', sans-serif;
+        font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 1;
+        height: 100%;
+        padding: 0 40px;
     }
 
     & &__navItem {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
         padding: 20px;
         height: 100%;
         white-space: nowrap;
@@ -122,14 +126,38 @@ export default {
     }
 }
 
+@media (max-width: 1260px) {
+    .theNavBar {
+        & &__logo {
+            margin-left: 10px;
+            height: 90%;
+        }
+
+        & &__navItem {
+            padding: 12px;
+            font-size: 12px;
+        }
+    }
+}
+
 @media (max-width: $mobile) {
     .theNavBar {
         $nbLinks: 7;
         justify-content: space-between;
 
+        &--footer {
+            .theNavBar__navItem {
+                font-size: 14px;
+            }
+        }
+
         & &__logo {
-            cursor: pointer;
-            top: 4px;
+            margin: 0;
+            height: 100%;
+        }
+
+        & &__nav {
+            padding: 0;
         }
 
         & &__navItem {

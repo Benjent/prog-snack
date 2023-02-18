@@ -2,12 +2,12 @@
     <div class="searchBar">
         <input class="searchBar__input"
             :class="{ 'searchBar__input--empty': currentSearch }"
-            placeholder="Search by album, artist, designer or year..."
+            placeholder="Album, artist, designer, year..."
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="searchBar__reset" v-if="currentSearch || currentSearch === ''" @click="resetSearch">
-                <Icon name="close" />
+            <div class="searchBar__reset" :class="{ 'searchBar__reset--available': currentSearch || currentSearch === '' }" @click="resetSearch">
+                <Icon :name="currentSearch || currentSearch === '' ? 'close' : 'search'" />
             </div>
 
             <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
@@ -82,12 +82,14 @@ $search-bar-height: 40px;
 .searchBar {
     $reset-size: 20px;
     height: $search-bar-height;
+    max-width: $search-bar-width;
+    width: 100%;
     color: $primary;
     position: relative;
 
     & &__input {
-        width: $search-bar-width;
         height: 100%;
+        width: 100%;
         padding: var(--button-vertical-padding) var(--button-horizontal-padding);
         padding-right: $reset-size * 2;
         border: solid var(--input-border-width) $primary;
@@ -104,16 +106,23 @@ $search-bar-height: 40px;
 
     & &__reset {
         cursor: pointer;
+        pointer-events: none;
         position: absolute;
         right: 10px;
         top: ($search-bar-height / 2) - 24px / 2; // Rouhly icon height
+
+        &--available {
+            pointer-events: all;
+        }
     }
 
     & &__result {
         position: absolute;
         top: calc(var(--header-height) / 2 + $search-bar-height / 2); // Position the result below the header, not the input
-        width: $search-bar-width;
+        width: 100%;
         overflow-x: hidden;
+        border-right: 0;
+        border-bottom-right-radius: 0;
     }
 
     & &__album {
