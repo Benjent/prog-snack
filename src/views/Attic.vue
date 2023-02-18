@@ -293,7 +293,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-        border-bottom: solid 1px $primary;
+        border-bottom: solid 2px $primary;
         background: $secondary-dark;
 
         &--reset {
