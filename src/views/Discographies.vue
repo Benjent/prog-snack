@@ -197,7 +197,7 @@ export default {
 
     & &__players {
         display: flex;
-        border-radius: 10px;
+        border-radius: var(--panel-radius);
         border: solid 3px $primary;
         overflow: hidden;
         margin-bottom: 60px;

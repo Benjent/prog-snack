@@ -57,10 +57,9 @@ export default {
         z-index: 1;
 
         background: $secondary;
-        color: $primary;
 
         border: solid 2px $primary;
-        border-radius: $borderRadius;
+        border-radius: var(--button-radius);
         border-bottom-left-radius: 0;
         padding: 2px 15px;
 

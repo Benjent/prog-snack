@@ -1,7 +1,3 @@
-// Values
-$borderRadius: 15px;
-$borderThin: 3px;
-
 :root {
     --aside-width: 250px;
     --aside-min-width: 170px;
@@ -10,6 +6,13 @@ $borderThin: 3px;
     --input-border-width: 2px;
     --label-gap: 10px;
     --tick-size: 24px;
+    --input-vertical-padding: 5px;
+    --input-horizontal-padding: 10px;
+    --button-vertical-padding: 5px;
+    --button-horizontal-padding: 10px;
+    --button-radius: 30px;
+    --panel-radius: 15px;
+    --select-radius: 5px;
 }
 
 @media (max-width: $mobile) {

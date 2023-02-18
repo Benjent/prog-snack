@@ -105,6 +105,7 @@ export default {
     &--bordered {
         border-style: solid;
         border-color: $primary;
+        border-radius: var(--panel-radius);
     }
 
     &--fade {

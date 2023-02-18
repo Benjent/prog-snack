@@ -10,10 +10,10 @@
                 <Icon name="close" />
             </div>
 
-            <div class="searchBar__result" v-if="matchingAlbums.length > 0">
-                <div class="searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
+            <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
+                <div class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
                     <Cover :album="album" :size="30"></Cover>
-                    <div class="searchBar__album__title"> {{ album.title }} </div>
+                    <div class="searchBar__album__title">{{ album.title }}</div>
                 </div>
             </div>
     </div>
@@ -74,20 +74,27 @@ export default {
 <style lang="scss" scoped>
 @import '../style/gatherer';
 @import '../style/mixins/sunset';
+@import '../style/modules/options';
 
 $search-bar-width: 300px;
 $search-bar-height: 40px;
 
 .searchBar {
     $reset-size: 20px;
-    height: 40px;
-    border-bottom: solid 1px $primary;
+    height: $search-bar-height;
+    color: $primary;
+    position: relative;
 
     & &__input {
         width: $search-bar-width;
         height: 100%;
-        padding: 5px 10px;
-        padding-right: $reset-size * 2 + 8px;
+        padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+        padding-right: $reset-size * 2;
+        border: solid var(--input-border-width) $primary;
+        border-right: 0;
+        border-radius: var(--select-radius);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         text-overflow: ellipsis;
 
         &:hover {
@@ -104,17 +111,9 @@ $search-bar-height: 40px;
 
     & &__result {
         position: absolute;
-        top: var(--header-height);
-        max-height: 300px;
+        top: calc(var(--header-height) / 2 + $search-bar-height / 2); // Position the result below the header, not the input
         width: $search-bar-width;
-        border: solid var(--input-border-width) $primary;
-        border-top: none;
-        border-bottom-left-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
-        background: $secondary-dark;
-
         overflow-x: hidden;
-        overflow-y: auto;
     }
 
     & &__album {
