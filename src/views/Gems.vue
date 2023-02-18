@@ -54,10 +54,14 @@ export default {
 
     & &__item {
         display: flex;
-        padding: 100px 0;
+        padding: 20px 0;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+
+        &:first-of-type {
+            padding-top: 60px;
+        }
 
         &:last-of-type {
             border: none;
