@@ -115,7 +115,7 @@ export default {
         }
 
         &::-moz-range-thumb:hover, &::-moz-range-thumb:hover {
-            background: linear-gradient(141deg, $secondary 10%, $ternary 90%);
+            background: linear-gradient(141deg, $secondary 10%, $tertiary 90%);
         }
     }
 

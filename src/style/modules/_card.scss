@@ -2,7 +2,8 @@
     padding: 20px;
     border-radius: var(--panel-radius);
     border-top: solid 2px $primary;
-    background: rgba(0, 0, 0, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
+    background: $black;
     margin-top: 20px; // Title gap
 
     &--marginless {

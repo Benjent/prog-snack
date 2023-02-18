@@ -1,4 +1,8 @@
+@import '../mixins/palette';
+
 .text {
+    @include palette('color');
+
     &--description {
         font-style: italic;
     }

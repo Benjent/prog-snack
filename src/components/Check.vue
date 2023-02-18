@@ -36,7 +36,7 @@ export default {
 
     &:hover {
         .check__input:not(.check__input--checked) {
-            background: linear-gradient(141deg, $secondary 10%, $ternary 90%);
+            background: linear-gradient(141deg, $secondary 10%, $tertiary 90%);
         }
     }
 
