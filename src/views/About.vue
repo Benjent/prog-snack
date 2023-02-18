@@ -144,6 +144,7 @@ export default {
         word-break: break-all;
         text-overflow: ellipsis;
         white-space: nowrap;
+        color: $quaternary;
     }
 
     &__definition {

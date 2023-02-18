@@ -3,7 +3,7 @@
         v-if="album"
         :id="coverId"
         class="cover"
-        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--fade': fade }"
+        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--rounded': rounded, 'cover--fade': fade }"
         :style="{ 'border-width': borderWidth }"> <!-- :style="{ 'background-image': require(`../assets/img/covers/${album.id}${album.cover}`) }" -->
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
@@ -36,6 +36,10 @@ export default {
             default: false,
         },
         bordered: {
+            type: Boolean,
+            default: false,
+        },
+        rounded: {
             type: Boolean,
             default: false,
         },
@@ -105,6 +109,10 @@ export default {
     &--bordered {
         border-style: solid;
         border-color: $primary;
+        border-radius: var(--panel-radius);
+    }
+
+    &--rounded {
         border-radius: var(--panel-radius);
     }
 

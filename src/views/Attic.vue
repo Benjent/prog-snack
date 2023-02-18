@@ -280,7 +280,6 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         // border-right: solid 2px $primary;
-        background: $secondary-dark;
     }
 
     & &__reset {
@@ -294,7 +293,6 @@ export default {
         align-items: center;
         padding: 15px;
         border-bottom: solid 2px $primary;
-        background: $secondary-dark;
 
         &--reset {
             top: 0;
@@ -308,7 +306,7 @@ export default {
     }
 
     & &__panel {
-        background: $secondary;
+        background: $secondary-dark;
         padding: 15px;
     }
 

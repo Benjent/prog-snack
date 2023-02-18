@@ -31,7 +31,7 @@
                     <h3 class="title title--3">From the same artist</h3>
                     <div class="card">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)" />
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" rounded fade @click.native="selectAlbum(album)" />
                         </section>
                     </div>
                 </template>
@@ -90,7 +90,7 @@
                     <h3 class="title title--3">From the same artist</h3>
                     <div class="card">
                         <section class="discographies__discography">
-                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" fade @click.native="selectAlbum(album)" />
+                            <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" rounded fade @click.native="selectAlbum(album)" />
                         </section>
                     </div>
                 </template>
@@ -153,6 +153,7 @@ export default {
 
 .discographies {
     $cover-width: 150px;
+    $cover-gap: 20px;
     display: flex;
     padding-left: var(--aside-width);
 
@@ -173,15 +174,12 @@ export default {
         cursor: pointer;
     }
 
-    & &__discographyTitle {
-        padding-bottom: 10px;
-    }
-
     & &__discography {
         $album-per-column: 2;
         display: flex;
         flex-wrap: wrap;
-        max-height: $cover-width * $album-per-column + 20px;
+        gap: $cover-gap;
+        max-height: $cover-width * $album-per-column + $cover-gap * 2;
         overflow-y: scroll;
         scrollbar-width: none;
         mask-image: linear-gradient(

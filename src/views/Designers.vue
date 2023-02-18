@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="designers__albums" :class="getClassDesigner(designer.name)">
                         <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
-                            <Cover :album="album" thumbnail />
+                            <Cover :album="album" thumbnail rounded />
                         </div>
                     </div>
                 </div>
@@ -96,6 +96,7 @@ export default {
         font-size: 17px;
         width: 150px;
         height: 150px;
+        padding: 10px;
     }
 
     & &__albums {
