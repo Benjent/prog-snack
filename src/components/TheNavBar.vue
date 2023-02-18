@@ -62,6 +62,15 @@ export default {
     width: 100%;
     z-index: 10;
 
+    // Image background
+    // background-color: #ffffff; // cars.png background color
+    // background-image: url('~@/assets/img/backgrounds/plane.png');
+    // background-repeat: no-repeat;
+    // background-size: 18%;
+    // background-position-x: right;
+    // background-position-y: 0%;
+    // background-attachment: fixed;
+
     &--footer {
         bottom: 0;
     }
