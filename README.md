@@ -8,6 +8,8 @@ Browse albums, filter them by music criteria, discover similar albums and find o
 
 This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI](https://cli.vuejs.org/).
 
+[See it live](https://benjent.github.io/prog-snack/).
+
 ## Table of contents
 
 - [💿 Prog Snack](#💿-prog-snack)
