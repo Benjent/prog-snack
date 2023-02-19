@@ -49,19 +49,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-
-  changelog:
-    categories:
-      - title: Breaking changes
-        labels:
-          - Semver-Major
-          - breaking-change
-
-      - title: New features
-        labels:
-          - Semver-Minor
-          - enhancement
-
-      - title: Other changes
-        labels:
-          - "*"
