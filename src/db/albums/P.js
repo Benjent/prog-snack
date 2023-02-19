@@ -259,6 +259,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "pentacle_la_clef_des_songes",
+        title: "La Clef Des Songes",
+        artist: "Pentacle",
+        year: 1975,
+        country: regions.FRANCE,
+        criteria: [criteria.FRENCH, criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.GLITTER],
+        selectedTrackTitle: "Le Raconteur",
+        selectedTrackYtId: "-NT7WdwuTEo",
+        spotifyId: "0o8fb24G2mawQlibS9TOkA",
+        deezerId: "258637152",
+        designers: ["Yvon Campello"],
+        similarAlbums: [], // similar mona lisa
+        isAGem: false,
+    },
+    {
         id: "people_ceremony",
         title: "Ceremony - Buddha Meets Rock",
         artist: "People",
