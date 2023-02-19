@@ -3,59 +3,39 @@
         <section class="attic">
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
-                    <div class="attic__title attic__title--reset">
-                        <button class="attic__reset button" @click="resetFilter()">Reset filters</button>
+                    <div class="attic__reset">
+                        <button class="attic__reset__button button" aria-label="Reset filters" @click="resetFilter()">Reset filters</button>
                     </div>
-                    <div>
-                        <div class="attic__title" @click="isDisplayedYear = !isDisplayedYear">
-                            <div>Year</div>
-                            <Icon :name="isDisplayedYear ? 'expand_less' : 'expand_more'" />
-                        </div>
-                        <div class="attic__panel" v-if="isDisplayedYear">
-                            <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic" />
-                            <template v-if="selectedYear === 'Custom'">
-                                <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
-                            </template>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="attic__title" @click="isDisplayedRegion = !isDisplayedRegion">
-                            <div>Region</div>
-                            <Icon :name="isDisplayedRegion ? 'expand_less' : 'expand_more'" />
-                        </div>
-                        <div class="attic__panel" v-if="isDisplayedRegion">
-                            <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
-                        </div>
-                    </div>
-                    <div>
-                        <div class="attic__title" @click="isDisplayedLanguage = !isDisplayedLanguage">
-                            <div>Language</div>
-                            <Icon :name="isDisplayedLanguage ? 'expand_less' : 'expand_more'" />
-                        </div>
-                        <div class="attic__panel" v-if="isDisplayedLanguage">
-                            <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
-                        </div>
-                    </div>
-                    <div v-for="(panel, index) in filterModel" :key="panel.panel">
-                        <div class="attic__title" @click="panel.isDisplayed = !panel.isDisplayed">
-                            <div>{{ panel.panel | criteriumCategory }}</div>
-                            <Icon :name="panel.isDisplayed ? 'expand_less' : 'expand_more'" />
-                        </div>
-                        <div class="attic__panel" v-if="panel.isDisplayed">
-                            <template v-for="(item, indexCriteria) in panel.criteria">
-                                <Radio v-if="item.name" v-model="radioGroups[item.name]"
-                                    class="attic__filter"
-                                    :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
-                                    @click.native="filterAttic(item.criterium)" />
-                                <Check v-else
-                                    class="attic__filter"
-                                    v-model="filterModel[index].criteria[indexCriteria].checked"
-                                    :label="item.criterium | criterium" :key="item.criterium"
-                                    @click.native="filterAttic(item.criterium)" />
-                            </template>
-                            <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
-                        </div>
-                    </div>
+
+                    <Accordion title="Year" drawered>
+                        <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic" />
+                        <template v-if="selectedYear === 'Custom'">
+                            <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
+                        </template>
+                    </Accordion>
+
+                    <Accordion title="Region" drawered>
+                        <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
+                    </Accordion>
+
+                    <Accordion title="Language" drawered>
+                        <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
+                    </Accordion>
+
+                    <Accordion v-for="(panel, index) in filterModel" :key="panel.panel" :title="$options.filters.criteriumCategory(panel.panel)" drawered>
+                        <template v-for="(item, indexCriteria) in panel.criteria">
+                            <Radio v-if="item.name" v-model="radioGroups[item.name]"
+                                class="attic__filter"
+                                :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
+                                @click.native="filterAttic(item.criterium)" />
+                            <Check v-else
+                                class="attic__filter"
+                                v-model="filterModel[index].criteria[indexCriteria].checked"
+                                :label="item.criterium | criterium" :key="item.criterium"
+                                @click.native="filterAttic(item.criterium)" />
+                        </template>
+                        <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
+                    </Accordion>
                 </aside>
             </slide-y-up-transition>
             <section id="albumList" class="attic__mosaic">
@@ -71,13 +51,13 @@ import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
-import { Cover, Check, Icon, Radio, Range, Select } from "../components"
+import { Accordion, Cover, Check, Radio, Range, Select } from "../components"
 
 export default {
     components: {
+        Accordion,
         Check,
         Cover,
-        Icon,
         Radio,
         Range,
         Select,
@@ -87,9 +67,6 @@ export default {
             categories,
             criteria,
             filterModel: [],
-            isDisplayedLanguage: false,
-            isDisplayedRegion: false,
-            isDisplayedYear: false,
             selectedLanguage: null,
             selectedRegion: null,
             selectedYear: null,
@@ -159,7 +136,6 @@ export default {
             Object.entries(criteriaCategory).forEach(([key, value]) => {
                 const filterPanel = {
                     panel: key,
-                    isDisplayed: false,
                     criteria: value.map((criterium) => {
                         const c = {
                             criterium,
@@ -173,7 +149,7 @@ export default {
                     }),
                 }
                 if (key !== "LANGUAGE") {
-                    // We use a select for languages for a bit
+                    // We use a select for languages
                     this.filterModel.push(filterPanel)
                 }
             })
@@ -190,7 +166,6 @@ export default {
             this.onlyGems = false
             // Reset criteria
             this.filterModel.forEach((panel) => {
-                panel.isDisplayed = false
                 panel.criteria.forEach((c) => {
                     c.checked = false
                     if (this.radioGroups[c.name]) {
@@ -280,40 +255,19 @@ export default {
         min-width: var(--aside-min-width);
         overflow-y: scroll;
         scrollbar-width: none;
-        // border-right: solid 2px $primary;
     }
 
     & &__reset {
-        width: 100%;
-    }
-
-    & &__title {
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        top: 0;
+        position: sticky;
+        background: $secondary;
+        z-index: 1;
         padding: 15px;
         border-bottom: solid 2px $primary;
 
-        &--reset {
-            top: 0;
-            position: sticky;
-            z-index: 1;
-            background: $secondary;
+        &__button {
+            width: 100%;
         }
-
-        &:not(.attic__title--reset):hover {
-            @include sunset;
-        }
-
-        .icon {
-            font-size: x-large;
-        }
-    }
-
-    & &__panel {
-        background: $secondary-dark;
-        padding: 15px;
     }
 
     & &__mosaic {
@@ -336,14 +290,6 @@ export default {
 
         &:first-child {
             margin-top: 0;
-        }
-    }
-}
-
-@media (max-width: $mobile) {
-    .attic {
-        & &__title {
-            padding: 10px;
         }
     }
 }
