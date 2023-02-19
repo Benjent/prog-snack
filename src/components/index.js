@@ -4,6 +4,7 @@ import Cover from "./Cover.vue"
 import HistogramHorizontal from "./HistogramHorizontal.vue"
 import HistogramVertical from "./HistogramVertical.vue"
 import Icon from "./Icon.vue"
+import List from "./List.vue"
 import NumberUnit from "./NumberUnit.vue"
 import Radio from "./Radio.vue"
 import Range from "./Range.vue"
@@ -19,6 +20,7 @@ export {
     HistogramHorizontal,
     HistogramVertical,
     Icon,
+    List,
     NumberUnit,
     Radio,
     Range,

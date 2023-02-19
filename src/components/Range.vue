@@ -81,7 +81,6 @@ export default {
     }
 
     & &__input {
-        pointer-events: none;
         appearance: none;
         width: 100%;
         position: absolute;

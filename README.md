@@ -30,8 +30,9 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI]
 1. Clone this repository
 2. Install the dependencies: `npm install`
 3. Run the development server (compiles and hot-reloads): `npm run serve`
-4. Build for production: `npm run build`
-5. Lint and autofix files: `npm run lint`
+4. See the local live server: `http://localhost:8080/prog-snack`
+5. Build for production: `npm run build`
+6. Lint and autofix files: `npm run lint`
 
 **_Note:_** The 4th step is automated for the GitHub Pages on `/master` push.
 
@@ -78,6 +79,7 @@ This project lacks of several good practice implementations, which are planned f
 - Husky and commit hooks
 - Prettify
 - Design system consolidation and Storybook
+- Accessibility (aria, contrast)
 - Branch CLI and protections
 - Automated versioning, releases, tags and changelogs
 - Vite replacement of Webpack (latest attempt was successful but prevented from using dynamic asset path which is required for this project)
