@@ -1,6 +1,6 @@
 # 💿 Prog Snack
 
-![Prog Snack logo](./src/assets/img/logos/snack_logo.png)
+![Prog Snack logo](./src/assets/img/preview.png)
 
 Tiny web project with big music ambition: dusting old prog albums, some known as prog gems, to make them shine beside classic albums.
 
