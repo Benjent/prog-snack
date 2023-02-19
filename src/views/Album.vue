@@ -1,7 +1,7 @@
 <template>
     <fade-transition appear>
         <section class="album">
-            <button class="album__button button" @click="randomizeAlbum">Surprise me</button>
+            <button class="album__button button" @click="randomizeAlbum" aria-label="Surprise me with a random album">Surprise me</button>
             <section class="album__body" :key="selectedAlbum.id">
                 <slide-x-left-transition appear>
                     <div class="album__info">
