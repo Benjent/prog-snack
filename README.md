@@ -79,6 +79,7 @@ This project lacks of several good practice implementations, which are planned f
 - Husky and commit hooks
 - Prettify
 - Design system consolidation and Storybook
+- Accessibility (aria, contrast)
 - Branch CLI and protections
 - Automated versioning, releases, tags and changelogs
 - Vite replacement of Webpack (latest attempt was successful but prevented from using dynamic asset path which is required for this project)

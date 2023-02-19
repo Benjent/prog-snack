@@ -66,6 +66,7 @@ const albums = [].concat(
 
 // TODO below is list of things to do:
 /*
+    Checker l'accessibility
     parse tout le Prog introuvable et renseigner ici
     DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
     deezer/spotify/discogs should be API + search with title + artist instead of manual ids
