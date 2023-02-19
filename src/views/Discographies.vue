@@ -17,15 +17,13 @@
                     <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
                         <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                         <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
-                        <h3 class="title title--3">({{selectedAlbum.year}})</h3>
-                        <div v-if="selectedAlbum.designers.length > 0">
+                        <h3 class="title title--3"><Icon name="event" /> {{selectedAlbum.year}}</h3>
+                        <h3 class="title title--3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</h3>
+                        <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
                             <Icon name="palette" />
-                            <span>Cover by</span>
-                            <template v-for="(designer, index) in selectedAlbum.designers">
-                                {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
-                            </template>
+                            <List :values="selectedAlbum.designers" type="flattened" />
                         </div>
-                        <div class="discographies__selectedAlbum__criterium" v-for="(criterium) in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                        <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
                         <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                         <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                     </div>
@@ -35,20 +33,16 @@
                             <header class="discographies__selectedAlbum__header">
                                 <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
                                 <div>
-                                    <span>{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</span>
+                                    <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</span>
                                 </div>
-                                <div v-if="selectedAlbum.designers.length > 0">
+                                <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
+                                    <Icon name="palette" />
                                     Cover by
-                                    <template v-for="(designer, index) in selectedAlbum.designers">
-                                        {{designer}}<span v-if="index < selectedAlbum.designers.length - 1" :key="designer">, </span>
-                                    </template>
+                                    <List :values="selectedAlbum.designers" type="flattened" />
                                 </div>
                             </header>
                             <footer class="discographies__selectedAlbum__footer">
-                                <div class="discographies__selectedAlbum__criterium" v-for="(criterium, index) in selectedAlbum.criteria" :key="criterium">
-                                    <span>{{ criterium | criterium }}</span>
-                                    <span class="discographies__selectedAlbum__criterium-separator" v-if="index < selectedAlbum.criteria.length - 1">•</span>
-                                </div>
+                                <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
                                 <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                             </footer>
                             <AlbumStarter class="discographies__track" :album="selectedAlbum" />
@@ -95,16 +89,19 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex"
-import { AlbumStarter, Cover, Icon } from "../components"
+import { AlbumStarter, Cover, Icon, List } from "../components"
+import { flags } from "../db/regions"
 
 export default {
     components: {
         AlbumStarter,
         Cover,
         Icon,
+        List,
     },
     data() {
         return {
+            flags,
             selectedArtist: null,
         }
     },
@@ -226,15 +223,6 @@ export default {
             font-size: $fs-24;
             line-height: 1.3;
         }
-
-        // &__criterium {
-        //     padding-right: 10px;
-        // }
-
-        &__criterium-separator {
-            display: inline-block;
-            padding: 0 10px;
-        }
     }
 
     &__logos {
@@ -305,12 +293,15 @@ export default {
             padding: 20px;
             max-width: none;
             box-shadow: none;
-            text-align: center;
             gap: 40px;
 
             &__main {
                 display: flex;
                 flex-direction: column;
+
+                .title {
+                    text-align: center;
+                }
             }
 
             &__cover {
@@ -318,6 +309,15 @@ export default {
                 max-width: 120px;
                 margin: auto;
                 margin-bottom: 10px;
+            }
+
+            &__designers {
+                margin: auto;
+            }
+
+            &__criteria {
+                margin: auto;
+                margin-top: 20px;
             }
         }
 
