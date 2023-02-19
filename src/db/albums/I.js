@@ -3,6 +3,22 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "ia_and_batiste_un_gran_dia",
+        title: "Un Gran Día",
+        artist: "Ia & Batiste",
+        year: 1972,
+        country: regions.SPAIN,
+        criteria: [criteria.SPANISH, criteria.C_FOLK, criteria.ART_POP, criteria.BAROQUE, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Sleeping Rock",
+        selectedTrackYtId: "6D3pAXUcqTc",
+        spotifyId: "699vHeE8vBrQ1G2PH37AM6",
+        deezerId: "10076744",
+        designers: ["Jordi Batiste"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE - Ia & Batiste - Chichonera's Cat - 1975
+    {
         id: "ian_gillan_band_child_in_time",
         title: "Child In Time",
         artist: "Ian Gillan Band",
