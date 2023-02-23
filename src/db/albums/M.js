@@ -544,6 +544,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "maquina_why",
+        title: `Why?`,
+        artist: "Máquina!",
+        year: 1970,
+        country: regions.SPAIN,
+        criteria: [criteria.LENGTHY_TRACKS, criteria.JAM, criteria.ROCK, criteria.C_PSYCHE],
+        selectedTrackTitle: "Why (1ª Parte)",
+        selectedTrackYtId: "iLtu68lwKgQ",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Jordi Batiste"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO
     {
         id: "marcello_capra_aria_mediterranea",
