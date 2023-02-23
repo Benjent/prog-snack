@@ -1300,6 +1300,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "borne_exprime_la_naranja",
+        title: "Exprime La Naranja",
+        artist: "Borne",
+        year: 1979,
+        country: regions.SPAIN,
+        criteria: [criteria.SOFT_SEVENTIES, criteria.C_JAZZ, criteria.JAM, criteria.C_ELECTRO, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL, criteria.ODD_RHYTHM, criteria.FEMALE, criteria.LATINO, criteria.TECHNICAL],
+        selectedTrackTitle: "Azahara",
+        selectedTrackYtId: "djF-FjHDHgE",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Joan Ramón", "Josep Solá Rios"],
+        similarAlbums: [], // similar weather report
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Borne - Unidades Didácticas - 1982
+    {
         id: "boston_boston",
         title: "Boston",
         artist: "Boston",
