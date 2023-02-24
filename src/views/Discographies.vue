@@ -1,18 +1,17 @@
 <template>
     <fade-transition appear>
-        <section class="discographies">
+        <main class="discographies">
             <slide-y-up-transition appear :duration="500">
                 <aside class="discographies__sidebar" v-if="selectedArtist">
-                    <div class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
+                    <button class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
                         v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
-
                         <Icon v-if="artist === selectedArtist" name="library_music"/>
                         <span>{{artist}}</span>
-                    </div>
+                    </button>
                 </aside>
             </slide-y-up-transition>
 
-            <main class="discographies__main">
+            <section class="discographies__main">
                 <section class="discographies__selectedAlbum">
                     <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
                         <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
@@ -51,8 +50,8 @@
 
                     <div v-if="$mq !== 'M' && (spotifyPath || deezerPath)">
                         <section class="discographies__logos">
-                            <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_white.png')">
-                            <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_white.png')">
+                            <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_white.png')" alt="Spotify logo" />
+                            <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_white.png')" alt="Deezer logo" />
                         </section>
                         <section class="card discographies__players">
                             <iframe
@@ -60,6 +59,7 @@
                                 class="discographies__players__item"
                                 :class="{ 'discographies__players__item--one-missing': spotifyPath && !deezerPath }"
                                 :src="spotifyPath"
+                                title="Spotify widget"
                                 frameborder="0" allowtransparency="true"
                                 allow="encrypted-media" />
                             <iframe
@@ -67,12 +67,13 @@
                                 class="discographies__players__item"
                                 :class="{ 'discographies__players__item--one-missing': deezerPath && !spotifyPath }"
                                 :src="`${deezerPath}?tracklist=${$mq === 'M' ? false : true}`"
+                                title="Deezer widget"
                                 frameborder="0"
                                 allowtransparency="true"
                                 allow="encrypted-media; clipboard-write" />
                         </section>
                     </div>
-    
+
                     <div v-if="discography.length > 1">
                         <h3 class="title title--3">From the same artist</h3>
                         <div class="card">
@@ -82,8 +83,8 @@
                         </div>
                     </div>
                 </section>
-            </main>
-        </section>
+            </section>
+        </main>
     </fade-transition>
 </template>
 
@@ -167,6 +168,7 @@ export default {
 
     & &__artist {
         cursor: pointer;
+        display: block;
     }
 
     & &__main {

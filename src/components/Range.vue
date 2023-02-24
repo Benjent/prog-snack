@@ -2,8 +2,32 @@
     <div class="range">
         <output>{{ value.min }}</output>
         <div class="range__slider">
-            <input id="inputMin" ref="inputMin" class="range__input range__input--min" type="range" :value="value.min" :min="min" :max="max" step="1" @input="onMinInput" @mouseup="notifyRelease">
-            <input id="inputMax" ref="inputMax" class="range__input range__input--max"  type="range" :value="value.max" :min="min" :max="max" step="1" @input="onMaxInput" @mouseup="notifyRelease">
+            <input
+                id="inputMin"
+                ref="inputMin"
+                class="range__input range__input--min"
+                type="range"
+                :value="value.min"
+                :min="min"
+                :max="max"
+                step="1"
+                aria-labelledby="Minimum"
+                @input="onMinInput"
+                @mouseup="notifyRelease"
+            />
+            <input
+                id="inputMax"
+                ref="inputMax"
+                class="range__input range__input--max"
+                type="range"
+                :value="value.max"
+                :min="min"
+                :max="max"
+                step="1"
+                aria-labelledby="Maximum"
+                @input="onMaxInput"
+                @mouseup="notifyRelease"
+            />
         </div>
         <output>{{ value.max }}</output>
     </div>

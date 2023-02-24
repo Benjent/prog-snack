@@ -1,9 +1,9 @@
 <template>
     <div class="accordion">
-        <div class="accordion__title" :class="{ 'accordion__title--open': isOpen, 'accordion__title--drawer': drawered }" aria-label="Toggle panel" @click="isOpen = !isOpen">
+        <button class="accordion__title" :class="{ 'accordion__title--open': isOpen, 'accordion__title--drawer': drawered }" aria-label="Toggle panel" @click="isOpen = !isOpen">
             <div>{{ title }}</div>
             <Icon class="accordion__arrow" :name="isOpen ? 'expand_less' : 'expand_more'" />
-        </div>
+        </button>
         <div class="accordion__body" :class="{ 'accordion__body--open': isOpen, 'accordion__body--drawer': drawered }" v-if="isOpen">
             <slot />
         </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { Icon } from "@/components"
+import Icon from "./Icon.vue"
 
 export default {
     name: "Accordion",
@@ -49,6 +49,7 @@ export default {
         padding: 15px;
         border: solid 2px $primary;
         border-radius: var(--select-radius);
+        width: 100%;
 
         &:hover {
             @include sunset;

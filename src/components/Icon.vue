@@ -1,5 +1,5 @@
 <template>
-    <span class="icon material-symbols-rounded">{{ name }}</span>
+    <span class="icon material-symbols-rounded" aria-hidden="true" focusable="false">{{ name }}</span>
 </template>
 
 <script>

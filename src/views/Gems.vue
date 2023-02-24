@@ -1,19 +1,19 @@
 <template>
     <fade-transition appear>
-        <section class="gems">
+        <main class="gems">
             <div class="gems__item" v-for="album in gems" :key="album.id">
                 <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)" />
 
                 <div class="gems__album">
-                    <div class="gems__title" @click="selectAlbumAndView(album)">
+                    <button class="gems__title" @click="selectAlbumAndView(album)">
                         <h3 class="title title--3">{{album.artist}}</h3>
                         <h2 class="title title--2 text--name">{{album.title}}</h2>
                         <span>({{album.year}})</span>
-                    </div>
+                    </button>
                     <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
                 </div>
             </div>
-        </section>
+        </main>
     </fade-transition>
 </template>
 

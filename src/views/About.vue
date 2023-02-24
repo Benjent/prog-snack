@@ -1,6 +1,6 @@
 <template>
     <fade-transition appear>
-        <section class="about">
+        <main class="about">
             <div class="about__section">
                 <h1 class="title title--1">Hi!</h1>
 
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     </fade-transition>
 </template>
 

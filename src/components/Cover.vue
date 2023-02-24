@@ -12,7 +12,7 @@
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
         <div class="cover__album" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px', 'max-height': size && size + 'px', 'max-width': size && size + 'px' }">
-            <img class="cover__album__image" :src="getCover(album)" :alt="album.title">
+            <img class="cover__album__image" :src="getCover(album)" :alt="album.title" />
         </div>
     </div>
 </template>
@@ -160,7 +160,6 @@ export default {
     }
 
     & &__album {
-        // display: ruby;
         height: 100%;
         width: 100%;
 

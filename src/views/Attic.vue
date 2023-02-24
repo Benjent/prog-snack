@@ -1,6 +1,6 @@
 <template>
     <fade-transition appear>
-        <section class="attic">
+        <main class="attic">
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
                     <div class="attic__reset">
@@ -24,24 +24,31 @@
 
                     <Accordion v-for="(panel, index) in filterModel" :key="panel.panel" :title="$options.filters.criteriumCategory(panel.panel)" drawered>
                         <template v-for="(item, indexCriteria) in panel.criteria">
-                            <Radio v-if="item.name" v-model="radioGroups[item.name]"
+                            <Radio
+                                v-if="item.name"
+                                v-model="radioGroups[item.name]"
+                                :id="item.criterium"
                                 class="attic__filter"
-                                :label="item.criterium | criterium" :own="item.criterium" :key="item.criterium"
+                                :label="item.criterium | criterium" :own="item.criterium"
+                                :key="`${item.criterium}Radio`"
                                 @click.native="filterAttic(item.criterium)" />
-                            <Check v-else
+                            <Check
+                                v-else
+                                :id="item.criterium"
                                 class="attic__filter"
                                 v-model="filterModel[index].criteria[indexCriteria].checked"
-                                :label="item.criterium | criterium" :key="item.criterium"
+                                :label="item.criterium | criterium"
+                                :key="`${item.criterium}Check`"
                                 @click.native="filterAttic(item.criterium)" />
                         </template>
-                        <Check v-if="panel.panel === categories.TYPE" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
+                        <Check v-if="panel.panel === categories.TYPE" id="gemCheck" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
                     </Accordion>
                 </aside>
             </slide-y-up-transition>
             <section id="albumList" class="attic__mosaic">
                 <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)" />
             </section>
-        </section>
+        </main>
     </fade-transition>
 </template>
 

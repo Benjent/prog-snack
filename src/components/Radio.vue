@@ -1,17 +1,17 @@
 <template>
-    <div class="radio" @mousedown="notifyParent">
-        <input class="radio__input" :class="{ 'radio__input--checked': value === own }" type="radio" :value="own">
-        <label class="radio__label">{{ label }}</label>
-    </div>
+    <label class="radio" :for="id">
+        <input :id="id" class="radio__input" :class="{ 'radio__input--checked': value === own }" type="radio" :value="own" @click="notifyParent">
+        {{ label }}
+    </label>
 </template>
 
 <script>
+import { tick } from "../mixins"
+
 export default {
     name: "Radio",
+    mixins: [tick],
     props: {
-        label: {
-            type: String,
-        },
         value: {
             type: String,
         },
@@ -60,10 +60,6 @@ export default {
         &--checked {
             background: $primary;
         }
-    }
-
-    & &__label {
-        cursor: pointer;
     }
 }
 </style>

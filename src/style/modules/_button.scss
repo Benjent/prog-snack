@@ -9,6 +9,7 @@
     border: solid var(--input-border-width) $primary;
     padding: var(--button-vertical-padding) var(--button-horizontal-padding);
     border-radius: var(--button-radius);
+    text-align: center;
 
     &:hover {
         @include sunset;

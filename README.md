@@ -65,6 +65,7 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 
 - [ES Lint](https://eslint.org/)
 - [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [A11y](https://www.a11yproject.com/)
 
 ### Assets
 

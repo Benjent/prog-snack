@@ -1,5 +1,4 @@
 .options {
-    cursor: pointer;
     max-height: 300px;
     overflow-y: auto;
     border: solid var(--input-border-width) $primary;
@@ -9,6 +8,10 @@
     background: $secondary-dark;
 
     &__item {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+
         &:hover {
             background: $primary;
             color: $text-dark;

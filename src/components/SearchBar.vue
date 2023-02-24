@@ -6,15 +6,15 @@
             v-model="currentSearch"
             @input="search($event.target.value)">
 
-            <div class="searchBar__reset" :class="{ 'searchBar__reset--available': currentSearch || currentSearch === '' }" @click="resetSearch">
-                <Icon :name="currentSearch || currentSearch === '' ? 'close' : 'search'" />
-            </div>
+            <button class="searchBar__reset" :class="{ 'searchBar__reset--available': hasText }" @click="resetSearch">
+                <Icon :name="hasText ? 'close' : 'search'" :aria-label="hasText && 'Erase search'" />
+            </button>
 
             <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
-                <div class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
+                <button class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
                     <Cover :album="album" :size="30" />
                     <div class="searchBar__album__title">{{ album.title }}</div>
-                </div>
+                </button>
             </div>
     </div>
 </template>
@@ -38,6 +38,9 @@ export default {
     },
     computed: {
         ...mapState(["albums"]),
+        hasText() {
+            return this.currentSearch || this.currentSearch === ""
+        },
     },
     methods: {
         ...mapActions(["selectAlbum"]),
