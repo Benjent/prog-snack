@@ -20,7 +20,7 @@ export default {
             type: String,
             default: "unordered",
             validator(value) {
-                ["ordered", "unordered", "flattened"].includes(value)
+                return ["ordered", "unordered", "flattened"].includes(value)
             },
         },
         separator: {
