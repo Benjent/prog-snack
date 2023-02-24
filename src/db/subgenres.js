@@ -37,7 +37,7 @@ const subgenres = [
     },
     {
         name: "Canterbury School / Folk Rock",
-        description: `TODO description`,
+        description: `With its distinctive Hammond organ sound, this genre uses a lot of long jams where musicians take the lead after one another.`,
         mostRepresentativeAlbum: "caravan_in_the_land_of_grey_and_pink",
         albums: [
             "national_health_national_health",
@@ -49,7 +49,7 @@ const subgenres = [
     },
     {
         name: "Classical",
-        description: `TODO description`,
+        description: `Musicians will display the most of their technical abilities, with spectacular moments, sometimes going too pedantic. Hints or arrangements of famous classical bits may be found in the compositions.`,
         mostRepresentativeAlbum: "beggars_opera_act_one",
         albums: [
             "the_nice_ars_longa_vita_brevis",
@@ -132,7 +132,7 @@ const subgenres = [
     },
     {
         name: "Heavy",
-        description: `TODO description`,
+        description: `While the majority of heavy music artists may not interested in making progressive music per say, some of theme are progressive in how precursor they were in making their kind of music or having their influential sound. Otherwise, they may just be heavy and borrow what they want from Progressive Rock.`,
         mostRepresentativeAlbum: "uriah_heep_demons_and_wizards",
         albums: [
             "rainbow_rising",
@@ -146,7 +146,7 @@ const subgenres = [
     },
     {
         name: "Impressionism / Ambient Rock",
-        description: `TODO description`,
+        description: `Arguably a precursor of the New Age, music from this subgenre will have very few or no vocals. Instead musicians will use their instruments as a mean of expression or impersonation.`,
         mostRepresentativeAlbum: "jade_warrior_waves",
         albums: [
             "didier_bonin_larbre_verre",
@@ -198,7 +198,7 @@ const subgenres = [
     },
     {
         name: "Neo-Prog",
-        description: `TODO description`,
+        description: `It can be hard to tell how many Progressive waves there were, but the Neo-Prog genre basically consists of artists releasing albums in the third wave, which started in the early 80's. This genre puts the synthetizers on the front, with guitars sometimes playing a secondary role, drums sounding electronic and imposing - if not theatrical - vocals.`,
         mostRepresentativeAlbum: "marillion_script_for_a_jesters_tear",
         albums: [
             "king_crimson_three_of_a_perfect_pair",
@@ -315,7 +315,7 @@ const subgenres = [
     },
     {
         name: "Symphonic",
-        description: `TODO description`,
+        description: `Albums of this subgenre will have long tracks, loosely related to a theme, a concept or a story, and provide a definitive experience with complex song structures reaching a climax.`,
         mostRepresentativeAlbum: "yes_close_to_the_edge",
         albums: [
             "mike_oldfield_hergest_ridge",

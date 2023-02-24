@@ -1,6 +1,6 @@
 <template>
     <fade-transition appear>
-        <section class="stats">
+        <main class="stats">
             <zoom-center-transition appear>
                 <section class="stats__section stats__numbers">
                     <NumberUnit :number="artists.length" unit="artists"/>
@@ -20,7 +20,7 @@
             <HistogramHorizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio" />
 
             <HistogramHorizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio" />
-        </section>
+        </main>
     </fade-transition>
 </template>
 

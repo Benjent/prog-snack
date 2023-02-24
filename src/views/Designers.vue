@@ -1,16 +1,16 @@
 <template>
     <fade-transition appear>
-        <section class="designers">
+        <main class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
                 <h2 class="title title--2 text--name">{{ designer.name }}</h2>
 
                 <div class="card designers__albums" :class="getClassDesigner(designer.name)">
-                        <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
-                            <Cover :album="album" thumbnail rounded />
-                        </div>
+                    <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
+                        <Cover :album="album" thumbnail rounded />
+                    </div>
                 </div>
             </section>
-        </section>
+        </main>
     </fade-transition>
 </template>
 

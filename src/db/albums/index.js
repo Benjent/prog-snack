@@ -64,17 +64,4 @@ const albums = [].concat(
     albumsあ,
 )
 
-// TODO below is list of things to do:
-/*
-    Checker l'accessibility
-    parse tout le Prog introuvable et renseigner ici
-    DB API : JSON file for albums should be another github app: https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5
-    deezer/spotify/discogs should be API + search with title + artist instead of manual ids
-    iframes deezer/spotify should be displayed just like in-fb messenger conv, and should be toggleable (so you can listen throughout the app while browsing)
-    subgenres should be specified in the album db not manually + a WHOLE NEW WAY to order albums by what I feel (titus groan, fuzzy duck, warhorse and froggie beaver will be in the same group)
-    lister instruments + genre synth-based for krautrock/humble albums vith almost no criteria
-    similar albums should be a standalone logic that generates arrays for both albums
-    notable musiciens (pour lier les artistes entre eux)
-*/
-
 export default albums

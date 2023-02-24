@@ -1,7 +1,7 @@
 <template>
     <fade-transition appear>
-        <section class="subgenres">
-            <div class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
+        <main class="subgenres">
+            <section class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
                 <div class="subgenres__albums">
                     <Cover
                         class="subgenres__cover"
@@ -29,8 +29,8 @@
                         <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </fade-transition>
 </template>
 

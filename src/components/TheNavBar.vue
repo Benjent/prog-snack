@@ -1,11 +1,11 @@
 <template>
     <slide-y-up-transition appear :duration="500">
         <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
-            <router-link v-if="!footer" class="theNavBar__logo link" to="/">
+            <router-link v-if="!footer" class="theNavBar__logo link" :to="{ name: 'home' }" :aria-current="$route.name === 'home' && 'page'">
                 <img src="../assets/img/logos/snack_font.png" alt="Prog Snack">
             </router-link>
             <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
-                <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.path" :to="item.path">
+                <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.name" :to="{ name: item.name }" :aria-current="$route.name === item.name && 'page'">
                     <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText"/>
                     <div v-else class="theNavBar__navText">{{ item.title }}</div>
                 </router-link>
@@ -34,13 +34,13 @@ export default {
         return {
             isDisplayedNav: false,
             nav: [
-                { path: "/albums", title: `Albums`, icon: "gallery_thumbnail" },
-                { path: "/discographies", title: `Discographies`, icon: "queue_music" },
-                { path: "/gems", title: `Gems`, icon: "stars" },
-                { path: "/subgenres", title: `Subgenres`, icon: "category" },
-                { path: "/designers", title: `Designers`, icon: "palette" },
-                { path: "/stats", title: `Stats`, icon: "equalizer" },
-                { path: "/about", title: `About`, icon: "help" },
+                { name: "attic", title: `Albums`, icon: "gallery_thumbnail" },
+                { name: "discographies", title: `Discographies`, icon: "queue_music" },
+                { name: "gems", title: `Gems`, icon: "stars" },
+                { name: "subgenres", title: `Subgenres`, icon: "category" },
+                { name: "designers", title: `Designers`, icon: "palette" },
+                { name: "stats", title: `Stats`, icon: "equalizer" },
+                { name: "about", title: `About`, icon: "help" },
             ],
         }
     },

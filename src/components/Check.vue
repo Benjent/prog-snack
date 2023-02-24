@@ -1,17 +1,17 @@
 <template>
-    <div class="check" @mousedown="notifyParent">
-        <input class="check__input" :class="{ 'check__input--checked': value }" type="checkbox" :checked="value">
-        <label class="check__label">{{ label }}</label>
-    </div>
+    <label class="check" :for="id">
+        <input :id="id" class="check__input" :class="{ 'check__input--checked': value }" type="checkbox" :checked="value" @click="notifyParent">
+        {{ label }}
+    </label>
 </template>
 
 <script>
+import { tick } from "../mixins"
+
 export default {
     name: "Check",
+    mixins: [tick],
     props: {
-        label: {
-            type: String,
-        },
         value: {
             type: Boolean,
             default: false,
@@ -60,10 +60,6 @@ export default {
         &--checked {
             background: $primary;
         }
-    }
-
-    & &__label {
-        cursor: pointer;
     }
 }
 </style>

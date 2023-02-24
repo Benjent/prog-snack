@@ -1,13 +1,13 @@
 <template>
     <div class="select">
-        <div class="select__input" :class="{'select__input--open': isDisplayedOptions}" @click="isDisplayedOptions = !isDisplayedOptions">
+        <button class="select__input" :class="{'select__input--open': isDisplayedOptions}" aria-label="Toggle options" @click="isDisplayedOptions = !isDisplayedOptions">
             <div>{{ displayedValue }}</div>
             <Icon :name="isDisplayedOptions ? 'expand_less' : 'expand_more'" />
-        </div>
+        </button>
         <div class="options" v-if="isDisplayedOptions">
-            <div class="options__item select__option" @click="notifyParent(null)">All</div>
-            <div class="options__item select__option" v-if="custom" @click="notifyParent('Custom')">Custom</div>
-            <div class="options__item select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</div>
+            <button class="options__item select__option" @click="notifyParent(null)">All</button>
+            <button class="options__item select__option" v-if="custom" @click="notifyParent('Custom')">Custom</button>
+            <button class="options__item select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</button>
         </div>
     </div>
 </template>

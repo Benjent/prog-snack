@@ -1,3 +1,4 @@
+import Accordion from "./Accordion.vue"
 import AlbumStarter from "./AlbumStarter.vue"
 import Check from "./Check.vue"
 import Cover from "./Cover.vue"
@@ -14,6 +15,7 @@ import TheNavBar from "./TheNavBar.vue"
 import Timeline from "./Timeline.vue"
 
 export {
+    Accordion,
     AlbumStarter,
     Check,
     Cover,
