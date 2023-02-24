@@ -77,6 +77,7 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 ### Infra
 
 This project lacks of several good practice implementations, which are planned for the future, such as:
+
 - Husky and commit hooks
 - Prettify
 - Design system consolidation and Storybook
@@ -90,8 +91,8 @@ This project lacks of several good practice implementations, which are planned f
 ### Features
 
 This project is far from being done even though the 1000 albums milestone has been reached. It still needs:
+
 - The remaining Prog-related albums (~9000 albums, including albums that are impossible to listen to entirely on the web)
 - Some more criteria
 - A Discogs/Youtube/Spotify/Deezer search API for album titles and artists
 - Other features that I haven't thought of yet
-
