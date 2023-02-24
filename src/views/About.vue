@@ -25,67 +25,15 @@
                 </p>
             </div>
 
-            <div class="about__section">
+            <section class="about__section">
                 <caption class="title title--2">Some criteria clarifications</caption>
                 <div class="card about__glossary">
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.ARENA | criterium }}</div>
-                        <div class="text text--description about__definition">Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.BAROQUE | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains strings arrangements - british style. Album style is quite cold.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.FANFARE | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains brass arrangements - sometimes upbeats sections.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.GLITTER | criterium }}</div>
-                        <div class="text text--description about__definition">Album style is keyboard-oriented with high-pitched vocal harmonies.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.JAM | criterium }}</div>
-                        <div class="text text--description about__definition">Albums contains music sections that are solos or instrumental improvisations.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">Language sung</div>
-                        <div class="text text--description about__definition">Album contains some lyrics or is completely sung in a specific language.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.LENGTHY_TRACKS | criterium }}</div>
-                        <div class="text text--description about__definition">Album tracklist is composed of songs that can go over 8 minutes.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.PATCHWORK | criterium }}</div>
-                        <div class="text text--description about__definition">Album tracklist is composed of songs of less that 2 minutes.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.RENAISSANCE | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains strings arrangements - italian style. Album is rather spectacular, often technical.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.ROCK_OPERA | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.SPACY | criterium }}</div>
-                        <div class="text text--description about__definition">Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.STORYLINE | criterium }}</div>
-                        <div class="text text--description about__definition">Album follows a story that is narrated.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.SYMPHONIC | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains songs that have movements in their structure. Song durations are often long.</div>
-                    </div>
-                    <div class="about__glossary__entry">
-                        <div class="about__criterium">{{ criteria.UNCOMMON_INSTRUMENTS | criterium }}</div>
-                        <div class="text text--description about__definition">Album contains "non-Rock" instruments: wind or brass instruments, world percussions.</div>
-                    </div>
+                    <dl class="about__glossary__entry" v-for="data in glossary" :key="data.title">
+                        <dt class="about__criterium">{{ data.title }}</dt>
+                        <dd class="text text--description about__definition">{{ data.definition }}</dd>
+                    </dl>
                 </div>
-            </div>
+            </section>
         </main>
     </fade-transition>
 </template>
@@ -97,6 +45,64 @@ export default {
     data() {
         return {
             criteria,
+            glossary: [
+                {
+                    title: this.$options.filters.criterium(criteria.ARENA),
+                    definition: "Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.BAROQUE),
+                    definition: "Album contains strings arrangements - british style. Album style is quite cold.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.FANFARE),
+                    definition: "Album contains brass arrangements - sometimes upbeats sections.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.GLITTER),
+                    definition: "Album style is keyboard-oriented with high-pitched vocal harmonies.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.JAM),
+                    definition: "Albums contains music sections that are solos or instrumental improvisations.",
+                },
+                {
+                    title: "Language sung",
+                    definition: "Album contains some lyrics or is completely sung in a specific language.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.LENGTHY_TRACKS),
+                    definition: "Album tracklist is composed of songs that can go over 8 minutes.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.PATCHWORK),
+                    definition: "Album tracklist is composed of songs of less that 2 minutes.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.RENAISSANCE),
+                    definition: "Album contains strings arrangements - italian style. Album is rather spectacular, often technical.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.ROCK_OPERA),
+                    definition: "Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.SPACY),
+                    definition: "Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.STORYLINE),
+                    definition: "Album follows a story that is narrated.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.SYMPHONIC),
+                    definition: "Album contains songs that have movements in their structure. Song durations are often long.",
+                },
+                {
+                    title: this.$options.filters.criterium(criteria.UNCOMMON_INSTRUMENTS),
+                    definition: "Album contains \"non-Rock\" instruments: wind or brass instruments, world percussions.",
+                },
+            ],
         }
     },
 }
