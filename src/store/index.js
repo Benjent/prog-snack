@@ -83,6 +83,5 @@ export default new Vuex.Store({
             context.commit("selectAlbum", payload)
         },
     },
-    modules: {
-    },
+    modules: {},
 })
