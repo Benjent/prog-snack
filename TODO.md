@@ -6,6 +6,7 @@
 - Handle similar albums in a standalone logic so that both albums are linked to one another
 - Create a real design system (use em/rem units, `<Typography>` component, `<Headline>` component, ...)
 - Prettier or not prettier?
+- Add a hook that prevent from committing `/cover` images that are not 300x300
 
 ## Test
 
