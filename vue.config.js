@@ -1,5 +1,5 @@
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
-const ImageminPlugin = require("imagemin-webpack-plugin").ImageminPlugin
+const ImageminPlugin = require("imagemin-webpack-plugin").default
 
 module.exports = {
     lintOnSave: false,
