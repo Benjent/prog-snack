@@ -7,6 +7,7 @@
 - Create a real design system (use em/rem units, `<Typography>` component, `<Headline>` component, ...)
 - Prettier or not prettier?
 - Add a hook that prevent from committing `/cover` images that are not 300x300
+- Remove possible duplicates of github-pages build and deploy actions (package.json)
 
 ## Test
 
