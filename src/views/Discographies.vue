@@ -90,7 +90,9 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex"
-import { AlbumStarter, Cover, Icon, List } from "../components"
+import {
+    AlbumStarter, Cover, Icon, List,
+} from "../components"
 import { flags } from "../db/regions"
 
 export default {
