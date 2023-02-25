@@ -57,8 +57,10 @@ import { mapActions, mapState } from "vuex"
 import {
     categories, categoriesOrder, criteria, criteriaCategory,
 } from "../db/criteria"
-import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
-import { Accordion, Cover, Check, Radio, Range, Select } from "../components"
+import { applyChainedFadeInEarlyOnly } from "../utils/transition"
+import {
+    Accordion, Cover, Check, Radio, Range, Select,
+} from "../components"
 
 export default {
     components: {

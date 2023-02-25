@@ -6,6 +6,14 @@
 - Handle similar albums in a standalone logic so that both albums are linked to one another
 - Create a real design system (use em/rem units, `<Typography>` component, `<Headline>` component, ...)
 - Prettier or not prettier?
+- Add a hook that prevent from committing `/cover` images that are not 300x300
+
+## Test
+
+- Use Playwright (https://playwright.dev/docs/intro)
+- Write E2E tests
+- Bind Playwright to CI (https://dev.to/ysfaran/how-to-use-playwright-with-github-actions-and-github-pages-4gdl)
+- Bind Jest to CI
 
 ## Accessibility
 

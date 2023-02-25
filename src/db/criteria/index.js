@@ -1,5 +1,7 @@
 import { criteria, criteriaOrder, criteriumLabels } from "./criteria"
-import { categories, categoriesOrder, criteriaCategory, categoryLabels } from "./categories"
+import {
+    categories, categoriesOrder, criteriaCategory, categoryLabels,
+} from "./categories"
 
 export {
     categories,

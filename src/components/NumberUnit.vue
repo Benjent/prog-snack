@@ -1,6 +1,6 @@
 <template>
     <div class="numberUnit">
-        <span class="title title--3">{{ number }}</span>
+        <span class="numberUnit__number title title--3">{{ number }}</span>
         <span class="numberUnit__unit"> {{ unit }}</span>
     </div>
 </template>

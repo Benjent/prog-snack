@@ -16,7 +16,7 @@
 
 <script>
 import { histogram } from "../mixins"
-import { applyBarTransition } from "../utils/transition-utils"
+import { applyBarTransition } from "../utils/transition"
 
 export default {
     name: "HistogramHorizontal",

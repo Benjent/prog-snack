@@ -16,8 +16,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { shuffle } from "../utils/array-utils"
-import { applyChainedFadeIn } from "../utils/transition-utils"
+import { shuffle } from "../utils/array"
+import { applyChainedFadeIn } from "../utils/transition"
 import { Cover } from "../components"
 
 export default {
