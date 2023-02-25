@@ -9,7 +9,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { applyChainedFadeInEarlyOnly } from "../utils/transition-utils"
+import { applyChainedFadeInEarlyOnly } from "../utils/transition"
 import Cover from "./Cover.vue"
 
 export default {

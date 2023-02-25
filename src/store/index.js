@@ -1,6 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
-import { getRandomNumber } from "../utils/math-utils"
+import { getRandomNumber } from "../utils/math"
 import { regions } from "../db/regions"
 import subgenres from "../db/subgenres"
 import {

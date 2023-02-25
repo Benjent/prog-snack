@@ -1,6 +1,6 @@
 import albums from "./albums"
 import { criteriaOrder } from "./criteria"
-import { sort } from "../utils/array-utils"
+import { sort } from "../utils/array"
 
 // For performance purpose - and because we don't use a db, generate data once instead of creating time-consuming getters
 const artists = []
