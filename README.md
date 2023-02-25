@@ -2,7 +2,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat) ![GitHub CI](https://github.com/Benjent/prog-snack/actions/workflows/main.yml/badge.svg)
 
-![GitHub Pages badge](https://img.shields.io/badge/GitHub_Pages-222222?logo=github&logoColor=white) ![Vue.js badge](https://img.shields.io/badge/Vue.js_2-42b883?logo=vuedotjs&logoColor=white) ![Sass badge](https://img.shields.io/badge/Sass-cf649a?logo=sass&logoColor=white) ![Conventional commits badge](https://img.shields.io/badge/Conventional_commits-fa6673?logo=conventionalcommits&logoColor=white) ![ESLint badge](https://img.shields.io/badge/ESLint-4b32c3?logo=eslint&logoColor=white) ![A11y badge](https://img.shields.io/badge/A11y-9299ce?logo=a11y&logoColor=white) ![Husky badge](https://img.shields.io/badge/Husky-42b983?logo=husky&logoColor=white) ![JS Doc badge](https://img.shields.io/badge/JS_Doc-006fbb?logo=jsdoc&logoColor=white)
+![GitHub Pages badge](https://img.shields.io/badge/GitHub_Pages-222222?logo=github&logoColor=white) ![Vue.js badge](https://img.shields.io/badge/Vue.js_2-42b883?logo=vuedotjs&logoColor=white) ![Sass badge](https://img.shields.io/badge/Sass-cf649a?logo=sass&logoColor=white) ![Conventional commits badge](https://img.shields.io/badge/Conventional_commits-fa6673?logo=conventionalcommits&logoColor=white) ![ESLint badge](https://img.shields.io/badge/ESLint-4b32c3?logo=eslint&logoColor=white) ![A11y badge](https://img.shields.io/badge/A11y-9299ce?logo=a11y&logoColor=white) ![Husky badge](https://img.shields.io/badge/Husky-42b983?logo=husky&logoColor=white) ![JS Doc badge](https://img.shields.io/badge/JS_Doc-006fbb?logo=jsdoc&logoColor=white) ![Jest badge](https://img.shields.io/badge/Jest-c21325?logo=jest&logoColor=white)
 
 ![Prog Snack logo](./src/assets/img/preview.png)
 
@@ -88,7 +88,6 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 
 This project lacks of several good practice implementations, which are planned for the future, such as:
 
-- Husky and commit hooks
 - Prettify
 - Design system consolidation and Storybook
 - Accessibility (aria, contrast)
