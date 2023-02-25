@@ -35,7 +35,7 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI]
 2. Install the dependencies: `npm install`
 3. Run the development server (compiles and hot-reloads): `npm run serve`
 4. See the local live server: `http://localhost:8080/prog-snack`
-5. See the local live server for bundle size: `http://localhost:8081/`
+5. See the local live server for bundle size: `http://localhost:8888/`
 6. Build for production: `npm run build`
 7. Lint and autofix files: `npm run lint`
 
