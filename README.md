@@ -35,8 +35,9 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI]
 2. Install the dependencies: `npm install`
 3. Run the development server (compiles and hot-reloads): `npm run serve`
 4. See the local live server: `http://localhost:8080/prog-snack`
-5. Build for production: `npm run build`
-6. Lint and autofix files: `npm run lint`
+5. See the local live server for bundle size: `http://localhost:8081/`
+6. Build for production: `npm run build`
+7. Lint and autofix files: `npm run lint`
 
 **_Note:_** The 4th step is automated for the GitHub Pages on `/master` push.
 
@@ -75,6 +76,10 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 
 - [Fonts](https://fonts.google.com/)
 - [Material icons](https://fonts.google.com/icons?icon.style=Rounded)
+
+### Webpack
+
+- [Bundle analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 
 ## To do
 
