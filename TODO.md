@@ -7,6 +7,13 @@
 - Create a real design system (use em/rem units, `<Typography>` component, `<Headline>` component, ...)
 - Prettier or not prettier?
 
+## Test
+
+- Use Playwright (https://playwright.dev/docs/intro)
+- Write E2E tests
+- Bind Playwright to CI
+- Bind Jest to CI
+
 ## Accessibility
 
 - Use `<select>` and `<option>` tags for `<Select>` component
