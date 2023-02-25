@@ -16,14 +16,12 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI]
 
 ## Table of contents
 
-- [💿 Prog Snack](#💿-prog-snack)
-    - [Table of contents](#table-of-contents)
-    - [Prerequisites](#prerequisites)
-    - [Project setup](#project-setup)
-    - [Workflow](#workflow)
-    - [Guidelines](#guidelines)
-    - [Documentation](#documentation)
-    - [To do](#to-do)
+- [Prerequisites](#prerequisites)
+- [Project setup](#project-setup)
+- [Workflow](#workflow)
+- [Guidelines](#guidelines)
+- [Documentation](#documentation)
+- [To do](#to-do)
 
 ## Prerequisites
 
