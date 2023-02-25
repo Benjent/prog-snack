@@ -16,7 +16,7 @@
                 <slide-x-right-transition appear>
                     <div class="album__criteria">
                         <div class="album__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                        <div class="album__criterium" v-for="criterium in selectedAlbum.criteria" :key="criterium">{{ criterium | criterium }}</div>
+                        <List :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
                     </div>
                 </slide-x-right-transition>
             </section>
@@ -31,7 +31,7 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex"
-import { AlbumStarter, Cover, Timeline } from "../components"
+import { AlbumStarter, Cover, List, Timeline } from "../components"
 
 export default {
     name: "Album",
@@ -39,6 +39,7 @@ export default {
         AlbumStarter,
         Cover,
         Timeline,
+        List,
     },
     computed: {
         ...mapState(["selectedAlbum"]),
