@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex"
 import Icon from "./Icon.vue"
+import { getYouTubeUrl } from "../utils/url"
 
 export default {
     name: "AlbumStarter",
@@ -28,7 +28,9 @@ export default {
         },
     },
     computed: {
-        ...mapGetters(["youtubePath"]),
+        youtubePath() {
+            return getYouTubeUrl(this.album.selectedTrackYtId)
+        },
     },
 }
 </script>

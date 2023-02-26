@@ -89,11 +89,12 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from "vuex"
+import { mapActions, mapState } from "vuex"
 import {
     AlbumStarter, Cover, Icon, List,
 } from "../components"
 import { flags } from "../db/regions"
+import { getDeezerUrl, getSpotifyUrl } from "../utils/url"
 
 export default {
     components: {
@@ -110,9 +111,14 @@ export default {
     },
     computed: {
         ...mapState(["artists", "albums", "selectedAlbum"]),
-        ...mapGetters(["youtubePath", "deezerPath", "spotifyPath"]),
         discography() {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
+        },
+        deezerPath() {
+            return getDeezerUrl(this.selectedAlbum.deezerId)
+        },
+        spotifyPath() {
+            return getSpotifyUrl(this.selectedAlbum.spotifyId)
         },
     },
     created() {

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from "vuex"
+import { mapActions, mapState } from "vuex"
 import { AlbumStarter, Cover, List, Timeline } from "../components"
 
 export default {
@@ -43,7 +43,6 @@ export default {
     },
     computed: {
         ...mapState(["selectedAlbum"]),
-        ...mapGetters(["youtubePath"]),
     },
     created() {
         if (!this.selectedAlbum) {
