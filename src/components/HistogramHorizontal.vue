@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import { histogram } from "../mixins"
-import { applyBarTransition } from "../utils/transition"
+import { histogram } from "@/mixins"
+import { applyBarTransition } from "@/utils/transition"
 
 export default {
     name: "HistogramHorizontal",
@@ -27,9 +27,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../style/gatherer';
-@import '../style/modules/gauge';
+<style lang="scss" scoped>
+@import '~@/style/gatherer';
+@import '~@/style/modules/gauge';
 
 .histogramHorizontal {
     display: flex;
