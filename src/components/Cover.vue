@@ -12,7 +12,7 @@
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
         <div class="cover__album" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px', 'max-height': size && size + 'px', 'max-width': size && size + 'px' }">
-            <img class="cover__album__image" :src="getCover(album)" :alt="album.title" />
+            <img class="cover__album__image" :src="cover" :alt="album.title" />
         </div>
     </div>
 </template>
@@ -58,6 +58,27 @@ export default {
             }
             return `${5}px`
         },
+        cover() {
+            /* eslint-disable global-require */
+            // Cannot build a getPath method because of the following Webpack warning:
+            // Critical dependency: the request of a dependency is an expression
+            try {
+                return require(`../assets/img/covers/${this.album.id}.jpg`)
+            } catch {
+                try {
+                    return require(`../assets/img/covers/${this.album.id}.jpeg`)
+                } catch {
+                    try {
+                        return require(`../assets/img/covers/${this.album.id}.png`)
+                    } catch {
+                        // Most probably an error with a file extension (image format) not handled by webpack.
+                        console.error(`Unable to load cover of album with id: ${this.album.id}`)
+                        return null
+                    }
+                }
+            }
+            /* eslint-enable global-require */
+        },
         coverId() {
             return `cover_${this.album.id}`
         },
@@ -69,27 +90,6 @@ export default {
                 this.$el.style.opacity = 1
             }, 0)
         }
-    },
-    methods: {
-        getCover(album) {
-            /* eslint-disable global-require */
-            try {
-                return require(`../assets/img/covers/${album.id}.jpg`)
-            } catch {
-                try {
-                    return require(`../assets/img/covers/${album.id}.jpeg`)
-                } catch {
-                    try {
-                        return require(`../assets/img/covers/${album.id}.png`)
-                    } catch {
-                        // Most probably an error with a file extension (image format) not handled by webpack.
-                        console.error(`Unable to load cover of album with id: ${album.id}`)
-                        return null
-                    }
-                }
-            }
-            /* eslint-enable global-require */
-        },
     },
 }
 </script>

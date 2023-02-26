@@ -1,7 +1,7 @@
 <template>
     <div class="select">
         <button class="select__input" :class="{'select__input--open': isDisplayedOptions}" aria-label="Toggle options" @click="isDisplayedOptions = !isDisplayedOptions">
-            <div>{{ displayedValue }}</div>
+            <div class="select__input__value">{{ displayedValue }}</div>
             <Icon :name="isDisplayedOptions ? 'expand_less' : 'expand_more'" />
         </button>
         <div class="options" v-if="isDisplayedOptions">

@@ -1,7 +1,7 @@
 <template>
     <div class="albumStarter">
-        <span>Start with the song</span>
-        <span class="text text--italic"> {{ album.selectedTrackTitle }}</span>
+        <span class="albumStarter__sentence">Start with the song </span>
+        <span class="albumStarter__trackTitle text text--italic">{{ album.selectedTrackTitle }}</span>
         <template v-if="album.selectedTrackYtId">
             <span> on </span>
             <a :href="youtubePath" target="_blank">
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex"
 import Icon from "./Icon.vue"
+import { getYouTubeUrl } from "../utils/url"
 
 export default {
     name: "AlbumStarter",
@@ -28,7 +28,9 @@ export default {
         },
     },
     computed: {
-        ...mapGetters(["youtubePath"]),
+        youtubePath() {
+            return getYouTubeUrl(this.album.selectedTrackYtId)
+        },
     },
 }
 </script>

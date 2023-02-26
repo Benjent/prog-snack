@@ -58,15 +58,6 @@ export default new Vuex.Store({
             })
             return artistsWithMostGems
         },
-        youtubePath(state) {
-            return `https://www.youtube.com/watch?v=${state.selectedAlbum.selectedTrackYtId}`
-        },
-        deezerPath(state) {
-            return state.selectedAlbum.deezerId ? `https://widget.deezer.com/widget/dark/album/${state.selectedAlbum.deezerId}` : null
-        },
-        spotifyPath(state) {
-            return state.selectedAlbum.spotifyId ? `https://open.spotify.com/embed/album/${state.selectedAlbum.spotifyId}` : null
-        },
     },
     mutations: {
         selectAlbum(state, payload) {

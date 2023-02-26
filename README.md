@@ -78,6 +78,10 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 
 - [Bundle analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 
+### Test
+
+- [Jest](https://jestjs.io)
+
 ## To do
 
 ### Infra
