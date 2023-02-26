@@ -1,6 +1,6 @@
 <template>
     <div class="histogramHorizontal">
-        <caption class="title title--caption">{{ caption }}</caption>
+        <caption class="histogramHorizontal__caption title title--caption">{{ caption }}</caption>
         <div class="histogramHorizontal__datavis">
             <div class="histogramHorizontal__entry" v-for="(item, label) in datasource" :key="label">
                 <div class="histogramHorizontal__label">{{ item.label }}</div>
