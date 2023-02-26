@@ -7,9 +7,7 @@ describe("NumberUnit.vue", () => {
             number: 66,
             unit: "things",
         }
-        const wrapper = shallowMount(NumberUnit, {
-            propsData,
-        })
+        const wrapper = shallowMount(NumberUnit, { propsData })
         expect(wrapper.find(".numberUnit__number").text()).toMatch("66")
         expect(wrapper.find(".numberUnit__unit").text()).toMatch("things")
     })
