@@ -2,8 +2,7 @@ import Accordion from "./Accordion/Accordion.vue"
 import AlbumStarter from "./AlbumStarter/AlbumStarter.vue"
 import Check from "./Check/Check.vue"
 import Cover from "./Cover/Cover.vue"
-import HistogramHorizontal from "./HistogramHorizontal.vue"
-import HistogramVertical from "./HistogramVertical.vue"
+import Histogram from "./Histogram/Histogram.vue"
 import Icon from "./Icon/Icon.vue"
 import List from "./List.vue"
 import NumberUnit from "./NumberUnit/NumberUnit.vue"
@@ -19,8 +18,7 @@ export {
     AlbumStarter,
     Check,
     Cover,
-    HistogramHorizontal,
-    HistogramVertical,
+    Histogram,
     Icon,
     List,
     NumberUnit,

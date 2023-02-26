@@ -10,31 +10,30 @@
                 </section>
             </zoom-center-transition>
 
-            <HistogramHorizontal v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile" />
-            <HistogramVertical v-else class="stats__section stats__section--wide" caption="Number of albums per year" :datasource="albumsPerYearWithRatio" />
+            <Histogram v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" :datasource="albumsPerYearWithRatioMobile" />
+            <Histogram v-else class="stats__section stats__section--wide" caption="Number of albums per year" direction="vertical" :datasource="albumsPerYearWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio" />
+            <Histogram class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio" />
+            <Histogram class="stats__section" caption="Artists with most gems" :datasource="artistsWithGemsWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio" />
+            <Histogram class="stats__section" caption="Artists with most albums" :datasource="artistsWithAlbumsWithRatio" />
 
-            <HistogramHorizontal class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio" />
+            <Histogram class="stats__section" caption="Greatest criteria occurences" :datasource="criteriaOccurencesWithRatio" />
         </main>
     </fade-transition>
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex"
-import { categories, criteriaCategory } from "../db/criteria"
-import { flags } from "../db/regions"
-import { sort } from "../utils/array"
-import { HistogramHorizontal, HistogramVertical, NumberUnit } from "../components"
+import { categories, criteriaCategory } from "@/db/criteria"
+import { flags } from "@/db/regions"
+import { sort } from "@/utils/array"
+import { Histogram, NumberUnit } from "@/components"
 
 export default {
     components: {
-        HistogramHorizontal,
-        HistogramVertical,
+        Histogram,
         NumberUnit,
     },
     computed: {
