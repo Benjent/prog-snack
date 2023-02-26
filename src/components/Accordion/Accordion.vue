@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Icon from "./Icon.vue"
+import Icon from "../Icon/Icon.vue"
 
 export default {
     name: "Accordion",
@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/sunset';
+@import '~@/style/gatherer';
+@import '~@/style/mixins/sunset';
 
 .accordion {
     &__title {

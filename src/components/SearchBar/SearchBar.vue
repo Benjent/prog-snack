@@ -21,8 +21,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import Cover from "./Cover.vue"
-import Icon from "./Icon.vue"
+import Cover from "../Cover/Cover.vue"
+import Icon from "../Icon/Icon.vue"
 
 export default {
     name: "SearchBar",
@@ -75,9 +75,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/sunset';
-@import '../style/modules/options';
+@import '~@/style/gatherer';
+@import '~@/style/mixins/sunset';
+@import '~@/style/modules/options';
 
 $search-bar-width: 300px;
 $search-bar-height: 40px;
