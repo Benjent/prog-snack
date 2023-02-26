@@ -1,6 +1,5 @@
 import { shallowMount } from "@vue/test-utils"
 import { Histogram } from "@/components"
-import Vue from "vue"
 
 describe("Histogram.vue", () => {
     let wrapper
