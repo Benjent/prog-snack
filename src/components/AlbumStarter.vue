@@ -1,7 +1,7 @@
 <template>
     <div class="albumStarter">
-        <span>Start with the song</span>
-        <span class="text text--italic"> {{ album.selectedTrackTitle }}</span>
+        <span class="albumStarter__sentence">Start with the song </span>
+        <span class="albumStarter__trackTitle text text--italic">{{ album.selectedTrackTitle }}</span>
         <template v-if="album.selectedTrackYtId">
             <span> on </span>
             <a :href="youtubePath" target="_blank">
