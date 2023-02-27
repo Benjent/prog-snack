@@ -31,7 +31,9 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { AlbumStarter, Cover, List, Timeline } from "../components"
+import {
+    AlbumStarter, Cover, List, Timeline,
+} from "../components"
 
 export default {
     name: "Album",
