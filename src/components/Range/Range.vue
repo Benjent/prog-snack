@@ -1,6 +1,6 @@
 <template>
     <div class="range">
-        <output>{{ value.min }}</output>
+        <output class="range__minimum">{{ value.min }}</output>
         <div class="range__slider">
             <input
                 id="inputMin"
@@ -29,7 +29,7 @@
                 @mouseup="notifyRelease"
             />
         </div>
-        <output>{{ value.max }}</output>
+        <output class="range__maximum">{{ value.max }}</output>
     </div>
 </template>
 
