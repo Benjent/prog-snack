@@ -4,7 +4,7 @@ const applyBarTransition = (cssProperty, self) => {
     // Without timeout browser cannot trigger CSS transition
     window.setTimeout(() => {
         gauges.forEach((g) => {
-            g.style[cssProperty] = g.dataset[cssProperty]
+            g.style[cssProperty] = g.dataset.size
         })
     }, 0)
 }

@@ -63,13 +63,13 @@ export default {
             // Cannot build a getPath method because of the following Webpack warning:
             // Critical dependency: the request of a dependency is an expression
             try {
-                return require(`../assets/img/covers/${this.album.id}.jpg`)
+                return require(`@/assets/img/covers/${this.album.id}.jpg`)
             } catch {
                 try {
-                    return require(`../assets/img/covers/${this.album.id}.jpeg`)
+                    return require(`@/assets/img/covers/${this.album.id}.jpeg`)
                 } catch {
                     try {
-                        return require(`../assets/img/covers/${this.album.id}.png`)
+                        return require(`@/assets/img/covers/${this.album.id}.png`)
                     } catch {
                         // Most probably an error with a file extension (image format) not handled by webpack.
                         console.error(`Unable to load cover of album with id: ${this.album.id}`)
@@ -95,9 +95,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/fade-in';
-@import '../style/mixins/golden';
+@import '~@/style/gatherer';
+@import '~@/style/mixins/fade-in';
+@import '~@/style/mixins/golden';
 
 .cover {
     display: inline-block;

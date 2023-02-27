@@ -354,7 +354,7 @@ const albums = [
         artist: "Picchio Dal Pozzo",
         year: 1976,
         country: regions.ITALY,
-        criteria: [criteria.ITALIAN, criteria.C_JAZZ, criteria.C_PSYCHE, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.FEMALE],
+        criteria: [criteria.ITALIAN, criteria.C_JAZZ, criteria.C_PSYCHE, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.FEMALE, criteria.C_ELECTRO],
         selectedTrackTitle: "La Bolla",
         selectedTrackYtId: "zkdN_QXh5e4",
         spotifyId: null,

@@ -3,6 +3,21 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "odin_odin",
+        title: `Odin`,
+        artist: "Odin",
+        year: 1972,
+        country: regions.ENGLAND,
+        criteria: [criteria.ROCK, criteria.JAM, criteria.GREASY_SEVENTIES],
+        selectedTrackTitle: "Clown",
+        selectedTrackYtId: "cTLbQBiur_w",
+        spotifyId: "5qDSYBb927RkXk5roC1F5P",
+        deezerId: "671888",
+        designers: ["William S. Harvey"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "oho_okinawa",
         title: `Okinawa`,
         artist: "Oho",

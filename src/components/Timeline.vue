@@ -9,8 +9,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { applyChainedFadeInEarlyOnly } from "../utils/transition"
-import Cover from "./Cover.vue"
+import { applyChainedFadeInEarlyOnly } from "@/utils/transition"
+import Cover from "./Cover/Cover.vue"
 
 export default {
     name: "Timeline",
@@ -29,10 +29,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../style/gatherer';
-@import '../style/mixins/fade-in';
-@import '../style/mixins/shadow';
+<style lang="scss" scoped>
+@import '~@/style/gatherer';
+@import '~@/style/mixins/fade-in';
+@import '~@/style/mixins/shadow';
 
 .timeline {
     display: flex;

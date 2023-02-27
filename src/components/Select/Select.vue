@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Icon from "./Icon.vue"
+import Icon from "../Icon/Icon.vue"
 
 export default {
     name: "Select",
@@ -58,9 +58,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/sunset';
-@import '../style/modules/options';
+@import '~@/style/gatherer';
+@import '~@/style/mixins/sunset';
+@import '~@/style/modules/options';
 
 .select {
     display: flex;

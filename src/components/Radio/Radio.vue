@@ -1,41 +1,44 @@
 <template>
-    <label class="check" :for="id">
-        <input :id="id" class="check__input" :class="{ 'check__input--checked': value }" type="checkbox" :checked="value" @click="notifyParent">
+    <label class="radio" :for="id">
+        <input :id="id" class="radio__input" :class="{ 'radio__input--checked': value === own }" type="radio" :value="own" @click="notifyParent">
         {{ label }}
     </label>
 </template>
 
 <script>
-import { tick } from "../mixins"
+import { tick } from "@/mixins"
 
 export default {
-    name: "Check",
+    name: "Radio",
     mixins: [tick],
     props: {
         value: {
-            type: Boolean,
-            default: false,
+            type: String,
+        },
+        own: {
+            type: String,
         },
     },
     methods: {
         notifyParent() {
-            this.$emit("input", !this.value)
+            const value = this.own !== this.value ? this.own : null
+            this.$emit("input", value)
         },
     },
 }
 </script>
 
-<style lang="scss">
-@import '../style/gatherer';
+<style lang="scss" scoped>
+@import '~@/style/gatherer';
 
-.check {
+.radio {
     cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
 
     &:hover {
-        .check__input:not(.check__input--checked) {
+        .radio__input:not(.radio__input--checked) {
             background: linear-gradient(141deg, $secondary 10%, $tertiary 90%);
         }
     }
@@ -52,10 +55,7 @@ export default {
         background: $black;
         border: solid var(--input-border-width) $primary;
         margin-right: var(--label-gap);
-
-        &--round {
-            border-radius: 50%;
-        }
+        border-radius: 50%;
 
         &--checked {
             background: $primary;

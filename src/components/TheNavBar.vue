@@ -2,7 +2,7 @@
     <slide-y-up-transition appear :duration="500">
         <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
             <router-link v-if="!footer" class="theNavBar__logo link" :to="{ name: 'home' }" :aria-current="$route.name === 'home' && 'page'">
-                <img src="../assets/img/logos/snack_font.png" alt="Prog Snack">
+                <img src="@/assets/img/logos/snack_font.png" alt="Prog Snack">
             </router-link>
             <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
                 <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.name" :to="{ name: item.name }" :aria-current="$route.name === item.name && 'page'">
@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Icon from "./Icon.vue"
-import SearchBar from "./SearchBar.vue"
+import Icon from "./Icon/Icon.vue"
+import SearchBar from "./SearchBar/SearchBar.vue"
 
 export default {
     name: "TheNavBar",
@@ -48,9 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/shadow';
-@import '../style/modules/link';
+@import '~@/style/gatherer';
+@import '~@/style/mixins/shadow';
+@import '~@/style/modules/link';
 
 .theNavBar {
     @include shadow;

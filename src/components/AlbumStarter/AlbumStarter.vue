@@ -7,15 +7,15 @@
             <a :href="youtubePath" target="_blank">
                 <Icon name="play_circle" />
                 YouTube
-                <!-- <img class="albumStarter__logo" :src="require(`../assets/img/logos/yt_logo_gold.png`)" alt=""> -->
+                <!-- <img class="albumStarter__logo" :src="require(`@/assets/img/logos/yt_logo_gold.png`)" alt=""> -->
             </a>
         </template>
     </div>
 </template>
 
 <script>
-import Icon from "./Icon.vue"
-import { getYouTubeUrl } from "../utils/url"
+import { getYouTubeUrl } from "@/utils/url"
+import Icon from "../Icon/Icon.vue"
 
 export default {
     name: "AlbumStarter",
@@ -36,8 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/modules/text';
+@import '~@/style/gatherer';
+@import '~@/style/modules/text';
 
 .albumStarter {
     & &__logo {
