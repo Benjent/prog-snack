@@ -15,5 +15,7 @@ describe("Range.vue", () => {
     it("renders range when passed", () => {
         expect(wrapper.find(".range__minimum").text()).toMatch("10")
         expect(wrapper.find(".range__maximum").text()).toMatch("60")
+        expect(wrapper.find(".range__input--min").element.value).toMatch("10")
+        expect(wrapper.find(".range__input--max").element.value).toMatch("60")
     })
 })
