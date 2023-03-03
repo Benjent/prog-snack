@@ -2,11 +2,11 @@
     <div class="histogram" :class="{ [`histogram--${direction}`]: direction }">
         <caption class="histogram__caption title title--caption">{{ caption }}</caption>
         <div class="histogram__datavis">
-            <div class="histogram__entry" v-for="(item, label) in datasource" :key="label">
+            <div class="histogram__entry" v-for="item in chartData" :key="item.label">
                 <div class="histogram__label" v-if="direction === 'horizontal'">{{ item.label }}</div>
                 <div :class="{ 'histogram__row': direction === 'horizontal', 'histogram__column': direction === 'vertical' }">
                     <component :is="direction === 'vertical' ? 'slide-y-down-transition' : 'slide-x-left-transition'" appear :duration="500">
-                        <div class="gauge" :class="{ [`gauge--${direction}`]: direction }" :data-size="item.ratioPercent">{{ item.data }}</div>
+                        <div class="gauge" :class="{ [`gauge--${direction}`]: direction }" :data-size="item.percentage">{{ item.value }}</div>
                     </component>
                 </div>
                 <div class="histogram__label" v-if="direction === 'vertical'">{{ item.label }}</div>
@@ -25,7 +25,10 @@ export default {
             type: String,
         },
         datasource: {
-            type: [Array, Object],
+            type: Array,
+            validator(value) {
+                return value.every((i) => i.hasOwnProperty("label") && i.hasOwnProperty("value"))
+            },
         },
         direction: {
             type: String,
@@ -33,6 +36,17 @@ export default {
             validator(value) {
                 return ["horizontal", "vertical"].includes(value)
             },
+        },
+        sort: {
+            type: String,
+            default: "DESC",
+            validator(value) {
+                return ["ASC", "DESC", "NONE"].includes(value)
+            },
+        },
+        threshold: {
+            type: Number,
+            default: 0,
         },
     },
     mounted() {
@@ -42,6 +56,29 @@ export default {
         direction(newValue) {
             this.$nextTick(() => {
                 applyBarTransition(newValue === "vertical" ? "height" : "width", this.$el)
+            })
+        },
+    },
+    computed: {
+        chartData() {
+            const filteredDataSource = this.datasource.filter((d) => d.value >= this.threshold)
+            const values = filteredDataSource.map((d) => d.value)
+            const max = Math.max(...values)
+            const min = Math.min(...values)
+
+            return filteredDataSource.map((item) => {
+                const ratio = (item.value - min) / (max - min)
+                return {
+                    label: item.label,
+                    value: item.value,
+                    ratio,
+                    percentage: `${(ratio * 100).toString()}%`,
+                }
+            }).sort((a, b) => {
+                if (this.sort !== "NONE") {
+                    return this.sort === "ASC" ? a.value - b.value : b.value - a.value
+                }
+                return null
             })
         },
     },

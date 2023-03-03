@@ -6,7 +6,7 @@ describe("Histogram.vue", () => {
     beforeEach(() => {
         const propsData = {
             caption: "caption",
-            datasource: [{ label: "1", data: 1 }, { label: "2", data: 2 }, { label: "3", data: 3 }],
+            datasource: [{ label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }],
         }
         wrapper = shallowMount(Histogram, { propsData })
     })
