@@ -55,7 +55,7 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import {
-    categories, categoriesOrder, criteria, criteriaCategory,
+    categories, categoriesOrder, criteria, criteriaCategory, languages,
 } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition"
 import {
@@ -75,6 +75,7 @@ export default {
         return {
             categories,
             criteria,
+            languages,
             filterModel: [],
             selectedLanguage: null,
             selectedRegion: null,
@@ -98,9 +99,6 @@ export default {
         ...mapState(["albums", "regions", "albumsPerYear"]),
         containsElementsOfCriteria() {
             return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
-        },
-        languages() {
-            return criteriaCategory[categories.LANGUAGE]
         },
         years() {
             return Object.keys(this.albumsPerYear)

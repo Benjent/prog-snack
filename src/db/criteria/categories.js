@@ -1,6 +1,7 @@
 import { criteria } from "./criteria"
+import { languages } from "./languages"
 
-// 2-occurence update : the category, its position in the category list and its vue-filter translation
+// 3-occurence update : the category, its position in the category list and its vue-filter translation
 const categories = {
     TYPE: "TYPE",
     LANGUAGE: "LANGUAGE",
@@ -37,28 +38,7 @@ const criteriaCategory = {
         criteria.LIVE,
     ],
     [categories.LANGUAGE]: [
-        criteria.BELARUSIAN,
-        criteria.BRETON,
-        criteria.BULGARIAN,
-        criteria.CREOLE,
-        criteria.CROATIAN,
-        criteria.FINNISH,
-        criteria.FRENCH,
-        criteria.GERMAN,
-        criteria.GREEK,
-        criteria.HEBREW,
-        criteria.HINDI,
-        criteria.HUNGARIAN,
-        criteria.IGBO,
-        criteria.ITALIAN,
-        criteria.JAPANESE,
-        criteria.PORTUGUESE,
-        criteria.RUSSIAN,
-        criteria.SANSKRIT,
-        criteria.SPANISH,
-        criteria.SWEDISH,
-        criteria.TIBETAN,
-        criteria.ZEUHL,
+        ...Object.values(languages),
     ],
     [categories.THEME]: [
         criteria.SCI_FI,
