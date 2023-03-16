@@ -507,14 +507,14 @@ const albums = [
         artist: "Thirsty Moon",
         year: 1973,
         country: regions.GERMANY,
-        criteria: [criteria.JAM, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SPACY, criteria.C_PSYCHE],
-        selectedTrackTitle: `You'll Never Come Back`, // TODO?
-        selectedTrackYtId: "TODO",
+        criteria: [criteria.JAM, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SPACY, criteria.C_PSYCHE, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Trash Man`,
+        selectedTrackYtId: "H8dop8w4nfY",
         spotifyId: "2JHnHWtumTvMT2VwYxTFtH",
         deezerId: "272533",
         designers: ["Gil Funccius"],
         similarAlbums: [],
-        isAGem: true, // TODO gem? je crois pas
+        isAGem: true,
         description: `TODO Description`,
     },
     {
