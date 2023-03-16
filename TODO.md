@@ -20,6 +20,7 @@
 ## Accessibility
 
 - Use `<select>` and `<option>` tags for `<Select>` component
+- Use https://wave.webaim.org/ and update README about that
 
 ## Content
 
