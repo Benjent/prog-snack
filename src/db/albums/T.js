@@ -384,7 +384,7 @@ const albums = [
         artist: "Terpandre",
         year: 1981,
         country: regions.FRANCE,
-        criteria: [criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.C_JAZZ, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.SOFT, criteria.C_ELECTRO],
+        criteria: [criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.C_JAZZ, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.SOFT, criteria.C_ELECTRO, criteria.SYMPHONIC],
         selectedTrackTitle: "Carrousel",
         selectedTrackYtId: "BHGGHyd1amY",
         spotifyId: "2iy60Te5aOKNYi1DESFaHR",
