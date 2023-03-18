@@ -8,7 +8,9 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "deploy": "gh-pages -d dist",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -22,6 +24,9 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/vue": "^6.0.26",
     "@vue/cli-plugin-babel": "^4.3.0",
     "@vue/cli-plugin-eslint": "^4.3.0",
     "@vue/cli-plugin-unit-jest": "^4.3.0",
@@ -39,6 +44,7 @@
     "husky": "^8.0.3",
     "jest": "^27.0.5",
     "sass-loader": "^8.0.2",
+    "vue-cli-plugin-storybook": "~2.1.0",
     "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0",
     "vue-template-compiler": "^2.6.11"
   },

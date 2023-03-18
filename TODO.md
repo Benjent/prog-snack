@@ -20,6 +20,7 @@
 ## Accessibility
 
 - Use `<select>` and `<option>` tags for `<Select>` component
+- Use https://wave.webaim.org/ and update README about that
 
 ## Content
 
@@ -39,3 +40,11 @@
 
 - Deezer, Spotify, Discogs could be an API search with album title and year (instead of manually providing the id) to allow more flexibility
 - Have Deezer and Spotify `<iframe>` behave like LinkedIn messaging system, toggable, to keep playind while browsing the site
+
+## User feedbacks
+
+- Open Attic filters by default
+- SEO
+- Canonical URL
+- OG metadada
+- Homepage should be Attic not Album

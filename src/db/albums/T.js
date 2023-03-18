@@ -384,7 +384,7 @@ const albums = [
         artist: "Terpandre",
         year: 1981,
         country: regions.FRANCE,
-        criteria: [criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.C_JAZZ, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.SOFT, criteria.C_ELECTRO],
+        criteria: [criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.C_JAZZ, criteria.ODD_RHYTHM, criteria.SOFT_SEVENTIES, criteria.SOFT, criteria.C_ELECTRO, criteria.SYMPHONIC],
         selectedTrackTitle: "Carrousel",
         selectedTrackYtId: "BHGGHyd1amY",
         spotifyId: "2iy60Te5aOKNYi1DESFaHR",
@@ -507,14 +507,14 @@ const albums = [
         artist: "Thirsty Moon",
         year: 1973,
         country: regions.GERMANY,
-        criteria: [criteria.JAM, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SPACY, criteria.C_PSYCHE],
-        selectedTrackTitle: `You'll Never Come Back`, // TODO?
-        selectedTrackYtId: "TODO",
+        criteria: [criteria.JAM, criteria.LENGTHY_TRACKS, criteria.INSTRUMENTAL, criteria.SPACY, criteria.C_PSYCHE, criteria.ODD_RHYTHM],
+        selectedTrackTitle: `Trash Man`,
+        selectedTrackYtId: "H8dop8w4nfY",
         spotifyId: "2JHnHWtumTvMT2VwYxTFtH",
         deezerId: "272533",
         designers: ["Gil Funccius"],
         similarAlbums: [],
-        isAGem: true, // TODO gem? je crois pas
+        isAGem: true,
         description: `TODO Description`,
     },
     {
