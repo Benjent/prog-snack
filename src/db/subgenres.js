@@ -178,6 +178,7 @@ const subgenres = [
         albums: [
             "dschinn_dschinn",
             "dull_knife_electric_indian",
+            "birth_control_hoodoo_man",
         ],
         criteria: [criteria.ROCK, criteria.HEAVY, criteria.JAM, criteria.GREASY_SEVENTIES],
     },
