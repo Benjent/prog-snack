@@ -13,38 +13,41 @@
 
             <section class="discographies__main">
                 <section class="discographies__selectedAlbum">
-                    <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
-                        <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
-                        <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
-                        <h3 class="title title--3"><Icon name="event" /> {{selectedAlbum.year}}</h3>
-                        <h3 class="title title--3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</h3>
-                        <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
-                            <Icon name="palette" />
-                            <List :values="selectedAlbum.designers" type="flattened" />
-                        </div>
-                        <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
-                        <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                        <AlbumStarter class="discographies__track" :album="selectedAlbum" />
-                    </div>
-                    <div v-else class="card card--marginless discographies__selectedAlbum__main">
-                        <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
-                        <div class="discographies__selectedAlbum__infos">
-                            <header class="discographies__selectedAlbum__header">
-                                <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
-                                <div>
-                                    <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</span>
-                                </div>
-                                <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
-                                    <Icon name="palette" />
-                                    Cover by
-                                    <List :values="selectedAlbum.designers" type="flattened" />
-                                </div>
-                            </header>
-                            <footer class="discographies__selectedAlbum__footer">
-                                <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
-                                <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                            </footer>
+                    <div>
+                        <h2 class="title title--2">{{ selectedAlbum.artist }} discography</h2>
+                        <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
+                            <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
+                            <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
+                            <h3 class="title title--3"><Icon name="event" /> {{selectedAlbum.year}}</h3>
+                            <h3 class="title title--3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</h3>
+                            <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
+                                <Icon name="palette" />
+                                <List :values="selectedAlbum.designers" type="flattened" />
+                            </div>
+                            <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
+                            <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                             <AlbumStarter class="discographies__track" :album="selectedAlbum" />
+                        </div>
+                        <div v-else class="card discographies__selectedAlbum__main">
+                            <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
+                            <div class="discographies__selectedAlbum__infos">
+                                <header class="discographies__selectedAlbum__header">
+                                    <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
+                                    <div>
+                                        <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</span>
+                                    </div>
+                                    <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
+                                        <Icon name="palette" />
+                                        Cover by
+                                        <List :values="selectedAlbum.designers" type="flattened" />
+                                    </div>
+                                </header>
+                                <footer class="discographies__selectedAlbum__footer">
+                                    <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
+                                    <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                                </footer>
+                                <AlbumStarter class="discographies__track" :album="selectedAlbum" />
+                            </div>
                         </div>
                     </div>
 
