@@ -839,7 +839,7 @@ const albums = [
         deezerId: "300735",
         designers: ["Steve Hillage"],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: false, // TODO almost a gem! réécouter
     },
     {
         id: "steve_hillage_l",
