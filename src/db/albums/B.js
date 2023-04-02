@@ -701,7 +701,7 @@ const albums = [
         artist: "Beaver & Krause",
         year: 1969,
         country: regions.USA,
-        criteria: [criteria.EXPERIMENTAL, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.FUNNY],
+        criteria: [criteria.EXPERIMENTAL, criteria.C_PSYCHE, criteria.C_ELECTRO, criteria.FUNNY, criteria.INSTRUMENTAL],
         selectedTrackTitle: "Fountains Of The Department Of Water And Power",
         selectedTrackYtId: "eiqLcRr9qSg",
         spotifyId: null,
@@ -716,7 +716,7 @@ const albums = [
         artist: "Beaver & Krause",
         year: 1970,
         country: regions.USA,
-        criteria: [criteria.C_ELECTRO, criteria.JAM, criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.AMBIENT],
+        criteria: [criteria.C_ELECTRO, criteria.JAM, criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.AMBIENT, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: "Another Part Of Time",
         selectedTrackYtId: "_bCegQb4QJE",
         spotifyId: null,
@@ -740,6 +740,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUVABLE - Beaver & Krause - 1972 - All Good Men - 404486167 + 5iQzADaz1K36Z42INQY6Zb
     {
         id: "bedemon_child_of_darkness",
         title: "Child Of Darkness",
