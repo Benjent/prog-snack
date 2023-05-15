@@ -53,7 +53,7 @@ const albums = [
         artist: "Fantasy",
         year: 1973,
         country: regions.ENGLAND,
-        criteria: [criteria.C_FOLK, criteria.BAROQUE, criteria.ART_POP, criteria.FANTASY],
+        criteria: [criteria.C_FOLK, criteria.BAROQUE, criteria.FANTASY, criteria.SOFT],
         selectedTrackTitle: "Gnome Song",
         selectedTrackYtId: "601zRoKuHUg",
         spotifyId: null,
