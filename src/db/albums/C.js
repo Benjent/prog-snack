@@ -1828,6 +1828,21 @@ const albums = [
         description: `TODO Description`, // very very crazy, album sur le joker limite, un peu en mode fin du monde, armaggeddoon
     },
     {
+        id: "costa_blanca_viaje_a_prantia",
+        title: "Viaje A Prantía",
+        artist: "Costa Blanca",
+        year: 1977,
+        country: regions.SPAIN,
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_JAZZ, criteria.JAM, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "Viaje A Prantía",
+        selectedTrackYtId: null,
+        spotifyId: "5TLhWGoOsflVemDZyEpVlg",
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "coven_witchcraft_destroys_minds_and_reaps_souls",
         title: "Witchcraft Destroys Minds & Reaps Souls",
         artist: "Coven",
