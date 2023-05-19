@@ -312,7 +312,7 @@ const albums = [
         artist: "Ivory",
         year: 1980,
         country: regions.GERMANY,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT_SEVENTIES, criteria.C_ELECTRO, criteria.SPANISH, criteria.SYMPHONIC],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT_SEVENTIES, criteria.C_ELECTRO, criteria.SPANISH, criteria.SYMPHONIC, criteria.ODD_RHYTHM],
         selectedTrackTitle: "Sad Cypress",
         selectedTrackYtId: "ATGkbU0V48M",
         spotifyId: "4qnMQq9AznX3RuWltSI1tA",
