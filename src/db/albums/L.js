@@ -321,6 +321,22 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUVABLE Lucifer - Exit - 1972,
+    {
+        id: "lucifer_big_gun",
+        title: "Big Gun",
+        artist: "Lucifer",
+        year: 1972,
+        country: regions.ENGLAND,
+        criteria: [criteria.EXPERIMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.HUMBLE, criteria.C_PSYCHE, criteria.BLUESY, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Dance With The Devil",
+        selectedTrackYtId: "W6Cfpbh5jAc",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
