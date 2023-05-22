@@ -789,21 +789,6 @@ const albums = [
         isAGem: false,
     },
     {
-        id: "eno_moebius_roedelius_after_the_heat",
-        title: "After The Heat",
-        artist: "Eno Moebius Roedelius",
-        year: 1978,
-        country: regions.GERMANY,
-        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
-        selectedTrackTitle: "The Shade",
-        selectedTrackYtId: "8CudLTfb0Qk",
-        spotifyId: "4yq2tSTIBBHE8S0zvanABi",
-        deezerId: "62479142",
-        designers: ["Michael Weisse"],
-        similarAlbums: [], // TODO something tangerine dream après Stratosfear?
-        isAGem: false,
-    },
-    {
         id: "erlkoenig_erlkoenig",
         title: "Erlkoenig",
         artist: "Erlkoenig",

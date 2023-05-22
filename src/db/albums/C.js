@@ -1640,6 +1640,29 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Cluster - 1971
+    // TODO Cluster II - 1972
+    // TODO Zuckerzeit - 1974
+    // TODO Sowiesoso - 1976
+    // TODO Grosses Wasser - 1979
+    // TODO Curiosum - 1981
+    // TODO One Hour - 1994
+    // TODO Cluster & Eno - 1977
+    {
+        id: "cluster_and_eno_after_the_heat",
+        title: "After The Heat",
+        artist: "Cluster & Eno",
+        year: 1978,
+        country: regions.GERMANY,
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "The Shade",
+        selectedTrackYtId: "8CudLTfb0Qk",
+        spotifyId: "4yq2tSTIBBHE8S0zvanABi",
+        deezerId: "62479142",
+        designers: ["Michael Weisse"],
+        similarAlbums: [], // TODO something tangerine dream après Stratosfear?
+        isAGem: false,
+    },
     {
         id: "color_humano_color_humano",
         title: "Color Humano",
