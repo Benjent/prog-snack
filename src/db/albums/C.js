@@ -1647,7 +1647,21 @@ const albums = [
     // TODO Grosses Wasser - 1979
     // TODO Curiosum - 1981
     // TODO One Hour - 1994
-    // TODO Cluster & Eno - 1977
+    {
+        id: "cluster_and_eno_cluster_and_eno",
+        title: "After The Heat",
+        artist: "Cluster & Eno",
+        year: 1977,
+        country: regions.GERMANY,
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "Schöne Hände",
+        selectedTrackYtId: "3OBYefrtY5k",
+        spotifyId: "0VSmGsL1RtyjE7bdAaSAvy",
+        deezerId: "62538002",
+        designers: ["Hans-Joachim Roedelius", "Dieter Moebius"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "cluster_and_eno_after_the_heat",
         title: "After The Heat",
