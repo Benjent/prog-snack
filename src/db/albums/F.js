@@ -226,7 +226,8 @@ const albums = [
         deezerId: null,
         designers: ["Paul Redway"],
         similarAlbums: [],
-        isAGem: false,
+        isAGem: true,
+        description: `TODO Description`,
     },
     {
         id: "flamen_dialis_symptome_dei",
