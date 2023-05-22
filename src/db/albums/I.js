@@ -306,6 +306,21 @@ const albums = [
         isAGem: true,
         description: `TODO description`,
     },
+    {
+        id: "ivory_sad_cypress",
+        title: "Sad Cypress",
+        artist: "Ivory",
+        year: 1980,
+        country: regions.GERMANY,
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT_SEVENTIES, criteria.C_ELECTRO, criteria.SPANISH, criteria.SYMPHONIC, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Sad Cypress",
+        selectedTrackYtId: "ATGkbU0V48M",
+        spotifyId: "4qnMQq9AznX3RuWltSI1tA",
+        deezerId: "45612",
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums

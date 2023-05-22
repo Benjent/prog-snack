@@ -84,7 +84,7 @@ const albums = [
         artist: "Nautilus",
         year: 1980,
         country: regions.SWITZERLAND,
-        criteria: [criteria.ROCK],
+        criteria: [criteria.ROCK, criteria.GLITTER],
         selectedTrackTitle: "Saturday Night",
         selectedTrackYtId: "aDK_D0S87_k",
         spotifyId: null,

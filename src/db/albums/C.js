@@ -1640,6 +1640,43 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Cluster - 1971
+    // TODO Cluster II - 1972
+    // TODO Zuckerzeit - 1974
+    // TODO Sowiesoso - 1976
+    // TODO Grosses Wasser - 1979
+    // TODO Curiosum - 1981
+    // TODO One Hour - 1994
+    {
+        id: "cluster_and_eno_cluster_and_eno",
+        title: "After The Heat",
+        artist: "Cluster & Eno",
+        year: 1977,
+        country: regions.GERMANY,
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "Schöne Hände",
+        selectedTrackYtId: "3OBYefrtY5k",
+        spotifyId: "0VSmGsL1RtyjE7bdAaSAvy",
+        deezerId: "62538002",
+        designers: ["Hans-Joachim Roedelius", "Dieter Moebius"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: "cluster_and_eno_after_the_heat",
+        title: "After The Heat",
+        artist: "Cluster & Eno",
+        year: 1978,
+        country: regions.GERMANY,
+        criteria: [criteria.ELECTRO, criteria.AMBIENT, criteria.SOFT, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "The Shade",
+        selectedTrackYtId: "8CudLTfb0Qk",
+        spotifyId: "4yq2tSTIBBHE8S0zvanABi",
+        deezerId: "62479142",
+        designers: ["Michael Weisse"],
+        similarAlbums: [], // TODO something tangerine dream après Stratosfear?
+        isAGem: false,
+    },
     {
         id: "color_humano_color_humano",
         title: "Color Humano",
@@ -1826,6 +1863,21 @@ const albums = [
         similarAlbums: [],
         isAGem: true,
         description: `TODO Description`, // very very crazy, album sur le joker limite, un peu en mode fin du monde, armaggeddoon
+    },
+    {
+        id: "costa_blanca_viaje_a_prantia",
+        title: "Viaje A Prantía",
+        artist: "Costa Blanca",
+        year: 1977,
+        country: regions.SPAIN,
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_JAZZ, criteria.JAM, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL],
+        selectedTrackTitle: "Viaje A Prantía",
+        selectedTrackYtId: null,
+        spotifyId: "5TLhWGoOsflVemDZyEpVlg",
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
     },
     {
         id: "coven_witchcraft_destroys_minds_and_reaps_souls",
