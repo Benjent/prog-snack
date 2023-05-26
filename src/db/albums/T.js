@@ -379,6 +379,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "le_temps_le_temps",
+        title: "Le Temps",
+        artist: "Le Temps",
+        year: 1975,
+        country: regions.QUEBEC,
+        criteria: [criteria.FOLK, criteria.SOFT_SEVENTIES, criteria.FRENCH, criteria.SOFT, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Vibrations",
+        selectedTrackYtId: "mDJ6XpTJmws",
+        spotifyId: "5PbjbpWFF5tDpQKjOpexF9",
+        deezerId: "6917469",
+        designers: ["Annette Desroches"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO Introuvable - Ailleurs Avec... Le Temps - 1977 - QUEBEC - (6917470 + 1D4F1WKQ7bgBvRIvsEn8Rr)
+    {
         id: "terpandre_terpandre",
         title: "Terpandre",
         artist: "Terpandre",
