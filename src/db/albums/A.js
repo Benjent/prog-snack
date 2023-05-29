@@ -364,7 +364,7 @@ const albums = [
         spotifyId: "7D3LKsawCpMrRzRJXWwNWU",
         deezerId: "134921062",
         designers: ["Steve MacKenzie"],
-        similarAlbums: [], // similar genesis selling england by the pound ?
+        similarAlbums: ["genesis_selling_england_by_the_pound"],
         isAGem: false,
     },
     {
