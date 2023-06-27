@@ -53,7 +53,7 @@ const albums = [
         artist: "GATTCH",
         year: 1972,
         country: regions.SLOVAKIA,
-        criteria: [criteria.BAROQUE, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
+        criteria: [criteria.BAROQUE, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM, criteria.ODD_RHYTHM],
         selectedTrackTitle: `Narodenie`,
         selectedTrackYtId: "nCwAjoV5Ujg",
         spotifyId: null,
