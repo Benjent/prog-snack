@@ -1764,7 +1764,7 @@ const albums = [
         artist: "Asgærd",
         year: 1972,
         country: regions.ENGLAND,
-        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.GLITTER], // TODO
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.GLITTER],
         selectedTrackTitle: "In The Realm Of Asgærd",
         selectedTrackYtId: "M_1yaAcNV3Q",
         spotifyId: "76msVYRTbwgfEFZHyXLAzS",
