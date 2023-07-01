@@ -1331,6 +1331,21 @@ const albums = [
         isAGem: false, // TODO almost a gem
     },
     {
+        id: "future_shock_future_shock",
+        title: "Future Shock",
+        artist: "Future Shock",
+        year: 1977,
+        country: regions.ENGLAND,
+        criteria: [criteria.BLENDS, criteria.UNCOMMON_INSTRUMENTS, criteria.ROCK_OPERA, criteria.FEMALE, criteria.TRANSITION],
+        selectedTrackTitle: "Tides And Turning",
+        selectedTrackYtId: "_umL2gLOgDQ",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["John Warwick"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "fuzzy_duck_fuzzy_duck",
         title: "Fuzzy Duck",
         artist: "Fuzzy Duck",
