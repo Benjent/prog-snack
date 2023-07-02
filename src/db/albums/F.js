@@ -184,6 +184,21 @@ const albums = [
         description: `TODO Description`, // pas de riff qui restent en tête, mais la passion se ressent tellement dans l'oeuvre
     },
     {
+        id: "ferris_ferris",
+        title: `Ferris`,
+        artist: "Ferris",
+        year: 1971,
+        country: regions.FINLAND,
+        criteria: [criteria.ROCK, criteria.JAM],
+        selectedTrackTitle: `Basically Pure`,
+        selectedTrackYtId: "hUbfznsLZEI",
+        spotifyId: "6DVkijna5ZIf9rM6z52WsW",
+        deezerId: "688954",
+        designers: ["H. Kiiskinen"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "festa_mobile_diario_di_viaggio_della_festa_mobile",
         title: `Diario Di Viaggio Della Festa Mobile`,
         artist: "Festa Mobile",
