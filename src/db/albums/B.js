@@ -1117,7 +1117,8 @@ const albums = [
         deezerId: "1135883",
         designers: ["Klaus Volkmann", "Zeus B. Held"],
         similarAlbums: [],
-        isAGem: false, // TODO gem or not?
+        isAGem: true,
+        description: `TODO Description`,
     },
     {
         id: "birth_control_increase",
