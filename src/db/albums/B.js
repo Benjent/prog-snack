@@ -93,6 +93,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "babylon_babylon",
+        title: `Babylon`,
+        artist: "Babylon",
+        year: 1978,
+        country: regions.USA,
+        criteria: [criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Cathedral Of The Mary Ruin",
+        selectedTrackYtId: "Z3h9-hx_PGI",
+        spotifyId: "5T1izNC7lZIfC2uPMCm51I",
+        deezerId: null,
+        designers: ["Harobed Muir", "Frank Muys", "Steve Repetti"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "bachdenkel_lemmings",
         title: "Lemmings",
         artist: "Bachdenkel",
@@ -1102,7 +1117,8 @@ const albums = [
         deezerId: "1135883",
         designers: ["Klaus Volkmann", "Zeus B. Held"],
         similarAlbums: [],
-        isAGem: false, // TODO gem or not?
+        isAGem: true,
+        description: `TODO Description`,
     },
     {
         id: "birth_control_increase",

@@ -364,7 +364,7 @@ const albums = [
         spotifyId: "7D3LKsawCpMrRzRJXWwNWU",
         deezerId: "134921062",
         designers: ["Steve MacKenzie"],
-        similarAlbums: [], // similar genesis selling england by the pound ?
+        similarAlbums: ["genesis_selling_england_by_the_pound"],
         isAGem: false,
     },
     {
@@ -1764,7 +1764,7 @@ const albums = [
         artist: "Asgærd",
         year: 1972,
         country: regions.ENGLAND,
-        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.GLITTER], // TODO
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.GLITTER],
         selectedTrackTitle: "In The Realm Of Asgærd",
         selectedTrackYtId: "M_1yaAcNV3Q",
         spotifyId: "76msVYRTbwgfEFZHyXLAzS",
