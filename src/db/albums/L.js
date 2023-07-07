@@ -232,6 +232,22 @@ const albums = [
     },
     // TODO introuvable - Lied Des Teufels - Höllisch Heiße Rockmusik
     {
+        id: "lift_caverns_of_your_brain",
+        title: "Caverns Of Your Brain",
+        artist: "Lift",
+        year: 1977,
+        country: regions.USA,
+        criteria: [criteria.ODD_RHYTHM, criteria.LENGTHY_TRACKS, criteria.C_ELECTRO, criteria.C_PSYCHE, criteria.JAM, criteria.SYMPHONIC, criteria.SPECTACULAR],
+        selectedTrackTitle: "Trippin' Over The Rainbow",
+        selectedTrackYtId: "mJceCivA5Ro",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    {
         id: "lightyears_away_astral_navigations",
         title: "Astral Navigations",
         artist: "Lightyears Away",
