@@ -1123,7 +1123,7 @@ const albums = [
         artist: "Guru Guru",
         year: 1972,
         country: regions.GERMANY,
-        criteria: [criteria.GERMAN, criteria.JAM, criteria.GREASY_SEVENTIES, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.LENGTHY_TRACKS, criteria.SPACY],
+        criteria: [criteria.GERMAN, criteria.JAM, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.LENGTHY_TRACKS, criteria.SPACY],
         selectedTrackTitle: "Oxymoron",
         selectedTrackYtId: "NSkgEAvISL4",
         spotifyId: "5fEwSGwhGXaUJKu5NDEfBL",
