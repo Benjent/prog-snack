@@ -432,7 +432,7 @@ const albums = [
         artist: "Jasper Wrath",
         year: 1971,
         country: regions.USA,
-        criteria: [criteria.GLITTER, criteria.GREASY_SEVENTIES],
+        criteria: [criteria.GLITTER, criteria.GREASY_SEVENTIES, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: "Odyssey",
         selectedTrackYtId: "R-GCfxpynXQ",
         spotifyId: null,
