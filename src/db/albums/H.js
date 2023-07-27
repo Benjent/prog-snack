@@ -3,6 +3,38 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "hp_lovecraft_hp_lovecraft",
+        title: "H.P. Lovecraft",
+        artist: "H.P. Lovecraft",
+        year: 1967,
+        country: regions.USA,
+        criteria: [criteria.ROCK, criteria.CRISPY_SIXTIES, criteria.C_PSYCHE],
+        selectedTrackTitle: "The White Ship",
+        selectedTrackYtId: "Qhs7L9ldsvE",
+        spotifyId: "1jEWUjN66epQft1YbfxPjd",
+        deezerId: "45679911",
+        designers: ["John Cabalka", "Mike Stone"],
+        similarAlbums: ["jefferson_airplane_surrealistic_pillow"],
+        isAGem: false,
+    },
+    {
+        id: "hp_lovecraft_hp_lovecraft_ii",
+        title: "H.P. Lovecraft II",
+        artist: "H.P. Lovecraft",
+        year: 1968,
+        country: regions.USA,
+        criteria: [criteria.C_PSYCHE, criteria.CRISPY_SIXTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE],
+        selectedTrackTitle: "At The Mountains Of Madness",
+        selectedTrackYtId: "lb4xFFYJGN8",
+        spotifyId: "0O0jxEVJruecYXTCQ8tNNj",
+        deezerId: "45679971",
+        designers: ["Bob Schnepf"],
+        similarAlbums: ["jefferson_airplane_after_bathing_at_baxters"],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    // TODO INTROUVABLE HP LOVECRAFT - Valley Of The Moon
+    {
         id: "hampton_grease_band_music_to_eat",
         title: "Music To Eat",
         artist: "Hampton Grease Band",
