@@ -1123,7 +1123,7 @@ const albums = [
         artist: "Guru Guru",
         year: 1972,
         country: regions.GERMANY,
-        criteria: [criteria.GERMAN, criteria.JAM, criteria.GREASY_SEVENTIES, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.LENGTHY_TRACKS, criteria.SPACY],
+        criteria: [criteria.GERMAN, criteria.JAM, criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.LENGTHY_TRACKS, criteria.SPACY],
         selectedTrackTitle: "Oxymoron",
         selectedTrackYtId: "NSkgEAvISL4",
         spotifyId: "5fEwSGwhGXaUJKu5NDEfBL",
@@ -1147,6 +1147,25 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "guy_skornik_pour_pauwels",
+        title: "Pour Pauwels",
+        artist: "Guy Skornik",
+        year: 1971,
+        country: regions.FRANCE,
+        criteria: [criteria.FRENCH, criteria.C_PSYCHE, criteria.TRANSITION, criteria.UNCOMMON_INSTRUMENTS, criteria.BAROQUE, criteria.C_FOLK, criteria.FANFARE],
+        selectedTrackTitle: "Gurdjieff",
+        selectedTrackYtId: "mBcT92xlfqc",
+        spotifyId: "6twtvqinYGsUaeZ0QEOus3",
+        deezerId: "7126910",
+        designers: [],
+        similarAlbums: ["serge_gainsbourg_histoire_de_melody_nelson"],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Guy Skornik - Histoires De Fous
+    // TODO INTROUVABLE Guy Skornik - Histoires D'amour
+    // TODO INTROUVABLE Guy Skornik - Namasté !
+    // TODO INTROUVABLE Guy Skornik - Ils Viennent Du Futur !
     {
         id: "gypsy_gypsy",
         title: "Gypsy",

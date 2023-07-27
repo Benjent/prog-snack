@@ -1,5 +1,6 @@
 import { regions } from "./regions"
 
+// https://emojiterra.com/flags/
 const flags = {
     [regions.ARGENTINA]: "🇦🇷",
     [regions.AUSTRALIA]: "🇦🇺",
@@ -35,6 +36,7 @@ const flags = {
     [regions.QUEBEC]: "🇨🇦",
     [regions.RUSSIA]: "🇷🇺",
     [regions.SCOTLAND]: "🇬🇧",
+    [regions.SERBIA]: "🇷🇸",
     [regions.SLOVAKIA]: "🇸🇰",
     [regions.SOUTH_AFRICA]: "🇿🇦",
     [regions.SPAIN]: "🇪🇸",

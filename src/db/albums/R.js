@@ -3,6 +3,21 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "r_m_tocak_r_m_tocak",
+        title: "R. M. Točak",
+        artist: "R. M. Točak",
+        year: 1977,
+        country: regions.SERBIA,
+        criteria: [criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.JAM, criteria.JAZZY_GROOVY],
+        selectedTrackTitle: "Oro",
+        selectedTrackYtId: "Hn96aaTyJRA",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Rade Mudrinić"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "rainbow_rainbow",
         title: "Rainbow",
         artist: "Rainbow",
