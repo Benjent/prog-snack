@@ -3,6 +3,21 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "bb_blunder_workers_playtime",
+        title: "Workers' Playtime",
+        artist: "B. B. Blunder",
+        year: 1971,
+        country: regions.ENGLAND,
+        criteria: [criteria.ROCK, criteria.SOUND_COLLAGES, criteria.C_PSYCHE, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Research",
+        selectedTrackYtId: "X0sfV6h2WG0",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Kevin Westlake", "Peter Swales", "Keith Morris"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "baba_yaga_collage",
         title: "Collage",
         artist: "Baba Yaga",
