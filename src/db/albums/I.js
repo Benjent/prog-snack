@@ -266,7 +266,7 @@ const albums = [
         artist: "Iris",
         year: 1972,
         country: regions.FRANCE,
-        criteria: [criteria.FRENCH, criteria.HUMBLE, criteria.SOUND_COLLAGES, criteria.C_PSYCHE, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT],
+        criteria: [criteria.FRENCH, criteria.HUMBLE, criteria.SOUND_COLLAGES, criteria.C_PSYCHE, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.SOFT, criteria.GLITTER],
         selectedTrackTitle: `Donnez-Moi De L'eau`,
         selectedTrackYtId: "eUh5jHcxQKc",
         spotifyId: null,
