@@ -69,7 +69,7 @@ const albums = [
         artist: "Ibio",
         year: 1978,
         country: regions.SPAIN,
-        criteria: [criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.SPANISH, criteria.C_ELECTRO],
+        criteria: [criteria.INSTRUMENTAL, criteria.SYMPHONIC, criteria.SPANISH, criteria.C_ELECTRO, criteria.GLITTER],
         selectedTrackTitle: `Cuevas De Altamira`,
         selectedTrackYtId: "tYrx-IEe9RQ",
         spotifyId: "7JHzOcKxQZVRAeAHIHjjSn",
