@@ -3,6 +3,21 @@ import { criteria } from "../criteria"
 
 const albums = [
     {
+        id: "da_capo_da_capo",
+        title: "Da Capo",
+        artist: "Da Capo",
+        year: 1972,
+        country: regions.GERMANY,
+        criteria: [criteria.ROCK, criteria.JAM, criteria.HUMBLE],
+        selectedTrackTitle: "A Day In The Rest Of My Life",
+        selectedTrackYtId: "W9eCCDFKJds",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Da Capo"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "dada_dada",
         title: "Dada",
         artist: "Dada",
