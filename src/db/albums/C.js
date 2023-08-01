@@ -2008,6 +2008,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "crack_si_todo_hiciera_crack",
+        title: "Si Todo Hiciera Crack",
+        artist: "Crack",
+        year: 1979,
+        country: regions.SPAIN,
+        criteria: [criteria.SPANISH, criteria.UNCOMMON_INSTRUMENTS, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.FEMALE],
+        selectedTrackTitle: "Descenso En El Mahëllstrong",
+        selectedTrackYtId: "5oMuGu4Rc-s",
+        spotifyId: "0Zh3MW5fWFJ9lRoiKJvdYY",
+        deezerId: "120807892",
+        designers: ["Manuel Cuevas"],
+        similarAlbums: [],
+        isAGem: false, // TODO almost a gem
+    },
+    {
         id: "crack_the_sky_crack_the_sky",
         title: "Crack The Sky",
         artist: "Crack The Sky",
