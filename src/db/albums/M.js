@@ -1005,7 +1005,7 @@ const albums = [
         artist: "Métabolisme",
         year: 1977,
         country: regions.FRANCE,
-        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC], // TODO
+        criteria: [criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.SYMPHONIC],
         selectedTrackTitle: "Apôtres Et Martyrs",
         selectedTrackYtId: "VX7hkYazq58",
         spotifyId: "0xcbIKxMZRUy5MpMQhMyg2",
