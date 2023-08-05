@@ -2400,6 +2400,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "czar_czar",
+        title: "Czar",
+        artist: "Czar",
+        year: 1970,
+        country: regions.ENGLAND,
+        criteria: [criteria.GREASY_SEVENTIES, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Tread Softly On My Dreams",
+        selectedTrackYtId: "c628WeOSjLA",
+        spotifyId: null,
+        deezerId: "394848",
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
