@@ -1559,6 +1559,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "brainbox_brainbox",
+        title: "Brainbox",
+        artist: "Brainbox",
+        year: 1969,
+        country: regions.NETHERLANDS,
+        criteria: [criteria.C_FOLK, criteria.LENGTHY_TRACKS, criteria.BLUESY, criteria.JAM],
+        selectedTrackTitle: "Sea Of Delight",
+        selectedTrackYtId: "yHbEyRzwKn4",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Jacques Bontje"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE - Brainbox - Parts
+    {
         id: "brainchild_healing_of_the_lunatic_owl",
         title: "Healing Of The Lunatic Owl",
         artist: "Brainchild",
