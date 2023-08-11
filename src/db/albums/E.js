@@ -574,6 +574,7 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO Remove below Elton John, non-prog albums?
     {
         id: "elton_john_tumbleweed_connection",
         title: "Tumbleweed Connection",
