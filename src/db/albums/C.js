@@ -2073,7 +2073,7 @@ const albums = [
         artist: "Crazy Mabel",
         year: 1970,
         country: regions.ENGLAND,
-        criteria: [criteria.LIVE, criteria.ROCK, criteria.C_JAZZ, criteria.UNCOMMON_INSTRUMENTS],
+        criteria: [criteria.LIVE, criteria.ROCK, criteria.C_JAZZ, criteria.UNCOMMON_INSTRUMENTS, criteria.BLUESY],
         selectedTrackTitle: "Beat Goes On",
         selectedTrackYtId: "0gGA3UbUJuM",
         spotifyId: null,
