@@ -1301,6 +1301,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "pythagoras_after_the_silence",
+        title: "After The Silence",
+        artist: "Pythagoras",
+        year: 1982,
+        country: regions.NETHERLANDS,
+        criteria: [criteria.SOUND_COLLAGES, criteria.INSTRUMENTAL, criteria.ELECTRO, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "2nd Movement: Opus II Étude For Flying V",
+        selectedTrackYtId: "01-fFn5SnLg",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Young Rooster", "M.P. Bakker", "Sjoerd Dijkstra"],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
