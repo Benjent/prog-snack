@@ -1231,7 +1231,7 @@ const albums = [
         artist: "Fuchsia",
         year: 1971,
         country: regions.ENGLAND,
-        criteria: [criteria.SOFT, criteria.C_PSYCHE, criteria.FOLK, criteria.FEMALE],
+        criteria: [criteria.C_PSYCHE, criteria.C_FOLK, criteria.FEMALE, criteria.BAROQUE, criteria.SYMPHONIC],
         selectedTrackTitle: "The Nothing Song",
         selectedTrackYtId: "MRlr3WYNVjA",
         spotifyId: "4CrrecfGaq43xBDvHt2wSf",
