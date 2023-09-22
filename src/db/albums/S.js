@@ -177,7 +177,7 @@ const albums = [
         artist: "Semiramis",
         year: 1973,
         country: regions.ITALY,
-        criteria: [criteria.ODD_RHYTHM, criteria.TECHNICAL, criteria.SYMPHONIC, criteria.SPECTACULAR, criteria.ITALIAN],
+        criteria: [criteria.ODD_RHYTHM, criteria.TECHNICAL, criteria.SYMPHONIC, criteria.SPECTACULAR, criteria.ITALIAN, criteria.BAROQUE, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: "Luna Park",
         selectedTrackYtId: "T2PVgfv0OR4",
         spotifyId: "0BWTfsFWL3TuBXZ2dBA7GV",
