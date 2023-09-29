@@ -310,6 +310,22 @@ const albums = [
         description: `TODO description`,
     },
     {
+        id: "shampoo_volume_one",
+        title: "Volume One",
+        artist: "Shampoo",
+        year: 1971,
+        country: regions.BELGIUM,
+        criteria: [criteria.FANFARE, criteria.C_PSYCHE, criteria.SYMPHONIC, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_JAZZ, criteria.BAROQUE, criteria.JAZZY_GROOVY, criteria.FRENCH, criteria.ODD_RHYTHM],
+        selectedTrackTitle: "Some Reason",
+        selectedTrackYtId: "5sBH3GZsSSo",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Luk Rijckaert"],
+        similarAlbums: [], // TODO recreation? atom heart mother? comus?
+        isAGem: true,
+        description: `TODO description`,
+    },
+    {
         id: "shark_move_ghede_chokras_shark_move",
         title: "Ghede Chokra's Shark Move",
         artist: "Shark Move",
