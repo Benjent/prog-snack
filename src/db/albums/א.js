@@ -64,6 +64,21 @@ const albums = [
         isAGem: true,
         description: `TODO Description`,
     },
+    {
+        id: "shlomo_gronich_why_didnt_you_tell_me",
+        title: "למה לא סיפרת לי!?",
+        artist: "שלמה גרוניך",
+        year: 1971,
+        country: regions.ISRAEL,
+        criteria: [criteria.HEBREW, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.BAROQUE, criteria.GREASY_SEVENTIES, criteria.ODD_RHYTHM, criteria.PIANO, criteria.C_PSYCHE],
+        selectedTrackTitle: "לנשום עמוק",
+        selectedTrackYtId: "Zu6m1s5lKsY",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
