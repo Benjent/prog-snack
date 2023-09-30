@@ -1,6 +1,9 @@
 import { regions } from "../regions"
 import { criteria } from "../criteria"
 
+/**
+ * @type {Array.<import(".").Album>}
+ */
 const albums = [
     {
         id: "kaamos_deeds_and_talks",

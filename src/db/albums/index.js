@@ -30,6 +30,27 @@ import albumsД from "./Д"
 import albumsא from "./א"
 import albumsあ from "./あ"
 
+/**
+ * @typedef Album
+ * @property {string} id
+ * @property {string} title
+ * @property {string} artist
+ * @property {number} year
+ * @property {keyof typeof import("../regions/regions").regions} country
+ * @property {Array.<keyof typeof import("../criteria/criteria").criteria>} criteria
+ * @property {string} selectedTrackTitle
+ * @property {string?} selectedTrackYtId
+ * @property {string?} spotifyId
+ * @property {string?} deezerId
+ * @property {Array.<string>} designers
+ * @property {Array.<Album["id"]>} similarAlbums
+ * @property {boolean} isAGem
+ * @property {string} [description]
+ */
+
+/**
+ * @type Album[]
+ */
 const albums = [].concat(
     albumsA,
     albumsB,

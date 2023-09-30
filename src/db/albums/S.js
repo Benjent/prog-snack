@@ -1,6 +1,9 @@
 import { regions } from "../regions"
 import { criteria } from "../criteria"
 
+/**
+ * @type {Array.<import(".").Album>}
+ */
 const albums = [
     // TODO INTROUVABLE - Salis - Sa Vida Ita Est - 1971
     // TODO INTROUVABLE - Salis - Seduto Sull'Alba A Guardare - 1974

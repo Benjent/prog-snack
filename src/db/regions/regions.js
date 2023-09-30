@@ -1,5 +1,9 @@
 // 3-occurence update : the region, its flag and its vue-filter translation
-const regions = {
+/**
+ * @enum {string}
+ * @readonly
+ */
+const regions = /** @type {const} */ ({
     ARGENTINA: "ARGENTINA",
     AUSTRALIA: "AUSTRALIA",
     AUSTRIA: "AUSTRIA",
@@ -43,8 +47,12 @@ const regions = {
     USA: "USA", // TODO split by region
     VENEZUELA: "VENEZUELA",
     WALES: "WALES",
-}
+})
 
+/**
+ * @type { Record<keyof typeof regions, string> }
+ * @readonly
+*/
 const regionLabels = {
     [regions.ARGENTINA]: "Argentina",
     [regions.AUSTRALIA]: "Australia",

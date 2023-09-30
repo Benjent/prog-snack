@@ -1,12 +1,12 @@
 import Vue from "vue"
-import { criteriumLabels, categoryLabels, languageLabels } from "../db/criteria"
+import { criteriumLabels, categoryLabels } from "../db/criteria"
 import { regionLabels } from "../db/regions"
 
 Vue.filter("criterium", (value) => {
-    if (!criteriumLabels[value] && !languageLabels[value]) {
+    if (!criteriumLabels[value]) {
         console.error(`Unable to find criterium with value: ${value}`)
     }
-    return criteriumLabels[value] || languageLabels[value]
+    return criteriumLabels[value]
 })
 
 Vue.filter("criteriumCategory", (value) => {
