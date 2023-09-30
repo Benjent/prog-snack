@@ -1,7 +1,11 @@
-import { languages } from "./languages"
+import { languageLabels, languages } from "./languages"
 
 // 4-occurence update : the criterium, its position in the criteria list, its categorization and its vue-filter translation
-const criteria = {
+/**
+ * @enum {string}
+ * @readonly
+ */
+const criteria = /** @type {const} */ ({
     // Concept
     CONCEPT: "CONCEPT",
     STORYLINE: "STORYLINE",
@@ -86,8 +90,12 @@ const criteria = {
     FEMALE: "FEMALE",
     SOUND_COLLAGES: "SOUND_COLLAGES",
     ORCHESTRAL_PARTS: "ORCHESTRAL_PARTS",
-}
+})
 
+/**
+ * @type { Array.<keyof typeof criteria> }
+ * @readonly
+*/
 const criteriaOrder = [
     // Concept
     criteria.CONCEPT,
@@ -175,7 +183,12 @@ const criteriaOrder = [
     criteria.ORCHESTRAL_PARTS,
 ]
 
+/**
+ * @type { Record<keyof typeof criteria, string> }
+ * @readonly
+*/
 const criteriumLabels = {
+    ...languageLabels,
     [criteria.AFROBEAT]: "Afrobeat",
     [criteria.AMBIENT]: "Ambient",
     [criteria.ARENA]: "Arena",

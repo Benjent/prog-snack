@@ -2,7 +2,11 @@ import { criteria } from "./criteria"
 import { languages } from "./languages"
 
 // 3-occurence update : the category, its position in the category list and its vue-filter translation
-const categories = {
+/**
+ * @enum {string}
+ * @readonly
+ */
+const categories = /** @type {const} */ ({
     TYPE: "TYPE",
     LANGUAGE: "LANGUAGE",
     THEME: "THEME",
@@ -14,8 +18,12 @@ const categories = {
     LOUDNESS: "LOUDNESS",
     ARRANGEMENT: "ARRANGEMENT",
     TEMPER: "TEMPER",
-}
+})
 
+/**
+ * @type { Array.<keyof typeof categories> }
+ * @readonly
+*/
 const categoriesOrder = [
     categories.TYPE,
     categories.LANGUAGE,
@@ -26,10 +34,14 @@ const categoriesOrder = [
     categories.STRUCTURE,
     categories.ERA,
     categories.LOUDNESS,
-    criteria.ARRANGEMENT,
-    criteria.TEMPER,
+    categories.ARRANGEMENT,
+    categories.TEMPER,
 ]
 
+/**
+ * @type { Object.<keyof typeof categories, Array.<keyof typeof criteria | keyof typeof languages>> }
+ * @readonly
+*/
 const criteriaCategory = {
     [categories.TYPE]: [
         criteria.CONCEPT,
@@ -116,6 +128,10 @@ const criteriaCategory = {
     ],
 }
 
+/**
+ * @type { Record<keyof typeof categories, string> }
+ * @readonly
+*/
 const categoryLabels = {
     [categories.ARRANGEMENT]: "Arrangement",
     [categories.CONTAINS]: "Contains elements of",

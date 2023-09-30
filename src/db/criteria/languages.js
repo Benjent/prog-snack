@@ -1,5 +1,9 @@
 // 2-occurence update : the language and its vue-filter translation
-const languages = {
+/**
+ * @enum {string}
+ * @readonly
+ */
+const languages = /** @type {const} */ ({
     ARMENIAN: "ARMENIAN",
     BELARUSIAN: "BELARUSIAN",
     BRETON: "BRETON",
@@ -27,8 +31,12 @@ const languages = {
     TIBETAN: "TIBETAN",
     TURKISH: "TURKISH",
     ZEUHL: "ZEUHL",
-}
+})
 
+/**
+ * @type { Record<keyof typeof languages, string> }
+ * @readonly
+*/
 const languageLabels = {
     [languages.ARMENIAN]: "Armenian sung",
     [languages.BELARUSIAN]: "Belarusian sung",

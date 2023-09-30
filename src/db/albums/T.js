@@ -1,6 +1,9 @@
 import { regions } from "../regions"
 import { criteria } from "../criteria"
 
+/**
+ * @type {Array.<import(".").Album>}
+ */
 const albums = [
     {
         id: "t_rex_my_people_were_fair_and_had_sky_in_their_hair_but_now_theyre_content_to_wear_stars_on_their_brows",

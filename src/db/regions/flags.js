@@ -1,6 +1,10 @@
 import { regions } from "./regions"
 
 // https://emojiterra.com/flags/
+/**
+ * @type { Record<keyof typeof regions, string> }
+ * @readonly
+*/
 const flags = {
     [regions.ARGENTINA]: "🇦🇷",
     [regions.AUSTRALIA]: "🇦🇺",

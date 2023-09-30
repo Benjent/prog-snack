@@ -4,16 +4,17 @@ import { sort } from "../utils/array"
 
 // For performance purpose - and because we don't use a db, generate data once instead of creating time-consuming getters
 const artists = []
-let designers = {}
-let albumsSortedByYear = []
+const designers = []
+const albumsSortedByYear = []
 const albumsPerYear = {}
 const albumsPerCountry = {}
 const criteriaOccurences = {}
 const mostUsedCriteriaPerYear = {}
 
 const generateDao = () => {
+    const designersToSort = {}
     albums.forEach((album) => {
-        album.criteria.sort((a, b) => criteriaOrder.indexOf(a) > criteriaOrder.indexOf(b))
+        album.criteria.sort((a, b) => +(criteriaOrder.indexOf(a) > criteriaOrder.indexOf(b)))
 
         // Artists
         if (!artists.includes(album.artist)) {
@@ -22,13 +23,13 @@ const generateDao = () => {
 
         // Designers
         album.designers.forEach((d) => {
-            if (!designers[d]) {
-                designers[d] = {
+            if (!designersToSort[d]) {
+                designersToSort[d] = {
                     name: d,
                     works: [],
                 }
             }
-            designers[d].works.push(album)
+            designersToSort[d].works.push(album)
         })
 
         // Albums per year
@@ -62,7 +63,7 @@ const generateDao = () => {
                 })
             } else {
                 let isFirstOccurence = true
-                for (let k = 0; k < mostUsedCriteriaPerYear[year].length; k++) { // TODO refact
+                for (let k = 0; k < mostUsedCriteriaPerYear[year].length; k++) {
                     if (mostUsedCriteriaPerYear[year][k].criterium === criterium) {
                         mostUsedCriteriaPerYear[year][k].occurences++
                         isFirstOccurence = false
@@ -79,14 +80,14 @@ const generateDao = () => {
         })
     })
 
-    albumsSortedByYear = [...albums]
+    albumsSortedByYear.concat(albums)
     sort(albumsSortedByYear, "year")
 
     Object.values(mostUsedCriteriaPerYear).forEach((criteria) => {
         sort(criteria, "occurences", "DESC")
     })
 
-    designers = Object.values(designers).sort((a, b) => b.works.length - a.works.length)
+    designers.concat(Object.values(designersToSort).sort((a, b) => b.works.length - a.works.length))
 }
 
 generateDao()
