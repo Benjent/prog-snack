@@ -19,6 +19,7 @@ const albums = [
         designers: [],
         similarAlbums: [],
         isAGem: true,
+        description: `TODO description`,
     },
     {
         id: "three_to_the_power_of_three",
