@@ -1606,6 +1606,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "mirthrandir_for_you_the_old_women",
+        title: `For You The Old Women`,
+        artist: "Mirthrandir",
+        year: 1976,
+        country: regions.USA,
+        criteria: [criteria.SYMPHONIC, criteria.FANFARE, criteria.ODD_RHYTHM, criteria.SPECTACULAR, criteria.C_ELECTRO, criteria.TECHNICAL, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: `For You The Old Women`,
+        selectedTrackYtId: "1o3mNCf_kQY",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Patrick Milbourn"],
+        similarAlbums: ["emerson_lake_and_palmer_tarkus"],
+        isAGem: false, // TODO almost
+    },
+    {
         id: "missing_link_nevergreen",
         title: `Nevergreen!`,
         artist: "Missing Link",
