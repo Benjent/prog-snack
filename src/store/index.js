@@ -61,10 +61,6 @@ export default new Vuex.Store({
         mutate(state, payload) {
             Object.assign(state, payload)
         },
-        // TODO remove in favor of mutate
-        selectAlbum(state, payload) {
-            state.selectedAlbum = payload
-        },
     },
     actions: {
         loadDatabase(context) {
@@ -74,11 +70,10 @@ export default new Vuex.Store({
         randomizeAlbum(context) {
             const { albums } = context.state
             const index = getRandomNumber(albums.length)
-            const album = albums[index]
-            context.commit("selectAlbum", album)
+            context.commit("mutate", { selectedAlbum: albums[index] })
         },
         selectAlbum(context, payload) {
-            context.commit("selectAlbum", payload)
+            context.commit("mutate", { selectedAlbum: payload })
         },
     },
     modules: {},
