@@ -3,24 +3,22 @@ import Vuex from "vuex"
 import { getRandomNumber } from "../utils/math"
 import { regions } from "../db/regions"
 import subgenres from "../db/subgenres"
-import {
-    albums, artists, designers, albumsPerYear, albumsPerCountry, albumsSortedByYear, criteriaOccurences, mostUsedCriteriaPerYear,
-} from "../db/dao"
+import { generateDao } from "../db/dao"
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        albums,
-        artists,
-        designers,
+        albums: [],
+        artists: [],
+        designers: [],
         regions,
         subgenres,
-        albumsPerYear,
-        albumsPerCountry,
-        albumsSortedByYear,
-        criteriaOccurences,
-        mostUsedCriteriaPerYear,
+        albumsPerYear: {},
+        albumsPerCountry: {},
+        albumsSortedByYear: [],
+        criteriaOccurences: {},
+        mostUsedCriteriaPerYear: {},
         selectedAlbum: null,
     },
     getters: {
@@ -60,12 +58,21 @@ export default new Vuex.Store({
         },
     },
     mutations: {
+        mutate(state, payload) {
+            Object.assign(state, payload)
+        },
+        // TODO remove in favor of mutate
         selectAlbum(state, payload) {
             state.selectedAlbum = payload
         },
     },
     actions: {
+        loadDatabase(context) {
+            const dao = generateDao()
+            context.commit("mutate", dao)
+        },
         randomizeAlbum(context) {
+            const { albums } = context.state
             const index = getRandomNumber(albums.length)
             const album = albums[index]
             context.commit("selectAlbum", album)

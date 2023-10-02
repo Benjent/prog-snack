@@ -1,7 +1,7 @@
 /**
  * Suffle an array.
  * @param {array} array - The array to shuffle.
- * @return {string} The shuffled array.
+ * @return {array} The shuffled array.
  */
 const shuffle = (array) => {
     // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -25,6 +25,7 @@ const shuffle = (array) => {
  * @param {array} array - The array to sort.
  * @param {string} property - The property to sort the array by.
  * @param {string} orderBy - The order to sort the array by.
+ * @returns {array} - The sorted array.
  */
 const sort = (array, property, orderBy = "ASC") => {
     if (orderBy === "DESC") {
@@ -40,6 +41,7 @@ const sort = (array, property, orderBy = "ASC") => {
             return 0
         })
     }
+    return array
 }
 
 export {
