@@ -1254,7 +1254,7 @@ const albums = [
         deezerId: "7126910",
         designers: [],
         similarAlbums: ["serge_gainsbourg_histoire_de_melody_nelson"],
-        isAGem: false,
+        isAGem: false, // TODO gem?
     },
     // TODO INTROUVABLE Guy Skornik - Histoires De Fous
     // TODO INTROUVABLE Guy Skornik - Histoires D'amour
