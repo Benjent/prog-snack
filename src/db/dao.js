@@ -3,15 +3,12 @@ import { criteriaOrder } from "./criteria"
 import { sort } from "../utils/array"
 
 // For performance purpose - and because we don't use a db, generate data once instead of creating time-consuming getters
-const artists = []
-const designers = []
-const albumsSortedByYear = []
-const albumsPerYear = {}
-const albumsPerCountry = {}
-const criteriaOccurences = {}
-const mostUsedCriteriaPerYear = {}
-
 const generateDao = () => {
+    const artists = []
+    const albumsPerYear = {}
+    const albumsPerCountry = {}
+    const criteriaOccurences = {}
+    const mostUsedCriteriaPerYear = {}
     const designersToSort = {}
     albums.forEach((album) => {
         album.criteria.sort((a, b) => +(criteriaOrder.indexOf(a) > criteriaOrder.indexOf(b)))
@@ -80,25 +77,22 @@ const generateDao = () => {
         })
     })
 
-    albumsSortedByYear.concat(albums)
-    sort(albumsSortedByYear, "year")
-
     Object.values(mostUsedCriteriaPerYear).forEach((criteria) => {
         sort(criteria, "occurences", "DESC")
     })
 
-    designers.concat(Object.values(designersToSort).sort((a, b) => b.works.length - a.works.length))
+    return {
+        albums,
+        artists,
+        designers: Object.values(designersToSort).sort((a, b) => b.works.length - a.works.length),
+        albumsPerYear,
+        albumsPerCountry,
+        albumsSortedByYear: sort([...albums], "year"),
+        criteriaOccurences,
+        mostUsedCriteriaPerYear,
+    }
 }
 
-generateDao()
-
 export {
-    albums,
-    artists,
-    designers,
-    albumsPerYear,
-    albumsPerCountry,
-    albumsSortedByYear,
-    criteriaOccurences,
-    mostUsedCriteriaPerYear,
+    generateDao,
 }

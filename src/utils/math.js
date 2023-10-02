@@ -1,6 +1,6 @@
 /**
  * Get a random integer.
- * @param {max} array - The maximum possible integer.
+ * @param {number} max - The maximum possible integer.
  * @return {number} A random integer.
  */
 const getRandomNumber = (max) => {

@@ -11,11 +11,18 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
 import { TheNavBar } from "./components"
 
 export default {
     components: {
         TheNavBar,
+    },
+    created() {
+        this.loadDatabase()
+    },
+    methods: {
+        ...mapActions(["loadDatabase"]),
     },
 }
 </script>
