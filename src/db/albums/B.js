@@ -1516,6 +1516,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "bloque_bloque",
+        title: "Bloque",
+        artist: "Bloque",
+        year: 1978,
+        country: regions.SPAIN,
+        criteria: [criteria.SPANISH, criteria.C_ELECTRO, criteria.JAM],
+        selectedTrackTitle: "Consultando El Tarot",
+        selectedTrackYtId: "E83zzUsl-HM",
+        spotifyId: "3vaTrFTAJBtU4EwQ2k6dAd",
+        deezerId: "8722131",
+        designers: [],
+        similarAlbums: ["eloy_colours"],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Bloque reste discographie
+    {
         id: "blossom_toes_we_are_ever_so_clean",
         title: "We Are Ever So Clean",
         artist: "Blossom Toes",
