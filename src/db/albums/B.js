@@ -397,6 +397,21 @@ const albums = [
         isAGem: false, // todo almost a gem!
     },
     {
+        id: "banzai_hora_nata",
+        title: `Hora Nata`,
+        artist: "Banzaï",
+        year: 1975,
+        country: regions.BELGIUM,
+        criteria: [criteria.GLITTER, criteria.C_ELECTRO, criteria.SYMPHONIC, criteria.LENGTHY_TRACKS, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Obelisk",
+        selectedTrackYtId: "rH0zjcTHTD0",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "barclay_james_harvest_barclay_james_harvest",
         title: "Barclay James Harvest",
         artist: "Barclay James Harvest",
