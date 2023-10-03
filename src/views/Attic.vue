@@ -160,7 +160,7 @@ export default {
                     this.filterModel.push(filterPanel)
                 }
             })
-            this.filterModel.sort((a, b) => categoriesOrder.indexOf(a) > categoriesOrder.indexOf(b))
+            this.filterModel.sort((a, b) => +(categoriesOrder.indexOf(a) > categoriesOrder.indexOf(b)))
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
