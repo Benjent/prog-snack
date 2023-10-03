@@ -8,6 +8,7 @@
                     </div>
 
                     <Accordion title="Year" drawered>
+                        <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
                         <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic" />
                         <template v-if="selectedYear === 'Custom'">
                             <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
@@ -15,10 +16,12 @@
                     </Accordion>
 
                     <Accordion title="Region" drawered>
+                        <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
                         <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
                     </Accordion>
 
                     <Accordion title="Language" drawered>
+                        <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
                         <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
                     </Accordion>
 
