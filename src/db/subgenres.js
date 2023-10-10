@@ -1,5 +1,17 @@
 import { criteria } from "./criteria"
 
+/**
+ * @typedef Subgenre
+ * @property {string} name
+ * @property {string} description
+ * @property {import("./albums").Album["id"]} mostRepresentativeAlbum
+ * @property {Array.<import("./albums").Album["id"]>} albums
+ * @property {Array.<keyof typeof import("./criteria").criteria>} criteria
+ */
+
+/**
+ * @type Subgenre[]
+ */
 const subgenres = [
     {
         name: "Afrobeat",
