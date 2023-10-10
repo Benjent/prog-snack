@@ -49,6 +49,7 @@ const flags = {
     [regions.USA]: "🇺🇸",
     [regions.VENEZUELA]: "🇻🇪",
     [regions.WALES]: "🇬🇧",
+    [regions.ZAMBIA]: "🇿🇲",
 }
 
 export default flags

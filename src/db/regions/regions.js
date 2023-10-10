@@ -47,6 +47,7 @@ const regions = /** @type {const} */ ({
     USA: "USA", // TODO split by region
     VENEZUELA: "VENEZUELA",
     WALES: "WALES",
+    ZAMBIA: "ZAMBIA",
 })
 
 /**
@@ -97,6 +98,7 @@ const regionLabels = {
     [regions.USA]: "USA", // TODO split by region
     [regions.VENEZUELA]: "Venezuela",
     [regions.WALES]: "Wales",
+    [regions.ZAMBIA]: "Zambia",
 }
 
 export {
