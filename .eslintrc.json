@@ -9,6 +9,7 @@
     "plugin:vuejs-accessibility/recommended",
     "@vue/airbnb"
   ],
+  "plugins": ["tsc"],
   "parserOptions": {
     "parser": "babel-eslint"
   },
