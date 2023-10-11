@@ -16,6 +16,7 @@
 - Write E2E tests
 - Bind Playwright to CI (https://dev.to/ysfaran/how-to-use-playwright-with-github-actions-and-github-pages-4gdl)
 - Bind Jest to CI
+- Bind JSDoc to CI
 
 ## Accessibility
 

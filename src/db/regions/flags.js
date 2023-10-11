@@ -1,7 +1,7 @@
 import { regions } from "./regions"
 
-// https://emojiterra.com/flags/
 /**
+ * Emoji flags can be found at https://emojiterra.com/flags/ through the unicode data
  * @type { Record<keyof typeof regions, string> }
  * @readonly
 */
@@ -49,6 +49,7 @@ const flags = {
     [regions.USA]: "🇺🇸",
     [regions.VENEZUELA]: "🇻🇪",
     [regions.WALES]: "🇬🇧",
+    [regions.ZAMBIA]: "🇿🇲",
 }
 
 export default flags
