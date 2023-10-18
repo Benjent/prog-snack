@@ -41,7 +41,7 @@ const albums = [
         artist: "Easter Island",
         year: 1979,
         country: regions.USA,
-        criteria: [criteria.ODD_RHYTHM, criteria.HEAVY, criteria.C_JAZZ, criteria.SYMPHONIC],
+        criteria: [criteria.ODD_RHYTHM, criteria.HEAVY, criteria.C_JAZZ, criteria.SYMPHONIC, criteria.C_ELECTRO],
         selectedTrackTitle: "Face To Face",
         selectedTrackYtId: "UL50QdzUqMY",
         spotifyId: null,
