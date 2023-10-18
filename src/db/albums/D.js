@@ -1143,7 +1143,7 @@ const albums = [
         artist: "Duello Madre",
         year: 1973,
         country: regions.ITALY,
-        criteria: [criteria.C_PSYCHE, criteria.C_JAZZ, criteria.ITALIAN, criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.JAM],
+        criteria: [criteria.C_PSYCHE, criteria.C_JAZZ, criteria.ITALIAN, criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS],
         selectedTrackTitle: "Madre",
         selectedTrackYtId: "0vnYkHKD57I",
         spotifyId: null,
