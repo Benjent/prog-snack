@@ -2070,6 +2070,23 @@ const albums = [
         isAGem: true,
         description: `TODO Description`, // very very crazy, album sur le joker limite, un peu en mode fin du monde, armaggeddoon
     },
+    // TODO introuvable Coses - SPAIN - Via Fora!
+    // TODO introuvable Coses - SPAIN - Ara És Demà
+    {
+        id: "coses_perque_no_sapagui_laire",
+        title: "Perquè No S'apagui L'aire",
+        artist: "Coses",
+        year: 1978,
+        country: regions.SPAIN,
+        criteria: [criteria.LENGTHY_TRACKS, criteria.C_FOLK, criteria.CATALAN, criteria.BAROQUE, criteria.FANFARE, criteria.UNCOMMON_INSTRUMENTS, criteria.PIANO, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.SPECTACULAR],
+        selectedTrackTitle: "Cançó Del Campaner De Taüll",
+        selectedTrackYtId: "Ve5npwL9D90",
+        spotifyId: "5RFPWrQj7HHHYZSZlCBPsT",
+        deezerId: "365510",
+        designers: ["Ramon Llatjós", "Lluis Masdeu"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     {
         id: "costa_blanca_viaje_a_prantia",
         title: "Viaje A Prantía",
