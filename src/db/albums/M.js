@@ -803,6 +803,24 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO introuvable Maurizio Fabrizio - Azzurri Orizzonti
+    {
+        id: "maurizio_fabrizio_movimenti_nel_cielo",
+        title: "Movimenti Nel Cielo",
+        artist: "Maurizio Fabrizio",
+        year: 1978,
+        country: regions.ITALY,
+        criteria: [criteria.BAROQUE, criteria.UNCOMMON_INSTRUMENTS, criteria.CONCEPT, criteria.INSTRUMENTAL, criteria.ORCHESTRAL_PARTS, criteria.ODD_RHYTHM, criteria.C_FOLK, criteria.PIANO],
+        selectedTrackTitle: "Movenze Degli Anelli Di Saturno",
+        selectedTrackYtId: "cqVCGN8r5m4",
+        spotifyId: "3g1iBYuYe2Un4Q3KuoBEro",
+        deezerId: null,
+        designers: ["Mario Convertino"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO introuvable Maurizio Fabrizio - Primo
+    // TODO introuvable Maurizio Fabrizio - Personaggi
     {
         id: "maxophone_maxophone",
         title: "Maxophone",
