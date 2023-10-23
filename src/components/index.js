@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Accordion from "./Accordion/Accordion.vue"
 import AlbumStarter from "./AlbumStarter/AlbumStarter.vue"
 import Check from "./Check/Check.vue"

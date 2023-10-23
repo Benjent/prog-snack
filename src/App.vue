@@ -10,11 +10,12 @@
     </fade-transition>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue"
 import { mapActions } from "vuex"
 import { TheNavBar } from "./components"
 
-export default {
+export default Vue.extend({
     components: {
         TheNavBar,
     },
@@ -24,7 +25,7 @@ export default {
     methods: {
         ...mapActions(["loadDatabase"]),
     },
-}
+})
 </script>
 
 <style lang="scss">
