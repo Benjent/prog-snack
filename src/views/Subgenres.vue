@@ -21,7 +21,7 @@
                         @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)" />
 
                     <div class="subgenres__infos">
-                        <h2 class="title title--2 subgenres__name text--name">{{ subgenre.name }}</h2>
+                        <Heading :level="2" class="subgenres__name text--name">{{ subgenre.name }}</Heading>
                         <p>
                             <span>Characterized by the following: </span>
                             <List class="subgenres__criterium" :values="subgenre.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
@@ -37,11 +37,12 @@
 <script>
 import { mapActions, mapState, mapGetters } from "vuex"
 import { applyChainedFadeIn } from "../utils/transition"
-import { Cover, List } from "../components"
+import { Cover, Heading, List } from "../components"
 
 export default {
     components: {
         Cover,
+        Heading,
         List,
     },
     computed: {
@@ -68,7 +69,6 @@ export default {
 @import '../style/gatherer';
 @import '../style/mixins/fade-in';
 @import '../style/mixins/page';
-@import '../style/modules/text';
 @import '../style/modules/text';
 @import '../style/modules/title';
 

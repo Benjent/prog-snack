@@ -2,7 +2,7 @@
     <fade-transition appear>
         <main class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
-                <h2 class="title title--2 text--name">{{ designer.name }}</h2>
+                <Heading :level="2" class="text--name">{{ designer.name }}</Heading>
 
                 <div class="card designers__albums" :class="getClassDesigner(designer.name)">
                     <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
@@ -18,11 +18,12 @@
 import { mapActions, mapState } from "vuex"
 import { shuffle } from "../utils/array"
 import { applyChainedFadeIn } from "../utils/transition"
-import { Cover } from "../components"
+import { Cover, Heading } from "../components"
 
 export default {
     components: {
         Cover,
+        Heading,
     },
     computed: {
         ...mapState(["designers"]),

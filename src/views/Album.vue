@@ -5,8 +5,8 @@
             <section class="album__body" :key="selectedAlbum.id">
                 <slide-x-left-transition appear>
                     <div class="album__info">
-                        <h2 class="title title--2">{{ selectedAlbum.artist }}</h2>
-                        <h1 class="title title--1 text--name">{{ selectedAlbum.title }}</h1>
+                        <Heading :level="2">{{ selectedAlbum.artist }}</Heading>
+                        <Heading class="text--name">{{ selectedAlbum.title }}</Heading>
                         <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</div>
                     </div>
                 </slide-x-left-transition>
@@ -32,7 +32,7 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import {
-    AlbumStarter, Cover, List, Timeline,
+    AlbumStarter, Cover, Heading, List, Timeline,
 } from "../components"
 
 export default {
@@ -40,8 +40,9 @@ export default {
     components: {
         AlbumStarter,
         Cover,
-        Timeline,
+        Heading,
         List,
+        Timeline,
     },
     computed: {
         ...mapState(["selectedAlbum"]),

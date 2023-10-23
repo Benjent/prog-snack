@@ -6,8 +6,8 @@
 
                 <div class="gems__album">
                     <button class="gems__title" @click="selectAlbumAndView(album)">
-                        <h3 class="title title--3">{{album.artist}}</h3>
-                        <h2 class="title title--2 text--name">{{album.title}}</h2>
+                        <Heading :level="3">{{ album.artist }}</Heading>
+                        <Heading :level="2" class="text--name">{{ album.title }}</Heading>
                         <span>({{album.year}})</span>
                     </button>
                     <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
@@ -19,11 +19,12 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { Cover } from "../components"
+import { Cover, Heading } from "../components"
 
 export default {
     components: {
         Cover,
+        Heading,
     },
     computed: {
         ...mapState(["albumsSortedByYear"]),

@@ -2,11 +2,11 @@
     <fade-transition appear>
         <main class="about">
             <div class="about__section">
-                <h1 class="title title--1">Hi!</h1>
+                <Heading>Hi!</Heading>
 
-                <h3 class="title title--3">
+                <Heading :level="3">
                     Prog Snack is a tiny web project with big music ambitions: dusting old prog albums, known as prog gems, to make them shine beside classic albums.
-                </h3>
+                </Heading>
                 <p class="text text--paragraph">
                     Prog albums are anything related to progressive music, from late 60's psychedelic vibes to early 80's electronic wave ; still focusing on the progressive bloom of the 70's and not going further than 1965-1995.
                 </p>
@@ -39,9 +39,11 @@
 </template>
 
 <script>
+import { Heading } from "../components"
 import { criteria } from "../db/criteria"
 
 export default {
+    components: { Heading },
     data() {
         return {
             criteria,
