@@ -1,5 +1,5 @@
 <template>
-    <component class="title" :class="{ [`title--${level}`]: level }" :is="is">
+    <component class="heading title" :class="{ [`title--${level}`]: level }" :is="is">
         <slot />
     </component>
 </template>
