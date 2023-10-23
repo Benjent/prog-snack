@@ -2,6 +2,7 @@ import Accordion from "./Accordion/Accordion.vue"
 import AlbumStarter from "./AlbumStarter/AlbumStarter.vue"
 import Check from "./Check/Check.vue"
 import Cover from "./Cover/Cover.vue"
+import Heading from "./Heading/Heading.vue"
 import Histogram from "./Histogram/Histogram.vue"
 import Icon from "./Icon/Icon.vue"
 import List from "./List/List.vue"
@@ -12,12 +13,14 @@ import SearchBar from "./SearchBar/SearchBar.vue"
 import Select from "./Select/Select.vue"
 import TheNavBar from "./TheNavBar.vue"
 import Timeline from "./Timeline.vue"
+import Typography from "./Typography/Typography.vue"
 
 export {
     Accordion,
     AlbumStarter,
     Check,
     Cover,
+    Heading,
     Histogram,
     Icon,
     List,
@@ -28,4 +31,5 @@ export {
     Select,
     TheNavBar,
     Timeline,
+    Typography,
 }

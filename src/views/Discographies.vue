@@ -14,12 +14,12 @@
             <section class="discographies__main">
                 <section class="discographies__selectedAlbum">
                     <div>
-                        <h2 class="title title--2">{{ selectedAlbum.artist }} discography</h2>
+                        <Heading :level="2">{{ selectedAlbum.artist }} discography</Heading>
                         <div v-if="$mq === 'M'" class="card discographies__selectedAlbum__main">
                             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
-                            <h2 class="title title--2 text--name">{{selectedAlbum.title}}</h2>
-                            <h3 class="title title--3"><Icon name="event" /> {{selectedAlbum.year}}</h3>
-                            <h3 class="title title--3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</h3>
+                            <Heading :level="2" class="text--name">{{ selectedAlbum.title }}</Heading>
+                            <Heading :level="3"><Icon name="event" /> {{ selectedAlbum.year }}</Heading>
+                            <Heading :level="3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</Heading>
                             <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
                                 <Icon name="palette" />
                                 <List :values="selectedAlbum.designers" type="flattened" />
@@ -78,7 +78,7 @@
                     </div>
 
                     <div v-if="discography.length > 1">
-                        <h3 class="title title--3">From the same artist</h3>
+                        <Heading :level="3">From the same artist</Heading>
                         <div class="card">
                             <section class="discographies__discography">
                                 <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" rounded fade @click.native="selectAlbum(album)" />
@@ -94,7 +94,7 @@
 <script>
 import { mapActions, mapState } from "vuex"
 import {
-    AlbumStarter, Cover, Icon, List,
+    AlbumStarter, Cover, Heading, Icon, List,
 } from "../components"
 import { flags } from "../db/regions"
 import { getDeezerUrl, getSpotifyUrl } from "../utils/url"
@@ -103,6 +103,7 @@ export default {
     components: {
         AlbumStarter,
         Cover,
+        Heading,
         Icon,
         List,
     },
