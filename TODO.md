@@ -4,7 +4,7 @@
 
 - JSON files used for database could be moved to a dedicated repository with an API (https://testfairy.com/blog/utilize-github-pages-as-json-api/ + https://towardsdatascience.com/using-github-pages-for-creating-global-api-76b296c4b3b5)
 - Handle similar albums in a standalone logic so that both albums are linked to one another
-- Create a real design system (use em/rem units, `<Typography>` component, ...)
+- Create a real design system (use em/rem units)
 - Prettier or not prettier?
 - Add a hook that prevent from committing `/cover` images that are not 300x300
 - Remove possible duplicates of github-pages build and deploy actions (package.json)

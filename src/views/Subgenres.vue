@@ -22,10 +22,10 @@
 
                     <div class="subgenres__infos">
                         <Heading :level="2" class="subgenres__name text--name">{{ subgenre.name }}</Heading>
-                        <p>
+                        <Typography>
                             <span>Characterized by the following: </span>
                             <List class="subgenres__criterium" :values="subgenre.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
-                        </p>
+                        </Typography>
                         <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
                     </div>
                 </div>
@@ -37,13 +37,14 @@
 <script>
 import { mapActions, mapState, mapGetters } from "vuex"
 import { applyChainedFadeIn } from "../utils/transition"
-import { Cover, Heading, List } from "../components"
+import { Cover, Heading, List, Typography } from "../components"
 
 export default {
     components: {
         Cover,
         Heading,
         List,
+        Typography,
     },
     computed: {
         ...mapState(["subgenres"]),

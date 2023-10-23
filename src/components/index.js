@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Accordion from "./Accordion/Accordion.vue"
 import AlbumStarter from "./AlbumStarter/AlbumStarter.vue"
 import Check from "./Check/Check.vue"
@@ -14,6 +13,7 @@ import SearchBar from "./SearchBar/SearchBar.vue"
 import Select from "./Select/Select.vue"
 import TheNavBar from "./TheNavBar.vue"
 import Timeline from "./Timeline.vue"
+import Typography from "./Typography/Typography.vue"
 
 export {
     Accordion,
@@ -31,4 +31,5 @@ export {
     Select,
     TheNavBar,
     Timeline,
+    Typography,
 }
