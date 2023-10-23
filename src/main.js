@@ -3,11 +3,12 @@ import VueMq from "vue-mq"
 import Transitions from "vue2-transitions"
 
 import App from "./App.vue"
-import filters from "./filters" // eslint-disable-line no-unused-vars
+import Filters from "./plugins/Filters"
 import router from "./router"
 import store from "./store"
 
 Vue.config.productionTip = false
+Vue.use(Filters)
 Vue.use(VueMq, {
     breakpoints: {
         M: 981, // $mobile + 1
