@@ -3,8 +3,9 @@
         <main class="attic">
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
-                    <div class="attic__reset">
-                        <button class="attic__reset__button button" aria-label="Reset filters" @click="resetFilter()">Reset filters</button>
+                    <div class="attic__actions">
+                        <button class="attic__actions__button button" aria-label="Reset filters" @click="resetFilter()">Reset filters</button>
+                        <button class="attic__actions__button button" aria-label="Download filtered list" @click="downloadFilteredList()">Download filtered list</button>
                     </div>
 
                     <Accordion title="Year" drawered>
@@ -169,6 +170,44 @@ export default {
             this.selectAlbum(album)
             this.$router.push("/discographies")
         },
+        getFilteredAlbums() {
+            const shownAlbumsDom = this.$el.querySelectorAll(".attic__cover:not(.hidden)")
+            // Do not bother if no filter is on
+            if (shownAlbumsDom.length === this.albums.length) {
+                return this.albums
+            }
+            const shownAlbumIds = [...shownAlbumsDom].map((a) => a.id.replace("cover_", ""))
+            return this.albums.filter((a) => shownAlbumIds.includes(a.id))
+        },
+        downloadFilteredList() {
+            const filteredAlbums = this.getFilteredAlbums()
+            // Rework the album type to a database-friendly naming convention. Remove when Supabase migration is over
+            const snakeCasedAlbums = filteredAlbums.map((a) => {
+                return {
+                    id: a.id,
+                    title: a.title,
+                    artist: a.artist,
+                    region: a.country,
+                    criteria: a.criteria,
+                    release_date: `${a.year}-01-01`,
+                    selected_track_title: a.selectedTrackTitle,
+                    selected_track_youtube_id: a.selectedTrackYtId,
+                    spotify_id: a.spotifyId,
+                    deezer_id: a.deezerId,
+                    designers: a.designers,
+                    similar_albums: a.similarAlbums,
+                    is_gem: a.isAGem,
+                    description: a.description,
+                }
+            }) 
+            const dataString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(snakeCasedAlbums))}`
+            const node = document.createElement("a")
+            node.setAttribute("href", dataString)
+            node.setAttribute("download", "prog-snack-albums.json")
+            document.body.appendChild(node) // Required for Firefox
+            node.click()
+            node.remove()
+        },
         resetFilter() {
             this.selectedLanguage = null
             this.selectedRegion = null
@@ -275,13 +314,16 @@ export default {
         scrollbar-width: none;
     }
 
-    & &__reset {
+    & &__actions {
         top: 0;
         position: sticky;
         background: $secondary;
         z-index: 1;
         padding: 15px;
         border-bottom: solid 2px $primary;
+        display: flex;
+        flex-direction: column;
+        gap: var(--form-item-gap);
 
         &__button {
             width: 100%;
@@ -304,7 +346,7 @@ export default {
     }
 
     & &__filter {
-        margin-top: 10px;
+        margin-top: var(--form-item-gap);
 
         &:first-child {
             margin-top: 0;
