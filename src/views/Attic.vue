@@ -188,7 +188,8 @@ export default {
                 this.showAlbum(albumDom)
             })
         },
-        filterAttic(criteriumClicked) {
+        handleFilterPanels(criteriumClicked) {
+            // Use criteria.BLENDS as a mutual exclusive option over "contains element" criteria
             const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium)
             if (criteriumClicked === criteria.BLENDS) {
                 this.containsElementsOfCriteria.forEach((c) => {
@@ -199,7 +200,8 @@ export default {
             } else if (containsCriteria.includes(criteriumClicked)) {
                 this.radioGroups[categories.CONTAINS] = null
             }
-            // Filter model
+        },
+        getWantedCriteria() {
             const wantedCriteria = []
             this.filterModel.forEach((panel) => {
                 panel.criteria.forEach((c) => {
@@ -208,7 +210,13 @@ export default {
                     }
                 })
             })
+            return wantedCriteria
+        },
+        filterAttic(criteriumClicked) {
+            this.handleFilterPanels(criteriumClicked)
+            const wantedCriteria = this.getWantedCriteria()
 
+            // Use CSS display logic over JS array filter logic to allow CSS transitions to be triggered on filter changes
             this.albums.forEach((a) => {
                 const albumDom = this.$el.querySelector(`.${a.id}`)
                 const isAMatch = {
