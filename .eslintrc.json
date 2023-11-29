@@ -5,11 +5,14 @@
     "jest": true
   },
   "extends": [
+    "plugin:storybook/recommended",
     "plugin:vue/essential",
     "plugin:vuejs-accessibility/recommended",
     "@vue/airbnb"
   ],
-  "plugins": ["tsc"],
+  "plugins": [
+    "tsc"
+  ],
   "parserOptions": {
     "parser": "@typescript-eslint/parser"
   },

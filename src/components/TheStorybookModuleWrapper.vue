@@ -12,8 +12,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/sunset';
-@import '~@/style/modules/button';
-@import '~@/style/modules/card';
+@import '@/style/gatherer';
+@import '@/style/mixins/sunset';
+@import '@/style/modules/button';
+@import '@/style/modules/card';
 </style>

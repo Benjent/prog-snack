@@ -24,6 +24,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/modules/title';
+@import '@/style/gatherer';
+@import '@/style/modules/title';
 </style>

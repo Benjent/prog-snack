@@ -86,8 +86,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/modules/gauge';
+@import '@/style/gatherer';
+@import '@/style/modules/gauge';
 
 .histogram {
     display: flex;

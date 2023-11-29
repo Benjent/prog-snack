@@ -2,13 +2,14 @@ import Typography from "./Typography.vue"
 
 export default {
     component: Typography,
+    tags: ["autodocs"],
 }
 
-const Template = () => ({
-    render() {
-        return <Typography>This is a text</Typography>
-    },
-})
-
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { Typography },
+        props: Object.keys(argTypes),
+        template: "<Typography>This is a text</Typography>",
+    }),
+    args: {},
+}

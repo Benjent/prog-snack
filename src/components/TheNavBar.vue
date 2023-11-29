@@ -48,9 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/shadow';
-@import '~@/style/modules/link';
+@import '@/style/gatherer';
+@import '@/style/mixins/shadow';
+@import '@/style/modules/link';
 
 .theNavBar {
     @include shadow;
@@ -64,7 +64,7 @@ export default {
 
     // Image background
     // background-color: #ffffff; // cars.png background color
-    // background-image: url('~@/assets/img/backgrounds/plane.png');
+    // background-image: url('/src/assets/img/backgrounds/plane.png');
     // background-repeat: no-repeat;
     // background-size: 18%;
     // background-position-x: right;

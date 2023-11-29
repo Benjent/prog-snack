@@ -59,25 +59,17 @@ export default {
             return `${5}px`
         },
         cover() {
-            /* eslint-disable global-require */
-            // Cannot build a getPath method because of the following Webpack warning:
-            // Critical dependency: the request of a dependency is an expression
             try {
-                return require(`@/assets/img/covers/${this.album.id}.jpg`)
+                return this.$getAssetUrl(`/src/assets/img/covers/${this.album.id}.jpg`)
             } catch {
                 try {
-                    return require(`@/assets/img/covers/${this.album.id}.jpeg`)
+                    return this.$getAssetUrl(`/src/assets/img/covers/${this.album.id}.png`)
                 } catch {
-                    try {
-                        return require(`@/assets/img/covers/${this.album.id}.png`)
-                    } catch {
-                        // Most probably an error with a file extension (image format) not handled by webpack.
-                        console.error(`Unable to load cover of album with id: ${this.album.id}`)
-                        return null
-                    }
+                    // Most probably an error with a file extension (image format) not handled by webpack.
+                    console.error(`Unable to load cover of album with id: ${this.album.id}`)
+                    return null
                 }
             }
-            /* eslint-enable global-require */
         },
         coverId() {
             return `cover_${this.album.id}`
@@ -95,9 +87,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/fade-in';
-@import '~@/style/mixins/golden';
+@import '@/style/gatherer';
+@import '@/style/mixins/fade-in';
+@import '@/style/mixins/golden';
 
 .cover {
     display: inline-block;

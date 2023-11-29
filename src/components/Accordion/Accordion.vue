@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/sunset';
+@import '@/style/gatherer';
+@import '@/style/mixins/sunset';
 
 .accordion {
     &__title {

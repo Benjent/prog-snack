@@ -4,22 +4,32 @@ export default {
     component: TheStorybookModuleWrapper,
 }
 
-const Template = ({ className }) => ({
-    render() {
-        return (
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { TheStorybookModuleWrapper },
+        props: Object.keys(argTypes),
+        template: `
             <TheStorybookModuleWrapper>
-                <div class={className}>This is a slot</div>
+                <div v-bind="$props">This is a slot</div>
             </TheStorybookModuleWrapper>
-        )
+        `,
+    }),
+    args: {
+        class: "card",
     },
-})
-
-export const Default = Template.bind({})
-Default.args = {
-    className: "card",
 }
 
-export const Marginless = Template.bind({})
-Marginless.args = {
-    className: "card card--marginless",
+export const Marginless = {
+    render: (args, { argTypes }) => ({
+        components: { TheStorybookModuleWrapper },
+        props: Object.keys(argTypes),
+        template: `
+            <TheStorybookModuleWrapper>
+                <div v-bind="$props">This is a slot</div>
+            </TheStorybookModuleWrapper>
+        `,
+    }),
+    args: {
+        class: "card card--marginless",
+    },
 }

@@ -30,9 +30,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/fade-in';
-@import '~@/style/mixins/shadow';
+@import '@/style/gatherer';
+@import '@/style/mixins/fade-in';
+@import '@/style/mixins/shadow';
 
 .timeline {
     display: flex;

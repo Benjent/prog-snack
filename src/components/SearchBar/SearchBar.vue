@@ -75,9 +75,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/sunset';
-@import '~@/style/modules/options';
+@import '@/style/gatherer';
+@import '@/style/mixins/sunset';
+@import '@/style/modules/options';
 
 $search-bar-width: 300px;
 $search-bar-height: 40px;
@@ -113,7 +113,7 @@ $search-bar-height: 40px;
         pointer-events: none;
         position: absolute;
         right: 10px;
-        top: ($search-bar-height / 2) - 20px / 2; // Roughly icon height
+        top: calc(($search-bar-height / 2) - 20px / 2); // Roughly icon height
 
         &--available {
             pointer-events: all;

@@ -2,15 +2,16 @@ import Icon from "./Icon.vue"
 
 export default {
     component: Icon,
+    tags: ["autodocs"],
 }
 
-const Template = ({ name }) => ({
-    render() {
-        return <Icon name={name} />
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { Icon },
+        props: Object.keys(argTypes),
+        template: "<Icon v-bind=\"$props\" />",
+    }),
+    args: {
+        name: "about",
     },
-})
-
-export const Default = Template.bind({})
-Default.args = {
-    name: "about",
 }

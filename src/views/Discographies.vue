@@ -53,8 +53,8 @@
 
                     <div v-if="$mq !== 'M' && (spotifyPath || deezerPath)">
                         <section class="discographies__logos">
-                            <img v-if="spotifyPath" class="discographies__logos__item" :src="require('../assets/img/logos/spotify_logo_white.png')" alt="Spotify logo" />
-                            <img v-if="deezerPath" class="discographies__logos__item" :src="require('../assets/img/logos/deezer_logo_white.png')" alt="Deezer logo" />
+                            <img v-if="spotifyPath" class="discographies__logos__item" :src="$getAssetUrl('src/assets/img/logos/spotify_logo_white.png')" alt="Spotify logo" />
+                            <img v-if="deezerPath" class="discographies__logos__item" :src="$getAssetUrl('src/assets/img/logos/deezer_logo_white.png')" alt="Deezer logo" />
                         </section>
                         <section class="card discographies__players">
                             <iframe

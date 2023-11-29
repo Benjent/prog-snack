@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest"
 import { shallowMount, createLocalVue } from "@vue/test-utils"
 import Transitions from "vue2-transitions"
 import { Histogram } from "@/components"
