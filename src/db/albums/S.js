@@ -628,7 +628,7 @@ const albums = [
         spotifyId: "5JhbxkXzy1o2RcX14CCwZP",
         deezerId: "671887",
         designers: ["Penny Graeme-Barber", "Pete Rhodes"],
-        similarAlbums: [],
+        similarAlbums: ["comus_first_utterance"],
         isAGem: false,
     },
     {
