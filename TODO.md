@@ -31,14 +31,12 @@
 - Add *Synth-based* criterium (for *Krautock*/*humble* albums that tend to have no criteria)
 - Link albums to Discogs
 - Subgenres could be an album property, not the other way around
-- Create a Group property (almost like subgenre) to group albums (ex: Titus Groan, Fuzzy Duck, Froggie Beaver would be grouped together more clearly, instead of using the Rock-based criterium)
 - Fill in missing subgenre descriptions
 - Fill in missing gem descriptions
 
 ## Features
 
 - Deezer, Spotify, Discogs could be an API search with album title and year (instead of manually providing the id) to allow more flexibility
-- Have Deezer and Spotify `<iframe>` behave like LinkedIn messaging system, toggable, to keep playind while browsing the site
 
 ## User feedbacks
 
