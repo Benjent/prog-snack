@@ -16,6 +16,13 @@ export default {
             type: Boolean,
             default: false,
         },
+        id: {
+            type: String,
+        },
+        label: {
+            type: String,
+            required: true,
+        },
     },
     methods: {
         notifyParent() {
