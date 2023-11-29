@@ -56,7 +56,7 @@ const albums = [
         artist: "Walrus",
         year: 1970,
         country: regions.ENGLAND,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.CRISPY_SIXTIES],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.ODD_RHYTHM, criteria.CRISPY_SIXTIES, criteria.C_PSYCHE],
         selectedTrackTitle: "Rags And Old Iron / Blind Man / Roadside",
         selectedTrackYtId: null,
         spotifyId: null,
