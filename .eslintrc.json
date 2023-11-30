@@ -8,8 +8,7 @@
   "extends": [
     "plugin:storybook/recommended",
     "plugin:vue/essential",
-    "plugin:vuejs-accessibility/recommended",
-    "@vue/airbnb"
+    "plugin:vuejs-accessibility/recommended"
   ],
   "plugins": [
     "tsc"
