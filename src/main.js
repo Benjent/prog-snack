@@ -1,26 +1,23 @@
-import Vue from "vue"
-import VueMq from "vue-mq"
-import Transitions from "vue2-transitions"
+import { createApp } from "vue"
+import VueMq from "vue3-mq"
+// import Transitions from "vue2-transitions"
 
 import App from "./App.vue"
-import Filters from "./plugins/Filters"
-import GetAssetUrl from "./plugins/GetAssetUrl"
+import filters from "./filters"
 import router from "./router"
 import store from "./store"
 
-Vue.config.productionTip = false
-Vue.use(Filters)
-Vue.use(GetAssetUrl)
-Vue.use(VueMq, {
+// Vue.use(Transitions)
+
+const app = createApp(App)
+app.config.globalProperties.$filters = filters
+app.config.globalProperties.$getAssetUrl = (path) => path && new URL(path, import.meta.url).href
+app.use(router)
+app.use(store)
+app.use(VueMq, {
     breakpoints: {
         M: 981, // $mobile + 1
         L: Infinity,
     },
 })
-Vue.use(Transitions)
-
-new Vue({
-    router,
-    store,
-    render: (h) => h(App),
-}).$mount("#app")
+app.mount("#app")

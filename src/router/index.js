@@ -1,10 +1,8 @@
 import Vue from "vue"
-import VueRouter from "vue-router"
+import { createRouter } from "vue-router"
 import {
     About, Album, Attic, Designers, Discographies, Gems, Stats, Subgenres,
 } from "../views"
-
-Vue.use(VueRouter)
 
 const routes = [
     {
@@ -63,10 +61,10 @@ const routes = [
     },
 ]
 
-const router = new VueRouter({
+const router = createRouter({
     routes,
     scrollBehavior() {
-        return { x: 0, y: 0 }
+        return { left: 0, top: 0 }
     },
 })
 
