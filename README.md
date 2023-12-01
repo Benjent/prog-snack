@@ -29,14 +29,19 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vite](ht
 
 1. Clone this repository
 2. Install the dependencies: `npm install`
-3. Run the development server (compiles and hot-reloads): `npm run serve`
-4. See the local live server: `http://localhost:8080/prog-snack`
-5. See the local live server for bundle size: `http://localhost:8888/`
-6. Build for production: `npm run build`
-7. Lint files: `npm run lint`
-8. Prettify files: `npm run prettify`
 
-**_Note:_** The 4th step is automated for the GitHub Pages on `/master` push.
+## Development tips
+
+1. Follow the __Project setup__ instructions above
+2. Run the development server (compiles and hot-reloads): `npm run dev`
+3. See the local live server: `http://127.0.0.1:5173/`
+4. Run the storybook server (compiles and hot-reloads): `npm run storybook`
+5. See the local live storybook server: `http://localhost:6006/`
+
+- Prettify files: `npm run prettify`
+- Lint files: `npm run lint`
+- Run unit and component tests: `npm run test:unit`
+- Build for production: `npm run build`
 
 ## Workflow
 
