@@ -40,7 +40,7 @@ This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI]
 
 ## Workflow
 
-The workflow is currently very basic. There are three main branches: `/master`, `/dev` and `/gh-pages`. Code updates are done in `/dev`, pull requests from `/dev` to `/master` and deployment from `/master` to `/gh-pages`.
+The workflow is currently very basic. There are three main branches: `/master`, `/dev` and `/gh-pages`. Code updates are done in `/dev`, pull requests from `/dev` to `/master` and deployment from `/master` to `/gh-pages` on each `/master` update.
 
 ## Guidelines
 
@@ -71,6 +71,12 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 -   [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 -   [A11y](https://www.a11yproject.com/)
 -   [JS Doc](https://jsdoc.app/)
+
+### Automation
+
+-   [Husky](https://typicode.github.io/husky/)
+-   [Lint-staged](https://github.com/lint-staged/lint-staged)
+-   [GitHub actions](https://github.com/features/actions)
 
 ### Assets
 
