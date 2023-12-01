@@ -51,7 +51,7 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 ### Vue
 
 -   [Vue.js](https://v2.vuejs.org/)
--   [Vue CLI](https://cli.vuejs.org/)
+-   [Vite](https://vitejs.dev/)
 -   [Vuex](https://vuex.vuejs.org/)
 -   [Vue Router](https://router.vuejs.org/)
 -   [Vue Transitions](https://www.npmjs.com/package/vue2-transitions)
@@ -76,10 +76,6 @@ This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-co
 
 -   [Fonts](https://fonts.google.com/)
 -   [Material icons](https://fonts.google.com/icons?icon.style=Rounded)
-
-### Webpack
-
--   [Bundle analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 
 ### Test
 
