@@ -8,7 +8,7 @@ Tiny web project with big music ambition: dusting old prog albums, some known as
 
 Browse albums, filter them by music criteria, discover similar albums and find out who designed that cover.
 
-This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vue CLI](https://cli.vuejs.org/).
+This is a [Vue.js v2](https://v2.vuejs.org/) project bootstrapped with [Vite](https://vitejs.dev/).
 
 [See it live](https://benjent.github.io/prog-snack/).
 
