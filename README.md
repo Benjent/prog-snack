@@ -44,7 +44,7 @@ The workflow is currently very basic. There are three main branches: `/master`, 
 
 ## Guidelines
 
-This project follows [Airbnb guidelines](https://www.npmjs.com/package/eslint-config-airbnb) for the scripting part, and is heavily influenced by [SMACSS](http://smacss.com/) and [BEM](http://getbem.com/).
+This project is heavily influenced by [SMACSS](http://smacss.com/) and [BEM](http://getbem.com/), and uses [Vue option API](https://v2.vuejs.org/v2/guide/migration-vue-2-7#Behavior-Differences-from-Vue-3). It relies on [ESLint](https://eslint.org/) for linting, [Prettier](https://prettier.io/) coupled with [EditorConfig](https://editorconfig.org/) for formatting, [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit structuration ; all of which triggered on pre-commit hooks with [Husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged).
 
 ## Documentation
 
