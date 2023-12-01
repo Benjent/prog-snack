@@ -3,10 +3,18 @@
         <main class="discographies">
             <slide-y-up-transition appear :duration="500">
                 <aside class="discographies__sidebar" v-if="selectedArtist">
-                    <button class="discographies__artist" :class="{'title': artist == selectedArtist, 'title--3': artist == selectedArtist}"
-                        v-for="artist in artists" :key="artist.id" @click="setSelectedArtist(artist)">
-                        <Icon v-if="artist === selectedArtist" name="library_music"/>
-                        <span>{{artist}}</span>
+                    <button
+                        class="discographies__artist"
+                        :class="{
+                            title: artist == selectedArtist,
+                            'title--3': artist == selectedArtist,
+                        }"
+                        v-for="artist in artists"
+                        :key="artist.id"
+                        @click="setSelectedArtist(artist)"
+                    >
+                        <Icon v-if="artist === selectedArtist" name="library_music" />
+                        <span>{{ artist }}</span>
                     </button>
                 </aside>
             </slide-y-up-transition>
@@ -19,32 +27,60 @@
                             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                             <Heading :level="2" class="text--name">{{ selectedAlbum.title }}</Heading>
                             <Heading :level="3"><Icon name="event" /> {{ selectedAlbum.year }}</Heading>
-                            <Heading :level="3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</Heading>
-                            <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
+                            <Heading :level="3"
+                                >{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</Heading
+                            >
+                            <div
+                                class="discographies__selectedAlbum__designers"
+                                v-if="selectedAlbum.designers.length > 0"
+                            >
                                 <Icon name="palette" />
                                 <List :values="selectedAlbum.designers" type="flattened" />
                             </div>
-                            <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
-                            <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                            <List
+                                class="discographies__selectedAlbum__criteria"
+                                :values="selectedAlbum.criteria"
+                                :filter="$options.filters.criterium"
+                            />
+                            <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">
+                                This album is a must-hear
+                            </div>
                             <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                         </div>
                         <div v-else class="card discographies__selectedAlbum__main">
                             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                             <div class="discographies__selectedAlbum__infos">
                                 <header class="discographies__selectedAlbum__header">
-                                    <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
-                                    <div>
-                                        <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</span>
+                                    <div class="discographies__selectedAlbum__title text--name text--quaternary">
+                                        {{ selectedAlbum.title }}
                                     </div>
-                                    <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
+                                    <div>
+                                        <span
+                                            ><Icon name="event" /> {{ selectedAlbum.year }} -
+                                            {{ flags[selectedAlbum.country] }}
+                                            {{ selectedAlbum.country | region }}</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="discographies__selectedAlbum__designers"
+                                        v-if="selectedAlbum.designers.length > 0"
+                                    >
                                         <Icon name="palette" />
                                         Cover by
                                         <List :values="selectedAlbum.designers" type="flattened" />
                                     </div>
                                 </header>
                                 <footer class="discographies__selectedAlbum__footer">
-                                    <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
-                                    <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
+                                    <List
+                                        class="discographies__selectedAlbum__criteria"
+                                        :values="selectedAlbum.criteria"
+                                        :filter="$options.filters.criterium"
+                                        type="flattened"
+                                        separator=" • "
+                                    />
+                                    <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">
+                                        This album is a must-hear
+                                    </div>
                                 </footer>
                                 <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                             </div>
@@ -53,27 +89,44 @@
 
                     <div v-if="$mq !== 'M' && (spotifyPath || deezerPath)">
                         <section class="discographies__logos">
-                            <img v-if="spotifyPath" class="discographies__logos__item" :src="$getAssetUrl('src/assets/img/logos/spotify_logo_white.png')" alt="Spotify logo" />
-                            <img v-if="deezerPath" class="discographies__logos__item" :src="$getAssetUrl('src/assets/img/logos/deezer_logo_white.png')" alt="Deezer logo" />
+                            <img
+                                v-if="spotifyPath"
+                                class="discographies__logos__item"
+                                :src="$getAssetUrl('src/assets/img/logos/spotify_logo_white.png')"
+                                alt="Spotify logo"
+                            />
+                            <img
+                                v-if="deezerPath"
+                                class="discographies__logos__item"
+                                :src="$getAssetUrl('src/assets/img/logos/deezer_logo_white.png')"
+                                alt="Deezer logo"
+                            />
                         </section>
                         <section class="card discographies__players">
                             <iframe
                                 v-if="spotifyPath"
                                 class="discographies__players__item"
-                                :class="{ 'discographies__players__item--one-missing': spotifyPath && !deezerPath }"
+                                :class="{
+                                    'discographies__players__item--one-missing': spotifyPath && !deezerPath,
+                                }"
                                 :src="spotifyPath"
                                 title="Spotify widget"
-                                frameborder="0" allowtransparency="true"
-                                allow="encrypted-media" />
+                                frameborder="0"
+                                allowtransparency="true"
+                                allow="encrypted-media"
+                            />
                             <iframe
                                 v-if="deezerPath"
                                 class="discographies__players__item"
-                                :class="{ 'discographies__players__item--one-missing': deezerPath && !spotifyPath }"
+                                :class="{
+                                    'discographies__players__item--one-missing': deezerPath && !spotifyPath,
+                                }"
                                 :src="`${deezerPath}?tracklist=${$mq === 'M' ? false : true}`"
                                 title="Deezer widget"
                                 frameborder="0"
                                 allowtransparency="true"
-                                allow="encrypted-media; clipboard-write" />
+                                allow="encrypted-media; clipboard-write"
+                            />
                         </section>
                     </div>
 
@@ -81,7 +134,15 @@
                         <Heading :level="3">From the same artist</Heading>
                         <div class="card">
                             <section class="discographies__discography">
-                                <Cover class="discographies__album" v-for="album in discography" :key="album.id" :album="album" rounded fade @click.native="selectAlbum(album)" />
+                                <Cover
+                                    class="discographies__album"
+                                    v-for="album in discography"
+                                    :key="album.id"
+                                    :album="album"
+                                    rounded
+                                    fade
+                                    @click.native="selectAlbum(album)"
+                                />
                             </section>
                         </div>
                     </div>
@@ -93,9 +154,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import {
-    AlbumStarter, Cover, Heading, Icon, List,
-} from "../components"
+import { AlbumStarter, Cover, Heading, Icon, List } from "../components"
 import { flags } from "../db/regions"
 import { getDeezerUrl, getSpotifyUrl } from "../utils/url"
 
@@ -149,11 +208,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/golden';
-@import '../style/mixins/page';
-@import '../style/modules/card';
-@import '../style/modules/title';
+@import "../style/gatherer";
+@import "../style/mixins/golden";
+@import "../style/mixins/page";
+@import "../style/modules/card";
+@import "../style/modules/title";
 
 .discographies {
     $album-per-column: 2;
@@ -281,11 +340,7 @@ export default {
         max-height: $cover-width * $album-per-column + $cover-gap * 2;
         overflow-y: scroll;
         scrollbar-width: none;
-        mask-image: linear-gradient(
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 1) 93%,
-            transparent 100%
-        );
+        mask-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 93%, transparent 100%);
     }
 
     & &__album {

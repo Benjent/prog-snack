@@ -9,7 +9,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { List },
         props: Object.keys(argTypes),
-        template: "<List v-bind=\"$props\" />",
+        template: `<List v-bind="$props" />`,
     }),
     args: {
         values: [1, 2, 3],
@@ -20,7 +20,7 @@ export const Ordered = {
     render: (args, { argTypes }) => ({
         components: { List },
         props: Object.keys(argTypes),
-        template: "<List v-bind=\"$props\" />",
+        template: `<List v-bind="$props" />`,
     }),
     args: {
         values: [1, 2, 3],
@@ -32,7 +32,7 @@ export const Flattened = {
     render: (args, { argTypes }) => ({
         components: { List },
         props: Object.keys(argTypes),
-        template: "<List v-bind=\"$props\" />",
+        template: `<List v-bind="$props" />`,
     }),
     args: {
         values: [1, 2, 3],
@@ -44,7 +44,7 @@ export const Separator = {
     render: (args, { argTypes }) => ({
         components: { List },
         props: Object.keys(argTypes),
-        template: "<List v-bind=\"$props\" />",
+        template: `<List v-bind="$props" />`,
     }),
     args: {
         values: [1, 2, 3],

@@ -4,38 +4,77 @@
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
                     <div class="attic__actions">
-                        <button class="attic__actions__button button" aria-label="Reset filters" @click="resetFilter()">Reset filters</button>
-                        <button class="attic__actions__button button" aria-label="Download filtered list" @click="downloadFilteredList()">Download filtered list</button>
+                        <button class="attic__actions__button button" aria-label="Reset filters" @click="resetFilter()">
+                            Reset filters
+                        </button>
+                        <button
+                            class="attic__actions__button button"
+                            aria-label="Download filtered list"
+                            @click="downloadFilteredList()"
+                        >
+                            Download filtered list
+                        </button>
                     </div>
 
                     <Accordion title="Year" drawered>
                         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-                        <Select class="attic__filter" v-model.number="selectedYear" :options="years" custom @input="filterAttic" />
+                        <Select
+                            class="attic__filter"
+                            v-model.number="selectedYear"
+                            :options="years"
+                            custom
+                            @input="filterAttic"
+                        />
                         <template v-if="selectedYear === 'Custom'">
-                            <Range class="attic__filter" :min="1965" :max="1995" v-model="yearRange" @release="filterAttic" />
+                            <Range
+                                class="attic__filter"
+                                :min="1965"
+                                :max="1995"
+                                v-model="yearRange"
+                                @release="filterAttic"
+                            />
                         </template>
                     </Accordion>
 
                     <Accordion title="Region" drawered>
                         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-                        <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
+                        <Select
+                            class="attic__filter"
+                            v-model="selectedRegion"
+                            :options="regions"
+                            :filter="$options.filters.region"
+                            @input="filterAttic"
+                        />
                     </Accordion>
 
                     <Accordion title="Language" drawered>
                         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-                        <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
+                        <Select
+                            class="attic__filter"
+                            v-model="selectedLanguage"
+                            :options="languages"
+                            :filter="$options.filters.criterium"
+                            @input="filterAttic"
+                        />
                     </Accordion>
 
-                    <Accordion v-for="(panel, index) in filterModel" :key="panel.panel" :title="$options.filters.criteriumCategory(panel.panel)" drawered>
+                    <Accordion
+                        v-for="(panel, index) in filterModel"
+                        :key="panel.panel"
+                        :title="$options.filters.criteriumCategory(panel.panel)"
+                        drawered
+                    >
                         <template v-for="(item, indexCriteria) in panel.criteria">
                             <Radio
                                 v-if="item.name"
                                 v-model="radioGroups[item.name]"
                                 :id="item.criterium"
                                 class="attic__filter"
-                                :label="item.criterium | criterium" :own="item.criterium"
+                                :label="item.criterium | criterium"
+                                :own="item.criterium"
                                 :key="`${item.criterium}Radio`"
-                                @click.native="filterAttic(item.criterium)" />
+                                @click.native="filterAttic(item.criterium)"
+                            />
                             <Check
                                 v-else
                                 :id="item.criterium"
@@ -43,14 +82,30 @@
                                 v-model="filterModel[index].criteria[indexCriteria].checked"
                                 :label="item.criterium | criterium"
                                 :key="`${item.criterium}Check`"
-                                @click.native="filterAttic(item.criterium)" />
+                                @click.native="filterAttic(item.criterium)"
+                            />
                         </template>
-                        <Check v-if="panel.panel === categories.TYPE" id="gemCheck" class="attic__filter" v-model="onlyGems" label="Album is a gem" @click.native="filterAttic('gem')" />
+                        <Check
+                            v-if="panel.panel === categories.TYPE"
+                            id="gemCheck"
+                            class="attic__filter"
+                            v-model="onlyGems"
+                            label="Album is a gem"
+                            @click.native="filterAttic('gem')"
+                        />
                     </Accordion>
                 </aside>
             </slide-y-up-transition>
             <section id="albumList" class="attic__mosaic">
-                <Cover class="attic__cover" v-for="album in albums" :key="album.id" :album="album" :class="album.id" thumbnail @click.native="selectAlbumAndView(album)" />
+                <Cover
+                    class="attic__cover"
+                    v-for="album in albums"
+                    :key="album.id"
+                    :album="album"
+                    :class="album.id"
+                    thumbnail
+                    @click.native="selectAlbumAndView(album)"
+                />
             </section>
         </main>
     </fade-transition>
@@ -58,13 +113,9 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import {
-    categories, categoriesOrder, criteria, criteriaCategory, languages,
-} from "../db/criteria"
+import { categories, categoriesOrder, criteria, criteriaCategory, languages } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition"
-import {
-    Accordion, Cover, Check, Radio, Range, Select,
-} from "../components"
+import { Accordion, Cover, Check, Radio, Range, Select } from "../components"
 
 export default {
     components: {
@@ -199,7 +250,7 @@ export default {
                     is_gem: a.isAGem,
                     description: a.description,
                 }
-            }) 
+            })
             const dataString = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(snakeCasedAlbums))}`
             const node = document.createElement("a")
             node.setAttribute("href", dataString)
@@ -265,7 +316,10 @@ export default {
                     gem: true,
                 }
                 if (this.selectedYear) {
-                    isAMatch.year = this.selectedYear === "Custom" ? a.year >= this.yearRange.min && a.year <= this.yearRange.max : a.year === this.selectedYear
+                    isAMatch.year =
+                        this.selectedYear === "Custom"
+                            ? a.year >= this.yearRange.min && a.year <= this.yearRange.max
+                            : a.year === this.selectedYear
                 }
                 isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
                 isAMatch.language = this.selectedLanguage ? a.criteria.includes(this.selectedLanguage) : true
@@ -293,12 +347,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/fade-in';
-@import '../style/mixins/page';
-@import '../style/mixins/shadow';
-@import '../style/mixins/sunset';
-@import '../style/modules/button';
+@import "../style/gatherer";
+@import "../style/mixins/fade-in";
+@import "../style/mixins/page";
+@import "../style/mixins/shadow";
+@import "../style/mixins/sunset";
+@import "../style/modules/button";
 
 .attic {
     display: flex;

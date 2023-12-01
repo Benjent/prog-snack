@@ -15,7 +15,11 @@ export const Default = {
     }),
     args: {
         caption: "Caption",
-        datasource: [{ label: "First label", value: 1 }, { label: "Second label", value: 20 }, { label: "Third label", value: 3 }],
+        datasource: [
+            { label: "First label", value: 1 },
+            { label: "Second label", value: 20 },
+            { label: "Third label", value: 3 },
+        ],
     },
 }
 
@@ -29,7 +33,11 @@ export const Vertical = {
     }),
     args: {
         caption: "Caption",
-        datasource: [{ label: "First label", value: 1 }, { label: "Second label", value: 20 }, { label: "Third label", value: 3 }],
+        datasource: [
+            { label: "First label", value: 1 },
+            { label: "Second label", value: 20 },
+            { label: "Third label", value: 3 },
+        ],
         direction: "vertical",
     },
 }
@@ -44,7 +52,11 @@ export const Sort = {
     }),
     args: {
         caption: "Caption",
-        datasource: [{ label: "First label", value: 1 }, { label: "Second label", value: 20 }, { label: "Third label", value: 3 }],
+        datasource: [
+            { label: "First label", value: 1 },
+            { label: "Second label", value: 20 },
+            { label: "Third label", value: 3 },
+        ],
         sort: "NONE",
     },
 }
@@ -59,7 +71,11 @@ export const Threshold = {
     }),
     args: {
         caption: "Caption",
-        datasource: [{ label: "First label", value: 1 }, { label: "Second label", value: 20 }, { label: "Third label", value: 3 }],
+        datasource: [
+            { label: "First label", value: 1 },
+            { label: "Second label", value: 20 },
+            { label: "Third label", value: 3 },
+        ],
         threshold: 2,
     },
 }

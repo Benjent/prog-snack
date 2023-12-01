@@ -1,20 +1,18 @@
-@import '../mixins/palette';
+@import "../mixins/palette";
 
 .text {
-    @include palette('color');
+    @include palette("color");
 
     &--description {
         font-style: italic;
     }
-
-    &--paragraph {}
 
     &--italic {
         font-style: italic;
     }
 
     &--name {
-        font-family: 'Economica', sans-serif;
+        font-family: "Economica", sans-serif;
         letter-spacing: initial;
     }
 }

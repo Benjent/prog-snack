@@ -1,6 +1,4 @@
-import {
-    beforeEach, describe, expect, it,
-} from "vitest"
+import { beforeEach, describe, expect, it } from "vitest"
 import { shallowMount } from "@vue/test-utils"
 import { Radio } from "@/components"
 

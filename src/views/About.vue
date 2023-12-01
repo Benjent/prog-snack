@@ -5,32 +5,44 @@
                 <Heading>Hi!</Heading>
 
                 <Heading :level="3">
-                    Prog Snack is a tiny web project with big music ambitions: dusting old prog albums, known as prog gems, to make them shine beside classic albums.
+                    Prog Snack is a tiny web project with big music ambitions: dusting old prog albums, known as prog
+                    gems, to make them shine beside classic albums.
                 </Heading>
                 <Typography>
-                    Prog albums are anything related to progressive music, from late 60's psychedelic vibes to early 80's electronic wave ; still focusing on the progressive bloom of the 70's and not going further than 1965-1995.
+                    Prog albums are anything related to progressive music, from late 60's psychedelic vibes to early
+                    80's electronic wave ; still focusing on the progressive bloom of the 70's and not going further
+                    than 1965-1995.
                 </Typography>
                 <Typography>
-                    Only studio albums are featured. No extended plays, compilations, maxis, cover albums, other promotional releases.
-                    Live albums are only featured if they mainly consist of new material from the artist, if they are a work in their own right in the discography and not a collection of live interpretations of previously recorded songs in studio.
+                    Only studio albums are featured. No extended plays, compilations, maxis, cover albums, other
+                    promotional releases. Live albums are only featured if they mainly consist of new material from the
+                    artist, if they are a work in their own right in the discography and not a collection of live
+                    interpretations of previously recorded songs in studio.
                 </Typography>
                 <Typography>
-                    This project is designed as a tool to discover albums, the way we would pick up vinyls in music stores, as well as centralizer of what can be found scrapping the web.
+                    This project is designed as a tool to discover albums, the way we would pick up vinyls in music
+                    stores, as well as centralizer of what can be found scrapping the web.
                 </Typography>
                 <Typography>
-                    About once a week, I try to grow the collection with more albums if I manage to find information and the time to listen to them.
+                    About once a week, I try to grow the collection with more albums if I manage to find information and
+                    the time to listen to them.
                 </Typography>
                 <Typography>
-                    If you spot any wrong information or any typo, think of improvements, or would like to leave a sweet comment, please feel free to contact me at benjent@hotmail.fr.
+                    If you spot any wrong information or any typo, think of improvements, or would like to leave a sweet
+                    comment, please feel free to contact me at benjent@hotmail.fr.
                 </Typography>
             </div>
 
             <section class="about__section">
-                <caption class="title title--2">Some criteria clarifications</caption>
+                <caption class="title title--2">
+                    Some criteria clarifications
+                </caption>
                 <div class="card about__glossary">
                     <dl class="about__glossary__entry" v-for="data in glossary" :key="data.title">
                         <dt class="about__criterium">{{ data.title }}</dt>
-                        <dd class="text text--description about__definition">{{ data.definition }}</dd>
+                        <dd class="text text--description about__definition">
+                            {{ data.definition }}
+                        </dd>
                     </dl>
                 </div>
             </section>
@@ -50,7 +62,8 @@ export default {
             glossary: [
                 {
                     title: this.$options.filters.criterium(criteria.ARENA),
-                    definition: "Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.",
+                    definition:
+                        "Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.",
                 },
                 {
                     title: this.$options.filters.criterium(criteria.BAROQUE),
@@ -82,15 +95,18 @@ export default {
                 },
                 {
                     title: this.$options.filters.criterium(criteria.RENAISSANCE),
-                    definition: "Album contains strings arrangements - italian style. Album is rather spectacular, often technical.",
+                    definition:
+                        "Album contains strings arrangements - italian style. Album is rather spectacular, often technical.",
                 },
                 {
                     title: this.$options.filters.criterium(criteria.ROCK_OPERA),
-                    definition: "Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.",
+                    definition:
+                        "Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.",
                 },
                 {
                     title: this.$options.filters.criterium(criteria.SPACY),
-                    definition: "Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.",
+                    definition:
+                        "Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.",
                 },
                 {
                     title: this.$options.filters.criterium(criteria.STORYLINE),
@@ -98,11 +114,12 @@ export default {
                 },
                 {
                     title: this.$options.filters.criterium(criteria.SYMPHONIC),
-                    definition: "Album contains songs that have movements in their structure. Song durations are often long.",
+                    definition:
+                        "Album contains songs that have movements in their structure. Song durations are often long.",
                 },
                 {
                     title: this.$options.filters.criterium(criteria.UNCOMMON_INSTRUMENTS),
-                    definition: "Album contains \"non-Rock\" instruments: wind or brass instruments, world percussions.",
+                    definition: `Album contains "non-Rock" instruments: wind or brass instruments, world percussions.`,
                 },
             ],
         }
@@ -111,11 +128,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../style/gatherer';
-@import '../style/mixins/page';
-@import '../style/modules/card';
-@import '../style/modules/text';
-@import '../style/modules/title';
+@import "../style/gatherer";
+@import "../style/mixins/page";
+@import "../style/modules/card";
+@import "../style/modules/text";
+@import "../style/modules/title";
 
 .about {
     &__section {

@@ -9,7 +9,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { Radio },
         props: Object.keys(argTypes),
-        template: "<Radio v-bind=\"$props\" />",
+        template: `<Radio v-bind="$props" />`,
     }),
     args: {
         id: "id",
@@ -23,7 +23,7 @@ export const Checked = {
     render: (args, { argTypes }) => ({
         components: { Radio },
         props: Object.keys(argTypes),
-        template: "<Radio v-bind=\"$props\" />",
+        template: `<Radio v-bind="$props" />`,
     }),
     args: {
         id: "id",

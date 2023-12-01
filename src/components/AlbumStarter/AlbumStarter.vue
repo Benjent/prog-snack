@@ -36,8 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/modules/text';
+@import "@/style/gatherer";
+@import "@/style/modules/text";
 
 .albumStarter {
     & &__logo {

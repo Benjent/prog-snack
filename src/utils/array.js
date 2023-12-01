@@ -14,7 +14,7 @@ const shuffle = (array) => {
         currentIndex--
 
         // And swap it with the current element
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+        ;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
     }
 
     return array
@@ -31,21 +31,26 @@ const sort = (array, property, orderBy = "ASC") => {
     const sortedArray = [...array]
     if (orderBy === "DESC") {
         sortedArray.sort((a, b) => {
-            if (a[property] > b[property]) { return -1 }
-            if (a[property] < b[property]) { return 1 }
+            if (a[property] > b[property]) {
+                return -1
+            }
+            if (a[property] < b[property]) {
+                return 1
+            }
             return 0
         })
     } else {
         sortedArray.sort((a, b) => {
-            if (a[property] < b[property]) { return -1 }
-            if (a[property] > b[property]) { return 1 }
+            if (a[property] < b[property]) {
+                return -1
+            }
+            if (a[property] > b[property]) {
+                return 1
+            }
             return 0
         })
     }
     return sortedArray
 }
 
-export {
-    shuffle,
-    sort,
-}
+export { shuffle, sort }

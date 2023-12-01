@@ -7,11 +7,18 @@ describe("Histogram.vue", () => {
     function wrapperFactory({ propsData } = {}) {
         const defaultPropsData = {
             caption: "caption",
-            datasource: [{ label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }],
+            datasource: [
+                { label: "1", value: 1 },
+                { label: "2", value: 2 },
+                { label: "3", value: 3 },
+            ],
         }
         const localVue = createLocalVue()
         localVue.use(Transitions)
-        return shallowMount(Histogram, { propsData: { ...defaultPropsData, ...propsData }, localVue })
+        return shallowMount(Histogram, {
+            propsData: { ...defaultPropsData, ...propsData },
+            localVue,
+        })
     }
 
     it("renders caption when passed", () => {

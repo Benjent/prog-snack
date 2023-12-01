@@ -32,8 +32,4 @@ const applyChainedFadeInEarlyOnly = (self, selector, durationBeforeAllReveal, du
     }, durationBeforeAllReveal)
 }
 
-export {
-    applyBarTransition,
-    applyChainedFadeIn,
-    applyChainedFadeInEarlyOnly,
-}
+export { applyBarTransition, applyChainedFadeIn, applyChainedFadeInEarlyOnly }

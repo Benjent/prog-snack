@@ -3,23 +3,55 @@
         <main class="stats">
             <zoom-center-transition appear>
                 <section class="stats__section stats__numbers">
-                    <NumberUnit :number="artists.length" unit="artists"/>
-                    <NumberUnit :number="albums.length" unit="albums"/>
-                    <NumberUnit :number="gemsNb" unit="gems"/>
-                    <NumberUnit :number="subgenres.length" unit="subgenres"/>
+                    <NumberUnit :number="artists.length" unit="artists" />
+                    <NumberUnit :number="albums.length" unit="albums" />
+                    <NumberUnit :number="gemsNb" unit="gems" />
+                    <NumberUnit :number="subgenres.length" unit="subgenres" />
                 </section>
             </zoom-center-transition>
 
-            <Histogram v-if="$mq === 'M'" class="stats__section" caption="Number of albums per year" sort="NONE" :datasource="albumsPerYearWithRatio" />
-            <Histogram v-else class="stats__section stats__section--wide" caption="Number of albums per year" direction="vertical" sort="NONE" :datasource="albumsPerYearWithRatio" />
+            <Histogram
+                v-if="$mq === 'M'"
+                class="stats__section"
+                caption="Number of albums per year"
+                sort="NONE"
+                :datasource="albumsPerYearWithRatio"
+            />
+            <Histogram
+                v-else
+                class="stats__section stats__section--wide"
+                caption="Number of albums per year"
+                direction="vertical"
+                sort="NONE"
+                :datasource="albumsPerYearWithRatio"
+            />
 
-            <Histogram class="stats__section" caption="Number of albums per region" :datasource="albumsPerCountryWithRatio" />
+            <Histogram
+                class="stats__section"
+                caption="Number of albums per region"
+                :datasource="albumsPerCountryWithRatio"
+            />
 
-            <Histogram class="stats__section" caption="Artists with most gems" :threshold="2" :datasource="artistsWithGemsWithRatio" />
+            <Histogram
+                class="stats__section"
+                caption="Artists with most gems"
+                :threshold="2"
+                :datasource="artistsWithGemsWithRatio"
+            />
 
-            <Histogram class="stats__section" caption="Artists with most albums" :threshold="10" :datasource="artistsWithAlbumsWithRatio" />
+            <Histogram
+                class="stats__section"
+                caption="Artists with most albums"
+                :threshold="10"
+                :datasource="artistsWithAlbumsWithRatio"
+            />
 
-            <Histogram class="stats__section" caption="Greatest criteria occurences" :threshold="100" :datasource="criteriaOccurencesWithRatio" />
+            <Histogram
+                class="stats__section"
+                caption="Greatest criteria occurences"
+                :threshold="100"
+                :datasource="criteriaOccurencesWithRatio"
+            />
         </main>
     </fade-transition>
 </template>
@@ -37,13 +69,25 @@ export default {
         NumberUnit,
     },
     computed: {
-        ...mapState(["albums", "artists", "regions", "albumsPerYear", "albumsPerCountry", "criteriaOccurences", "mostUsedCriteriaPerYear", "subgenres"]),
+        ...mapState([
+            "albums",
+            "artists",
+            "regions",
+            "albumsPerYear",
+            "albumsPerCountry",
+            "criteriaOccurences",
+            "mostUsedCriteriaPerYear",
+            "subgenres",
+        ]),
         ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums", "isMobile"]),
         albumsPerYearWithRatio() {
             return convertDatasource(this.albumsPerYear)
         },
         albumsPerCountryWithRatio() {
-            return convertDatasource(this.albumsPerCountry, (label) => `${flags[label]} ${this.$options.filters.region(label)}`)
+            return convertDatasource(
+                this.albumsPerCountry,
+                (label) => `${flags[label]} ${this.$options.filters.region(label)}`,
+            )
         },
         artistsWithGemsWithRatio() {
             return convertDatasource(this.artistsWithMostGems)
@@ -63,7 +107,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
+@import "../style/gatherer";
 
 .stats {
     padding: 0 20px;

@@ -10,10 +10,7 @@ You can run the tests in node using jsdom
 */
 // ... But no jsdom option is present in the vue-test-utils config
 export default defineConfig({
-    plugins: [
-        vue(),
-        ViteImageOptimizer(),
-    ],
+    plugins: [vue(), ViteImageOptimizer()],
     resolve: {
         alias: [
             {

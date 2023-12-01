@@ -1,10 +1,19 @@
 <template>
     <div class="accordion">
-        <button class="accordion__title" :class="{ 'accordion__title--open': isOpen, 'accordion__title--drawer': drawered }" aria-label="Toggle panel" @click="isOpen = !isOpen">
+        <button
+            class="accordion__title"
+            :class="{ 'accordion__title--open': isOpen, 'accordion__title--drawer': drawered }"
+            aria-label="Toggle panel"
+            @click="isOpen = !isOpen"
+        >
             <div>{{ title }}</div>
             <Icon class="accordion__arrow" :name="isOpen ? 'expand_less' : 'expand_more'" />
         </button>
-        <div class="accordion__body" :class="{ 'accordion__body--open': isOpen, 'accordion__body--drawer': drawered }" v-if="isOpen">
+        <div
+            class="accordion__body"
+            :class="{ 'accordion__body--open': isOpen, 'accordion__body--drawer': drawered }"
+            v-if="isOpen"
+        >
             <slot />
         </div>
     </div>
@@ -37,8 +46,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/mixins/sunset';
+@import "@/style/gatherer";
+@import "@/style/mixins/sunset";
 
 .accordion {
     &__title {

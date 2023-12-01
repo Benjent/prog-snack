@@ -1,0 +1,8 @@
+# Sync with .prettierignore
+dist/
+node_modules/
+
+src/assets/
+src/db/albums
+src/db/criteria
+src/db/regions

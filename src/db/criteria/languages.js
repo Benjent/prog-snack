@@ -38,7 +38,7 @@ const languages = /** @type {const} */ ({
 /**
  * @type { Record<keyof typeof languages, string> }
  * @readonly
-*/
+ */
 const languageLabels = {
     [languages.ARMENIAN]: "Armenian sung",
     [languages.BELARUSIAN]: "Belarusian sung",
@@ -71,7 +71,4 @@ const languageLabels = {
     [languages.ZEUHL]: "Zeuhl",
 }
 
-export {
-    languages,
-    languageLabels,
-}
+export { languages, languageLabels }

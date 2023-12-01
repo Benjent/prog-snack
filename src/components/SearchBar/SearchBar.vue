@@ -1,21 +1,28 @@
 <template>
     <div class="searchBar">
-        <input class="searchBar__input"
+        <input
+            class="searchBar__input"
             :class="{ 'searchBar__input--empty': currentSearch }"
             placeholder="Album, artist, designer, year..."
             v-model="currentSearch"
-            @input="search($event.target.value)">
+            @input="search($event.target.value)"
+        />
 
-            <button class="searchBar__reset" :class="{ 'searchBar__reset--available': hasText }" @click="resetSearch">
-                <Icon :name="hasText ? 'close' : 'search'" :aria-label="hasText && 'Erase search'" />
+        <button class="searchBar__reset" :class="{ 'searchBar__reset--available': hasText }" @click="resetSearch">
+            <Icon :name="hasText ? 'close' : 'search'" :aria-label="hasText && 'Erase search'" />
+        </button>
+
+        <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
+            <button
+                class="options__item searchBar__album"
+                v-for="album in matchingAlbums"
+                :key="album.id"
+                @click="selectSearchResult(album)"
+            >
+                <Cover :album="album" :size="30" />
+                <div class="searchBar__album__title">{{ album.title }}</div>
             </button>
-
-            <div class="options searchBar__result" v-if="matchingAlbums.length > 0">
-                <button class="options__item searchBar__album" v-for="album in matchingAlbums" :key="album.id" @click="selectSearchResult(album)">
-                    <Cover :album="album" :size="30" />
-                    <div class="searchBar__album__title">{{ album.title }}</div>
-                </button>
-            </div>
+        </div>
     </div>
 </template>
 
@@ -75,9 +82,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/mixins/sunset';
-@import '@/style/modules/options';
+@import "@/style/gatherer";
+@import "@/style/mixins/sunset";
+@import "@/style/modules/options";
 
 $search-bar-width: 300px;
 $search-bar-height: 40px;
@@ -122,7 +129,9 @@ $search-bar-height: 40px;
 
     & &__result {
         position: absolute;
-        top: calc(var(--header-height) / 2 + $search-bar-height / 2); // Position the result below the header, not the input
+        top: calc(
+            var(--header-height) / 2 + $search-bar-height / 2
+        ); // Position the result below the header, not the input
         width: 100%;
         overflow-x: hidden;
         border-right: 0;
@@ -152,5 +161,4 @@ $search-bar-height: 40px;
         }
     }
 }
-
 </style>

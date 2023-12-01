@@ -43,7 +43,9 @@ export default new Vuex.Store({
         artistsWithMostAlbums(state) {
             const artistsWithMostAlbums = {}
             state.albums.forEach((a) => {
-                artistsWithMostAlbums[a.artist] ? artistsWithMostAlbums[a.artist]++ : artistsWithMostAlbums[a.artist] = 1
+                artistsWithMostAlbums[a.artist]
+                    ? artistsWithMostAlbums[a.artist]++
+                    : (artistsWithMostAlbums[a.artist] = 1)
             })
             return artistsWithMostAlbums
         },
@@ -51,7 +53,9 @@ export default new Vuex.Store({
             const artistsWithMostGems = {}
             state.albums.forEach((a) => {
                 if (a.isAGem) {
-                    artistsWithMostGems[a.artist] ? artistsWithMostGems[a.artist]++ : artistsWithMostGems[a.artist] = 1
+                    artistsWithMostGems[a.artist]
+                        ? artistsWithMostGems[a.artist]++
+                        : (artistsWithMostGems[a.artist] = 1)
                 }
             })
             return artistsWithMostGems

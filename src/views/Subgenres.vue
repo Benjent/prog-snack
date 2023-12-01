@@ -5,11 +5,13 @@
                 <div class="subgenres__albums">
                     <Cover
                         class="subgenres__cover"
-                        v-for="id in subgenre.albums" :key="id"
+                        v-for="id in subgenre.albums"
+                        :key="id"
                         :album="albumById(id)"
                         bordered
                         :size="130"
-                        @click.native="selectAlbumAndView(id)" />
+                        @click.native="selectAlbumAndView(id)"
+                    />
                 </div>
 
                 <div class="subgenres__infosWithMostRepresentative">
@@ -18,15 +20,27 @@
                         :album="albumById(subgenre.mostRepresentativeAlbum)"
                         bordered
                         :size="$mq === 'M' ? 100 : 200"
-                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)" />
+                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"
+                    />
 
                     <div class="subgenres__infos">
                         <Heading :level="2" class="subgenres__name text--name">{{ subgenre.name }}</Heading>
                         <Typography>
                             <span>Characterized by the following: </span>
-                            <List class="subgenres__criterium" :values="subgenre.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
+                            <List
+                                class="subgenres__criterium"
+                                :values="subgenre.criteria"
+                                :filter="$options.filters.criterium"
+                                type="flattened"
+                                separator=" • "
+                            />
                         </Typography>
-                        <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
+                        <blockquote
+                            class="text text--description subgenres__description"
+                            v-if="!subgenre.description.includes('TODO')"
+                        >
+                            {{ subgenre.description }}
+                        </blockquote>
                     </div>
                 </div>
             </section>
@@ -67,11 +81,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/fade-in';
-@import '../style/mixins/page';
-@import '../style/modules/text';
-@import '../style/modules/title';
+@import "../style/gatherer";
+@import "../style/mixins/fade-in";
+@import "../style/mixins/page";
+@import "../style/modules/text";
+@import "../style/modules/title";
 
 .subgenres {
     & &__subgenre {

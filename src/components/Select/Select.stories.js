@@ -9,7 +9,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { Select },
         props: Object.keys(argTypes),
-        template: "<Select v-bind=\"$props\" />",
+        template: `<Select v-bind="$props" />`,
     }),
     args: {
         options: [1, 2, 3],
@@ -20,7 +20,7 @@ export const Value = {
     render: (args, { argTypes }) => ({
         components: { Select },
         props: Object.keys(argTypes),
-        template: "<Select v-bind=\"$props\" />",
+        template: `<Select v-bind="$props" />`,
     }),
     args: {
         options: [1, 2, 3],
@@ -32,7 +32,7 @@ export const Filter = {
     render: (args, { argTypes }) => ({
         components: { Select },
         props: Object.keys(argTypes),
-        template: "<Select v-bind=\"$props\" />",
+        template: `<Select v-bind="$props" />`,
     }),
     args: {
         options: [1, 2, 3],

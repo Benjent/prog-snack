@@ -1,13 +1,14 @@
 $colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'tertiary': $tertiary,
-    'quaternary': $quaternary,
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "quaternary": $quaternary,
 );
 
-@mixin palette($property: 'background') {
+@mixin palette($property: "background") {
     @each $name, $color in $colors {
-        &--#{$name}, &#{&}--#{$name} {
+        &--#{$name},
+        &#{&}--#{$name} {
             #{$property}: $color;
         }
     }

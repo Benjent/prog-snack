@@ -7,13 +7,4 @@ import Gems from "./Gems.vue"
 import Stats from "./Stats.vue"
 import Subgenres from "./Subgenres.vue"
 
-export {
-    About,
-    Album,
-    Attic,
-    Designers,
-    Discographies,
-    Gems,
-    Stats,
-    Subgenres,
-}
+export { About, Album, Attic, Designers, Discographies, Gems, Stats, Subgenres }

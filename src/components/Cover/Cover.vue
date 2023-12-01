@@ -3,15 +3,30 @@
         v-if="album"
         :id="coverId"
         class="cover"
-        :class="{ 'cover--clickable': thumbnail || clickable, 'cover--bordered': bordered, 'cover--rounded': rounded, 'cover--fade': fade }"
-        :style="{ 'border-width': borderWidth }">
+        :class="{
+            'cover--clickable': thumbnail || clickable,
+            'cover--bordered': bordered,
+            'cover--rounded': rounded,
+            'cover--fade': fade,
+        }"
+        :style="{ 'border-width': borderWidth }"
+    >
         <div class="cover__thumbnail" v-if="thumbnail">
             <div class="cover__artist">{{ album.artist }}</div>
             <div class="cover__title text--name">{{ album.title }}</div>
             <div class="cover__year">{{ album.year }}</div>
             <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
         </div>
-        <div class="cover__album" v-if="album" :style="{ height: size && size + 'px', width: size && size + 'px', 'max-height': size && size + 'px', 'max-width': size && size + 'px' }">
+        <div
+            class="cover__album"
+            v-if="album"
+            :style="{
+                height: size && size + 'px',
+                width: size && size + 'px',
+                'max-height': size && size + 'px',
+                'max-width': size && size + 'px',
+            }"
+        >
             <img class="cover__album__image" :src="cover" :alt="album.title" />
         </div>
     </div>
@@ -87,9 +102,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/mixins/fade-in';
-@import '@/style/mixins/golden';
+@import "@/style/gatherer";
+@import "@/style/mixins/fade-in";
+@import "@/style/mixins/golden";
 
 .cover {
     display: inline-block;

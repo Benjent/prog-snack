@@ -1,12 +1,29 @@
 <template>
     <div class="histogram" :class="{ [`histogram--${direction}`]: direction }">
-        <caption class="histogram__caption title title--caption">{{ caption }}</caption>
+        <caption class="histogram__caption title title--caption">
+            {{
+                caption
+            }}
+        </caption>
         <div class="histogram__datavis">
             <div class="histogram__entry" v-for="item in chartData" :key="item.label">
-                <div class="histogram__label" v-if="direction === 'horizontal'">{{ item.label }}</div>
-                <div :class="{ 'histogram__row': direction === 'horizontal', 'histogram__column': direction === 'vertical' }">
-                    <component :is="direction === 'vertical' ? 'slide-y-down-transition' : 'slide-x-left-transition'" appear :duration="500">
-                        <div class="gauge" :class="{ [`gauge--${direction}`]: direction }" :data-size="item.percentage">{{ item.value }}</div>
+                <div class="histogram__label" v-if="direction === 'horizontal'">
+                    {{ item.label }}
+                </div>
+                <div
+                    :class="{
+                        histogram__row: direction === 'horizontal',
+                        histogram__column: direction === 'vertical',
+                    }"
+                >
+                    <component
+                        :is="direction === 'vertical' ? 'slide-y-down-transition' : 'slide-x-left-transition'"
+                        appear
+                        :duration="500"
+                    >
+                        <div class="gauge" :class="{ [`gauge--${direction}`]: direction }" :data-size="item.percentage">
+                            {{ item.value }}
+                        </div>
                     </component>
                 </div>
                 <div class="histogram__label" v-if="direction === 'vertical'">{{ item.label }}</div>
@@ -27,7 +44,7 @@ export default {
         datasource: {
             type: Array,
             validator(value) {
-                return value.every((i) => i.hasOwnProperty("label") && i.hasOwnProperty("value"))
+                return value.every((i) => Object.hasOwn(i, "label") && Object.hasOwn(i, "value"))
             },
         },
         direction: {
@@ -66,28 +83,30 @@ export default {
             const max = Math.max(...values)
             const min = Math.min(...values)
 
-            return filteredDataSource.map((item) => {
-                const ratio = (item.value - min) / (max - min)
-                return {
-                    label: item.label,
-                    value: item.value,
-                    ratio,
-                    percentage: `${(ratio * 100).toString()}%`,
-                }
-            }).sort((a, b) => {
-                if (this.sort !== "NONE") {
-                    return this.sort === "ASC" ? a.value - b.value : b.value - a.value
-                }
-                return null
-            })
+            return filteredDataSource
+                .map((item) => {
+                    const ratio = (item.value - min) / (max - min)
+                    return {
+                        label: item.label,
+                        value: item.value,
+                        ratio,
+                        percentage: `${(ratio * 100).toString()}%`,
+                    }
+                })
+                .sort((a, b) => {
+                    if (this.sort !== "NONE") {
+                        return this.sort === "ASC" ? a.value - b.value : b.value - a.value
+                    }
+                    return null
+                })
         },
     },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/modules/gauge';
+@import "@/style/gatherer";
+@import "@/style/modules/gauge";
 
 .histogram {
     display: flex;

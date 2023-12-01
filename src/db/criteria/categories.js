@@ -23,7 +23,7 @@ const categories = /** @type {const} */ ({
 /**
  * @type { Array.<keyof typeof categories> }
  * @readonly
-*/
+ */
 const categoriesOrder = [
     categories.TYPE,
     categories.LANGUAGE,
@@ -41,7 +41,7 @@ const categoriesOrder = [
 /**
  * @type { Object.<keyof typeof categories, Array.<keyof typeof criteria | keyof typeof languages>> }
  * @readonly
-*/
+ */
 const criteriaCategory = {
     [categories.TYPE]: [
         criteria.CONCEPT,
@@ -131,7 +131,7 @@ const criteriaCategory = {
 /**
  * @type { Record<keyof typeof categories, string> }
  * @readonly
-*/
+ */
 const categoryLabels = {
     [categories.ARRANGEMENT]: "Arrangement",
     [categories.CONTAINS]: "Contains elements of",

@@ -9,7 +9,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { Check },
         props: Object.keys(argTypes),
-        template: "<Check v-bind=\"$props\" />",
+        template: `<Check v-bind="$props" />`,
     }),
     args: {
         id: "id",
@@ -22,7 +22,7 @@ export const Checked = {
     render: (args, { argTypes }) => ({
         components: { Check },
         props: Object.keys(argTypes),
-        template: "<Check v-bind=\"$props\" />",
+        template: `<Check v-bind="$props" />`,
     }),
     args: {
         id: "id",

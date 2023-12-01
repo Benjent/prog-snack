@@ -12,7 +12,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -23,7 +23,7 @@ export const Size = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -35,7 +35,7 @@ export const Thumbnail = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -47,7 +47,7 @@ export const Clickable = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -59,7 +59,7 @@ export const Bordered = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -71,7 +71,7 @@ export const Rounded = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,
@@ -83,7 +83,7 @@ export const Fade = {
     render: (args, { argTypes }) => ({
         components: { Cover },
         props: Object.keys(argTypes),
-        template: "<Cover v-bind=\"$props\" />",
+        template: `<Cover v-bind="$props" />`,
     }),
     args: {
         album,

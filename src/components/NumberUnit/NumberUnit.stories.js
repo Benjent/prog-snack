@@ -9,7 +9,7 @@ export const Default = {
     render: (args, { argTypes }) => ({
         components: { NumberUnit },
         props: Object.keys(argTypes),
-        template: "<NumberUnit v-bind=\"$props\" />",
+        template: `<NumberUnit v-bind="$props" />`,
     }),
     args: {
         number: 42,

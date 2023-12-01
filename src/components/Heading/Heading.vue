@@ -18,12 +18,14 @@ export default {
         },
     },
     computed: {
-        is() { return `h${this.level}` },
+        is() {
+            return `h${this.level}`
+        },
     },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/gatherer';
-@import '@/style/modules/title';
+@import "@/style/gatherer";
+@import "@/style/modules/title";
 </style>

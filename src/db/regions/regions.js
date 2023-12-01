@@ -53,7 +53,7 @@ const regions = /** @type {const} */ ({
 /**
  * @type { Record<keyof typeof regions, string> }
  * @readonly
-*/
+ */
 const regionLabels = {
     [regions.ARGENTINA]: "Argentina",
     [regions.AUSTRALIA]: "Australia",
