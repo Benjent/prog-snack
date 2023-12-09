@@ -21,6 +21,7 @@ describe("Check.vue", () => {
 
     it("emits value on click", async () => {
         await wrapper.find(".check").trigger("click")
+        // Since Vue 2.7 migration, below test is broken
         expect(wrapper.emitted().input[0]).toEqual([true])
         await wrapper.find(".check__input").trigger("click")
         expect(wrapper.emitted().input[1]).toEqual([true])

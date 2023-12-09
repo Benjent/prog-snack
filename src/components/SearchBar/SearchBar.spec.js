@@ -14,6 +14,7 @@ describe("SearchBar.vue", () => {
 
     it("filters matching albums", () => {
         wrapper.find(".searchBar__input").setValue("Sweet Smo")
+        // Since Vue 2.7 migration, below test is broken
         expect(wrapper.vm.matchingAlbums.length).toBe(3)
         expect(wrapper.vm.matchingAlbums[0]).toEqual(album)
     })
