@@ -19,12 +19,12 @@
                             <Cover class="discographies__selectedAlbum__cover" :album="selectedAlbum" bordered fade />
                             <Heading :level="2" class="text--name">{{ selectedAlbum.title }}</Heading>
                             <Heading :level="3"><Icon name="event" /> {{ selectedAlbum.year }}</Heading>
-                            <Heading :level="3">{{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</Heading>
+                            <Heading :level="3">{{ flags[selectedAlbum.country] }} {{ $filters.region(selectedAlbum.country) }}</Heading>
                             <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
                                 <Icon name="palette" />
                                 <List :values="selectedAlbum.designers" type="flattened" />
                             </div>
-                            <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
+                            <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$filters.criterium" />
                             <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                             <AlbumStarter class="discographies__track" :album="selectedAlbum" />
                         </div>
@@ -34,7 +34,7 @@
                                 <header class="discographies__selectedAlbum__header">
                                     <div class="discographies__selectedAlbum__title text--name text--quaternary">{{ selectedAlbum.title }}</div>
                                     <div>
-                                        <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ selectedAlbum.country | region }}</span>
+                                        <span><Icon name="event" /> {{ selectedAlbum.year }} - {{ flags[selectedAlbum.country] }} {{ $filters.region(selectedAlbum.country) }}</span>
                                     </div>
                                     <div class="discographies__selectedAlbum__designers" v-if="selectedAlbum.designers.length > 0">
                                         <Icon name="palette" />
@@ -43,7 +43,7 @@
                                     </div>
                                 </header>
                                 <footer class="discographies__selectedAlbum__footer">
-                                    <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
+                                    <List class="discographies__selectedAlbum__criteria" :values="selectedAlbum.criteria" :filter="$filters.criterium" type="flattened" separator=" • "  />
                                     <div class="discographies__selectedAlbum__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
                                 </footer>
                                 <AlbumStarter class="discographies__track" :album="selectedAlbum" />

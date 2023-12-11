@@ -7,7 +7,7 @@
                     <div class="album__info">
                         <Heading :level="2">{{ selectedAlbum.artist }}</Heading>
                         <Heading class="text--name">{{ selectedAlbum.title }}</Heading>
-                        <div class="album__year">{{ selectedAlbum.year }} - {{ selectedAlbum.country | region }}</div>
+                        <div class="album__year">{{ selectedAlbum.year }} - {{ $filters.region(selectedAlbum.country) }}</div>
                     </div>
                 </slide-x-left-transition>
 
@@ -16,7 +16,7 @@
                 <slide-x-right-transition appear>
                     <div class="album__criteria">
                         <div class="album__gem" v-if="selectedAlbum.isAGem">This album is a must-hear</div>
-                        <List :values="selectedAlbum.criteria" :filter="$options.filters.criterium" />
+                        <List :values="selectedAlbum.criteria" :filter="$filters.criterium" />
                     </div>
                 </slide-x-right-transition>
             </section>

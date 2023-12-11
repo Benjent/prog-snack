@@ -1,3 +1,4 @@
+// TODO tsc fails since vue migration from 2.6 to 2.7
 {
     "compilerOptions": {
         "jsx": "preserve",

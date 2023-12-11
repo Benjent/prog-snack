@@ -18,22 +18,22 @@
 
                     <Accordion title="Region" drawered>
                         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-                        <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$options.filters.region" @input="filterAttic" />
+                        <Select class="attic__filter" v-model="selectedRegion" :options="regions" :filter="$filters.region" @input="filterAttic" />
                     </Accordion>
 
                     <Accordion title="Language" drawered>
                         <!-- eslint-disable-next-line vuejs-accessibility/form-control-has-label -->
-                        <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$options.filters.criterium" @input="filterAttic" />
+                        <Select class="attic__filter" v-model="selectedLanguage" :options="languages" :filter="$filters.criterium" @input="filterAttic" />
                     </Accordion>
 
-                    <Accordion v-for="(panel, index) in filterModel" :key="panel.panel" :title="$options.filters.criteriumCategory(panel.panel)" drawered>
+                    <Accordion v-for="(panel, index) in filterModel" :key="panel.panel" :title="$filters.criteriumCategory(panel.panel)" drawered>
                         <template v-for="(item, indexCriteria) in panel.criteria">
                             <Radio
                                 v-if="item.name"
                                 v-model="radioGroups[item.name]"
                                 :id="item.criterium"
                                 class="attic__filter"
-                                :label="item.criterium | criterium" :own="item.criterium"
+                                :label="$filters.criterium(item.criterium)" :own="item.criterium"
                                 :key="`${item.criterium}Radio`"
                                 @click.native="filterAttic(item.criterium)" />
                             <Check
@@ -41,7 +41,7 @@
                                 :id="item.criterium"
                                 class="attic__filter"
                                 v-model="filterModel[index].criteria[indexCriteria].checked"
-                                :label="item.criterium | criterium"
+                                :label="$filters.criterium(item.criterium)"
                                 :key="`${item.criterium}Check`"
                                 @click.native="filterAttic(item.criterium)" />
                         </template>

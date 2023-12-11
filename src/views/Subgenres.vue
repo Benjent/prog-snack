@@ -24,7 +24,7 @@
                         <Heading :level="2" class="subgenres__name text--name">{{ subgenre.name }}</Heading>
                         <Typography>
                             <span>Characterized by the following: </span>
-                            <List class="subgenres__criterium" :values="subgenre.criteria" :filter="$options.filters.criterium" type="flattened" separator=" • "  />
+                            <List class="subgenres__criterium" :values="subgenre.criteria" :filter="$filters.criterium" type="flattened" separator=" • "  />
                         </Typography>
                         <blockquote class="text text--description subgenres__description" v-if="!subgenre.description.includes('TODO')">{{ subgenre.description }}</blockquote>
                     </div>

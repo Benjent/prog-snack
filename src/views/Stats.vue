@@ -43,7 +43,7 @@ export default {
             return convertDatasource(this.albumsPerYear)
         },
         albumsPerCountryWithRatio() {
-            return convertDatasource(this.albumsPerCountry, (label) => `${flags[label]} ${this.$options.filters.region(label)}`)
+            return convertDatasource(this.albumsPerCountry, (label) => `${flags[label]} ${this.$filters.region(label)}`)
         },
         artistsWithGemsWithRatio() {
             return convertDatasource(this.artistsWithMostGems)
@@ -56,7 +56,7 @@ export default {
             criteriaCategory[categories.LANGUAGE].forEach((criterium) => {
                 delete criteriaOccurences[criterium]
             })
-            return convertDatasource(criteriaOccurences, (label) => this.$options.filters.criterium(label))
+            return convertDatasource(criteriaOccurences, (label) => this.$filters.criterium(label))
         },
     },
 }

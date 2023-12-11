@@ -49,23 +49,23 @@ export default {
             criteria,
             glossary: [
                 {
-                    title: this.$options.filters.criterium(criteria.ARENA),
+                    title: this.$filters.criterium(criteria.ARENA),
                     definition: "Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.BAROQUE),
+                    title: this.$filters.criterium(criteria.BAROQUE),
                     definition: "Album contains strings arrangements - british style. Album style is quite cold.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.FANFARE),
+                    title: this.$filters.criterium(criteria.FANFARE),
                     definition: "Album contains brass arrangements - sometimes upbeats sections.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.GLITTER),
+                    title: this.$filters.criterium(criteria.GLITTER),
                     definition: "Album style is keyboard-oriented with high-pitched vocal harmonies.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.JAM),
+                    title: this.$filters.criterium(criteria.JAM),
                     definition: "Albums contains music sections that are solos or instrumental improvisations.",
                 },
                 {
@@ -73,35 +73,35 @@ export default {
                     definition: "Album contains some lyrics or is completely sung in a specific language.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.LENGTHY_TRACKS),
+                    title: this.$filters.criterium(criteria.LENGTHY_TRACKS),
                     definition: "Album tracklist is composed of songs that can go over 8 minutes.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.PATCHWORK),
+                    title: this.$filters.criterium(criteria.PATCHWORK),
                     definition: "Album tracklist is composed of songs of less that 2 minutes.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.RENAISSANCE),
+                    title: this.$filters.criterium(criteria.RENAISSANCE),
                     definition: "Album contains strings arrangements - italian style. Album is rather spectacular, often technical.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.ROCK_OPERA),
+                    title: this.$filters.criterium(criteria.ROCK_OPERA),
                     definition: "Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.SPACY),
+                    title: this.$filters.criterium(criteria.SPACY),
                     definition: "Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.STORYLINE),
+                    title: this.$filters.criterium(criteria.STORYLINE),
                     definition: "Album follows a story that is narrated.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.SYMPHONIC),
+                    title: this.$filters.criterium(criteria.SYMPHONIC),
                     definition: "Album contains songs that have movements in their structure. Song durations are often long.",
                 },
                 {
-                    title: this.$options.filters.criterium(criteria.UNCOMMON_INSTRUMENTS),
+                    title: this.$filters.criterium(criteria.UNCOMMON_INSTRUMENTS),
                     definition: "Album contains \"non-Rock\" instruments: wind or brass instruments, world percussions.",
                 },
             ],

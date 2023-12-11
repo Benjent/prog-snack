@@ -1,7 +1,7 @@
 import path from "path"
 import { defineConfig } from "vite"
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
-import vue from '@vitejs/plugin-vue2'
+import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
     plugins: [
