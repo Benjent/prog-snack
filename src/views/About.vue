@@ -127,7 +127,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../style/gatherer";
 @import "../style/mixins/page";
 @import "../style/modules/card";
