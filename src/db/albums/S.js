@@ -602,8 +602,8 @@ const albums = [
         isAGem: false,
     },
     {
-        id: "spirit_twelves_dreams_of_dr_sardonicus",
-        title: "Twelves Dream Of Dr. Sardonicus",
+        id: "spirit_twelve_dreams_of_dr_sardonicus",
+        title: "Twelve Dream Of Dr. Sardonicus",
         artist: "Spirit",
         year: 1970,
         country: regions.USA,
