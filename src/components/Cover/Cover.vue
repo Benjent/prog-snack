@@ -172,10 +172,8 @@ export default {
 
         &__image {
             display: block;
-            height: 100%;
             width: 100%;
             min-width: 100%;
-            min-height: 100%;
             max-width: 300px;
             max-height: 300px;
         }
