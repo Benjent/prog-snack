@@ -553,7 +553,7 @@ const albums = [
         artist: "Khan",
         year: 1972,
         country: regions.ENGLAND,
-        criteria: [criteria.ODD_RHYTHM, criteria.INSTRUMENTAL, criteria.JAM],
+        criteria: [criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.JAM, criteria.C_PSYCHE],
         selectedTrackTitle: "Stranded",
         selectedTrackYtId: "tHkYXKlwB9s",
         spotifyId: "75sMiBX4FEfaAdbKNBxPfK",
