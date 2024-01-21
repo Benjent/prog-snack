@@ -94,7 +94,7 @@ This project is heavily influenced by [SMACSS](http://smacss.com/) and [BEM](htt
 
 ## To do
 
-## Since Vue 2.7 migration from 2.6
+### Since Vue 2.7 migration from 2.6
 
 - Fix wrapper.emitted() empty result
 - Fix tsc broken config
