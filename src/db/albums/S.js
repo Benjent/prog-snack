@@ -61,7 +61,7 @@ const albums = [
         selectedTrackYtId: "i29JpRfSTlQ",
         spotifyId: "5vSSVQiQ3rYYptHtIAR5b6",
         deezerId: "101816",
-        designers: ["David Nils"],
+        designers: [],
         similarAlbums: [],
         isAGem: true,
         description: `TODO Description`,
