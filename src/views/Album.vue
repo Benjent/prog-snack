@@ -1,7 +1,9 @@
 <template>
     <fade-transition appear>
         <main class="album">
-            <button class="album__button button" @click="randomizeAlbum" aria-label="Surprise me with a random album">Surprise me</button>
+            <button class="album__button button" @click="randomizeAlbum" aria-label="Surprise me with a random album">
+                Surprise me
+            </button>
             <section class="album__body" :key="selectedAlbum.id">
                 <slide-x-left-transition appear>
                     <div class="album__info">
@@ -11,7 +13,15 @@
                     </div>
                 </slide-x-left-transition>
 
-                <Cover class="album__cover" :album="selectedAlbum" :size="$mq === 'M' ? 120 : null" bordered clickable fade @click.native="goToDiscographies" />
+                <Cover
+                    class="album__cover"
+                    :album="selectedAlbum"
+                    :size="$mq === 'M' ? 120 : null"
+                    bordered
+                    clickable
+                    fade
+                    @click.native="goToDiscographies"
+                />
 
                 <slide-x-right-transition appear>
                     <div class="album__criteria">
@@ -31,9 +41,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import {
-    AlbumStarter, Cover, Heading, List, Timeline,
-} from "../components"
+import { AlbumStarter, Cover, Heading, List, Timeline } from "../components"
 
 export default {
     name: "Album",
@@ -62,11 +70,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/golden';
-@import '../style/mixins/page';
-@import '../style/modules/button';
-@import '../style/modules/title';
+@import "../style/gatherer";
+@import "../style/mixins/golden";
+@import "../style/mixins/page";
+@import "../style/modules/button";
+@import "../style/modules/title";
 
 .album {
     @include page;
@@ -134,7 +142,8 @@ export default {
             flex-direction: column;
         }
 
-        & &__info, & &__criteria {
+        & &__info,
+        & &__criteria {
             width: auto;
             text-align: center;
         }

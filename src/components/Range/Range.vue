@@ -55,6 +55,8 @@ export default {
         },
     },
     methods: {
+        /* eslint-disable vue/no-mutating-props */
+        // TODO fix props reassignment
         onMinInput(event) {
             const min = Number.parseInt(event.target.value, 10)
             if (min >= this.value.max) {
@@ -77,6 +79,7 @@ export default {
             }
             this.notifyParent()
         },
+        /* eslint-enable vue/no-mutating-props */
         notifyParent() {
             this.$emit("input", this.value)
         },
@@ -88,7 +91,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
+@import "@/style/gatherer";
 
 .range {
     cursor: pointer;
@@ -122,7 +125,8 @@ export default {
             top: 50%; // This prevent the 1px shift
         }
 
-        &::-webkit-slider-thumb, &::-moz-range-thumb {
+        &::-webkit-slider-thumb,
+        &::-moz-range-thumb {
             cursor: pointer;
             -webkit-appearance: none;
             appearance: none;
@@ -137,7 +141,8 @@ export default {
             box-sizing: border-box;
         }
 
-        &::-moz-range-thumb:hover, &::-moz-range-thumb:hover {
+        &::-moz-range-thumb:hover,
+        &::-moz-range-thumb:hover {
             background: linear-gradient(141deg, $secondary 10%, $tertiary 90%);
         }
     }

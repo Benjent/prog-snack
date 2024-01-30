@@ -1,3 +1,6 @@
+<!-- eslint-disable vuejs-accessibility/no-static-element-interactions -->
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
+<!-- TODO fix above -->
 <template>
     <fade-transition appear>
         <main class="designers">
@@ -5,7 +8,12 @@
                 <Heading :level="2" class="text--name">{{ designer.name }}</Heading>
 
                 <div class="card designers__albums" :class="getClassDesigner(designer.name)">
-                    <div class="designers__albums__item" v-for="album in getShuffledDesignerWorks(designer.works)" :key="album.id" @click="selectAlbumAndView(album)">
+                    <div
+                        class="designers__albums__item"
+                        v-for="album in getShuffledDesignerWorks(designer.works)"
+                        :key="album.id"
+                        @click="selectAlbumAndView(album)"
+                    >
                         <Cover :album="album" thumbnail rounded />
                     </div>
                 </div>
@@ -62,12 +70,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/fade-in';
-@import '../style/mixins/page';
-@import '../style/modules/card';
-@import '../style/modules/text';
-@import '../style/modules/title';
+@import "../style/gatherer";
+@import "../style/mixins/fade-in";
+@import "../style/mixins/page";
+@import "../style/modules/card";
+@import "../style/modules/text";
+@import "../style/modules/title";
 
 .designers {
     display: flex;

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
+@import "@/style/gatherer";
 
 .icon {
     // vertical-align: middle;

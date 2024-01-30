@@ -1,5 +1,3 @@
 import tick from "./tick"
 
-export {
-    tick,
-}
+export { tick }

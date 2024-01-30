@@ -1,8 +1,6 @@
 import { criteria, criteriaOrder, criteriumLabels } from "./criteria"
 import { languages, languageLabels } from "./languages"
-import {
-    categories, categoriesOrder, criteriaCategory, categoryLabels,
-} from "./categories"
+import { categories, categoriesOrder, criteriaCategory, categoryLabels } from "./categories"
 
 export {
     categories,

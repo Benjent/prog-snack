@@ -1,110 +1,70 @@
 {
-  "root": true,
-  "env": {
-    "node": true,
-    "jest": true
-  },
-  "extends": [
-    "plugin:vue/essential",
-    "plugin:vuejs-accessibility/recommended",
-    "@vue/airbnb"
-  ],
-  "plugins": ["tsc"],
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser"
-  },
-  "rules": {
-    "import/no-dynamic-require": "off",
-    "import/prefer-default-export": "off",
-    "indent": [
-      "error",
-      4
-    ],
-    "comma-dangle": [
-      "error",
-      "always-multiline"
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 300,
-        "comments": 300,
-        "ignoreComments": true,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true
-      }
-    ],
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "warn",
-          "error"
-        ]
-      }
-    ],
-    "no-param-reassign": [
-      "error",
-      {
-        "props": false
-      }
-    ],
-    "no-plusplus": "off",
-    "no-unused-expressions": [
-      "error",
-      {
-        "allowTernary": true
-      }
-    ],
-    "quotes": [
-      "error",
-      "double",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
-    "semi": [
-      "error",
-      "never"
-    ],
-    "vue/max-len": [
-      "error",
-      {
-        "code": 300,
-        "template": 300,
-        "comments": 300,
-        "ignoreComments": true,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true,
-        "ignoreHTMLAttributeValues": true,
-        "ignoreHTMLTextContents": true
-      }
-    ]
-  },
-  "overrides": [
-    {
-      "files": [
-        "src/**/db/albums/*.js"
-      ],
-      "rules": {
-        "max-len": "off",
-        "vue/max-len": "off"
-      }
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
     },
-    {
-      "files": [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)"
-      ],
-      "env": {
-        "jest": true
-      }
-    }
-  ]
+    "extends": [
+        "eslint:recommended",
+        "plugin:storybook/recommended",
+        "plugin:vue/essential",
+        "plugin:json/recommended",
+        "plugin:vuejs-accessibility/recommended"
+    ],
+    "plugins": ["tsc"],
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+    },
+    "rules": {
+        "import/no-dynamic-require": "off",
+        "import/prefer-default-export": "off",
+        "indent": ["error", 4],
+        "comma-dangle": ["error", "always-multiline"],
+        "no-console": [
+            "error",
+            {
+                "allow": ["warn", "error"]
+            }
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
+        "no-plusplus": "off",
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowTernary": true
+            }
+        ],
+        "quotes": [
+            "error",
+            "double",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": ["error", "never"],
+        "vue/multi-word-component-names": "off",
+        "vue/no-reserved-component-names": "off"
+    },
+    "overrides": [
+        {
+            "files": ["src/**/db/**/*.js"],
+            "rules": {
+                "max-len": "off"
+            }
+        },
+        {
+            "files": ["*.json"],
+            "rules": {
+                "comma-dangle": ["error", "never"]
+            }
+        },
+        {
+            "files": ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"]
+        }
+    ]
 }

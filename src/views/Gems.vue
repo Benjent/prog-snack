@@ -2,15 +2,26 @@
     <fade-transition appear>
         <main class="gems">
             <div class="gems__item" v-for="album in gems" :key="album.id">
-                <Cover class="gems__cover" :album="album" :size="$mq === 'M' ? 120 : null" bordered @click.native="selectAlbumAndView(album)" />
+                <Cover
+                    class="gems__cover"
+                    :album="album"
+                    :size="$mq === 'M' ? 120 : null"
+                    bordered
+                    @click.native="selectAlbumAndView(album)"
+                />
 
                 <div class="gems__album">
                     <button class="gems__title" @click="selectAlbumAndView(album)">
                         <Heading :level="3">{{ album.artist }}</Heading>
                         <Heading :level="2" class="text--name">{{ album.title }}</Heading>
-                        <span>({{album.year}})</span>
+                        <span>({{ album.year }})</span>
                     </button>
-                    <blockquote class="text text--description gems__description" v-if="album.description && !album.description.includes('TODO')">{{album.description}}</blockquote>
+                    <blockquote
+                        class="text text--description gems__description"
+                        v-if="album.description && !album.description.includes('TODO')"
+                    >
+                        {{ album.description }}
+                    </blockquote>
                 </div>
             </div>
         </main>
@@ -43,9 +54,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/gatherer';
-@import '../style/mixins/page';
-@import '../style/modules/text';
+@import "../style/gatherer";
+@import "../style/mixins/page";
+@import "../style/modules/text";
 
 .gems {
     display: flex;
@@ -96,7 +107,8 @@ export default {
     .gems {
         padding: 20px;
 
-        & &__item, & &__item:nth-child(even) {
+        & &__item,
+        & &__item:nth-child(even) {
             padding: 20px 0;
             flex-direction: column;
             align-items: center;

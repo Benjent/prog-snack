@@ -1,9 +1,10 @@
+import { beforeEach, describe, expect, it } from "vitest"
 import { shallowMount } from "@vue/test-utils"
 import { AlbumStarter } from "@/components"
 import albums from "@/db/albums"
 
 describe("AlbumStarter.vue", () => {
-    const album = albums.find((album) => album.id === "sweet_smoke_just_a_poke")
+    const album = albums.find((a) => a.id === "sweet_smoke_just_a_poke")
     let wrapper
     beforeEach(() => {
         const propsData = {

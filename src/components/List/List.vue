@@ -1,7 +1,8 @@
 <template>
     <component :is="listComponent" class="list">
-        <component :is="itemComponent" class="list__item" v-for="item, index in values" :key="item">
-            {{ filter ? filter(item) : item }}<template v-if="type === 'flattened' && index < values.length - 1">{{ separator }}</template>
+        <component :is="itemComponent" class="list__item" v-for="(item, index) in values" :key="item">
+            {{ filter ? filter(item) : item
+            }}<template v-if="type === 'flattened' && index < values.length - 1">{{ separator }}</template>
         </component>
     </component>
 </template>
@@ -45,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
+@import "@/style/gatherer";
 
 .list {
     text-align: left;

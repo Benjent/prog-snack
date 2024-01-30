@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it } from "vitest"
 import { shallowMount } from "@vue/test-utils"
 import { Radio } from "@/components"
 
@@ -21,6 +22,7 @@ describe("Radio.vue", () => {
 
     it("emits value on click", async () => {
         await wrapper.find(".radio").trigger("click")
+        // Since Vue 2.7 migration, below test is broken
         expect(wrapper.emitted().input[0]).toEqual(["own"])
         await wrapper.find(".radio__input").trigger("click")
         expect(wrapper.emitted().input[1]).toEqual(["own"])

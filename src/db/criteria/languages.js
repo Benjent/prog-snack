@@ -13,6 +13,7 @@ const languages = /** @type {const} */ ({
     CREOLE: "CREOLE",
     CROATIAN: "CROATIAN",
     CZECH: "CZECH",
+    DANISH: "DANISH",
     FINNISH: "FINNISH",
     FRENCH: "FRENCH",
     GERMAN: "GERMAN",
@@ -38,7 +39,7 @@ const languages = /** @type {const} */ ({
 /**
  * @type { Record<keyof typeof languages, string> }
  * @readonly
-*/
+ */
 const languageLabels = {
     [languages.ARMENIAN]: "Armenian sung",
     [languages.BELARUSIAN]: "Belarusian sung",
@@ -49,6 +50,7 @@ const languageLabels = {
     [languages.CREOLE]: "Creole sung",
     [languages.CROATIAN]: "Croatian sung",
     [languages.CZECH]: "Czech sung",
+    [languages.DANISH]: "Danish sung",
     [languages.FINNISH]: "Finnish sung",
     [languages.FRENCH]: "French sung",
     [languages.GERMAN]: "German sung",
@@ -71,7 +73,4 @@ const languageLabels = {
     [languages.ZEUHL]: "Zeuhl",
 }
 
-export {
-    languages,
-    languageLabels,
-}
+export { languages, languageLabels }

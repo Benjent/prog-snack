@@ -7,7 +7,12 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     font-weight: normal;
 }
@@ -28,10 +33,8 @@ select {
     text-align: inherit;
 
     &::-moz-focus-inner {
-        border: none
+        border: none;
     }
-
-    &:focus {}
 }
 
 textarea,
@@ -42,27 +45,29 @@ input {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
     color: inherit;
 }
 
 table {
     border-collapse: collapse;
     text-align: left;
-
 }
 
 th {
     font-weight: normal;
 }
 
-ul, ol {
+ul,
+ol {
     margin: 0;
     padding: 0;
     list-style-position: inside;
 }
 
-dl, dt, dd {
+dl,
+dt,
+dd {
     margin: 0;
 }
 

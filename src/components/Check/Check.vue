@@ -1,6 +1,13 @@
 <template>
     <label class="check" :for="id">
-        <input :id="id" class="check__input" :class="{ 'check__input--checked': value }" type="checkbox" :checked="value" @click="notifyParent">
+        <input
+            :id="id"
+            class="check__input"
+            :class="{ 'check__input--checked': value }"
+            type="checkbox"
+            :checked="value"
+            @click="notifyParent"
+        />
         {{ label }}
     </label>
 </template>
@@ -16,6 +23,13 @@ export default {
             type: Boolean,
             default: false,
         },
+        id: {
+            type: String,
+        },
+        label: {
+            type: String,
+            required: true,
+        },
     },
     methods: {
         notifyParent() {
@@ -26,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
+@import "@/style/gatherer";
 
 .check {
     cursor: pointer;

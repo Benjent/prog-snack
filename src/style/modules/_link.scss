@@ -2,7 +2,8 @@
     color: $primary;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: $primary;
     }
 }

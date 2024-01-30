@@ -17,12 +17,14 @@ export default {
         },
     },
     computed: {
-        is() { return this.component },
+        is() {
+            return this.component
+        },
     },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/modules/text';
+@import "@/style/gatherer";
+@import "@/style/modules/text";
 </style>

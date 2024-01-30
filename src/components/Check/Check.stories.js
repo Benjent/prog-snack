@@ -2,24 +2,31 @@ import Check from "./Check.vue"
 
 export default {
     component: Check,
+    tags: ["autodocs"],
 }
 
-const Template = ({ id, label, value }) => ({
-    render() {
-        return <Check id={id} label={label} value={value} />
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { Check },
+        props: Object.keys(argTypes),
+        template: `<Check v-bind="$props" />`,
+    }),
+    args: {
+        id: "id",
+        label: "This is a label",
+        value: false,
     },
-})
-
-export const Default = Template.bind({})
-Default.args = {
-    id: "id",
-    label: "label",
-    value: false,
 }
 
-export const Checked = Template.bind({})
-Checked.args = {
-    id: "id",
-    label: "label",
-    value: true,
+export const Checked = {
+    render: (args, { argTypes }) => ({
+        components: { Check },
+        props: Object.keys(argTypes),
+        template: `<Check v-bind="$props" />`,
+    }),
+    args: {
+        id: "id",
+        label: "This is a label",
+        value: true,
+    },
 }

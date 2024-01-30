@@ -4,11 +4,13 @@ import Transitions from "vue2-transitions"
 
 import App from "./App.vue"
 import Filters from "./plugins/Filters"
+import GetAssetUrl from "./plugins/GetAssetUrl"
 import router from "./router"
 import store from "./store"
 
 Vue.config.productionTip = false
 Vue.use(Filters)
+Vue.use(GetAssetUrl)
 Vue.use(VueMq, {
     breakpoints: {
         M: 981, // $mobile + 1

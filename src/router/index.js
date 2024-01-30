@@ -1,8 +1,6 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
-import {
-    About, Album, Attic, Designers, Discographies, Gems, Stats, Subgenres,
-} from "../views"
+import { About, Album, Attic, Designers, Discographies, Gems, Stats, Subgenres } from "../views"
 
 Vue.use(VueRouter)
 

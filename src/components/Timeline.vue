@@ -1,8 +1,16 @@
 <template>
     <div class="timeline">
         <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
-            <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index-1].year">{{ album.year }}</div>
-            <Cover class="timeline__cover" :album="album" :size="$mq === 'M' ? 60 : null" clickable @click.native="selectAlbum(album)" />
+            <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index - 1].year">
+                {{ album.year }}
+            </div>
+            <Cover
+                class="timeline__cover"
+                :album="album"
+                :size="$mq === 'M' ? 60 : null"
+                clickable
+                @click.native="selectAlbum(album)"
+            />
         </div>
     </div>
 </template>
@@ -30,9 +38,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/fade-in';
-@import '~@/style/mixins/shadow';
+@import "@/style/gatherer";
+@import "@/style/mixins/fade-in";
+@import "@/style/mixins/shadow";
 
 .timeline {
     display: flex;

@@ -1,12 +1,23 @@
 <template>
     <slide-y-up-transition appear :duration="500">
         <header class="theNavBar" :class="{ 'theNavBar--footer': footer }">
-            <router-link v-if="!footer" class="theNavBar__logo link" :to="{ name: 'home' }" :aria-current="$route.name === 'home' && 'page'">
-                <img src="@/assets/img/logos/snack_font.png" alt="Prog Snack">
+            <router-link
+                v-if="!footer"
+                class="theNavBar__logo link"
+                :to="{ name: 'home' }"
+                :aria-current="$route.name === 'home' && 'page'"
+            >
+                <img src="@/assets/img/logos/snack_font.png" alt="Prog Snack" />
             </router-link>
             <nav v-if="footer || (!footer && $mq !== 'M')" class="theNavBar__nav">
-                <router-link class="theNavBar__navItem link" v-for="item in nav" :key="item.name" :to="{ name: item.name }" :aria-current="$route.name === item.name && 'page'">
-                    <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText"/>
+                <router-link
+                    class="theNavBar__navItem link"
+                    v-for="item in nav"
+                    :key="item.name"
+                    :to="{ name: item.name }"
+                    :aria-current="$route.name === item.name && 'page'"
+                >
+                    <Icon v-if="$mq === 'M'" :name="item.icon" class="theNavBar__navText" />
                     <div v-else class="theNavBar__navText">{{ item.title }}</div>
                 </router-link>
             </nav>
@@ -48,9 +59,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/shadow';
-@import '~@/style/modules/link';
+@import "@/style/gatherer";
+@import "@/style/mixins/shadow";
+@import "@/style/modules/link";
 
 .theNavBar {
     @include shadow;
@@ -64,7 +75,7 @@ export default {
 
     // Image background
     // background-color: #ffffff; // cars.png background color
-    // background-image: url('~@/assets/img/backgrounds/plane.png');
+    // background-image: url('/src/assets/img/backgrounds/plane.png');
     // background-repeat: no-repeat;
     // background-size: 18%;
     // background-position-x: right;

@@ -4,15 +4,17 @@ export default {
     component: TheStorybookModuleWrapper,
 }
 
-const Template = () => ({
-    render() {
-        return (
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { TheStorybookModuleWrapper },
+        props: Object.keys(argTypes),
+        template: `
             <TheStorybookModuleWrapper>
-                <button class="button">This is a title</button>
+                <button v-bind="$props">This is a title</button>
             </TheStorybookModuleWrapper>
-        )
+        `,
+    }),
+    args: {
+        class: "button",
     },
-})
-
-export const Default = Template.bind({})
-Default.args = {}
+}

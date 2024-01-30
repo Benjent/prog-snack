@@ -31,14 +31,14 @@ const generateDao = () => {
 
         // Albums per year
         const { year } = album
-        albumsPerYear[year] ? albumsPerYear[year]++ : albumsPerYear[year] = 1
+        albumsPerYear[year] ? albumsPerYear[year]++ : (albumsPerYear[year] = 1)
 
         // Albums per country
         const { country } = album
         if (!country) {
             console.error(`Wrong country used in album with id: ${album.id}`)
         }
-        albumsPerCountry[country] ? albumsPerCountry[country]++ : albumsPerCountry[country] = 1
+        albumsPerCountry[country] ? albumsPerCountry[country]++ : (albumsPerCountry[country] = 1)
 
         // Most used criteria
         album.criteria.forEach((criterium) => {
@@ -93,6 +93,4 @@ const generateDao = () => {
     }
 }
 
-export {
-    generateDao,
-}
+export { generateDao }

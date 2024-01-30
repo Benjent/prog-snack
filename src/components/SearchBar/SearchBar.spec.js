@@ -1,10 +1,11 @@
+import { beforeEach, describe, expect, it } from "vitest"
 import { shallowMount } from "@vue/test-utils"
 import { SearchBar } from "@/components"
 import store from "@/store"
 import albums from "@/db/albums"
 
 describe("SearchBar.vue", () => {
-    const album = albums.find((album) => album.id === "sweet_smoke_just_a_poke")
+    const album = albums.find((a) => a.id === "sweet_smoke_just_a_poke")
     let wrapper
     beforeEach(() => {
         const propsData = {}
@@ -13,6 +14,7 @@ describe("SearchBar.vue", () => {
 
     it("filters matching albums", () => {
         wrapper.find(".searchBar__input").setValue("Sweet Smo")
+        // Since Vue 2.7 migration, below test is broken
         expect(wrapper.vm.matchingAlbums.length).toBe(3)
         expect(wrapper.vm.matchingAlbums[0]).toEqual(album)
     })

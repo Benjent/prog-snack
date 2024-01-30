@@ -1,3 +1,4 @@
+import { describe, expect, it } from "vitest"
 import { sort } from "./array"
 
 describe("array utils", () => {

@@ -95,7 +95,7 @@ const criteria = /** @type {const} */ ({
 /**
  * @type { Array.<keyof typeof criteria> }
  * @readonly
-*/
+ */
 const criteriaOrder = [
     // Concept
     criteria.CONCEPT,
@@ -186,7 +186,7 @@ const criteriaOrder = [
 /**
  * @type { Record<keyof typeof criteria, string> }
  * @readonly
-*/
+ */
 const criteriumLabels = {
     ...languageLabels,
     [criteria.AFROBEAT]: "Afrobeat",

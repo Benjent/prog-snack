@@ -10,7 +10,8 @@ const getYouTubeUrl = (trackId) => trackId && `https://www.youtube.com/watch?v=$
  * @param {string} albumId - The Deezer ID of the album.
  * @return {string} The URL of the Deezer album.
  */
-const getDeezerUrl = (albumId) => albumId && `https://widget.deezer.com/widget/dark/album/${albumId}`
+const getDeezerUrl = (albumId) =>
+    albumId && `https://widget.deezer.com/widget/dark/album/${albumId}`
 
 /**
  * Get the Spotify URL of an album.
@@ -19,8 +20,4 @@ const getDeezerUrl = (albumId) => albumId && `https://widget.deezer.com/widget/d
  */
 const getSpotifyUrl = (albumId) => albumId && `https://open.spotify.com/embed/album/${albumId}`
 
-export {
-    getDeezerUrl,
-    getSpotifyUrl,
-    getYouTubeUrl,
-}
+export { getDeezerUrl, getSpotifyUrl, getYouTubeUrl }

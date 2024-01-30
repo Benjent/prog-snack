@@ -1,13 +1,25 @@
 <template>
     <div class="select">
-        <button class="select__input" :class="{'select__input--open': isDisplayedOptions}" aria-label="Toggle options" @click="isDisplayedOptions = !isDisplayedOptions">
+        <button
+            class="select__input"
+            :class="{ 'select__input--open': isDisplayedOptions }"
+            aria-label="Toggle options"
+            @click="isDisplayedOptions = !isDisplayedOptions"
+        >
             <div class="select__input__value">{{ displayedValue }}</div>
             <Icon :name="isDisplayedOptions ? 'expand_less' : 'expand_more'" />
         </button>
         <div class="options" v-if="isDisplayedOptions">
             <button class="options__item select__option" @click="notifyParent(null)">All</button>
             <button class="options__item select__option" v-if="custom" @click="notifyParent('Custom')">Custom</button>
-            <button class="options__item select__option" v-for="option in options" :key="option" @click="notifyParent(option)">{{ filter ? filter(option) : option }}</button>
+            <button
+                class="options__item select__option"
+                v-for="option in options"
+                :key="option"
+                @click="notifyParent(option)"
+            >
+                {{ filter ? filter(option) : option }}
+            </button>
         </div>
     </div>
 </template>
@@ -58,9 +70,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
-@import '~@/style/mixins/sunset';
-@import '~@/style/modules/options';
+@import "@/style/gatherer";
+@import "@/style/mixins/sunset";
+@import "@/style/modules/options";
 
 .select {
     display: flex;

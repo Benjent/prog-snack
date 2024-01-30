@@ -3,7 +3,7 @@
         <div id="app" class="app">
             <TheNavBar />
             <section class="app__body">
-                <router-view class="app__page"/>
+                <router-view class="app__page" />
             </section>
             <TheNavBar v-if="$mq === 'M'" footer />
         </div>
@@ -28,9 +28,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import './style/gatherer';
-@import './style/mixins/page';
-@import './style/modules/link';
+@import "./style/gatherer";
+@import "./style/mixins/page";
+@import "./style/modules/link";
 
 .app {
     &__body {

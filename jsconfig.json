@@ -3,7 +3,9 @@
         "jsx": "preserve",
         "checkJs": true,
         "paths": {
-            "@/*": ["src/*"]
-        }
-    }
+            "@/*": ["./src/*"]
+        },
+        "skipLibCheck": true
+    },
+    "exclude": ["dist", "node_modules"]
 }

@@ -1,6 +1,13 @@
 <template>
     <label class="radio" :for="id">
-        <input :id="id" class="radio__input" :class="{ 'radio__input--checked': value === own }" type="radio" :value="own" @click="notifyParent">
+        <input
+            :id="id"
+            class="radio__input"
+            :class="{ 'radio__input--checked': value === own }"
+            type="radio"
+            :value="own"
+            @click="notifyParent"
+        />
         {{ label }}
     </label>
 </template>
@@ -29,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/style/gatherer';
+@import "@/style/gatherer";
 
 .radio {
     cursor: pointer;

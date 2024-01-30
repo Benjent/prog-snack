@@ -2,16 +2,17 @@ import NumberUnit from "./NumberUnit.vue"
 
 export default {
     component: NumberUnit,
+    tags: ["autodocs"],
 }
 
-const Template = ({ number, unit }) => ({
-    render() {
-        return <NumberUnit number={number} unit={unit} />
+export const Default = {
+    render: (args, { argTypes }) => ({
+        components: { NumberUnit },
+        props: Object.keys(argTypes),
+        template: `<NumberUnit v-bind="$props" />`,
+    }),
+    args: {
+        number: 42,
+        unit: "units",
     },
-})
-
-export const Default = Template.bind({})
-Default.args = {
-    number: 42,
-    unit: "units",
 }
