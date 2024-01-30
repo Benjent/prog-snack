@@ -7,7 +7,7 @@ import vue from "@vitejs/plugin-vue2"
 // Calling await wrapper.vm.$nextTick(), await wrapper.vm.$forceUpdate() or await new Promise((resolve) => setTimeout(resolve)) does not fix this
 // It seems that component is never re-rendered when it should. Wait for Vue 3 migration?
 export default defineConfig({
-    base: "./",
+    base: "/prog-snack/",
     plugins: [vue(), ViteImageOptimizer()],
     resolve: {
         alias: {
