@@ -6,7 +6,7 @@
                     class="gems__cover"
                     :album="album"
                     :size="$mq === 'M' ? 120 : null"
-                    bordered
+                    rounded
                     @click.native="selectAlbumAndView(album)"
                 />
 
@@ -55,6 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/gatherer";
+@import "../style/mixins/halo";
 @import "../style/mixins/page";
 @import "../style/modules/text";
 

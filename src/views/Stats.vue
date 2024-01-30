@@ -116,6 +116,7 @@ export default {
         display: flex;
         justify-content: space-evenly;
         margin-top: 60px;
+        color: $tertiary;
     }
 
     & &__section {

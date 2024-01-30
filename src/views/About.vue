@@ -2,9 +2,9 @@
     <fade-transition appear>
         <main class="about">
             <div class="about__section">
-                <Heading>Hi!</Heading>
+                <Heading class="about__heading" color="secondary">Hi!</Heading>
 
-                <Heading :level="3">
+                <Heading class="about__heading" :level="3" color="tertiary">
                     Prog Snack is a tiny web project with big music ambitions: dusting old prog albums, known as prog
                     gems, to make them shine beside classic albums.
                 </Heading>
@@ -39,7 +39,7 @@
                 </caption>
                 <div class="card about__glossary">
                     <dl class="about__glossary__entry" v-for="data in glossary" :key="data.title">
-                        <dt class="about__criterium">{{ data.title }}</dt>
+                        <dt class="about__criterium text text--secondary">{{ data.title }}</dt>
                         <dd class="text text--description about__definition">
                             {{ data.definition }}
                         </dd>
@@ -148,6 +148,10 @@ export default {
         &:first-child {
             margin-top: 60px;
         }
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
     }
 
     &__glossary {

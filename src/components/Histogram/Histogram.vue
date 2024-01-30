@@ -168,7 +168,7 @@ export default {
 
         .histogram__column {
             padding: 5px;
-            height: 100%;
+            height: 99%; // Scrollbar height, strangely overflow: visible still makes scrollbar appear
             display: flex;
             align-items: flex-end;
         }

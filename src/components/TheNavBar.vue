@@ -68,7 +68,7 @@ export default {
     display: flex;
     align-items: center;
     height: var(--header-height);
-    background: $secondary-dark;
+    background: $header-background-color;
     position: fixed;
     width: 100%;
     z-index: 10;

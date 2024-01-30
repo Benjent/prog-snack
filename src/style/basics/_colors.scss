@@ -1,16 +1,27 @@
-@import "./palettes/nautilus";
+// @import "./palettes/luxury";
+// @import "./palettes/nautilus";
 // @import "./palettes/deep-blue";
 // @import "./palettes/promised-heights";
-// @import "./palettes/freak";
+@import "./palettes/freak";
 // @import "./palettes/baxters";
 
 $primary: $palette-primary;
 $secondary: $palette-secondary;
 $secondary-dark: $palette-secondary-dark;
-$secondary-light: $palette-secondary-light;
 $tertiary: $palette-tertiary;
 $quaternary: $palette-quaternary;
 $black: $palette-black;
 $white: $palette-white;
 $text-dark: $palette-text-dark;
 $text-light: $palette-text-light;
+$background-dark: $palette-background-dark;
+$background-light: $palette-background-light;
+
+$app-background-color: $background-dark;
+$app-text-color: $text-light;
+$header-background-color: $background-dark;
+$gauge-background-color: $secondary-dark;
+$gauge-text-color: $text-light;
+$input-background-color: $white;
+$input-border-color: $primary;
+$input-text-color: $tertiary;

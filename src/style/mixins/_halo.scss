@@ -1,0 +1,3 @@
+@mixin halo($color: $black) {
+    box-shadow: 0 0 1280px 8px $color;
+}
