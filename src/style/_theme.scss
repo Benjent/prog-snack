@@ -1,13 +1,13 @@
 body {
-    font-family: "Oswald", sans-serif;
-    background: $secondary-dark;
-    color: $text-light;
+    font-family: $main-font, sans-serif;
+    background: $app-background-color;
+    color: $app-text-color;
     font-size: var(--default-font-size);
     // Color background
-    background: linear-gradient(141deg, $secondary 0%, $secondary 70%, $tertiary 90%);
-    background-size: 250%;
-    background-position: 100%;
-    background-attachment: fixed;
+    // background: linear-gradient(141deg, $secondary 0%, $secondary 70%, $tertiary 90%);
+    // background-size: 250%;
+    // background-position: 100%;
+    // background-attachment: fixed;
     // Image background
     // background-color: #ffffff; // cars.png background color
     // background-image: url('src/assets/img/backgrounds/cars.png');

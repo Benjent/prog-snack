@@ -5,9 +5,9 @@
     <fade-transition appear>
         <main class="designers">
             <section class="designers__section" v-for="designer in designersWithEnoughWorks" :key="designer.name">
-                <Heading :level="2" class="text--name">{{ designer.name }}</Heading>
+                <Heading :level="2" color="secondary">{{ designer.name }}</Heading>
 
-                <div class="card designers__albums" :class="getClassDesigner(designer.name)">
+                <div class="card card--secondary designers__albums" :class="getClassDesigner(designer.name)">
                     <div
                         class="designers__albums__item"
                         v-for="album in getShuffledDesignerWorks(designer.works)"
@@ -118,6 +118,8 @@ export default {
                 width: auto;
                 grid-row: auto / span 10;
                 grid-column: auto / span 10;
+
+                font-size: 0.6rem !important; // Because span-10 items are too small
 
                 &:nth-child(3) {
                     grid-row: auto / span 30;

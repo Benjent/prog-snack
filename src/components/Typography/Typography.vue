@@ -1,5 +1,5 @@
 <template>
-    <component class="typography text text--paragraph" :is="is">
+    <component class="typography text text--paragraph" :class="{ [`text--${color}`]: color }" :is="is">
         <slot />
     </component>
 </template>
@@ -13,6 +13,14 @@ export default {
             default: "p",
             validator(value) {
                 return ["p", "span"].includes(value)
+            },
+        },
+        color: {
+            type: String,
+            default: "primary",
+            /** @param {string} value */
+            validator(value) {
+                return ["primary", "secondary", "tertiary", "quaternary"].includes(value)
             },
         },
     },

@@ -1,4 +1,5 @@
 import Accordion from "./Accordion/Accordion.vue"
+import AlbumDetails from "./AlbumDetails/AlbumDetails.vue"
 import AlbumStarter from "./AlbumStarter/AlbumStarter.vue"
 import Check from "./Check/Check.vue"
 import Cover from "./Cover/Cover.vue"
@@ -17,6 +18,7 @@ import Typography from "./Typography/Typography.vue"
 
 export {
     Accordion,
+    AlbumDetails,
     AlbumStarter,
     Check,
     Cover,
