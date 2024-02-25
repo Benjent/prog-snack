@@ -368,6 +368,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "dear_mr_time_grandfather",
+        title: "Grandfather",
+        artist: "Dear Mr. Time",
+        year: 1970,
+        country: regions.ENGLAND,
+        criteria: [criteria.UNCOMMON_INSTRUMENTS, criteria.FANFARE, criteria.C_FOLK, criteria.SOFT],
+        selectedTrackTitle: "Prelude",
+        selectedTrackYtId: "IfLlEQSvqkU",
+        spotifyId: "2YLsVLBrlLsldqOhlXDxH0",
+        deezerId: "163574722",
+        designers: ["Brian Reeve"],
+        similarAlbums: [], // similar titus groan?
+        isAGem: false,
+    },
+    {
         id: "deep_purple_shades_of_deep_purple",
         title: "Shades Of Deep Purple",
         artist: "Deep Purple",
