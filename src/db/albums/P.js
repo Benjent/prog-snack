@@ -539,7 +539,7 @@ const albums = [
         year: 1982,
         country: regions.FRANCE,
         criteria: [criteria.ELECTRO, criteria.INSTRUMENTAL, criteria.SPACY, criteria.C_PSYCHE, criteria.EXPERIMENTAL, criteria.C_JAZZ],
-        selectedTrackTitle: "Gate Of paradise",
+        selectedTrackTitle: "Gate Of Paradise",
         selectedTrackYtId: "fGXP-CS0EHU",
         spotifyId: null,
         deezerId: null,
