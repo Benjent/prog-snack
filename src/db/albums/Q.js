@@ -187,6 +187,21 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "quicksilver_messenger_service_quicksilver_messenger_service",
+        title: "Quicksilver Messenger Service",
+        artist: "Quicksilver Messenger Service",
+        year: 1967,
+        country: regions.USA,
+        criteria: [criteria.ROCK, criteria.LENGTHY_TRACKS, criteria.C_PSYCHE],
+        selectedTrackTitle: "The Fool",
+        selectedTrackYtId: "ONXEnfPMRnE",
+        spotifyId: "2jQEpak8oXYb6dh9sCZqqY",
+        deezerId: "301391",
+        designers: ["George Hunter"],
+        similarAlbums: [], // similar first album jeff airpln
+        isAGem: false,
+    },
+    {
         id: "quicksilver_messenger_service_happy_trails",
         title: "Happy Trails",
         artist: "Quicksilver Messenger Service",
