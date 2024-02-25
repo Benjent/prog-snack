@@ -56,6 +56,7 @@ const subgenres = [
             "faust_faust",
             "baba_yaga_collage",
             "soft_machine_third",
+            "penguin_cafe_orchestra_music_from_the_penguin_cafe",
         ],
         criteria: [
             criteria.EXPERIMENTAL,
