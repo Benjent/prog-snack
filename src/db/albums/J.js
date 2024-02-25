@@ -223,7 +223,7 @@ const albums = [
         artist: "Jan Dukes De Grey",
         year: 1971,
         country: regions.ENGLAND,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.C_PSYCHE],
         selectedTrackTitle: "Call Of The Wild",
         selectedTrackYtId: "sxPHhaUtWV8",
         spotifyId: null,
