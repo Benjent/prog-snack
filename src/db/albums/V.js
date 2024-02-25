@@ -352,6 +352,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "vos_voisins_vos_voisins",
+        title: "Vos Voisins",
+        artist: "Vos Voisins",
+        year: 1971,
+        country: regions.QUEBEC,
+        criteria: [criteria.FRENCH, criteria.JAZZY_GROOVY, criteria.FEMALE, criteria.PIANO, criteria.C_PSYCHE, criteria.C_ELECTRO],
+        selectedTrackTitle: "Le Monstre De La Main",
+        selectedTrackYtId: "NcMSO2owumA",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Daniel Couvreur"],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
