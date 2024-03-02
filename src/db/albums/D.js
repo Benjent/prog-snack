@@ -354,7 +354,7 @@ const albums = [
     },
     {
         id: "david_cross_memos_from_purgatory",
-        title: "Memos From Purgatory ",
+        title: "Memos From Purgatory",
         artist: "David Cross",
         year: 1989,
         country: regions.ENGLAND,
