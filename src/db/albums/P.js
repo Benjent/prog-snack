@@ -1033,6 +1033,22 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "pirana_pirana",
+        title: "Pirana",
+        artist: "Pirana",
+        year: 1971,
+        country: regions.AUSTRALIA,
+        criteria: [criteria.JAZZY_GROOVY, criteria.JAM],
+        selectedTrackTitle: "Elation",
+        selectedTrackYtId: "bqUNZ5HR7Fo",
+        spotifyId: "4K7nL7WBu45OI85GruCmD3",
+        deezerId: "8099216",
+        designers: ["Julian Eddy"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Pirana - Pirana II - AUSTRALIA - 10151026 + 757YCZFYn6VSuH9d53kkid 
+    {
         id: "the_plastic_people_egon_bondys_happy_hearts_club_banned",
         title: "Egon Bondy's Happy Hearts Club Banned",
         artist: "The Plastic People",
