@@ -6,6 +6,21 @@ import { criteria } from "../criteria"
  */
 const albums = [
     {
+        id: "aardvark_aardvark",
+        title: "Aardvark",
+        artist: "Aardvark",
+        year: 1970,
+        country: regions.ENGLAND,
+        criteria: [criteria.HEAVY, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE],
+        selectedTrackTitle: "Once Upon A Hill",
+        selectedTrackYtId: "2CBnP4dwJ74",
+        spotifyId: "6vlo2eopPVn11ZsiJ4HTd0",
+        deezerId: "251673",
+        designers: ["David Anstey", "David Wedgbury"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "abedul_nosotros",
         title: "Nosotros",
         artist: "Abedul",
