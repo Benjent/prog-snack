@@ -390,7 +390,7 @@ const albums = [
         artist: "Capitolo 9",
         year: 1972,
         country: regions.SOUTH_AFRICA,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.ITALIAN, criteria.SYMPHONIC, criteria.SPACY, criteria.CONCEPT, criteria.C_ELECTRO, criteria.TOUCHING_VOCALS, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.ITALIAN, criteria.SYMPHONIC, criteria.SPACY, criteria.CONCEPT, criteria.C_ELECTRO, criteria.TOUCHING_VOCALS, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM, criteria.C_PSYCHE],
         selectedTrackTitle: `L'ultima Notte`,
         selectedTrackYtId: "10EU52uj1sk",
         spotifyId: "6Wz40ceyxGYARAF2EiZQBM",
