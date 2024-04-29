@@ -250,6 +250,7 @@ https://www.discogs.com/fr/artist/1100410-Melody-17
 https://www.discogs.com/fr/The-Music-Asylum-Commit-Thyself/master/424675
 https://www.discogs.com/fr/Junipher-Greene-Rewind/master/1658272
 https://www.discogs.com/fr/Junipher-Greene-Forbudte-Formiddagstoner/master/1133801
+https://www.discogs.com/fr/master/465551-Junco-Partners-Junco-Partners
 https://www.discogs.com/fr/Kirby-Composition/master/749909
 https://www.discogs.com/fr/Olivia-Corra-O-Risco/master/622305
 https://www.discogs.com/fr/artist/2146889-Claude-L%C3%A9veill%C3%A9e
@@ -980,3 +981,4 @@ https://www.discogs.com/fr/master/1789259-Anima-Anima
 https://www.discogs.com/fr/master/1478835-Anubis-Anubis
 https://www.discogs.com/fr/artist/98890-Ice-3
 https://www.discogs.com/master/1346993-Love-Craft-We-Love-You-Whoever-You-Are
+https://www.discogs.com/fr/artist/455290-Fran%C3%A7ois-Br%C3%A9ant
