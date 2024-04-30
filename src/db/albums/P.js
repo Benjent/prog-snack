@@ -1129,7 +1129,7 @@ const albums = [
         artist: "Pollen",
         year: 1976,
         country: regions.QUEBEC,
-        criteria: [criteria.FRENCH, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.SOPHISTICATED, criteria.SYMPHONIC],
+        criteria: [criteria.FRENCH, criteria.C_ELECTRO, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS, criteria.SOPHISTICATED, criteria.SYMPHONIC, criteria.C_ELECTRO],
         selectedTrackTitle: "La Femme Ailée",
         selectedTrackYtId: "k_FJWO-jNUQ",
         spotifyId: "1Pz6HZgLz1V3YV8M69i309",
