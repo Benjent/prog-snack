@@ -2354,7 +2354,7 @@ const albums = [
         selectedTrackYtId: null,
         spotifyId: null,
         deezerId: null,
-        designers: [],
+        designers: ["François Bréant", "Claude Caudron"],
         similarAlbums: [],
         isAGem: false,
     },
