@@ -1450,7 +1450,7 @@ const albums = [
         artist: "Miklagård",
         year: 1979,
         country: regions.SWEDEN,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.SWEDISH],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SOFT, criteria.SWEDISH, criteria.C_ELECTRO],
         selectedTrackTitle: "Soldaten",
         selectedTrackYtId: "qcLbMdv1Ht0",
         spotifyId: null,
