@@ -576,7 +576,7 @@ const albums = [
         artist: "Solaris",
         year: 1984,
         country: regions.HUNGARY,
-        criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS], // TODO reecouter et update?
+        criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS],
         selectedTrackTitle: "Marsbéli Krónikák IV.-VI.",
         selectedTrackYtId: "L8W02LBnsaY",
         spotifyId: "6ylnpBYu7UG9OyJqvv8sVX",
