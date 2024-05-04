@@ -94,7 +94,7 @@ $search-bar-height: 40px;
     height: $search-bar-height;
     max-width: $search-bar-width;
     width: 100%;
-    color: $primary;
+    color: $input-text-color;
     position: relative;
 
     & &__input {
@@ -102,8 +102,8 @@ $search-bar-height: 40px;
         width: 100%;
         padding: var(--button-vertical-padding) var(--button-horizontal-padding);
         padding-right: $reset-size * 2;
-        background: $secondary;
-        border: solid var(--input-border-width) $primary;
+        background: $input-background-color;
+        border: solid var(--input-border-width) $input-border-color;
         border-right: 0;
         border-radius: var(--select-radius);
         border-top-right-radius: 0;
@@ -111,7 +111,7 @@ $search-bar-height: 40px;
         text-overflow: ellipsis;
 
         &:hover {
-            @include sunset;
+            // @include sunset;
         }
     }
 
@@ -142,6 +142,7 @@ $search-bar-height: 40px;
         display: flex;
         align-items: center;
         cursor: pointer;
+        color: $text-light;
 
         &:hover {
             background: $primary;

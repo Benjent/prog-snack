@@ -1,5 +1,5 @@
 <template>
-    <component class="heading title" :class="{ [`title--${level}`]: level }" :is="is">
+    <component class="heading title" :class="{ [`title--${level}`]: level, [`text--${color}`]: color }" :is="is">
         <slot />
     </component>
 </template>
@@ -16,6 +16,14 @@ export default {
                 return [1, 2, 3].includes(value)
             },
         },
+        color: {
+            type: String,
+            default: "primary",
+            /** @param {string} value */
+            validator(value) {
+                return ["primary", "secondary", "tertiary", "quaternary"].includes(value)
+            },
+        },
     },
     computed: {
         is() {
@@ -27,5 +35,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/style/gatherer";
+@import "@/style/modules/text";
 @import "@/style/modules/title";
 </style>

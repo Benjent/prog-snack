@@ -1,13 +1,16 @@
+@import "../mixins/palette";
 @import "../mixins/shadow";
 
 .card {
+    @include palette("border-color");
     padding: 20px;
-    border-radius: var(--panel-radius);
+    // border-radius: var(--panel-radius);
+    border-radius: 0.2rem;
     border-top: solid 2px $primary;
-    background: rgba(255, 255, 255, 0.1);
+    // background: rgba(255, 255, 255, 0.1);
     margin-top: 20px; // Title gap
 
-    @include shadow($palette-secondary-dark);
+    // @include shadow($palette-secondary-dark);
 
     &--marginless {
         margin-top: 0;
