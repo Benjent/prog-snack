@@ -154,13 +154,18 @@ export default {
     & &__artist {
         cursor: pointer;
         display: block;
+        padding: 0.2rem;
+
+        &:hover {
+            color: $secondary;
+        }
 
         &--selected {
             color: $secondary;
             font-family: $heading-font;
             border-left: solid 2px $secondary;
-            font-size: 1.2rem;
             padding-left: 0.4rem;
+            font-size: 1.2rem;
             margin: 0.6rem 0;
         }
     }
