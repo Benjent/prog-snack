@@ -1,7 +1,7 @@
 import { regions } from "./regions"
 
 /**
- * Emoji flags can be found at https://emojiterra.com/flags/ through the unicode data
+ * Emoji flags can be found at https://emojiterra.com/flags/ through the unicode data (click on "copy!")
  * @type { Record<keyof typeof regions, string> }
  * @readonly
  */
