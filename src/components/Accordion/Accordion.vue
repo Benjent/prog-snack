@@ -72,7 +72,7 @@ export default {
         &--drawer {
             border: none;
             border-radius: 0;
-            border-bottom: solid 2px $primary;
+            border-bottom: solid 2px $input-background-color;
         }
     }
 
@@ -81,7 +81,7 @@ export default {
     }
 
     &__body {
-        background: $secondary-dark;
+        background: $input-background-color;
         padding: 15px;
         border-radius: var(--select-radius);
 

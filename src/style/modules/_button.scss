@@ -2,14 +2,17 @@
 
 .button {
     cursor: pointer;
+    font-family: $heading-font;
+    font-size: $fs-14;
     display: block;
     width: max-content;
     background: $secondary;
     background-size: 400%;
-    border: solid var(--input-border-width) $primary;
+    // border: solid var(--input-border-width) $primary;
     padding: var(--button-vertical-padding) var(--button-horizontal-padding);
     border-radius: var(--button-radius);
     text-align: center;
+    letter-spacing: 1px;
 
     &:hover {
         @include sunset;

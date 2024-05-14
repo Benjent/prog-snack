@@ -85,7 +85,7 @@ export default {
         justify-content: space-between;
         width: 100%;
         padding: var(--input-vertical-padding) var(--input-horizontal-padding);
-        background: $secondary;
+        background: $input-background-color;
         border: solid var(--input-border-width) $primary;
         border-radius: var(--select-radius);
 

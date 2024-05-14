@@ -103,7 +103,7 @@ $search-bar-height: 40px;
         padding: var(--button-vertical-padding) var(--button-horizontal-padding);
         padding-right: $reset-size * 2;
         background: $input-background-color;
-        border: solid var(--input-border-width) $input-border-color;
+        // border: solid var(--input-border-width) $input-border-color;
         border-right: 0;
         border-radius: var(--select-radius);
         border-top-right-radius: 0;

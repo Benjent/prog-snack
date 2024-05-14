@@ -16,12 +16,13 @@ $text-dark: $palette-text-dark;
 $text-light: $palette-text-light;
 $background-dark: $palette-background-dark;
 $background-light: $palette-background-light;
+$input-background: $palette-input-background;
 
 $app-background-color: $background-dark;
 $app-text-color: $text-light;
 $header-background-color: $background-dark;
 $gauge-background-color: $secondary-dark;
 $gauge-text-color: $text-light;
-$input-background-color: $white;
+$input-background-color: $input-background;
 $input-border-color: $primary;
-$input-text-color: $tertiary;
+$input-text-color: $text-light;
