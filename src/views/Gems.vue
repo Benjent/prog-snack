@@ -67,7 +67,7 @@ export default {
 
     & &__item {
         display: flex;
-        padding: 20px 0;
+        padding: 80px 0;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
