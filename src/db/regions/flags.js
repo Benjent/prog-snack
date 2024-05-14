@@ -16,6 +16,7 @@ const flags = {
     [regions.BRAZIL]: "🇧🇷",
     [regions.BULGARIA]: "🇧🇬",
     [regions.CANADA]: "🇨🇦",
+    [regions.CROATIA]: "🇭🇷",
     [regions.CZECHIA]: "🇨🇿",
     [regions.DENMARK]: "🇩🇰",
     [regions.ENGLAND]: "🇬🇧",
