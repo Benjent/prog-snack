@@ -5,7 +5,7 @@
     border-top: none;
     border-bottom-left-radius: var(--panel-radius);
     border-bottom-right-radius: var(--panel-radius);
-    background: $secondary-dark;
+    background: $header-background-color;
 
     &__item {
         cursor: pointer;

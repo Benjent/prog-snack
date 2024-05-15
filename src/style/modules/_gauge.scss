@@ -1,20 +1,19 @@
 .gauge {
     $padding: 6px;
     $size: 24px; // Roughly contains 3-character strings
-    $opposite-size-min: 30px;
     $transition-duration: 0.5s;
 
     display: flex;
-    background: $primary;
-    color: $text-dark;
+    background: $gauge-background-color;
+    color: $gauge-text-color;
 
     &--vertical {
         align-items: flex-end;
         justify-content: center;
         padding: 0px $padding;
-        min-height: $opposite-size-min;
+        min-height: 1.4rem;
+        height: 1.4rem;
         width: $size;
-        height: $opposite-size-min;
 
         transition: height $transition-duration ease-out;
     }
@@ -22,9 +21,9 @@
     &--horizontal {
         align-items: center;
         padding: $padding;
-        min-width: $opposite-size-min;
+        min-width: 1.6rem;
+        width: 1.6rem;
         height: $size;
-        width: $opposite-size-min;
 
         transition: width $transition-duration ease-out;
     }

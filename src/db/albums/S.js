@@ -66,6 +66,21 @@ const albums = [
         isAGem: true,
         description: `TODO Description`,
     },
+    {
+        id: "salem_mass_witch_burning",
+        title: "Witch Burning",
+        artist: "Salem Mass",
+        year: 1971,
+        country: regions.USA,
+        criteria: [criteria.CRISPY_SIXTIES, criteria.C_ELECTRO, criteria.JAM, criteria.C_PSYCHE, criteria.ROCK],
+        selectedTrackTitle: "Witch Burning",
+        selectedTrackYtId: "TR5OQfnI998",
+        spotifyId: "3tuhi1Zg0RRYDWwvs5uMvC",
+        deezerId: "154348192",
+        designers: ["Mark Libby"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO INTROUVABLE - Salis - Sa Vida Ita Est - 1971
     // TODO INTROUVABLE - Salis - Seduto Sull'Alba A Guardare - 1974
     {
@@ -561,7 +576,7 @@ const albums = [
         artist: "Solaris",
         year: 1984,
         country: regions.HUNGARY,
-        criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS], // TODO reecouter et update?
+        criteria: [criteria.C_ELECTRO, criteria.HUNGARIAN, criteria.INSTRUMENTAL, criteria.LENGTHY_TRACKS],
         selectedTrackTitle: "Marsbéli Krónikák IV.-VI.",
         selectedTrackYtId: "L8W02LBnsaY",
         spotifyId: "6ylnpBYu7UG9OyJqvv8sVX",

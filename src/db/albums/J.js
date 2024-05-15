@@ -223,7 +223,7 @@ const albums = [
         artist: "Jan Dukes De Grey",
         year: 1971,
         country: regions.ENGLAND,
-        criteria: [criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK],
+        criteria: [criteria.LENGTHY_TRACKS, criteria.SYMPHONIC, criteria.UNCOMMON_INSTRUMENTS, criteria.C_FOLK, criteria.C_PSYCHE],
         selectedTrackTitle: "Call Of The Wild",
         selectedTrackYtId: "sxPHhaUtWV8",
         spotifyId: null,
@@ -929,6 +929,33 @@ const albums = [
         isAGem: true,
         description: `TODO Description`,
     },
+    // TODO INTROUVABLE - John Klemmer - Blowin' Gold - PROG?
+    // TODO INTROUVABLE - John Klemmer - All The Children Cried - PROG?
+    // TODO INTROUVABLE - John Klemmer - Eruptions - jazzbased TRES SUREMENT PROG
+    {
+        id: "john_klemmer_constant_throb",
+        title: "Constant Throb",
+        artist: "John Klemmer",
+        year: 1971,
+        country: regions.USA,
+        criteria: [criteria.JAZZ, criteria.FEMALE, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Constant Throb, Part I",
+        selectedTrackYtId: "7tY7OdV2p8k",
+        spotifyId: "0KRl2sKD4deYfL7jhgwnFi",
+        deezerId: "56248872",
+        designers: [],
+        similarAlbums: ["miles_davis_bitches_brew"],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE - John Klemmer - Waterfalls - HONNETEMENT Y A DU PROG DANS CES EAUX LA
+    // TODO INTROUVABLE - John Klemmer - Intensity - PROG?
+    // TODO INTROUVABLE - John Klemmer - Magic And Movement
+    // TODO INTROUVABLE - John Klemmer - Fresh Feathers - PROG?
+    // TODO John Klemmer - Touch - 1975 - jazzbased, instru, jam, softseventies, uncommon, soft - track: Waterwheels
+    // TODO John Klemmer - Barefoot Ballet - 1976 - jazzbased, instru, jam, softseventies, soft - track: TODO
+    // TODO John Klemmer - Lifestyle (Living And Loving) - 1977 - jazzbased, instru, jam, softseventies, soft, uncommon - track: Lifestyle - Honnetement rellemeny rpog à ce moemtn????
+    // TODO Arabesque NOT PROG!!!
+    // TODO INTROUVABLE - John Klemmer - Nexus - PROG?
     {
         id: "johnny_hallyday_hamlet",
         title: "Hamlet",

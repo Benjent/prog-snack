@@ -24,8 +24,10 @@
                     />
 
                     <div class="subgenres__infos">
-                        <Heading :level="2" class="subgenres__name text--name">{{ subgenre.name }}</Heading>
-                        <Typography>
+                        <Heading :level="2" class="subgenres__name text--name" color="secondary">{{
+                            subgenre.name
+                        }}</Heading>
+                        <Typography color="tertiary">
                             <span>Characterized by the following: </span>
                             <List
                                 class="subgenres__criterium"
@@ -142,6 +144,7 @@ export default {
         display: flex;
         flex-direction: column;
         flex: 1;
+        gap: 1rem;
         padding: 0 20px;
     }
 

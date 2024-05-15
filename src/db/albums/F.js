@@ -337,6 +337,27 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    // TODO INTROUVABLE Floh De Cologne -
+    // TODO INTROUVABLE Floh De Cologne -
+    // TODO INTROUVABLE Floh De Cologne -
+    {
+        id: "floh_de_cologne_geyer_symphonie",
+        title: "Geyer-Symphonie",
+        artist: "Floh De Cologne",
+        year: 1974,
+        country: regions.GERMANY,
+        criteria: [criteria.GERMAN, criteria.UNCOMMON_INSTRUMENTS, criteria.LENGTHY_TRACKS, criteria.CONCEPT, criteria.SOUND_COLLAGES, criteria.SOCIOPOLITICAL, criteria.EXPERIMENTAL, criteria.FANFARE, criteria.FUNNY],
+        selectedTrackTitle: "3. Satz: Sérénade Des Vautours (Leichenschmaus)",
+        selectedTrackYtId: "oTNHCaHxxGg",
+        spotifyId: "6SBdMFL9ebw2dwVifqXjAK",
+        deezerId: "6056157",
+        designers: ["Peter Geitner"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Floh De Cologne -
+    // TODO INTROUVABLE Floh De Cologne -
+    // TODO INTROUVABLE Floh De Cologne -
     {
         id: "florian_geyer_beggars_pride",
         title: "Beggars Pride",
@@ -1179,6 +1200,21 @@ const albums = [
         spotifyId: null,
         deezerId: null,
         designers: ["Osterwalder's Office"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
+        id: "the_free_spirits_out_of_sight_and_sound",
+        title: "Out Of Sight And Sound",
+        artist: "The Free Spirits",
+        year: 1967,
+        country: regions.USA,
+        criteria: [criteria.C_PSYCHE, criteria.ROCK, criteria.CRISPY_SIXTIES, criteria.UNCOMMON_INSTRUMENTS, criteria.BLUESY],
+        selectedTrackTitle: "I'm Gonna Be Free",
+        selectedTrackYtId: "2P5Caf9VR98",
+        spotifyId: "2RRABdwO05W7M7wtLzIB5I",
+        deezerId: "8438626",
+        designers: ["David Perell", "Henry Epstein"],
         similarAlbums: [],
         isAGem: false,
     },

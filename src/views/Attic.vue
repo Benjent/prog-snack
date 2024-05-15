@@ -371,7 +371,7 @@ export default {
     & &__actions {
         top: 0;
         position: sticky;
-        background: $secondary;
+        background: $input-background-color;
         z-index: 1;
         padding: 15px;
         border-bottom: solid 2px $primary;

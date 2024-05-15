@@ -410,7 +410,7 @@ const albums = [
         selectedTrackYtId: "knbmKDUYDXc",
         spotifyId: "00Uf5PRAinCJ0oiCX1Cv2k",
         deezerId: "78186",
-        designers: ["Rob Springett"],
+        designers: ["Robert Springett"],
         similarAlbums: [],
         isAGem: false,
     },
