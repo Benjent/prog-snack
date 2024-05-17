@@ -76,7 +76,7 @@ export default {
         selectAlbumAndView(id) {
             const album = this.albumById(id)
             this.selectAlbum(album)
-            this.$router.push("/discographies")
+            this.$router.push("/")
         },
     },
 }

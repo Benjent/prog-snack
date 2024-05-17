@@ -219,7 +219,7 @@ export default {
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
-            this.$router.push("/discographies")
+            this.$router.push("/")
         },
         getFilteredAlbums() {
             const shownAlbumsDom = this.$el.querySelectorAll(".attic__cover:not(.hidden)")

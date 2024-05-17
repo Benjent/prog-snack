@@ -47,7 +47,7 @@ export default {
         ...mapActions(["selectAlbum"]),
         selectAlbumAndView(album) {
             this.selectAlbum(album)
-            this.$router.push("/discographies")
+            this.$router.push("/")
         },
     },
 }
