@@ -4,11 +4,15 @@
             <slide-y-up-transition appear :duration="500">
                 <aside class="attic__sidebar">
                     <div class="attic__actions">
-                        <button class="attic__actions__button button" aria-label="Reset filters" @click="resetFilter()">
+                        <button
+                            class="attic__actions__button button button--small"
+                            aria-label="Reset filters"
+                            @click="resetFilter()"
+                        >
                             Reset filters
                         </button>
                         <button
-                            class="attic__actions__button button"
+                            class="attic__actions__button button button--small"
                             aria-label="Download filtered list"
                             @click="downloadFilteredList()"
                         >

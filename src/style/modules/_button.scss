@@ -17,4 +17,9 @@
     &:hover {
         @include sunset;
     }
+
+    &--small {
+        font-size: $fs-12;
+        padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+    }
 }
