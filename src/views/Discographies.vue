@@ -148,7 +148,7 @@ export default {
         overflow-y: scroll;
         scrollbar-width: none;
         padding: 20px 30px;
-        font-size: $fs-09;
+        font-size: 0.9rem;
     }
 
     & &__artist {
@@ -221,7 +221,7 @@ export default {
         }
 
         &__title {
-            font-size: $fs-24;
+            font-size: 2.4rem;
             line-height: 1.3;
         }
     }

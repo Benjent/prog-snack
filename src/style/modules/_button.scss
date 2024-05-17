@@ -3,7 +3,7 @@
 .button {
     cursor: pointer;
     font-family: $heading-font;
-    font-size: $fs-14;
+    font-size: 1.4rem;
     display: block;
     width: max-content;
     background: $secondary;
@@ -16,5 +16,32 @@
 
     &:hover {
         @include sunset;
+    }
+
+    &--zappa {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: $tertiary;
+        background: white;
+        border: solid 3px $primary;
+    }
+
+    &--small {
+        font-size: 1.2rem;
+        padding: var(--input-vertical-padding) var(--input-horizontal-padding);
+    }
+}
+
+@media (max-width: $mobile) {
+    .button {
+        font-size: 1.2rem;
+
+        &--zappa {
+            font-size: 1.4rem;
+        }
+
+        &--small {
+            font-size: 1rem;
+        }
     }
 }

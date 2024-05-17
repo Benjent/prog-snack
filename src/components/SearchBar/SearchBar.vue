@@ -74,7 +74,7 @@ export default {
         },
         selectSearchResult(album) {
             this.selectAlbum(album)
-            this.$router.push("/discographies")
+            this.$router.push("/")
             this.resetSearch()
         },
     },
