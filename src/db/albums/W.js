@@ -925,6 +925,22 @@ const albums = [
         isAGem: false, // TODO maybe true
     },
     {
+        id: "wolfgang_dauner_the_oimels",
+        title: "The Oimels",
+        artist: "Wolfgang Dauner",
+        year: 1969,
+        country: regions.GERMANY,
+        criteria: [criteria.JAZZ, criteria.C_PSYCHE, criteria.ORIENTAL, criteria.INSTRUMENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.JAM],
+        selectedTrackTitle: "Dig My Girl",
+        selectedTrackYtId: "srDRWlVYu2Q",
+        spotifyId: "3m0QjJ7g1rMO10PXGRMz7v",
+        deezerId: "10080800",
+        designers: ["Wolfgang Dauner", "Roland Wittich"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    // TODO INTROUVABLE Wolfgang Dauner - Output - 1970 - expérimental, instrumental, c_jazz - track Brazing The High Full Sky?
+    {
         id: "womega_a_quick_step",
         title: "A Quick Step",
         artist: "Womega",

@@ -27,7 +27,7 @@
                 'max-width': size && size + 'px',
             }"
         >
-            <img class="cover__album__image" :src="cover" :alt="album.title" />
+            <img class="cover__album__image" :src="cover" :alt="album.title" loading="lazy" />
         </div>
     </div>
 </template>
