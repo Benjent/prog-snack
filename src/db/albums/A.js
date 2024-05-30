@@ -2141,7 +2141,7 @@ const albums = [
         artist: "Art Zoyd",
         year: 1985,
         country: regions.FRANCE,
-        criteria: [criteria/CONCEPT, criteria.EXPERIMENTAL, criteria.LENGTHY_TRACKS, criteria.NEO_EIGHTIES, criteria.SOUNDTRACK, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.SOUND_COLLAGES, criteria.FANFARE, criteria.PIANO, criteria.ODD_RHYTHM],
+        criteria: [criteria.CONCEPT, criteria.EXPERIMENTAL, criteria.LENGTHY_TRACKS, criteria.NEO_EIGHTIES, criteria.SOUNDTRACK, criteria.INSTRUMENTAL, criteria.C_ELECTRO, criteria.SOUND_COLLAGES, criteria.FANFARE, criteria.PIANO, criteria.ODD_RHYTHM],
         selectedTrackTitle: `Sortie 134 (Partie 1)`,
         selectedTrackYtId: "zRjFsH2EtRo",
         spotifyId: "6JMI5rlCMmH91OoSvnNhT5",
