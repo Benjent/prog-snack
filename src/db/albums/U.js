@@ -6,6 +6,21 @@ import { criteria } from "../criteria"
  */
 const albums = [
     {
+        id: "udo_lindenberg_lindenberg",
+        title: "Lindenberg",
+        artist: "Udo Lindenberg",
+        year: 1971,
+        country: regions.GERMANY,
+        criteria: [criteria.ROCK, criteria.C_FOLK, criteria.C_PSYCHE, criteria.FEMALE],
+        selectedTrackTitle: "The Children Of Our Children Won't Even Know Your Name",
+        selectedTrackYtId: "PTWIu-ElZGg",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Günter Blum"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "ufo_ufo_one",
         title: "UFO 1",
         artist: "UFO",
