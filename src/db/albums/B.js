@@ -291,6 +291,23 @@ const albums = [
         isAGem: false,
     },
     {
+        id: "banana_aun_es_tiempo_de_sonar",
+        title: "Aún Es Tiempo De Soñar",
+        artist: "Banana",
+        year: 1979,
+        country: regions.ARGENTINA,
+        criteria: [criteria.SPANISH, criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.JAM, criteria.GLITTER],
+        selectedTrackTitle: "El Escultor Y La Estatua",
+        selectedTrackYtId: "CH7BbUyM5vs",
+        spotifyId: null,
+        deezerId: null,
+        designers: [],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    // TODO INTROUVABLE - Banana - Licuado
+    {
         id: "banco_del_mutuo_soccorso_banco_del_mutuo_soccorso",
         title: "Banco Del Mutuo Soccorso",
         artist: "Banco Del Mutuo Soccorso",
