@@ -296,7 +296,7 @@ const albums = [
         artist: "Banana",
         year: 1979,
         country: regions.ARGENTINA,
-        criteria: [criteria.SPANISH, criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.JAM, criteria.GLITTER],
+        criteria: [criteria.SPANISH, criteria.ODD_RHYTHM, criteria.SYMPHONIC, criteria.C_ELECTRO, criteria.JAM, criteria.GLITTER, criteria.ODD_RHYTHM],
         selectedTrackTitle: "El Escultor Y La Estatua",
         selectedTrackYtId: "CH7BbUyM5vs",
         spotifyId: null,
