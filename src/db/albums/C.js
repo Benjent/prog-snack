@@ -2131,6 +2131,21 @@ const albums = [
         isAGem: true,
         description: `TODO Description`, // very very crazy, album sur le joker limite, un peu en mode fin du monde, armaggeddoon
     },
+    {
+        id: "cortex_troupeau_bleu",
+        title: "Troupeau Bleu",
+        artist: "Cortex",
+        year: 1975,
+        country: regions.FRANCE,
+        criteria: [criteria.FRENCH, criteria.FEMALE, criteria.JAZZY_GROOVY, criteria.C_JAZZ],
+        selectedTrackTitle: "Troupeau Bleu",
+        selectedTrackYtId: "sRuX3aLaTuE",
+        spotifyId: "74DOWHisu2jlFvPid9YTGB",
+        deezerId: "14029622",
+        designers: ["Marc Postel"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO introuvable Coses - SPAIN - Via Fora!
     // TODO introuvable Coses - SPAIN - Ara És Demà
     {
