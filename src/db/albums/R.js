@@ -1272,7 +1272,7 @@ const albums = [
         spotifyId: "1Kq0qKw3jFjIQfuCEJs7PA",
         deezerId: "668580",
         designers: ["Roy Putt"],
-        similarAlbums: [],
+        similarAlbums: ["black_sabbath_black_sabbath"],
         isAGem: true,
         description: `TODO Description`,
     },
