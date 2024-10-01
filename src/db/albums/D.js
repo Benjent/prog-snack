@@ -431,6 +431,21 @@ const albums = [
     },
     // TODO INTROUVABLE David Sancious & Tone - True Stories - 1978 - 10522608 + 2E7Al9ad2patEGto8aiMhh
     {
+        id: "david_stoughton_transformer",
+        title: "Transformer",
+        artist: "David Stoughton",
+        year: 1968,
+        country: regions.USA,
+        criteria: [criteria.C_FOLK, criteria.FANFARE, criteria.BAROQUE, criteria.C_PSYCHE, criteria.FEMALE],
+        selectedTrackTitle: "Saving For A Rainy Day",
+        selectedTrackYtId: "l9I3zPotU7A",
+        spotifyId: "3b2Vz0fc2haMBTpf0Tx1BR",
+        deezerId: null,
+        designers: ["Myron Collins"],
+        similarAlbums: ["caravan_if_i_could_do_it_all_over_again_id_do_it_all_over_you"],
+        isAGem: false,
+    },
+    {
         id: "dear_mr_time_grandfather",
         title: "Grandfather",
         artist: "Dear Mr. Time",

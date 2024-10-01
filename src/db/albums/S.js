@@ -6,6 +6,38 @@ import { criteria } from "../criteria"
  */
 const albums = [
     {
+        id: "sacbe_sacbe",
+        title: "Sacbé",
+        artist: "Sacbé",
+        year: 1977,
+        country: regions.MEXICO,
+        criteria: [criteria.FANFARE, criteria.JAZZ, criteria.SOFT_SEVENTIES, criteria.LATINO, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL, criteria.JAM],
+        selectedTrackTitle: "Andromeda",
+        selectedTrackYtId: "8bch22jRO-s",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Enrique Toussaint", "Luis Gil"],
+        similarAlbums: ["weather_report_black_market"],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    // TODO INTROUVABLE Sacbé albums
+    {
+        id: "sacbe_dos_mundos",
+        title: "Dos Mundos",
+        artist: "Sacbé",
+        year: 1988,
+        country: regions.MEXICO,
+        criteria: [criteria.NEO_EIGHTIES, criteria.JAZZ, criteria.LATINO, criteria.UNCOMMON_INSTRUMENTS, criteria.JAZZY_GROOVY, criteria.INSTRUMENTAL, criteria.JAM],
+        selectedTrackTitle: "Serendipity",
+        selectedTrackYtId: "rC3i99fSRbs",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Eniac Martínez"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "saint_preux_le_piano_sous_la_mer",
         title: "Le Piano Sous La Mer",
         artist: "Saint-Preux",
