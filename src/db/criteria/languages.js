@@ -35,6 +35,7 @@ const languages = /** @type {const} */ ({
     TIBETAN: "TIBETAN",
     TURKISH: "TURKISH",
     ZEUHL: "ZEUHL",
+    ZULU: "ZULU",
 })
 
 /**
@@ -73,6 +74,7 @@ const languageLabels = {
     [languages.TIBETAN]: "Tibetan sung",
     [languages.TURKISH]: "Turkish sung",
     [languages.ZEUHL]: "Zeuhl",
+    [languages.ZULU]: "Zulu sung",
 }
 
 export { languages, languageLabels }
