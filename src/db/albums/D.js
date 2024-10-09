@@ -1084,7 +1084,7 @@ const albums = [
         artist: "Dr. Dopo Jam",
         year: 1973,
         country: regions.DENMARK,
-        criteria: [criteria.ODD_RHYTHM, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.FUNNY, criteria.JAZZY_GROOVY],
+        criteria: [criteria.ODD_RHYTHM, criteria.JAM, criteria.LENGTHY_TRACKS, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.C_JAZZ, criteria.FUNNY, criteria.JAZZY_GROOVY, criteria.FANFARE, criteria.SYMPHONIC],
         selectedTrackTitle: "Opening",
         selectedTrackYtId: "ymeBpnDr4Lw",
         spotifyId: null,
