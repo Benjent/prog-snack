@@ -2394,7 +2394,7 @@ const albums = [
         artist: "Crucis",
         year: 1976,
         country: regions.ARGENTINA,
-        criteria: [criteria.ODD_RHYTHM, criteria.GLITTER, criteria.C_ELECTRO, criteria.SPANISH, criteria.JAM, criteria.JAZZY_GROOVY, criteria.SYMPHONIC],
+        criteria: [criteria.ODD_RHYTHM, criteria.GLITTER, criteria.C_ELECTRO, criteria.SPANISH, criteria.JAM, criteria.JAZZY_GROOVY, criteria.SYMPHONIC, criteria.INSTRUMENTAL],
         selectedTrackTitle: "Mes",
         selectedTrackYtId: "oeVNf_Ugpb8",
         spotifyId: "7q4FDjboZh9zLPRqIxdWng",
