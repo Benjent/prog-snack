@@ -552,7 +552,7 @@ const albums = [
         id: "osibisa_osibisa",
         title: "Osibisa",
         artist: "Osibisa",
-        year: 1974,
+        year: 1971,
         country: regions.ENGLAND,
         criteria: [criteria.IGBO, criteria.JAM, criteria.JAZZY_GROOVY, criteria.AFROBEAT, criteria.UNCOMMON_INSTRUMENTS, criteria.ODD_RHYTHM],
         selectedTrackTitle: "Oranges",
