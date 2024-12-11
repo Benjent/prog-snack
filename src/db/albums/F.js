@@ -337,9 +337,26 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO INTROUVABLE Floh De Cologne -
-    // TODO INTROUVABLE Floh De Cologne -
-    // TODO INTROUVABLE Floh De Cologne -
+    {
+        id: "flo_and_eddie_the_phlorescent_leech_and_eddie",
+        title: "The Phlorescent Leech & Eddie",
+        artist: "Flo & Eddie",
+        year: 1972,
+        country: regions.USA,
+        criteria: [criteria.FUNNY, criteria.ART_POP, criteria.C_PSYCHE, criteria.JAM, criteria.FANFARE, criteria.ROCK_OPERA, criteria.SPECTACULAR],
+        selectedTrackTitle: "Thoughts Have Turned",
+        selectedTrackYtId: "L8khU4hd3u8",
+        spotifyId: null,
+        deezerId: null,
+        designers: ["Henry Diltz"],
+        similarAlbums: [],
+        isAGem: true,
+        description: `TODO Description`,
+    },
+    // TODO INTROUVABLE Flo & Eddie - 1973 - Flo & Eddie
+    // TODO INTROUVABLE Floh De Cologne - 1
+    // TODO INTROUVABLE Floh De Cologne - 2
+    // TODO INTROUVABLE Floh De Cologne - 3
     {
         id: "floh_de_cologne_geyer_symphonie",
         title: "Geyer-Symphonie",
@@ -355,9 +372,9 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
-    // TODO INTROUVABLE Floh De Cologne -
-    // TODO INTROUVABLE Floh De Cologne -
-    // TODO INTROUVABLE Floh De Cologne -
+    // TODO INTROUVABLE Floh De Cologne - 4
+    // TODO INTROUVABLE Floh De Cologne - 5
+    // TODO INTROUVABLE Floh De Cologne - 6
     {
         id: "florian_geyer_beggars_pride",
         title: "Beggars Pride",

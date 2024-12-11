@@ -983,3 +983,5 @@ https://www.discogs.com/fr/artist/98890-Ice-3
 https://www.discogs.com/master/1346993-Love-Craft-We-Love-You-Whoever-You-Are
 https://www.discogs.com/fr/artist/455290-Fran%C3%A7ois-Br%C3%A9ant
 https://fr.wikipedia.org/wiki/Daniel_Guichard#Discographie
+https://www.discogs.com/fr/artist/1678648-Diaouled-Ar-Menez
+https://en.wikipedia.org/wiki/Touch_Me_There

@@ -4,6 +4,7 @@
  * @readonly
  */
 const languages = /** @type {const} */ ({
+    ARABIC: "ARABIC",
     ARMENIAN: "ARMENIAN",
     BELARUSIAN: "BELARUSIAN",
     BRETON: "BRETON",
@@ -34,7 +35,9 @@ const languages = /** @type {const} */ ({
     SWEDISH: "SWEDISH",
     TIBETAN: "TIBETAN",
     TURKISH: "TURKISH",
+    XHOSA: "XHOSA",
     ZEUHL: "ZEUHL",
+    ZULU: "ZULU",
 })
 
 /**
@@ -42,6 +45,7 @@ const languages = /** @type {const} */ ({
  * @readonly
  */
 const languageLabels = {
+    [languages.ARABIC]: "Arabic sung",
     [languages.ARMENIAN]: "Armenian sung",
     [languages.BELARUSIAN]: "Belarusian sung",
     [languages.BRETON]: "Breton sung",
@@ -72,7 +76,9 @@ const languageLabels = {
     [languages.SWEDISH]: "Swedish sung",
     [languages.TIBETAN]: "Tibetan sung",
     [languages.TURKISH]: "Turkish sung",
+    [languages.XHOSA]: "Xhosa sung",
     [languages.ZEUHL]: "Zeuhl",
+    [languages.ZULU]: "Zulu sung",
 }
 
 export { languages, languageLabels }
