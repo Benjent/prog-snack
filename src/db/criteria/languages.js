@@ -4,6 +4,7 @@
  * @readonly
  */
 const languages = /** @type {const} */ ({
+    ARABIC: "ARABIC",
     ARMENIAN: "ARMENIAN",
     BELARUSIAN: "BELARUSIAN",
     BRETON: "BRETON",
@@ -44,6 +45,7 @@ const languages = /** @type {const} */ ({
  * @readonly
  */
 const languageLabels = {
+    [languages.ARABIC]: "Arabic sung",
     [languages.ARMENIAN]: "Armenian sung",
     [languages.BELARUSIAN]: "Belarusian sung",
     [languages.BRETON]: "Breton sung",
