@@ -1182,6 +1182,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "jupu_group_ahmoo",
+        title: "Ahmoo",
+        artist: "Jupu Group",
+        year: 1975,
+        country: regions.FINLAND,
+        criteria: [criteria.INSTRUMENTAL, criteria.JAZZY_GROOVY, criteria.C_ELECTRO, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS, criteria.C_PSYCHE, criteria.PIANO],
+        selectedTrackTitle: "The Seeker",
+        selectedTrackYtId: "_CcA-U_XLvc",
+        spotifyId: "1KgfXYePAXeK6ojtDJXPnK",
+        deezerId: "6633368",
+        designers: ["Raz"],
+        similarAlbums: [],
+        isAGem: false,
+    },
 ]
 
 export default albums
