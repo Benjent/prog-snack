@@ -1049,6 +1049,21 @@ const albums = [
     },
     // TODO INTROUVABLE Pirana - Pirana II - AUSTRALIA - 10151026 + 757YCZFYn6VSuH9d53kkid 
     {
+        id: "planet_gong_floating_anarchy",
+        title: "Floating Anarchy",
+        artist: "The Plastic People",
+        year: 1977,
+        country: regions.FRANCE,
+        criteria: [criteria.LIVE, criteria.C_PSYCHE, criteria.FEMALE, criteria.FRENCH, criteria.LENGTHY_TRACKS, criteria.SPACY, criteria.JAM, criteria.FUNNY],
+        selectedTrackTitle: "Floatin' Anarchy",
+        selectedTrackYtId: "hQD5YklO4II",
+        spotifyId: "5orqoxY5WzMYnAWa40akQO",
+        deezerId: "129250",
+        designers: [],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "the_plastic_people_egon_bondys_happy_hearts_club_banned",
         title: "Egon Bondy's Happy Hearts Club Banned",
         artist: "The Plastic People",
