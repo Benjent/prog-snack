@@ -316,7 +316,7 @@ const albums = [
         artist: "Agitation Free",
         year: 1972,
         country: regions.GERMANY,
-        criteria: [criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.SPACY, criteria.ORIENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.ARABIC_SUNG, criteria.SOUND_COLLAGES, criteria.JAM, criteria.C_ELECTRO, criteria.TRANSITION],
+        criteria: [criteria.INSTRUMENTAL, criteria.C_PSYCHE, criteria.SPACY, criteria.ORIENTAL, criteria.UNCOMMON_INSTRUMENTS, criteria.ARABIC, criteria.SOUND_COLLAGES, criteria.JAM, criteria.C_ELECTRO, criteria.TRANSITION],
         selectedTrackTitle: `Rücksturz`,
         selectedTrackYtId: "EqDcigWxZuU",
         spotifyId: "65OdrSdTzc2ZbRjiVfHQeT",
