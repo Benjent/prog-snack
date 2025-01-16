@@ -568,6 +568,7 @@ const albums = [
     },
     // TODO introuvable Thirsty Moon - A Real Good Time - 1976
     // TODO introuvable Thirsty Moon - Star Chaser - 1981
+    // TODO Three Man Army discog
     {
         id: "timothy_leary_and_ash_ra_tempel_seven_up",
         title: "Seven Up",
