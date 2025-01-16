@@ -1090,6 +1090,21 @@ const albums = [
         similarAlbums: [],
         isAGem: false,
     },
+    {
+        id: "material_memory_serves",
+        title: "Memory Serves",
+        artist: "Material",
+        year: 1981,
+        country: regions.USA,
+        criteria: [criteria.BLENDS, criteria.INSTRUMENTAL, criteria.NEO_EIGHTIES, criteria.EXPERIMENTAL, criteria.ODD_RHYTHM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Memory Serves",
+        selectedTrackYtId: "2CgyRrTopAY",
+        spotifyId: "3nP57yUOwIP1R5ipiEd2nS",
+        deezerId: "518037352",
+        designers: ["Jan Luss", "Thi-Linh Le"],
+        similarAlbums: [],
+        isAGem: false,
+    },
     // TODO introuvable Maurizio Fabrizio - Azzurri Orizzonti
     {
         id: "maurizio_fabrizio_movimenti_nel_cielo",

@@ -429,6 +429,21 @@ const albums = [
         description: `TODO Description`,
     },
     {
+        id: "thierry_zaboitzeff_promethee",
+        title: "Prométhée",
+        artist: "Thierry Zaboitzeff",
+        year: 1984,
+        country: regions.FRANCE,
+        criteria: [criteria.EXPERIMENTAL, criteria.LENGTHY_TRACKS, criteria.FEMALE, criteria.C_ELECTRO, criteria.UNCOMMON_INSTRUMENTS, criteria.SOUND_COLLAGES],
+        selectedTrackTitle: "Prométhée",
+        selectedTrackYtId: "Se6B9QKUcvA",
+        spotifyId: "66Uxk3WDycIZE9NeG5yFbY",
+        deezerId: "215994102",
+        designers: ["Raymond Majchrzak", "Unsafe Graphics"],
+        similarAlbums: [],
+        isAGem: false,
+    },
+    {
         id: "thijs_van_leer_o_my_love",
         title: "O My Love",
         artist: "Thijs Van Leer",
@@ -553,6 +568,7 @@ const albums = [
     },
     // TODO introuvable Thirsty Moon - A Real Good Time - 1976
     // TODO introuvable Thirsty Moon - Star Chaser - 1981
+    // TODO Three Man Army discog
     {
         id: "timothy_leary_and_ash_ra_tempel_seven_up",
         title: "Seven Up",
