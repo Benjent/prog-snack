@@ -1,6 +1,6 @@
 <template>
     <div class="timeline">
-        <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
+        <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.human_id">
             <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index - 1].year">
                 {{ album.year }}
             </div>

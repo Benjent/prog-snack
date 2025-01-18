@@ -16,7 +16,7 @@
             <button
                 class="options__item searchBar__album"
                 v-for="album in matchingAlbums"
-                :key="album.id"
+                :key="album.human_id"
                 @click="selectSearchResult(album)"
             >
                 <Cover :album="album" :size="30" />

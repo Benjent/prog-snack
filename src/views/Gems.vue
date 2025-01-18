@@ -1,7 +1,7 @@
 <template>
     <fade-transition appear>
         <main class="gems">
-            <div class="gems__item" v-for="album in gems" :key="album.id">
+            <div class="gems__item" v-for="album in gems" :key="album.human_id">
                 <Cover
                     class="gems__cover"
                     :album="album"
@@ -40,7 +40,7 @@ export default {
     computed: {
         ...mapState(["albumsSortedByYear"]),
         gems() {
-            return this.albumsSortedByYear.filter((a) => a.isAGem)
+            return this.albumsSortedByYear.filter((a) => a.gem)
         },
     },
     methods: {

@@ -4,13 +4,13 @@
             <slide-y-up-transition appear :duration="500">
                 <aside class="discographies__sidebar" v-if="selectedArtist">
                     <button
-                        class="discographies__artist"
-                        :class="{ 'discographies__artist--selected': artist === selectedArtist }"
                         v-for="artist in artists"
-                        :key="artist.id"
+                        :key="artist.name"
+                        class="discographies__artist"
+                        :class="{ 'discographies__artist--selected': artist.name === selectedArtist.name }"
                         @click="setSelectedArtist(artist)"
                     >
-                        <span>{{ artist }}</span>
+                        <span>{{ artist.name }}</span>
                     </button>
                 </aside>
             </slide-y-up-transition>
@@ -28,7 +28,7 @@
                                 <Cover
                                     class="discographies__album"
                                     v-for="album in discography"
-                                    :key="album.id"
+                                    :key="album.human_id"
                                     :album="album"
                                     rounded
                                     fade
@@ -91,10 +91,10 @@ export default {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
         },
         deezerPath() {
-            return getDeezerUrl(this.selectedAlbum.deezerId)
+            return getDeezerUrl(this.selectedAlbum.deezer_id)
         },
         spotifyPath() {
-            return getSpotifyUrl(this.selectedAlbum.spotifyId)
+            return getSpotifyUrl(this.selectedAlbum.spotify_id)
         },
     },
     created() {
@@ -106,11 +106,11 @@ export default {
     methods: {
         ...mapActions(["selectAlbum", "randomizeAlbum"]),
         setSelectedArtist(artist) {
-            this.selectedArtist = artist
+            this.selectedArtist = artist.name
             // By default, select the debut album of the artist
             for (let i = 0; i < this.albums.length; i++) {
                 const album = this.albums[i]
-                if (album.artist === artist) {
+                if (album.artist === artist.name) {
                     this.selectAlbum(album)
                     break
                 }

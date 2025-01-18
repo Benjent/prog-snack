@@ -254,7 +254,7 @@ const subgenres = [
         albums: [
             "return_to_forever_romantic_warrior",
             "weather_report_black_market",
-            "gong_gazeuse",
+            "pierre_moerlens_gong_gazeuse",
             "herbie_hancock_thrust",
             "il_baricentro_sconcerto",
         ],

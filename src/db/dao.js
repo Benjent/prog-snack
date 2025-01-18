@@ -1,67 +1,79 @@
-import albums from "./albums"
-import { criteriaOrder } from "./criteria"
 import { sort } from "../utils/array"
+import { getTable } from "../utils/baserow"
 
-// For performance purpose - and because we don't use a db, generate data once instead of creating time-consuming getters
-const generateDao = () => {
-    const artists = []
+// TODO for the migration, keep this way of loading chunks of data, but in the end we should only fetch needed information
+const generateDao = async () => {
+    const [albumsResult, artistsResult, designersResult, regionsResult, languagesResult] =
+        await Promise.all([
+            getTable({
+                results: [],
+                nextPage:
+                    "/api/database/rows/table/715/?user_field_names=true&criteria__join=label",
+            }),
+            getTable({
+                results: [],
+                nextPage:
+                    "/api/database/rows/table/720/?user_field_names=true&albums__join=human_id,year,gem,region,region_flag",
+            }),
+            getTable({
+                results: [],
+                nextPage:
+                    "/api/database/rows/table/717/?user_field_names=true&albums__join=human_id,title,year,gem,region,region_flag,artist",
+            }),
+            getTable({
+                results: [],
+                nextPage: "/api/database/rows/table/712/?user_field_names=true",
+            }),
+            getTable({
+                results: [],
+                nextPage: "/api/database/rows/table/713/?user_field_names=true",
+            }),
+        ])
+    const { results: albums } = albumsResult
+    const { results: artists } = artistsResult
+    const { results: designers } = designersResult
+    const { results: regions } = regionsResult
+    const { results: languages } = languagesResult
+
     const albumsPerYear = {}
     const albumsPerCountry = {}
     const criteriaOccurences = {}
     const mostUsedCriteriaPerYear = {}
-    const designersToSort = {}
+
     albums.forEach((album) => {
-        album.criteria.sort((a, b) => +(criteriaOrder.indexOf(a) > criteriaOrder.indexOf(b)))
-
-        // Artists
-        if (!artists.includes(album.artist)) {
-            artists.push(album.artist)
-        }
-
-        // Designers
-        album.designers.forEach((d) => {
-            if (!designersToSort[d]) {
-                designersToSort[d] = {
-                    name: d,
-                    works: [],
-                }
-            }
-            designersToSort[d].works.push(album)
-        })
-
         // Albums per year
         const { year } = album
         albumsPerYear[year] ? albumsPerYear[year]++ : (albumsPerYear[year] = 1)
 
         // Albums per country
-        const { country } = album
-        if (!country) {
-            console.error(`Wrong country used in album with id: ${album.id}`)
+        const { region } = album
+        if (!region) {
+            console.error(`Wrong region used in album with id: ${album.id}`)
         }
-        albumsPerCountry[country] ? albumsPerCountry[country]++ : (albumsPerCountry[country] = 1)
+        albumsPerCountry[region] ? albumsPerCountry[region]++ : (albumsPerCountry[region] = 1)
 
         // Most used criteria
         album.criteria.forEach((criterium) => {
-            if (criteriaOccurences[criterium]) {
-                criteriaOccurences[criterium]++
+            if (criteriaOccurences[criterium.label]) {
+                criteriaOccurences[criterium.label]++
             } else {
-                if (criterium === undefined) {
-                    console.error(`Wrong criterium used in album with id: ${album.id}`)
+                if (criterium.label === undefined) {
+                    console.error(`Wrong criterium used in album with id: ${album.human_id}`)
                 }
-                criteriaOccurences[criterium] = 1
+                criteriaOccurences[criterium.label] = 1
             }
 
             // Per year
             if (!mostUsedCriteriaPerYear[year]) {
                 mostUsedCriteriaPerYear[year] = []
                 mostUsedCriteriaPerYear[year].push({
-                    criterium,
+                    criterium: criterium.label,
                     occurences: 1,
                 })
             } else {
                 let isFirstOccurence = true
                 for (let k = 0; k < mostUsedCriteriaPerYear[year].length; k++) {
-                    if (mostUsedCriteriaPerYear[year][k].criterium === criterium) {
+                    if (mostUsedCriteriaPerYear[year][k].criterium === criterium.label) {
                         mostUsedCriteriaPerYear[year][k].occurences++
                         isFirstOccurence = false
                         break
@@ -69,7 +81,7 @@ const generateDao = () => {
                 }
                 if (isFirstOccurence) {
                     mostUsedCriteriaPerYear[year].push({
-                        criterium,
+                        criterium: criterium.label,
                         occurences: 1,
                     })
                 }
@@ -83,13 +95,15 @@ const generateDao = () => {
 
     return {
         albums,
-        artists,
-        designers: Object.values(designersToSort).sort((a, b) => b.works.length - a.works.length),
         albumsPerYear,
         albumsPerCountry,
         albumsSortedByYear: sort([...albums], "year"),
+        artists,
         criteriaOccurences,
+        designers,
+        languages,
         mostUsedCriteriaPerYear,
+        regions,
     }
 }
 

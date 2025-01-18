@@ -18,6 +18,7 @@
                         >
                             Download filtered list
                         </button>
+                        <!-- <p>TODO {{ [...$el.querySelectorAll(".attic__cover:not(.hidden)")].length }} results </p> -->
                     </div>
 
                     <Accordion title="Year" drawered>
@@ -46,7 +47,8 @@
                             class="attic__filter"
                             v-model="selectedRegion"
                             :options="regions"
-                            :filter="$options.filters.region"
+                            :optionLabel="(r) => `${r.flag} ${r.name}`"
+                            :optionValue="(r) => r.name"
                             @input="filterAttic"
                         />
                     </Accordion>
@@ -56,8 +58,7 @@
                         <Select
                             class="attic__filter"
                             v-model="selectedLanguage"
-                            :options="languages"
-                            :filter="$options.filters.criterium"
+                            :options="languages.map((l) => l.name)"
                             @input="filterAttic"
                         />
                     </Accordion>
@@ -104,9 +105,9 @@
                 <Cover
                     class="attic__cover"
                     v-for="album in albums"
-                    :key="album.id"
+                    :key="album.human_id"
                     :album="album"
-                    :class="album.id"
+                    :class="album.human_id"
                     thumbnail
                     @click.native="selectAlbumAndView(album)"
                 />
@@ -117,7 +118,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { categories, categoriesOrder, criteria, criteriaCategory, languages } from "../db/criteria"
+// TODO fetch categories from Baserow instead
+import { categories, categoriesOrder, criteria, criteriaCategory } from "../db/criteria"
 import { applyChainedFadeInEarlyOnly } from "../utils/transition"
 import { Accordion, Cover, Check, Radio, Range, Select } from "../components"
 
@@ -134,7 +136,6 @@ export default {
         return {
             categories,
             criteria,
-            languages,
             filterModel: [],
             selectedLanguage: null,
             selectedRegion: null,
@@ -155,7 +156,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(["albums", "regions", "albumsPerYear"]),
+        ...mapState(["albums", "languages", "regions", "albumsPerYear"]),
         containsElementsOfCriteria() {
             return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
         },
@@ -232,26 +233,26 @@ export default {
                 return this.albums
             }
             const shownAlbumIds = [...shownAlbumsDom].map((a) => a.id.replace("cover_", ""))
-            return this.albums.filter((a) => shownAlbumIds.includes(a.id))
+            return this.albums.filter((a) => shownAlbumIds.includes(a.human_id))
         },
         downloadFilteredList() {
             const filteredAlbums = this.getFilteredAlbums()
             // Rework the album type to a database-friendly naming convention. Remove when Supabase migration is over
             const snakeCasedAlbums = filteredAlbums.map((a) => {
                 return {
-                    id: a.id,
+                    id: a.human_id,
                     title: a.title,
                     artist: a.artist,
-                    region: a.country,
+                    region: a.region,
                     criteria: a.criteria,
                     release_date: `${a.year}-01-01`,
-                    selected_track_title: a.selectedTrackTitle,
-                    selected_track_youtube_id: a.selectedTrackYtId,
-                    spotify_id: a.spotifyId,
-                    deezer_id: a.deezerId,
+                    selected_track_title: a.track_title,
+                    selected_track_youtube_id: a.track_yt_id,
+                    spotify_id: a.spotify_id,
+                    deezer_id: a.deezer_id,
                     designers: a.designers,
-                    similar_albums: a.similarAlbums,
-                    is_gem: a.isAGem,
+                    similar_albums: a.similar_albums,
+                    is_gem: a.gem,
                     description: a.description,
                 }
             })
@@ -278,7 +279,7 @@ export default {
                 })
             })
             this.albums.forEach((a) => {
-                const albumDom = this.$el.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.human_id}`)
                 this.showAlbum(albumDom)
             })
         },
@@ -312,7 +313,7 @@ export default {
 
             // Use CSS display logic over JS array filter logic to allow CSS transitions to be triggered on filter changes
             this.albums.forEach((a) => {
-                const albumDom = this.$el.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.human_id}`)
                 const isAMatch = {
                     year: true,
                     region: true,
@@ -320,15 +321,18 @@ export default {
                     gem: true,
                 }
                 if (this.selectedYear) {
+                    const albumYear = +a.year
                     isAMatch.year =
                         this.selectedYear === "Custom"
-                            ? a.year >= this.yearRange.min && a.year <= this.yearRange.max
-                            : a.year === this.selectedYear
+                            ? albumYear >= this.yearRange.min && albumYear <= this.yearRange.max
+                            : albumYear === this.selectedYear
                 }
-                isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
-                isAMatch.language = this.selectedLanguage ? a.criteria.includes(this.selectedLanguage) : true
-                isAMatch.gem = this.onlyGems ? a.isAGem : true
-                isAMatch.criteria = wantedCriteria.every((c) => a.criteria.includes(c))
+                isAMatch.region = this.selectedRegion?.name ? a.region === this.selectedRegion.name : true
+                isAMatch.language = this.selectedLanguage
+                    ? a.languages.map((l) => l.value).includes(this.selectedLanguage)
+                    : true
+                isAMatch.gem = this.onlyGems ? a.gem : true
+                isAMatch.criteria = wantedCriteria.every((c) => a.criteria.map((c) => c.value).includes(c))
 
                 const isDisplayed = Object.values(isAMatch).every((v) => v)
                 if (isDisplayed) {

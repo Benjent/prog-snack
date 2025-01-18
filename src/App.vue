@@ -1,5 +1,12 @@
 <template>
-    <fade-transition appear>
+    <fade-transition appear v-if="isDaoLoading">
+        <div class="app">
+            <section class="app__body" style="text-align: center">
+                <Typography>Loading...</Typography>
+            </section>
+        </div>
+    </fade-transition>
+    <fade-transition appear v-else>
         <div id="app" class="app">
             <TheNavBar />
             <section class="app__body">
@@ -11,12 +18,17 @@
 </template>
 
 <script>
-import { mapActions } from "vuex"
+import { mapActions, mapState } from "vuex"
 import { TheNavBar } from "./components"
+import { Typography } from "./components"
 
 export default {
     components: {
         TheNavBar,
+        Typography,
+    },
+    computed: {
+        ...mapState(["isDaoLoading"]),
     },
     created() {
         this.loadDatabase()
