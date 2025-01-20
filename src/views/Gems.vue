@@ -16,10 +16,7 @@
                         <Heading :level="2" class="text--name">{{ album.title }}</Heading>
                         <span>({{ album.year }})</span>
                     </button>
-                    <blockquote
-                        class="text text--description gems__description"
-                        v-if="album.description && !album.description.includes('TODO')"
-                    >
+                    <blockquote class="text text--description gems__description" v-if="album.description">
                         {{ album.description }}
                     </blockquote>
                 </div>
@@ -29,8 +26,8 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex"
-import { Cover, Heading } from "../components"
+import { mapActions, mapGetters } from "vuex"
+import { Cover, Heading } from "@/components"
 
 export default {
     components: {
@@ -38,7 +35,7 @@ export default {
         Heading,
     },
     computed: {
-        ...mapState(["albumsSortedByYear"]),
+        ...mapGetters(["albumsSortedByYear"]),
         gems() {
             return this.albumsSortedByYear.filter((a) => a.gem)
         },

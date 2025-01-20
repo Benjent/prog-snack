@@ -77,7 +77,7 @@ export default {
             "mostUsedCriteriaPerYear",
             "subgenres",
         ]),
-        ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums", "isMobile"]),
+        ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums"]),
         albumsPerYearWithRatio() {
             return convertDatasource(this.albumsPerYear)
         },

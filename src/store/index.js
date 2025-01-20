@@ -1,8 +1,8 @@
 import Vue from "vue"
 import Vuex from "vuex"
-import { getRandomNumber } from "../utils/math"
-import subgenres from "../db/subgenres"
-import { generateDao } from "../db/dao"
+import { getRandomNumber } from "@/utils/math"
+import { sort } from "@/utils/array"
+import { generateDao } from "@/db/dao"
 
 Vue.use(Vuex)
 
@@ -14,10 +14,9 @@ export default new Vuex.Store({
         designers: [],
         regions: [],
         languages: [],
-        subgenres,
+        subgenres: [],
         albumsPerYear: {},
         albumsPerCountry: {},
-        albumsSortedByYear: [],
         criteriaOccurences: {},
         mostUsedCriteriaPerYear: {},
         selectedAlbum: null,
@@ -31,6 +30,9 @@ export default new Vuex.Store({
                 }
                 return album
             }
+        },
+        albumsSortedByYear(state) {
+            return sort([...state.albums], "year")
         },
         gemsNb(state) {
             let nb = 0

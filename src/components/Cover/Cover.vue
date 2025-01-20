@@ -74,19 +74,10 @@ export default {
             return `${5}px`
         },
         cover() {
-            try {
-                return this.$getAssetUrl(`/src/assets/img/covers/${this.album.human_id}.jpg`)
-            } catch {
-                try {
-                    return this.$getAssetUrl(`/src/assets/img/covers/${this.album.human_id}.png`)
-                } catch {
-                    // Most probably an error with a file extension (image format) not handled by webpack.
-                    console.error(`Unable to load cover of album with id: ${this.album.human_id}`)
-                    return null
-                }
-            }
+            return this.album.covers[0].url
         },
         coverId() {
+            // Used for DOM query selection
             return `cover_${this.album.human_id}`
         },
     },

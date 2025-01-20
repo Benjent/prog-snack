@@ -1,37 +1,54 @@
 import { sort } from "../utils/array"
 import { getTable } from "../utils/baserow"
 
-// TODO for the migration, keep this way of loading chunks of data, but in the end we should only fetch needed information
+// Fetch all data for future SSG purpose
 const generateDao = async () => {
-    const [albumsResult, artistsResult, designersResult, regionsResult, languagesResult] =
-        await Promise.all([
-            getTable({
-                results: [],
-                nextPage:
-                    "/api/database/rows/table/715/?user_field_names=true&criteria__join=label",
-            }),
-            getTable({
-                results: [],
-                nextPage:
-                    "/api/database/rows/table/720/?user_field_names=true&albums__join=human_id,year,gem,region,region_flag",
-            }),
-            getTable({
-                results: [],
-                nextPage:
-                    "/api/database/rows/table/717/?user_field_names=true&albums__join=human_id,title,year,gem,region,region_flag,artist",
-            }),
-            getTable({
-                results: [],
-                nextPage: "/api/database/rows/table/712/?user_field_names=true",
-            }),
-            getTable({
-                results: [],
-                nextPage: "/api/database/rows/table/713/?user_field_names=true",
-            }),
-        ])
+    const [
+        albumsResult,
+        artistsResult,
+        designersResult,
+        subgenresResults,
+        regionsResult,
+        languagesResult,
+    ] = await Promise.all([
+        // Albums
+        getTable({
+            results: [],
+            nextPage: "/api/database/rows/table/715/?user_field_names=true&criteria__join=label",
+        }),
+        // Artists
+        getTable({
+            results: [],
+            nextPage:
+                "/api/database/rows/table/720/?user_field_names=true&albums__join=human_id,year,gem,region,region_flag,covers",
+        }),
+        // Designers
+        getTable({
+            results: [],
+            nextPage:
+                "/api/database/rows/table/717/?user_field_names=true&albums__join=human_id,title,year,gem,region,region_flag,covers,artist",
+        }),
+        // Subgenres
+        getTable({
+            results: [],
+            nextPage:
+                "/api/database/rows/table/722/?user_field_names=true&albums__join=human_id,covers&most_representative_albums__join=human_id,covers",
+        }),
+        // Regions
+        getTable({
+            results: [],
+            nextPage: "/api/database/rows/table/712/?user_field_names=true",
+        }),
+        // Languages
+        getTable({
+            results: [],
+            nextPage: "/api/database/rows/table/713/?user_field_names=true",
+        }),
+    ])
     const { results: albums } = albumsResult
     const { results: artists } = artistsResult
     const { results: designers } = designersResult
+    const { results: subgenres } = subgenresResults
     const { results: regions } = regionsResult
     const { results: languages } = languagesResult
 
@@ -104,6 +121,7 @@ const generateDao = async () => {
         languages,
         mostUsedCriteriaPerYear,
         regions,
+        subgenres,
     }
 }
 

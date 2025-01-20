@@ -2,12 +2,12 @@
     <fade-transition appear>
         <main class="discographies">
             <slide-y-up-transition appear :duration="500">
-                <aside class="discographies__sidebar" v-if="selectedArtist">
+                <aside class="discographies__sidebar">
                     <button
                         v-for="artist in artists"
                         :key="artist.name"
                         class="discographies__artist"
-                        :class="{ 'discographies__artist--selected': artist.name === selectedArtist.name }"
+                        :class="{ 'discographies__artist--selected': artist.name === selectedArtist.value }"
                         @click="setSelectedArtist(artist)"
                     >
                         <span>{{ artist.name }}</span>
@@ -16,7 +16,7 @@
             </slide-y-up-transition>
 
             <section class="discographies__main">
-                <section class="discographies__selectedAlbum">
+                <section v-if="selectedAlbum" class="discographies__selectedAlbum">
                     <div>
                         <Heading :level="2" color="secondary">
                             {{ selectedAlbum.artist }}
@@ -69,9 +69,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { AlbumDetails, Cover, Heading } from "../components"
-import { flags } from "../db/regions"
-import { getDeezerUrl, getSpotifyUrl } from "../utils/url"
+import { AlbumDetails, Cover, Heading } from "@/components"
+import { getDeezerUrl, getSpotifyUrl } from "@/utils/url"
 
 export default {
     components: {
@@ -81,12 +80,11 @@ export default {
     },
     data() {
         return {
-            flags,
             selectedArtist: null,
         }
     },
     computed: {
-        ...mapState(["artists", "albums", "selectedAlbum"]),
+        ...mapState(["albums", "artists", "selectedAlbum"]),
         discography() {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
         },
@@ -101,20 +99,14 @@ export default {
         if (!this.selectedAlbum) {
             this.randomizeAlbum()
         }
-        this.selectedArtist = this.selectedAlbum.artist
+        this.selectedArtist = this.selectedAlbum.artists[0]
     },
     methods: {
         ...mapActions(["selectAlbum", "randomizeAlbum"]),
         setSelectedArtist(artist) {
-            this.selectedArtist = artist.name
             // By default, select the debut album of the artist
-            for (let i = 0; i < this.albums.length; i++) {
-                const album = this.albums[i]
-                if (album.artist === artist.name) {
-                    this.selectAlbum(album)
-                    break
-                }
-            }
+            this.selectedArtist = artist
+            this.selectAlbum(this.albums.filter((album) => album.artist === this.selectedArtist.name)[0])
         },
     },
 }

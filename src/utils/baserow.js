@@ -1,7 +1,7 @@
-import axios from "../libs/axios"
+import axios from "@/libs/axios"
 
 /**
- * Recursive function retrieving all Baserow table data regardless of the pagination.
+ * Retreive all Baserow table data recursively regardless of the pagination.
  */
 export async function getTable({ results, nextPage }) {
     if (nextPage) {
@@ -15,4 +15,12 @@ export async function getTable({ results, nextPage }) {
         return await getTable({ results: mergedResults, nextPage: next })
     }
     return { results, nextPage }
+}
+
+/**
+ * Retrieve table data of the given page.
+ */
+export async function getTablePage({ page }) {
+    const { data } = await axios.get(page)
+    return data
 }

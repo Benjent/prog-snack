@@ -14,7 +14,7 @@
                         {{ album.region_flag }}
                         {{ album.region }}
                     </span>
-                    <span class="discographies__album__designers" v-if="album.designers.length > 0">
+                    <span class="discographies__album__designers" v-if="album.designers?.length > 0">
                         - <Icon name="palette" />
                         Cover by
                         <List :values="album.designers.map((d) => d.value)" type="flattened" />

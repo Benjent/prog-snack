@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex"
+import { mapActions, mapGetters } from "vuex"
 import { applyChainedFadeInEarlyOnly } from "@/utils/transition"
 import Cover from "./Cover/Cover.vue"
 
@@ -26,7 +26,7 @@ export default {
         Cover,
     },
     computed: {
-        ...mapState(["albumsSortedByYear"]),
+        ...mapGetters(["albumsSortedByYear"]),
     },
     mounted() {
         applyChainedFadeInEarlyOnly(this.$el, ".timeline__album", 2000, 50)
