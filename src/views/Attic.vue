@@ -65,33 +65,33 @@
 
                     <Accordion
                         v-for="(panel, index) in filterModel"
-                        :key="panel.panel"
-                        :title="$options.filters.criteriumCategory(panel.panel)"
+                        :key="panel.category.name"
+                        :title="panel.category.label"
                         drawered
                     >
-                        <template v-for="(item, indexCriteria) in panel.criteria">
+                        <template v-for="(item, criteriaIndex) in panel.criteria">
                             <Radio
                                 v-if="item.name"
                                 v-model="radioGroups[item.name]"
-                                :id="item.criterium"
+                                :id="item.criterium.name"
                                 class="attic__filter"
-                                :label="item.criterium | criterium"
-                                :own="item.criterium"
-                                :key="`${item.criterium}Radio`"
-                                @click.native="filterAttic(item.criterium)"
+                                :label="item.criterium.label"
+                                :own="item.criterium.name"
+                                :key="`${item.criterium.name}Radio`"
+                                @click.native="filterAttic(item.criterium.name)"
                             />
                             <Check
                                 v-else
-                                :id="item.criterium"
+                                :id="item.criterium.name"
                                 class="attic__filter"
-                                v-model="filterModel[index].criteria[indexCriteria].checked"
-                                :label="item.criterium | criterium"
-                                :key="`${item.criterium}Check`"
-                                @click.native="filterAttic(item.criterium)"
+                                v-model="filterModel[index].criteria[criteriaIndex].checked"
+                                :label="item.criterium.label"
+                                :key="`${item.criterium.name}Check`"
+                                @click.native="filterAttic(item.criterium.name)"
                             />
                         </template>
                         <Check
-                            v-if="panel.panel === categories.TYPE"
+                            v-if="panel.category.value === 'TYPE'"
                             id="gemCheck"
                             class="attic__filter"
                             v-model="onlyGems"
@@ -118,8 +118,6 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-// TODO fetch categories from Baserow instead
-import { categories, categoriesOrder, criteria, criteriaCategory } from "@/db/criteria"
 import { applyChainedFadeInEarlyOnly } from "@/utils/transition"
 import { Accordion, Cover, Check, Radio, Range, Select } from "@/components"
 
@@ -134,8 +132,6 @@ export default {
     },
     data() {
         return {
-            categories,
-            criteria,
             filterModel: [],
             selectedLanguage: null,
             selectedRegion: null,
@@ -146,19 +142,19 @@ export default {
             },
             onlyGems: false,
             radioGroups: {
-                [categories.TYPE]: null,
-                [categories.THEME]: null,
-                [categories.GENRE]: null,
-                [categories.CONTAINS]: null,
-                [categories.ERA]: null,
-                [categories.LOUDNESS]: null,
+                TYPE: null,
+                THEME: null,
+                GENRE: null,
+                CONTAINS: null,
+                ERA: null,
+                LOUDNESS: null,
             },
         }
     },
     computed: {
-        ...mapState(["albums", "languages", "regions", "albumsPerYear"]),
+        ...mapState(["albums", "languages", "regions", "albumsPerYear", "criteria", "criteriumCategories"]),
         containsElementsOfCriteria() {
-            return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
+            return this.filterModel.find((panel) => panel.category.name === "CONTAINS").criteria
         },
         years() {
             return Object.keys(this.albumsPerYear)
@@ -173,54 +169,23 @@ export default {
     methods: {
         ...mapActions(["selectAlbum"]),
         generateCriteriaFilterModel() {
-            const exclusiveCriteria = [
-                criteria.CONCEPT,
-                criteria.STORYLINE,
-                criteria.SOUNDTRACK,
-                criteria.SCI_FI,
-                criteria.FANTASY,
-                criteria.MEDIEVAL,
-                criteria.OCCULT,
-                criteria.SPIRITUAL,
-                criteria.SOCIOPOLITICAL,
-                criteria.HISTORICAL,
-                criteria.ROCK,
-                criteria.JAZZ,
-                criteria.FOLK,
-                criteria.ELECTRO,
-                criteria.ART_POP,
-                criteria.AFROBEAT,
-                criteria.BLENDS,
-                criteria.CRISPY_SIXTIES,
-                criteria.GREASY_SEVENTIES,
-                criteria.SOFT_SEVENTIES,
-                criteria.NEO_EIGHTIES,
-                criteria.SOFT,
-                criteria.HEAVY,
-                criteria.HUMBLE,
-                criteria.SPECTACULAR,
-            ]
-            Object.entries(criteriaCategory).forEach(([key, value]) => {
+            this.criteriumCategories.forEach((category) => {
                 const filterPanel = {
-                    panel: key,
-                    criteria: value.map((criterium) => {
+                    category,
+                    criteria: category.criteria.map((criterium) => {
                         const c = {
                             criterium,
                         }
-                        if (exclusiveCriteria.includes(criterium)) {
-                            c.name = key
+                        if (criterium.exclusive) {
+                            c.name = category.name
                         } else {
                             c.checked = false
                         }
                         return c
                     }),
                 }
-                if (key !== "LANGUAGE") {
-                    // We use a select for languages
-                    this.filterModel.push(filterPanel)
-                }
+                this.filterModel.push(filterPanel)
             })
-            this.filterModel.sort((a, b) => +(categoriesOrder.indexOf(a) > categoriesOrder.indexOf(b)))
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
@@ -270,8 +235,8 @@ export default {
             this.selectedYear = null
             this.onlyGems = false
             // Reset criteria
-            this.filterModel.forEach((panel) => {
-                panel.criteria.forEach((c) => {
+            this.filterModel.forEach((category) => {
+                category.criteria.forEach((c) => {
                     c.checked = false
                     if (this.radioGroups[c.name]) {
                         this.radioGroups[c.name] = null
@@ -284,24 +249,24 @@ export default {
             })
         },
         handleFilterPanels(criteriumClicked) {
-            // Use criteria.BLENDS as a mutual exclusive option over "contains element" criteria
-            const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium)
-            if (criteriumClicked === criteria.BLENDS) {
+            // Use BLENDS as a mutual exclusive option over "contains element" criteria
+            const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium.name)
+            if (criteriumClicked === "BLENDS") {
                 this.containsElementsOfCriteria.forEach((c) => {
                     if (c.checked) {
                         c.checked = false
                     }
                 })
             } else if (containsCriteria.includes(criteriumClicked)) {
-                this.radioGroups[categories.CONTAINS] = null
+                this.radioGroups["CONTAINS"] = null
             }
         },
         getWantedCriteria() {
             const wantedCriteria = []
-            this.filterModel.forEach((panel) => {
-                panel.criteria.forEach((c) => {
-                    if (c.checked || this.radioGroups[c.name] === c.criterium) {
-                        wantedCriteria.push(c.criterium)
+            this.filterModel.forEach((category) => {
+                category.criteria.forEach((c) => {
+                    if (c.checked || this.radioGroups[c.name] === c.criterium.name) {
+                        wantedCriteria.push(c.criterium.name)
                     }
                 })
             })

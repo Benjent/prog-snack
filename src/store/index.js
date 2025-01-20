@@ -15,6 +15,8 @@ export default new Vuex.Store({
         regions: [],
         languages: [],
         subgenres: [],
+        criteria: [],
+        criteriumCategories: [],
         albumsPerYear: {},
         albumsPerCountry: {},
         criteriaOccurences: {},
