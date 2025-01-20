@@ -38,10 +38,16 @@
                     Some criteria clarifications
                 </caption>
                 <div class="card about__glossary">
-                    <dl class="about__glossary__entry" v-for="data in glossary" :key="data.title">
-                        <dt class="about__criterium text text--secondary">{{ data.title }}</dt>
+                    <dl class="about__glossary__entry" v-for="criterium in glossary" :key="criterium.name">
+                        <dt class="about__criterium text text--secondary">{{ criterium.label }}</dt>
                         <dd class="text text--description about__definition">
-                            {{ data.definition }}
+                            {{ criterium.description }}
+                        </dd>
+                    </dl>
+                    <dl class="about__glossary__entry">
+                        <dt class="about__criterium text text--secondary">Language sung</dt>
+                        <dd class="text text--description about__definition">
+                            Album contains some lyrics or is completely sung in a specific language.
                         </dd>
                     </dl>
                 </div>
@@ -51,78 +57,16 @@
 </template>
 
 <script>
-import { criteria } from "../db/criteria"
-import { Heading, Typography } from "../components"
+import { mapState } from "vuex"
+import { Heading, Typography } from "@/components"
 
 export default {
     components: { Heading, Typography },
-    data() {
-        return {
-            criteria,
-            glossary: [
-                {
-                    title: this.$options.filters.criterium(criteria.ARENA),
-                    definition:
-                        "Album is typical off the 80's and early 90's. Album revolves around keyboards and electronic layers, guitars are secondary, drums may be programmed with a machine.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.BAROQUE),
-                    definition: "Album contains strings arrangements - british style. Album style is quite cold.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.FANFARE),
-                    definition: "Album contains brass arrangements - sometimes upbeats sections.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.GLITTER),
-                    definition: "Album style is keyboard-oriented with high-pitched vocal harmonies.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.JAM),
-                    definition: "Albums contains music sections that are solos or instrumental improvisations.",
-                },
-                {
-                    title: "Language sung",
-                    definition: "Album contains some lyrics or is completely sung in a specific language.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.LENGTHY_TRACKS),
-                    definition: "Album tracklist is composed of songs that can go over 8 minutes.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.PATCHWORK),
-                    definition: "Album tracklist is composed of songs of less that 2 minutes.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.RENAISSANCE),
-                    definition:
-                        "Album contains strings arrangements - italian style. Album is rather spectacular, often technical.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.ROCK_OPERA),
-                    definition:
-                        "Album contains songs that do not follow verse and chorus patterns, often upbeat. Album is either a soundtrack opera or feels a bit like theatrical.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.SPACY),
-                    definition:
-                        "Albums contains sections that are a mixture of electronic and psychedelic riffs that loop and evolve progressively.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.STORYLINE),
-                    definition: "Album follows a story that is narrated.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.SYMPHONIC),
-                    definition:
-                        "Album contains songs that have movements in their structure. Song durations are often long.",
-                },
-                {
-                    title: this.$options.filters.criterium(criteria.UNCOMMON_INSTRUMENTS),
-                    definition: `Album contains "non-Rock" instruments: wind or brass instruments, world percussions.`,
-                },
-            ],
-        }
+    computed: {
+        ...mapState(["criteria"]),
+        glossary() {
+            return this.criteria.filter((criterium) => criterium.description)
+        },
     },
 }
 </script>

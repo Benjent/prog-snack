@@ -1,5 +1,5 @@
-import { sort } from "../utils/array"
-import { getTable } from "../utils/baserow"
+import { sort } from "@/utils/array"
+import { getTable } from "@/utils/baserow"
 
 // Fetch all data for future SSG purpose
 const generateDao = async () => {
@@ -10,6 +10,8 @@ const generateDao = async () => {
         subgenresResults,
         regionsResult,
         languagesResult,
+        criteriaResult,
+        criteriumCategoriesResult,
     ] = await Promise.all([
         // Albums
         getTable({
@@ -44,6 +46,17 @@ const generateDao = async () => {
             results: [],
             nextPage: "/api/database/rows/table/713/?user_field_names=true",
         }),
+        // Criteria
+        getTable({
+            results: [],
+            nextPage: "/api/database/rows/table/714/?user_field_names=true",
+        }),
+        // Criterium categories
+        getTable({
+            results: [],
+            nextPage:
+                "/api/database/rows/table/723/?user_field_names=true&criteria__join=name,label,exclusive",
+        }),
     ])
     const { results: albums } = albumsResult
     const { results: artists } = artistsResult
@@ -51,6 +64,8 @@ const generateDao = async () => {
     const { results: subgenres } = subgenresResults
     const { results: regions } = regionsResult
     const { results: languages } = languagesResult
+    const { results: criteria } = criteriaResult
+    const { results: criteriumCategories } = criteriumCategoriesResult
 
     const albumsPerYear = {}
     const albumsPerCountry = {}
@@ -116,7 +131,9 @@ const generateDao = async () => {
         albumsPerCountry,
         albumsSortedByYear: sort([...albums], "year"),
         artists,
+        criteria,
         criteriaOccurences,
+        criteriumCategories,
         designers,
         languages,
         mostUsedCriteriaPerYear,
