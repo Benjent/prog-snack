@@ -7,7 +7,6 @@
             <a :href="youtubePath" target="_blank">
                 <Icon name="play_circle" />
                 YouTube
-                <!-- <img class="albumStarter__logo" :src="$getAssetUrl(`/src/assets/img/logos/yt_logo_gold.png`)" alt=""> -->
             </a>
         </template>
     </div>
