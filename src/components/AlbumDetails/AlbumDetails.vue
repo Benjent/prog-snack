@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import { flags } from "@/db/regions"
 import AlbumStarter from "../AlbumStarter/AlbumStarter.vue"
 import Cover from "../Cover/Cover.vue"
 import Heading from "../Heading/Heading.vue"
@@ -58,11 +57,6 @@ export default {
         album: {
             type: Object,
         },
-    },
-    data() {
-        return {
-            flags,
-        }
     },
 }
 </script>
