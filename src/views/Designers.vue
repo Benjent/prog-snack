@@ -10,8 +10,8 @@
                 <div class="card card--secondary designers__albums" :class="getClassDesigner(designer.name)">
                     <div
                         class="designers__albums__item"
-                        v-for="album in getShuffledDesignerWorks(designer.works)"
-                        :key="album.id"
+                        v-for="album in getShuffledDesignerWorks(designer.albums)"
+                        :key="album.human_id"
                         @click="selectAlbumAndView(album)"
                     >
                         <Cover :album="album" thumbnail rounded />
@@ -36,7 +36,7 @@ export default {
     computed: {
         ...mapState(["designers"]),
         designersWithEnoughWorks() {
-            return Object.values(this.designers).filter((d) => d.works.length > 1)
+            return this.designers.filter((d) => d.albums.length > 1)
         },
     },
     mounted() {

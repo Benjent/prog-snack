@@ -1,6 +1,6 @@
 <template>
     <div class="timeline">
-        <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.id">
+        <div class="timeline__album" v-for="(album, index) in albumsSortedByYear" :key="album.human_id">
             <div class="timeline__year" v-if="index == 0 || album.year != albumsSortedByYear[index - 1].year">
                 {{ album.year }}
             </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex"
+import { mapActions, mapGetters } from "vuex"
 import { applyChainedFadeInEarlyOnly } from "@/utils/transition"
 import Cover from "./Cover/Cover.vue"
 
@@ -26,7 +26,7 @@ export default {
         Cover,
     },
     computed: {
-        ...mapState(["albumsSortedByYear"]),
+        ...mapGetters(["albumsSortedByYear"]),
     },
     mounted() {
         applyChainedFadeInEarlyOnly(this.$el, ".timeline__album", 2000, 50)

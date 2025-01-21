@@ -15,10 +15,10 @@
             <button
                 class="options__item select__option"
                 v-for="option in options"
-                :key="option"
+                :key="optionValue ? optionValue(option) : option"
                 @click="notifyParent(option)"
             >
-                {{ filter ? filter(option) : option }}
+                {{ optionLabel ? optionLabel(option) : option }}
             </button>
         </div>
     </div>
@@ -34,7 +34,7 @@ export default {
     },
     props: {
         value: {
-            type: [String, Number],
+            type: [String, Number, Object],
         },
         options: {
             type: [Array, Object],
@@ -46,6 +46,12 @@ export default {
         filter: {
             type: Function,
         },
+        optionLabel: {
+            type: Function,
+        },
+        optionValue: {
+            type: Function,
+        },
     },
     data() {
         return {
@@ -55,7 +61,7 @@ export default {
     computed: {
         displayedValue() {
             if (this.value) {
-                return this.filter ? this.filter(this.value) : this.value
+                return this.optionLabel ? this.optionLabel(this.value) : this.value
             }
             return "All"
         },

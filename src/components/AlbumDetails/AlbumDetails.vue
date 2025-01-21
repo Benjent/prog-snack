@@ -7,24 +7,26 @@
             </Heading>
             <div class="card albumDetails__infos__body">
                 <Cover v-if="$mq === 'M'" :album="album" rounded fade />
-                <Typography class="albumDetails__gem" v-if="album.isAGem"> This album is a must-hear </Typography>
+                <Typography class="albumDetails__gem" v-if="album.gem"> This album is a must-hear </Typography>
                 <Typography>
                     <span>
                         <Icon name="event" /> {{ album.year }} -
-                        {{ flags[album.country] }}
-                        {{ album.country | region }}
+                        {{ album.region_flag }}
+                        {{ album.region }}
                     </span>
-                    <span class="discographies__album__designers" v-if="album.designers.length > 0">
+                    <span class="discographies__album__designers" v-if="album.designers?.length > 0">
                         - <Icon name="palette" />
                         Cover by
-                        <List :values="album.designers" type="flattened" />
+                        <List :values="album.designers.map((d) => d.value)" type="flattened" />
                     </span>
                 </Typography>
                 <footer class="discographies__album__footer">
                     <List
                         class="discographies__album__criteria"
-                        :values="album.criteria"
-                        :filter="$options.filters.criterium"
+                        :values="[
+                            ...album.criterium_labels.map((l) => l.value),
+                            ...album.languages.map((l) => `${l.value} lyrics`),
+                        ]"
                     />
                 </footer>
                 <AlbumStarter class="discographies__track" :album="album" />
@@ -34,7 +36,6 @@
 </template>
 
 <script>
-import { flags } from "@/db/regions"
 import AlbumStarter from "../AlbumStarter/AlbumStarter.vue"
 import Cover from "../Cover/Cover.vue"
 import Heading from "../Heading/Heading.vue"
@@ -56,11 +57,6 @@ export default {
         album: {
             type: Object,
         },
-    },
-    data() {
-        return {
-            flags,
-        }
     },
 }
 </script>

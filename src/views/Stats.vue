@@ -29,7 +29,7 @@
             <Histogram
                 class="stats__section"
                 caption="Number of albums per region"
-                :datasource="albumsPerCountryWithRatio"
+                :datasource="albumsPerRegionWithRatio"
             />
 
             <Histogram
@@ -58,8 +58,6 @@
 
 <script>
 import { mapState, mapGetters } from "vuex"
-import { categories, criteriaCategory } from "@/db/criteria"
-import { flags } from "@/db/regions"
 import { convertDatasource } from "@/utils/chart"
 import { Histogram, NumberUnit } from "@/components"
 
@@ -79,14 +77,14 @@ export default {
             "mostUsedCriteriaPerYear",
             "subgenres",
         ]),
-        ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums", "isMobile"]),
+        ...mapGetters(["gemsNb", "artistsWithMostGems", "artistsWithMostAlbums"]),
         albumsPerYearWithRatio() {
             return convertDatasource(this.albumsPerYear)
         },
-        albumsPerCountryWithRatio() {
+        albumsPerRegionWithRatio() {
             return convertDatasource(
                 this.albumsPerCountry,
-                (label) => `${flags[label]} ${this.$options.filters.region(label)}`,
+                (label) => `${this.regions.find((r) => r.name === label).flag} ${label}`,
             )
         },
         artistsWithGemsWithRatio() {
@@ -97,10 +95,7 @@ export default {
         },
         criteriaOccurencesWithRatio() {
             const criteriaOccurences = JSON.parse(JSON.stringify(this.criteriaOccurences))
-            criteriaCategory[categories.LANGUAGE].forEach((criterium) => {
-                delete criteriaOccurences[criterium]
-            })
-            return convertDatasource(criteriaOccurences, (label) => this.$options.filters.criterium(label))
+            return convertDatasource(criteriaOccurences, (label) => label)
         },
     },
 }

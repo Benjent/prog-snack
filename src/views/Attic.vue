@@ -18,6 +18,7 @@
                         >
                             Download filtered list
                         </button>
+                        <!-- <p>TODO {{ [...$el.querySelectorAll(".attic__cover:not(.hidden)")].length }} results </p> -->
                     </div>
 
                     <Accordion title="Year" drawered>
@@ -46,7 +47,8 @@
                             class="attic__filter"
                             v-model="selectedRegion"
                             :options="regions"
-                            :filter="$options.filters.region"
+                            :optionLabel="(r) => `${r.flag} ${r.name}`"
+                            :optionValue="(r) => r.name"
                             @input="filterAttic"
                         />
                     </Accordion>
@@ -56,41 +58,40 @@
                         <Select
                             class="attic__filter"
                             v-model="selectedLanguage"
-                            :options="languages"
-                            :filter="$options.filters.criterium"
+                            :options="languages.map((l) => l.name)"
                             @input="filterAttic"
                         />
                     </Accordion>
 
                     <Accordion
                         v-for="(panel, index) in filterModel"
-                        :key="panel.panel"
-                        :title="$options.filters.criteriumCategory(panel.panel)"
+                        :key="panel.category.name"
+                        :title="panel.category.label"
                         drawered
                     >
-                        <template v-for="(item, indexCriteria) in panel.criteria">
+                        <template v-for="(item, criteriaIndex) in panel.criteria">
                             <Radio
                                 v-if="item.name"
                                 v-model="radioGroups[item.name]"
-                                :id="item.criterium"
+                                :id="item.criterium.name"
                                 class="attic__filter"
-                                :label="item.criterium | criterium"
-                                :own="item.criterium"
-                                :key="`${item.criterium}Radio`"
-                                @click.native="filterAttic(item.criterium)"
+                                :label="item.criterium.label"
+                                :own="item.criterium.name"
+                                :key="`${item.criterium.name}Radio`"
+                                @click.native="filterAttic(item.criterium.name)"
                             />
                             <Check
                                 v-else
-                                :id="item.criterium"
+                                :id="item.criterium.name"
                                 class="attic__filter"
-                                v-model="filterModel[index].criteria[indexCriteria].checked"
-                                :label="item.criterium | criterium"
-                                :key="`${item.criterium}Check`"
-                                @click.native="filterAttic(item.criterium)"
+                                v-model="filterModel[index].criteria[criteriaIndex].checked"
+                                :label="item.criterium.label"
+                                :key="`${item.criterium.name}Check`"
+                                @click.native="filterAttic(item.criterium.name)"
                             />
                         </template>
                         <Check
-                            v-if="panel.panel === categories.TYPE"
+                            v-if="panel.category.value === 'TYPE'"
                             id="gemCheck"
                             class="attic__filter"
                             v-model="onlyGems"
@@ -104,9 +105,9 @@
                 <Cover
                     class="attic__cover"
                     v-for="album in albums"
-                    :key="album.id"
+                    :key="album.human_id"
                     :album="album"
-                    :class="album.id"
+                    :class="album.human_id"
                     thumbnail
                     @click.native="selectAlbumAndView(album)"
                 />
@@ -117,9 +118,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { categories, categoriesOrder, criteria, criteriaCategory, languages } from "../db/criteria"
-import { applyChainedFadeInEarlyOnly } from "../utils/transition"
-import { Accordion, Cover, Check, Radio, Range, Select } from "../components"
+import { applyChainedFadeInEarlyOnly } from "@/utils/transition"
+import { Accordion, Cover, Check, Radio, Range, Select } from "@/components"
 
 export default {
     components: {
@@ -132,9 +132,6 @@ export default {
     },
     data() {
         return {
-            categories,
-            criteria,
-            languages,
             filterModel: [],
             selectedLanguage: null,
             selectedRegion: null,
@@ -145,19 +142,19 @@ export default {
             },
             onlyGems: false,
             radioGroups: {
-                [categories.TYPE]: null,
-                [categories.THEME]: null,
-                [categories.GENRE]: null,
-                [categories.CONTAINS]: null,
-                [categories.ERA]: null,
-                [categories.LOUDNESS]: null,
+                TYPE: null,
+                THEME: null,
+                GENRE: null,
+                CONTAINS: null,
+                ERA: null,
+                LOUDNESS: null,
             },
         }
     },
     computed: {
-        ...mapState(["albums", "regions", "albumsPerYear"]),
+        ...mapState(["albums", "languages", "regions", "albumsPerYear", "criteria", "criteriumCategories"]),
         containsElementsOfCriteria() {
-            return this.filterModel.find((fm) => fm.panel === categories.CONTAINS).criteria
+            return this.filterModel.find((panel) => panel.category.name === "CONTAINS").criteria
         },
         years() {
             return Object.keys(this.albumsPerYear)
@@ -172,54 +169,23 @@ export default {
     methods: {
         ...mapActions(["selectAlbum"]),
         generateCriteriaFilterModel() {
-            const exclusiveCriteria = [
-                criteria.CONCEPT,
-                criteria.STORYLINE,
-                criteria.SOUNDTRACK,
-                criteria.SCI_FI,
-                criteria.FANTASY,
-                criteria.MEDIEVAL,
-                criteria.OCCULT,
-                criteria.SPIRITUAL,
-                criteria.SOCIOPOLITICAL,
-                criteria.HISTORICAL,
-                criteria.ROCK,
-                criteria.JAZZ,
-                criteria.FOLK,
-                criteria.ELECTRO,
-                criteria.ART_POP,
-                criteria.AFROBEAT,
-                criteria.BLENDS,
-                criteria.CRISPY_SIXTIES,
-                criteria.GREASY_SEVENTIES,
-                criteria.SOFT_SEVENTIES,
-                criteria.NEO_EIGHTIES,
-                criteria.SOFT,
-                criteria.HEAVY,
-                criteria.HUMBLE,
-                criteria.SPECTACULAR,
-            ]
-            Object.entries(criteriaCategory).forEach(([key, value]) => {
+            this.criteriumCategories.forEach((category) => {
                 const filterPanel = {
-                    panel: key,
-                    criteria: value.map((criterium) => {
+                    category,
+                    criteria: category.criteria.map((criterium) => {
                         const c = {
                             criterium,
                         }
-                        if (exclusiveCriteria.includes(criterium)) {
-                            c.name = key
+                        if (criterium.exclusive) {
+                            c.name = category.name
                         } else {
                             c.checked = false
                         }
                         return c
                     }),
                 }
-                if (key !== "LANGUAGE") {
-                    // We use a select for languages
-                    this.filterModel.push(filterPanel)
-                }
+                this.filterModel.push(filterPanel)
             })
-            this.filterModel.sort((a, b) => +(categoriesOrder.indexOf(a) > categoriesOrder.indexOf(b)))
         },
         selectAlbumAndView(album) {
             this.selectAlbum(album)
@@ -232,26 +198,26 @@ export default {
                 return this.albums
             }
             const shownAlbumIds = [...shownAlbumsDom].map((a) => a.id.replace("cover_", ""))
-            return this.albums.filter((a) => shownAlbumIds.includes(a.id))
+            return this.albums.filter((a) => shownAlbumIds.includes(a.human_id))
         },
         downloadFilteredList() {
             const filteredAlbums = this.getFilteredAlbums()
             // Rework the album type to a database-friendly naming convention. Remove when Supabase migration is over
             const snakeCasedAlbums = filteredAlbums.map((a) => {
                 return {
-                    id: a.id,
+                    id: a.human_id,
                     title: a.title,
                     artist: a.artist,
-                    region: a.country,
+                    region: a.region,
                     criteria: a.criteria,
                     release_date: `${a.year}-01-01`,
-                    selected_track_title: a.selectedTrackTitle,
-                    selected_track_youtube_id: a.selectedTrackYtId,
-                    spotify_id: a.spotifyId,
-                    deezer_id: a.deezerId,
+                    selected_track_title: a.track_title,
+                    selected_track_youtube_id: a.track_yt_id,
+                    spotify_id: a.spotify_id,
+                    deezer_id: a.deezer_id,
                     designers: a.designers,
-                    similar_albums: a.similarAlbums,
-                    is_gem: a.isAGem,
+                    similar_albums: a.similar_albums,
+                    is_gem: a.gem,
                     description: a.description,
                 }
             })
@@ -269,8 +235,8 @@ export default {
             this.selectedYear = null
             this.onlyGems = false
             // Reset criteria
-            this.filterModel.forEach((panel) => {
-                panel.criteria.forEach((c) => {
+            this.filterModel.forEach((category) => {
+                category.criteria.forEach((c) => {
                     c.checked = false
                     if (this.radioGroups[c.name]) {
                         this.radioGroups[c.name] = null
@@ -278,29 +244,29 @@ export default {
                 })
             })
             this.albums.forEach((a) => {
-                const albumDom = this.$el.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.human_id}`)
                 this.showAlbum(albumDom)
             })
         },
         handleFilterPanels(criteriumClicked) {
-            // Use criteria.BLENDS as a mutual exclusive option over "contains element" criteria
-            const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium)
-            if (criteriumClicked === criteria.BLENDS) {
+            // Use BLENDS as a mutual exclusive option over "contains element" criteria
+            const containsCriteria = this.containsElementsOfCriteria.map((i) => i.criterium.name)
+            if (criteriumClicked === "BLENDS") {
                 this.containsElementsOfCriteria.forEach((c) => {
                     if (c.checked) {
                         c.checked = false
                     }
                 })
             } else if (containsCriteria.includes(criteriumClicked)) {
-                this.radioGroups[categories.CONTAINS] = null
+                this.radioGroups["CONTAINS"] = null
             }
         },
         getWantedCriteria() {
             const wantedCriteria = []
-            this.filterModel.forEach((panel) => {
-                panel.criteria.forEach((c) => {
-                    if (c.checked || this.radioGroups[c.name] === c.criterium) {
-                        wantedCriteria.push(c.criterium)
+            this.filterModel.forEach((category) => {
+                category.criteria.forEach((c) => {
+                    if (c.checked || this.radioGroups[c.name] === c.criterium.name) {
+                        wantedCriteria.push(c.criterium.name)
                     }
                 })
             })
@@ -312,7 +278,7 @@ export default {
 
             // Use CSS display logic over JS array filter logic to allow CSS transitions to be triggered on filter changes
             this.albums.forEach((a) => {
-                const albumDom = this.$el.querySelector(`.${a.id}`)
+                const albumDom = this.$el.querySelector(`.${a.human_id}`)
                 const isAMatch = {
                     year: true,
                     region: true,
@@ -320,15 +286,18 @@ export default {
                     gem: true,
                 }
                 if (this.selectedYear) {
+                    const albumYear = +a.year
                     isAMatch.year =
                         this.selectedYear === "Custom"
-                            ? a.year >= this.yearRange.min && a.year <= this.yearRange.max
-                            : a.year === this.selectedYear
+                            ? albumYear >= this.yearRange.min && albumYear <= this.yearRange.max
+                            : albumYear === this.selectedYear
                 }
-                isAMatch.region = this.selectedRegion ? a.country === this.selectedRegion : true
-                isAMatch.language = this.selectedLanguage ? a.criteria.includes(this.selectedLanguage) : true
-                isAMatch.gem = this.onlyGems ? a.isAGem : true
-                isAMatch.criteria = wantedCriteria.every((c) => a.criteria.includes(c))
+                isAMatch.region = this.selectedRegion?.name ? a.region === this.selectedRegion.name : true
+                isAMatch.language = this.selectedLanguage
+                    ? a.languages.map((l) => l.value).includes(this.selectedLanguage)
+                    : true
+                isAMatch.gem = this.onlyGems ? a.gem : true
+                isAMatch.criteria = wantedCriteria.every((c) => a.criteria.map((c) => c.value).includes(c))
 
                 const isDisplayed = Object.values(isAMatch).every((v) => v)
                 if (isDisplayed) {

@@ -15,7 +15,7 @@
             <div class="cover__artist">{{ album.artist }}</div>
             <div class="cover__title text--name">{{ album.title }}</div>
             <div class="cover__year">{{ album.year }}</div>
-            <div class="cover__gem" v-if="album.isAGem">This is a must-hear</div>
+            <div class="cover__gem" v-if="album.gem">This is a must-hear</div>
         </div>
         <div
             class="cover__album"
@@ -74,20 +74,11 @@ export default {
             return `${5}px`
         },
         cover() {
-            try {
-                return this.$getAssetUrl(`/src/assets/img/covers/${this.album.id}.jpg`)
-            } catch {
-                try {
-                    return this.$getAssetUrl(`/src/assets/img/covers/${this.album.id}.png`)
-                } catch {
-                    // Most probably an error with a file extension (image format) not handled by webpack.
-                    console.error(`Unable to load cover of album with id: ${this.album.id}`)
-                    return null
-                }
-            }
+            return this.album.covers[0].url
         },
         coverId() {
-            return `cover_${this.album.id}`
+            // Used for DOM query selection
+            return `cover_${this.album.human_id}`
         },
     },
     mounted() {
