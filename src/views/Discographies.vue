@@ -2,21 +2,21 @@
     <fade-transition appear>
         <main class="discographies">
             <slide-y-up-transition appear :duration="500">
-                <aside class="discographies__sidebar" v-if="selectedArtist">
+                <aside class="discographies__sidebar">
                     <button
-                        class="discographies__artist"
-                        :class="{ 'discographies__artist--selected': artist === selectedArtist }"
                         v-for="artist in artists"
-                        :key="artist.id"
+                        :key="artist.name"
+                        class="discographies__artist"
+                        :class="{ 'discographies__artist--selected': artist.name === selectedArtist.value }"
                         @click="setSelectedArtist(artist)"
                     >
-                        <span>{{ artist }}</span>
+                        <span>{{ artist.name }}</span>
                     </button>
                 </aside>
             </slide-y-up-transition>
 
             <section class="discographies__main">
-                <section class="discographies__selectedAlbum">
+                <section v-if="selectedAlbum" class="discographies__selectedAlbum">
                     <div>
                         <Heading :level="2" color="secondary">
                             {{ selectedAlbum.artist }}
@@ -28,7 +28,7 @@
                                 <Cover
                                     class="discographies__album"
                                     v-for="album in discography"
-                                    :key="album.id"
+                                    :key="album.human_id"
                                     :album="album"
                                     rounded
                                     fade
@@ -69,9 +69,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex"
-import { AlbumDetails, Cover, Heading } from "../components"
-import { flags } from "../db/regions"
-import { getDeezerUrl, getSpotifyUrl } from "../utils/url"
+import { AlbumDetails, Cover, Heading } from "@/components"
+import { getDeezerUrl, getSpotifyUrl } from "@/utils/url"
 
 export default {
     components: {
@@ -81,40 +80,33 @@ export default {
     },
     data() {
         return {
-            flags,
             selectedArtist: null,
         }
     },
     computed: {
-        ...mapState(["artists", "albums", "selectedAlbum"]),
+        ...mapState(["albums", "artists", "selectedAlbum"]),
         discography() {
             return this.albums.filter((album) => album.artist === this.selectedAlbum.artist)
         },
         deezerPath() {
-            return getDeezerUrl(this.selectedAlbum.deezerId)
+            return getDeezerUrl(this.selectedAlbum.deezer_id)
         },
         spotifyPath() {
-            return getSpotifyUrl(this.selectedAlbum.spotifyId)
+            return getSpotifyUrl(this.selectedAlbum.spotify_id)
         },
     },
     created() {
         if (!this.selectedAlbum) {
             this.randomizeAlbum()
         }
-        this.selectedArtist = this.selectedAlbum.artist
+        this.selectedArtist = this.selectedAlbum.artists[0]
     },
     methods: {
         ...mapActions(["selectAlbum", "randomizeAlbum"]),
         setSelectedArtist(artist) {
-            this.selectedArtist = artist
             // By default, select the debut album of the artist
-            for (let i = 0; i < this.albums.length; i++) {
-                const album = this.albums[i]
-                if (album.artist === artist) {
-                    this.selectAlbum(album)
-                    break
-                }
-            }
+            this.selectedArtist = artist
+            this.selectAlbum(this.albums.filter((album) => album.artist === this.selectedArtist.name)[0])
         },
     },
 }

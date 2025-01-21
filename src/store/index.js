@@ -1,22 +1,24 @@
 import Vue from "vue"
 import Vuex from "vuex"
-import { getRandomNumber } from "../utils/math"
-import { regions } from "../db/regions"
-import subgenres from "../db/subgenres"
-import { generateDao } from "../db/dao"
+import { getRandomNumber } from "@/utils/math"
+import { sort } from "@/utils/array"
+import { generateDao } from "@/db/dao"
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        isDaoLoading: true,
         albums: [],
         artists: [],
         designers: [],
-        regions,
-        subgenres,
+        regions: [],
+        languages: [],
+        subgenres: [],
+        criteria: [],
+        criteriumCategories: [],
         albumsPerYear: {},
         albumsPerCountry: {},
-        albumsSortedByYear: [],
         criteriaOccurences: {},
         mostUsedCriteriaPerYear: {},
         selectedAlbum: null,
@@ -24,17 +26,20 @@ export default new Vuex.Store({
     getters: {
         albumById(state) {
             return (id) => {
-                const album = state.albums.find((a) => a.id === id)
+                const album = state.albums.find((a) => a.human_id === id)
                 if (!album) {
                     console.error(`Unable to find album with id: ${id}`)
                 }
                 return album
             }
         },
+        albumsSortedByYear(state) {
+            return sort([...state.albums], "year")
+        },
         gemsNb(state) {
             let nb = 0
             state.albums.forEach((a) => {
-                if (a.isAGem) {
+                if (a.gem) {
                     nb++
                 }
             })
@@ -52,7 +57,7 @@ export default new Vuex.Store({
         artistsWithMostGems(state) {
             const artistsWithMostGems = {}
             state.albums.forEach((a) => {
-                if (a.isAGem) {
+                if (a.gem) {
                     artistsWithMostGems[a.artist]
                         ? artistsWithMostGems[a.artist]++
                         : (artistsWithMostGems[a.artist] = 1)
@@ -67,9 +72,10 @@ export default new Vuex.Store({
         },
     },
     actions: {
-        loadDatabase(context) {
-            const dao = generateDao()
-            context.commit("mutate", dao)
+        async loadDatabase(context) {
+            const dao = await generateDao()
+            await context.commit("mutate", dao)
+            context.commit("mutate", { isDaoLoading: false })
         },
         randomizeAlbum(context) {
             const { albums } = context.state

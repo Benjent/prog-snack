@@ -1,26 +1,30 @@
 <template>
     <fade-transition appear>
         <main class="subgenres">
-            <section class="subgenres__subgenre" v-for="subgenre in subgenres" :key="subgenre.mostRepresentativeAlbum">
+            <section
+                class="subgenres__subgenre"
+                v-for="subgenre in subgenres"
+                :key="getMostRepresentativeAlbum(subgenre).human_id"
+            >
                 <div class="subgenres__albums">
                     <Cover
                         class="subgenres__cover"
-                        v-for="id in subgenre.albums"
-                        :key="id"
-                        :album="albumById(id)"
+                        v-for="album in subgenre.albums"
+                        :key="album.human_id"
+                        :album="album"
                         bordered
                         :size="130"
-                        @click.native="selectAlbumAndView(id)"
+                        @click.native="selectAlbumAndView(album)"
                     />
                 </div>
 
                 <div class="subgenres__infosWithMostRepresentative">
                     <Cover
                         class="subgenres__cover subgenres__cover--mostRepresentative"
-                        :album="albumById(subgenre.mostRepresentativeAlbum)"
+                        :album="getMostRepresentativeAlbum(subgenre)"
                         bordered
                         :size="$mq === 'M' ? 100 : 200"
-                        @click.native="selectAlbumAndView(subgenre.mostRepresentativeAlbum)"
+                        @click.native="selectAlbumAndView(getMostRepresentativeAlbum(subgenre))"
                     />
 
                     <div class="subgenres__infos">
@@ -31,16 +35,12 @@
                             <span>Characterized by the following: </span>
                             <List
                                 class="subgenres__criterium"
-                                :values="subgenre.criteria"
-                                :filter="$options.filters.criterium"
+                                :values="subgenre.criterium_labels.map((l) => l.value)"
                                 type="flattened"
                                 separator=" • "
                             />
                         </Typography>
-                        <blockquote
-                            class="text text--description subgenres__description"
-                            v-if="!subgenre.description.includes('TODO')"
-                        >
+                        <blockquote class="text text--description subgenres__description" v-if="subgenre.description">
                             {{ subgenre.description }}
                         </blockquote>
                     </div>
@@ -52,8 +52,8 @@
 
 <script>
 import { mapActions, mapState, mapGetters } from "vuex"
-import { applyChainedFadeIn } from "../utils/transition"
-import { Cover, Heading, List, Typography } from "../components"
+import { applyChainedFadeIn } from "@/utils/transition"
+import { Cover, Heading, List, Typography } from "@/components"
 
 export default {
     components: {
@@ -73,8 +73,10 @@ export default {
     },
     methods: {
         ...mapActions(["selectAlbum"]),
-        selectAlbumAndView(id) {
-            const album = this.albumById(id)
+        getMostRepresentativeAlbum(subgenre) {
+            return subgenre.most_representative_albums[0]
+        },
+        selectAlbumAndView(album) {
             this.selectAlbum(album)
             this.$router.push("/")
         },
