@@ -1,5 +1,112 @@
 # Albums to listen to before adding them (or not) to the project
 
+// TODO INTROUVABLE Albert Marcœur - Sports Et Percussions - 1994 - FRANCE - (Gérard Failly, Jean Tholance, Patrick Couratin)
+// TODO Introuvable - Alternativity - Alternativity - 1972
+// TODO INTROUVABLE Ayers Rock - Big Red Rock - 366665 + 3ZTpDfASEYJ7MrpB8K6kPO
+// TODO INTROUVABLE - Banana - Licuado
+// TODO INTROUVABLE - Beaver & Krause - 1972 - All Good Men - 404486167 + 5iQzADaz1K36Z42INQY6Zb
+// TODO INTROUVABLE Bloque reste discographie
+// TODO INTROUVABLE Borne - Unidades Didácticas - 1982
+// TODO INTROUVABLE - Brainbox - Parts
+// TODO Introuvable: Carsten Bohn's Bandstand - C. B. Rædyo - 1980 - 193719562 + 1MVUCJum9NZvql9gVJphK9
+// TODO INTROUVABLE Chase - Watch Closely Now - 1977 - null + null
+// TODO Introuvable - Claude Léveillée - Escale 80 - 1979
+// TODO Color Humano II très similaire en criteria avec le 1 INTROUVABLE
+// TODO introuvable Coses - SPAIN - Via Fora!
+// TODO introuvable Coses - SPAIN - Ara És Demà
+// TODO INTROUVABLE - Daevid Allen - 1976 - Good Morning
+// TODO INTROUVABLE - Daevid Allen - 1979 - N'existe Pas !
+// TODO INTROUVABLE David Sancious - David Sancious - 1976
+// TODO INTROUVABLE David Sancious - The Bridge - 1981
+// TODO INTROUVABLE David Sancious & Tone - True Stories - 1978 - 10522608 + 2E7Al9ad2patEGto8aiMhh
+// INTROUVABLE Dr. Dopo Jam - Cruisin' At Midnite
+// TODO introuvable - Emergency - Get Out To The Country - 1973 - 48677822 + null
+// TODO introuvable - Emergency - No Compromise - 1974 - null + null
+// TODO INTROUVABLE - Emmanuel Booz - Au Restaurant D'Alice
+// TODO INTROUVABLE - Rischka's Light Faces
+// TODO Introuvable - Et Cetera - Live
+// TODO INTROUVABLE Flo & Eddie - 1973 - Flo & Eddie
+// TODO INTROUVABLE Floh De Cologne - 1
+// TODO INTROUVABLE Floh De Cologne - 2
+// TODO INTROUVABLE Floh De Cologne - 3
+// TODO INTROUVABLE Floh De Cologne - 4
+// TODO INTROUVABLE Floh De Cologne - 6
+// TODO INTROUVABLE Floh De Cologne - 7
+// TODO INTROUVABLE Floh De Cologne - 8
+// TODO the rest of Guru Guru discography
+// TODO INTROUVABLE Guy Skornik - Histoires De Fous
+// TODO INTROUVABLE Guy Skornik - Histoires D'amour
+// TODO INTROUVABLE Guy Skornik - Namasté !
+// TODO INTROUVABLE Guy Skornik - Ils Viennent Du Futur !
+// TODO INTROUVABLE HP LOVECRAFT - Valley Of The Moon
+// TODO INTROUVABLE - Ia & Batiste - Chichonera's Cat - 1975
+// TODO Jan Hammer - Melodies - 1977 introuvable
+// TODO Jasper Wrath - Arden House - 1977 - INTROUVABLE
+// TODO INTROUVABLE - John Klemmer - Blowin' Gold - PROG?
+// TODO INTROUVABLE - John Klemmer - All The Children Cried - PROG?
+// TODO INTROUVABLE - John Klemmer - Eruptions - jazzbased TRES SUREMENT PROG
+/*{
+        id: "john_klemmer_constant_throb",
+        title: "Constant Throb",
+        artist: "John Klemmer",
+        year: 1971,
+        country: regions.USA,
+        criteria: [criteria.JAZZ, criteria.FEMALE, criteria.C_PSYCHE, criteria.INSTRUMENTAL, criteria.JAM, criteria.UNCOMMON_INSTRUMENTS],
+        selectedTrackTitle: "Constant Throb, Part I",
+        selectedTrackYtId: "7tY7OdV2p8k",
+        spotifyId: "0KRl2sKD4deYfL7jhgwnFi",
+        deezerId: "56248872",
+        designers: [],
+        similarAlbums: ["miles_davis_bitches_brew"],
+        isAGem: false,
+    },*/
+// TODO INTROUVABLE - John Klemmer - Waterfalls - HONNETEMENT Y A DU PROG DANS CES EAUX LA
+// TODO INTROUVABLE - John Klemmer - Intensity - PROG?
+// TODO INTROUVABLE - John Klemmer - Magic And Movement
+// TODO INTROUVABLE - John Klemmer - Fresh Feathers - PROG?
+// TODO John Klemmer - Touch - 1975 - jazzbased, instru, jam, softseventies, uncommon, soft - track: Waterwheels
+// TODO John Klemmer - Barefoot Ballet - 1976 - jazzbased, instru, jam, softseventies, soft - track: TODO
+// TODO John Klemmer - Lifestyle (Living And Loving) - 1977 - jazzbased, instru, jam, softseventies, soft, uncommon - track: Lifestyle - Honnetement rellemeny rpog à ce moemtn????
+// TODO Arabesque NOT PROG!!!
+// TODO INTROUVABLE - John Klemmer - Nexus - PROG?
+// TODO introuvable - Lied Des Teufels - Höllisch Heiße Rockmusik
+// TODO INTROUVABLE Lucifer - Exit - 1972,
+// TODO introuvable Maurizio Fabrizio - Azzurri Orizzonti
+// TODO introuvable Maurizio Fabrizio - Primo
+// TODO introuvable Maurizio Fabrizio - Personaggi
+// TODO INTROUVABLE Messengers - First Message - PROG?
+// TODO INTROUVABLE New Inspiration - Vol. 1 - 1968
+// TODO INTROUVABLE New Inspiration - Vol. 2 - 1968
+// TODO INTROUVABLE New Inspiration - Vol. 3 - 1969
+// TODO INTROUVABLE New Inspiration - Rainbow - 1971
+// TODO Introuvable 1993 - Gnosis (designers: Klaus Blasquiz)
+// TODO INTROUVABLE - Union Cafe - 1993 - 86033902 + 3Mdc5y2m488KgglaOlGhqi
+// TODO Introuvable - Cantofabule - 7397220 + 6ZxUHbWIQbpELWebQSN73c
+// TODO INTROUVABLE Pirana - Pirana II - AUSTRALIA - 10151026 + 757YCZFYn6VSuH9d53kkid 
+// TODO INTROUVABLE Quasar - Fire In The Sky - 1982
+// TODO Ralf Nowy - Escalation INTROUVABLE - null + null
+// TODO Ralf Nowy - Nowy 2 INTROUVABLE - null + null
+// TODO Robert John Gallo - Free - 1971 - INTROUVABLE
+// TODO INTROUVABLE Ross - The Pit & The Pendulum - 1974 - Ken Marcus, Tom Wilkes - null + null
+// TODO INTROUVABLE Sacbé albums
+// TODO INTROUVABLE - Salis - Sa Vida Ita Est - 1971
+// TODO INTROUVABLE - Salis - Seduto Sull'Alba A Guardare - 1974
+// TODO https://www.discogs.com/fr/master/254221-SFF-Ticket-To-Everywhere
+Spinetta Jade albums 2, 3 et 4
+// TODO Steve Hackett - Till We Have Faces PROG? - 1984 - uncommon, neoeighties, instru, c_elecotr, artpop - track What's My Name
+// TODO Steve Hackett - Guitar Noir PROG?
+// TODO Introuvable - Ailleurs Avec... Le Temps - 1977 - QUEBEC - (6917470 + 1D4F1WKQ7bgBvRIvsEn8Rr)
+// TODO introuvable Thirsty Moon - A Real Good Time - 1976
+// TODO introuvable Thirsty Moon - Star Chaser - 1981
+// TODO Three Man Army discog
+// TODO INTROUVABLE Totem - Descarga - 1972 - 13169422 + 2VuAqlqUuiTA4oCQ1Yn00y
+// TODO INTROUVABLE Totem - Corrupción - 1973 - 13328521 + 04I3FnfN1OPHoFCSOxGMNG
+// TODO Introuvable - Violinski - Stop Cloning About - 1980
+// TODO INTROUVABLE écouter Eric Burdon & War et fusionner les artistes ?
+// TODO INTROUVABLE War - 1971 - War
+// TODO INTROUVABLE War - 1977 - Galaxy
+// TODO INTROUVABLE Welcome - You're Welcome - 1979
+// TODO INTROUVABLE Wolfgang Dauner - Output - 1970 - expérimental, instrumental, c_jazz - track Brazing The High Full Sky?
 Byzantium - Seasons Changing (Full Album ) 1973
 Voice Of Life-Voice Of Life(1977)-Avalon
 https://www.discogs.com/fr/artist/487243-Zoo-4
